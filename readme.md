@@ -2,6 +2,8 @@
 
 Voici une collection de pilote (et raccordements) pour différents breakouts utilisés avec un __ESP8266 reflashé en MicroPython__.
 
+![Feather ESP8266](FEAT-HUZZA-ESP8266-01.jpg)
+
 La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA2821](http://shop.mchobby.be/product.php?id_product=846)
 
 Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Hobby dans nos projets de documentation.
@@ -16,7 +18,7 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
  * [boot.py](boot.py) - A adapter avec l'identifiant et mot de passe de votre réseau WiFi. Une fois copié sur votre ESP8266 (avec RShell), celui-ci se connectera automatiquement sur votre réseau WiFi
  * [port_config.py](port_config.py) - A adapter. Placez y le mot de passe qui protégera votre connexion WebRepl. Une fois copié sur votre ESP8266 (avec REPL), il sera automatiquement utilisé par WebRepl.  
 
- # RShell
+## RShell
 
 __RShell__ est un outil formidable qui permet de d'éditer/transférer/repl sur une carte MicroPython a travers une simple connexion série (et même Bluetooth sérial).
 
@@ -24,14 +26,23 @@ C'est un outil vraiment _très utile_ qui vaut la peine de s'y attarder... avec 
 
 Ce qu'il y de génial avec RShell, c'est qu'il fonctionne aussi avec ESP8266 (tant mieux parce qu'il n'y a pas de _lecteur flash_ comme sur une PyBoard). 
 
- * rshell - [Github de rshell](https://github.com/dhylands/rshell) - documentation et instruction d'installation.
+ * [Github de rshell](https://github.com/dhylands/rshell) - documentation et instruction d'installation.
  * [rshell-esp8266.sh](rshell-esp8266.sh) - A adpater. Appel RShell avec buffer réduit pour ESP8266. 
 
-__ATTENTION__ Pour un ESP8266 il faut absolument réduire le buffer d'échange... sinon on écrase facilement le système de fichier (et il faudra reflasher la bête) :-/  Voyez le fichier [rshell-esp8266.sh](rshell-esp8266.sh) qui est proposé ici. 
+__ATTENTION__ : pour un ESP8266 il faut absolument réduire le buffer d'échange... sinon on écrase facilement le système de fichier (et il faudra reflasher la bête) :-/  Voyez le fichier [rshell-esp8266.sh](rshell-esp8266.sh) qui est proposé ici. 
 
- # WebRepl
+## WebRepl
 
-xxx
+![Repl](dht11/dht11_webrepl.jpg)
+
+Ouvrez WebRepl.html dans votre navigateur et vous pourrez entamer une session REPL avec votre Feather ESP8266 au travers d'une session HTTP. 
+
+Tout ce que vous avez besoin de connaître, c'est soit son adresse IP, soit son nom sur le réseau.
+
+__ATTENTION__ : 
+* Il convient d'avoir un fichier [boot.py](boot.py) correctement configuré pour que votre ESP8266 puisse se connecter sur votre réseau WiFi. 
+* Vous pouvez également pré-initialiser votre mot de passe WebRepl dans [port_config.py](port_config.py)
+RShell sera un outil précieux pour vous assister dans cette tâche.
 
 # Feather ESP8266 Huzza et bus I2C
 
