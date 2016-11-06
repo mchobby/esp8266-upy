@@ -1,0 +1,3 @@
+[submodule "webrepl"]
+	path = webrepl
+	url = https://github.com/micropython/webrepl
