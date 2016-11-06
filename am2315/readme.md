@@ -1,6 +1,6 @@
 # Mesure temperature/humidité avec senseur AM2315 (ADA2315) et ESP8266 sous MicroPython
 
-* Shop: http://shop.mchobby.be/product.php?id_product=932
+* Shop: [senseur AM2315 (ADA2315)](http://shop.mchobby.be/product.php?id_product=932)
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
 # Raccordement
