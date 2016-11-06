@@ -13,6 +13,14 @@ En effet l'utilisation d'un bloc d'alimenation micro-USB (donc sans USB-Serie) e
 
 Nous recommandons donc d'utiliser la broche 2 comme signal SCL pour un bus I2C.
  
+# Quelques ressource utiles
+* (how-to-install-upy.md](how-to-install-upy.md) contient un résumé condensé pour une installation depuis Linux
+** erase-esp8266.sh - A adapter. Permet d'effacer la flash de l'ESP8266
+** burn-esp8266.sh - A adapter. Permet de flasher un [binaire](https://micropython.org/download/) sur un ESP8266
+* __RShell__ - __RShell__ est un outil formidable qui permet de d'éditer/transférer/repl une carte micropython a travers une simple connexion série.
+** rshell - (Github de rshell](https://github.com/dhylands/rshell)
+** rshell-esp8266.sh - A adpater. Apelle RShell avec buffer réduit pour ESP8266 (sinon corrompt le système de fichier) 
+
 # Ressources
 
 Il y a de nombreux pilotes Adafruit sur ce Github (Tony Dicola)
