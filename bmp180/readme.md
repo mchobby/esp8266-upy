@@ -79,7 +79,7 @@ mon senseur retourne une altitude de 104m, nettement plus convenable.
 
 Je me situe en contrebas de la station météo de référence (qui elle dispose d'une tour). 
 
-# Mon senseur retourne une pression incorrecte!
+# La pression athmospherique semble!
 
 Mon senseur retourne la valeur de 98909 (soit 989.09 hPa) alors que la station météo de référence indique 1002 hPa.
 
@@ -102,9 +102,9 @@ Cette correction consiste à creuser "virtuellement" un trou, sous la station m�
 
 Pour ma station de référence, il s'agit de 120m. En gros, la correction consiste à ajouter une colonne d'air de 120m au dessus du senseur.
 
-'''Pourquoi une telle correction?''' Et bien parce qu'il est plus facile de concevoir le pays plat comme une crèpe et de regarder les différentes pressions en oeuvre à une même altitude. Cela permet pour imaginer plus facilement le déplacement des masses nuageuses (de la pression la plus élevée vers la pression la plus faîble).
+__Pourquoi une telle correction?__ Et bien parce qu'il est plus facile de concevoir le pays plat comme une crèpe et de regarder les différentes pressions en oeuvre à une même altitude. Cela permet pour imaginer plus facilement le déplacement des masses nuageuses (de la pression la plus élevée vers la pression la plus faîble).
 
-'''Revenons à nos moutons!''' 
+__Revenons à nos moutons!__
 
 Mon altitude est de 104m. Rapellez-vous, la pression diminue de 1hPa tous les 8.3m.
 
@@ -112,7 +112,7 @@ Pour 104m la colonne d'air correspondante représente une pression de 104 / 8.3 
 
 Le senseur BMP180 retourne la valeur 989.09 hPa, la valeur corrigée au niveau de la mer est 989.09 + 12.53 = 1001.62 hPa. Soit la valeur de la station de météo de référence (1002 hPa) à deux pas de la maison.
 
-'''Notes:'''
+__Notes:__
 
 Vous aurez sans doute noté que la pression de la station de référence est de 1002 hPa, tout comme la pression au niveau de la mer (aussi 1002 hPa). C'est un pure hasard du jour. 
 
