@@ -2,7 +2,9 @@
 
 Voici une collection de pilote (et raccordements) pour différents breakouts utilisés avec un __ESP8266 reflashé en MicroPython__.
 
-Cela concerne différents breakouts utilisés chez MC Hobby pour nos projets de documentation.
+La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA](http://shop.mchobby.be/product.php?id_product=846)
+
+Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Hobby dans nos projets de documentation.
 * Wiki Documentaire - https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 * Achat de matériel - http://shop.mchobby.be 
  
