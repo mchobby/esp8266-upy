@@ -2,7 +2,7 @@
 
 Ce senseur est capable de mesure une intensité lumineuse entre 0.1 et 40,000+ Lux
 
-* Shop: [Adafruit BMP180 (ADA1603)](http://shop.mchobby.be/product.php?id_product=397)
+* Shop: [Adafruit TSL2561 (ADA439)](http://shop.mchobby.be/product.php?id_product=238)
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
 # Raccordement
@@ -14,7 +14,7 @@ Ce senseur est capable de mesure une intensité lumineuse entre 0.1 et 40,000+ L
 ```
 # Mesure de lumière avec Adafruit TSL2561 (ADA439) et ESP8266 MicroPython
 
-* Shop: [Adafruit TSL2561 (ADA439)](http://shop.mchobby.be/product.php?id_product=238)
+* Shop: Adafruit TSL2561 (ADA439) - http://shop.mchobby.be/product.php?id_product=238
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
 from tsl2561 import *
@@ -50,7 +50,7 @@ print( tsl.read(autogain=True) )
 
 # Ressources et sources
 * Source: [https://github.com/adafruit/micropython-adafruit-bundle/tree/master/libraries/drivers MicroPython-adafruit-bundle] (Adafruit, GitHub)
-* [Documentation complete http://micropython-tsl2561.rtfd.io/.] 
+* [Documentation complete sur rtfd.io](http://micropython-tsl2561.rtfd.io/.) 
 
 ## Luminosité vs Lux
 * 0.002 lux : Nuit par temps clair sans lune.
