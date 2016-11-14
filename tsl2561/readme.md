@@ -14,7 +14,7 @@ Ce senseur est capable de mesure une intensité lumineuse entre 0.1 et 40,000+ L
 ```
 # Mesure de lumière avec Adafruit TSL2561 (ADA439) et ESP8266 MicroPython
 
-* Shop: [Adafruit BMP180 (ADA1603)](http://shop.mchobby.be/product.php?id_product=397)
+* Shop: [Adafruit TSL2561 (ADA439)](http://shop.mchobby.be/product.php?id_product=238)
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
 from tsl2561 import *
