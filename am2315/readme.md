@@ -41,7 +41,7 @@ show_values()
 
 Ce qui donne le résultat suivant dans WebRepl
 
-![Resultat](AM2315_result.jpg)
+![Resultat](AM2315_webrepl.jpg)
 
 # Source et ressources
 * Source Arduino du pilote: https://github.com/adafruit/Adafruit_AM2315
