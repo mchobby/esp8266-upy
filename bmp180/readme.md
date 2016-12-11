@@ -98,6 +98,8 @@ Les stations météos normalisent la valeur de la pression atmosphérique pour l
 
 Cela signifie qu'elles appliquent une correction sur la valeur lue.
 
+![Pression PNM](Pression_PNM.jpg)
+
 Cette correction consiste à creuser "virtuellement" un trou, sous la station météo, allant jusqu'au niveau de la mer. Trou pour y placer "virtuellement" le senseur de pression. On relève ainsi la pression à la même altitude en plusieurs endroits du pays.
 
 Pour ma station de référence, il s'agit de 120m. En gros, la correction consiste à ajouter une colonne d'air de 120m au dessus du senseur.
