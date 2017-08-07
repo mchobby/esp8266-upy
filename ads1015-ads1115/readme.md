@@ -73,10 +73,10 @@ Les valeurs acceptables pour `gain` sont:
 4 : 0.512V # 8x
 5 : 0.256V # 16x
 ```
-## Est-ce 15 oU 16 bits?
-La sortie d'un ADS1115 est connue pour fournir un entier signé. Cela signifie que l'un des bits de la valeurs 16 bits est utilisé nous indiquer si la valeur rapportée est positive ou négative. Ce qui est important de saisir c'est que seulement 15 des 16 bits sont utilisés pour communiquer la valeur de la mesure de tension.
+## Est-ce 15 ou 16 bits?
+La sortie d'un ADS1115 est connue pour fournir un entier signé. Cela signifie que l'un des bits de la valeurs 16 bits est utilisé nous indiquer le signe de la valeur rapportée (valeur positive ou négative). Ce qui est important de saisir c'est que seulement 15 des 16 bits sont utilisés pour communiquer la valeur de la mesure.
 
-Sur 15 bits, il est possible d'encoder 32768 valeurs différentes dont zero est la première valeur et 32767 la dernière.
+Sur 15 bits, il est possible d'encoder 32768 valeurs différentes dont zéro est la première valeur et 32767 la dernière valeur.
 
 En fin de compte, c'est bien un périphérique 16 bits mais seuls 15 d'entre-eux sont utilisés pour communiquer la magniture de la mesure.
 
@@ -90,7 +90,7 @@ Par conséquent, la valeur numérique 32767 (valeur max sur 15 bits) correspond 
 
 Nous obtenons le facteur d'échelle en appliquant la division 6.144 / 32767 = 0.00001875 v par bit = 0.1875 mV par bit. 
 
-C'est une nette amélioration par rapport au convertisseur ADC d'Arduino. En effet, le facteur d'échelle atteind 5/1024 = 0.0048 v par bit = 5mV par bit. Le convertisseur ADC du ADS1115 est 25x plus précis que celui d'un Arduino Uno.
+C'est une nette amélioration par rapport au convertisseur ADC d'Arduino. En effet, le facteur d'échelle atteint 5/1024 = 0.0048 v par bit = 5mV par bit. Le convertisseur ADC du ADS1115 est 25x plus précis que celui d'un Arduino Uno.
 
 
 Le cas présenté jusqu'ici était le moins favorable! En utilisant une autre configuration PGA comme `gain = 3` nous avons une tension d'entrée maximale de 1.024 volts, ce qui correspond à un facteur d'échelle de 1.024/32768 = 0.00003125 Volts par bit = 0.03125 mV par bit!
