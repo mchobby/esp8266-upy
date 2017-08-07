@@ -332,3 +332,6 @@ irq_pin.irq(handler=None)
 La vitesse d'échantillonage atteinte durant le test est de 251.9 échantillon par seconde (SPS) ou 3.97 ms/échantillon.
 Information qui est d'une relative précision étant donné la précision d'horloge de l'ESP8266.
 
+## Où acheter
+* {{pl|362|Adafruit ADS1115 (ADA1085)}} disponible chez MCHobby
+
