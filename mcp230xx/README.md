@@ -34,7 +34,7 @@ L'adresse du MCP23017 est fixée à l'aide des broches 15, 16, 17. Pour l'adress
 * 16 => GND
 * 17 => GND
 
-Bien que le MCP23017 fonctionne sous 5V, il est recommander d'alimenter MCP sous 3.3V afin que les niveaux logiques SDA et SCL soient aussi en logique 3.3V.
+Bien que le MCP23017 soit souvent utilisé sous 5V, il est recommander l'alimenter en 3.3V afin que les niveaux logiques SDA et SCL soient compatible avec l'ESP8266 (soit logique 3.3V).
 
 # Exemples
 
