@@ -1,6 +1,6 @@
 # Ajouter des GPIO avec le mcp230xx
 
-Ajout de GPIO sous MicroPython grâce à la série de composant I2C "GPIO expanders MCP23017" et "MCP23008" . Travail dérivé de  Adafruit_MCP230xx.py module of https://github.com/adafruit/Adafruit_Python_GPIO
+Ajout de GPIO sous MicroPython grâce à la série de composant I2C "GPIO expanders MCP23017" et "MCP23008" . Travail dérivé de  Adafruit_MCP230xx.py disponible sur https://github.com/adafruit/Adafruit_Python_GPIO
 
 Le port MicroPython réalisé par ShrimpingIt sur son GitHub https://github.com/ShrimpingIt/micropython-mcp230xx (merci à ShrimpingIt pour son magnifique travail)
 
@@ -17,8 +17,6 @@ A été testé pour sur ESP8266 sous 1.8.7 et 1.9.1 avec MCP23017 (uniquement). 
 ![Raccordements](mcp23017_esp8266_bb.jpg)
 
 Attention au placement: Il faut utiliser le détrompeur du MCP23017 pour placer le circuit intégré dans le bon sens! 
-
-ATTENTION: Parler des pull-up
 
 Branchement du MCP23017 
 * 9 =>  3.3V (alimentation)
@@ -38,7 +36,7 @@ L'adresse du MCP23017 est fixée à l'aide des broches 15, 16, 17. Pour l'adress
 
 Bien que le MCP23017 fonctionne sous 5V, il est recommander d'alimenter MCP sous 3.3V afin que les niveaux logiques SDA et SCL soient aussi en logique 3.3V.
 
-![MCP Pinout](https://www.mathworks.com/help/examples/raspberrypiio_product/win64/mcp23017_circuit.png)
+# Exemples
 
 L'exemple suivant démontre comment modifier l'état des sorties 0 et 1 sur le MCP23017. Les Leds qui y sont branchées clignoterons en alternance.
 
