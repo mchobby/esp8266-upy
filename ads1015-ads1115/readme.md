@@ -11,9 +11,19 @@ Le contenu de ce fichier résulte de la traduction du fichier `readme.md` dispon
 
 Le documentation est également augmentée, annoté et inclus des schémas de raccordement.
 
-## Fonctionnalités
+## L'ADS1115
 
-Contrôle le fonctionnement de l'ADC du ADS1x15 ADC et en obtient les données
+La bibliothèque ads1x15 permet de contrôler le fonctionnement de l'ADC du ADS1x15 et de réceptionner les données.
+
+
+L'ADS1115 est un convertisseur analogique vers digital disposant de 4 canaux. Il permet de lire des tension analogiques avec une résolution de 16 bits (valeur de 0 à 65535).
+
+Pour résumer les fonctionnalités:
+* Convertisseur ADC 16 bits
+* 4 canaux (ou 2 canaux différentiels)
+* Amplification à Gain Programmable (jusqu'à 16x)
+* Bus I2C
+* Echantillonnage en continu (jusqu'à 860 échantillons/seconde)
 
 ## Brancher
 
@@ -28,6 +38,10 @@ Note: si le CPU doit être déclenché en mode continu, la broche ALERT/RDY doit
 * Placer ADDR au niveau haut modifie l'adresse à 73 (0x49).
 * Placer ADDR sur SDA modifie l'adresse à 74 (0x4a). 
 * Placer ADDR sur SCL modifie l'adresse à 75 (0x4B). 
+
+Vous trouverez plus d'information:
+* [https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html Fiche produit de l'ADS1115] sur MC Hobby.
+* [http://mchobby.be/data-files/datasheet/ads1115.pdf Fiche technique de l'ADS1115]
 
 ## Utiliser
 
@@ -333,5 +347,5 @@ La vitesse d'échantillonage atteinte durant le test est de 251.9 échantillon p
 Information qui est d'une relative précision étant donné la précision d'horloge de l'ESP8266.
 
 ## Où acheter
-* {{pl|362|Adafruit ADS1115 (ADA1085)}} disponible chez MCHobby
+* [https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html Adafruit ADS115] disponible chez MCHobby
 
