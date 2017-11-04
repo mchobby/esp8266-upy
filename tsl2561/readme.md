@@ -55,7 +55,7 @@ print( tsl.read(autogain=True) )
 ## Luminosité vs Lux
 * 0.002 lux : Nuit par temps clair sans lune.
 * 0.2 lux : Minimum de lumière que doit produire un éclairage d'urgence (AS2293).
-* 0.27 : 1 lux 	Pleine lune par temps clair.
+* 0.5 lux 	Pleine lune par temps clair.
 * 3.4 lux : Limite crépusculaire (sombre) au couché du soleil en zone urbaine.
 * 50 lux : Eclairage d'un living room
 * 80 lux : Eclairage des toilette/Hall
