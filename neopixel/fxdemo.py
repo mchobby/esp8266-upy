@@ -1,6 +1,7 @@
 # Utilisation de la bibliothèque neopixel avec Feather ESP8266 sous MicroPython
 # 
-# Differente fonctions permettant de réaliser des animations lumineuses
+# Differente fonctions permettant de réaliser des animations lumineuses.
+# Certains exemples transcript de http://moving-rainbow.readthedocs.io/en/latest/README/ 
 #
 # Shop: https://shop.mchobby.be/55-leds-neopixels-et-dotstar
 # Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
@@ -39,6 +40,10 @@ def set_color( np, pos, color ):
 	# Normal NeoPixel code would update the last pixel for np[-1]=color
 	if 0 <= pos < np.n:
 		np[pos] = color
+
+def clear( np ):
+	np.fill( (0,0,0) )
+	np.write()
 
 def cycle_wheel( np ):
 	""" All neopixels change color following a color wheel """   
@@ -153,40 +158,67 @@ def moving_rainbow( np, pause=0.100 ):
 		rainbow7( np, i )
 		sleep( pause )
 
+def theater_chase( np, color, iteration=10, pause=0.050 ):
+	while iteration>0: # x cycles of chasse
+		iteration -= 1
+		for q in range( 4 ):
+			for i in range( 0, np.n, 4 ): # every 3 pixels ON
+				set_color( np, q+i, color )
+			np.write()
+			sleep( pause )
+			for i in range( 0, np.n, 3 ):
+				set_color( np, q+i, (0,0,0) )# every 3 pixels OFF
+
+def wipe( np, color, pause=0.150 ):
+	for i in range( np.n ):
+		np[i] = color
+		np.write()
+		sleep( pause )
+		
 # --- Test the functions ---
+
+# theater_chase sample
+theater_chase( np, (127,0,0) ) # red
+theater_chase( np, (127,127,127) ) # white
+theater_chase( np, (0,0,127) ) # blue
+clear( np )
+sleep( 1 )
+
+# Wipe in color
+np.fill( (190, 0, 0) ) # fill in red
+np.write()
+wipe( np, (0,180,0), pause=0.150 ) # wipe in green
+wipe( np, (0,0,255), pause=0.150 ) # wipe in blue
+wipe( np, (0,0,0),   pause=0.150 ) # wipe in black
+sleep( 1 )
 
 # Moving_rainbow
 for i in range( 4 ):
 	moving_rainbow( np )
-np.fill( (0,0,0) )
-np.write()
+clear( np )
 sleep( 1 )
 
 # Fade In And Out
 fade_inout( np, (255,   0,   0) ) # Red
 fade_inout( np, (0  , 255,   0) ) # Green
 fade_inout( np, (0  ,   0, 255) ) # Blue
-np.fill( (0,0,0) )
-np.write()
+clear( np )
 sleep( 1 )
 
 # moving_wheel
 moving_wheel( np )
-np.fill( (0,0,0) )
-np.write()
+clear( np )
 sleep( 1 )
 
 # cycle_wheel
 for i in range(2):
 	cycle_wheel( np )
-np.fill( (0,0,0) )
-np.write()
+clear( np )
 sleep( 1 )
 
 # Candle Effect
 candle( np )
-np.fill( (0,0,0) )
-np.write()
+clear( np )
 sleep( 1 )
 
 # Larson Scanner (K2000)
@@ -194,6 +226,6 @@ sleep( 1 )
 posdir = None
 for i in range( 3 ):
 	posdir = larson_scanner( np, posdir )
-np.fill( (0,0,0) )
-np.write()
+clear( np )
 sleep( 1 )
+
