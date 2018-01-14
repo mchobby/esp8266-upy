@@ -123,6 +123,67 @@ Le régulateur de la plateforme ESP8266 sera néanmoins suffisant pour commander
 * ne pas êtres pas trop exigeant sur la qualité des couleurs (utiliser des couleurs en mi-brillance)
 * s'attendre à des scintillements lors d'un charge plus importante en courant (lorsque l'on affiche du blanc ou des couleurs vive).
 
+# Effets 
+Ce github contient un second script de test nommé `fxdemo.py` . Ce dernier contient différentes fonctions d'exemple permettant de réaliser des effets lumineux à base de NeoPixels.
+
+Vous trouverez ci-dessous le corps du script appelant les différentes fonctions d'effet.
+
+Il est possible de tester le fichier `fxdemo.py` en saisissant `import fxdemo` depuis l'invite REPL.
+
+```
+# theater_chase sample
+theater_chase( np, (127,0,0) ) # red
+theater_chase( np, (127,127,127) ) # white
+theater_chase( np, (0,0,127) ) # blue
+clear( np )
+sleep( 1 )
+
+# Wipe in color
+np.fill( (190, 0, 0) ) # fill in red
+np.write()
+wipe( np, (0,180,0), pause=0.150 ) # wipe in green
+wipe( np, (0,0,255), pause=0.150 ) # wipe in blue
+wipe( np, (0,0,0),   pause=0.150 ) # wipe in black
+sleep( 1 )
+
+# Moving_rainbow
+for i in range( 4 ):
+	moving_rainbow( np )
+clear( np )
+sleep( 1 )
+
+# Fade In And Out
+fade_inout( np, (255,   0,   0) ) # Red
+fade_inout( np, (0  , 255,   0) ) # Green
+fade_inout( np, (0  ,   0, 255) ) # Blue
+clear( np )
+sleep( 1 )
+
+# moving_wheel
+moving_wheel( np )
+clear( np )
+sleep( 1 )
+
+# cycle_wheel
+for i in range(2):
+	cycle_wheel( np )
+clear( np )
+sleep( 1 )
+
+# Candle Effect
+candle( np )
+clear( np )
+sleep( 1 )
+
+# Larson Scanner (K2000)
+#   execute 3 iterations
+posdir = None
+for i in range( 3 ):
+	posdir = larson_scanner( np, posdir )
+clear( np )
+sleep( 1 )
+```
+
 # Source et ressources
 * Référence officielle NeoPixel sous ESP8266: http://docs.micropython.org/en/v1.8.2/esp8266/esp8266/tutorial/neopixel.html
 
