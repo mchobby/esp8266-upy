@@ -12,14 +12,23 @@ Le bibliothèque __ne prend pas en charge__:
 * les LEDs NeoPixel RGBW.
 
 # Raccordement
+## NeoPixel sous 3.3V
 
-![Raccordements](neopixel_bb.jpg)
+![Branchement 3.3V](neopixel_bb.jpg)
 
 | Broche ESP8266 | Broche  NeoPixel | Note                                                                                                       |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------|
 | GND            | GND              |                                                                                                            |
 | 3V             | 5V               | Neopixel fonctionne également sous 3.3V. Juste moins brillant. Attention le signal doit aussi être en 3.3V |
 | 2              | DIN              | Le signal doit entrer par la broche Data IN (ne pas se tromper avec Data OUT)                              |
+
+## NeoPixel sous 5V
+
+Il est possible d'alimenter les NeoPixels sous 5V afin d'avoir des couleurs vives et stables en toutes circonstances.
+
+Il faut absolument utiliser un [Level Shifter 74AHCT125](http://df.mchobby.be/datasheet/74AHC125.pdf) (pdf) aussi que le signal de commande des NeoPixel soit en 5V. 
+
+![Branchement 5V](neopixel-2_bb.jpg)
 
 ## Broches compatibles
 
