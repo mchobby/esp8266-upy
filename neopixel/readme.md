@@ -5,7 +5,11 @@
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
 # Attention: Utiliser des NeoPixels Récents
-La bibliothèque incluse dans le firmware microPython ne prend pas en charge l'ancienne génération de NeoPixel (flux de donnée à 400 KHz) mais la génération plus récente (à 800 KHz).
+La bibliothèque incluse dans le firmware microPython prend en charge génération de NeoPixel avec flux de donnée de 800 KHz.
+
+Le bibliothèque __ne prend pas en charge__:
+* l'ancienne génération de NeoPixel (flux de donnée à 400 KHz)
+* les LEDs NeoPixel RGBW.
 
 # Raccordement
 
@@ -90,17 +94,25 @@ np.write()
 ## Couleur bleue et 3.3V
 La couleur bleue est difficile à produire sous 3.3V.
 
-Par conséquent, `np.write( (0,0,255) )` ne produit pas vraiment de couleur. C'est parce que le Forward Voltage d'une LED bleue est d'environ 2.8V (typiquement 3.2V). A  une source d'alimentation de 3.3V, tension un peu faible pour activer une led bleue. Nous sommes donc à la limite pour pouvoir produire du Bleu. Il est parfois plus efficace d'utiliser des bleus en mi-brillance avec `np.write( (0,0,128) )` ou quart-de-brillance avec `np.write( (0,0,64) )` 
+Par conséquent, `np.write( (0,0,255) )` ne produit pas vraiment de couleur. 
+
+C'est parce que le Forward Voltage d'une LED bleue est d'environ 2.8V (typiquement 3.2V). Avec une source d'alimentation de 3.3V, le tension est un peu faible pour activer une led bleue. Nous sommes à la limite pour pouvoir produire du Bleu. 
+
+Il est parfois plus efficace de produire un bleu en mi-brillances avec `np.write( (0,0,128) )` ou bleu en quart-de-brillance avec `np.write( (0,0,64) )` 
 
 __Limite du régulateur de tension:__
 
-De même, nous avons remarqué que le régulateur de tension d'un ESP8266 ne produit pas vraiment assez de courant pour l'ESP8266 + le contrôler de 8 LEDs NeoPixels. Par conséquent l'utilisation du alimentation externe 3.3v pour alimenter les NeoPixels est le bienvenue.
+De même, nous avons remarqué que le régulateur de tension d'un ESP8266 ne produit pas vraiment assez de courant pour l'ESP8266 + le contrôler de 8 LEDs NeoPixels. Par conséquent l'utilisation d'une alimentation externe 3.3v pour alimenter les NeoPixels est le bienvenue. 
 
-Si le régulateur de tension peine à founir le courant alors sa tension chutera un peu (de 3.3v à 3.1v), ce qui aura pour effet de produire un effet de scintillement
+Ne pas oublier d'avoir une masse commune (référentiel de tension) entre l'alimentation NeoPixel et l'ESP8266.
 
-__Conclusion:__
+A noter que si le régulateur de tension peine à founir le courant nécessaire alors sa tension chutera un peu (de 3.3v à 3.1v), ce qui aura pour effet de produire un effet de scintillement sur les LEDs.
 
-Le régulateur de la plateforme ESP8266 sera néanmoins suffisant pour commander quelques NeoPixels si vous n'êtes pas trop exigeant sur la qualité des couleurs (utiliser des couleurs en mi-brillance) et si des cou
+__Utiliser le régulateur de l'ESP8266:__
+
+Le régulateur de la plateforme ESP8266 sera néanmoins suffisant pour commander quelques NeoPixels. Dans ce cas, il est préférable de:
+* ne pas êtres pas trop exigeant sur la qualité des couleurs (utiliser des couleurs en mi-brillance)
+* s'attendre à des scintillements lors d'un charge plus importante en courant (lorsque l'on affiche du blanc ou des couleurs vive).
 
 # Source et ressources
 * Référence officielle NeoPixel sous ESP8266: http://docs.micropython.org/en/v1.8.2/esp8266/esp8266/tutorial/neopixel.html
