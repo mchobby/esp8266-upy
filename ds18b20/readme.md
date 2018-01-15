@@ -71,7 +71,7 @@ for rom in roms:
 # Adresse des périphériques
 Les adresses des périphériques (`rom` dans le code) sont constitués de 5 octets.
 
-L'affichage des adresses rom se présente donc sous la forme d'une liste de bytearray. C'est ne information binaire.
+L'affichage des adresses rom se présente donc sous la forme d'une liste de bytearray. C'est une information binaire.
 
 ```
 bytearray(b'(\xff\xd3\xe2p\x16\x03]')
