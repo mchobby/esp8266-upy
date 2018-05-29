@@ -46,7 +46,7 @@ from machine import Pin, I2C
 from bme280 import *
 
 i2c = I2C(scl=Pin(5), sda=Pin(4))
-bmp = BME280(i2c=i2c, address=BMP180_I2CADDR )
+bmp = BME280(i2c=i2c, address=BMP280_I2CADDR )
 
 print(bmp.values)
 ```
