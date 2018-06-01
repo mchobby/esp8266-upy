@@ -40,6 +40,7 @@ from array import array
 BME280_I2CADDR = 0x77
 # BMP280 default address
 BMP180_I2CADDR = 0x77
+BME280_I2CADDR = BMP180_I2CADDR # are identicals
 
 # Operating Modes
 BME280_OSAMPLE_1 = 1
