@@ -15,18 +15,18 @@ Voici une description des bibliothèques disponibles dans ce GitHub. Voir les so
 
 <table>
 <thead>
-  <th>Répertoire</th><th>Senseur / Description<th>
+  <th>Répertoire</th><th>Senseur / Description</th>
 </thead>
 <tbody>
   <tr><td>ads1015-ads1115</td>
-      <td>Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.
-      L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.<br />
-
-      Plus d'info: [ADS1115 breakout sur shop.mchobby.be](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html)</td>
-  <tr>
+      <td>Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.<br />
+L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.<br />
+Plus d'info:
+[ADS1115 breakout](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html)</td>
+  </tr>
 </tbody>
 </table>
- | 
+ |
  |
 | am2315 | blabla |
 | bme280-bmp280 | blabla |
