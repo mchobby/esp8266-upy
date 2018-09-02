@@ -13,7 +13,7 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
 # Bibliothèques disponibles
 Voici une description des bibliothèques disponibles dans ce dépôt (Voir les sous-répertoires).
 
-<font color="red"><strong>Chaque sous-répertoire contient des instructions, schéma et code dans un fichier fichier readme personnalisé</strong></font>  
+<strong>Chaque sous-répertoire contient des instructions, schémas et codes dans un readme.md personnalisé.</strong> 
 
 <table>
 <thead>
