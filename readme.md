@@ -21,8 +21,8 @@ Voici une description des bibliothèques disponibles dans ce GitHub. Voir les so
   <tr><td>ads1015-ads1115</td>
       <td>Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.<br />
 L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.<br />
-Plus d'info:
-[ADS1115 breakout](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html)</td>
+Plus d'info: <a href="https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html">ADS1115 breakout</a>
+  </td>
   </tr>
 </tbody>
 </table>
