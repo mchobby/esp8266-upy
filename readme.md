@@ -11,7 +11,9 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
 * Achat de matériel - http://shop.mchobby.be
 
 # Bibliothèques disponibles
-Voici une description des bibliothèques disponibles dans ce GitHub. Voir les sous répertoires.  
+Voici une description des bibliothèques disponibles dans ce dépôt (Voir les sous-répertoires).
+
+<div style="margin: 15px 0; background: rgba(255,204,102,.3); display: block; padding: 15px 15px 15px 15px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #ff9900;" >Chaque sous-répertoire contient des instructions, schéma et code dans un fichier fichier readme personnalisé</div>  
 
 <table>
 <thead>
