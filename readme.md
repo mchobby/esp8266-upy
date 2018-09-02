@@ -24,19 +24,50 @@ L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire
 Plus d'info: <a href="https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html">ADS1115 breakout</a>
   </td>
   </tr>
+  <tr><td>am2315</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/932-am2315-senseur-de-temperature-et-humidite-sous-boitier-3232100009325.html">AM2315 sensor</a>
+  </td>
+  </tr>  
+  <tr><td>bme280-bmp280</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/breakout/684-bme280-sens-temperature-humidite-pression--3232100006843-adafruit.html">BME280 breakout</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/senseurs-prototypage/1118-bmp280-senseur-de-pression-barometrique-temperature-altitude-33-et-5v-3232100011182-adafruit.html">BMP280 breakout</a><br />
+  </td>
+  </tr>  
+  <tr><td>dht11</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/senseurs-prototypage/708-dht11-senseur-humidite-temperature--3232100007086-adafruit.html">DHT11 sensor</a>
+  </td>
+  </tr>  
+  <tr><td>ds18b20</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/259-senseur-temperature-ds12b20-extra-3232100002593.html">DS18B20 sensor</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/151-senseur-temperature-ds18b20-etanche-extra-3232100001510.html">DS18B20 Encapsulated sensor</a>
+  </td>
+  </tr>  
+  <tr><td>mcp230xx</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/ci/218-mcp23017-extension-16-entree-sortie-i2c-3232100002180.html">MCP23017 GPIO expander</a>
+  </td>
+  </tr>  
+  <tr><td>neopixel</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/55-leds-neopixels-et-dotstar">NeoPixel category</a>
+  </td>
+  </tr>
+  <tr><td>tsl2561</td>
+      <td>blabla.<br />
+Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-luminosite-lumiere-digital-3232100002388-adafruit.html">TSL2561 breakout</a>
+  </td>
+  </tr>  
+  <tr><td>umqtt</td>
+      <td> exemples de communication MQTT avec un module ESP8266.
+  </td>
+  </tr>  
+
 </tbody>
 </table>
- |
- |
-| am2315 | blabla |
-| bme280-bmp280 | blabla |
-| bmp180 | blabla |
-| dht11 | blabla |
-| ds18b20 | blabla |
-| mcp2301xx | blabla |
-| neopixel | xxx |
-| tsl2561 | xxxxx |
-| umqtt | exemples de communication MQTT avec ESP8266 |
 
 # Quelques ressources utiles
 * [how-to-install-upy.md](how-to-install-upy.md) contient un résumé condensé pour une installation depuis Linux
