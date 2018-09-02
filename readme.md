@@ -7,7 +7,7 @@ Voici une collection de pilote (et raccordements) pour différents breakouts uti
 La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA2821](http://shop.mchobby.be/product.php?id_product=846)
 
 Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Hobby dans nos projets documentaires.
-* __Wiki pour MicroPython sur ESP8266__ - https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
+* [__Wiki pour MicroPython sur ESP8266__]( https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython)
 * Achat de matériel - http://shop.mchobby.be
 
 # Bibliothèques disponibles
