@@ -10,7 +10,7 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
 * __Wiki pour MicroPython sur ESP8266__ - https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 * Achat de matériel - http://shop.mchobby.be
 
-# Bibliothèques
+# Bibliothèques disponibles
 Voici une description des bibliothèques disponibles dans ce GitHub. Voir les sous répertoires.  
 
 <table>
@@ -25,39 +25,45 @@ Plus d'info: <a href="https://shop.mchobby.be/breakout/362-ads1115-convertisseur
   </td>
   </tr>
   <tr><td>am2315</td>
-      <td>blabla.<br />
+      <td>Senseur de <strong>température et humidité</strong> relative pour relevés en extérieur.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/932-am2315-senseur-de-temperature-et-humidite-sous-boitier-3232100009325.html">AM2315 sensor</a>
   </td>
   </tr>  
   <tr><td>bme280-bmp280</td>
-      <td>blabla.<br />
+      <td>Le BMP280 est un senseur de <strong>pression et température</strong> très populaire.<br />
+Le BME280 est un senseur de <strong>pression, température et HUMIDITÉ</strong> relative<br />
 Plus d'info: <a href="https://shop.mchobby.be/breakout/684-bme280-sens-temperature-humidite-pression--3232100006843-adafruit.html">BME280 breakout</a><br />
 Plus d'info: <a href="https://shop.mchobby.be/senseurs-prototypage/1118-bmp280-senseur-de-pression-barometrique-temperature-altitude-33-et-5v-3232100011182-adafruit.html">BMP280 breakout</a><br />
   </td>
-  </tr>  
+  </tr>
+  <tr><td>bmp180</td>
+      <td>Le BMP180 est un senseur de <strong>pression et température</strong> aujourd'hui remplacé par le BMP280.<br />
+Plus d'info: <a href="https://shop.mchobby.be/senseurs-prototypage/708-dht11-senseur-humidite-temperature--3232100007086-adafruit.html">DHT11 sensor</a>
+  </td>
+  </tr>      
   <tr><td>dht11</td>
-      <td>blabla.<br />
+      <td>Le DHT11 est un senseur d'<strong>humidité</strong> (20 à 80%) et température très bon marché.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseurs-prototypage/708-dht11-senseur-humidite-temperature--3232100007086-adafruit.html">DHT11 sensor</a>
   </td>
   </tr>  
   <tr><td>ds18b20</td>
-      <td>blabla.<br />
+      <td>Le DS18B20 est un senseur de <strong>température</strong> digital très populaire. Il utilise le bus 1-Wire premettant de brancher plusieurs senseurs 1-Wire sur un même bus.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/259-senseur-temperature-ds12b20-extra-3232100002593.html">DS18B20 sensor</a><br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/151-senseur-temperature-ds18b20-etanche-extra-3232100001510.html">DS18B20 Encapsulated sensor</a>
   </td>
   </tr>  
   <tr><td>mcp230xx</td>
-      <td>blabla.<br />
+      <td>Le MCP23017 (et MCP2308) sont des <strong>GPIO Expander</strong> permettant d'ajouter des entrées/sorties supplémentaires sur un microcontrôleur.<br />
 Plus d'info: <a href="https://shop.mchobby.be/ci/218-mcp23017-extension-16-entree-sortie-i2c-3232100002180.html">MCP23017 GPIO expander</a>
   </td>
   </tr>  
   <tr><td>neopixel</td>
-      <td>blabla.<br />
+      <td>Les <strong>NéoPixels</strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.<br />
 Plus d'info: <a href="https://shop.mchobby.be/55-leds-neopixels-et-dotstar">NeoPixel category</a>
   </td>
   </tr>
   <tr><td>tsl2561</td>
-      <td>blabla.<br />
+      <td>Le TSL2561 est un senseur de <strong>luminosité</strong> en lumière visible. Retourne une valeur en LUX.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-luminosite-lumiere-digital-3232100002388-adafruit.html">TSL2561 breakout</a>
   </td>
   </tr>  
