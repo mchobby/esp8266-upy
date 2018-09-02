@@ -10,6 +10,24 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
 * __Wiki pour MicroPython sur ESP8266__ - https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 * Achat de matériel - http://shop.mchobby.be
 
+# Bibliothèques
+Voici une description des bibliothèques disponibles dans ce GitHub. Voir les sous répertoires.  
+| Répertoire    | Senseur / Description  |
+| ------------- |------------------------|
+| ads1015-ads1115 | Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.
+L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.
+
+Plus d'info: [ADS1115 breakout sur shop.mchobby.be](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html) | 
+| am2315 | blabla |
+| bme280-bmp280 | blabla |
+| bmp180 | blabla |
+| dht11 | blabla |
+| ds18b20 | blabla |
+| mcp2301xx | blabla |
+| neopixel | xxx |
+| tsl2561 | xxxxx |
+| umqtt | exemples de communication MQTT avec ESP8266 |
+
 # Quelques ressources utiles
 * [how-to-install-upy.md](how-to-install-upy.md) contient un résumé condensé pour une installation depuis Linux
  * [erase-esp8266.sh](erase-esp8266.sh) - A adapter. Permet d'effacer la flash de l'ESP8266
