@@ -13,13 +13,21 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
 # Bibliothèques
 Voici une description des bibliothèques disponibles dans ce GitHub. Voir les sous répertoires.  
 
-| Répertoire    | Senseur / Description  |
-| ------------- |------------------------|
-| ads1015-ads1115 | Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.
-L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.
+<table>
+<thead>
+  <th>Répertoire</th><th>Senseur / Description<th>
+</thead>
+<tbody>
+  <tr><td>ads1015-ads1115</td>
+      <td>Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.
+      L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.<br />
 
-Plus d'info: [ADS1115 breakout sur shop.mchobby.be](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html)
+      Plus d'info: [ADS1115 breakout sur shop.mchobby.be](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html)</td>
+  <tr>
+</tbody>
+</table>
  | 
+ |
 | am2315 | blabla |
 | bme280-bmp280 | blabla |
 | bmp180 | blabla |
