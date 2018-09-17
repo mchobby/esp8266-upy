@@ -16,6 +16,10 @@ Le FeatherWing OLED s'insère simplement sur la carte Feather (ex: Feather ESP82
 
 ![FeatherWing OLED](FEATHER-MICROPYTHON-OLED-10a.png)
 
+Le bus I2C (SDA, SCL) utilise respectivement les broches 4 et 5 (avec des pull-up de 2.2K).
+
+La carte propose par ailleurs 3 boutons __A, B, C__ branchés respectivement sur les broches __0, 16, 2__ du Feather. 
+
 # Code de test
 Dans tous les cas de figure, l'écran OLED sera créé sous la référence __lcd__ .
 ## Créer LCD
@@ -46,6 +50,104 @@ Dans les exemples ci-dessous, voici les paramètres que vous retrouverez dans le
 * __h__ : hauteur (du mot Height).
 * __c__ : __couleur (1=point allumé, 0=point éteint)__
 
+```
+# -- Rempli l'écran en blanc --
+lcd.fill(1) 
+lcd.show()  # Afficher!
+
+# Remplis un rectangle en noir
+# fill_rect( x, y, w, h, c ) 
+lcd.fill_rect( 10,10, 20, 4, 0 )
+lcd.show()  # Afficher!
+
+# -- Dessine un pixel en noir --
+lcd.fill(0) # Rempli l'écran en noir
+# pixel( x, y, c ) 
+lcd.rect( 3, 4, 1 ) 
+lcd.show()  # Afficher!
+
+# -- Dessine un rectangle en blanc --
+lcd.fill(0) # Rempli l'écran en noir
+# rect( x, y, w, h, c ) 
+lcd.rect( 3, 3, 128-2*3, 32-2*3, 1 ) 
+lcd.show()  # Afficher!
+
+# -- Ligne Horizontale et Verticale --
+lcd.fill(0) # Rempli l'écran en noir
+# Dessine des lignes en blanc.
+# Ligne horizontale hline( x,y, w, c )
+#   donc fournir la largeur.
+# Ligne verticale vline( x,y, h, c )
+#   donc fournir la hauteur.
+lcd.hline( 0, 18, 128, 1 )
+lcd.vline( 64, 0, 32, 1 )
+lcd.show()  # Afficher!
+
+# -- Lignes diverses --
+lcd.fill(0) # Rempli l'écran en noir
+# Dessine des lignes en blanc.
+# line(x1,y1,x2,y2,c)
+lcd.line(0,0,128,32,1)
+lcd.line(0,32,128,0,1)
+lcd.show()  # Afficher!
+
+# -- Afficher texte --
+lcd.fill(0) # Rempli l'écran en noir
+# Dessine du texte en blanc.
+#   text( str, x,y, c )
+lcd.text("Bonjour!", 0,0, 1 )
+lcd.show()  # Afficher!
+
+# -- Défilement --
+# Mise en place en dessinant une croix noir sur fond blanc. 
+lcd.fill(1) # Rempli l'écran en blanc
+lcd.line(0,0,128,32,0) # noir
+lcd.line(0,32,128,0,0) # blanc
+lcd.show()  # Afficher!
+# Scroll Horizontal de 15 pixels vers la gauche. 
+lcd.scroll( -15, 0 )
+lcd.show()
+# Puis Scroll Vertical de 8 pixels vers le bas. 
+lcd.scroll( 0, 8 )
+lcd.show()
+
+```
+
+## Icône
+Il est assez facile de créer et afficher une icône.
+
+L'icône est définie avec un 1 pour un point allumé et un 0 pour un point éteint: 
+```
+HEART_ICON = [
+  [0,0,0,0,0,0,0,0,0,0,0],
+  [0,0,1,1,1,0,1,1,1,0,0],
+  [0,1,1,0,1,1,1,1,1,1,0],
+  [0,1,0,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,0],
+  [0,0,1,1,1,1,1,1,1,0,0],
+  [0,0,0,1,1,1,1,1,0,0,0],
+  [0,0,0,0,1,1,1,0,0,0,0],
+  [0,0,0,0,0,1,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0,0,0,0] ]
+```
+La fonction `draw_icon()` permet de dupliquer le contenu d'un "pseudo tableau" (l'icône) sur l'écran aux coordonnées x,y. 
+
+```
+def draw_icon( lcd, from_x, from_y, icon ):
+    for y, row in enumerate( icon ):
+        for x, color in enumerate( row ):
+            if color==None:
+                continue
+            lcd.pixel( from_x+x, 
+                       from_y+y,
+                       color )
+```
+
+![Dessiner une icône](FEATHER-MICROPYTHON-OLED-20j.png)
+
+Voir aussi le script [icon.py](icon.py) qui contient un exemple d'utilisation d'icônes deux couleurs (noir/blanc) ainsi qu'un exemple 2 couleurs + Canal Alpha.
+
+![Dessiner des icônes avec Canal Alplha](FEATHER-MICROPYTHON-OLED-20l.png)
 
 # Source et ressources
 * [Voir le Wiki MC Hobby](https://wiki.mchobby.be/index.php?title=FEATHER-MICROPYTHON-OLED)

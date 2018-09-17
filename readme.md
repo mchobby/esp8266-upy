@@ -13,7 +13,7 @@ Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Ho
 # Bibliothèques disponibles
 Voici une description des bibliothèques disponibles dans ce dépôt (Voir les sous-répertoires).
 
-<strong>Chaque sous-répertoire contient des instructions, schémas et codes dans un readme.md personnalisé.</strong> 
+<strong>Chaque sous-répertoire contient des instructions, schémas et codes dans un readme.md personnalisé.</strong>
 
 <table>
 <thead>
@@ -27,7 +27,7 @@ Plus d'info: <a href="https://shop.mchobby.be/breakout/362-ads1115-convertisseur
   </td>
   </tr>
   <tr><td>am2315</td>
-      <td>Senseur de <strong>température et humidité</strong> relative pour relevés en extérieur.<br />
+      <td>Senseur de <strong>température et humidité</strong> relative (0 à 100%) pour relevés en extérieur.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/932-am2315-senseur-de-temperature-et-humidite-sous-boitier-3232100009325.html">AM2315 sensor</a>
   </td>
   </tr>  
@@ -64,6 +64,11 @@ Plus d'info: <a href="https://shop.mchobby.be/ci/218-mcp23017-extension-16-entre
 Plus d'info: <a href="https://shop.mchobby.be/55-leds-neopixels-et-dotstar">NeoPixel category</a>
   </td>
   </tr>
+  <tr><td>OLED ssd1306</td>
+      <td>Le SSD1306 est un contrôleur d'écran OLED.<br />
+Plus d'info: <a href="https://shop.mchobby.be/product.php?id_product=879">FeatherWing OLED ssd1306 128x32</a>
+  </td>
+  </tr>  
   <tr><td>tsl2561</td>
       <td>Le TSL2561 est un senseur de <strong>luminosité</strong> en lumière visible. Retourne une valeur en LUX.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-luminosite-lumiere-digital-3232100002388-adafruit.html">TSL2561 breakout</a>
