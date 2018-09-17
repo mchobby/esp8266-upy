@@ -152,7 +152,7 @@ def draw_icon( lcd, from_x, from_y, icon ):
 
 Voir aussi le script [icon.py](icon.py) qui contient un exemple d'utilisation d'icônes deux couleurs (noir/blanc) ainsi qu'un exemple 2 couleurs + Canal Alpha.
 
-![Dessiner des icônes avec Canal Alplha](FEATHER-MICROPYTHON-OLED-20l.png)
+![Dessiner des icônes avec Canal Alplha](FEATHER-MICROPYTHON-OLED-20l.jpg)
 
 # Source et ressources
 * [Voir le Wiki MC Hobby](https://wiki.mchobby.be/index.php?title=FEATHER-MICROPYTHON-OLED)
