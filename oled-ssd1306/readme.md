@@ -148,7 +148,7 @@ def draw_icon( lcd, from_x, from_y, icon ):
                        color )
 ```
 
-![Dessiner une icône](FEATHER-MICROPYTHON-OLED-20j.png)
+![Dessiner une icône](FEATHER-MICROPYTHON-OLED-20j.jpg)
 
 Voir aussi le script [icon.py](icon.py) qui contient un exemple d'utilisation d'icônes deux couleurs (noir/blanc) ainsi qu'un exemple 2 couleurs + Canal Alpha.
 
