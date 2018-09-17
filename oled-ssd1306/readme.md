@@ -10,6 +10,11 @@ Ce GitHub couvre plusieurs modèles de cartes sous MicroPython:
 * Shop: [Feather ESP8266](https://shop.mchobby.be/feather/846-feather-huzzah-avec-esp8266-3232100008465-adafruit.html) utilisé dans cet exemple.
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
+# Bibliothèque 
+La bibliothèque sd1306.py` est un pilote SSD1306 I2C et SPI (MicroPyhton GitHub) pour écran OLED ssd1306. Cette bibliothèque doit être copiée sur la carte PyBoard.
+
+* [Télécharger la bibliothèque ssd1306](https://raw.githubusercontent.com/micropython/micropython/master/drivers/display/ssd1306.py)
+
 # Brancher 
 ## OLED Featherwing
 Le FeatherWing OLED s'insère simplement sur la carte Feather (ex: Feather ESP8266) et propose une résolution de 128 x 32 pixels. 

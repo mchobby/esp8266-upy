@@ -64,7 +64,7 @@ Plus d'info: <a href="https://shop.mchobby.be/ci/218-mcp23017-extension-16-entre
 Plus d'info: <a href="https://shop.mchobby.be/55-leds-neopixels-et-dotstar">NeoPixel category</a>
   </td>
   </tr>
-  <tr><td>OLED ssd1306</td>
+  <tr><td>oled-ssd1306</td>
       <td>Le SSD1306 est un contrôleur d'écran OLED.<br />
 Plus d'info: <a href="https://shop.mchobby.be/product.php?id_product=879">FeatherWing OLED ssd1306 128x32</a>
   </td>
