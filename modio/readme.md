@@ -11,7 +11,7 @@ MOD-IO est une carte d'interface d'Olimex utilisant le port UEXT. Cette carte ex
 * Addresse modifiable (stockée en EEProm)
 * Alimentation: 8-30VDC
 
-##  acheter
+__Où acheter__
 * Shop: [UEXT Expandable Input/Output board (MOD-IO)](http://shop.mchobby.be/product.php?id_product=1408)
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=1408)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
