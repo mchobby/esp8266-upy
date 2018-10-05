@@ -1,6 +1,6 @@
-# Use an Olimex MOD-IO and MOD-IO2 with ESP8266 MicroPython
+# Use an Olimex MOD-IO and MOD-IO2 with ESP8266 under MicroPython
 
- # MOD-IO
+## MOD-IO
 
 MOD-IO est une carte d'interface d'Olimex utilisant le port UEXT. Cette carte expose.
 * 4 relais,
@@ -11,7 +11,7 @@ MOD-IO est une carte d'interface d'Olimex utilisant le port UEXT. Cette carte ex
 * Addresse modifiable (stockée en EEProm)
 * Alimentation: 8-30VDC
 
- #  acheter
+##  acheter
 * Shop: [UEXT Expandable Input/Output board (MOD-IO)](http://shop.mchobby.be/product.php?id_product=1408)
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=1408)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
@@ -25,7 +25,7 @@ Nous vous recommandons la lecture du tutoriel [ESP8266-EVB](https://wiki.mchobby
 
 Ce dernier explique [comment flasher votre carte ESP8266 avec un câble console](https://wiki.mchobby.be/index.php?title=ESP8266-DEV).
 
- # Port UEXT
+## Port UEXT
 
 Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C. La correspondance avec les GPIO de l'ESP8266 sont les suivantes.
 
@@ -33,7 +33,7 @@ Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus 
 
 # Raccordement
 
- # MOD-IO 
+## MOD-IO 
 Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-IO.
 
 ![Raccordements](ESP8266-EVB-UEXT-SERIAL.jpg)
@@ -48,6 +48,7 @@ J'ai ensuite effectuer les raccordements suivant sur la carte MOD-IO:
 
 # Code de test
 
+## MOD-IO
 ```
 # Utilisation du MOD-IO d'Olimex avec un ESP8266 sous MicroPython
 #
