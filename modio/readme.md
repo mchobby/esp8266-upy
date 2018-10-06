@@ -55,7 +55,23 @@ Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bib
 
 Vous pouvez également transférer le script de test `test.py` sur la carte PyBoard. 
 
-## Carte MOD-IO
+La bibliothèque offre les fonctionalités suivantes
+
+__Membres:__
+* `carte.relais[index] = True` : (indexed property) Fixe l'état du relais.
+* `v = carte.relais[index]`    : (indexed property) Retourne l'état du relais.
+* `carte.relais`        : (property) Retourne l'état de tous les relais.
+* `carte.relais = True` : (property) Change l'état de tous les relais (accepte également une liste de 4 entrées).
+* `carte.input[3]`      : (indexed property) Lit une entrée opto-coupleur (True/False).
+* `carte.inputs`        : (property) Lit toutes les entrées optocouplers (liste avec 4 entrées).
+* `carte.analogs[3]`    : (indexed property) Lit une entrée analogique. Retourne une tension.
+* `carte.analogs.raw = True`: (property) bascule la lecture analogique en lecture brute (retourne un entier 10 bits, de 0 à 1023).
+
+__Methodes:__
+* `carte.change_address( 0x22 )` : méthode qui change l'adresse I2C de la carte MOD-IO sur le bus. Fixe la nouvelle adresse à 0x22 (à la place de la valeur par défault 0x58). __Le bouton "BUT" doit être maintenu enfoncé pendant l'envoi de la commande!
+
+
+## Exemple avec MOD-IO
 ```
 # Utilisation du MOD-IO d'Olimex avec un ESP8266 sous MicroPython
 #
