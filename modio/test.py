@@ -32,39 +32,51 @@ i2c = I2C( sda=Pin(2), scl=Pin(4) )
 brd = MODIO( i2c ) # default address=0x58
 
 # === Read Analog Input ===========================
-for irelay in range( 4 ):
-    print( 'Analog %s : %s Volts' %( irelay,brd.analog(irelay) ) ) 
+for input_index in range( 4 ):
+    print( 'Analog %s : %s Volts' %( input_index,brd.analogs[input_index] ) ) 
 
-for irelay in range( 4 ):
-    print( 'Analog %s : %s of 1023' %( irelay,brd.analog(irelay, raw=True) ) ) 
+brd.analogs.raw = True
+for input_index in range( 4 ):
+    print( 'Analog %s : %s of 1023' %( input_index,brd.analogs[input_index] ) ) 
+
+print( 'Read RAW alls analogs in one shot' )
+print( brd.analogs.states )
+
+print( 'Read VOLTS alls analogs in one shot' )
+brd.analogs.raw = False # Switch back to voltage conversion 
+print( brd.analogs.states )
 
 # === OptoIsolated Input ==========================
 print( 'Read all OptoIsolated input' )
-print( brd.inputs() )
+print( brd.inputs.states )
 print( 'Read OptoIsolated input #3' )
-print( brd.input(2) )
+print( brd.inputs[2] )
 
 # === RELAIS ======================================
 # Set REL1 and REL3 to ON (Python is 0 indexed)
-brd[0] = True
-brd[2] = True
-print( 'Relais[0..3] states : %s' % brd.relais ) 
+print( 'Set relay by index' )
+brd.relais[0] = True
+brd.relais[2] = True
+print( 'Relais[0..3] states : %s' % brd.relais.states ) 
 sleep_ms( 2000 )
+# switch all off
+brd.relais.states = False 
 
 print( 'one relay at the time')
 for irelay in range( 4 ):
     print( '   relay %s' % (irelay+1) )
-    brd[irelay] = True # Switch on the relay
+    brd.relais[irelay] = True # Switch on the relay
     sleep_ms( 1000 )
-    brd[irelay] = False # Switch OFF the relay
+    brd.relais[irelay] = False # Switch OFF the relay
     sleep_ms( 500 )
 
 print( 'Update all relais at once' )
-brd.relais = [True, True, False, True]
+brd.relais.states = [True, True, False, True]
 sleep_ms( 2000 )
 print( 'Switch ON all relais' )
-brd.relais = True
+brd.relais.states = True
 sleep_ms( 2000 )
 print( 'Switch OFF all relais' )
-brd.relais = False
+brd.relais.states = False
 
+print( "That's the end folks")
