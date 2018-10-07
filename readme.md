@@ -78,7 +78,20 @@ Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-lum
       <td> exemples de communication MQTT avec un module ESP8266.
   </td>
   </tr>  
-
+  <tr><td>MOD-IO</td>
+      <td>MOD-IO est une carte d'extension I2C avec port de connexion __UEXT__. Cette carte d'Olimex équipé de relais, d'entrée OptoCoupleur et entrées analogiques (0-3.3V).<br />Cette carte est compatible avec le standard industriel en 24V.<br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1408-uext-expandable-inputoutput-board-3232100014084-olimex.html">Carte MOD-IO</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+  </td>
+  </tr> 
+  <tr><td>MOD-IO2</td>
+      <td>MOD-IO2 est une carte d'extension I2C avec port de connexion __UEXT__. Cette carte d'Olimex équipé de relais, de GPIO au fonction multiples (Input, Output, Analog, PWM; 0-3.3V).<br />
+Plus d'info: <a href="hhttps://shop.mchobby.be/esp8266-esp32-wifi-iot/1409-uext-small-expandable-inputoutput-board-3232100014091-olimex.html">Carte MOD-IO</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+  </td>
+  </tr> 
 </tbody>
 </table>
 
