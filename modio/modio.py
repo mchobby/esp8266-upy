@@ -27,13 +27,15 @@ THE SOFTWARE.
 '''
 
 import ustruct
+from machine import Pin
 
 class MIO_Relais():
     """ Facade class to manipulate relais """
-    def __init__( self, modio_owner, relay_count):
+    def __init__( self, modio_owner, relay_count, set_relay_register = 0x10):
         self.count = relay_count
         self.owner = modio_owner
         self.__relais = 0x00    # State of all relays - all OFF 
+        self.__register = set_relay_register # Relay register where to write the relay state
 
     def __getitem__(self, index):
         """ access relay state with instance[0..3] """ 
@@ -88,7 +90,8 @@ class MIO_Relais():
 
     def _write_relais( self ):
         """ send inner state to relais """
-        nAck = self.owner.i2c.writeto( self.owner.addr, bytes([0x10,self.__relais]))
+        # default relay register is 0x10
+        nAck = self.owner.i2c.writeto( self.owner.addr, bytes([self.__register,self.__relais]))
         # we should have exactly 2 Ack since we send 2 bytes
         if nAck != 2:
             raise Exception( 'Invalid data size!')
@@ -183,6 +186,3 @@ class MODIO():
             raise Exception( 'Invalid data size!')
         # apply new address to current instance
         self.addr = new_address
-
-
-
