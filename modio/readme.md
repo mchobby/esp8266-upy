@@ -1,6 +1,5 @@
 # Use an Olimex MOD-IO with ESP8266 under MicroPython
 
-## MOD-IO
 MOD-IO est une carte d'interface d'Olimex utilisant le port UEXT. 
 
 ![La carte MOD-IO](mod-io.png)
