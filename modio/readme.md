@@ -34,9 +34,8 @@ Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus 
 
 ![Raccordements](ESP8266-EVB-UEXT.jpg)
 
-# Raccordement
-
-## MOD-IO 
+# MOD-IO Raccordement
+ 
 Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-IO.
 
 ![Raccordements](ESP8266-EVB-UEXT-SERIAL.jpg)
