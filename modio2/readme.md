@@ -1,6 +1,5 @@
 # Use an Olimex MOD-IO2 with ESP8266 under MicroPython
 
-# MOD-IO2
 MOD-IO2 est une carte d'interface d'Olimex utilisant le port UEXT. 
 
 ![La carte MOD-IO2](mod-io2.png)
@@ -25,6 +24,8 @@ __Où acheter__
 ## Details de la carte
 
 ![Raccordements](mod-io2-details.png)
+
+![GPIO du MOD-IO2](mod-io2-gpio.png)
 
 # ESP8266-EVB sous MicroPython
 Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
@@ -195,6 +196,7 @@ Switch OFF all relais
 That's the end folks
 >>>
 ```
+
 ## Exemple PWM avec MOD-IO2
 Contenu de l'exemple disponible dans le fichier `test2pwm.py`.
 
@@ -208,31 +210,87 @@ Fixer le cycle utile PWM du GPIO 6 (0 à 255) avec la valeur analogique du GPIO 
 ```
 # Test PWM sur le MOD-IO2 d'Olimex avec un ESP8266 sous MicroPython
 #
-# Shop: [UEXT Expandable Input/Output board (MOD-IO2)](http://shop.mchobby.be/product.php?id_product=1409)
+# Shop: http://shop.mchobby.be/product.php?id_product=1409
 # Wiki: not defined yet
 
+from machine import I2C, Pin
+from time import sleep_ms
+from modio2 import MODIO2
 
+i2c = I2C( sda=Pin(2), scl=Pin(4) )
+brd = MODIO2( i2c ) # default address=0x21
 
-# Changer l'adresse I2C de la carte MOD-IO
+print( "GPIO 5 - IN")
+brd.gpios.pin_mode( 5, Pin.IN )
 
-L'exemple suivant montre comment changer l'adresse courante de la carte MOD-IO (0x58) vers 0x22.
+print( "GPIO 6 - PWM" )
+brd.gpios.pwm( gpio=6, cycle=0 )
 
-ATTENTION: Il faut maintenir le bouton BUT enfoncé pendant l'exécution de la commande `change_address()` .
+cycle=0
+while cycle<255:
+    val = brd.gpios.analog( 5, raw = True )
+    cycle = val // 4 # from 0..1023 to 0..254
+    if cycle >= 254: # ensure a 100% duty cycle
+        cycle = 255
+    brd.gpios.pwm( 6, cycle )
+    print( "val=%s -> cycle=%s" %(val,cycle) )
+    sleep_ms( 1000 )
+
+print( "That's the end folks")
+
+```
+
+ce qui produit le résultat suivant:
+
+```
+MicroPython v1.9.4-8-ga9a3caad0 on 2018-05-11; ESP module with ESP8266
+Type "help()" for more information.
+>>> 
+>>> import test2pwm
+GPIO 5 - IN
+GPIO 6 - PWM
+val=698 -> cycle=174
+val=698 -> cycle=174
+val=620 -> cycle=155
+val=614 -> cycle=153
+val=597 -> cycle=149
+val=429 -> cycle=107
+val=325 -> cycle=81
+val=314 -> cycle=78
+val=120 -> cycle=30
+val=282 -> cycle=70
+val=496 -> cycle=124
+val=494 -> cycle=123
+val=701 -> cycle=175
+val=880 -> cycle=220
+val=978 -> cycle=244
+val=979 -> cycle=244
+val=982 -> cycle=245
+val=1023 -> cycle=255
+That's the end folks
+>>>  
+```
+
+# Changer l'adresse I2C de la carte MOD-IO2
+
+L'exemple suivant montre comment changer l'adresse courante de la carte MOD-IO2 (0x21) vers 0x22.
+
+ATTENTION: Il faut avoir le cavalier fermé pendant l'exécution de la commande `change_address()` .
 
 ```
 # Modifier l'adresse de MOD-IO2 d'Olimex vers 0x22
 #
-# Shop: http://shop.mchobby.be/product.php?id_product=1408
+# Shop: http://shop.mchobby.be/product.php?id_product=1409
 
 from machine import I2C, Pin
-from modio import MODIO
+from modio2 import MODIO2
 
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
-brd = MODIO( i2c, addr=0x58 )
+brd = MODIO2( i2c, addr=0x21 )
 brd.change_address( 0x22 )
 ```
 
-Etant donné que le changement d'adresse est immédiat, la carte produira un ACK sous l'adresse 0x22 alors que la commande est émise sous l'adresse 0x58.
+Etant donné que le changement d'adresse est immédiat, la carte produira un ACK sous l'adresse 0x22 alors que la commande est émise sous l'adresse 0x21.
 Par conséquent, la réponse ne sera jamais reçue (comme attendue) par le microcontroleur. Il en résulte le message d'erreur `OSError: [Errno 110] ETIMEDOUT` (tout à fait normal dans cette circonstance).
 
 Un `i2c.scan()` permet de confirmer le changement d'adresse.
