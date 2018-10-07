@@ -1,8 +1,8 @@
 '''
 Test the PWM feature of Olimex MOD-IO2 board. 
-PWM is only available in GPIO 1 & 2.
+PWM is only available in GPIO 5 & 6.
 
-Get Analog value on GPIO 5 and apply it as PWM to GPIO 1.
+Get Analog value on GPIO 5 and apply it as PWM to GPIO 6.
 
 MOD-IO2 board : http://shop.mchobby.be/product.php?id_product=1403 
 MOD-IO2 board : https://www.olimex.com/Products/Modules/IO/MOD-IO2/open-source-hardware 
