@@ -81,7 +81,7 @@ __Methodes:__
 # Utilisation du MOD-IO2 d'Olimex avec un ESP8266 sous MicroPython
 #
 # Shop: [UEXT Expandable Input/Output board (MOD-IO2)](http://shop.mchobby.be/product.php?id_product=1409)
-# Wiki: not defined yet
+# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO2
 
 from machine import I2C, Pin
 from time import sleep_ms
@@ -211,7 +211,7 @@ Fixer le cycle utile PWM du GPIO 6 (0 à 255) avec la valeur analogique du GPIO 
 # Test PWM sur le MOD-IO2 d'Olimex avec un ESP8266 sous MicroPython
 #
 # Shop: http://shop.mchobby.be/product.php?id_product=1409
-# Wiki: not defined yet
+# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO2
 
 from machine import I2C, Pin
 from time import sleep_ms

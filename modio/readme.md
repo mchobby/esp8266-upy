@@ -18,7 +18,7 @@ __Où acheter__
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
 * Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
-* Wiki: not defined yet 
+* Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO
 
 # ESP8266-EVB sous MicroPython
 Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
@@ -77,7 +77,7 @@ __Methodes:__
 # Utilisation du MOD-IO d'Olimex avec un ESP8266 sous MicroPython
 #
 # Shop: http://shop.mchobby.be/product.php?id_product=1408
-# Wiki: not defined yet
+# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO
 
 from machine import I2C, Pin
 from time import sleep_ms
