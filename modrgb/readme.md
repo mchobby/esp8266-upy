@@ -4,7 +4,7 @@ MOD-RGB est une carte d'interface d'Olimex utilisant le port UEXT.
 
 ![La carte MOD-RGB](mod-rgb.jpg)
 
-<div style="margin: 15px 0; background: rgba(204,14,14,.3); display: block; padding: 15px 15px 15px 15px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #CCC;" >Nous avons détecté un problème de stabilité dans une situation de Stress Test. [Voir ce billet sur les Forums d'Olimex](https://www.olimex.com/forum/index.php?topic=6721.0).</div>
+<font color="red">'''Nous avons détecté un problème de stabilité dans une situation de Stress Test. [Voir ce billet sur les Forums d'Olimex](https://www.olimex.com/forum/index.php?topic=6721.0) '''</font>
 
 Cette carte expose.
 * Un FirmWare personnalisé pour bus I2C or DMX
