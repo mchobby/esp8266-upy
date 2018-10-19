@@ -1,5 +1,7 @@
 '''
-Test the Olimex MOD-LCD1x9 board. 
+Test the Olimex MOD-LCD1x9 board.
+
+Display integer value (displayed on the right) 
 
 It allows the user to control one or more MOD-IO board.
 MOD-LCD1x9 board : http://shop.mchobby.be/product.php?id_product=1414
@@ -32,31 +34,14 @@ from modlcd19 import MODLCD1x9
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
 lcd = MODLCD1x9( i2c ) # Will light all segments
 
-# Display with 9 chars max
-lcd.write( '123456789' )
-sleep( 2 )
-lcd.write( '<mchobby>' )
-sleep( 2 )
-
-# Display a long string
-lcd.write( 'Hey, this is a message from Belgium' )
-
-# Activate a point
-lcd.write( 'ABCDEFGHI')
-for i in range( 9 ):
-	lcd.point( i+1, True, force_update=True )
-	sleep( 1 )
-	lcd.point( i+1, False, force_update=True )
-
-sleep( 1 )
-
-# Activate the selection
-for i in range( 9 ):
-	lcd.selection( i+1, True, force_update=True )
-	sleep( 1 )
-	lcd.selection( i+1, False, force_update=True )
-
-
-lcd.write( 'The end.')
+# Display a float value
+amp = 15.125
+while True:
+    amp = amp + 0.73
+    # Display float as integer '%5d' % 12.13 ==> '   12'
+    # See: https://docs.python.org/3/library/string.html#format-examples
+    lcd.write( amp, format='%7d A' )
+    # Give sometime to the lcd to update
+    sleep( 0.100 )
 
 print( "That's the end folks")

@@ -27,6 +27,7 @@ THE SOFTWARE.
 
 import ustruct
 from machine import Pin
+from time import sleep
 
 # __lcd_mapping : segment mapping in COM,segment BIT for all the LCD char.
 #
@@ -91,7 +92,9 @@ __lcd_alphabet = {
   '&': 0x0000, 
   '£': 0x0000, 
   '(': 0x0039, 
-  ')': 0x000f, 
+  ')': 0x000f,
+  '}': 0x2480,
+  '{': 0x0a40,
   '°': 0x0463, 
   '+': 0x1540, 
   ',': 0x0000, 
@@ -192,6 +195,8 @@ class MODLCD1x9():
         self.i2c    = i2c_bus # Initialized I2C bus 
         self.addr = addr # MOD-LCD1x9 board address
         self.lcdBitmap = [0x00] * 20 # 40segments * 4 = 160px, 160 / 8 = 20bytes (cfr: Olimex 32U4 driver)
+        self.__enable_point = [None] * 9 # Enable/Disable/don't care points individually on screen
+        self.__enable_selection = [False] * 9 # True/False - enable/disable
 
         if not self._initialize():
             raise Exception( 'init failure')
@@ -212,7 +217,7 @@ class MODLCD1x9():
         return nack == 24        
 
     def _enable_segment( self, comIndex, bitIndex ):
-        """ enables a segment in the display buffer. Does not actually light up the segment until _Update(..)
+        """ enables a segment in the display buffer. Does not actually light up the segment until Update(..)
 
             :params comIndex: backplate index
             :params bitIndex: segment index
@@ -239,16 +244,6 @@ class MODLCD1x9():
 
         self.lcdBitmap[bitIndex] = self.lcdBitmap[bitIndex] &  (0xFF - (0x80 >> comIndex)) # 0xFF - y = bitwise not = ~(y)
 
-    def _update( self ):
-        """ update the display with display_buffer content """
-        nack = self.i2c.writeto( self.addr, bytes(
-            [ 0b11100000, # device select register
-              0b00000000  # pointer register
-            ] + self.lcdBitmap ) )
-        # print( self.lcdBitmap )
-        if nack != 22:
-            raise Exception( 'update error')
-
     def _write( self, s9 ):
         """ Write a string to the LCD buffer. Do not write more than than 9 characters """
         assert len(s9)<=9, '9 chars max!' 
@@ -270,33 +265,97 @@ class MODLCD1x9():
                 else:
                     self._disable_segment( com, bit )
 
-    def write( self, s9 ):
-    	""" Write exactly 9 chars on the LCD + Update LCD """
-    	self._write( s9 )
-        self._update()
+    def _apply_extra( self ):
+    	""" apply the extra configuration in the lcdBitmap buffer. 
+    	    This concerns the POINY setting and SELECTION setting. """
+    	for iPos in range( 9 ):
+            # POINT = bit #14 
+            bit = __lcd_mapping[ iPos+1 ][BIT][14] # i+1 ==> 0-indexed to 1-indexed
+            com = __lcd_mapping[ iPos+1 ][COM][14]
 
-    def point( self, position, enable=True ):
-        """ Light the point on the LCD. Call it after _write & before _update. """
-        assert 1<= position <=9
-        # Activate/Deactivate the bit #14 
-        bit = __lcd_mapping[ position ][BIT][14] # i+1 ==> 0-indexed to 1-indexed
-        com = __lcd_mapping[ position ][COM][14]
+            # If we should not take care about the bit
+            if self.__enable_point[iPos] != None: # enable_point is 0-indexed
+                # If the bit should be activated	
+                if self.__enable_point[iPos]: # enable_point is 0-indexed
+                    self._enable_segment( com, bit )
+                else:
+                    self._disable_segment( com, bit )   
 
-        # If the bit is activated in the bitfield
-        if enable:
-            self._enable_segment( com, bit )
+            # SELECTION = bit #15 
+            bit = __lcd_mapping[ iPos+1 ][BIT][15] # i+1 ==> 0-indexed to 1-indexed
+            com = __lcd_mapping[ iPos+1 ][COM][15]
+
+            # If the bit should be activated	
+            if self.__enable_selection[iPos]: # enable_point is 0-indexed
+                self._enable_segment( com, bit )
+            else:
+                self._disable_segment( com, bit )  
+
+    def update( self ):
+        """ Update send the display_buffer to the LCD. Usually, you do not need to call this yourself """
+        self._apply_extra() # Apply point+selection config in the lcdBitmap
+
+        nack = self.i2c.writeto( self.addr, bytes(
+            [ 0b11100000, # device select register
+              0b00000000  # pointer register
+            ] + self.lcdBitmap ) )
+        # print( self.lcdBitmap )
+        if nack != 22:
+            raise Exception( 'update error')
+
+    def write( self, value, format=None, scrool_time=0.350 ):
+        """ Write exactly 9 chars on the LCD + Update LCD """
+        if format:
+            s = format % value
         else:
-            self._disable_segment( com, bit )   	
+            s = value
 
-    def selection( self, position, enable=True ):
+        if type( s ) != str:
+            s = '%s' % value
+        
+        # take care about point (ex: digital value)
+        if format and ('.' in format):
+            if len( s )>10:  # we will replace the . so we can accept one char more
+                self._write( 'FError' ) # Formating error
+                self.update()
+                return
+            # Left pad with space (on 10 position, we will remove the dot)
+            s = ' '*(10-len(s))+s
+            # Identify '.' position
+            idxPoint = s.index('.')
+            # write the content without the point
+            self._write( s.replace('.','') )
+            # set the point to the proper position
+            for i in range(9):
+                self.point( i+1, enable=True if (i+1)==idxPoint else False )
+            self.update()
+            return
+
+        # Simple display
+        if len(s)<=9:
+            self._write( s )
+            self.update()
+        else:
+        	# Scrooling display
+        	for i in range( len(s)+1 ):
+        		self._write( s[i:i+9] )
+        		self.update()
+        		sleep( 0.750 if i==0 else scrool_time ) # Wait 1/2 sec for first display
+
+    def point( self, position, enable=True, force_update=False ):
+        """ Light the point on the LCD. 
+
+        :param enable: True/False/None for display/hide/don't care """
+        assert 1<= position <=9
+        assert enable in (True,False,None)
+        self.__enable_point[ position-1 ] = enable
+        if force_update:
+            self.update()
+        
+    def selection( self, position, enable=True, force_update=False ):
         """ Light the selection UNDER BARRE on the LCD. Call it after _write & before _update. """
         assert 1<= position <=9
-        # Activate/Deactivate the bit #15 
-        bit = __lcd_mapping[ position ][BIT][15] # i+1 ==> 0-indexed to 1-indexed
-        com = __lcd_mapping[ position ][COM][15]
-
-        # If the bit is activated in the bitfield
-        if enable:
-            self._enable_segment( com, bit )
-        else:
-            self._disable_segment( com, bit )   	
+        assert enable in (True,False)
+        self.__enable_selection[ position-1 ] = enable
+        if force_update:
+            self.update() 	
