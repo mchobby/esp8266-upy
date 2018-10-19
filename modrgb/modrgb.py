@@ -33,9 +33,14 @@ class MODRGB():
     """
     Class to control the MOD-RGB board.
 
-
-    MODRGB.change_address( 0x22 ) : change the module address to 0x22 (instead of the default address 0x58).
-                                   The "BUT" board button must be hold down while issuing the command!
+    MODRGB.pwm( enable )   : True/False to enable/disable LED PWM. When enabled, the color are displayed on the strip. 
+                             When disabled, switch off the strip.
+    MODRGB.audio( enable ) : True/False to enable/disable LED Audio mode.
+    MODRGB.set_rgb( color ): set the RGB color from a tuple (red,green,blue) with value between 0..255.
+    MODRGB.black()         : disable all leds. 
+    MODRGB.board_id()      : return the board identifier.
+    MODRGB.change_address( 0x22 ) : change the module address to 0x22 (instead of the default address 0x20).
+                                   The "prog" board jumper must be hold down while issuing the command!
     """
 
     def __init__( self, i2c_bus, addr=0x20 ):
