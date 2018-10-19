@@ -4,8 +4,6 @@ MOD-RGB est une carte d'interface d'Olimex utilisant le port UEXT.
 
 ![La carte MOD-RGB](mod-rgb.jpg)
 
-<font color="red">'''Nous avons détecté un problème de stabilité dans une situation de Stress Test. [Voir ce billet sur les Forums d'Olimex](https://www.olimex.com/forum/index.php?topic=6721.0) '''</font>
-
 Cette carte expose.
 * Un FirmWare personnalisé pour bus I2C or DMX
 * 3 canaux avec protection contre sur-courant
@@ -65,7 +63,11 @@ __Methodes:__
 * `mod_rgb.board_id()`      : Retourne l'identification de la carte.
 * `mod_rgb.change_address( 0x22 )` : Change l'adresse du module a 0x22 (à la place de 0x20).
                                    Le cavalier "prog" de programmation doit être fermé pendant l'envoi de la commande!
- 
+
+## Problème
+
+* Problème de stabilité I2C dans une situation de Stress Test. [Voir ce billet sur les Forums d'Olimex](https://www.olimex.com/forum/index.php?topic=6721.0)
+
 ## Exemple avec MOD-RGB
 ```
 # Utilisation du MOD-RGB d'Olimex avec un ESP8266 sous MicroPython
