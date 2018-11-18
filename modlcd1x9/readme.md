@@ -1,4 +1,4 @@
-# Use an Olimex MOD-LCD1x9 with ESP8266 under MicroPython
+# Utiliser un MOD-LCD1x9 d'Olimex avec ESP8266 sous MicroPython
 
 MOD-RGB est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT. 
 
