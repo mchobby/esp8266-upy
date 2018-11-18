@@ -14,13 +14,6 @@ Cette carte expose
 
 La bibliothèque MicroPython `modlcd19.py` permet de manipuler les points et les barre de sélections de l'afficheur, ce que ne permet pas la bibliothèque Arduino originale :-)
 
-__Où acheter__
-* Shop: [UEXT RGB Module (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1414)
-* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
-* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
-* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
-* Wiki: not defined yet 
-
 # ESP8266-EVB sous MicroPython
 Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
 
@@ -67,6 +60,8 @@ Afficher une valeur sur le LCD.
 * `value` est une String: Si la chaîne fait moins de 9 caractères, elle est simplement affichée. Si elle fait plus de 9 caractères, un scrolling est automatiquement mis en place (avec scrool_time pour chaque nouveau caractère affiché). 
 * `value` est un Float ou Int: Automatiquement alignés à droite! le paramètre `format` permet de spécifier le format d'affichage à utiliser.
 * `format`: appliquer un format d'affichage à la valeur. 
+
+Par exemple:
  * lcd.write( 12.4693, format='%.3f v' ) -> avec 3 decimals -> "12.469 v" 
  * lcd.write( 12.13, '%5d' ) -> affiche un Float comme un entier -> "   12"
 
@@ -140,4 +135,9 @@ while True:
 print( "That's the end folks")
 ```
 
-
+# Où acheter
+* Shop: [UEXT RGB Module (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1414)
+* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
+* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
+* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
+* Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-LCD1x9
