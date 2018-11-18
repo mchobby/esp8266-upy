@@ -1,10 +1,10 @@
 # Utiliser un MOD-LCD1x9 d'Olimex avec ESP8266 sous MicroPython
 
-MOD-RGB est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT. 
+MOD-LCD1x9 est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT. 
 
-![La carte MOD-RGB](mod-lcd1x9.jpg)
+![La carte MOD-LCD1x9](mod-lcd1x9.jpg)
 
-![La carte MOD-RGB](mod-lcd1x9-02.jpg)
+![La carte MOD-LCD1x9](mod-lcd1x9-02.jpg)
 
 Cette carte expose
 * Utilise le Bus I2C
@@ -136,7 +136,7 @@ print( "That's the end folks")
 ```
 
 # Où acheter
-* Shop: [UEXT RGB Module (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1414)
+* Shop: [UEXT Module MOD-LCD1x9](http://shop.mchobby.be/product.php?id_product=1414)
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
 * Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
