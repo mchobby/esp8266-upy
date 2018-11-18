@@ -4,6 +4,8 @@ MOD-MAG utilise un MAG3110 de NXP pour effectuer une lecture du champ magnétiqu
 
 ![La carte MOD-MAG à base de MAG3110](mod-mag3110.png)
 
+Le MAG3110 équipe également différents breakout comme celui de SparkFun ci-dessous.
+
 ![Le breakout MAG3110](sparkfun-mag3110.png)
 
 Cette carte expose
