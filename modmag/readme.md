@@ -7,7 +7,7 @@ MOD-MAG utilise un MAG3110 de NXP pour effectuer une lecture du champ magnétiqu
 ![Le breakout MAG3110](sparkfun-mag3110.png)
 
 Cette carte expose
-* Utilise le '''bus I2C'''
+* Utilise le __bus I2C__
 * Propose une lecture de champs magnétiques
 * Propose une barre de sélection (Under Barre) en dessous de chaque caractère (pratique pour indiquer la sélection d'une option).
 * Un connecteur UEXT pour faciliter le raccordement
@@ -29,7 +29,7 @@ Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus 
 
 Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-LCD1x9
 
-![Raccordements](mod-mag-wiring.jpg)
+![Raccordements](mod-mag-wiring.png)
 
 # Code de test
 
@@ -98,7 +98,7 @@ Contenu de l'exemple disponible dans le fichier `testcal.py`.
 
 Ce dernier démontre l'utilisation de la phase de calibration avant l'indication du Nord magnétique.
 
-La calibration prend place au démarrage du code, moment où il faut tourner le senseur dans toutes les directions pour détecter les maximas et minima pour les axes X et Y.
+La calibration prend place au démarrage du code, moment où il faut tourner le senseur dans toutes les directions pour détecter les maximas et minimas pour les axes X et Y.
 
 __POUR CALIBRER__: faire tourner le senseur sur 360 degrés. Le mode de calibration s'interrompt entre 5 à 10 secondes.
 
