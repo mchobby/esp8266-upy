@@ -7,9 +7,12 @@ MOD-RGB est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le por
 ![La carte MOD-RGB](mod-lcd1x9-02.jpg)
 
 Cette carte expose
-* toto
-* Un bus I2C
+* Utilise le Bus I2C
+* Propose un point décimal pour chaque caractère
+* Propose une barre de sélection (Under Barre) en dessous de chaque caractère (pratique pour indiquer la sélection d'une option).
 * Un connecteur UEXT pour faciliter le raccordement
+
+La bibliothèque MicroPython `modlcd19.py` permet de manipuler les points et les barre de sélections de l'afficheur, ce que ne permet pas la bibliothèque Arduino originale :-)
 
 __Où acheter__
 * Shop: [UEXT RGB Module (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1414)
