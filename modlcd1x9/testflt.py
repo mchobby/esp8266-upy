@@ -1,9 +1,9 @@
 '''
 Test the Olimex MOD-LCD1x9 board.
 
-Display float value (justifier on the right) 
+Display float value (justified on the right) 
 
-It allows the user to control one or more MOD-IO board.
+It allows the user to control one MOD-LCD1x9 board.
 MOD-LCD1x9 board : http://shop.mchobby.be/product.php?id_product=1414
 MOD-LCD1x9 : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/open-source-hardware    
 User Guide : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/resources/LCD1X9.pdf 

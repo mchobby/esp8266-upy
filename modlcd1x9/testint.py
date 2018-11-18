@@ -34,7 +34,7 @@ from modlcd19 import MODLCD1x9
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
 lcd = MODLCD1x9( i2c ) # Will light all segments
 
-# Display a float value
+# Display a float value as integer one
 amp = 15.125
 while True:
     amp = amp + 0.73

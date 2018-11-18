@@ -1,7 +1,7 @@
-'''
-modlcd19 is a micropython module for the Olimex MOD-IO board. 
+"""
+modlcd19 is a micropython module for the Olimex MOD-LCD1x9 board. 
 
-It allows the user to control one or more MOD-IO board.
+It allows the user to control one or more MOD-LCD1x9 board.
 MOD-LCD1x9 board : http://shop.mchobby.be/product.php?id_product=1414
 MOD-LCD1x9 : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/open-source-hardware  
 User Guide : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/resources/LCD1X9.pdf 
@@ -23,7 +23,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-'''
+"""
 
 import ustruct
 from machine import Pin
@@ -188,7 +188,17 @@ class MODLCD1x9():
     """
     Class to control the MOD-LCD1x9 board
 
-    ....description of methods.....
+    write : Write a content and update the display.
+        Can display short string (9 char max), long string (automatic with scrolling), integer or float values.
+        
+        float and integer are aligned on right.
+        String format can be specified (useful with int and floats).
+        format='%.3f v' -> display with 3 decimals.
+        format='%5d'    -> 12.13 gives '   12' to display float as integer.
+
+    point : Light the point on the LCD. 
+
+    selection : Light the selection UNDER BARRE on the LCD.
     """
 
     def __init__( self, i2c_bus, addr=0x38 ):
@@ -304,7 +314,13 @@ class MODLCD1x9():
             raise Exception( 'update error')
 
     def write( self, value, format=None, scrool_time=0.350 ):
-        """ Write exactly 9 chars on the LCD + Update LCD """
+        """ Write short string (9 char max), long string (with scrolling), integer or float value on screen.
+
+            float and integer are aligned on right.
+            format parameter allows to specify display format.
+            lcd.write( 12.4693, format='%.3f v' ) -> with 3 decimals.
+            lcd.write( 12.13, '%5d' ) -> '   12' to display float value as integer one.
+         """
         if format:
             s = format % value
         else:
@@ -353,7 +369,7 @@ class MODLCD1x9():
             self.update()
         
     def selection( self, position, enable=True, force_update=False ):
-        """ Light the selection UNDER BARRE on the LCD. Call it after _write & before _update. """
+        """ Light the selection UNDER BARRE on the LCD. """
         assert 1<= position <=9
         assert enable in (True,False)
         self.__enable_selection[ position-1 ] = enable

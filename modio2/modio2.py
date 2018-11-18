@@ -185,7 +185,7 @@ class MIO2_GPIOs():
         nAck = self.owner.i2c.writeto( self.owner.addr, bytes([0x03]) )
         assert nAck==1
         data = self.owner.i2c.readfrom( self.owner.addr, 1) # read 1 bytes
-        print( int(data[0]) )
+        #print( int(data[0]) )
         r = []
         for gpio in range( 7 ):
             if self.is_output( gpio ):

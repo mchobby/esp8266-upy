@@ -73,7 +73,7 @@ __Methodes:__
 # Utilisation du MOD-RGB d'Olimex avec un ESP8266 sous MicroPython
 #
 # Shop: [UEXT RGB board (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1410)
-# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO2
+# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-RGB
 
 from machine import I2C, Pin
 from time import sleep_ms
@@ -138,7 +138,7 @@ Nécessite la bibliothèque `rgbfx.py` également disponible sur le GitHub.
 # Effet RGB avec MOD-RGB d'Olimex avec un ESP8266 sous MicroPython
 #
 # Shop: http://shop.mchobby.be/product.php?id_product=1410
-# Wiki: ---
+# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-RGB
 
 from machine import I2C, Pin
 from time import sleep_ms
