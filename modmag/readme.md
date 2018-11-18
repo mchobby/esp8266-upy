@@ -10,8 +10,7 @@ Le MAG3110 équipe également différents breakout comme celui de SparkFun ci-de
 
 Cette carte expose
 * Utilise le __bus I2C__
-* Propose une lecture de champs magnétiques
-* Propose une barre de sélection (Under Barre) en dessous de chaque caractère (pratique pour indiquer la sélection d'une option).
+* Propose une lecture de champs magnétiques avec des fontionnalités avancées
 * Un connecteur UEXT pour faciliter le raccordement
 
 # ESP8266-EVB sous MicroPython
