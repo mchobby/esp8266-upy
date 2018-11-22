@@ -29,7 +29,7 @@ Pour résumer les fonctionnalités:
 
 Le ADS1x15 utilise une interface I2C. Les lignes SCL et SDA doivent donc être connectées (en plus de VDD et GND).
 
-![Raccordements ADS1115](ads1115_bb.jpg)
+![Raccordements ADS1115](ads1x15_bb.jpg)
 
 Note: si le CPU doit être déclenché en mode continu, la broche ALERT/RDY doit également être connecté.
 
