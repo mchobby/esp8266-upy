@@ -156,7 +156,7 @@ print( "That's the end folks")
 
 La [bibliothèque MAG3110 Arduino proposé par Sparkfun](https://github.com/sparkfun/SparkFun_MAG3110_Breakout_Board_Arduino_Library) propose d'autres exemples comme:
 * La magnitude
-* Bousolle digitale
+* Boussole digitale
 * Lecture MicroTesla (extra)
 * Le déclenchement de mesure (mode triggered)
 
