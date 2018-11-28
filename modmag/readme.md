@@ -152,6 +152,17 @@ print( "That's the end folks")
 
 ```
 
+## Exemple: autres
+
+La [bibliothèque MAG3110 Arduino proposé par Sparkfun](https://github.com/sparkfun/SparkFun_MAG3110_Breakout_Board_Arduino_Library) propose d'autres exemples comme:
+* La magnitude
+* Bousolle digitale
+* Lecture MicroTesla (extra)
+* Le déclenchement de mesure (mode triggered)
+
+Le temps manquant, je n'ai pu faire le portage de ces exemples (et code bibliothèque correspondant) sous MicroPython.
+N'hésitez pas à nous contacter sur [MC Hobby](https://shop.mchobby.be) en cas de besoin ou partage de participation.
+
 # Où acheter
 * Shop: [UEXT Module MOD-MAG](http://shop.mchobby.be/product.php?id_product=1413) module à base de MAG3110
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
