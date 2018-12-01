@@ -41,7 +41,7 @@ ltr = LTR_501ALS( i2c ) # 2 Lux to 64000 Lux
 while True:
     dr = ltr.data_ready
     if DR_LUX in dr:
-    	l = ltr.lux # read ALS_0 & ALS_1
+    	l = ltr.lux # read ALS_0 & ALS_1. ALS_0 seems more accurate.
     	print( "Lux ALS_0, ALS_1 = ", l )
 
     if DR_PROXIMITY in dr:
