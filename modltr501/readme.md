@@ -1,4 +1,4 @@
- Utiliser un MOD-LTR-501ALS d'Olimex avec ESP8266 sous MicroPython
+# Utiliser un MOD-LTR-501ALS d'Olimex avec ESP8266 sous MicroPython
 
 Le module utilise un MOD-LTR-501ALS pour effectuer une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). L'avantage du module MOD-LTR-501ALS est qu'il expose un port UEXT facilitant les raccordements. 
 
@@ -103,6 +103,35 @@ while True:
 
 
 print( "That's the end folks")
+```
+
+ce qui produit le résultat suivant:
+
+```
+Lux ALS_0, ALS_1 =  (9, 26)
+Proximity value, cm = (1382, 3.24866)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (11, 26)
+Proximity value, cm = (1453, 2.90181)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (12, 25)
+Proximity value, cm = (953, 5.34441)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (13, 25)
+Proximity value, cm = (827, 5.95994)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (13, 25)
+Proximity value, cm = (760, 6.28725)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (14, 25)
+Proximity value, cm = (737, 6.39961)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (14, 26)
+Proximity value, cm = (716, 6.5022)
+----------------------------------------
+Lux ALS_0, ALS_1 =  (14, 27)
+Proximity value, cm = (702, 6.57059)
+----------------------------------------
 ```
 
 # Où acheter
