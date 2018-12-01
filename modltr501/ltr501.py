@@ -79,13 +79,13 @@ class LTR_501ALS():
         if self.who_am_i() != WHO_AM_I_RESP:
             raise Exception( 'LTR_501ALS not found!' ) 
     
-        self.reset( lux_range )
+        self.init( lux_range )
     
     def who_am_i( self ):
         data = self.i2c.readfrom_mem( self.addr, WHO_AM_I, 1 )
         return data[0] # transform b'\xc4' --> value
 
-    def reset( self, lux_range ):
+    def init( self, lux_range ):
         self.i2c.writeto_mem( self.addr, ALS_CONTR    , bytes([0x03 | lux_range ]) ) # ALS (Lux Sensor) in Active mode, 64k lux range
         self.i2c.writeto_mem( self.addr, PS_CONTR     , bytes([0x03]) ) # PS (proximity sensor) active mode, x1 GAIN
         self.i2c.writeto_mem( self.addr, PS_LED       , bytes([0x6B]) ) # LED 60Hz, 50% duty, 50mA
@@ -99,7 +99,6 @@ class LTR_501ALS():
 
             Will return a list including DR_LUX (0x04) and/or DR_PROXIMITY (0x01) """
         data = self.i2c.readfrom_mem( self.addr, ALS_PS_STATUS, 1 )
-        print( data )
         _r = []
         if data[0] & DR_LUX:
             _r.append( DR_LUX )
@@ -109,7 +108,7 @@ class LTR_501ALS():
 
     @property
     def lux( self ):
-        """ Extract ALS Lux Sensor value. Returns a tuple (ALS_0, ALS_1) """
+        """ Extract ALS Lux Sensor value. Returns a tuple (ALS_0, ALS_1) probably for (visible_light, ) """
         data = self.i2c.readfrom_mem( self.addr, ALS_DATA_CH1_0, 4 )
         ADC_1 = ustruct.unpack( '<H', data[0:2] )[0] # convert 2 bytes, LSB first to integer, Unsigned number
         ADC_0 = ustruct.unpack( '<H', data[2:4] )[0] 
