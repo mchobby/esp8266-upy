@@ -2,7 +2,7 @@
 
 MOD-OLED-128x64 est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT. 
 
-![La carte MOD-OLED-128x64](mod-oled-128x64.jpg)
+![La carte MOD-OLED-128x64](OLED-10b.png)
 
 Cette carte expose
 * Utilise le Bus I2C
