@@ -64,9 +64,10 @@ Plus d'info: <a href="https://shop.mchobby.be/ci/218-mcp23017-extension-16-entre
 Plus d'info: <a href="https://shop.mchobby.be/55-leds-neopixels-et-dotstar">NeoPixel category</a>
   </td>
   </tr>
-  <tr><td>oled-ssd1306</td>
+  <tr><td>oled-ssd1306<br />modoled128x64</td>
       <td>Le SSD1306 est un contrôleur d'écran OLED.<br />
-Plus d'info: <a href="https://shop.mchobby.be/product.php?id_product=879">FeatherWing OLED ssd1306 128x32</a>
+Plus d'info: <a href="https://shop.mchobby.be/product.php?id_product=879">FeatherWing OLED ssd1306 128x32</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/uext/1411-uext-module-oled-display-128-x-64-3232100014114-olimex.html">Olimex OLED ssd1306 128x64 (UEXT module)</a><br />
   </td>
   </tr>  
   <tr><td>tsl2561</td>
@@ -109,6 +110,13 @@ Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-p
   <tr><td>MOD-MAG<br />MAG3110</td>
       <td>Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.<br />
 Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1413-uext-mag3110-magnetometer-module-3232100014138-olimex.html">Carte MOD-MAG (à base de MAG3110)</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+  </td>
+  </tr> 
+  <tr><td>MOD-LTR-501ALS<br />LTR-501ALS</td>
+      <td>LTR-501ALS permet de faire une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). Le MOD-LTR-501ALS dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.<br />
+Plus d'info: <a href="https://shop.mchobby.be/uext/1415-senseur-proximite-et-lumiere-ltr501-connecteur-uext-3232100014152-olimex.html">Carte MOD-LTR-501ALS (à base de LTR-501ALS)</a><br />
 Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
 Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
   </td>
