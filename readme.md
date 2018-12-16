@@ -81,46 +81,42 @@ Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-lum
   </tr>  
   <tr><td>MOD-IO</td>
       <td>MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, d'entrée OptoCoupleur et entrées analogiques (0-3.3V).<br />Cette carte est compatible avec le standard industriel en 24V.<br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1408-uext-expandable-inputoutput-board-3232100014084-olimex.html">Carte MOD-IO</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1408-uext-expandable-inputoutput-board-3232100014084-olimex.html">Carte MOD-IO</a>
   </td>
   </tr> 
   <tr><td>MOD-IO2</td>
       <td>MOD-IO2 est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, de GPIO au fonction multiples (Input, Output, Analog, PWM; 0-3.3V).<br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1409-uext-small-expandable-inputoutput-board-3232100014091-olimex.html">Carte MOD-IO</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1409-uext-small-expandable-inputoutput-board-3232100014091-olimex.html">Carte MOD-IO</a>
   </td>
   </tr> 
   <tr><td>MOD-RGB</td>
       <td>MOD-RGB est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de MosFet de puissance pour commander des rubans LED RGB analogiques via I2C (ou DMX).<br />
-Plus d'info: <a href="https://shop.mchobby.be/uext/1410-uext-module-to-controle-rgb-strip-leds-3232100014107-olimex.html">Carte MOD-RGB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+Plus d'info: <a href="https://shop.mchobby.be/uext/1410-uext-module-to-controle-rgb-strip-leds-3232100014107-olimex.html">Carte MOD-RGB</a>
   </td>
   </tr> 
   <tr><td>MOD-LCD1x9</td>
       <td>MOD-LCD1x9 est un afficheur 9 caractères alphanumérique I2C avec port de connexion <strong>UEXT</strong>.<br />
 Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1414-uext-lcd-display-1-line-of-9-alphanumeric-chars-3232100014145-olimex.html">Carte MOD-LCD1x9</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a>
   </td>
   </tr> 
   <tr><td>MOD-MAG<br />MAG3110</td>
       <td>Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.<br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1413-uext-mag3110-magnetometer-module-3232100014138-olimex.html">Carte MOD-MAG (à base de MAG3110)</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1413-uext-mag3110-magnetometer-module-3232100014138-olimex.html">Carte MOD-MAG (à base de MAG3110)</a>
   </td>
   </tr> 
   <tr><td>MOD-LTR-501ALS<br />LTR-501ALS</td>
       <td>LTR-501ALS permet de faire une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). Le MOD-LTR-501ALS dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.<br />
-Plus d'info: <a href="https://shop.mchobby.be/uext/1415-senseur-proximite-et-lumiere-ltr501-connecteur-uext-3232100014152-olimex.html">Carte MOD-LTR-501ALS (à base de LTR-501ALS)</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html">ESP8266-EVB</a><br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1412-uext-port-splitter-3232100014121-olimex.html">UEXT Splitter</a>
+Plus d'info: <a href="https://shop.mchobby.be/uext/1415-senseur-proximite-et-lumiere-ltr501-connecteur-uext-3232100014152-olimex.html">Carte MOD-LTR-501ALS (à base de LTR-501ALS)</a>
+  </td>
+  </tr>
+  </tr> 
+  <tr><td>MOD-Wii-UEXT-NUNCHUCK<br />Wii Nunchuck</td>
+      <td>La Wii NUNCHUCK est une manette de jeu super confortable et s'utilise sur le bus I2C. Son connecteur <strong>UEXT</strong> facilite grandement les raccordements.<br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-wii-nunchuck-controller-3232100014169-olimex.html">Manette Wii Nunchuck (UEXT)</a><br />
   </td>
   </tr> 
+
 </tbody>
 </table>
 
