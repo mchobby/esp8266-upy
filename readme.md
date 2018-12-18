@@ -1,14 +1,16 @@
 # ESP8266 MicroPython Driver
 
 Voici une collection de pilote (et raccordements) pour différents breakouts utilisés avec un __ESP8266 reflashé en MicroPython__.
+Si cela fonctionne sur un ESP8266, cela fonctionnera sur toutes les plateformes MicroPython.
 
 ![Feather ESP8266](FEAT-HUZZA-ESP8266-01.jpg)
+![Olimex ESP8266 Evaluation Board](ESP8266-EVB.jpg)
 
-La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA2821](http://shop.mchobby.be/product.php?id_product=846)
+La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA2821](http://shop.mchobby.be/product.php?id_product=846) ou une [carte d'évaluation ESP8266-EVB d'Olimex](https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html).
 
 Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Hobby dans nos projets documentaires.
-* [__Wiki pour MicroPython sur ESP8266__]( https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython)
-* Achat de matériel - http://shop.mchobby.be
+* [__Wiki pour MicroPython sur ESP8266__]( https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython) pour apprendre comment flasher votre ESP sous MicroPython.
+* Achat de matériel - https://shop.mchobby.be
 
 # Bibliothèques disponibles
 Voici une description des bibliothèques disponibles dans ce dépôt (Voir les sous-répertoires).
