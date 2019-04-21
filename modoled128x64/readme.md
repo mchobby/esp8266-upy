@@ -1,6 +1,6 @@
 # Utiliser un MOD-OLED-128x64 d'Olimex avec ESP8266 sous MicroPython
 
-MOD-OLED-128x64 est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT. 
+MOD-OLED-128x64 est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT.
 
 ![La carte MOD-OLED-128x64](OLED-10b.png)
 
@@ -42,10 +42,10 @@ La bibliothèque `sd1306.py` est un pilote SSD1306 I2C et SPI (MicroPyhton GitHu
 
 Dans tous les cas de figure, l'écran OLED sera créé sous la référence __lcd__ .
 
-![OLED 128x64](OLED-10b.png) 
+![OLED 128x64](OLED-10b.png)
 
 ```
-# Utilisation de la bibliothèque ssd1306 avec ESP8266-EVB 
+# Utilisation de la bibliothèque ssd1306 avec ESP8266-EVB
 # sous MicroPython
 #
 # Shop: https://shop.mchobby.be/uext/1411-uext-module-oled-display-128-x-64-3232100014114-olimex.html
@@ -58,7 +58,7 @@ lcd = ssd1306.SSD1306_I2C( 128, 64, i2c )
 ```
 
 # Tester la bibliothèque
-Dans les exemples ci-dessous, voici les paramètres que vous retrouverez dans les différents appels de fonction: 
+Dans les exemples ci-dessous, voici les paramètres que vous retrouverez dans les différents appels de fonction:
 
 ![Coordonnées](FEATHER-MICROPYTHON-OLED-position.png)
 * __x__ : position du point par rapport au côté gauche de l'écran.
@@ -69,16 +69,16 @@ Dans les exemples ci-dessous, voici les paramètres que vous retrouverez dans le
 
 ```
 # -- Rempli l'écran en blanc --
-lcd.fill(1) 
+lcd.fill(1)
 lcd.show()  # Afficher!
 
 # Remplis un rectangle en noir
-# fill_rect( x, y, w, h, c ) 
+# fill_rect( x, y, w, h, c )
 lcd.fill_rect( 10,10, 20, 4, 0 )
 lcd.show()  # Afficher!
 ```
 
-## Autres exemples 
+## Autres exemples
 * [Voir les exemples dans oled-ssd1306](https://github.com/mchobby/esp8266-upy/tree/master/oled-ssd1306)
 * [UEXT Module MOD-OLED-128x64](https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-OLED)
 
@@ -87,4 +87,4 @@ lcd.show()  # Afficher!
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
 * Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
-* Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-LCD1x9
+* Wiki: https://wiki.mchobby.be/index.php?title=FEATHER-MICROPYTHON-OLED
