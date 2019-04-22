@@ -80,6 +80,13 @@ Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-lum
   <tr><td>umqtt</td>
       <td> exemples de communication MQTT avec un module ESP8266.
   </td>
+	</tr>  
+  <tr><td>UEXT</td>
+      <td>Connecteur <strong>UEXT</strong> utilisé sur les cartes et capteurs dOlimex. Transporte les bus I2C, SPI, UART et alimentation 3.3V<br />
+Plus d'info: <a href="https://shop.mchobby.be/fr/138-uext">UEXT @ MCHobby</a><br />
+Plus d'info: <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a>
+  </td>
+  </tr>
   </tr>  
   <tr><td>MOD-IO</td>
       <td>MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, d'entrée OptoCoupleur et entrées analogiques (0-3.3V).<br />Cette carte est compatible avec le standard industriel en 24V.<br />
