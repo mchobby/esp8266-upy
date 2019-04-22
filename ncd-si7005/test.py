@@ -32,9 +32,11 @@ import time
 # Pyboard: SDA on Y9, SCL on Y10. See NCD wiring on https://github.com/mchobby/pyboard-driver/tree/master/NCD
 #         Default bus Freq 400000 = 400 Khz is to high.
 #         So reduce it to 100 Khz. Do not hesitate to test with 10 KHz (10000)
-i2c = I2C( 2, freq=100000 )
-# Feather ESP8266: sda=2, scl=4. See wiring on https://github.com/mchobby/esp8266-upy/tree/master/am2315
-# i2c = I2C( sda=Pin(2), scl=Pin(4) )
+# i2c = I2C( 2, freq=100000 )
+# Feather ESP8266 & Wemos D1: sda=4, scl=5.
+i2c = I2C( sda=Pin(4), scl=Pin(5) )
+# ESP8266-EVB
+# i2c = I2C( sda=Pin(6), scl=Pin(5) )
 
 mpl = SI7005( i2c )
 i = 0
