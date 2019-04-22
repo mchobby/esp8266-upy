@@ -121,12 +121,11 @@ Plus d'info: <a href="https://shop.mchobby.be/uext/1415-senseur-proximite-et-lum
   </tr>
   <tr><td>MOD-Wii-UEXT-NUNCHUCK<br />Wii Nunchuck</td>
       <td>La Wii NUNCHUCK est une manette de jeu super confortable et s'utilise sur le bus I2C. Son connecteur <strong>UEXT</strong> facilite grandement les raccordements.<br />
-Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-wii-nunchuck-controller-3232100014169-olimex.html">Manette Wii Nunchuck (UEXT)</a><br />
+Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-wii-nunchuck-controller-3232100014169-olimex.html">Manette Wii Nunchuck (UEXT)</a>
   </td>
   </tr>
-
 	<tr><td>NCD<br />connector</td>
-      <td>Connecter une _mini carte I2C de NCD_ (National Control Device) sur une carte MicroPython grâce au connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
+      <td>Connecter une _mini carte I2C de NCD_ (National Control Device) sur une carte MicroPython grâce au connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.
   </td>
   </tr>
 	<tr><td>ncd-si7005<br />SI7005</td>
