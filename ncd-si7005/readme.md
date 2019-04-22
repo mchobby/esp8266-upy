@@ -1,7 +1,5 @@
 [This file also exists in ENGLISH here](readme_eng.md)
 
-(traduction)
-
 # Mesure de l'humidité relative (%Rel) et la température avec le senseur SI7005 sous  MicroPython
 
 ![SI7005 sur une Mini board NCD](ncd_si7005.png)
