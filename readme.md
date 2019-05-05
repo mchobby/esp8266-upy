@@ -132,6 +132,11 @@ Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-w
       <td>le SI7005 est un capteur d'humidité relative et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
   </td>
   </tr>
+	</tr>
+	<tr><td>ncd-mpl115A2<br />MPL115A2 (NCD et breakout)</td>
+      <td>Le MPL115A2 est un capteur de pression et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.
+  </td>
+  </tr>
 
 </tbody>
 </table>
