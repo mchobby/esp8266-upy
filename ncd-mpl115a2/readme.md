@@ -15,9 +15,9 @@ Les sorties du capteur sont numérisées à l'aide d'un convertisseur ADC haute 
 
 Ce senseur est disponible sous forme de breakout et comme mini carte NCD (plus facile à brancher).
 
-![MPL115A2 en breakout](/docs/_static/mpl115a2-brk.jpg)
+![MPL115A2 en breakout](docs/_static/mpl115a2-brk.jpg)
 
-![MPL115A2 sur Mini carte NCD](/docs/_static/ncd_mpl115a2.png)
+![MPL115A2 sur Mini carte NCD](docs/_static/ncd_mpl115a2.png)
 
 Application typique du MPL115A2:
 * Altimètre électronique personnel,

@@ -15,9 +15,9 @@ The sensor outputs are digitized by a high resolution 24-bit ADC. It is capable 
 
 This sensor is available as breakout and as NCD Mini board (easier to wire).
 
-![MPL115A2 on breakout](/docs/_static/mpl115a2-brk.jpg)
+![MPL115A2 on breakout](docs/_static/mpl115a2-brk.jpg)
 
-![MPL115A2 on NCD mini board](/docs/_static/ncd_mpl115a2.png)
+![MPL115A2 on NCD mini board](docs/_static/ncd_mpl115a2.png)
 
 Common applications for the MPL115A2 include:
 * personal electronics altimetry,
