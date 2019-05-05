@@ -2,7 +2,7 @@
 
 # Mesure de l'humidité relative (%Rel) et la température avec le senseur SI7005 sous  MicroPython
 
-![SI7005 sur une Mini board NCD](ncd_si7005.png)
+![SI7005 sur une Mini board NCD](docs/_static/ncd_si7005.png)
 
 Le SI7005 est un senseur d'humidité relative et température avec les caractéristiques suivantes:
 * +/- 4.5 %RH
@@ -32,6 +32,8 @@ Ce module NCD SI7005 inclus un régulateur de tension et un level shifter I2C PC
 Le capteur i2C utilise un connecteur NCD. Il suffit donc d'utiliser l'interface appropriée pour connecter le module. Ce dépôt propose des interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [modules ESP8266/ESP32](../NCD/readme.md).
 
 ![Brancher un Feather ESP8266](../NCD/ncd_feather.png)
+
+![Brancher avec Pyboard](docs/_static/ncd_si7005_to_pyboard.jpg)
 
 A noter que __National Control Device propose de [nombreux adapteurs](https://store.ncd.io/shop/?fwp_product_type=adapters)__ pour les plateformes de développement les plus courantes.
 

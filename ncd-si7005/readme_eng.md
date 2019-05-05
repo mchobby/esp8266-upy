@@ -2,7 +2,7 @@
 
 # Measuring %Rel humidity and temperature with SI7005 sensor with MicroPython
 
-![SI7005 on NCD mini board](ncd_si7005.png)
+![SI7005 on NCD mini board](docs/_static/ncd_si7005.png)
 
 The SI7005 is a digital relative humidity and temperature sensor.
 * +/- 4.5 %RH
@@ -33,6 +33,8 @@ This NCD SI7005 module includes on-board power regulation and PCA9306 I2C level-
 It is a I2C sensor based on NCD connector, so use the appropritate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [ESP modules](../NCD/readme.md).
 
 ![Wiring with Feather ESP8266](../NCD/ncd_feather.png)
+
+![Wiring with Pyboard](docs/_static/ncd_si7005_to_pyboard.jpg)
 
 Notice that __National Control Device propose [many adapter board](https://store.ncd.io/shop/?fwp_product_type=adapters) __ for many development plateform.
 
