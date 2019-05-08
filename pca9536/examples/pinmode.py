@@ -41,15 +41,15 @@ pca = PCA9536( i2c )
 # Set IO0 to Input - Hardware pull-up activat on all Pin by default
 pca.setup( 0, Pin.IN  )
 # Set IO1 to Input - Hardware pull-up activat on all Pin by default
-#	Result is False when pin is HIGH (not connected to ground)
-#	Result is True  when pin is LOW  (connected to ground)
+#	Read's result will be False when pin is HIGH (not connected to ground)
+#	Read's result will be True  when pin is LOW  (connected to ground)
 pca.setup ( 1, Pin.IN )
 
 # Set IO3 to Output
 pca.setup( 3, Pin.OUT )
 pca.output( 3, False )  # High by default because of the pull-up for input
 for i in range( 2 ):
-	# Tip: see output_pins() for multiple pins
+	# Tip: see output_pins() to update multiple pins
 	pca.output( 3, True )
 	sleep( 1 ) # 1 Second
 	pca.output( 3, False )
@@ -61,7 +61,7 @@ for i in range( 10 ):
 	print( "IO0 = %s" % (pca.input(0)) )
 	sleep( 1 )
 
-# Read value on GPIO 1 - pull-up activated by default BUT polarity Inverted
+# Read value on GPIO 1 - pull-up activated by default
 for i in range( 10 ):
 	# Tip: see input_pins() for multiple pin reads
 	print( "IO1 = %s" % (pca.input(1)) )
