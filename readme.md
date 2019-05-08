@@ -72,6 +72,10 @@ Plus d'info: <a href="https://shop.mchobby.be/product.php?id_product=879">Feathe
 Plus d'info: <a href="https://shop.mchobby.be/uext/1411-uext-module-oled-display-128-x-64-3232100014114-olimex.html">Olimex OLED ssd1306 128x64 (UEXT module)</a><br />
   </td>
   </tr>  
+	<tr><td>PCA9536</td>
+      <td>Contrôleur GPIO 4 bits I2C.
+  </td>
+  </tr>  	
   <tr><td>tsl2561</td>
       <td>Le TSL2561 est un senseur de <strong>luminosité</strong> en lumière visible. Retourne une valeur en LUX.<br />
 Plus d'info: <a href="https://shop.mchobby.be/senseur-divers/238-senseur-lux-luminosite-lumiere-digital-3232100002388-adafruit.html">TSL2561 breakout</a>
