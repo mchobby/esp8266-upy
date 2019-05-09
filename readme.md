@@ -132,16 +132,18 @@ Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-w
       <td>Connecter une _mini carte I2C de NCD_ (National Control Device) sur une carte MicroPython grâce au connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.
   </td>
   </tr>
-	<tr><td>ncd-si7005<br />SI7005</td>
-      <td>le SI7005 est un capteur d'humidité relative et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
-  </td>
-  </tr>
-	</tr>
 	<tr><td>ncd-mpl115A2<br />MPL115A2</td>
       <td>Le MPL115A2 est un capteur de pression et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.
   </td>
   </tr>
-
+	<tr><td>ncd-si7005<br />SI7005</td>
+      <td>le SI7005 est un capteur d'humidité relative et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
+  </td>
+  </tr>
+	<tr><td>ncd-water-detect</td>
+      <td>Détecteur de présence d'eau + Buzzer + 2 GPIOs (basé sur un PCA9536). La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
+  </td>
+  </tr>
 </tbody>
 </table>
 
