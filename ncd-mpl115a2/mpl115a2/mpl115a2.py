@@ -1,5 +1,5 @@
 """
-Test the MPL115A2 (I2C) sensor board from National Control Device.
+MPL115A2 (I2C) sensor driver (for National Control Device board).
 
 MPL115A2 is an I2C pressure and temperature sensor.
 
