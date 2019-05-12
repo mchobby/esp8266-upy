@@ -53,7 +53,7 @@ class MCP():
         return self.i2c.readfrom_mem(self.address, register, length)
 
     def setup(self, pin, mode):
-        """Set the pin to input or output mode. Mode = Pin.IN or Pin.OUT 
+        """Set the pin to input or output mode. Mode = Pin.IN or Pin.OUT
         either OUT or IN.
         """
         self._validate_pin(pin)
@@ -108,7 +108,8 @@ class MCP():
         self.write_gppu()
 
     def read_gpio(self):
-        self.gpio = self.readList(self.GPIO, self.gpio_bytes)
+		# As gpio may be altered for output operation, it MUST be a bytearray type!
+        self.gpio = bytearray( self.readList(self.GPIO, self.gpio_bytes) )
 
     def write_gpio(self, gpio=None):
         """Write the specified byte value (or current buffer) to the GPIO registor"""
