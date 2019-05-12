@@ -71,8 +71,18 @@ class MCP():
         """Set the pin to high/low. Value is boolean"""
         self.output_pins({pin: value})
 
+    def toggle_pins( self, lst ):
+        """ Swap the state of a list of output pins """
+        # prepare a dict to store new pin states
+        new_states = {}
+        for pin in lst:
+            # Invert gpio state
+            new_states[pin] = not( self.gpio[int(pin/8)] & ( 1 << (int(pin%8)) ) )
+        # Apply new state
+        self.output_pins( new_states )
+
     def output_pins(self, pins):
-        """Set multiple pins high or low at once.  Pins = dict of pin: state """
+        """Set multiple pins high or low at once.  Pins = dict of pin:state """
         [self._validate_pin(pin) for pin in pins.keys()]
         # Set each changed pin's bit.
         for pin, value in iter(pins.items()):
