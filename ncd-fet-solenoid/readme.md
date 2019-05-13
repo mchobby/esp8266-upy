@@ -1,7 +1,5 @@
 [This file also exists un ENGLISH](readme_ENG.md)
 
---- TRADUCTION ---
-
 # Pilote de Solenoïdes à base de FET pour Valves (basé sur MCP23008)
 Basé sur __MCP23008__ (I2C 8-bits GPIO extender, [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf), le __FET Solenoïd Driver Valve controller__ de [National Control Device](https://store.ncd.io) offre une façon simple e controler des charges résistives et charges inductives 12V comme des pompes, solénoïdes, gâche de porte, LEDs, moteurs, etc.
 
