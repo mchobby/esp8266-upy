@@ -57,7 +57,7 @@ The exemple here under shows:
 
 # Wiring
 
-It is a I2C sensor based on NCD connector, so use the appropritate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [ESP modules](../NCD/readme.md).
+It is a I2C sensor based on NCD connector, so use the appropritate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/NCD) and [ESP modules](../NCD/readme.md).
 
 ![Wiring with Feather ESP8266](../NCD/ncd_feather.png)
 

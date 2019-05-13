@@ -57,7 +57,7 @@ L'exemple ci-dessous montre:
 
 # Raccordement
 
-Il s'agit d'une carte I2C basée sur le connecteur NCD. Par conséquent, nous utilisons l'interface adéquate pour nous y connecter. Ce dépôt propose une interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) et [Modules ESP](../NCD/readme.md).
+Il s'agit d'une carte I2C basée sur le connecteur NCD. Par conséquent, nous utilisons l'interface adéquate pour nous y connecter. Ce dépôt propose une interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/NCD) et [Modules ESP](../NCD/readme.md).
 
 ![Raccordement avec Feather ESP8266](../NCD/ncd_feather.png)
 
