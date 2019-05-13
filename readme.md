@@ -144,6 +144,10 @@ Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-w
       <td>Détecteur de présence d'eau + Buzzer + 2 GPIOs (basé sur un PCA9536). La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
   </td>
   </tr>
+	<tr><td>ncd-fet-solenoid</td>
+      <td>Contrôleur de sortie FET + GPIO (basé sur un MCP23008) pour charge résistive / inductive 12V (valve). La <i>carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
+  </td>
+  </tr>
 </tbody>
 </table>
 
