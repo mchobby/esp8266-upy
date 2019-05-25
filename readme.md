@@ -5,15 +5,21 @@ Si cela fonctionne sur un ESP8266, cela fonctionnera sur toutes les plateformes 
 
 ![Feather ESP8266](FEAT-HUZZA-ESP8266-01.jpg)
 ![Olimex ESP8266 Evaluation Board](ESP8266-EVB.jpg)
+![Wemos D1 (ESP8266)](WEMOS-D1.jpg)
 
-La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA2821](http://shop.mchobby.be/product.php?id_product=846) ou une [carte d'évaluation ESP8266-EVB d'Olimex](https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html).
+La plateforme la plus facile à flasher est un [Feather ESP8266 HUZZA ADA2821](http://shop.mchobby.be/product.php?id_product=846) ou une [carte d'évaluation ESP8266-EVB d'Olimex](https://shop.mchobby.be/esp8266-esp32-wifi-iot/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html) ou les [cartes WEMOS / LOLIN (modules ESP)](https://shop.mchobby.be/fr/123-wemos-lolin-esp)
 
-Ce dépôt rassemble différents pilotes pour des breakouts utilisés chez MC Hobby dans nos projets documentaires.
+SI cela fonctionne sous ESP8266 ALORS cela fonctionnera aussi sur la [MicroPython Pyboard](https://shop.mchobby.be/fr/56-micropython) !
+
+![ESP8266 et Pyboard](ESP8266-to-PYBOARD.jpg)
+
+# Autres sources d'information
 * [__Wiki pour MicroPython sur ESP8266__]( https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython) pour apprendre comment flasher votre ESP sous MicroPython.
+* [__GitHub dédicacé Pyboard__](https://github.com/mchobby/pyboard-driver) avec des pilotes nécessitant plus de ressources. https://github.com/mchobby/pyboard-driver.
 * Achat de matériel - https://shop.mchobby.be
 
 # Bibliothèques disponibles
-Voici une description des bibliothèques disponibles dans ce dépôt (Voir les sous-répertoires).
+Voici une description des bibliothèques disponibles dans ce dépôt. Les sous-répertoires contiennent des fichiers README avec des informations complémentaires.
 
 <strong>Chaque sous-répertoire contient des instructions, schémas et codes dans un readme.md personnalisé.</strong>
 
@@ -146,6 +152,11 @@ Plus d'info: <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1416-uext-w
   </tr>
 	<tr><td>ncd-fet-solenoid</td>
       <td>Contrôleur de sortie FET + GPIO (basé sur un MCP23008) pour charge résistive / inductive 12V (valve). La <i>carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
+  </td>
+  </tr>
+	</tr>
+	<tr><td>ncd-pecmac</td>
+      <td>Capteur de courant alternatif sur bus I2C (ou interface IoT). La <i>carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />
   </td>
   </tr>
 </tbody>
