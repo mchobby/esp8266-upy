@@ -1,0 +1,356 @@
+[
+    {	"folder"        : "ads1015-ads1115",
+			"components"    : ["ADS1015","ADS1115","ADA1085"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" :  "ADS1115 breakout",
+												    "url"   : "https:\/\/shop.mchobby.be\/breakout\/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html" }
+												],
+			"descr"	: {"FR" : "Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.<br \/>L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.",
+								 "ENG": "ADC converter (Analog to Digital) 4 channel allowing analog reading and differential reading.<br \/>L'ADS1115 have a internal amplifier (programmable) that can be used to read very small voltage."
+								}
+		},
+		{	"folder"        : "am2315",
+			"components"    : ["AM2315"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" :  "AM2315 Sensor",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/environnemental-press-temp-hrel-gaz\/932-am2315-senseur-de-temperature-et-humidite-sous-boitier-3232100009325.html" }
+												],
+			"descr"	: {"FR" : "Capteur de <strong>température et humidité<\/strong> relative (0 à 100%) pour relevés en extérieur.",
+								 "ENG": "<strong>Temperature & relative humidity<\/strong> (0 to 100%) sensor for capture outside data."
+								}
+		},
+		{	"folder"        : "bme280-bmp280",
+			"components"    : ["BME280","BMP280","ADA2651","ADA2652"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "BMP280 Sensor",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=1118" },
+													{ "label" : "BME280 Sensor",
+													  "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=684" }
+												],
+			"descr"	: {"FR" : "Le BMP280 est un senseur de <strong>pression et température<\/strong> très populaire.<br \/>Le BME280 est un senseur de <strong>pression, température et HUMIDITÉ<\/strong> relative",
+								 "ENG": "The BMP280 is a very popular <strong>pressure and temperatur<\/strong> sensor.<br \/>The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY<\/strong>"
+								}
+		},
+		{	"folder"        : "bmp180",
+			"components"    : ["BMP180"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "BMP180 Sensor",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=397" }
+												],
+			"descr"	: {"FR" : "Le BMP180 est un senseur de <strong>pression et température<\/strong> aujourd'hui remplacé par le BMP280.",
+								 "ENG": "The BMP180 is a <strong>pressure & temperature<\/strong> sensor now replaced with the BMP280."
+								}
+		},
+		{	"folder"        : "dht11",
+			"components"    : ["DHT11"],
+			"interfaces"    : ["GPIO"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "DHT11 Sensor",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=708" }
+												],
+			"descr"	: {"FR" : "Le DHT11 est un senseur d'<strong>humidité<\/strong> (20 à 80%) et température très bon marché.",
+								 "ENG": "The DHT11 is a very cheap <strong>humidity<\/strong> (20 to 80%) and temperature sensor."
+								}
+		},
+		{	"folder"        : "ds18b20",
+			"components"    : ["DS18B20"],
+			"interfaces"    : ["ONEWIRE"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "DS18B20 Sensor",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=259" }
+												],
+			"descr"	: {"FR" : "Le DS18B20 est un senseur de <strong>température<\/strong> digital très populaire. Il utilise le bus 1-Wire permettant de brancher plusieurs senseurs 1-Wire sur un même bus.",
+								 "ENG": "The DS18B20 is a very popular <strong>temperature<\/strong> sensor. It use the 1-Wire bus to connect several sensors."
+								}
+		},
+		{	"folder"        : "mcp230xx",
+			"components"    : ["MCP23017","MCP23008"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "MCP23017 GPIO Expander",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=218" }
+												],
+			"descr"	: {"FR" : "Le MCP23017 (et MCP2308) sont des <strong>GPIO Expander<\/strong> permettant d'ajouter des entrées/sorties supplémentaires sur un microcontrôleur.",
+								 "ENG": "The MCP23017 (and MCP2308) are <strong>GPIO Expander<\/strong> adding additionnal input/output to a microcontroler."
+								}
+		},
+		{	"folder"        : "neopixel",
+			"components"    : ["NEOPIXEL","74AHCT125"],
+			"interfaces"    : ["GPIO"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "NeoPixels",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
+													{ "label" : "74AHCT125",
+													  "url"   : "https:\/\/shop.mchobby.be\/fr\/ci\/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html" }
+												],
+			"descr"	: {"FR" : "Les <strong>NéoPixels<\/strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.",
+								 "ENG": "The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually."
+								}
+		},
+		{	"folder"        : "oled-ssd1306",
+			"components"    : ["SSD1306","FEATHER-OLED-WING","ADA2900"],
+			"interfaces"    : ["I2C","FEATHERWING"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "FeatherWing OLED ssd1306 128x32",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=879" }
+												],
+			"descr"	: {"FR" : "Le SSD1306 est un contrôleur d'écran OLED",
+								 "ENG": "The SSD1306 is an OLED dislpay contrôler."
+								}
+		},
+		{	"folder"        : "modoled128x64",
+			"components"    : ["SSD1306","MOD-OLED-128x64"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "Afficheur OLED 128 x 64 avec interface I2C et UEXT",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1411" }
+												],
+			"descr"	: {"FR" : "Le SSD1306 est un contrôleur d'écran OLED",
+								 "ENG": "The SSD1306 is an OLED dislpay contrôler."
+								}
+		},
+		{	"folder"        : "pca9536",
+			"components"    : ["PCA9536"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : [],
+			"ressources"    : [],
+			"descr"	: {"FR" : "Contrôleur GPIO 4 bits I2C.",
+								 "ENG": "4 bit I2C controled GPIO expander."
+								}
+		},
+		{	"folder"        : "tsl2561",
+			"components"    : ["TSL2561","ADA439"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "Capteur Lux/Luminosité/Lumière digital",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=238" }
+												],
+			"descr"	: {"FR" : "Le TSL2561 est un senseur de <strong>luminosité<\/strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX",
+								 "ENG": "The TSL2561 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
+								}
+		},
+		{	"folder"        : "umqtt",
+			"components"    : [],
+			"interfaces"    : [],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
+			"ressources"    : [ { "label" : "Feather ESP8266",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=846" }
+												],
+			"descr"	: {"FR" : "Exemples de communication MQTT avec un module ESP8266.",
+								 "ENG": "MQTT Communication exemples with ESP8266 module."
+								}
+		},
+		{	"folder"        : "UEXT",
+			"components"    : ["UEXT"],
+			"interfaces"    : ["I2C","SPI","UART"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+													  "url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "Connecteur <strong>UEXT<\/strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V",
+								 "ENG": "<strong>UEXT<\/strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V"
+								}
+		},
+		{	"folder"        : "modio",
+			"components"    : ["MOD-IO"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+													  "url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT<\/strong>. Cette carte d'Olimex équipé de relais, d'entrée OptoCoupleur (24V) et entrées analogiques (0-3.3V).<br \/>Cette carte est compatible avec le standard industriel en 24V.",
+								 "ENG": "MOD-IO is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have relays, OptoCoupler input (24V) and analog input (0-3.3V).<br \/>This board is compatible with the industrial grade voltages (24V)."
+								}
+		},
+		{	"folder"        : "modio2",
+			"components"    : ["MOD-IO2"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+													  "url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT<\/strong>. Cette carte d'Olimex équipé de relais, de GPIO aux fonctions multiples (Input, Output, Analog, PWM; 0-3.3V).",
+								 "ENG": "MOD-IO is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have relays, and GPIOs with various functions (Input, Output, Analog, PWM; 0-3.3V)."
+								}
+		},
+		{	"folder"        : "modrgb",
+			"components"    : ["MOD-RGB"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-RGB est une carte d'extension I2C avec port de connexion <strong>UEXT<\/strong>. Cette carte d'Olimex équipé de MosFet de puissance pour commander des rubans LED RGB analogiques via I2C (ou DMX).",
+								 "ENG": "MOD-RGB is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have power MosFet to control RGB analogic LED strips via I2C (or DMX)."
+								}
+		},
+		{	"folder"        : "modlcd1x9",
+			"components"    : ["MOD-LCD-1x9"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "MOD-LCD1x9 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/esp8266-esp32-wifi-iot\/1414-uext-lcd-display-1-line-of-9-alphanumeric-chars-3232100014145-olimex.html" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-LCD1x9 est un afficheur 9 caractères alphanumérique I2C avec port de connexion <strong>UEXT<\/strong>.",
+								 "ENG": "MOD-LCD1x9 is an I2C'based 9 characters alphanumeric display using the <strong>UEXT<\/strong> connector."
+								}
+		},
+		{	"folder"        : "modmag",
+			"components"    : ["MOD-MAG","MAG3110"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "MOD-MAG @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/esp8266-esp32-wifi-iot\/1413-uext-mag3110-magnetometer-module-3232100014138-olimex.html" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT<\/strong> facilitant les raccordements.",
+								 "ENG": "The MAG3110 is a digital 3 axis magnetometer from NXP running over an I2C bus. The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring."
+								}
+		},
+		{	"folder"        : "modltr501",
+			"components"    : ["MOD-LTR-501ALS","LTR-501ALS"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "MOD-LTR-501ALS @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/uext\/1415-senseur-proximite-et-lumiere-ltr501-connecteur-uext-3232100014152-olimex.html" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "LTR-501ALS permet de faire une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). Le MOD-LTR-501ALS dispose d'une connexion <strong>UEXT<\/strong> facilitant les raccordements.",
+								 "ENG": "LTR-501ALS can be used to acquires luminosity data from 0.01 to 64.000 Lux (64K lux) and make proximity detection (up to 10cm). The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring."
+								}
+		},
+		{	"folder"        : "modwii",
+			"components"    : ["MOD-Wii-UEXT-NUNCHUCK","NUNCHUCK"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "Wii Nunchuck game controller (UEXT) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/esp8266-esp32-wifi-iot\/1416-uext-wii-nunchuck-controller-3232100014169-olimex.html" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "La Wii NUNCHUCK est une manette de jeu super confortable et s'utilise sur le bus I2C. Ce controleur dispose d'une connexion <strong>UEXT<\/strong> facilitant les raccordements.",
+								 "ENG": "The Wii NUNCHUCK is a game controler very comfortable to used and runs over the I2C bus. This controler have an <strong>UEXT</strong> connector to ease wiring."
+								}
+		},
+		{	"folder"        : "NCD",
+			"components"    : ["NCD"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD"],
+			"plateforms"    : ["ESP8266-EVB", "FEATHER-ESP8266", "WEMOS-D1"],
+			"ressources"    : [ { "label" : "NCD.io",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "National Control Device",
+														"url"   : "https:\/\/ncd.io\/" }
+												],
+			"descr"	: {"FR" : "Connecter facilement une __mini carte I2C__ de NCD (National Control Device) sur une carte MicroPython grâce au connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C. Logique 5V.",
+								 "ENG": "Connect NCD (National Control Device) __I2C mini board__  easily to a MicroPython microcontroler with the <strong>NCD connector<\/strong>. I2C connexion made easy, 5V logic."
+								}
+		},
+		{	"folder"        : "ncd-mpl115A2",
+			"components"    : ["MPL115A2","ADA992"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD","ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "NCD.io",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "National Control Device",
+														"url"   : "https:\/\/ncd.io\/" }
+												],
+			"descr"	: {"FR" : "Le MPL115A2 est un capteur de pression et température I2C. La <i>mini carte I2C de NCD<\/i> propose un  connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C.<br \/>Ce senseur est également disponible sous forme de breakout.",
+								 "ENG": "The MPL115A2 sensor capture the pressure and temperature over I2C bus. The <i>I2C NCD mini board<\/i> have the <strong>NCD<\/strong> connector which facilitate the device wiring.<br \/>The MPL115A2 is also available as breakout."
+								}
+		},
+		{	"folder"        : "ncd-si7005",
+			"components"    : ["SI7005"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "NCD.io",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "National Control Device",
+														"url"   : "https:\/\/ncd.io\/" }
+												],
+			"descr"	: {"FR" : "Le SI7005 est un capteur d'humidité relative et température I2C. La <i>mini carte I2C de NCD<\/i> propose un  connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C.<br \/>Ce senseur est également disponible sous forme de breakout.",
+								 "ENG": "The SI7005 is a pressure and temperature sensor working over the I2C bus. The <i>I2C NCD mini board<\/i> have the <strong>NCD<\/strong> connector which facilitate the device wiring.<br \/>The MPL115A2 is also available as breakout."
+								}
+		},
+		{	"folder"        : "ncd-water-detect",
+			"components"    : ["WATER-DETECT","WDBZ","PCA9536"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "NCD.io",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "National Control Device",
+														"url"   : "https:\/\/ncd.io\/" }
+												],
+			"descr"	: {"FR" : "Détecteur de présence d'eau + Buzzer + 2 GPIOs (basé sur un PCA9536). La <i>mini carte I2C de NCD<\/i> propose un  connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C.<br \/>Ce senseur est également disponible sous forme de breakout.",
+								 "ENG": "Water detection + Buzzer + 2 extra GPIOs (based on a PCA9536). The <i>I2C NCD mini board<\/i> have the <strong>NCD<\/strong> connector which facilitate the device wiring.<br \/>The MPL115A2 is also available as breakout."
+								}
+		},
+		{	"folder"        : "ncd-fet-solenoid",
+			"components"    : ["I2CDRV8W4I12V","MCP23008"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "NCD.io",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "National Control Device",
+														"url"   : "https:\/\/ncd.io\/" }
+												],
+			"descr"	: {"FR" : "Contrôleur de sortie FET + GPIO (basé sur un MCP23008) pour charge résistive \/ inductive 12V (valve). La <i>carte I2C de NCD<\/i> propose un  connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C.<br \/>Ce senseur est également disponible sous forme de breakout.",
+								 "ENG": "FET Output controler + GPIO (based on a MCP23008) for 12V resistive \/ inductive load (like valve). The <i>I2C NCD board<\/i> have the <strong>NCD<\/strong> connector which facilitate the device wiring.<br \/>The MPL115A2 is also available as breakout."
+								}
+		},
+		{	"folder"        : "ncd-pecmac",
+			"components"    : ["DLCT27C10", "OPCT16AL", "I2CCMAC230A","PECMAC2xxxA"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "NCD.io",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "National Control Device",
+														"url"   : "https:\/\/ncd.io\/" }
+												],
+			"descr"	: {"FR" : "Capteur de courant alternatif sur bus I2C (ou interface IoT). La <i>carte I2C de NCD<\/i> propose un  connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C.<br \/>Ce senseur est également disponible sous forme de breakout.",
+								 "ENG": "AC Current sensor on I2C bus (or IoT interface). The <i>I2C NCD board<\/i> have the <strong>NCD<\/strong> connector which facilitate the device wiring.<br \/>The MPL115A2 is also available as breakout."
+								}
+		}
+]

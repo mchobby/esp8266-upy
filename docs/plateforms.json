@@ -1,0 +1,21 @@
+{ "FEATHER-ESP8266" :
+			{ "descr" : { "FR" : "Feather ESP8266",
+				            "ENG" : "Feather ESP8266" },
+			  "url" : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/846-feather-huzzah-avec-esp8266-3232100008465-adafruit.html"
+			},
+	"ESP8266-EVB" :
+			{ "descr" : { "FR" : "ESP8266 Evaluation Board (basé sur ESP8266-DEV)",
+				            "ENG" : "ESP8266 Evaluation Board (based on ESP8266-DEV)" },
+			  "url" : "https:\/\/shop.mchobby.be\/fr\/esp8266-esp32-wifi-iot\/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html"
+			},
+	"PYBOARD" :
+			{ "descr" : { "FR" : "MicroPython Pyboard",
+				            "ENG" : "MicroPython Pyboard" },
+			  "url" : "https:\/\/shop.mchobby.be\/fr\/56-micropython"
+			},
+	"WEMOS-D1":
+			{ "descr" : { "FR" : "LoLin \/ Wemos D1 ESP8266",
+										"ENG" : "LoLin \/ Wemos D1 ESP8266" },
+				"url" : "https:\/\/shop.mchobby.be\/fr\/123-wemos-lolin-esp"
+			}
+}

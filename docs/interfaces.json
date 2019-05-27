@@ -1,0 +1,34 @@
+{ "GPIO" :
+			{ "descr" : { "FR" : "Interface GPIO, PWM, Interruption, etc générique. N'utilise pas de BUS ou CONNECTEUR specifique.",
+				            "ENG" : "Generic GPIO, PWM, Interrupt, etc interface. Do not use a BUS or specific connector" }
+			},
+	"I2C" :
+			{ "descr" : { "FR" : "Bus I2C",
+				            "ENG" : "I2C bus" }
+			},
+	"SPI" :
+			{ "descr" : { "FR" : "Bus SPI",
+				            "ENG" : "SPI bus" }
+			},
+	"ONEWIRE" :
+			{ "descr" : { "FR" : "OneWire",
+				            "ENG" : "OneWire" }
+			},
+	"NCD":
+			{ "descr" : { "FR" : "Connecteur I2C en logique 5V de National Control Device (NCD.io)",
+										"ENG" : "I2C 5V logic connector for National Control Device (NCD.io)" }
+			},
+	"UEXT":
+			{ "descr" : { "FR" : "Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, UART",
+										"ENG" : "3.3V logic UEXT connector from Olimex Ltd (Olimex.com) shipping I2C, SPI, UART" }
+			},
+	"QWIIC":
+			{ "descr" : { "FR" : "Connecteur I2C Qwiic de Sparkfun (Sparkfun.com)",
+										"ENG" : "Qwiic I2C connector from Sparfun (Sparkfun.com)" }
+			},
+	"FEATHERWING":
+			{ "descr" : { "FR" : "Connecteur FEATHERWING pour les extension Feather (Adafruit.com)",
+										"ENG" : "FEATHERWING connector for the Feather expansion (Adafruit.com)" }
+			}
+
+}
