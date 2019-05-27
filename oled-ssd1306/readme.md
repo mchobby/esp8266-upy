@@ -174,5 +174,12 @@ Voir aussi le script [icon.py](icon.py) qui contient un exemple d'utilisation d'
 
 ![Dessiner des icônes avec Canal Alplha](FEATHER-MICROPYTHON-OLED-20l.jpg)
 
+# Contrôle avancé
+Bien que la classe SSD1306_I2C hérite de framebuf qui propose de nombreuses méthodes, la classe SSD1306 de base offre des services complémentaires:
+* `lcd.poweron()` et `lcd.poweroff()` pour allumer et eteindre l'afficheur.
+* `lcd.contrast(value)` pour fixer la valeur du contraste entre 0 et 255.
+* `lcd.invert(1)` pour inverser les couleurs de l'arrière plan et le premier plan, `lcd.invert(0)` pour revenir à l'affichage normal Idéal pour réaliser des messages d'alertes.
+
 # Source et ressources
 * [Voir le Wiki MC Hobby](https://wiki.mchobby.be/index.php?title=FEATHER-MICROPYTHON-OLED)
+* [Comment afficher des images](https://www.twobitarcade.net/article/displaying-images-oled-displays/) (_How to display images_) sur twobutarcade.net 
