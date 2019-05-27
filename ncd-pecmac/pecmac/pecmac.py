@@ -31,7 +31,7 @@ import struct
 import time
 from micropython import const
 
-PECMAC_SENSOR_TYPES = {1:'DLCT03C20', 2: 'DLCT27C10', 3: 'DLCT03CL20', 4:'OPCT16AL'}
+PECMAC_SENSOR_TYPES = {1:'DLCT03C20', 2: 'DLCT27C10', 3: 'DLCT03CL20', 4:'OPCT16AL', 5: 'SCT013', 6: 'OPCT38AL'}
 
 class PECMAC():
 	"""
