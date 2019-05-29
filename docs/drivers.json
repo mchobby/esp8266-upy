@@ -100,7 +100,7 @@
 								}
 		},
 		{	"folder"        : "oled-ssd1306",
-			"components"    : ["SSD1306","FEATHER-OLED-WING","ADA2900"],
+			"components"    : ["SSD1306","FEATHER-OLED-WING","ADA2900","OLED"],
 			"interfaces"    : ["I2C","FEATHERWING"],
 			"manufacturers" : ["ADAFRUIT"],
 			"plateforms"    : ["FEATHER-ESP8266"],
@@ -112,15 +112,15 @@
 								}
 		},
 		{	"folder"        : "modoled128x64",
-			"components"    : ["SSD1306","MOD-OLED-128x64"],
+			"components"    : ["SSD1306","MOD-OLED-128x64","OLED"],
 			"interfaces"    : ["I2C","UEXT"],
 			"manufacturers" : ["OLIMEX"],
 			"plateforms"    : ["ESP8266-EVB"],
 			"ressources"    : [ { "label" : "Afficheur OLED 128 x 64 avec interface I2C et UEXT",
 												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1411" }
 												],
-			"descr"	: {"FR" : "Le SSD1306 est un contrôleur d'écran OLED",
-								 "ENG": "The SSD1306 is an OLED dislpay contrôler."
+			"descr"	: {"FR" : "Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur UEXT.",
+								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a UEXT connector."
 								}
 		},
 		{	"folder"        : "pca9536",
@@ -351,6 +351,20 @@
 												],
 			"descr"	: {"FR" : "Capteur de courant alternatif sur bus I2C (ou interface IoT). La <i>carte I2C de NCD<\/i> propose un  connecteur <strong>NCD<\/strong> qui facilite grandement les raccordements de périphérique I2C.<br \/>Ce senseur est également disponible sous forme de breakout.",
 								 "ENG": "AC Current sensor on I2C bus (or IoT interface). The <i>I2C NCD board<\/i> have the <strong>NCD<\/strong> connector which facilitate the device wiring.<br \/>The MPL115A2 is also available as breakout."
+								}
+		},
+		{	"folder"        : "ncd-oled",
+			"components"    : ["SSD1306", "I2COLED", "OLED"],
+			"interfaces"    : ["I2C","NCD"],
+			"manufacturers" : ["NCD"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "NCD.io - National Control Device",
+														"url"   : "https:\/\/ncd.io\/" },
+													{ "label" : "NCD oled 128x64 i2c mini module",
+														"url"   : "https:\/\/store.ncd.io\/product\/oled-128x64-graphic-display-i2c-mini-module/" }
+												],
+			"descr"	: {"FR" : "Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur NCD.",
+								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a NCD connector."
 								}
 		}
 ]
