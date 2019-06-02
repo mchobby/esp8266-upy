@@ -2,7 +2,7 @@
 
 # Show information with an OLED SSD1306 display
 
-Our OLED display makes it easy to display data from your embedded controller with 128×64 resolution.
+The OLED display makes it easy to display data from your embedded controller with 128×64 resolution.
 
 ![I2COLED on NCD mini board](docs/_static/ncd_i2coled.png)
 

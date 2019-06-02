@@ -1,5 +1,6 @@
 { "ADAFRUIT" : { "name" : "Adafruit Industries", "url" : "https:\/\/www.adafruit.com\/" },
   "OLIMEX"   : { "name" : "Olimex Ltd"         , "url" : "https:\/\/www.olimex.com\/"},
   "NCD"      : { "name" : "National Control Device", "url" : "https:\/\/ncd.io\/"},
-	"NONE"     : { "name" : "(none)", "url" : ""}
+  "SPARKFUN" : { "name" : "SparkFun ", "url" : "https:\/\/www.sparkfun.com\/"},
+	"NONE"      : { "name" : "(other)", "url" : ""}
 }

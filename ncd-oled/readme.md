@@ -4,49 +4,49 @@
 
 # Afficher des informations sur écran OLED SSD1306
 
-The NCD OLED display mini board makes it easy to display data from your embedded controller with 128×64 resolution.
+L'afficheur OLED de NCD (__mini board__) facilite l'affichage de donnée de vos systèmes intégrés. Votre contrôleur peut afficher des données, du texte et même des graphiques sur l'afficheur OLED disposant d'une résolution de 128×64.
 
-![I2COLED on NCD mini board](docs/_static/ncd_i2coled.png)
+![I2COLED sur mini carte NCD](docs/_static/ncd_i2coled.png)
 
-OLED displays are an excellent method of displaying variable data and troubleshooting embedded code.
+Les afficheurs OLED sont d'excellentes méthodes pour afficher des données variables et messages de débogage .
 
-At a very low cost, OLED display makes it easy to learn, create, and have fun.
+A prix très abordable, l'afficheur OLED permet de créer et apprendre très facilement...
 
-Main features:
-* 2.3cm OLED Display
-* 128×64 Graphic Display
-* SSD1306 OLED controler
-* I2C Mini Module Footprint
-* Available in Blue, White, or Yellow
-* Powered by the I2C Bus
-* Default address: 0x3C
+Fonctionnalités principales:
+* Afficheur OLED 2.3cm
+* Affichage graphique 128×64
+* Contrôleur OLED SSD1306
+* Mini module I2C
+* OLED disponible en Bleu, Blanc ou Jaune
+* Alimenté depuis le bus I2C
+* Adresse par défaut: 0x3C
 
-## About NCD Modules
-The NCD I2C Mini Modules are designed with a standard & convenient 4-Pin plug connector. Thanks to the connector, it eliminating the need for soldering and the devices can be daisy-chained onto the I2C Bus.
+## A propos des modules NCD
+Les mini modules et carte I2C de NCD National Control Device / ncd.io sont conçus avec un connecteur standard à 4 broches très pratique. Grâce à ces connecteurs, plus besoin de souder et les modules peuvent être chaînés sur un bus I2C.
 
-This NCD OLED display doen't need any level shifter, neither any voltage regulator.
+Cet afficheur OLED NCD n'a pas besoin de level shifter, ni de régulateur de tension.
 
-# Wiring with NCD
+# Brancher sur NCD
 
-It is a I2C mini board based on NCD connector, so use the appropriate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [ESP modules](../NCD/readme.md).
+Il s'agit d'une mini carte I2C (__mini board__) basé sur un connecteur NCD, utilisez une interface appropriée pour vous y connecter. Ce dépôt propose une interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) et [ESP modules](../NCD/readme.md).
 
-![Wiring with Feather ESP8266](../NCD/ncd_feather.png)
+![Raccorder sur un Feather ESP8266](../NCD/ncd_feather.png)
 
-![Wiring with Pyboard](docs/_static/ncd_oled_to_pyboard.jpg)
+![Raccorder sur une Pyboard](docs/_static/ncd_oled_to_pyboard.jpg)
 
-Notice that __National Control Device propose [many adapter board](https://store.ncd.io/shop/?fwp_product_type=adapters) __ for many development plateform.
+Notez que __National Control Device propose [de nombreuses carte adaptateur](https://store.ncd.io/shop/?fwp_product_type=adapters) __ pour de nombreuses plateformes de développement.
 
-# Testing
-Copy the file [`ssd1306.py` from MicroPython.org](https://raw.githubusercontent.com/micropython/micropython/master/drivers/display/ssd1306.py) and `test.py` to your MicroPython board.
+# Tester
+Copier le fichier [`ssd1306.py` depuis MicroPython.org](https://raw.githubusercontent.com/micropython/micropython/master/drivers/display/ssd1306.py) et `test.py` sur votre carte MicroPython.
 
-The `test.py` file (listed here under) can be loaded from REPL session with `import test`
+le fichier `test.py` (édité ci-dessous) peut être chargé à la volée dans une session REPL avec `import test`
 
 ```
 from machine import I2C, Pin
 import ssd1306
 import time
 
-# Create the I2C bus accordingly to your plateform.
+# Créer un bus I2C en adéquation avec votre plateforme.
 
 # --- ESP8266 ---
 # Feather ESP8266 & Wemos D1: sda=4, scl=5.
@@ -56,31 +56,33 @@ import time
 # lcd = ssd1306.SSD1306_I2C( 128, 64, i2c , addr=0x78)
 
 # --- PYBOARD ---
-# WARNING: On pyboard, the ssd1306 driver is written for machine.I2C (not pyb.I2C)
-#          and I2C bus must be instanciate against specific Pin configuration
-#          see Topic https://forum.micropython.org/viewtopic.php?f=6&t=4663
-# Pyboard: SDA on Y9, SCL on Y10. See NCD wiring on https://github.com/mchobby/pyboard-driver/tree/master/NCD
+# WARNING: sur la pyboard, le pilote ssd1306 est écrit pour machine.I2C (et pas pour pyb.I2C)
+#          et le bus I2C doit être instancier avec une configuration spécifique des broches.
+#          Voir le topic https://forum.micropython.org/viewtopic.php?f=6&t=4663
+# Pyboard: SDA sur Y9, SCL sur Y10. Voir raccordement NCD sur https://github.com/mchobby/pyboard-driver/tree/master/NCD
 #
 pscl = Pin('Y9', Pin.OUT_PP)
 psda = Pin('Y10', Pin.OUT_PP)
 i2c = I2C(scl=pscl, sda=psda)
 lcd = ssd1306.SSD1306_I2C( 128, 64, i2c )
 
-lcd.fill(1) # Fill the screen in white
-lcd.show()  # Display!
+lcd.fill(1) # Remplir l'écran en blanc
+lcd.show()  # Afficher!
 
-# Fill a black rectangle
+# Remplir un rectangle noir
 # fill_rect( x, y, w, h, c )
 lcd.fill_rect( 10,10, 20, 4, 0 )
-lcd.show()  # Display!
+lcd.show()  # Afficher!
 ```
 
-which display a small dark box on a screen completely lighted.
+Ce qui affiche un petit rectangle noir sur un écran complètement allumé.
 
 
-This second example loads '.pbm' files (_Portable Bitmap_ format) and display them on the OLED display.
+Ce second exemple charge des fichiers '.pbm' (_Portable Bitmap_ format) et les affiches sur l'écran OLED.
 
-![I2COLED on NCD mini board](docs/_static/ncd-oled-diplay-image.jpg)
+![I2COLED sur NCD mini board](docs/_static/ncd-oled-diplay-image.jpg)
+
+ *** TRADUCTION *****
 
 It will be necessary to transfers the `loadbmp.py` script and the `ncd-mch.pbm` & `upy-logo.pbm` files. See the __oled-ssd1306__ folder to see how to produce the `.pbm` files.
 

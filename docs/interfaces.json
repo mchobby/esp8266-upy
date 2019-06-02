@@ -14,6 +14,10 @@
 			{ "descr" : { "FR" : "OneWire",
 				            "ENG" : "OneWire" }
 			},
+ "UART" :
+   { "descr" : { "FR" : "UART (série)" ,
+                "ENG" : "UART (serial)" }
+   },
 	"NCD":
 			{ "descr" : { "FR" : "Connecteur I2C en logique 5V de National Control Device (NCD.io)",
 										"ENG" : "I2C 5V logic connector for National Control Device (NCD.io)" }
