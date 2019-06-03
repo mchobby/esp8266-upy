@@ -24,10 +24,10 @@ Here is a description of the libraries available in this repository. <strong>Eac
 
 Explorer par:
 * Interface:
-@@interface_list:{'lang_code':'eng','str':'[%code%](docs/drv_by_intf_%code%_ENG.md)'} # List per interface
+@@interface_list:{'lang_code':'eng','str':'[%code%](docs/indexes/drv_by_intf_%code%_ENG.md)'} # List per interface
 
 * Fabriquant:
-@@manufacturer_list:{'lang_code':'eng','str':'[%code%](docs/drv_by_man_%code%_ENG.md)'} # List per manufacturer
+@@manufacturer_list:{'lang_code':'eng','str':'[%code%](docs/indexes/drv_by_man_%code%_ENG.md)'} # List per manufacturer
 
 @@driver_table:{'lang_code':'eng'} # Insert the driver table
 

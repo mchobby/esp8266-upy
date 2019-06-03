@@ -24,10 +24,10 @@ Voici une description des bibliothèques disponibles dans ce dépôt. <strong>Ch
 
 Explorer par:
 * Interface:
-@@interface_list:{'lang_code':'fr','str':'[%code%](docs/drv_by_intf_%code%.md)'} # List per interface
+@@interface_list:{'lang_code':'fr','str':'[%code%](docs/indexes/drv_by_intf_%code%.md)'} # List per interface
 
 * Fabriquant:
-@@manufacturer_list:{'lang_code':'fr','str':'[%code%](docs/drv_by_man_%code%.md)'} # List per manufacturer
+@@manufacturer_list:{'lang_code':'fr','str':'[%code%](docs/indexes/drv_by_man_%code%.md)'} # List per manufacturer
 
 
 @@driver_table:{'lang_code':'fr'} # Insert the driver table

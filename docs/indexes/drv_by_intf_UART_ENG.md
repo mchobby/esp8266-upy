@@ -11,9 +11,10 @@ UART (serial)
   <tr><td>UEXT</td>
       <td><strong>Components</strong> : UEXT<br />
       <strong>Interfaces</strong> : I2C, SPI, UART<br />
+<small><strong>UEXT</strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V</small><br/><br />
       <strong>Tested with</strong> : ESP8266-EVB<br />
-<small><strong>UEXT</strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V</small>
-<br /><ul>
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
 <li>See <a href="https://shop.mchobby.be/fr/138-uext">UEXT @ MCHobby</a></li>
 <li>See <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a></li>
 </ul>

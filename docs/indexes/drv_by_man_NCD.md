@@ -1,8 +1,10 @@
-# Pilote MicroPython pour interface NCD
+# Pilote MicroPython par fabriquant NCD
 [Retour à la page principale](../readme.md)
 
-Connecteur I2C en logique 5V de National Control Device (NCD.io)
+National Control Device
 
+voir
+[National Control Device](https://ncd.io/)
 <table>
 <thead>
   <th>Répertoire</th><th>Description</th>

@@ -1,13 +1,27 @@
-# Pilote MicroPython pour interface UEXT
+# Pilote MicroPython par fabriquant OLIMEX
 [Retour à la page principale](../readme.md)
 
-Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, UART
+Olimex Ltd
 
+voir
+[Olimex Ltd](https://www.olimex.com/)
 <table>
 <thead>
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td>UEXT</td>
+      <td><strong>Composants</strong> : UEXT<br />
+      <strong>Interfaces</strong> : I2C, SPI, UART<br />
+<small>Connecteur <strong>UEXT</strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V</small><br/><br />
+      <strong>Testé avec</strong> : ESP8266-EVB<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/138-uext">UEXT @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td>modio</td>
       <td><strong>Composants</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
