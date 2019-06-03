@@ -117,3 +117,6 @@ class DriverReader:
 
 	def interface( self, code ):
 		return [ item for item in self.interfaces if item.code == code ][0]
+
+	def manufacturer( self, code ):
+		return [ item for item in self.manufacturers if item.code == code ][0]

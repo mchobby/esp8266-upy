@@ -12,6 +12,7 @@ def generate_table( entries, lang_code ):
 	sCompTitle   = 'Composants' if lang_code=='fr' else 'Components'
 	sIntfTitle   = 'Interfaces' if lang_code=='fr' else 'Interfaces'
 	sPlateformTitle = 'Testé avec' if lang_code=='fr' else 'Tested with'
+	sManufacturerTitle = 'Fabricant' if lang_code=='fr' else 'Manufacturer'
 	sSeeTitle    = 'Voir' if lang_code=='fr' else 'See'
 	_lst = [] # List of string
 	_lst.append( '<table>' )
@@ -24,10 +25,11 @@ def generate_table( entries, lang_code ):
 		_lst.append( '  <tr><td>%s</td>' % label )
 		_lst.append( '      <td><strong>%s</strong> : %s<br />' % (sCompTitle, ', '.join(driver.components) ) )
 		_lst.append( '      <strong>%s</strong> : %s<br />' % (sIntfTitle, ', '.join(driver.interfaces) ) )
+		_lst.append( '<small>%s</small><br/><br />' % driver.descr.get_lang(lang_code))
 		_lst.append( '      <strong>%s</strong> : %s<br />' % (sPlateformTitle, ', '.join(driver.plateforms) ) )
-		_lst.append( '<small>%s</small>' % driver.descr.get_lang(lang_code))
+		_lst.append( '      <strong>%s</strong> : %s<br />' % (sManufacturerTitle, ', '.join(driver.manufacturers) ) )
 		if len( driver.ressources )>0:
-			_lst.append( '<br /><ul>' )
+			_lst.append( '<ul>' )
 			for res in driver.ressources:
 				_lst.append( '<li>%s <a href="%s">%s</a></li>' % (sSeeTitle,res.url, res.label) )
 			_lst.append( '</ul>' )
@@ -60,6 +62,11 @@ def __manufacturer_list( drivers, lang_code, str, filter ): # List per manufactu
 	_mans = sorted( _mans )
 	return ', '.join( [str.replace('%code%',code) for code in _mans]  )
 
+def __manufacturer_name( drivers, lang_code, code, filter ): # Identification of the interface codes
+	return drivers.manufacturer( code ).name
+
+def __manufacturer_url( drivers, lang_code, code, filter ): # Identification of the interface codes
+	return "[%s](%s)" %  (drivers.manufacturer( code ).name,drivers.manufacturer( code ).url)
 
 #-------------------------------------------------------------------------------
 #         Readme Compiler
@@ -159,7 +166,19 @@ def compile_all():
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_NCD_ENG.md', 'lang_code': 'eng', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_UEXT_ENG.md', 'lang_code': 'eng', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_QWIIC_ENG.md', 'lang_code': 'eng', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_FEATHERWING_ENG.md', 'lang_code': 'eng', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) }
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_FEATHERWING_ENG.md', 'lang_code': 'eng', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) },
+
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_ADAFRUIT.md', 'lang_code': 'fr', 'code' : 'ADAFRUIT', 'filter' : lambda driver : any(['ADAFRUIT'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_OLIMEX.md', 'lang_code': 'fr', 'code' : 'OLIMEX', 'filter' : lambda driver : any(['OLIMEX'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NCD.md', 'lang_code': 'fr', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_SPARKFUN.md', 'lang_code': 'fr', 'code' : 'SPARKFUN', 'filter' : lambda driver : any(['SPARKFUN'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NONE.md', 'lang_code': 'fr', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) },
+
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_ADAFRUIT_ENG.md', 'lang_code': 'eng', 'code' : 'ADAFRUIT', 'filter' : lambda driver : any(['ADAFRUIT'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_OLIMEX_ENG.md', 'lang_code': 'eng', 'code' : 'OLIMEX', 'filter' : lambda driver : any(['OLIMEX'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NCD_ENG.md', 'lang_code': 'eng', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_SPARKFUN_ENG.md', 'lang_code': 'eng', 'code' : 'SPARKFUN', 'filter' : lambda driver : any(['SPARKFUN'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NONE_ENG.md', 'lang_code': 'eng', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) }
 
 	]
 
@@ -175,9 +194,8 @@ def compile_all():
 	#			} )
 
 	for entry in files:
-		print( 'compile file: %s' % entry['source'] )
+		print( 'compile file: %-45s (from %s)' % (entry['destin'], entry['source']) )
 		compile_file( drivers, **entry ) # entry['source'], entry['destin'], entry['lang'], entry['filter'] )
-		print( '    %s written!' % entry['destin'])
 
 	# sHtml = generate_table( drivers.list_by_folder(), 'fr' )
 	# print( sHtml )
