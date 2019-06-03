@@ -1,5 +1,5 @@
 # Pilote MicroPython par fabriquant ADAFRUIT
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Adafruit Industries
 

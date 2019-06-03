@@ -1,5 +1,5 @@
 # MicroPython Driver for NCD interface
-[Return to main page](../readme_ENG.md)
+[Return to main page](../../readme_ENG.md)
 
 I2C 5V logic connector for National Control Device (NCD.io)
 

@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface UEXT
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, UART
 

@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface FEATHERWING
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Connecteur FEATHERWING pour les extension Feather (Adafruit.com)
 

@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface GPIO
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Interface GPIO, PWM, Interruption, etc générique. N'utilise pas de BUS ou CONNECTEUR specifique.
 

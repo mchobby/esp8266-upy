@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface UART
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 UART (série)
 

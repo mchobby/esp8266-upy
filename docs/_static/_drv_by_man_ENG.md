@@ -1,5 +1,5 @@
 # MicroPython for the manufacturer %code%
-[Back to the main page](../readme.md)
+[Back to the main page](../../readme.md)
 
 @@manufacturer_name:{'lang_code':'eng', 'code':'%code%'}
 

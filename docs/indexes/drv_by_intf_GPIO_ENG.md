@@ -1,5 +1,5 @@
 # MicroPython Driver for GPIO interface
-[Return to main page](../readme_ENG.md)
+[Return to main page](../../readme_ENG.md)
 
 Generic GPIO, PWM, Interrupt, etc interface. Do not use a BUS or specific connector
 

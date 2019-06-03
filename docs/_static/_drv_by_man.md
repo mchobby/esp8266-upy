@@ -1,5 +1,5 @@
 # Pilote MicroPython par fabriquant %code%
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 @@manufacturer_name:{'lang_code':'fr', 'code':'%code%'}
 

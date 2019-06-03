@@ -1,5 +1,5 @@
 # Pilote MicroPython par fabriquant OLIMEX
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Olimex Ltd
 

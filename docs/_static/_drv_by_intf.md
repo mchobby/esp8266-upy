@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface %code%
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 @@interface_text:{'lang_code':'fr', 'code':'%code%'}
 

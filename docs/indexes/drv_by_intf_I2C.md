@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface I2C
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Bus I2C
 

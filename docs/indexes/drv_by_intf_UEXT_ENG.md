@@ -1,5 +1,5 @@
 # MicroPython Driver for UEXT interface
-[Return to main page](../readme_ENG.md)
+[Return to main page](../../readme_ENG.md)
 
 3.3V logic UEXT connector from Olimex Ltd (Olimex.com) shipping I2C, SPI, UART
 

@@ -1,5 +1,5 @@
 # Pilote MicroPython pour interface SPI
-[Retour à la page principale](../readme.md)
+[Retour à la page principale](../../readme.md)
 
 Bus SPI
 
