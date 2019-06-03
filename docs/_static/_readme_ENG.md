@@ -22,11 +22,11 @@ The most easiest plateform to flash with MicroPython are the [Feather ESP8266 HU
 # Available libraries
 Here is a description of the libraries available in this repository. <strong>Each sub-folders contain README file with additionnal informations about the driver, examples and wiring.</strong>
 
-Explorer par:
+Explore it by:
 * Interface:
 @@interface_list:{'lang_code':'eng','str':'[%code%](docs/indexes/drv_by_intf_%code%_ENG.md)'} # List per interface
 
-* Fabriquant:
+* Manufacturer:
 @@manufacturer_list:{'lang_code':'eng','str':'[%code%](docs/indexes/drv_by_man_%code%_ENG.md)'} # List per manufacturer
 
 @@driver_table:{'lang_code':'eng'} # Insert the driver table
