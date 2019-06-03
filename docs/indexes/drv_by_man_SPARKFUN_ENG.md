@@ -1,13 +1,13 @@
-# Pilote MicroPython par fabriquant SPARKFUN
-[Retour à la page principale](../../readme.md)
+# MicroPython for the manufacturer SPARKFUN
+[Back to the main page](../../readme.md)
 
 SparkFun 
 
-voir
+See
 [SparkFun ](https://www.sparkfun.com/)
 <table>
 <thead>
-  <th>Répertoire</th><th>Description</th>
+  <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
 </tbody>
