@@ -108,7 +108,7 @@
 												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=879" }
 												],
 			"descr"	: {"FR" : "Le SSD1306 est un contrôleur d'écran OLED",
-								 "ENG": "The SSD1306 is an OLED dislpay contrôler."
+								 "ENG": "The SSD1306 is an OLED display controler."
 								}
 		},
 		{	"folder"        : "modoled128x64",

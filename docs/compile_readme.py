@@ -141,25 +141,25 @@ def compile_all():
 		{'source' : '_static/_readme.md', 'destin' : '../readme.md', 'lang_code': 'fr', 'filter': None},
 		{'source' : '_static/_readme_ENG.md', 'destin' : '../readme_ENG.md', 'lang_code': 'fr', 'filter' : None },
 
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_GPIO.md', 'lang_code': 'fr', 'code' : 'GPIO', 'filter' : lambda driver : any(['GPIO'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_I2C.md', 'lang_code': 'fr', 'code' : 'I2C', 'filter' : lambda driver : any(['I2C'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_SPI.md', 'lang_code': 'fr', 'code' : 'SPI', 'filter' : lambda driver : any(['SPI'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_ONEWIRE.md', 'lang_code': 'fr', 'code' : 'ONEWIRE', 'filter' : lambda driver : any(['ONEWIRE'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_UART.md', 'lang_code': 'fr', 'code' : 'UART', 'filter' : lambda driver : any(['UART'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_NCD.md', 'lang_code': 'fr', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_UEXT.md', 'lang_code': 'fr', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_QWIIC.md', 'lang_code': 'fr', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'drv_by_intf_FEATHERWING.md', 'lang_code': 'fr', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_GPIO.md', 'lang_code': 'fr', 'code' : 'GPIO', 'filter' : lambda driver : any(['GPIO'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_I2C.md', 'lang_code': 'fr', 'code' : 'I2C', 'filter' : lambda driver : any(['I2C'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_SPI.md', 'lang_code': 'fr', 'code' : 'SPI', 'filter' : lambda driver : any(['SPI'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_ONEWIRE.md', 'lang_code': 'fr', 'code' : 'ONEWIRE', 'filter' : lambda driver : any(['ONEWIRE'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_UART.md', 'lang_code': 'fr', 'code' : 'UART', 'filter' : lambda driver : any(['UART'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_NCD.md', 'lang_code': 'fr', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_UEXT.md', 'lang_code': 'fr', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_QWIIC.md', 'lang_code': 'fr', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_FEATHERWING.md', 'lang_code': 'fr', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) },
 
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_GPIO_ENG.md', 'lang_code': 'eng', 'code' : 'GPIO', 'filter' : lambda driver : any(['GPIO'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_I2C_ENG.md', 'lang_code': 'eng', 'code' : 'I2C', 'filter' : lambda driver : any(['I2C'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_SPI_ENG.md', 'lang_code': 'eng', 'code' : 'SPI', 'filter' : lambda driver : any(['SPI'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_ONEWIRE_ENG.md', 'lang_code': 'eng', 'code' : 'ONEWIRE', 'filter' : lambda driver : any(['ONEWIRE'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_UART_ENG.md', 'lang_code': 'eng', 'code' : 'UART', 'filter' : lambda driver : any(['UART'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_NCD_ENG.md', 'lang_code': 'eng', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_UEXT_ENG.md', 'lang_code': 'eng', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_QWIIC_ENG.md', 'lang_code': 'eng', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
- 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'drv_by_intf_FEATHERWING_ENG.md', 'lang_code': 'eng', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) }
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_GPIO_ENG.md', 'lang_code': 'eng', 'code' : 'GPIO', 'filter' : lambda driver : any(['GPIO'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_I2C_ENG.md', 'lang_code': 'eng', 'code' : 'I2C', 'filter' : lambda driver : any(['I2C'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_SPI_ENG.md', 'lang_code': 'eng', 'code' : 'SPI', 'filter' : lambda driver : any(['SPI'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_ONEWIRE_ENG.md', 'lang_code': 'eng', 'code' : 'ONEWIRE', 'filter' : lambda driver : any(['ONEWIRE'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_UART_ENG.md', 'lang_code': 'eng', 'code' : 'UART', 'filter' : lambda driver : any(['UART'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_NCD_ENG.md', 'lang_code': 'eng', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_UEXT_ENG.md', 'lang_code': 'eng', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_QWIIC_ENG.md', 'lang_code': 'eng', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_FEATHERWING_ENG.md', 'lang_code': 'eng', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) }
 
 	]
 
