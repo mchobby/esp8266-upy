@@ -1,7 +1,5 @@
 [This file also exists in ENGLISH](readme_ENG.md)
 
- *** TRADUCTION ***
-
 # Afficher des informations sur écran OLED SSD1306
 
 L'afficheur OLED de NCD (__mini board__) facilite l'affichage de donnée de vos systèmes intégrés. Votre contrôleur peut afficher des données, du texte et même des graphiques sur l'afficheur OLED disposant d'une résolution de 128×64.
