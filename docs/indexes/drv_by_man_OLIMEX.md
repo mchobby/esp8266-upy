@@ -46,6 +46,17 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td>modirtemp</td>
+      <td><strong>Composants</strong> : MOD-IR-TEMP, MLX90614<br />
+      <strong>Interfaces</strong> : I2C, UEXT<br />
+<small>Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)</small><br/><br />
+      <strong>Testé avec</strong> : FEATHER-ESP8266, PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-IR-TEMP/open-source-hardware">MOD-IR-TEMP @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td>modlcd1x9</td>
       <td><strong>Composants</strong> : MOD-LCD-1x9<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

@@ -158,6 +158,17 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td>modirtemp</td>
+      <td><strong>Components</strong> : MOD-IR-TEMP, MLX90614<br />
+      <strong>Interfaces</strong> : I2C, UEXT<br />
+<small>NON-Contact IR temperature sensor, from -70°C to 380°C with MXL90164.</small><br/><br />
+      <strong>Tested with</strong> : FEATHER-ESP8266, PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-IR-TEMP/open-source-hardware">MOD-IR-TEMP @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td>modlcd1x9</td>
       <td><strong>Components</strong> : MOD-LCD-1x9<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
