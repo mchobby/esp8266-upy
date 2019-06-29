@@ -366,5 +366,17 @@
 			"descr"	: {"FR" : "Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur NCD.",
 								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a NCD connector."
 								}
+		},
+		{	"folder"        : "modirtemp",
+			"components"    : ["MOD-IR-TEMP", "MLX90614"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-IR-TEMP @ Olimex",
+														"url"   : "https://www.olimex.com/Products/Modules/Sensors/MOD-IR-TEMP/open-source-hardware" }
+												],
+			"descr"	: {"FR" : "Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)",
+								 "ENG": "NON-Contact IR temperature sensor, from -70°C to 380°C with MXL90164."
+								}
 		}
 ]
