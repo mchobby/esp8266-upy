@@ -1,8 +1,6 @@
 """
 PECMAC Driver  (I2C) for 'AC Current Monitor' (from National Control Device board).
 
-MPL115A2 is an I2C pressure and temperature sensor.
-
 NCD-PR29-6_10A (PECMAC) : http://shop.mchobby.be/
 NCD-PR29-6_10A (PECMAC): https://store.ncd.io/product/2-channel-on-board-97-accuracy-ac-current-monitor-with-i2c-interface/
 Based on the following source code
