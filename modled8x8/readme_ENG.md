@@ -19,16 +19,16 @@ This board can be found:
 
 # Wiring
 
-## MOD-LED8x8RGB to UEXT connector
+## MOD-LED8x8RGB to UEXT adapter
 Here is a simple connector cable to connect the MOD-LED8x8RGB to any UEXT host port.
 
-TODO TODO TODO  TODO TODO  TODO TODO  TODO TODO  TODO TODO  TODO TODO  TODO TODO
+![UEXT to MOD-LED8x8RGB converter](docs/_static/uext_to_modled.png)
 
 ## Port UEXT
+If you have the adapter described here above then you can une the UEXT connector of your favorite plateforme.
 
-The wiring of an UEXT Port on ESP8266 is described in the [UEXT folder](../UEXT/readme_eng.md) of this GitHub.
-
-The [UEXT adapter for MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) is also available in the [Pyboard-Driver](https://github.com/mchobby/pyboard-driver) GitHub.
+* The wiring of an UEXT Port on ESP8266 is described in the [UEXT folder](../UEXT/readme_eng.md) of this GitHub.
+* The [UEXT adapter for MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) is also available in the [Pyboard-Driver](https://github.com/mchobby/pyboard-driver) GitHub.
 
 ## Direct Wiring on Pyboard
 A direct wiring to a Pyboard have also been made while experimenting the MOD-LED8x8RGB so here it is!
@@ -97,3 +97,11 @@ modled.show()
 which produce the following result (with axis reference) :
 
 ![MOD-LED8x8RGB to RAW MicroPython driver testing](docs/_static/modled8x8-axis.jpg)
+
+The `examples/testraw2x3.py` test script explore the matrix chaining (2 rows, 3 columns).
+
+![MOD-LED8x8RGB chaning for RAW MicroPython driver testing](docs/_static/modled8x8-chaining.jpg)
+
+Which produce a really nice result under a sheet of paper (otherwise there is too much light for the camera).
+
+![MOD-LED8x8RGB chaning for RAW MicroPython driver testing](docs/_static/modled8x8-testraw2x3.jpg)
