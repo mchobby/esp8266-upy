@@ -80,9 +80,7 @@ Ce second exemple charge des fichiers '.pbm' (_Portable Bitmap_ format) et les a
 
 ![I2COLED sur NCD mini board](docs/_static/ncd-oled-diplay-image.jpg)
 
- *** TRADUCTION *****
-
-It will be necessary to transfers the `loadbmp.py` script and the `ncd-mch.pbm` & `upy-logo.pbm` files. See the __oled-ssd1306__ folder to see how to produce the `.pbm` files.
+Il sera nécessaire de charger le script `loadbmp.py` et les fichiers `ncd-mch.pbm` & `upy-logo.pbm` . Voir le répertoire __oled-ssd1306__ pour savoir comment produire un fichier `.pbm` .
 
 ```
 from machine import I2C, Pin
@@ -144,8 +142,8 @@ while True:
 ```
 
 # ressources
-* See the GitHub [oled-ssd1306](https://github.com/mchobby/esp8266-upy/tree/master/oled-ssd1306) for more details about the SSD1306 driver, its method, etc.
+* Voir le GitHub [oled-ssd1306](https://github.com/mchobby/esp8266-upy/tree/master/oled-ssd1306) pour plus de détails sur le pilote SSD1306, ses méthodes, ets.
 
-# Where to buy
+# Où acheter
 * NCD-I2COLED : http://shop.mchobby.be/
 * NCD-I2COLED : https://store.ncd.io/product/oled-128x64-graphic-display-i2c-mini-module/
