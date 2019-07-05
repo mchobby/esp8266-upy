@@ -1,5 +1,6 @@
 """
- Test the modled FrameBuffer implementation with a single MOD-LED8x8RGB Olimex board.
+ Test the modled FrameBuffer implementation organized in 2 raw of 3 slabs for
+ the MOD-LED8x8RGB Olimex board.
 
  MOD-LED8x8RGB is 8x8 RGB LED Matrix (7 colors) that can be daisy chained.
 
@@ -37,10 +38,46 @@ spi.init( baudrate=2000000, phase=0, polarity=0 ) # low @ 2 MHz
 # We must manage the SS signal ourself
 ss = Pin( Pin.board.Y5, Pin.OUT )
 
-modled = ModLedRGB( spi, ss ) # Just one LED brick LED-8x8RGB
+modled = ModLedRGB( spi, ss, width=3, height=2 ) # Just 6 LED-8x8RGB organized in 2 row of 3 columns each
 
-modled.rect(0,0,8,8,RED) #x,y, width, Height
-modled.rect(1,1,6,6,GREEN)
-modled.rect(2,2,4,4,BLUE)
-modled.rect(3,3,2,2,MAGENTA)
-modled.show() # Update the matrix
+modled.fill_rect(0,0,8,8,RED)
+modled.fill_rect(8,0,8,8,GREEN)
+modled.fill_rect(16,0,8,8,BLUE)
+modled.fill_rect(0,8,8,8,BLUE)
+modled.fill_rect(8,8,8,8,GREEN)
+modled.fill_rect(16,8,8,8,RED)
+modled.show()
+time.sleep( 2 )
+
+# See what's inside the FrameBuffer memory
+# modled._dump()
+
+colors = [ RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE, BLACK ]
+for color in colors:
+	y, y_sign = 0, 1
+	for x in range( modled.pixels[0] ): # PixelWidth
+		modled.clear()
+		modled.vline( x, 0, modled.pixels[1], color )
+		modled.hline( 0, y, modled.pixels[0], color )
+		y += y_sign
+		if (y >= modled.pixels[1]) or (y<0):
+			y_sign *= -1
+			if y<0:
+				y = 0
+			else:
+				y = modled.pixels[1]-1 # Height
+		modled.show()
+		time.sleep(0.050)
+
+# plot points
+modled.clear()
+modled.pixel( 2,2, GREEN ) # Green
+modled.pixel( 3,3, BLUE ) # Blue
+modled.pixel( 4,6, YELLOW ) # Red + Green = Yellow
+modled.pixel( 7,6, MAGENTA ) # Red + Blue  = Magenta
+modled.pixel( 8,5, CYAN ) # Green + Blue  = Cyan
+modled.pixel( 9,4, WHITE ) # Red + Green + Blue  = White
+modled.text( "MCH",0,8,MAGENTA) # 8x8 px font
+
+modled.show()
+# time.sleep(2)
