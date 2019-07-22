@@ -10,7 +10,7 @@ See
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../../dht11">dht11</a></td>
+  <tr><td><a href="../../../../tree/master/dht11">dht11</a></td>
       <td><strong>Components</strong> : DHT11<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>The DHT11 is a very cheap <strong>humidity</strong> (20 to 80%) and temperature sensor.</small><br/><br />
@@ -21,7 +21,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../ds18b20">ds18b20</a></td>
+  <tr><td><a href="../../../../tree/master/ds18b20">ds18b20</a></td>
       <td><strong>Components</strong> : DS18B20<br />
       <strong>Interfaces</strong> : ONEWIRE<br />
 <small>The DS18B20 is a very popular <strong>temperature</strong> sensor. It use the 1-Wire bus to connect several sensors.</small><br/><br />
@@ -32,7 +32,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../mcp230xx">mcp230xx</a></td>
+  <tr><td><a href="../../../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Components</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The MCP23017 (and MCP2308) are <strong>GPIO Expander</strong> adding additionnal input/output to a microcontroler.</small><br/><br />
@@ -43,7 +43,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../pca9536">pca9536</a></td>
+  <tr><td><a href="../../../../tree/master/pca9536">pca9536</a></td>
       <td><strong>Components</strong> : PCA9536<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>4 bit I2C controled GPIO expander.</small><br/><br />
@@ -51,7 +51,7 @@ See
       <strong>Manufacturer</strong> : NONE<br />
       </td>
   </tr>
-  <tr><td><a href="../../../../umqtt">umqtt</a></td>
+  <tr><td><a href="../../../../tree/master/umqtt">umqtt</a></td>
       <td><strong>Components</strong> : <br />
       <strong>Interfaces</strong> : <br />
 <small>MQTT Communication exemples with ESP8266 module.</small><br/><br />

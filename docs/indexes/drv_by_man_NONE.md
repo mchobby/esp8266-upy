@@ -10,7 +10,7 @@ voir
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../../dht11">dht11</a></td>
+  <tr><td><a href="../../../../tree/master/dht11">dht11</a></td>
       <td><strong>Composants</strong> : DHT11<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>Le DHT11 est un senseur d'<strong>humidité</strong> (20 à 80%) et température très bon marché.</small><br/><br />
@@ -21,7 +21,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../ds18b20">ds18b20</a></td>
+  <tr><td><a href="../../../../tree/master/ds18b20">ds18b20</a></td>
       <td><strong>Composants</strong> : DS18B20<br />
       <strong>Interfaces</strong> : ONEWIRE<br />
 <small>Le DS18B20 est un senseur de <strong>température</strong> digital très populaire. Il utilise le bus 1-Wire permettant de brancher plusieurs senseurs 1-Wire sur un même bus.</small><br/><br />
@@ -32,7 +32,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../mcp230xx">mcp230xx</a></td>
+  <tr><td><a href="../../../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Composants</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le MCP23017 (et MCP2308) sont des <strong>GPIO Expander</strong> permettant d'ajouter des entrées/sorties supplémentaires sur un microcontrôleur.</small><br/><br />
@@ -43,7 +43,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../pca9536">pca9536</a></td>
+  <tr><td><a href="../../../../tree/master/pca9536">pca9536</a></td>
       <td><strong>Composants</strong> : PCA9536<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Contrôleur GPIO 4 bits I2C.</small><br/><br />
@@ -51,7 +51,7 @@ voir
       <strong>Fabricant</strong> : NONE<br />
       </td>
   </tr>
-  <tr><td><a href="../../../../umqtt">umqtt</a></td>
+  <tr><td><a href="../../../../tree/master/umqtt">umqtt</a></td>
       <td><strong>Composants</strong> : <br />
       <strong>Interfaces</strong> : <br />
 <small>Exemples de communication MQTT avec un module ESP8266.</small><br/><br />

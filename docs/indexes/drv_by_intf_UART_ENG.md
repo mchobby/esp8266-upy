@@ -8,7 +8,7 @@ UART (serial)
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../../UEXT">UEXT</a></td>
+  <tr><td><a href="../../../../tree/master/UEXT">UEXT</a></td>
       <td><strong>Components</strong> : UEXT<br />
       <strong>Interfaces</strong> : I2C, SPI, UART<br />
 <small><strong>UEXT</strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V</small><br/><br />

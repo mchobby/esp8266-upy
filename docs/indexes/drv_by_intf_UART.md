@@ -8,7 +8,7 @@ UART (série)
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../../UEXT">UEXT</a></td>
+  <tr><td><a href="../../../../tree/master/UEXT">UEXT</a></td>
       <td><strong>Composants</strong> : UEXT<br />
       <strong>Interfaces</strong> : I2C, SPI, UART<br />
 <small>Connecteur <strong>UEXT</strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V</small><br/><br />
