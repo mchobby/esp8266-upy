@@ -10,7 +10,7 @@ See
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td>ads1015-ads1115</td>
+  <tr><td><a href="../../../ads1015-ads1115">ads1015-ads1115</a></td>
       <td><strong>Components</strong> : ADS1015, ADS1115, ADA1085<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>ADC converter (Analog to Digital) 4 channel allowing analog reading and differential reading.<br />L'ADS1115 have a internal amplifier (programmable) that can be used to read very small voltage.</small><br/><br />
@@ -21,7 +21,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>am2315</td>
+  <tr><td><a href="../../../am2315">am2315</a></td>
       <td><strong>Components</strong> : AM2315<br />
       <strong>Interfaces</strong> : I2C<br />
 <small><strong>Temperature & relative humidity</strong> (0 to 100%) sensor for capture outside data.</small><br/><br />
@@ -32,7 +32,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>bme280-bmp280</td>
+  <tr><td><a href="../../../bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Components</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The BMP280 is a very popular <strong>pressure and temperatur</strong> sensor.<br />The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY</strong></small><br/><br />
@@ -44,7 +44,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>bmp180</td>
+  <tr><td><a href="../../../bmp180">bmp180</a></td>
       <td><strong>Components</strong> : BMP180<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The BMP180 is a <strong>pressure & temperature</strong> sensor now replaced with the BMP280.</small><br/><br />
@@ -55,7 +55,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>ncd-mpl115A2</td>
+  <tr><td><a href="../../../ncd-mpl115A2">ncd-mpl115A2</a></td>
       <td><strong>Components</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>The MPL115A2 sensor capture the pressure and temperature over I2C bus. The <i>I2C NCD mini board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />
@@ -67,7 +67,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>neopixel</td>
+  <tr><td><a href="../../../neopixel">neopixel</a></td>
       <td><strong>Components</strong> : NEOPIXEL, 74AHCT125<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually.</small><br/><br />
@@ -79,7 +79,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>oled-ssd1306</td>
+  <tr><td><a href="../../../oled-ssd1306">oled-ssd1306</a></td>
       <td><strong>Components</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
       <strong>Interfaces</strong> : I2C, FEATHERWING<br />
 <small>The SSD1306 is an OLED display controler.</small><br/><br />
@@ -90,7 +90,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td>tsl2561</td>
+  <tr><td><a href="../../../tsl2561">tsl2561</a></td>
       <td><strong>Components</strong> : TSL2561, ADA439<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The TSL2561 is a visible light <strong>luminosity</strong> sensor having a response close from human Eyes. It produces values in LUX.</small><br/><br />
