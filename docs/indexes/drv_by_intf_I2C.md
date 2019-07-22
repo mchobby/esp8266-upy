@@ -8,7 +8,7 @@ Bus I2C
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../NCD">NCD</a></td>
+  <tr><td><a href="../../../../NCD">NCD</a></td>
       <td><strong>Composants</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Connecter facilement une __mini carte I2C__ de NCD (National Control Device) sur une carte MicroPython grâce au connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C. Logique 5V.</small><br/><br />
@@ -20,7 +20,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../UEXT">UEXT</a></td>
+  <tr><td><a href="../../../../UEXT">UEXT</a></td>
       <td><strong>Composants</strong> : UEXT<br />
       <strong>Interfaces</strong> : I2C, SPI, UART<br />
 <small>Connecteur <strong>UEXT</strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V</small><br/><br />
@@ -32,7 +32,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ads1015-ads1115">ads1015-ads1115</a></td>
+  <tr><td><a href="../../../../ads1015-ads1115">ads1015-ads1115</a></td>
       <td><strong>Composants</strong> : ADS1015, ADS1115, ADA1085<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.<br />L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.</small><br/><br />
@@ -43,7 +43,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../am2315">am2315</a></td>
+  <tr><td><a href="../../../../am2315">am2315</a></td>
       <td><strong>Composants</strong> : AM2315<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Capteur de <strong>température et humidité</strong> relative (0 à 100%) pour relevés en extérieur.</small><br/><br />
@@ -54,7 +54,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../bme280-bmp280">bme280-bmp280</a></td>
+  <tr><td><a href="../../../../bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Composants</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le BMP280 est un senseur de <strong>pression et température</strong> très populaire.<br />Le BME280 est un senseur de <strong>pression, température et HUMIDITÉ</strong> relative</small><br/><br />
@@ -66,7 +66,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../bmp180">bmp180</a></td>
+  <tr><td><a href="../../../../bmp180">bmp180</a></td>
       <td><strong>Composants</strong> : BMP180<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le BMP180 est un senseur de <strong>pression et température</strong> aujourd'hui remplacé par le BMP280.</small><br/><br />
@@ -77,7 +77,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../mcp230xx">mcp230xx</a></td>
+  <tr><td><a href="../../../../mcp230xx">mcp230xx</a></td>
       <td><strong>Composants</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le MCP23017 (et MCP2308) sont des <strong>GPIO Expander</strong> permettant d'ajouter des entrées/sorties supplémentaires sur un microcontrôleur.</small><br/><br />
@@ -88,7 +88,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modio">modio</a></td>
+  <tr><td><a href="../../../../modio">modio</a></td>
       <td><strong>Composants</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, d'entrée OptoCoupleur (24V) et entrées analogiques (0-3.3V).<br />Cette carte est compatible avec le standard industriel en 24V.</small><br/><br />
@@ -100,7 +100,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modio2">modio2</a></td>
+  <tr><td><a href="../../../../modio2">modio2</a></td>
       <td><strong>Composants</strong> : MOD-IO2<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, de GPIO aux fonctions multiples (Input, Output, Analog, PWM; 0-3.3V).</small><br/><br />
@@ -112,7 +112,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modirtemp">modirtemp</a></td>
+  <tr><td><a href="../../../../modirtemp">modirtemp</a></td>
       <td><strong>Composants</strong> : MOD-IR-TEMP, MLX90614<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)</small><br/><br />
@@ -123,7 +123,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modlcd1x9">modlcd1x9</a></td>
+  <tr><td><a href="../../../../modlcd1x9">modlcd1x9</a></td>
       <td><strong>Composants</strong> : MOD-LCD-1x9<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-LCD1x9 est un afficheur 9 caractères alphanumérique I2C avec port de connexion <strong>UEXT</strong>.</small><br/><br />
@@ -135,7 +135,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modltr501">modltr501</a></td>
+  <tr><td><a href="../../../../modltr501">modltr501</a></td>
       <td><strong>Composants</strong> : MOD-LTR-501ALS, LTR-501ALS<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>LTR-501ALS permet de faire une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). Le MOD-LTR-501ALS dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.</small><br/><br />
@@ -147,7 +147,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modmag">modmag</a></td>
+  <tr><td><a href="../../../../modmag">modmag</a></td>
       <td><strong>Composants</strong> : MOD-MAG, MAG3110<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.</small><br/><br />
@@ -159,7 +159,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modoled128x64">modoled128x64</a></td>
+  <tr><td><a href="../../../../modoled128x64">modoled128x64</a></td>
       <td><strong>Composants</strong> : SSD1306, MOD-OLED-128x64, OLED<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur UEXT.</small><br/><br />
@@ -170,7 +170,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modrgb">modrgb</a></td>
+  <tr><td><a href="../../../../modrgb">modrgb</a></td>
       <td><strong>Composants</strong> : MOD-RGB<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-RGB est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de MosFet de puissance pour commander des rubans LED RGB analogiques via I2C (ou DMX).</small><br/><br />
@@ -182,7 +182,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modwii">modwii</a></td>
+  <tr><td><a href="../../../../modwii">modwii</a></td>
       <td><strong>Composants</strong> : MOD-Wii-UEXT-NUNCHUCK, NUNCHUCK<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>La Wii NUNCHUCK est une manette de jeu super confortable et s'utilise sur le bus I2C. Ce controleur dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.</small><br/><br />
@@ -194,7 +194,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-fet-solenoid">ncd-fet-solenoid</a></td>
+  <tr><td><a href="../../../../ncd-fet-solenoid">ncd-fet-solenoid</a></td>
       <td><strong>Composants</strong> : I2CDRV8W4I12V, MCP23008<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Contrôleur de sortie FET + GPIO (basé sur un MCP23008) pour charge résistive / inductive 12V (valve). La <i>carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
@@ -206,7 +206,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-mpl115A2">ncd-mpl115A2</a></td>
+  <tr><td><a href="../../../../ncd-mpl115A2">ncd-mpl115A2</a></td>
       <td><strong>Composants</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Le MPL115A2 est un capteur de pression et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
@@ -218,7 +218,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-oled">ncd-oled</a></td>
+  <tr><td><a href="../../../../ncd-oled">ncd-oled</a></td>
       <td><strong>Composants</strong> : SSD1306, I2COLED, OLED<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur NCD.</small><br/><br />
@@ -230,7 +230,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-pecmac">ncd-pecmac</a></td>
+  <tr><td><a href="../../../../ncd-pecmac">ncd-pecmac</a></td>
       <td><strong>Composants</strong> : DLCT27C10, OPCT16AL, I2CCMAC230A, PECMAC2xxxA<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Capteur de courant alternatif sur bus I2C (ou interface IoT). La <i>carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
@@ -242,7 +242,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-si7005">ncd-si7005</a></td>
+  <tr><td><a href="../../../../ncd-si7005">ncd-si7005</a></td>
       <td><strong>Composants</strong> : SI7005<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Le SI7005 est un capteur d'humidité relative et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
@@ -254,7 +254,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-water-detect">ncd-water-detect</a></td>
+  <tr><td><a href="../../../../ncd-water-detect">ncd-water-detect</a></td>
       <td><strong>Composants</strong> : WATER-DETECT, WDBZ, PCA9536<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Détecteur de présence d'eau + Buzzer + 2 GPIOs (basé sur un PCA9536). La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
@@ -266,7 +266,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../oled-ssd1306">oled-ssd1306</a></td>
+  <tr><td><a href="../../../../oled-ssd1306">oled-ssd1306</a></td>
       <td><strong>Composants</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
       <strong>Interfaces</strong> : I2C, FEATHERWING<br />
 <small>Le SSD1306 est un contrôleur d'écran OLED</small><br/><br />
@@ -277,7 +277,7 @@ Bus I2C
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../pca9536">pca9536</a></td>
+  <tr><td><a href="../../../../pca9536">pca9536</a></td>
       <td><strong>Composants</strong> : PCA9536<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Contrôleur GPIO 4 bits I2C.</small><br/><br />
@@ -285,7 +285,7 @@ Bus I2C
       <strong>Fabricant</strong> : NONE<br />
       </td>
   </tr>
-  <tr><td><a href="../../../tsl2561">tsl2561</a></td>
+  <tr><td><a href="../../../../tsl2561">tsl2561</a></td>
       <td><strong>Composants</strong> : TSL2561, ADA439<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le TSL2561 est un senseur de <strong>luminosité</strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX</small><br/><br />

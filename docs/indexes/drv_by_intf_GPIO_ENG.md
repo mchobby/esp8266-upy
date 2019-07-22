@@ -8,7 +8,7 @@ Generic GPIO, PWM, Interrupt, etc interface. Do not use a BUS or specific connec
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../dht11">dht11</a></td>
+  <tr><td><a href="../../../../dht11">dht11</a></td>
       <td><strong>Components</strong> : DHT11<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>The DHT11 is a very cheap <strong>humidity</strong> (20 to 80%) and temperature sensor.</small><br/><br />
@@ -19,7 +19,7 @@ Generic GPIO, PWM, Interrupt, etc interface. Do not use a BUS or specific connec
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../neopixel">neopixel</a></td>
+  <tr><td><a href="../../../../neopixel">neopixel</a></td>
       <td><strong>Components</strong> : NEOPIXEL, 74AHCT125<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually.</small><br/><br />

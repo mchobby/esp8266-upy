@@ -10,7 +10,7 @@ voir
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../UEXT">UEXT</a></td>
+  <tr><td><a href="../../../../UEXT">UEXT</a></td>
       <td><strong>Composants</strong> : UEXT<br />
       <strong>Interfaces</strong> : I2C, SPI, UART<br />
 <small>Connecteur <strong>UEXT</strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V</small><br/><br />
@@ -22,7 +22,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modio">modio</a></td>
+  <tr><td><a href="../../../../modio">modio</a></td>
       <td><strong>Composants</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, d'entrée OptoCoupleur (24V) et entrées analogiques (0-3.3V).<br />Cette carte est compatible avec le standard industriel en 24V.</small><br/><br />
@@ -34,7 +34,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modio2">modio2</a></td>
+  <tr><td><a href="../../../../modio2">modio2</a></td>
       <td><strong>Composants</strong> : MOD-IO2<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-IO est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de relais, de GPIO aux fonctions multiples (Input, Output, Analog, PWM; 0-3.3V).</small><br/><br />
@@ -46,7 +46,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modirtemp">modirtemp</a></td>
+  <tr><td><a href="../../../../modirtemp">modirtemp</a></td>
       <td><strong>Composants</strong> : MOD-IR-TEMP, MLX90614<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)</small><br/><br />
@@ -57,7 +57,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modlcd1x9">modlcd1x9</a></td>
+  <tr><td><a href="../../../../modlcd1x9">modlcd1x9</a></td>
       <td><strong>Composants</strong> : MOD-LCD-1x9<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-LCD1x9 est un afficheur 9 caractères alphanumérique I2C avec port de connexion <strong>UEXT</strong>.</small><br/><br />
@@ -69,7 +69,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modltr501">modltr501</a></td>
+  <tr><td><a href="../../../../modltr501">modltr501</a></td>
       <td><strong>Composants</strong> : MOD-LTR-501ALS, LTR-501ALS<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>LTR-501ALS permet de faire une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). Le MOD-LTR-501ALS dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.</small><br/><br />
@@ -81,7 +81,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modmag">modmag</a></td>
+  <tr><td><a href="../../../../modmag">modmag</a></td>
       <td><strong>Composants</strong> : MOD-MAG, MAG3110<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.</small><br/><br />
@@ -93,7 +93,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modoled128x64">modoled128x64</a></td>
+  <tr><td><a href="../../../../modoled128x64">modoled128x64</a></td>
       <td><strong>Composants</strong> : SSD1306, MOD-OLED-128x64, OLED<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur UEXT.</small><br/><br />
@@ -104,7 +104,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modrgb">modrgb</a></td>
+  <tr><td><a href="../../../../modrgb">modrgb</a></td>
       <td><strong>Composants</strong> : MOD-RGB<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-RGB est une carte d'extension I2C avec port de connexion <strong>UEXT</strong>. Cette carte d'Olimex équipé de MosFet de puissance pour commander des rubans LED RGB analogiques via I2C (ou DMX).</small><br/><br />
@@ -116,7 +116,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../modwii">modwii</a></td>
+  <tr><td><a href="../../../../modwii">modwii</a></td>
       <td><strong>Composants</strong> : MOD-Wii-UEXT-NUNCHUCK, NUNCHUCK<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>La Wii NUNCHUCK est une manette de jeu super confortable et s'utilise sur le bus I2C. Ce controleur dispose d'une connexion <strong>UEXT</strong> facilitant les raccordements.</small><br/><br />

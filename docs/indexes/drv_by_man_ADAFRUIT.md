@@ -10,7 +10,7 @@ voir
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../ads1015-ads1115">ads1015-ads1115</a></td>
+  <tr><td><a href="../../../../ads1015-ads1115">ads1015-ads1115</a></td>
       <td><strong>Composants</strong> : ADS1015, ADS1115, ADA1085<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Convertisseur ADC (Analogique vers Digital) 4 canaux pour réaliser des lectures analogiques et lectures différentielles.<br />L'ADS1115 dispose d'un amplificateur interne programmable, ce qui permet de lire des tensions très faibles.</small><br/><br />
@@ -21,7 +21,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../am2315">am2315</a></td>
+  <tr><td><a href="../../../../am2315">am2315</a></td>
       <td><strong>Composants</strong> : AM2315<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Capteur de <strong>température et humidité</strong> relative (0 à 100%) pour relevés en extérieur.</small><br/><br />
@@ -32,7 +32,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../bme280-bmp280">bme280-bmp280</a></td>
+  <tr><td><a href="../../../../bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Composants</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le BMP280 est un senseur de <strong>pression et température</strong> très populaire.<br />Le BME280 est un senseur de <strong>pression, température et HUMIDITÉ</strong> relative</small><br/><br />
@@ -44,7 +44,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../bmp180">bmp180</a></td>
+  <tr><td><a href="../../../../bmp180">bmp180</a></td>
       <td><strong>Composants</strong> : BMP180<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le BMP180 est un senseur de <strong>pression et température</strong> aujourd'hui remplacé par le BMP280.</small><br/><br />
@@ -55,7 +55,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../ncd-mpl115A2">ncd-mpl115A2</a></td>
+  <tr><td><a href="../../../../ncd-mpl115A2">ncd-mpl115A2</a></td>
       <td><strong>Composants</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Le MPL115A2 est un capteur de pression et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
@@ -67,7 +67,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../neopixel">neopixel</a></td>
+  <tr><td><a href="../../../../neopixel">neopixel</a></td>
       <td><strong>Composants</strong> : NEOPIXEL, 74AHCT125<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>Les <strong>NéoPixels</strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.</small><br/><br />
@@ -79,7 +79,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../oled-ssd1306">oled-ssd1306</a></td>
+  <tr><td><a href="../../../../oled-ssd1306">oled-ssd1306</a></td>
       <td><strong>Composants</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
       <strong>Interfaces</strong> : I2C, FEATHERWING<br />
 <small>Le SSD1306 est un contrôleur d'écran OLED</small><br/><br />
@@ -90,7 +90,7 @@ voir
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../tsl2561">tsl2561</a></td>
+  <tr><td><a href="../../../../tsl2561">tsl2561</a></td>
       <td><strong>Composants</strong> : TSL2561, ADA439<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Le TSL2561 est un senseur de <strong>luminosité</strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX</small><br/><br />

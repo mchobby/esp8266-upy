@@ -8,7 +8,7 @@ FEATHERWING connector for the Feather expansion (Adafruit.com)
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../oled-ssd1306">oled-ssd1306</a></td>
+  <tr><td><a href="../../../../oled-ssd1306">oled-ssd1306</a></td>
       <td><strong>Components</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
       <strong>Interfaces</strong> : I2C, FEATHERWING<br />
 <small>The SSD1306 is an OLED display controler.</small><br/><br />
