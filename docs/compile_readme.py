@@ -6,7 +6,8 @@
 
 from driverreader import *
 
-def generate_table( entries, lang_code ):
+def generate_table( git_root, entries, lang_code ):
+	# Git root indicate the relative path to go back to the root if the git
 	sFolderTitle = 'Répertoire' if lang_code=='fr' else 'Folder'
 	sDescTitle   = 'Description' if lang_code=='fr' else 'Description'
 	sCompTitle   = 'Composants' if lang_code=='fr' else 'Components'
@@ -22,7 +23,7 @@ def generate_table( entries, lang_code ):
 	_lst.append( '<tbody>'  )
 
 	for label, driver in entries:
-		_lst.append( '  <tr><td>%s</td>' % label )
+		_lst.append( '  <tr><td><a href="%stree/master/%s">%s</a></td>' % (git_root, label,label) ) # Jump into github subfolder
 		_lst.append( '      <td><strong>%s</strong> : %s<br />' % (sCompTitle, ', '.join(driver.components) ) )
 		_lst.append( '      <strong>%s</strong> : %s<br />' % (sIntfTitle, ', '.join(driver.interfaces) ) )
 		_lst.append( '<small>%s</small><br/><br />' % driver.descr.get_lang(lang_code))
@@ -46,26 +47,27 @@ def generate_table( entries, lang_code ):
 #-------------------------------------------------------------------------------
 # Must generate a string as reply
 #
-def __driver_table( drivers, lang_code, filter ):
-	return generate_table( drivers.list_by_folder(filter), lang_code )
+def __driver_table( git_root, drivers, lang_code, filter ):
+	# git_root relative path to return to the github root!
+	return generate_table( git_root, drivers.list_by_folder(filter), lang_code )
 
-def __interface_list( drivers, lang_code, str, filter ): # List per interface
+def __interface_list( git_root, drivers, lang_code, str, filter ): # List per interface
 	_interfaces = [ item.code for item in drivers.interfaces ]
 	_interfaces = sorted( _interfaces )
 	return ', '.join( [str.replace('%code%',code) for code in _interfaces]  )
 
-def __interface_text( drivers, lang_code, code, filter ): # Identification of the interface codes
+def __interface_text( git_root, drivers, lang_code, code, filter ): # Identification of the interface codes
 	return drivers.interface( code ).descr.get_lang( lang_code )
 
-def __manufacturer_list( drivers, lang_code, str, filter ): # List per manufacturer
+def __manufacturer_list( git_root, drivers, lang_code, str, filter ): # List per manufacturer
 	_mans = [ item.code for item in drivers.manufacturers ]
 	_mans = sorted( _mans )
 	return ', '.join( [str.replace('%code%',code) for code in _mans]  )
 
-def __manufacturer_name( drivers, lang_code, code, filter ): # Identification of the interface codes
+def __manufacturer_name( git_root, drivers, lang_code, code, filter ): # Identification of the interface codes
 	return drivers.manufacturer( code ).name
 
-def __manufacturer_url( drivers, lang_code, code, filter ): # Identification of the interface codes
+def __manufacturer_url( git_root, drivers, lang_code, code, filter ): # Identification of the interface codes
 	return "[%s](%s)" %  (drivers.manufacturer( code ).name,drivers.manufacturer( code ).url)
 
 #-------------------------------------------------------------------------------
@@ -94,6 +96,8 @@ def evaluate_and_write( line, destin_file, drivers, filter ):
 		params = {}
 	params['drivers'] = drivers
 	params['filter' ] = filter
+	print( destin_file )
+	params['git_root'] = '../../' if 'readme' in destin_file.name else '../../../../' 
 
 	# Calling the function
 	try:
