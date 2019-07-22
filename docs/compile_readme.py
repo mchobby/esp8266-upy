@@ -96,8 +96,7 @@ def evaluate_and_write( line, destin_file, drivers, filter ):
 		params = {}
 	params['drivers'] = drivers
 	params['filter' ] = filter
-	print( destin_file )
-	params['git_root'] = '../../' if 'readme' in destin_file.name else '../../../../' 
+	params['git_root'] = '../../' if 'readme' in destin_file.name else '../../../../'
 
 	# Calling the function
 	try:
