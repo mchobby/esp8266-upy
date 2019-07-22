@@ -32,7 +32,7 @@ Explore it by:
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="./tree/master/NCD">NCD</a></td>
+  <tr><td><a href="../tree/master/NCD">NCD</a></td>
       <td><strong>Components</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Connect NCD (National Control Device) __I2C mini board__  easily to a MicroPython microcontroler with the <strong>NCD connector</strong>. I2C connexion made easy, 5V logic.</small><br/><br />
@@ -44,7 +44,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/UEXT">UEXT</a></td>
+  <tr><td><a href="../tree/master/UEXT">UEXT</a></td>
       <td><strong>Components</strong> : UEXT<br />
       <strong>Interfaces</strong> : I2C, SPI, UART<br />
 <small><strong>UEXT</strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V</small><br/><br />
@@ -56,7 +56,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ads1015-ads1115">ads1015-ads1115</a></td>
+  <tr><td><a href="../tree/master/ads1015-ads1115">ads1015-ads1115</a></td>
       <td><strong>Components</strong> : ADS1015, ADS1115, ADA1085<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>ADC converter (Analog to Digital) 4 channel allowing analog reading and differential reading.<br />L'ADS1115 have a internal amplifier (programmable) that can be used to read very small voltage.</small><br/><br />
@@ -67,7 +67,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/am2315">am2315</a></td>
+  <tr><td><a href="../tree/master/am2315">am2315</a></td>
       <td><strong>Components</strong> : AM2315<br />
       <strong>Interfaces</strong> : I2C<br />
 <small><strong>Temperature & relative humidity</strong> (0 to 100%) sensor for capture outside data.</small><br/><br />
@@ -78,7 +78,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/bme280-bmp280">bme280-bmp280</a></td>
+  <tr><td><a href="../tree/master/bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Components</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The BMP280 is a very popular <strong>pressure and temperatur</strong> sensor.<br />The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY</strong></small><br/><br />
@@ -90,7 +90,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/bmp180">bmp180</a></td>
+  <tr><td><a href="../tree/master/bmp180">bmp180</a></td>
       <td><strong>Components</strong> : BMP180<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The BMP180 is a <strong>pressure & temperature</strong> sensor now replaced with the BMP280.</small><br/><br />
@@ -101,7 +101,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/dht11">dht11</a></td>
+  <tr><td><a href="../tree/master/dht11">dht11</a></td>
       <td><strong>Components</strong> : DHT11<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>The DHT11 is a very cheap <strong>humidity</strong> (20 to 80%) and temperature sensor.</small><br/><br />
@@ -112,7 +112,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ds18b20">ds18b20</a></td>
+  <tr><td><a href="../tree/master/ds18b20">ds18b20</a></td>
       <td><strong>Components</strong> : DS18B20<br />
       <strong>Interfaces</strong> : ONEWIRE<br />
 <small>The DS18B20 is a very popular <strong>temperature</strong> sensor. It use the 1-Wire bus to connect several sensors.</small><br/><br />
@@ -123,7 +123,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/mcp230xx">mcp230xx</a></td>
+  <tr><td><a href="../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Components</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The MCP23017 (and MCP2308) are <strong>GPIO Expander</strong> adding additionnal input/output to a microcontroler.</small><br/><br />
@@ -134,7 +134,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modio">modio</a></td>
+  <tr><td><a href="../tree/master/modio">modio</a></td>
       <td><strong>Components</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-IO is an I2C extension board with <strong>UEXT</strong> connector. This Olimex's Board have relays, OptoCoupler input (24V) and analog input (0-3.3V).<br />This board is compatible with the industrial grade voltages (24V).</small><br/><br />
@@ -146,7 +146,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modio2">modio2</a></td>
+  <tr><td><a href="../tree/master/modio2">modio2</a></td>
       <td><strong>Components</strong> : MOD-IO2<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-IO is an I2C extension board with <strong>UEXT</strong> connector. This Olimex's Board have relays, and GPIOs with various functions (Input, Output, Analog, PWM; 0-3.3V).</small><br/><br />
@@ -158,7 +158,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modirtemp">modirtemp</a></td>
+  <tr><td><a href="../tree/master/modirtemp">modirtemp</a></td>
       <td><strong>Components</strong> : MOD-IR-TEMP, MLX90614<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>NON-Contact IR temperature sensor, from -70°C to 380°C with MXL90164.</small><br/><br />
@@ -169,7 +169,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modlcd1x9">modlcd1x9</a></td>
+  <tr><td><a href="../tree/master/modlcd1x9">modlcd1x9</a></td>
       <td><strong>Components</strong> : MOD-LCD-1x9<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-LCD1x9 is an I2C'based 9 characters alphanumeric display using the <strong>UEXT</strong> connector.</small><br/><br />
@@ -181,7 +181,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modltr501">modltr501</a></td>
+  <tr><td><a href="../tree/master/modltr501">modltr501</a></td>
       <td><strong>Components</strong> : MOD-LTR-501ALS, LTR-501ALS<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>LTR-501ALS can be used to acquires luminosity data from 0.01 to 64.000 Lux (64K lux) and make proximity detection (up to 10cm). The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring.</small><br/><br />
@@ -193,7 +193,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modmag">modmag</a></td>
+  <tr><td><a href="../tree/master/modmag">modmag</a></td>
       <td><strong>Components</strong> : MOD-MAG, MAG3110<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>The MAG3110 is a digital 3 axis magnetometer from NXP running over an I2C bus. The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring.</small><br/><br />
@@ -205,7 +205,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modoled128x64">modoled128x64</a></td>
+  <tr><td><a href="../tree/master/modoled128x64">modoled128x64</a></td>
       <td><strong>Components</strong> : SSD1306, MOD-OLED-128x64, OLED<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>A 128x64 display with the SSD1306 I2C controler exposing a UEXT connector.</small><br/><br />
@@ -216,7 +216,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modrgb">modrgb</a></td>
+  <tr><td><a href="../tree/master/modrgb">modrgb</a></td>
       <td><strong>Components</strong> : MOD-RGB<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-RGB is an I2C extension board with <strong>UEXT</strong> connector. This Olimex's Board have power MosFet to control RGB analogic LED strips via I2C (or DMX).</small><br/><br />
@@ -228,7 +228,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/modwii">modwii</a></td>
+  <tr><td><a href="../tree/master/modwii">modwii</a></td>
       <td><strong>Components</strong> : MOD-Wii-UEXT-NUNCHUCK, NUNCHUCK<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>The Wii NUNCHUCK is a game controler very comfortable to used and runs over the I2C bus. This controler have an <strong>UEXT</strong> connector to ease wiring.</small><br/><br />
@@ -240,7 +240,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ncd-fet-solenoid">ncd-fet-solenoid</a></td>
+  <tr><td><a href="../tree/master/ncd-fet-solenoid">ncd-fet-solenoid</a></td>
       <td><strong>Components</strong> : I2CDRV8W4I12V, MCP23008<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>FET Output controler + GPIO (based on a MCP23008) for 12V resistive / inductive load (like valve). The <i>I2C NCD board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />
@@ -252,7 +252,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ncd-mpl115A2">ncd-mpl115A2</a></td>
+  <tr><td><a href="../tree/master/ncd-mpl115A2">ncd-mpl115A2</a></td>
       <td><strong>Components</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>The MPL115A2 sensor capture the pressure and temperature over I2C bus. The <i>I2C NCD mini board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />
@@ -264,7 +264,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ncd-oled">ncd-oled</a></td>
+  <tr><td><a href="../tree/master/ncd-oled">ncd-oled</a></td>
       <td><strong>Components</strong> : SSD1306, I2COLED, OLED<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>A 128x64 display with the SSD1306 I2C controler exposing a NCD connector.</small><br/><br />
@@ -276,7 +276,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ncd-pecmac">ncd-pecmac</a></td>
+  <tr><td><a href="../tree/master/ncd-pecmac">ncd-pecmac</a></td>
       <td><strong>Components</strong> : DLCT27C10, OPCT16AL, I2CCMAC230A, PECMAC2xxxA<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>AC Current sensor on I2C bus (or IoT interface). The <i>I2C NCD board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />
@@ -288,7 +288,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ncd-si7005">ncd-si7005</a></td>
+  <tr><td><a href="../tree/master/ncd-si7005">ncd-si7005</a></td>
       <td><strong>Components</strong> : SI7005<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>The SI7005 is a pressure and temperature sensor working over the I2C bus. The <i>I2C NCD mini board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />
@@ -300,7 +300,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/ncd-water-detect">ncd-water-detect</a></td>
+  <tr><td><a href="../tree/master/ncd-water-detect">ncd-water-detect</a></td>
       <td><strong>Components</strong> : WATER-DETECT, WDBZ, PCA9536<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Water detection + Buzzer + 2 extra GPIOs (based on a PCA9536). The <i>I2C NCD mini board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />
@@ -312,7 +312,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/neopixel">neopixel</a></td>
+  <tr><td><a href="../tree/master/neopixel">neopixel</a></td>
       <td><strong>Components</strong> : NEOPIXEL, 74AHCT125<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually.</small><br/><br />
@@ -324,7 +324,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/oled-ssd1306">oled-ssd1306</a></td>
+  <tr><td><a href="../tree/master/oled-ssd1306">oled-ssd1306</a></td>
       <td><strong>Components</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
       <strong>Interfaces</strong> : I2C, FEATHERWING<br />
 <small>The SSD1306 is an OLED display controler.</small><br/><br />
@@ -335,7 +335,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/pca9536">pca9536</a></td>
+  <tr><td><a href="../tree/master/pca9536">pca9536</a></td>
       <td><strong>Components</strong> : PCA9536<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>4 bit I2C controled GPIO expander.</small><br/><br />
@@ -343,7 +343,7 @@ Explore it by:
       <strong>Manufacturer</strong> : NONE<br />
       </td>
   </tr>
-  <tr><td><a href="./tree/master/tsl2561">tsl2561</a></td>
+  <tr><td><a href="../tree/master/tsl2561">tsl2561</a></td>
       <td><strong>Components</strong> : TSL2561, ADA439<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>The TSL2561 is a visible light <strong>luminosity</strong> sensor having a response close from human Eyes. It produces values in LUX.</small><br/><br />
@@ -354,7 +354,7 @@ Explore it by:
 </ul>
       </td>
   </tr>
-  <tr><td><a href="./tree/master/umqtt">umqtt</a></td>
+  <tr><td><a href="../tree/master/umqtt">umqtt</a></td>
       <td><strong>Components</strong> : <br />
       <strong>Interfaces</strong> : <br />
 <small>MQTT Communication exemples with ESP8266 module.</small><br/><br />
