@@ -1,5 +1,15 @@
 """ Toolbox function for the various image reader """
 
+def grayscale( r,g,b ):
+	""" Compute grayscale (brightness) 0..232 from r,g,b values (0..255) """
+	return int( 0.3*r + 0.6*g + 0.11*b ) # darker image can be created with 0.25*r + 0.5*g + 0.25*b
+
+def charpix( r,g,b ):
+	""" Compute a char ' .-+*X' in relation with the grayscale luminosity of a pixel.
+	    Would allow to display rudimentary picture on terminal """
+	pc = int( grayscale(r,g,b) / 25.5 * 10 ) # In percent for a range 0..255
+	return "  ..-+**XXX"[pc//10]
+
 class ClipReader():
 	""" Reader that allows to clip reading the original image.
 	    Would allow to access a partial content (a "window" of larger image) on
@@ -54,15 +64,27 @@ class ClipReader():
 			raise Exception( "Invalid x = %i" % x )
 		if not( 0<= y < self.reader.height ):
 			raise Exception( "Invalid y = %i" % y )
-		if not( 0<= x+width < self.reader.width ):
+		if not( 0<= x+width <= self.reader.width ):
 			raise Exception( "Invalid width = %i" % width )
-		if not( 0<= y+height < self.reader.height ):
+		if not( 0<= y+height <= self.reader.height ):
 			raise Exception( "Invalid height = %i" % height )
 		self.area = (x, y, x+width, y+height )
 		self.width = width  # Clipping area width
 		self.height= height # Clipping area height
-		self.x, self.y = x, y # x,y position read in the whome image
+		self.x, self.y = x, y # x,y position read in the whole image
 		self.reader.seek_pix( (self.x, self.y) )
+
+	def show( self, reseek=False ):
+		""" Display Clip area on the terminal (including image) """
+		print( "-"*20 )
+		print( "   CLIP AREA" )
+		print( "(x,y,W,H) = (%i,%i , %i,%i)" % (self.area[0], self.area[1], self.width, self.height) )
+		print( "-"*20 )
+		if reseek:
+			self.x, self.y = self.area[0], self.area[1]
+			self.reader.seek_pix( (self.x, self.y) )
+		for line in range( self.height ):
+			print( "".join([ charpix( *self.read_pix() ) for col in range(self.width) ]) )
 
 
 def open_image( filename ):

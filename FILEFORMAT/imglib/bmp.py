@@ -67,7 +67,11 @@ class BmpReader():
 		""" Move the file cursor to read pixel at position pos (x,y) """
 		# each line is encoded on a row having a multiple of 4 bytes (padded with 0)
 		line_padding =  4-((self.width*3)%4) # for 277 pixels width it gives 4-((277*3)%4) = 4-3 = 1 byte padding per line. 277*3+1 can be devided by 4!
-		offset = self.startbit + (pos[1]*(self.width*3+line_padding)) + (pos[0]*3)
+		if line_padding==4: # Was multiple of 4 ==> remove the line padding!
+			line_padding=0
+		# The TOP image scan-line is stored at the end of the file!
+		offset = self.startbit + ((self.height-1-pos[1])*(self.width*3+line_padding)) + (pos[0]*3)
+		# print( 'seek_pix @ %s' % hex(offset) ) # Debug
 		self.fileio.seek( offset )
 
 	def read_pix( self, pos=None ):

@@ -9,6 +9,7 @@ This section contains classes and examples to read various file format.
 The `imglib/img.py` library contains helper classes and functions.
 
 The `ClipReader` class is made to offers image clipping (extract an image sub-section) service on the top of `xxxReader` classes. So, very useful to display a small part of a wide image onto a TFT ;-)
+Notice that `ClipReader.show()` allows to inspect the content of the clipping in the terminal (very usefull)!
 
 The `open_image()` is an helpher that identify the type of image based on file extension, create the appropriate reader (eg: `BmpReader` for .bmp file) and encapsulate it into a `ClipReader` to benefits from image clipping possibility.
 
@@ -18,6 +19,7 @@ This library support BMP  encoded with RGB888 (24 bits per Pixel).
 The `BmpReader` from `imglib/bmp.py` can read  file content (as long its not compressed!).
 
 * [color-palette.bmp](examples/color-palette.bmp): 24Bit uncompressed RGB bitmap sample.<br /> ![Sample 24Bit RGB bitmap](examples/color-palette.bmp)
+* [olimex.bmp](examples/olimex.bmp): 24Bit uncompressed RGB bitmap sample.<br /> ![Sample 24Bit RGB bitmap](examples/olimex.bmp)
 
 See the `examples/testbmp.py` to see how to extract pixel from such file.
 
