@@ -84,7 +84,7 @@ would produce the following result :
 (22.36, 1005.65, 0.0)
 ```
 
-# More détails
+# More details
 
 The `values` property is a convenience method to returns tuple with the various sensor data going with __units__. This returns a tuple of _human-readable_ values (more easy to understand). This is really great to quick check the sensor.
 
