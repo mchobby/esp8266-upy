@@ -5,14 +5,6 @@ This section contains classes and examples to read various file format.
 
 # IMAGE based format
 
-## helper library (img)
-The `imglib/img.py` library contains helper classes and functions.
-
-The `ClipReader` class is made to offers image clipping (extract an image sub-section) service on the top of `xxxReader` classes. So, very useful to display a small part of a wide image onto a TFT ;-)
-Notice that `ClipReader.show()` allows to inspect the content of the clipping in the terminal (very usefull)!
-
-The `open_image()` is an helpher that identify the type of image based on file extension, create the appropriate reader (eg: `BmpReader` for .bmp file) and encapsulate it into a `ClipReader` to benefits from image clipping possibility.
-
 ## bmp format
 BMP format is the Windows Bitmap file which have a variety of encoding algorithm.
 This library support BMP  encoded with RGB888 (24 bits per Pixel).
@@ -29,3 +21,16 @@ Ressource: [bmp_file_format @ www.ece.ualberta.ca](http://www.ece.ualberta.ca/~e
 1-bit black and white image; formatted in text format; basic raster image format in which each pixel is represented by a byte that contains a 1 or 0; 1 represents black and 0 represents white pixels.
 
 Ressource: http://netpbm.sourceforge.net/doc/pbm.html
+
+# IMAGE based helper (img)
+The `imglib/img.py` library contains helper classes and functions.
+
+The `ClipReader` class is made to offers image clipping (extract an image sub-section) service on the top of `xxxReader` classes. So, very useful to display a small part of a wide image onto a TFT ;-)
+
+![Image clipping](docs/_static/clipping.jpg)
+
+Notice that `ClipReader.show()` allows to inspect the content of the clipping in the terminal (display which characters, very usefull for debugging)!
+
+![Image clip.show()](docs/_static/clip_show.jpg)
+
+The `open_image()` is an helpher that identify the type of image based on file extension, create the appropriate reader (eg: `BmpReader` for .bmp file) and encapsulate it into a `ClipReader` to benefits from image clipping possibility.
