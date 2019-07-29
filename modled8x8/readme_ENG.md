@@ -15,7 +15,7 @@ The MOD-LED8x8RGB sit in UEXT category but does not expose the UEXT connector. I
 
 This board can be found:
 * [MOD-LED8x8RGB](https://shop.mchobby.be/fr/138-uext) @ MCHobby
-* [MOD-LED8x8RGB](https://www.olimex.com/Products/Modules/LED/MOD-LED8x8RGB/open-source-hardware) @ Olimex.com ncd.io
+* [MOD-LED8x8RGB](https://www.olimex.com/Products/Modules/LED/MOD-LED8x8RGB/open-source-hardware) @ Olimex.com
 
 # FrameBuffer implementation
 
