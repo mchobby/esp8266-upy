@@ -21,6 +21,8 @@ This board can be found:
 
 The ModLedRGB driver inherit from MicroPython's FrameBuffer class. So every method of FrameBuffer is available on ModLedRGB and the ModLedRGB can be given as FrameBuffer parameter to any function/method.
 
+See [Frame buffer manipulation @ MicroPython.org](http://docs.micropython.org/en/latest/library/framebuf.html?highlight=framebuffer) for more information.
+
 Please note that __AXIS of FrameBuffer implementation__ is different than RAW/Arduino original implementation!
 
 The FrameBuffer axis are positionned as follow with FrameBuffer:
@@ -49,7 +51,7 @@ Here is a simple connector cable to connect the MOD-LED8x8RGB to any UEXT host p
 ![UEXT to MOD-LED8x8RGB converter](docs/_static/uext_to_modled.png)
 
 ## Port UEXT
-If you have the adapter described here above then you can une the UEXT connector of your favorite plateforme.
+If you have the adapter described here above then you can use the UEXT connector of your favorite plateforme.
 
 * The wiring of an UEXT Port on ESP8266 is described in the [UEXT folder](../UEXT/readme_eng.md) of this GitHub.
 * The [UEXT adapter for MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) is also available in the [Pyboard-Driver](https://github.com/mchobby/pyboard-driver) GitHub.
@@ -63,12 +65,12 @@ _Note: this wiring is fully compatible with the [UEXT adapter for MicroPython Py
 
 # Testing
 
-## Test with FrameBuffer
+## Using the FrameBuffer
 MicroPython offer a FrameBuffer to manage the data for the displays.
 
-The `ModLedRGB` driver (modled.py) have been developped against the FrameBuffer and will, then, take all the advantage of FrameBuffer manipulations (line drawing, text displaying, etc).
+The `ModLedRGB` driver (modled.py) have been developped on the top of the FrameBuffer and will, then, take all the advantage of FrameBuffer manipulations (line drawing, text displaying, etc).
 
-## library & examples
+## Simple examples
 
 Copy the library file `modled.py` and the test file `test.py` on your MicroPython board.
 
@@ -159,63 +161,71 @@ which produce the following result:
 
 ![MOD-LED8x8RGB chaining](docs/_static/modled8x8-framebuffer-chaining.jpg)
 
-# RAW Driver testing
+# Scrolling example
 
-__Warning: the RAW driver does use different axis model herited from Arduino code.__
+This example will will initialize a matrix of 2x3 RGB Panels (so 24px width and 16px height).
 
-![MOD-LED8x8RGB - FrameBuffer Axis](docs/_static/modled8x8-axis.jpg)
+Then it open the `olimex.bmp` (proprely tailored with 24 pixels width) and made its content scrolling on the panel thank to the clipping technic (see [FILEFORMAT's readme](https://github.com/mchobby/esp8266-upy/tree/master/FILEFORMAT) ).
 
-## Test with RAW driver
-The initial port of Arduino driver to MicroPython was done with the _video buffer_ suggested by Olimex in the orginal code ( `self.buffer = [0]*self.matrixes*24` ).
+Copy the library file `modled.py`, the test file `test2x3pict.py` and the `olimex.bmp` to your MicroPython board.
 
-The `ModLedRGBraw` driver (examples/modledraw.py) only implement pixel drawing for testing the protocol before switching to FrameBuffer implementation.
+__Additional Lib required:__ you will also need to copy the `bmp.py` and `img.py` libraries coming from the /FILEFORMAT/imglib/ . Thoses files are intended to read 24 bit bitmap files.
 
-The final FrameBuffer driver, the suited version to use, will be made available in the `modled/modled.py` file.
+![Setup of the the MOD-LED8x8RGB and the Pyboard](docs/_static/test2x3pict-setup.jpg)
 
-## RAW library & examples
-The raw library was for testing only and not designed for regular usage.
+The `test2x3pict.py` file (listed here under) can be loaded from REPL session with `import test2x3pict.py`.
 
-Copy the library file `examples/modledraw.py` and the test file `examples/testraw.py` on your MicroPython board.
+The script just open the image with an helper function then the image is clipped all along the image height.
+At each clipping operation, the content of the clip is send, pixel per pixel, to the MODLED object (inside the FrameBuffer).
+Then the `show()` method sends the FrameBuffer content to the display Matrix.
 
-The `testraw.py` file (listed here under) can be loaded from REPL session with `import testraw`.
+[The result can be seen on the following YouTube vidéo](https://youtu.be/EMIY1aa8jOM)
 
 ```
-# ----------------------------------------------
-#   DO NOT USE RAW driver
-#   USE the FrameBuffer driver (here upper)
-# ----------------------------------------------
-
 from machine import Pin, SPI
-from modledraw import ModLedRGBraw
+from modled import *
+from time import sleep
 
-# Initialize the SPI Bus (on ESP8266-EVB)
-# Software SPI
-#    spi = SPI(-1, baudrate=4000000, polarity=1, phase=0, sck=Pin(14), mosi=Pin(13), miso=Pin(12))
+from img import open_image
+
 # Hardware SPI on Pyboard
 spi = SPI(2) # MOSI=Y8, MISO=Y7, SCK=Y6, SS=Y5
 spi.init( baudrate=2000000, phase=0, polarity=0 ) # low @ 2 MHz
 # We must manage the SS signal ourself
 ss = Pin( Pin.board.Y5, Pin.OUT )
 
-modled = ModLedRGBraw( spi, ss ) # Just one LED brick LED-8x8RGB
-modled.drawPixel( 1,1, color=1 ) # Red
-modled.drawPixel( 2,2, color=2 ) # Green
-modled.drawPixel( 3,3, color=4 ) # Blue
-modled.drawPixel( 4,8, color=3 ) # Red + Green = Yellow
-modled.drawPixel( 5,8, color=5 ) # Red + Blue  = Magenta
-modled.drawPixel( 6,7, color=6 ) # Green + Blue  = Cyan
-modled.drawPixel( 7,6, color=7 ) # Red + Green + Blue  = White
+# Just 6 LED-8x8RGB organized in 2 row of 3 columns each. So 24x16 pixels
+modled = ModLedRGB( spi, ss, width=3, height=2 )
+
+modled.clear()
+modled.show()
+
+# ClipReader opening the 24x91 pixels bitmap
+clip = open_image( "olimex.bmp" )
+
+# 96-16 is the nbr of image lines to scroll on the display
+for y_scroll in range( 91-16 ):
+
+	# Clipping the image @ y = y_scroll
+	clip.clip( 0, y_scroll, 24, 16 )
+
+	# Copy from clipped area TO MOD-LED8x8RGB FrameBuffer
+	for line in range( clip.height ): #  16 pixels height
+		for row in range( clip.width ): # 24 pixels width
+			# Read a pixel color (r,g,b) --> convert to 3 bit color --> draw pixel on frameBuffer
+			c = clip.read_pix()
+			modled.pixel( row, line, colorTo3Bit(c) )
+	modled.show()
+
+# Close image
+clip.close()
+
+sleep( 1 )
+modled.clear()
 modled.show()
 ```
 
-which produce the following result (with axis reference) :
-
-![MOD-LED8x8RGB to RAW MicroPython driver testing](docs/_static/modled8x8-axis.jpg)
-
-The `examples/testraw2x3.py` test script explore the matrix chaining (2 rows, 3 columns).
-
-![MOD-LED8x8RGB chaning for RAW MicroPython driver testing](docs/_static/modled8x8-chaining.jpg)
-
-Which produce a really nice result under a sheet of paper (otherwise there is too much light for the camera).
-
-![MOD-LED8x8RGB chaning for RAW MicroPython driver testing](docs/_static/modled8x8-testraw2x3.jpg)
+# Where to buy
+* [MOD-LED8x8RGB @ MCHobby](https://shop.mchobby.be/fr/nouveaute/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html) 8x8 RGB LED Matrix
+* [MOD-LED8x8RGB @ Olimex](https://www.olimex.com/Products/Modules/LED/MOD-LED8x8RGB/open-source-hardware) 8x8 RGB LED Matrix
+* [MicroPython Pyboard](https://shop.mchobby.be/fr/micropython/570-micropython-pyboard-3232100005709.html)

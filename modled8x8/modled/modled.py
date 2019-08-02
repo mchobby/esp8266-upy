@@ -4,7 +4,7 @@ import time
 #
 import framebuf
 
-RED     = 0b100
+RED     = 0b100 # Accordingly to MODLED definition
 GREEN   = 0b010
 BLUE    = 0b001
 YELLOW  = 0b110
@@ -12,6 +12,13 @@ MAGENTA = 0b101
 CYAN    = 0b011
 WHITE   = 0b111
 BLACK   = 0b000
+
+def colorTo3Bit( color ):
+	""" transform a color tuple (r_8bit, g_8bit , b_8bit) to 3 bits RGB byte value """
+	rbit = 1 if color[0] > 127 else 0
+	gbit = 1 if color[1] > 127 else 0
+	bbit = 1 if color[2] > 127 else 0
+	return (rbit<<2) + (gbit<<1) + bbit
 
 class ModLedRGB( framebuf.FrameBuffer ):
 	""" Class to control a set of width x height Olimex 8x8 LED Matrix (8x8) """
