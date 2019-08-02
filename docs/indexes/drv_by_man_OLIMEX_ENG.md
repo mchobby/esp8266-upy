@@ -69,6 +69,18 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/modled8x8">modled8x8</a></td>
+      <td><strong>Components</strong> : MOD-LED8x8RGB<br />
+      <strong>Interfaces</strong> : GPIO, SPI<br />
+<small>A 8x8 RGB led display that can be daisy chained.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/nouveaute/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html">MOD-LED8x8RGB @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/LED/MOD-LED8x8RGB/open-source-hardware">MOD-LED8x8RGB @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modltr501">modltr501</a></td>
       <td><strong>Components</strong> : MOD-LTR-501ALS, LTR-501ALS<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

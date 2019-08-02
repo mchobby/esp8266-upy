@@ -55,6 +55,18 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/gps-ultimate">gps-ultimate</a></td>
+      <td><strong>Components</strong> : GPS-ULTIMATE, MTK3339<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Being able to capture (or follow) your position with a GPS module</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/breakout/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html">GPS Ultime @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/746">GPS Ultimate</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/ncd-mpl115A2">ncd-mpl115A2</a></td>
       <td><strong>Components</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />

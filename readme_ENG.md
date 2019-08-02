@@ -123,6 +123,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/gps-ultimate">gps-ultimate</a></td>
+      <td><strong>Components</strong> : GPS-ULTIMATE, MTK3339<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Being able to capture (or follow) your position with a GPS module</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/breakout/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html">GPS Ultime @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/746">GPS Ultimate</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Components</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
@@ -178,6 +190,18 @@ Explore it by:
 <ul>
 <li>See <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1414-uext-lcd-display-1-line-of-9-alphanumeric-chars-3232100014145-olimex.html">MOD-LCD1x9 @ MCHobby</a></li>
 <li>See <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/modled8x8">modled8x8</a></td>
+      <td><strong>Components</strong> : MOD-LED8x8RGB<br />
+      <strong>Interfaces</strong> : GPIO, SPI<br />
+<small>A 8x8 RGB led display that can be daisy chained.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/nouveaute/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html">MOD-LED8x8RGB @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/LED/MOD-LED8x8RGB/open-source-hardware">MOD-LED8x8RGB @ Olimex</a></li>
 </ul>
       </td>
   </tr>
