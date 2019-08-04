@@ -1,17 +1,20 @@
-# Pilote pour le convertisseur ADS1015/ADS1115 (analogique vers digital)
+[This file also exists in ENGLISH](readme_ENG.md)
+
+# Introduction
+Pilote pour le convertisseur analogique vers digital ADS1015 / ADS1115 (aussi appelé ADC)
 
 Ce pilote est réalisé par [robert-hh](https://github.com/robert-hh) à partir du travail de Radomir Dopieralski (@deshipu).
-[robert-hh](https://github.com/robert-hh) a ajouté quelques fonctions et modifié quelques autres pour qu'il correspondent mieux aux besoins de son projet (plus spécialement pour fonctions de timing et pour les rendres IRQ-proof). 
+[robert-hh](https://github.com/robert-hh) a ajouté quelques fonctions et modifié quelques autres pour qu'il correspondent mieux aux besoins de son projet (plus spécialement pour fonctions de timing et pour les rendres IRQ-proof).
 
-Testé avec ESP8266 sous Micropython
+Testé avec ESP8266 sous Micropython, NADHAT PYB405 (donc Pyboard)
 
-## Traduction 
+## Traduction
 
 Le contenu de ce fichier résulte de la traduction du fichier `readme.md` disponible sur [le projet GitHub ads1x15 de robert-hh](https://github.com/robert-hh/ads1x15) .
 
 Le documentation est également augmentée, annoté et inclus des schémas de raccordement.
 
-## L'ADS1115
+# L'ADS1115
 
 La bibliothèque ads1x15 permet de contrôler le fonctionnement de l'ADC du ADS1x15 et de réceptionner les données.
 
@@ -25,25 +28,25 @@ Pour résumer les fonctionnalités:
 * Bus I2C
 * Echantillonnage en continu (jusqu'à 860 échantillons/seconde)
 
-## Brancher
+# Brancher
 
 Le ADS1x15 utilise une interface I2C. Les lignes SCL et SDA doivent donc être connectées (en plus de VDD et GND).
 
-![Raccordements ADS1115](ads1115_bb.png)
+![Raccordements ADS1115](docs/_static/ads1115_bb.png)
 
 Note: si le CPU doit être déclenché en mode continu, la broche ALERT/RDY doit également être connecté.
 
-### Adresse I2C
-* L'adresse par défaut est 72 (0x48) lorsque la broche d'adresse ADDR est placées sur GND. 
+## Adresse I2C
+* L'adresse par défaut est 72 (0x48) lorsque la broche d'adresse ADDR est placées sur GND.
 * Placer ADDR au niveau haut modifie l'adresse à 73 (0x49).
-* Placer ADDR sur SDA modifie l'adresse à 74 (0x4a). 
-* Placer ADDR sur SCL modifie l'adresse à 75 (0x4B). 
+* Placer ADDR sur SDA modifie l'adresse à 74 (0x4a).
+* Placer ADDR sur SCL modifie l'adresse à 75 (0x4B).
 
 Vous trouverez plus d'information:
 * [https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html Fiche produit de l'ADS1115] sur MC Hobby.
 * [http://mchobby.be/data-files/datasheet/ads1115.pdf Fiche technique de l'ADS1115]
 
-## Utiliser
+# Utiliser
 
 Le pilote contient la classe ADS1115 et la classe dérivée ADS1015. Etant donné que les deux modèles ne diffèrent que par la taille de la conversion, les mêmes méthodes peuvent s'appliquer avec un interprétation différente des paramètres.
 
@@ -56,16 +59,16 @@ adc = ADS1115(i2c = i2c, address = 72, gain = 0)
 # Mettre le potentiomètre a fond pour appliquer
 # 3.3v sur l'entrée analogique A0
 
-# Lire la valeur sur le convertisseur 
+# Lire la valeur sur le convertisseur
 # Channel1 = 0 => entrée analogique A0
 value = adc.read( rate=0, channel1=0 )
 
-# Affichera la valeur (ex: 17549) 
+# Affichera la valeur (ex: 17549)
 print( value )
 
 # Calculer la valeur en Volts (voir les notes plus loin)
 # Affichera 3.29025
-print( value * 0.1875 / 1000 ) 
+print( value * 0.1875 / 1000 )
 ```
 
 pour un ADS1015, vous pouvez utiliser la ligne suivante :
@@ -74,7 +77,7 @@ pour un ADS1015, vous pouvez utiliser la ligne suivante :
 adc = ADS1015(i2c = i2c, address = 72, gain = 0)
 ```
 
-L'adresse par défaut est 72 et le gain par défaut est 0. 
+L'adresse par défaut est 72 et le gain par défaut est 0.
 
 La valeur de `gain` correspond à un index dans la table `Programmable Gain Amplifier` (PGA). Le PGA définit une gamme de tension utilisé pour la conversion __ET NON__ la tension maximale adminisble par le convertisseur. La tension maximale sur une entrée analogique est fixée à VDD + 0.3v  
 
@@ -87,6 +90,9 @@ Les valeurs acceptables pour `gain` sont:
 4 : 0.512V # 8x
 5 : 0.256V # 16x
 ```
+
+# Informations avancées
+
 ## Est-ce 15 ou 16 bits?
 La sortie d'un ADS1115 est connue pour fournir un entier signé. Cela signifie que l'un des bits de la valeurs 16 bits est utilisé nous indiquer le signe de la valeur rapportée (valeur positive ou négative). Ce qui est important de saisir c'est que seulement 15 des 16 bits sont utilisés pour communiquer la valeur de la mesure.
 
@@ -102,7 +108,7 @@ Dans le mode par défaut (`gain = 0`) la valeur est de +/-6.144 volts.
 
 Par conséquent, la valeur numérique 32767 (valeur max sur 15 bits) correspond à 6.144 volts.
 
-Nous obtenons le facteur d'échelle en appliquant la division 6.144 / 32767 = 0.00001875 v par bit = 0.1875 mV par bit. 
+Nous obtenons le facteur d'échelle en appliquant la division 6.144 / 32767 = 0.00001875 v par bit = 0.1875 mV par bit.
 
 C'est une nette amélioration par rapport au convertisseur ADC d'Arduino. En effet, le facteur d'échelle atteint 5/1024 = 0.0048 v par bit = 5mV par bit. Le convertisseur ADC du ADS1115 est 25x plus précis que celui d'un Arduino Uno.
 
@@ -119,7 +125,7 @@ value = adc.read(rate, channel1[, channel2])
 ```
 
 `Channel1` est un canal d'entrée simple (de 0 à 3 pour A0-A3).
-Si `channel2` est mentionné, c'est la différence entre `channel1` et `channel2` qui sera échantilloné (_mesure différentielle_). 
+Si `channel2` est mentionné, c'est la différence entre `channel1` et `channel2` qui sera échantilloné (_mesure différentielle_).
 
 `Rate` permet de mentionner une vitesse de conversion. Voici les valeurs souhaitable pour un ADS1015 / ADS1115 :
 
@@ -136,13 +142,13 @@ Si `channel2` est mentionné, c'est la différence entre `channel1` et `channel2
 7 :  -    / 860    échantillons par seconde
 ```
 
-La première valeur concerne le convertisseur ADS1015, la seconde s'applique au convertisseur ADS1115. 
+La première valeur concerne le convertisseur ADS1015, la seconde s'applique au convertisseur ADS1115.
 
-Le temps nécessaire pour réaliser un simple conversion est de `1/échantillons\_par\_seconde` plus le temps de communication avec ADC (environ 1 ms sur un ESP8266 à 80 MHz). 
+Le temps nécessaire pour réaliser un simple conversion est de `1/échantillons\_par\_seconde` plus le temps de communication avec ADC (environ 1 ms sur un ESP8266 à 80 MHz).
 
 La valeur est retournée comme un entier signé.
 
-__Note__: une conversion plus lente diminue également la proportion du bruit dans le signal. Voir les graphiques de la fiche technique ads1x15 pour vous faire une idée à propos de l'échantillonnage le plus lent. 
+__Note__: une conversion plus lente diminue également la proportion du bruit dans le signal. Voir les graphiques de la fiche technique ads1x15 pour vous faire une idée à propos de l'échantillonnage le plus lent.
 
 ###  adc.set_conv et adc.read_rev()
 Paire de méthode utilisées pour la lecture séquentielle de valeurs, lecture déclenchée à interval régulier à l'aide d'un timer.
@@ -171,7 +177,7 @@ value = adc.alert_read()
 
 Les valeurs de `channel1`, `channel2` et `rate` sont abordé dans `adc.read()` .
 
-`Threshold` (_seuil_) indique la valeur supérieure du registre "threshold" et devrait se situer dans l'intervalle du convertisseur ADC. Soit 0 à 32767 pour l'ADS1115 et 0 à 2047 pour l'ADS1015. 
+`Threshold` (_seuil_) indique la valeur supérieure du registre "threshold" et devrait se situer dans l'intervalle du convertisseur ADC. Soit 0 à 32767 pour l'ADS1115 et 0 à 2047 pour l'ADS1015.
 
 La vitesse d'échantillonnage `rate` devrait être choisi en adéquation avec la vitesse de changement du signal d'entrée et la précision souhaitée. Le mode est fixé pour "comparateur traditionnel" (_traditional comparator mode_), avec le seuil inférieur fixé à 0.
 
@@ -194,7 +200,7 @@ value = adc.alert_read()
 ```
 Les valeurs de `channel1`, `channel2` et `rate` sont abordé dans `adc.read()` .
 
-Le jitter temporel semble être d'environ 200 ns. Le timer du convertisseur ADC n'étant pas d'une très grande précision. 
+Le jitter temporel semble être d'environ 200 ns. Le timer du convertisseur ADC n'étant pas d'une très grande précision.
 
 Si ce jitter temporel est un problème pour votre application alors il est recommandé d'effectuer quelques contrôles et calibrations pour modeliser les temps de réponses (et leur variation).
 
@@ -216,7 +222,7 @@ Ecrire une valeur dans le registre du convertisseur ADC.
 adc._write_register(register, value)
 ```
 
-`Register` doit contenir le numéro du registre (tel que décrit dans la fiche tehcnique) et `value` une valeur 16 bit (encodée de façon adéquate). 
+`Register` doit contenir le numéro du registre (tel que décrit dans la fiche tehcnique) et `value` une valeur 16 bit (encodée de façon adéquate).
 
 Numéros de registre.
 ```
@@ -233,9 +239,9 @@ Lire la valeur d'un registre du convertisseur ADC.
 value = adc._read_register(register)
 ```
 
-`Register` doit contenir le numéro du registre (tel que décrit dans la fiche tehcnique). Retourne une valeur 16 bit. 
+`Register` doit contenir le numéro du registre (tel que décrit dans la fiche tehcnique). Retourne une valeur 16 bit.
 
-Lire le registre de conversion retour la valeur de l'échantillonnage le plus récent. 
+Lire le registre de conversion retour la valeur de l'échantillonnage le plus récent.
 
 Le bit 15 du registre de configuration est placé à 1 lorsque la configuration est terminée.
 
@@ -290,9 +296,9 @@ tim.init(period=ADC_RATE, mode=Timer.PERIODIC, callback=sample)
 while index_put < _BUFFERSIZE:
     pass
 
-tim.deinit() 
+tim.deinit()
 
-# Arrivé ici, nous avons les valeurs échantillonnée et le timestamp (tick en µs) 
+# Arrivé ici, nous avons les valeurs échantillonnée et le timestamp (tick en µs)
 # correspondant à chacune d'entre elle.
 #
 ```
@@ -317,7 +323,7 @@ i2c = I2C(scl=Pin(5), sda=Pin(4), freq=400000)
 ads = ads1x15.ADS1115(i2c, addr, gain)
 
 #
-# Routine d'interruption pour l'acquisition des 
+# Routine d'interruption pour l'acquisition des
 # données. Elle est activée par la broche d'interruption
 #
 def sample_auto(x, adc = ads.alert_read, data = data):
@@ -347,5 +353,4 @@ La vitesse d'échantillonage atteinte durant le test est de 251.9 échantillon p
 Information qui est d'une relative précision étant donné la précision d'horloge de l'ESP8266.
 
 ## Où acheter
-* [https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html Adafruit ADS115] disponible chez MCHobby
-
+* [ADS115 d'Adafruit Industries](https://shop.mchobby.be/breakout/362-ads1115-convertisseur-adc-16bits-i2c-3232100003620-adafruit.html) disponible chez MCHobby
