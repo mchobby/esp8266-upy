@@ -367,6 +367,18 @@ Explore it by:
       <strong>Manufacturer</strong> : NONE<br />
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/pca9685">pca9685</a></td>
+      <td><strong>Components</strong> : PCA9685, PWM-Driver<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>PWM-Driver driver contrôler based on PCA9685 from NXP, 16 channel, 12 bits resolution, to drive LEDs and Servos.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/breakout/89-adafruit-controleur-pwm-servo-16-canaux-12-bits-i2c-interface-pca9685-3232100000896-adafruit.html">PCA9685 - PWM Driver @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/815">PCA9685 - PWM Driver @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/tsl2561">tsl2561</a></td>
       <td><strong>Components</strong> : TSL2561, ADA439<br />
       <strong>Interfaces</strong> : I2C<br />
