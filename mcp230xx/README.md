@@ -1,6 +1,6 @@
-# Ajouter des GPIO avec le mcp230xx
+# Ajouter des GPIO avec le mcp230xx (I2C)
 
-Ajout de GPIO sous MicroPython grâce à la série de composant I2C "GPIO expanders MCP23017" et "MCP23008" . Travail dérivé de  Adafruit_MCP230xx.py disponible sur https://github.com/adafruit/Adafruit_Python_GPIO
+Ajout de GPIO sous MicroPython grâce à la série de composant I2C "GPIO expanders MCP23017" et "MCP23008" sur bus I2C . Travail dérivé de  Adafruit_MCP230xx.py disponible sur https://github.com/adafruit/Adafruit_Python_GPIO
 
 Le port MicroPython réalisé par ShrimpingIt sur son GitHub https://github.com/ShrimpingIt/micropython-mcp230xx (merci à ShrimpingIt pour son magnifique travail)
 
@@ -12,23 +12,23 @@ Modifié pour:
 
 A été testé pour sur ESP8266 sous 1.8.7 et 1.9.1 avec MCP23017 (uniquement). Devrais également fonctionner avec le MCP23008.
 
-## Raccordement 
+## Raccordement
 
 ![Raccordements](mcp23017_esp8266_bb.jpg)
 
-Attention au placement: Il faut utiliser le détrompeur du MCP23017 pour placer le circuit intégré dans le bon sens! 
+Attention au placement: Il faut utiliser le détrompeur du MCP23017 pour placer le circuit intégré dans le bon sens!
 
-Branchement du MCP23017 
+Branchement du MCP23017
 * 9 =>  3.3V (alimentation)
 * 10 => GND (masse)
-* 12 => ESP8266 GPIO5 [I2C SCL] 
+* 12 => ESP8266 GPIO5 [I2C SCL]
 * 13 => ESP8266 GPIO4 [I2C SDA]
 * 18 => 3.3V (activation du module)
 
 Il faut également ajouter les résistances pull-up du bus I2C.
 * ESP8266 GPIO5 [I2C SCL] --( R 10kOhms )--> 3.3V  
 * ESP8266 GPIO4 [I2C SDA] --( R 10kOhms )--> 3.3V
-    
+
 L'adresse du MCP23017 est fixée à l'aide des broches 15, 16, 17. Pour l'adresse 0x20, il faut effectuer les branchements suivants:
 * 15 => GND
 * 16 => GND
@@ -82,7 +82,7 @@ from mcp230xx import MCP23017
 # Création bus I2C et MCP23017
 i2c = I2C( sda=Pin(4), scl=Pin(5), freq=20000 )
 mcp = MCP23017( i2c=i2c )
- 
+
 mcp.setup( 3, Pin.IN ) # broche 3 en entrée
 mcp.pullup( 3, True )  # Activer la résistance pull-up sur entrée 3
 
@@ -96,7 +96,7 @@ while (time()-start) < 20: # pendant 20 sec max
 
 L'exemple suivant montre comment modifier plusieurs broches en une seule opération en utilisant un dictionnaire.
 
-Par exemple:  { 0 : True, 1 : False } 
+Par exemple:  { 0 : True, 1 : False }
 
 ```python
 from machine import I2C, Pin
@@ -165,9 +165,9 @@ Il est possible d'utiliser plusieurs MCP23017 sur un même bus I2C en modifiant 
 
 Le MCP23017 est communément utilisé avec l'adresse 0x20 (A0, A1 et A2 à la masse/GND).
 
-![Adresses du MCP23017](mcp23017_address.png) 
+![Adresses du MCP23017](mcp23017_address.png)
 
-Le constructeur par défaut utilise l'adresse 0x20 (A0, A1 et A2 à la masse/GND). Cela signifie que MCP23017( i2c ) est équivalent à MPC23017( i2c, address=0x20 ). 
+Le constructeur par défaut utilise l'adresse 0x20 (A0, A1 et A2 à la masse/GND). Cela signifie que MCP23017( i2c ) est équivalent à MPC23017( i2c, address=0x20 ).
 
 Il est cependant possible de préciser l'adresse du module avec le paramètre "address".
 
