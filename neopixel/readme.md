@@ -1,17 +1,19 @@
 # Utilisation de NeoPixel sous MicroPython
+Les LED RGB WS2812, aussi appelées NeoPixels chez Adafruit, sont des LEDs intelligentes capables d'offrir une explosion de couleur et équipe de nombreux types de produits (ruban, anneau, panneau, etc.
 
-* Shop: [Gamme NeoPixel](https://shop.mchobby.be/55-leds-neopixels-et-dotstar)
-* Shop: [NeoPixel Stick](https://shop.mchobby.be/leds-neopixels-et-dotstar/407-stick-neopixel-8-leds-rgb--3232100004078-adafruit.html) utilisé dans cet exemple.
-* Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
+![Exemple de NeoPixels](docs/_static/neopixels.jpg)
 
-# Attention: Utiliser des NeoPixels Récents
+Pour commander des NeoPixels, une seule broche de données est nécessaire sur le microcontrôleur (Arduino, ESP8266, Pyboard) pour contrôler toutes les LEDs. Chaque pixel est adressable individuellement et propose un panel de couleur 24 bit sur chaque LED.
+
+__Attention: Utiliser des NeoPixels Récents!__
+
 La bibliothèque incluse dans le firmware microPython prend en charge génération de NeoPixel avec flux de donnée de 800 KHz.
 
-Le bibliothèque __ne prend pas en charge__:
+La bibliothèque __ne prend pas en charge__:
 * l'ancienne génération de NeoPixel (flux de donnée à 400 KHz)
 * les LEDs NeoPixel RGBW.
 
-# Raccordement
+# Raccordement (ESP8266, Pyboard)
 ## ESP8266 sous sous 3.3V
 
 ![Branchement 3.3V](docs/_static/neopixel_bb.jpg)
@@ -65,8 +67,9 @@ Il faut donc un bus SPI matériel supportant la vitesse de 3.200.000 bauds
 | __X8__ | MOSI bus SPI(1) |
 | __Y8__ | MOSI bus SPI(2) |
 
-# Code de test
+# tester
 
+## Exemple simple
 ```
 # Utilisation de la bibliothèque neopixel avec Feather ESP8266
 # sous MicroPython
@@ -89,7 +92,7 @@ from neopixel import NeoPixel
 np = NeoPixel( Pin(2), 8 )
 
 # Pyboard NeoPixel( spi_bus=1, led_count=1, intensity=1 ) -> X8
-np = NeoPixel( spi_bus=1, led_count=8 )
+# np = NeoPixel( spi_bus=1, led_count=8 )
 
 # Fixer la couleur la couleur du premier pixel
 # avec un tuple (r,g,b) ou chaque valeur est
@@ -129,30 +132,7 @@ np.fill( (0,0,0) )
 np.write()
 ```
 
-## Couleur bleue et 3.3V
-La couleur bleue est difficile à produire sous 3.3V.
-
-Par conséquent, `np.write( (0,0,255) )` ne produit pas vraiment de couleur.
-
-C'est parce que le Forward Voltage d'une LED bleue est d'environ 2.8V (typiquement 3.2V). Avec une source d'alimentation de 3.3V, le tension est un peu faible pour activer une led bleue. Nous sommes à la limite pour pouvoir produire du Bleu.
-
-Il est parfois plus efficace de produire un bleu en mi-brillances avec `np.write( (0,0,128) )` ou bleu en quart-de-brillance avec `np.write( (0,0,64) )`
-
-__Limite du régulateur de tension:__
-
-De même, nous avons remarqué que le régulateur de tension d'un ESP8266 ne produit pas vraiment assez de courant pour l'ESP8266 + le contrôler de 8 LEDs NeoPixels. Par conséquent l'utilisation d'une alimentation externe 3.3v pour alimenter les NeoPixels est le bienvenue.
-
-Ne pas oublier d'avoir une masse commune (référentiel de tension) entre l'alimentation NeoPixel et l'ESP8266.
-
-A noter que si le régulateur de tension peine à founir le courant nécessaire alors sa tension chutera un peu (de 3.3v à 3.1v), ce qui aura pour effet de produire un effet de scintillement sur les LEDs.
-
-__Utiliser le régulateur du microcontrôleur:__
-
-Le régulateur de la plateforme ESP8266 sera néanmoins suffisant pour commander quelques NeoPixels. Dans ce cas, il est préférable de:
-* ne pas êtres pas trop exigeant sur la qualité des couleurs (utiliser des couleurs en mi-brillance)
-* s'attendre à des scintillements lors d'un charge plus importante en courant (lorsque l'on affiche du blanc ou des couleurs vive).
-
-# Effets
+## Effets lumineux
 Ce github contient un second script de test nommé `fxdemo.py` . Ce dernier contient différentes fonctions d'exemple permettant de réaliser des effets lumineux à base de NeoPixels.
 
 Vous trouverez ci-dessous le corps du script appelant les différentes fonctions d'effet.
@@ -213,5 +193,36 @@ clear( np )
 sleep( 1 )
 ```
 
+# Informations techniques
+
+## Couleur bleue et 3.3V
+La couleur bleue est difficile à produire sous 3.3V.
+
+Par conséquent, `np.write( (0,0,255) )` ne produit pas vraiment de couleur.
+
+C'est parce que le Forward Voltage d'une LED bleue est d'environ 2.8V (typiquement 3.2V). Avec une source d'alimentation de 3.3V, le tension est un peu faible pour activer une led bleue. Nous sommes à la limite pour pouvoir produire du Bleu.
+
+Il est parfois plus efficace de produire un bleu en mi-brillances avec `np.write( (0,0,128) )` ou bleu en quart-de-brillance avec `np.write( (0,0,64) )`
+
+__Limite du régulateur de tension:__
+
+De même, nous avons remarqué que le régulateur de tension d'un ESP8266 ne produit pas vraiment assez de courant pour l'ESP8266 + le contrôler de 8 LEDs NeoPixels. Par conséquent l'utilisation d'une alimentation externe 3.3v pour alimenter les NeoPixels est le bienvenue.
+
+Ne pas oublier d'avoir une masse commune (référentiel de tension) entre l'alimentation NeoPixel et l'ESP8266.
+
+A noter que si le régulateur de tension peine à founir le courant nécessaire alors sa tension chutera un peu (de 3.3v à 3.1v), ce qui aura pour effet de produire un effet de scintillement sur les LEDs.
+
+__Utiliser le régulateur du microcontrôleur:__
+
+Le régulateur de la plateforme ESP8266 sera néanmoins suffisant pour commander quelques NeoPixels. Dans ce cas, il est préférable de:
+* ne pas êtres pas trop exigeant sur la qualité des couleurs (utiliser des couleurs en mi-brillance)
+* s'attendre à des scintillements lors d'un charge plus importante en courant (lorsque l'on affiche du blanc ou des couleurs vive).
+
 # Source et ressources
-* Référence officielle NeoPixel sous ESP8266: http://docs.micropython.org/en/v1.8.2/esp8266/esp8266/tutorial/neopixel.html
+* [Référence officielle NeoPixel sous ESP8266](http://docs.micropython.org/en/v1.8.2/esp8266/esp8266/tutorial/neopixel.html)
+* (Bibliothèque WS2512 originale de JanBednarik](https://github.com/JanBednarik/micropython-ws2812)
+* [Wiki NeoPixel avec ESP8266](https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython)
+
+# Où acheter
+* Shop: [Gamme NeoPixel](https://shop.mchobby.be/55-leds-neopixels-et-dotstar)
+* Shop: [NeoPixel Stick](https://shop.mchobby.be/leds-neopixels-et-dotstar/407-stick-neopixel-8-leds-rgb--3232100004078-adafruit.html) utilisé dans cet exemple.
