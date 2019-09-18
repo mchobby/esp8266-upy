@@ -32,10 +32,10 @@ Interface GPIO, PWM, Interruption, etc générique. N'utilise pas de BUS ou CONN
       </td>
   </tr>
   <tr><td><a href="../../../../tree/master/neopixel">neopixel</a></td>
-      <td><strong>Composants</strong> : NEOPIXEL, 74AHCT125<br />
+      <td><strong>Composants</strong> : NEOPIXEL, 74AHCT125, WS2812<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>Les <strong>NéoPixels</strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.</small><br/><br />
-      <strong>Testé avec</strong> : FEATHER-ESP8266<br />
+      <strong>Testé avec</strong> : FEATHER-ESP8266, PYBOARD<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/55-neopixels-et-dotstar">NeoPixels</a></li>

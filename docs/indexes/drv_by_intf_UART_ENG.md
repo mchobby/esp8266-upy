@@ -32,5 +32,17 @@ UART (serial)
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/lcdmtrx">lcdmtrx</a></td>
+      <td><strong>Components</strong> : USB + Serial Backpack<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>USB + Serial Backpack Kit with 16x2 RGB backlight positive LCD - Black on RGB.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html">USB + Serial Backpack @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/782">USB + Serial Backpack @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>

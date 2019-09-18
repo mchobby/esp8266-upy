@@ -136,6 +136,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/lcdmtrx">lcdmtrx</a></td>
+      <td><strong>Composants</strong> : USB + Serial Backpack<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Afficheur LCD 2 lignes, 16 caractères, Arrière plan RGB. Interface USB + Série</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html">USB + Serial Backpack @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/782">USB + Serial Backpack @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Composants</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
@@ -338,10 +350,10 @@ Explorer par:
       </td>
   </tr>
   <tr><td><a href="../../tree/master/neopixel">neopixel</a></td>
-      <td><strong>Composants</strong> : NEOPIXEL, 74AHCT125<br />
+      <td><strong>Composants</strong> : NEOPIXEL, 74AHCT125, WS2812<br />
       <strong>Interfaces</strong> : GPIO<br />
 <small>Les <strong>NéoPixels</strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.</small><br/><br />
-      <strong>Testé avec</strong> : FEATHER-ESP8266<br />
+      <strong>Testé avec</strong> : FEATHER-ESP8266, PYBOARD<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/55-neopixels-et-dotstar">NeoPixels</a></li>
