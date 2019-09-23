@@ -74,6 +74,12 @@ class WS2812:
         for i in range( self.led_count ):
             self.update_buf( data=pixel, start=i )
 
+    @property
+    def n( self ):
+        """ Number of leds """
+        # ESP8266 NeoPixel compatibility
+        return self.led_count
+
     def update_buf(self, data, start=0):
         """
         Fill a part of the buffer with RGB data. data is a list of rgb tuples.
