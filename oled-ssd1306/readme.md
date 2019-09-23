@@ -1,4 +1,4 @@
-# Utilisation d'écran OLED ssd1603 et ESP8266 MicroPython
+# Utilisation d'écran OLED ssd1603 avec MicroPython
 
 MicroPython permet d'utiliser très facilement un écran OLED I2C basé sur le contrôleur ssd1306.
 
@@ -18,9 +18,16 @@ La bibliothèque sd1306.py` est un pilote SSD1306 I2C et SPI (MicroPyhton GitHub
 # Brancher
 ## OLED PyBoard
 Il est important de savoir que le pilote ssd1306 écrit par MicroPython.org est
-prévu pour recevoir un machine.I2C (et non un pyb.I2C) en paramètre mais qu'en
-plus, il est nécessaire de configurer les broches sda et scl de façon adéquate
-pour que le pilote fonctionne correctement.
+prévu pour recevoir un machine.I2C (et non un pyb.I2C) en paramètre.
+
+```
+from machine import I2C
+i2c = I2C(2)
+lcd = ssd1306.SSD1306_I2C( 128, 64, i2c )
+```
+Le restant du code de test est identique.
+
+__Note:__ Si vous rencontrez des problèmes de stabilité sur les versions antérieures de MicroPython, vous pouvez consulter le fil de discussion suivant.
 
 Voir ce Topic https://forum.micropython.org/viewtopic.php?f=6&t=4663
 
@@ -182,4 +189,4 @@ Bien que la classe SSD1306_I2C hérite de framebuf qui propose de nombreuses mé
 
 # Source et ressources
 * [Voir le Wiki MC Hobby](https://wiki.mchobby.be/index.php?title=FEATHER-MICROPYTHON-OLED)
-* [Comment afficher des images](https://www.twobitarcade.net/article/displaying-images-oled-displays/) (_How to display images_) sur twobutarcade.net 
+* [Comment afficher des images](https://www.twobitarcade.net/article/displaying-images-oled-displays/) (_How to display images_) sur twobutarcade.net
