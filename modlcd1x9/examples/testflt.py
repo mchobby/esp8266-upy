@@ -1,12 +1,12 @@
 '''
 Test the Olimex MOD-LCD1x9 board.
 
-Display float value (justified on the right) 
+Display float value (justified on the right)
 
 It allows the user to control one MOD-LCD1x9 board.
 MOD-LCD1x9 board : http://shop.mchobby.be/product.php?id_product=1414
-MOD-LCD1x9 : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/open-source-hardware    
-User Guide : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/resources/LCD1X9.pdf 
+MOD-LCD1x9 : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/open-source-hardware
+User Guide : https://www.olimex.com/Products/Modules/LCD/MOD-LCD-1x9/resources/LCD1X9.pdf
 
 The MIT License (MIT)
 Copyright (c) 2018 Dominique Meurisse, support@mchobby.be, shop.mchobby.be
@@ -31,7 +31,11 @@ from machine import I2C, Pin
 from time import sleep
 from modlcd19 import MODLCD1x9
 
+# ESP8266-EVB
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
+# PyBoard
+# i2c = I2C(2)
+
 lcd = MODLCD1x9( i2c ) # Will light all segments
 
 # Display a float value

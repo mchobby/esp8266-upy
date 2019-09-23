@@ -86,10 +86,10 @@
 								}
 		},
 		{	"folder"        : "neopixel",
-			"components"    : ["NEOPIXEL","74AHCT125"],
+			"components"    : ["NEOPIXEL","74AHCT125", "WS2812"],
 			"interfaces"    : ["GPIO"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["FEATHER-ESP8266"],
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
 			"ressources"    : [ { "label" : "NeoPixels",
 												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
 													{ "label" : "74AHCT125",
@@ -217,7 +217,7 @@
 			"components"    : ["MOD-LCD-1x9"],
 			"interfaces"    : ["I2C","UEXT"],
 			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["ESP8266-EVB"],
+			"plateforms"    : ["ESP8266-EVB","PYBOARD"],
 			"ressources"    : [ { "label" : "MOD-LCD1x9 @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/esp8266-esp32-wifi-iot\/1414-uext-lcd-display-1-line-of-9-alphanumeric-chars-3232100014145-olimex.html" },
 													{ "label" : "UEXT @ Olimex",
@@ -373,7 +373,7 @@
 			"manufacturers" : ["OLIMEX"],
 			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
 			"ressources"    : [ { "label" : "MOD-IR-TEMP @ Olimex",
-														"url"   : "https://www.olimex.com/Products/Modules/Sensors/MOD-IR-TEMP/open-source-hardware" }
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-IR-TEMP\/open-source-hardware" }
 												],
 			"descr"	: {"FR" : "Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)",
 								 "ENG": "NON-Contact IR temperature sensor, from -70°C to 380°C with MXL90164."
@@ -385,9 +385,9 @@
 			"manufacturers" : ["ADAFRUIT"],
 			"plateforms"    : ["PYBOARD"],
 			"ressources"    : [ { "label" : "GPS Ultime @ MCHobby",
-														"url"   : "https://shop.mchobby.be/fr/breakout/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html" },
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html" },
 													{ "label" : "GPS Ultimate",
-														"url"   : "https://www.adafruit.com/product/746" }
+														"url"   : "https:\/\/www.adafruit.com\/product\/746" }
 												],
 			"descr"	: {"FR" : "Pouvoir obtenir ou suivre votre position actuelle à l'aide d'un module GPS",
 								 "ENG": "Being able to capture (or follow) your position with a GPS module"
@@ -399,12 +399,40 @@
 			"manufacturers" : ["OLIMEX"],
 			"plateforms"    : ["PYBOARD"],
 			"ressources"    : [ { "label" : "MOD-LED8x8RGB @ MCHobby",
-														"url"   : "https://shop.mchobby.be/fr/nouveaute/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html" },
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html" },
 													{ "label" : "MOD-LED8x8RGB @ Olimex",
-														"url"   : "https://www.olimex.com/Products/Modules/LED/MOD-LED8x8RGB/open-source-hardware" }
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/LED\/MOD-LED8x8RGB\/open-source-hardware" }
 												],
 			"descr"	: {"FR" : "Un afficheur 8x8 LEDs RGB chaînable.",
 								 "ENG": "A 8x8 RGB led display that can be daisy chained."
+								}
+		},
+		{	"folder"        : "pca9685",
+			"components"    : ["PCA9685","PWM-Driver"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "PCA9685 - PWM Driver @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/89-adafruit-controleur-pwm-servo-16-canaux-12-bits-i2c-interface-pca9685-3232100000896-adafruit.html" },
+													{ "label" : "PCA9685 - PWM Driver @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/815" }
+												],
+			"descr"	: {"FR" : "Controleur PWM-Driver à base de PCA9685 de NXP, 16 canaux, résolution 12 bits, pour commande des LEDs ou Servo.",
+								 "ENG": "PWM-Driver driver contrôler based on PCA9685 from NXP, 16 channel, 12 bits resolution, to drive LEDs and Servos."
+								}
+		},
+		{	"folder"        : "lcdmtrx",
+			"components"    : ["USB + Serial Backpack"],
+			"interfaces"    : ["UART"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "USB + Serial Backpack @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html" },
+													{ "label" : "USB + Serial Backpack @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/782" }
+												],
+			"descr"	: {"FR" : "Afficheur LCD 2 lignes, 16 caractères, Arrière plan RGB. Interface USB + Série",
+								 "ENG": "USB + Serial Backpack Kit with 16x2 RGB backlight positive LCD - Black on RGB."
 								}
 		}
 ]

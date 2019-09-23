@@ -85,7 +85,10 @@ from machine import I2C, Pin
 from time import sleep
 from modlcd19 import MODLCD1x9
 
+# ESP8266-EVB
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
+# PyBoard
+# i2c = I2C(2)
 lcd = MODLCD1x9( i2c ) # Activer tous les segments
 
 # Afficher avec 9 caractères Max
@@ -128,7 +131,10 @@ from machine import I2C, Pin
 from time import sleep
 from modlcd19 import MODLCD1x9
 
+# Esp8266-EVB
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
+# PyBoard
+# i2c = I2C(2)
 lcd = MODLCD1x9( i2c ) # Activer tous les segments
 
 # Afficher une valeur décimale
