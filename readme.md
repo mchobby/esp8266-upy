@@ -198,7 +198,7 @@ Explorer par:
       <td><strong>Composants</strong> : MOD-LCD-1x9<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>MOD-LCD1x9 est un afficheur 9 caractères alphanumérique I2C avec port de connexion <strong>UEXT</strong>.</small><br/><br />
-      <strong>Testé avec</strong> : ESP8266-EVB<br />
+      <strong>Testé avec</strong> : ESP8266-EVB, PYBOARD<br />
       <strong>Fabricant</strong> : OLIMEX<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/esp8266-esp32-wifi-iot/1414-uext-lcd-display-1-line-of-9-alphanumeric-chars-3232100014145-olimex.html">MOD-LCD1x9 @ MCHobby</a></li>
