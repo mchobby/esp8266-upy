@@ -52,8 +52,11 @@ modled.clear()
 modled.show()
 
 clip = open_image( "olimex.bmp" )
+# clip = open_image( "python.bmp" )
+# clip = open_image( "mpython.bmp" )
+
 print( "size: X*Y = %i * %i " % (clip.reader.width, clip.reader.height) )
-for y_scroll in range( 91-16 ): # Nbr of pixels to scrool
+for y_scroll in range(  clip.reader.height-16 ): # Nbr of pixels to scrool
 	#print( '=== Clipping @ y = %i ==========================' % y_scroll )
 	clip.clip( 0, y_scroll, 24, 16 )
 	#clip.show( )
