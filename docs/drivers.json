@@ -145,6 +145,20 @@
 								 "ENG": "The TSL2561 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
 								}
 		},
+		{	"folder"        : "tsl2591",
+			"components"    : ["TSL2591","ADA1980"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
+			"ressources"    : [ { "label" : "TSL2591 @ MCHobby - Capteur Lux/Luminosité/Lumière digital",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1599" },
+													{ "label" : "TSL2591 @ Adafruit - Capteur Lux/Luminosité/Lumière digital",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1980" }
+												],
+			"descr"	: {"FR" : "Le TSL2591 est un capteur de <strong>luminosité<\/strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX",
+								 "ENG": "The TSL2591 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
+								}
+		},
 		{	"folder"        : "umqtt",
 			"components"    : [],
 			"interfaces"    : [],
