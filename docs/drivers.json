@@ -85,6 +85,20 @@
 								 "ENG": "The MCP23017 (and MCP2308) are <strong>GPIO Expander<\/strong> adding additionnal input/output to a microcontroler."
 								}
 		},
+		{	"folder"        : "mcp9808",
+			"components"    : ["MCP9808"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
+			"ressources"    : [ { "label" : "MCP9808 @ MCHobby : mesure de température de précision via I2C",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=572" },
+														{ "label" : "MCP9808 @ Adafruit : High precision temperature sensor",
+															"url"   : "https:\/\/www.adafruit.com\/product\/1782" }
+												],
+			"descr"	: {"FR" : "Le MCP9808 (bus I2C) permettant de faire un relevé de température avec une précision de 0.25°C.",
+								 "ENG": "The MCP9808 (I2C bus) can measure temperature with high accuracy (0.25°C)."
+								}
+		},
 		{	"folder"        : "neopixel",
 			"components"    : ["NEOPIXEL","74AHCT125", "WS2812"],
 			"interfaces"    : ["GPIO"],

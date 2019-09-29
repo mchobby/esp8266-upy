@@ -159,6 +159,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/mcp9808">mcp9808</a></td>
+      <td><strong>Composants</strong> : MCP9808<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Le MCP9808 (bus I2C) permettant de faire un relevé de température avec une précision de 0.25°C.</small><br/><br />
+      <strong>Testé avec</strong> : FEATHER-ESP8266, PYBOARD<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=572">MCP9808 @ MCHobby : mesure de température de précision via I2C</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/1782">MCP9808 @ Adafruit : High precision temperature sensor</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/modio">modio</a></td>
       <td><strong>Composants</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />
