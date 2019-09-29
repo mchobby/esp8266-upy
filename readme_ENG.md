@@ -402,6 +402,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/tsl2591">tsl2591</a></td>
+      <td><strong>Components</strong> : TSL2591, ADA1980<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>The TSL2591 is a visible light <strong>luminosity</strong> sensor having a response close from human Eyes. It produces values in LUX.</small><br/><br />
+      <strong>Tested with</strong> : FEATHER-ESP8266, PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1599">TSL2591 @ MCHobby - Capteur Lux/Luminosité/Lumière digital</a></li>
+<li>See <a href="https://www.adafruit.com/product/1980">TSL2591 @ Adafruit - Capteur Lux/Luminosité/Lumière digital</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/umqtt">umqtt</a></td>
       <td><strong>Components</strong> : <br />
       <strong>Interfaces</strong> : <br />

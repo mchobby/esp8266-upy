@@ -87,4 +87,4 @@ La broche INT is a sensor output that can be configured to send a signal when th
 
 # Where to buy
 * [Adafruit TSL2591 (ADA1980)](https://shop.mchobby.be/product.php?id_product=1599) @ MC Hobby
-* [Adafruit TSL2591 (ADA1980)](http://shop.mchobby.be/product.php?id_product=238) @ Adafruit
+* [Adafruit TSL2591 (ADA1980)](https://www.adafruit.com/product/1980) @ Adafruit

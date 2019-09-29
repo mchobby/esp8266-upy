@@ -86,6 +86,5 @@ __Les addresse par défaut sont 0x29 et 0x28__ (oui, les deux).
 La broche INT est une sortie du senseur utilisé lorsque vous avez configuré le senseur pour signaler une modification du niveau lumineux. Si vous désirez utiliser ce signal, vous devez utiliser une résistance pull-up de 10K-100K branchée entre INT et 3.3V
 
 # Où acheter
-* [Adafruit TSL2561 (ADA439)](https://shop.mchobby.be/product.php?id_product=1599) @ MC Hobby
-* [Adafruit TSL2561 (ADA439)](http://shop.mchobby.be/product.php?id_product=238) @ Adafruit
-* Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
+* [Adafruit TSL2591 (ADA1980)](https://shop.mchobby.be/product.php?id_product=1599) @ MC Hobby
+* [Adafruit TSL2591 (ADA1980)](https://www.adafruit.com/product/1980) @ Adafruit
