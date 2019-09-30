@@ -29,7 +29,7 @@ Les mini modulesI2C  de NCD [National Control Device / ncd.io](https://store.ncd
 Ce module NCD SI7005 inclus un régulateur de tension et un level shifter I2C PCA9306 pour adapter la logique au standard NCD (5V).
 
 # Brancher
-Le capteur i2C utilise un connecteur NCD. Il suffit donc d'utiliser l'interface appropriée pour connecter le module. Ce dépôt propose des interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [modules ESP8266/ESP32](../NCD/readme.md).
+Le capteur i2C utilise un connecteur NCD. Il suffit donc d'utiliser l'interface appropriée pour connecter le module. Ce dépôt propose des interfaces NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) et [modules ESP8266/ESP32](../NCD/readme.md).
 
 ![Brancher un Feather ESP8266](../NCD/ncd_feather.png)
 
