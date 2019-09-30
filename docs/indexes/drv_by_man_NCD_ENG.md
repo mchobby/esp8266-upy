@@ -34,7 +34,7 @@ See
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../tree/master/ncd-mpl115A2">ncd-mpl115A2</a></td>
+  <tr><td><a href="../../../../tree/master/ncd-mpl115a2">ncd-mpl115a2</a></td>
       <td><strong>Components</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>The MPL115A2 sensor capture the pressure and temperature over I2C bus. The <i>I2C NCD mini board</i> have the <strong>NCD</strong> connector which facilitate the device wiring.<br />The MPL115A2 is also available as breakout.</small><br/><br />

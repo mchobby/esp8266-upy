@@ -311,7 +311,7 @@
 								 "ENG": "Connect NCD (National Control Device) __I2C mini board__  easily to a MicroPython microcontroler with the <strong>NCD connector<\/strong>. I2C connexion made easy, 5V logic."
 								}
 		},
-		{	"folder"        : "ncd-mpl115A2",
+		{	"folder"        : "ncd-mpl115a2",
 			"components"    : ["MPL115A2","ADA992"],
 			"interfaces"    : ["I2C","NCD"],
 			"manufacturers" : ["NCD","ADAFRUIT"],

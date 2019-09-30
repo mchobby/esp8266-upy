@@ -32,7 +32,7 @@ Connecteur I2C en logique 5V de National Control Device (NCD.io)
 </ul>
       </td>
   </tr>
-  <tr><td><a href="../../../../tree/master/ncd-mpl115A2">ncd-mpl115A2</a></td>
+  <tr><td><a href="../../../../tree/master/ncd-mpl115a2">ncd-mpl115a2</a></td>
       <td><strong>Composants</strong> : MPL115A2, ADA992<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
 <small>Le MPL115A2 est un capteur de pression et température I2C. La <i>mini carte I2C de NCD</i> propose un  connecteur <strong>NCD</strong> qui facilite grandement les raccordements de périphérique I2C.<br />Ce senseur est également disponible sous forme de breakout.</small><br/><br />
