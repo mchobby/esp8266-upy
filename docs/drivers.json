@@ -109,8 +109,8 @@
 														{ "label" : "MCP4725 12 bits DAC @ Adafruit : High precision temperature sensor",
 															"url"   : "https:\/\/www.adafruit.com\/product\/935" }
 												],
-			"descr"	: {"FR" : "Le MCP9808 (bus I2C) permettant de faire un relevé de température avec une précision de 0.25°C.",
-								 "ENG": "The MCP9808 (I2C bus) can measure temperature with high accuracy (0.25°C)."
+			"descr"	: {"FR" : "Le MCP4725 (bus I2C) est un DAC -ou- une vraie sortie Analogique 12 bits (0 à 65535).",
+								 "ENG": "The MCP4725 (I2C bus) is a DAC -or- a TRUE 12 bits analog output (0 à 65535)."
 								}
 		},
 		{	"folder"        : "neopixel",
