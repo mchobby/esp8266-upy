@@ -88,6 +88,18 @@ I2C bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/mcp4725">mcp4725</a></td>
+      <td><strong>Components</strong> : MCP4725<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>The MCP9808 (I2C bus) can measure temperature with high accuracy (0.25°C).</small><br/><br />
+      <strong>Tested with</strong> : FEATHER-ESP8266, PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="http://shop.mchobby.be/product.php?id_product=132">MCP4725 12 bits DAC @ MCHobby : Convertisseur Digital/Analogique pour MicroControlleur, interface I2C</a></li>
+<li>See <a href="https://www.adafruit.com/product/935">MCP4725 12 bits DAC @ Adafruit : High precision temperature sensor</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/mcp9808">mcp9808</a></td>
       <td><strong>Components</strong> : MCP9808<br />
       <strong>Interfaces</strong> : I2C<br />

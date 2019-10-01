@@ -159,6 +159,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/mcp4725">mcp4725</a></td>
+      <td><strong>Composants</strong> : MCP4725<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Le MCP9808 (bus I2C) permettant de faire un relevé de température avec une précision de 0.25°C.</small><br/><br />
+      <strong>Testé avec</strong> : FEATHER-ESP8266, PYBOARD<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=132">MCP4725 12 bits DAC @ MCHobby : Convertisseur Digital/Analogique pour MicroControlleur, interface I2C</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/935">MCP4725 12 bits DAC @ Adafruit : High precision temperature sensor</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/mcp9808">mcp9808</a></td>
       <td><strong>Composants</strong> : MCP9808<br />
       <strong>Interfaces</strong> : I2C<br />
