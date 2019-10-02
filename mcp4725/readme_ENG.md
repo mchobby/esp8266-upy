@@ -66,6 +66,24 @@ The DAC is mainly limited by the I2C bus bandwidth. The 65535 samples are sent i
 
 So quite enough to generate a signal with a timer at 5 KHz (200µS for each sample).
 
+## The camel wafeform
+I wanted to draw a waveform with a double hump like a camel.
+
+So I did find [this beautiful function on math.stackexchange.com](https://math.stackexchange.com/questions/3093278/function-approximating-camels-humps). Thank guys!
+
+I made some home working to sample 100 values out of it. All value in a range of 0-4095 for an external DAC. Please see the `docs/camel-function.ods` LibreOffice calc sheet.
+
+From that point, it is already possible to see a formal chart result:
+
+![camel function samples](docs/camel-function.jpg)
+
+The calculate samples were injected into the `examples/camel.py` test script to generates the camel waveform on the MCP4725 I2C DAC.
+
+Here is the result my scope capture of 50 Hz Camel Waveform. Whoa glorious!
+
+![camel wafeform on Rigol DS1054Z scope](docs/_static/generated-camel.jpg)
+
+
 # Ressources and sources
 * Source: [MicroPython-adafruit-bundle](https://github.com/adafruit/micropython-adafruit-bundle/tree/master/libraries/drivers) (Adafruit, GitHub)
 

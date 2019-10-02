@@ -62,7 +62,24 @@ while True:
 		mcp.value = i
 ```
 
-Le DAC est principalement limité par le débit du bus I2C. Les 65535 échantillons sont envoyés en 11 secondes, soit 5957 échantillons par secondes ou un échantillon toutes les 167µSec! De quoi assurer la génération de signal avec un timer à 5 KHz (200µS entre chaque échantillon)
+Le DAC est principalement limité par le débit du bus I2C. Les 65535 échantillons sont envoyés en 11 secondes, soit 5957 échantillons par secondes ou un échantillon toutes les 167µSec! De quoi assurer la génération de signal avec un timer à 5 KHz (200µS entre chaque échantillon).
+
+## La forme d'onde en dos chameau
+Je voulais créer une forme d'onde avec une double bosse... comme un chameau.
+
+En faisant un peu de recherhe, j'ai trouvé [cette magnifique fonction sur math.stackexchange.com](https://math.stackexchange.com/questions/3093278/function-approximating-camels-humps). Merci les gars!
+
+Après un peu de travail, j'ai obtenu un échantillon de 100 valeurs, toutes comprises entre 0-4095 pour être envoyées sur un DAC externe. Voyez le fichier `docs/camel-function.ods` (une feuille LibreOffice calc).
+
+A partir de ce point, il est déjà possible de voir le future résultat dans un graphique:
+
+![Exemple de fonction dos de chameau / camel waveform](docs/camel-function.jpg)
+
+Les échantillons calculés sont injectés dans le script de test `examples/camel.py` pour générer la forme d'onde sur le DAC MCP4725 (I2C).
+
+Voici la forme d'onde 50Hz capturée sur un oscilloscope. Whroaaa trop beau!
+
+![camel wafeform sur Rigol DS1054Z scope](docs/_static/generated-camel.jpg)
 
 # Ressources et sources
 * Source: [MicroPython-adafruit-bundle](https://github.com/adafruit/micropython-adafruit-bundle/tree/master/libraries/drivers) (Adafruit, GitHub)
