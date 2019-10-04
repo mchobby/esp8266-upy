@@ -1,39 +1,41 @@
-[Ce fichier existe également en FRANCAIS](readme.md)
+[This file also exists in ENGLISH](readme_ENG.md)
 
-# Using GPS to get latitude and longitude
-The GPS module helps you to get your localisation on the earth. It can also be used to get the time.
+# Utiliser un GPS pour obtenir la latitude et la longitude
+Le module GPS est un outil essentiel pour connaître sa position (localisation) sur la terre.
+
+Il peut également être utilisé pour obtenir le temps universel (UTC).
 
 ![GPS Ultimate](docs/_static/gps-ultimate.jpg)
 
 Note:
-1. The GPS sends NMEA even with NO GPS FIX. The NMEA stream just indicates that the fix is not available.
-2. The Fix signal is available as breakout pin. The signal on this pin is the same as the FIX LED.
-3. The FIX LED:
-   * Flash every second when the GPS FIX is not available.
-   * Flash once every 10 seconds when the GPS has a FIX.
+1. Le GPS envoi des données au format NMEA même s'il n'a pas de FIX GPS. The flux NMEA indique que le FIX n'est pas disponible (et donc que les données de localisation ne sont pas valide).
+2. Le signa FIX est aussi disponible en breakout. Ce signal est identique à celui de la LED FIX.
+3. La LED FIX:
+   * Flash toutes les secondes SI le FIX GPS n'est PAS DISPONIBLE.
+   * Flash une fois toutes les 15 secondes lorsque le FIX GPS est DISPONIBLE.
 
 # Credit
 
-This library is based on Adafruit_CircuitPython_GPS available at:
-https://github.com/adafruit/Adafruit_CircuitPython_GPS
+Cette bibliothèque est basée sur Adafruit_CircuitPython_GPS disponible sur https://github.com/adafruit/Adafruit_CircuitPython_GPS
 
-Content also based on the work of "alexmrqt" available at:
-https://github.com/alexmrqt/micropython-gps/commits/master
+Le contenu est également basé sur le travail de "alexmrqt" disponible sur https://github.com/alexmrqt/micropython-gps/commits/master
 
-Distributed under the original MIT License.
+Distribué sur la licence MIT (comme la bibliothèque originale).
 
-# Wiring
+# Brancher
 
-![GPS Ultimate to Pyboard](docs/_static/gps-ultimate-pyboard.jpg)
+![GPS Ultimate vers Pyboard](docs/_static/gps-ultimate-pyboard.jpg)
 
-* The X9 & X10 are the pin of __UART(1)__.
+* Les broches X9 et X10 sont celles correspondant à __UART(1)__.
 
 # Test
 
-## Raw reading of NMEA streams
-The `testraw.py` sample just send configuration string to the GPS module then parse incoming bytes on the serial line.
+## Lecture du flux NMEA brute
+L'exemple `testraw.py` effectue juste la configuration du GPS puis réceptionne les octets sur la ligne série (pour recomposer une chaîne de caractère).
 
-When the line feed is received, the `process_buffer()` is called. This function only prints the buffer content to the REPL output.
+Lorsqu'un caractère _line feed_ est réceptionné, la fonction `process_buffer()` est appelée (celle-ci ne fait qu'afficher le _buffer_ dans la session REPL.
+
+La méthode `UART.readline()` est ici volontairement ignorée car trop sensible au paramètre `timeout` communiqué lors de la création de l'UART.
 
 ```
 >>> import testraw
@@ -47,38 +49,21 @@ bytearray(b'$GPGGA,201225.400,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,
 bytearray(b'$GPRMC,201225.400,A,5041.4402,N,00424.0478,E,0.01,356.93,290719,,,A*68\r\n')
 bytearray(b'$GPGGA,201225.600,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*54\r\n')
 bytearray(b'$GPRMC,201225.600,A,5041.4402,N,00424.0478,E,0.01,336.34,290719,,,A*61\r\n')
-bytearray(b'$GPGGA,201225.800,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*5A\r\n')
-bytearray(b'$GPRMC,201225.800,A,5041.4402,N,00424.0478,E,0.01,333.71,290719,,,A*6B\r\n')
-bytearray(b'$GPGGA,201226.000,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*51\r\n')
-bytearray(b'$GPRMC,201226.000,A,5041.4402,N,00424.0478,E,0.01,331.63,290719,,,A*61\r\n')
-bytearray(b'$GPGGA,201226.200,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*53\r\n')
-bytearray(b'$GPRMC,201226.200,A,5041.4402,N,00424.0478,E,0.00,343.31,290719,,,A*60\r\n')
-bytearray(b'$GPGGA,201226.400,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*55\r\n')
-bytearray(b'$GPRMC,201226.400,A,5041.4402,N,00424.0478,E,0.00,299.06,290719,,,A*64\r\n')
-bytearray(b'$GPGGA,201226.600,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*57\r\n')
-bytearray(b'$GPRMC,201226.600,A,5041.4402,N,00424.0478,E,0.01,290.00,290719,,,A*68\r\n')
-bytearray(b'$GPGGA,201226.800,5041.4402,N,00424.0478,E,1,07,1.20,94.7,M,47.4,M,,*53\r\n')
-bytearray(b'$GPRMC,201226.800,A,5041.4402,N,00424.0478,E,0.01,359.98,290719,,,A*63\r\n')
-bytearray(b'$GPGGA,201227.000,5041.4402,N,00424.0478,E,1,07,1.20,94.7,M,47.4,M,,*5A\r\n')
-bytearray(b'$GPRMC,201227.000,A,5041.4402,N,00424.0478,E,0.01,30.54,290719,,,A*56\r\n')
-bytearray(b'$GPGGA,201227.200,5041.4402,N,00424.0478,E,1,07,1.20,94.7,M,47.4,M,,*58\r\n')
-bytearray(b'$GPRMC,201227.200,A,5041.4402,N,00424.0478,E,0.01,29.49,290719,,,A*50\r\n')
-bytearray(b'$GPGGA,201227.400,5041.4402,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*54\r\n')
-bytearray(b'$GPRMC,201227.400,A,5041.4402,N,00424.0478,E,0.00,357.90,290719,,,A*69\r\n')
+...
 bytearray(b'$GPGGA,201227.600,5041.4403,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*57\r\n')
 bytearray(b'$GPRMC,201227.600,A,5041.4403,N,00424.0478,E,0.00,359.85,290719,,,A*60\r\n')
 ```
 Notes:
-* The first line appears wierd because the data has been collected in the middle of the stream
-* The \r\n (carriage return, linefeed) in included in the buffer.
+* La première ligne contient souvent des artefacts car la collecte des données commence au milieu du flux.
+* les caractères \r\n (carriage return, linefeed) sont également inclus dans le _buffer_.
 
-## Test the GPS library
+## Tester la bibliothèque
 
-See `examples/minimaltest.py` rely on `adafruit_gps` library to perform the parsing and printing GPS location. That demonstration script shows a minimum of information on the output.
+Voir `examples/minimaltest.py` qui effectue un parsing des trames NMEA à l'aide de la bibliothèque `adafruit_gps` et affiche la localisation GPS (avec un minimum d'information sur la sortie REPL).
 
-Please see the `simpletest.py` for the whole GPS information set displays.
+Pour un affichage plus complet, voir l'autre example `simpletest.py`. 
 
-Important: the uart must be created at 9600 baud with __timeout set to 3000ms__. Without proper timeout setting, the library will fail to work properly
+Important: l'uart doit être créé à 9600 baud avec un __timeout fixé à 3000ms__. Sans cette configuration approrpriée de `timeout`, la bibliothèque sera incapable de fonctionner correctement.
 
 ``` python
 from machine import UART
@@ -89,20 +74,20 @@ import adafruit_gps
 # Pyboard (TX=X9, RX=X10)
 uart = UART( 1, baudrate=9600, timeout=3000)
 
-# Create a GPS instance
+# Crée une instance GPS
 gps = adafruit_gps.GPS(uart)
 
-# Turn on the basic GGA and RMC info
+# Active les infos basiques GGA et RMC
 gps.send_command('PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
 
-# Set update rate to once a second (1hz)
+# Mise-à-jour une fois par seconde (1hz)
 gps.send_command('PMTK220,1000')
 
-# Main loop runs
+# Boucle principale
 last_print = time.ticks_ms()
 while True:
     gps.update()
-    # Every second print
+    # Afficher chaque seconde
     current = time.ticks_ms()
     if time.ticks_diff(current, last_print) >= 1000:
         last_print = current
@@ -127,7 +112,7 @@ while True:
             print('Speed: {} km/h'.format(gps.speed_knots*1.8513))
 ```
 
-The location is obtain with
+La position est obtenue à l'aide de
 
 ``` python
 
@@ -135,18 +120,18 @@ The location is obtain with
     print('Longitude: {0:.6f} degrees'.format(gps.longitude))
 ```
 
-Note: Sending multiple PMTK314 packets with `gps.send_command()` will not work unless there is a substantial amount of time in-between each time `gps.send_command()` is called. A `time.sleep()` of 1 second or more should fix this.
+Note: l'envoi de multiple commandes PMTK314 avec `gps.send_command()` ne fonctionnera pas (voir `gps_config.py`). Il faut en effet attendre un minimum de temps entre chaque appel de de `gps.send_command()`. Un `time.sleep()` de 1 seconde devrait convenir.
 
 # Ressources
-## About NMEA Data
+## A propos des données NMEA
 
-This GPS module uses the NMEA 0183 protocol.
+Ce module GPS utilise le protocole NMEA 0183.
 
-This data is formatted by the GPS in one of two ways.
+Ces données sont formatées par le GPS de deux façons différentes:
+* La première est GGA qui contient à peu près tout ce qui est nécessaire.
+* La deuxième est RMC (_Recommended Minimum Navigation_) qui sont les informations recommandées pour la navigation.
 
-The first of these is GGA. GGA has more or less everything you need.
-
-Here's an explanation of GGA:
+Voici quelques explications concernant GGA. La terminologie anglaise est préservé:
 ```
 
                                                         11
@@ -176,9 +161,7 @@ Here's an explanation of GGA:
 14. Differential reference station ID, 0000-1023
 15. Checksum
 
-The second of these is RMC. RMC is Recommended Minimum Navigation Information.
-
-Here's an explanation of RMC:
+Voici les détails concernant la trame RMC:
 ```
                                                                12
            1         2 3       4 5        6 7   8   9   10   11|
@@ -199,12 +182,12 @@ Here's an explanation of RMC:
 11. E or W
 12. Checksum
 
-The content of lines can be compared decode with the following documentations:
-* [NMEA 0183 on wikipedia](https://fr.wikipedia.org/wiki/NMEA_0183)
+Le contenu des lignes peut être comparé et décodé à l'aide de la documentation suivante:
+* [NMEA 0183 sur wikipedia](https://fr.wikipedia.org/wiki/NMEA_0183)
 * [Adafruit_GPS GitHub](https://github.com/adafruit/Adafruit_GPS)
 * [NMEA0183 (pdf) @ tronico](https://www.tronico.fi/OH6NT/docs/NMEA0183.pdf)
 * [NMEA sentences @ GpsInformation.org](https://www.gpsinformation.org/dale/nmea.htm)
 
-# Shopping list
+# Où acheter
 * [Adafruit GPS Ultimate (ADA-746)](https://shop.mchobby.be/product.php?id_product=62) @ MCHobby
 * [Adafruit GPS Ultimate (ADA-746)](https://www.adafruit.com/product/746) @ Adafruit Industries
