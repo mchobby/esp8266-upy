@@ -135,13 +135,13 @@ class RFID_READER():
 
 	def reader_info( self ):
 		""" Get firmware information from RFID reader """
-		is_ok,lst = self.send_command( "i" , max_read = 5, as_string=True ) # Response should comes within the 5 lines
+		is_ok,lst = self.send_command( "i" , max_read = 10, as_string=True ) # Response should comes within the 5 lines
 		return lst # a list of string
 
 	def eeprom_read( self, enabled ):
 		""" Enable/disable EEPROM reading """
 		self._read_eeprom = enabled
-		is_ok,lst = self.send_command( "e%s" % (1 if enabled else 0), max_read=2 )
+		is_ok,lst = self.send_command( "e%s" % (1 if enabled else 0), max_read=4 )
 
 	def read_blocks( self, from_block, to_block=None ):
 		""" Reader must read a given block toghether with UID (block at a given index 0..x).
