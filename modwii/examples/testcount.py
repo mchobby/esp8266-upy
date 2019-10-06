@@ -1,8 +1,11 @@
 '''
 Test the Olimex MOD-Wii-UEXT-NUNCHUCK game controler.
 
-MOD-Wii-UEXT-NUNCHUCK : http://shop.mchobby.be/product.php?id_product=1416 
-MOD-Wii-UEXT-NUNCHUCK : https://www.olimex.com/Products/Modules/Sensors/MOD-WII/MOD-Wii-UEXT-NUNCHUCK/  
+display direction every 500ms
+display the buttons pressure count every 2 seconds.
+
+MOD-Wii-UEXT-NUNCHUCK : http://shop.mchobby.be/product.php?id_product=1416
+MOD-Wii-UEXT-NUNCHUCK : https://www.olimex.com/Products/Modules/Sensors/MOD-WII/MOD-Wii-UEXT-NUNCHUCK/
 
 The MIT License (MIT)
 Copyright (c) 2018 Dominique Meurisse, support@mchobby.be, shop.mchobby.be
@@ -23,30 +26,36 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 from machine import I2C, Pin
-from time import sleep_ms
+import time
 from wiichuck import WiiChuck
 
+# Pyboard
+# i2c = I2C( 2 ) # Y10=SDA, Y9=SCL
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
 wii = WiiChuck( i2c ) # default address=0x58
 
+dir_time   = time.time()
+count_time = time.time()
 while True:
-	# Detect direction from boolean property
-	direction = ''
-	if wii.joy_up:
-		direction = 'Up'
-	elif wii.joy_down:
-		direction = 'Down'
-	elif wii.joy_right:
-		direction = '>>>'
-	elif wii.joy_left:
-		direction = '<<<'
+	if time.time()-dir_time > 0.5:
+		# Detect direction from boolean property
+		direction = ''
+		if wii.joy_up:
+			direction = 'Up'
+		elif wii.joy_down:
+			direction = 'Down'
+		elif wii.joy_right:
+			direction = '>>>'
+		elif wii.joy_left:
+			direction = '<<<'
+		print( "Joy direction : %s" % (direction) )
+		dir_time = time.time()
 
-	print( "-"*20 )
-	# Test button states
-	print( "Button C: %s" % wii.c )
-	print( "Button Z: %s" % wii.z )
-	# print X, Y analog value + detected direction
-	print( "Joy X, Y: %4d,%4d  (%s)" % (wii.joy_x, wii.joy_y, direction) )
+	if time.time()-count_time > 2:
+		# Test button states
+		print( "C Button pressure count: %s" % wii.c_count )
+		print( "Z Button pressure count: %s" % wii.z_count )
+		count_time = time.time()
 
 	wii.update()
-	sleep_ms( 150 )
+	time.sleep_ms( 5 )
