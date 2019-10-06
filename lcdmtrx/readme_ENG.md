@@ -1,8 +1,5 @@
 [Ce fichier existe également en FRANCAIS ici](readme.md)
 
-CURRENTLY UNDER TRANSLATION
-
-
 # Using a 2x16 chars RGB LCD display with USB/Serial backpack
 
 This library offer classes to drive the Adafruit's USB+Serial LCD backpack wich handle a LCD display of (2x 16 characters) + RGB backlight.
