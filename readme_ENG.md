@@ -166,7 +166,7 @@ Explore it by:
       <strong>Manufacturer</strong> : ADAFRUIT<br />
 <ul>
 <li>See <a href="http://shop.mchobby.be/product.php?id_product=132">MCP4725 12 bits DAC @ MCHobby : Convertisseur Digital/Analogique pour MicroControlleur, interface I2C</a></li>
-<li>See <a href="https://www.adafruit.com/product/935">MCP4725 12 bits DAC @ Adafruit : High precision temperature sensor</a></li>
+<li>See <a href="https://www.adafruit.com/product/935">MCP4725 12 bits DAC @ Adafruit : 12 bits DAC over I2C bus</a></li>
 </ul>
       </td>
   </tr>
@@ -273,6 +273,18 @@ Explore it by:
       <strong>Manufacturer</strong> : OLIMEX<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/product.php?id_product=1411">Afficheur OLED 128 x 64 avec interface I2C et UEXT</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/modrfid">modrfid</a></td>
+      <td><strong>Components</strong> : MOD-RFID1536MIFARE<br />
+      <strong>Interfaces</strong> : UART, UEXT<br />
+<small>NFC RFID reader writer for 13.56Mhz NFC MIFARE RFID tags.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1619">MOD-RFID1536MIFARE @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/RFID/MOD-RFID1356MIFARE/">MOD-RFID1536MIFARE @ Olimex</a></li>
 </ul>
       </td>
   </tr>

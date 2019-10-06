@@ -90,6 +90,18 @@ Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, 
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/modrfid">modrfid</a></td>
+      <td><strong>Composants</strong> : MOD-RFID1536MIFARE<br />
+      <strong>Interfaces</strong> : UART, UEXT<br />
+<small>MOD-RFID1356 MIFARE : lecteur NFC / RFID Mifare via port série/usb-série/usb-hid.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1619">MOD-RFID1536MIFARE @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/RFID/MOD-RFID1356MIFARE/">MOD-RFID1536MIFARE @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modrgb">modrgb</a></td>
       <td><strong>Composants</strong> : MOD-RGB<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

@@ -106,7 +106,7 @@
 			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
 			"ressources"    : [ { "label" : "MCP4725 12 bits DAC @ MCHobby : Convertisseur Digital/Analogique pour MicroControlleur, interface I2C",
 												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=132" },
-														{ "label" : "MCP4725 12 bits DAC @ Adafruit : High precision temperature sensor",
+														{ "label" : "MCP4725 12 bits DAC @ Adafruit : 12 bits DAC over I2C bus",
 															"url"   : "https:\/\/www.adafruit.com\/product\/935" }
 												],
 			"descr"	: {"FR" : "Le MCP4725 (bus I2C) est un DAC -ou- une vraie sortie Analogique 12 bits (0 à 65535).",
@@ -447,6 +447,20 @@
 												],
 			"descr"	: {"FR" : "Un afficheur 8x8 LEDs RGB chaînable.",
 								 "ENG": "A 8x8 RGB led display that can be daisy chained."
+								}
+		},
+		{	"folder"        : "modrfid",
+			"components"    : ["MOD-RFID1536MIFARE"],
+			"interfaces"    : ["UART","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-RFID1536MIFARE @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1619" },
+													{ "label" : "MOD-RFID1536MIFARE @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/RFID\/MOD-RFID1356MIFARE\/" }
+												],
+			"descr"	: {"FR" : "MOD-RFID1356 MIFARE : lecteur NFC \/ RFID Mifare via port série\/usb-série\/usb-hid.",
+								 "ENG": "NFC RFID reader writer for 13.56Mhz NFC MIFARE RFID tags."
 								}
 		},
 		{	"folder"        : "pca9685",
