@@ -3,25 +3,25 @@
 CURRENTLY UNDER TRANSLATION
 
 
-# Utiliser un afficheur LCD RGB 2x16 caractères avec backpack USB/Série
+# Using a 2x16 chars RGB LCD display with USB/Serial backpack
 
-Cette bibliothèque propose un pilote pour gérer le backpack Adafruit USB+Série LCD qui propose un affichage LCD Matrice (2x 16 caractères) et rétro-éclairage RGB.
+This library offer classes to drive the Adafruit's USB+Serial LCD backpack wich handle a LCD display of (2x 16 characters) + RGB backlight.
 
 ![USB/Serial LCD Backpack from Adafruit](docs/_static/lcdmatrix.jpg)
 
-Pour plus d'information, n'hésitez pas à consulter notre [fiche produit](http://shop.mchobby.be/product.php?id_product=475) ou [notre tutoriel Arduino & Raspberry-Pi](http://wiki.mchobby.be/index.php?title=LCD-USB-TTL).
+For more information, please check this [product sheet](http://shop.mchobby.be/product.php?id_product=475) or [our Arduino & Raspberry-Pi tutorial](http://wiki.mchobby.be/index.php?title=LCD-USB-TTL).
 
-# brancher
+# Wiring
 
-Le backpack utilise une logique 5V. Il est possible de le brancher directement sur la Pyboard car celle-ci est tolérante 5V. Idéalement, il faudrait utiliser un [_Level Shifter_](https://shop.mchobby.be/fr/breakout/131-convertisseur-logique-4-canaux-bi-directionnel-i2c-compatible-3232100001312-adafruit.html).
+The backpack use 5V power logic. You can wire it directly to a Pyboard because that board is 5V tolerant. It would be better to user [_Level Shiftesr_](https://shop.mchobby.be/fr/breakout/131-convertisseur-logique-4-canaux-bi-directionnel-i2c-compatible-3232100001312-adafruit.html) to avoids any kind of damage on 3.3V systems.
 
-![Brancher le LCD USB/Serie sur la Pyboard](docs/_static/lcdmtrx-to-pyboard.jpg)
+![Wire the USB/Serial LCD to a Pyboard](docs/_static/lcdmtrx-to-pyboard.jpg)
 
-# Utiliser
+# Test it
 
-Le bibliothèque contient différents exemples: `writetest.py`, `fulltest.py`, `frenchtest.py` . Le script `frenchtest.py` permet d'utiliser la matrice LCD avec des caractères européen comme é,è,ê,ç,€ .
+The library contains various examples: `writetest.py`, `fulltest.py`, `frenchtest.py` . The `frenchtest.py` script allows to draw frechy's chars like é,è,ê,ç,€ on the LCD.
 
-Le script `writetest.py` est le plus simple et présente déjà une grande partie des fonctionnalités de la bibliothèque.
+The `writetest.py` is the most simple and already covers a wide variety of features.
 
 ```
 from pyb import UART
@@ -30,31 +30,31 @@ import time
 
 uart = UART(3, 9600) # RX = Y10, TX = Y9
 
-LCD_COLS = 16 # Taille du LCD 16 caractères x 2 lignes
+LCD_COLS = 16 # LCD Size: 16 characters x 2 lines
 LCD_ROWS = 2
 
 
 lcd = LcdMatrix( uart )
 
-# Initialiser la taille du LCD (et sauver dans l'EEPROM)
+# Init the LCD size (ans save it to the EEPROM)
 lcd.set_lcd_size( LCD_COLS, LCD_ROWS )
 lcd.clear_screen()
 
 
-# Activer/désactiver le rétro-éclairage
+# Activate/deactivate the backlight
 lcd.activate_lcd( True );
 
-# Constrat par défaut
+# Default contrast
 lcd.contrast()
 
-# Luminosité max + couleur RGB
+# Max brightness + RGB color
 lcd.brightness( 255 )
 
-# Couleur RBG
+# RBG Color
 #lcd.color( 255, 17, 30 )
 lcd.color( 0, 255, 0 )
 
-# Position d'origine
+# Cursor at original position & clear the screen
 lcd.clear_screen()
 
 # Auto Scroll
@@ -67,16 +67,15 @@ time.sleep(1)
 lcd.write(" Et ca scroll:-)")
 time.sleep(1)
 
-# Tester avec le retour à la ligne
-# \r fait un retour à ligne et est insensible à la valeur de autoscroll.
+# Test the screen with carriage return embeded into strings
+# \r makes carriage return and is not sensitive to autoscroll settings.
 lcd.autoscroll( False )
 lcd.clear_screen()
 lcd.write( "Ligne 1\rLigne 2" )
 time.sleep(1)
 
-# Si on ecrit une longue ligne de texte, seul les "x" derniers
-# caractères seront affichés sur la ligne du LCD... SANS SAT DE
-# LIGNE. Les "y" premiers caractères sont simplement ignorés!
+# If we wrote a long ligne of texte, only the lasts "x" characters would be
+# displayed on the line of the LCD... The firsts "y" characters would be ignored!
 lcd.autoscroll( True )
 if (LCD_ROWS == 4):
 	lcd.write("Voici une longue longue ligne de texte  ")
@@ -84,7 +83,7 @@ else:
 	lcd.write("Voici une longue ligne...")
 time.sleep(1)
 
-# Déplacement du curseur
+# Moving the cursor on LCD before printing
 lcd.clear_screen()
 lcd.autoscroll( False )
 lcd.position( 1, 1 )
@@ -96,9 +95,9 @@ lcd.write( 'c' )
 lcd.position( LCD_ROWS, LCD_COLS )
 lcd.write( 'd' )
 
-lcd.writepos( 1, 7, ':-)' ) # Déplacement de curseur + affichage
+lcd.writepos( 1, 7, ':-)' ) # Move cursor + display
 ```
 
-# Où acheter
+# Where to buy
 * [USB/Serial LCD Backpack @ MC Hobby](http://shop.mchobby.be/product.php?id_product=475)
 * [USB/Serial LCD Backpack @ Adafruit](https://www.adafruit.com/product/782)
