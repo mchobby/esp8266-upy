@@ -1,10 +1,8 @@
 # The MIT License (MIT)
 #
-# Copyright (c) 2017 Tony DiCola for Adafruit Industries
-#               for original CircuitPython version
-# 2019 DMeurisse for MCHobby.be
-#               for MicroPython back portage (the current file)
-#               Keeping original license.
+# 2019 DMeurisse for MCHobby.be  - MicroPython back portage (this current file). Keeping original license.
+#
+# Copyright (c) 2017 Tony DiCola for Adafruit Industries for original CircuitPython version
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
