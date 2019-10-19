@@ -490,5 +490,19 @@
 			"descr"	: {"FR" : "Afficheur LCD 2 lignes, 16 caractères, Arrière plan RGB. Interface USB + Série",
 								 "ENG": "USB + Serial Backpack Kit with 16x2 RGB backlight positive LCD - Black on RGB."
 								}
+		},
+		{	"folder"        : "tcs34725",
+			"components"    : ["TCS34725"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "TCS34725 - capteur de couleur RGB + Filtre IR + LED blanche @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html" },
+													{ "label" : "RGB Color Sensor with IR filter and White LED - TCS34725 @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1334" }
+												],
+			"descr"	: {"FR" : "Capturer la couleur (rgb ou Kelvin) avec un capteur TCS34725 + LED + filtre IR",
+								 "ENG": "Read the color (rgb or Kelvin) with a TCS34725 sensor + MED + IR filter."
+								}
 		}
 ]

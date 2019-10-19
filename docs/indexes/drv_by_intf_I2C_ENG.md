@@ -321,6 +321,18 @@ I2C bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/tcs34725">tcs34725</a></td>
+      <td><strong>Components</strong> : TCS34725<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Read the color (rgb or Kelvin) with a TCS34725 sensor + MED + IR filter.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, FEATHER-ESP8266<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html">TCS34725 - capteur de couleur RGB + Filtre IR + LED blanche @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/1334">RGB Color Sensor with IR filter and White LED - TCS34725 @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/tsl2561">tsl2561</a></td>
       <td><strong>Components</strong> : TSL2561, ADA439<br />
       <strong>Interfaces</strong> : I2C<br />
