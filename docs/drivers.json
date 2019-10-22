@@ -504,5 +504,19 @@
 			"descr"	: {"FR" : "Capturer la couleur (rgb ou Kelvin) avec un capteur TCS34725 + LED + filtre IR",
 								 "ENG": "Read the color (rgb or Kelvin) with a TCS34725 sensor + MED + IR filter."
 								}
+		},
+		{	"folder"        : "mpr121",
+			"components"    : ["MPR121"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "MPR121 - capteur capacitif 12 entrées/touches @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/1685-capteur-capacitif-12-touches-mpr121-3232100016859-adafruit.html" },
+													{ "label" : "12-Key Capacitive Touch Sensor Breakout - MPR121 @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1982" }
+												],
+			"descr"	: {"FR" : "Créer des pastilles/entrées capacitives (tactiles) avec le MPR121",
+								 "ENG": "Create tactile pad/inputs with capacitive effect with the MPR121 chip."
+								}
 		}
 ]

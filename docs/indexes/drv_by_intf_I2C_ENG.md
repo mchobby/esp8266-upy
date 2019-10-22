@@ -218,6 +218,18 @@ I2C bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/mpr121">mpr121</a></td>
+      <td><strong>Components</strong> : MPR121<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Create tactile pad/inputs with capacitive effect with the MPR121 chip.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, FEATHER-ESP8266<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/tactile-flex-pot-softpad/1685-capteur-capacitif-12-touches-mpr121-3232100016859-adafruit.html">MPR121 - capteur capacitif 12 entrées/touches @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/1982">12-Key Capacitive Touch Sensor Breakout - MPR121 @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/ncd-fet-solenoid">ncd-fet-solenoid</a></td>
       <td><strong>Components</strong> : I2CDRV8W4I12V, MCP23008<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
