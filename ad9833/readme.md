@@ -12,7 +12,7 @@ La résolution en fréquence sur 28 bits est 12.500.000 / 268.435.455 = 0.06556 
 
 L' AD9833 genere un signal avec une tension de 0.6 Vpp (pic à pic).
 
-Pour plus d'information, n'hésitez pas à consulter cette [fiche produit](http://shop.mchobby.be/product.php?id_product=0) .
+Pour plus d'information, n'hésitez pas à consulter cette [fiche produit](http://shop.mchobby.be/product.php?id_product=1689) .
 
 # Brancher
 
@@ -67,4 +67,4 @@ Ce qui produit le résultat suivant:
 # Où acheter
 UPDATE ID IN FOLLOWING LINK
 
-* [breakout AD9833 - generateur de signal @ MC Hobby](http://shop.mchobby.be/product.php?id_product=0)
+* [breakout AD9833 - generateur de signal @ MC Hobby](http://shop.mchobby.be/product.php?id_product=1689)

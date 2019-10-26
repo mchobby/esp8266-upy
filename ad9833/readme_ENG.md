@@ -12,7 +12,7 @@ The frequency resolution for 28 bits is 12.500.000 / 268.435.455 = 0.06556 Hertz
 
 The AD9833 generates a signal with a voltage of 0.6 Vpp (peak to peak).
 
-For more information, please check this [product sheet](http://shop.mchobby.be/product.php?id_product=0) .
+For more information, please check this [product sheet](http://shop.mchobby.be/product.php?id_product=1689) .
 
 # Wiring
 
@@ -67,4 +67,4 @@ Which produce the following result:
 # Shopping list
 UPDATE ID IN FOLLOWING LINK
 
-* [AD9833 breakout - signal generator @ MC Hobby](http://shop.mchobby.be/product.php?id_product=0)
+* [AD9833 breakout - signal generator @ MC Hobby](http://shop.mchobby.be/product.php?id_product=1689)
