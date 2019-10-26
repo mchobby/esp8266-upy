@@ -518,5 +518,17 @@
 			"descr"	: {"FR" : "Créer des pastilles/entrées capacitives (tactiles) avec le MPR121",
 								 "ENG": "Create tactile pad/inputs with capacitive effect with the MPR121 chip."
 								}
+		},
+		{	"folder"        : "ad9833",
+			"components"    : ["AD9833"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : [],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "AD9833 - signal generator Sinus, triangle and clock @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/1689-generateur-de-signal-sinus-triangle-clock-0-125-mhz.html" }
+												],
+			"descr"	: {"FR" : "Créer un générateur de signal à l'aide de l AD9833",
+								 "ENG": "Create a signal generator with the MPR121 chip."
+								}
 		}
 ]

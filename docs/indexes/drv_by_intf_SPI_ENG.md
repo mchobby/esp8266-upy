@@ -20,6 +20,17 @@ SPI bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/ad9833">ad9833</a></td>
+      <td><strong>Components</strong> : AD9833<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Create a signal generator with the MPR121 chip.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/breakout/1689-generateur-de-signal-sinus-triangle-clock-0-125-mhz.html">AD9833 - signal generator Sinus, triangle and clock @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modled8x8">modled8x8</a></td>
       <td><strong>Components</strong> : MOD-LED8x8RGB<br />
       <strong>Interfaces</strong> : GPIO, SPI<br />
