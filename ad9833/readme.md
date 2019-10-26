@@ -65,6 +65,4 @@ Ce qui produit le résultat suivant:
 ![Breakout AD9833](docs/_static/ad9833_1300hz.jpg)
 
 # Où acheter
-UPDATE ID IN FOLLOWING LINK
-
 * [breakout AD9833 - generateur de signal @ MC Hobby](http://shop.mchobby.be/product.php?id_product=1689)
