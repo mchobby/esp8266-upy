@@ -24,6 +24,7 @@
 # Code Ported from Arduino project  "Signal Generator with AD9833"
 # from Cezar Chirila - contact@cezarchirila.com (published AllAboutCircutis.com )
 import struct
+from time import sleep_us
 
 SLEEP_NO_POWER_DOWN  = 0
 SLEEP_DAC_POWER_DOWN = 1
@@ -60,6 +61,7 @@ class AD9833:
 		""" Send 16 bits data to the generator """
 		# FSYNC pin must be pulled low when new data is received by AD9833
 		self.fsync.value( 0 ) # FSYNC LOW)
+		sleep_us(10)
 		data = struct.pack( ">H", value )
 
 		# SPI.transfer(highByte(data)); //  Send the first 8 MSBs of data
@@ -67,6 +69,7 @@ class AD9833:
 		self.spi.write( data )
 		# Set the FSYNC pin to high then end SPI transaction
 		self.fsync.value( 1 )
+		sleep_us(10)
 
 	@property
 	def freq( self ):

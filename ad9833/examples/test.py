@@ -7,7 +7,8 @@ from ad9833 import *
 # Y5 = /SS  --> FUNC
 
 # Phase and polarity ARE REQUIRED required for SPI bus in mode 2!
-spi = SPI(2, polarity=1, phase=0)
+# Do not hesitate to slow down the SPI bus @ baudrate=9600
+spi = SPI(2,  baudrate=4800, polarity=1, phase=0)
 ssel = Pin( "Y5", Pin.OUT, value=1) # use /ss
 
 # mclk is the source clock on the AD9833 board

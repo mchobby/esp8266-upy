@@ -18,6 +18,8 @@ Pour plus d'information, n'hésitez pas à consulter cette [fiche produit](http:
 
 ![Raccorder un AD9833 sur une Pyboard](docs/_static/ad9833-to-pyboard.jpg)
 
+__ATTENTION__ : les faux contacts (breadboard, fil de mauvaise qualité) seront vos pires ennemis!
+
 # Tester
 
 La bibliothèque `ad9833.py` est disponible dans le sous-répertoire /lib . Ce fichier doit être disponible sur la carte avant d'exécuter le code d'exemple.
