@@ -18,6 +18,8 @@ For more information, please check this [product sheet](http://shop.mchobby.be/p
 
 ![Wire the AD9833 to Pyboard](docs/_static/ad9833-to-pyboard.jpg)
 
+__ATTENTION__ : bad quality connections (breadboard, bad quality wire) will drive you crazy! 
+
 # Test it
 
 The `ad9833.py` library is available in the /lib subfolder. That file must be made available on your MicroPython board prior to use the example code.
