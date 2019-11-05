@@ -535,7 +535,7 @@
 			"components"    : ["JOY-BONNET"],
 			"interfaces"    : ["HAT"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYB405"],
+			"plateforms"    : [],
 			"ressources"    : [ { "label" : "NADHAT PYB405 @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/micropython\/1653-hat-micropython-pyb405-nadhat-3232100016538-garatronic.html" },
 													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ MCHobby",

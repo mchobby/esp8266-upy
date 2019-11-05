@@ -71,7 +71,7 @@ voir
       <td><strong>Composants</strong> : JOY-BONNET<br />
       <strong>Interfaces</strong> : HAT<br />
 <small>Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405</small><br/><br />
-      <strong>Testé avec</strong> : PYB405<br />
+      <strong>Testé avec</strong> : <br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/micropython/1653-hat-micropython-pyb405-nadhat-3232100016538-garatronic.html">NADHAT PYB405 @ MCHobby</a></li>
