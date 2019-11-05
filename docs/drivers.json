@@ -530,5 +530,21 @@
 			"descr"	: {"FR" : "Créer un générateur de signal à l'aide de l AD9833",
 								 "ENG": "Create a signal generator with the MPR121 chip."
 								}
+		},
+		{	"folder"        : "hat-joy-bonnet",
+			"components"    : ["JOY-BONNET"],
+			"interfaces"    : ["HAT"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYB405"],
+			"ressources"    : [ { "label" : "NADHAT PYB405 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/micropython\/1653-hat-micropython-pyb405-nadhat-3232100016538-garatronic.html" },
+													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-zero-w\/1116-gamepad-pizero-joy-bonnet-3232100011168-adafruit.html" },
+													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3464" }
+												],
+			"descr"	: {"FR" : "Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405",
+								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
+								}
 		}
 ]
