@@ -1,5 +1,6 @@
 # Tooling
 docs/push.sh
+pushgit.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
