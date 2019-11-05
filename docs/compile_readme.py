@@ -160,6 +160,7 @@ def compile_all():
  		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_UEXT.md', 'lang_code': 'fr', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_QWIIC.md', 'lang_code': 'fr', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_FEATHERWING.md', 'lang_code': 'fr', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf.md', 'destin' : 'indexes/drv_by_intf_HAT.md', 'lang_code': 'fr', 'code' : 'HAT', 'filter' : lambda driver : any(['HAT'==intf for intf in driver.interfaces]) },
 
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_GPIO_ENG.md', 'lang_code': 'eng', 'code' : 'GPIO', 'filter' : lambda driver : any(['GPIO'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_I2C_ENG.md', 'lang_code': 'eng', 'code' : 'I2C', 'filter' : lambda driver : any(['I2C'==intf for intf in driver.interfaces]) },
@@ -170,17 +171,20 @@ def compile_all():
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_UEXT_ENG.md', 'lang_code': 'eng', 'code' : 'UEXT', 'filter' : lambda driver : any(['UEXT'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_QWIIC_ENG.md', 'lang_code': 'eng', 'code' : 'QWIIC', 'filter' : lambda driver : any(['QWIIC'==intf for intf in driver.interfaces]) },
  		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_FEATHERWING_ENG.md', 'lang_code': 'eng', 'code' : 'FEATHERWING', 'filter' : lambda driver : any(['FEATHERWING'==intf for intf in driver.interfaces]) },
+ 		{'source' : '_static/_drv_by_intf_ENG.md', 'destin' : 'indexes/drv_by_intf_HAT_ENG.md', 'lang_code': 'eng', 'code' : 'HAT', 'filter' : lambda driver : any(['HAT'==intf for intf in driver.interfaces]) },
 
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_ADAFRUIT.md', 'lang_code': 'fr', 'code' : 'ADAFRUIT', 'filter' : lambda driver : any(['ADAFRUIT'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_OLIMEX.md', 'lang_code': 'fr', 'code' : 'OLIMEX', 'filter' : lambda driver : any(['OLIMEX'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NCD.md', 'lang_code': 'fr', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_SPARKFUN.md', 'lang_code': 'fr', 'code' : 'SPARKFUN', 'filter' : lambda driver : any(['SPARKFUN'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_GARATRONIC.md', 'lang_code': 'fr', 'code' : 'GARATRONIC', 'filter' : lambda driver : any(['GARATRONIC'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NONE.md', 'lang_code': 'fr', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) },
 
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_ADAFRUIT_ENG.md', 'lang_code': 'eng', 'code' : 'ADAFRUIT', 'filter' : lambda driver : any(['ADAFRUIT'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_OLIMEX_ENG.md', 'lang_code': 'eng', 'code' : 'OLIMEX', 'filter' : lambda driver : any(['OLIMEX'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NCD_ENG.md', 'lang_code': 'eng', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_SPARKFUN_ENG.md', 'lang_code': 'eng', 'code' : 'SPARKFUN', 'filter' : lambda driver : any(['SPARKFUN'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_GARATRONIC_ENG.md', 'lang_code': 'eng', 'code' : 'GARATRONIC', 'filter' : lambda driver : any(['GARATRONIC'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NONE_ENG.md', 'lang_code': 'eng', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) }
 
 	]

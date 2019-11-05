@@ -2,5 +2,6 @@
   "OLIMEX"   : { "name" : "Olimex Ltd"         , "url" : "https:\/\/www.olimex.com\/"},
   "NCD"      : { "name" : "National Control Device", "url" : "https:\/\/ncd.io\/"},
   "SPARKFUN" : { "name" : "SparkFun ", "url" : "https:\/\/www.sparkfun.com\/"},
+	"GARATRONIC": { "name" : "Garatronic", "url" : "https:\/\/garatronic.fr\/"},
 	"NONE"      : { "name" : "(other)", "url" : ""}
 }

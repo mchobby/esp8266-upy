@@ -30,9 +30,12 @@
 			{ "descr" : { "FR" : "Connecteur I2C Qwiic de Sparkfun (Sparkfun.com)",
 										"ENG" : "Qwiic I2C connector from Sparfun (Sparkfun.com)" }
 			},
+	"HAT":
+			{ "descr" : { "FR" : "Connecteur HAT Raspberry-Pi pour les extensions utilisable avec la NadHat PYB405 (Variante Pyboard de Garatronic.fr)",
+										"ENG" : "Raspberry-Pi's HAT  connector to use with the NadHat PYB405 (Pyboard variant from Garatronic.fr)" }
+			},
 	"FEATHERWING":
 			{ "descr" : { "FR" : "Connecteur FEATHERWING pour les extension Feather (Adafruit.com)",
 										"ENG" : "FEATHERWING connector for the Feather expansion (Adafruit.com)" }
 			}
-
 }
