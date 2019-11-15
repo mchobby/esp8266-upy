@@ -33,6 +33,14 @@ Explorer par:
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../tree/master/COLORS">COLORS</a></td>
+      <td><strong>Composants</strong> : <br />
+      <strong>Interfaces</strong> : <br />
+<small>Bibliothèque de gestion de couleurs (et outils)</small><br/><br />
+      <strong>Testé avec</strong> : <br />
+      <strong>Fabricant</strong> : <br />
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/NCD">NCD</a></td>
       <td><strong>Composants</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />

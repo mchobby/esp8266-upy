@@ -32,6 +32,14 @@ Explore it by:
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../tree/master/COLORS">COLORS</a></td>
+      <td><strong>Components</strong> : <br />
+      <strong>Interfaces</strong> : <br />
+<small>Color management/tool library</small><br/><br />
+      <strong>Tested with</strong> : <br />
+      <strong>Manufacturer</strong> : <br />
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/NCD">NCD</a></td>
       <td><strong>Components</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />

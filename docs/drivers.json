@@ -546,5 +546,15 @@
 			"descr"	: {"FR" : "Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405",
 								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
 								}
+		},
+		{	"folder"        : "COLORS",
+			"components"    : [],
+			"interfaces"    : [],
+			"manufacturers" : [],
+			"plateforms"    : [],
+			"ressources"    : [],
+			"descr"	: {"FR" : "Bibliothèque de gestion de couleurs (et outils)",
+								 "ENG": "Color management\/tool library"
+								}
 		}
 ]
