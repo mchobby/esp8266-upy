@@ -556,5 +556,23 @@
 			"descr"	: {"FR" : "Bibliothèque de gestion de couleurs (et outils)",
 								 "ENG": "Color management\/tool library"
 								}
+		},
+		{	"folder"        : "lsm303",
+			"components"    : ["LSM303D"],
+			"interfaces"    : ["UNO-R3", "I2C"],
+			"manufacturers" : ["POLOLU"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "LSM303D breakout - 3D Compass and Accelerometer @ Pololu",
+														"url"   : "https:\/\/www.pololu.com\/product\/2127" },
+													{ "label" : "Robot Zumo pour Arduino (2510) @ Pololu",
+														"url"   : "https:\/\/www.pololu.com\/product\/2510" },
+													{ "label" : "Robot Zumo pour Arduino @ MC Hobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/prototypage-robotique-roue\/448-robot-zumo-pour-arduino-assemble-moteurs-3232100004481-pololu.html" },
+													{ "label" : "PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html" }
+												],
+			"descr"	: {"FR" : "Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405",
+								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
+								}
 		}
 ]

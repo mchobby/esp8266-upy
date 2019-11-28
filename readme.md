@@ -24,9 +24,9 @@ Voici une description des bibliothèques disponibles dans ce dépôt. <strong>Ch
 
 Explorer par:
 * Interface:
-[FEATHERWING](docs/indexes/drv_by_intf_FEATHERWING.md), [GPIO](docs/indexes/drv_by_intf_GPIO.md), [HAT](docs/indexes/drv_by_intf_HAT.md), [I2C](docs/indexes/drv_by_intf_I2C.md), [NCD](docs/indexes/drv_by_intf_NCD.md), [ONEWIRE](docs/indexes/drv_by_intf_ONEWIRE.md), [QWIIC](docs/indexes/drv_by_intf_QWIIC.md), [SPI](docs/indexes/drv_by_intf_SPI.md), [UART](docs/indexes/drv_by_intf_UART.md), [UEXT](docs/indexes/drv_by_intf_UEXT.md)
+[FEATHERWING](docs/indexes/drv_by_intf_FEATHERWING.md), [GPIO](docs/indexes/drv_by_intf_GPIO.md), [HAT](docs/indexes/drv_by_intf_HAT.md), [I2C](docs/indexes/drv_by_intf_I2C.md), [NCD](docs/indexes/drv_by_intf_NCD.md), [ONEWIRE](docs/indexes/drv_by_intf_ONEWIRE.md), [QWIIC](docs/indexes/drv_by_intf_QWIIC.md), [SPI](docs/indexes/drv_by_intf_SPI.md), [UART](docs/indexes/drv_by_intf_UART.md), [UEXT](docs/indexes/drv_by_intf_UEXT.md), [UNO-R3](docs/indexes/drv_by_intf_UNO-R3.md)
 * Fabriquant:
-[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
+[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
 
 <table>
 <thead>
@@ -177,6 +177,20 @@ Explorer par:
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html">USB + Serial Backpack @ MCHobby</a></li>
 <li>Voir <a href="https://www.adafruit.com/product/782">USB + Serial Backpack @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/lsm303">lsm303</a></td>
+      <td><strong>Composants</strong> : LSM303D<br />
+      <strong>Interfaces</strong> : UNO-R3, I2C<br />
+<small>Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : POLOLU<br />
+<ul>
+<li>Voir <a href="https://www.pololu.com/product/2127">LSM303D breakout - 3D Compass and Accelerometer @ Pololu</a></li>
+<li>Voir <a href="https://www.pololu.com/product/2510">Robot Zumo pour Arduino (2510) @ Pololu</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/prototypage-robotique-roue/448-robot-zumo-pour-arduino-assemble-moteurs-3232100004481-pololu.html">Robot Zumo pour Arduino @ MC Hobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/nouveaute/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html">PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby</a></li>
 </ul>
       </td>
   </tr>
