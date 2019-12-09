@@ -571,8 +571,8 @@
 													{ "label" : "PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html" }
 												],
-			"descr"	: {"FR" : "Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405",
-								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
+			"descr"	: {"FR" : "Utiliser une boussole et accéléromètre LSM303D avec MicroPython",
+								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
 								}
 		}
 ]

@@ -80,7 +80,7 @@ I2C bus
   <tr><td><a href="../../../../tree/master/lsm303">lsm303</a></td>
       <td><strong>Components</strong> : LSM303D<br />
       <strong>Interfaces</strong> : UNO-R3, I2C<br />
-<small>Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405.</small><br/><br />
+<small>Use a LSM303D compas and accelerometer with MicroPython.</small><br/><br />
       <strong>Tested with</strong> : PYBOARD<br />
       <strong>Manufacturer</strong> : POLOLU<br />
 <ul>

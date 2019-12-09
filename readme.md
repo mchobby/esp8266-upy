@@ -183,7 +183,7 @@ Explorer par:
   <tr><td><a href="../../tree/master/lsm303">lsm303</a></td>
       <td><strong>Composants</strong> : LSM303D<br />
       <strong>Interfaces</strong> : UNO-R3, I2C<br />
-<small>Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405</small><br/><br />
+<small>Utiliser une boussole et accéléromètre LSM303D avec MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD<br />
       <strong>Fabricant</strong> : POLOLU<br />
 <ul>
