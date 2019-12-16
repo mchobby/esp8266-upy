@@ -1,6 +1,6 @@
 [This file also exists in ENGLISH here](readme_ENG.md)
 
-# Utiliser un clavier 16 touches à membrane (Keypad) avec PyBoard
+# Utiliser un clavier 16 touches à membrane (Keypad) avec MicroPython PyBoard
 
 Un keypad/clavier à membrane est constitué d'une matrice de lignes et colonnes avec des touches aux intersections.  
 
