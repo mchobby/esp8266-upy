@@ -37,5 +37,9 @@
 	"FEATHERWING":
 			{ "descr" : { "FR" : "Connecteur FEATHERWING pour les extension Feather (Adafruit.com)",
 										"ENG" : "FEATHERWING connector for the Feather expansion (Adafruit.com)" }
+			},
+	"UNO-R3":
+			{ "descr" : { "FR" : "Connecteur PYBOARD-UNO-R3 : UNO-R3 pour MicroPython Pyboard (MCHobby.be, Garatronic.fr)",
+										"ENG" : "PYBOARD-UNO-R3 adapter : UNO-R3 for MicroPython Pyboard (MCHobby.be, Garatronic.fr)" }
 			}
 }
