@@ -121,6 +121,20 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/ccs811">ccs811</a></td>
+      <td><strong>Composants</strong> : CCS811<br />
+      <strong>Interfaces</strong> : UNO-R3, I2C<br />
+<small>CCS811 - Capteur qualité d'air - COV et eCO2 avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : ADAFRUIT, OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1274">CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/3566">CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ Adafruit</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/1780">MOD-ENV capteur environnemental @ MC Hobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/dht11">dht11</a></td>
       <td><strong>Composants</strong> : DHT11<br />
       <strong>Interfaces</strong> : GPIO<br />
@@ -226,6 +240,18 @@ Explorer par:
 <ul>
 <li>Voir <a href="http://shop.mchobby.be/product.php?id_product=572">MCP9808 @ MCHobby : mesure de température de précision via I2C</a></li>
 <li>Voir <a href="https://www.adafruit.com/product/1782">MCP9808 @ Adafruit : High precision temperature sensor</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/modenv">modenv</a></td>
+      <td><strong>Composants</strong> : CCS811, BME280<br />
+      <strong>Interfaces</strong> : UEXT, I2C<br />
+<small>Capteur environnementale tout-en-un - BME280 + CCS811 - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1280">MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
 </ul>
       </td>
   </tr>

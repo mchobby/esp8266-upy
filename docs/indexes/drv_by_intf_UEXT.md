@@ -8,6 +8,18 @@ Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, 
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/modenv">modenv</a></td>
+      <td><strong>Composants</strong> : CCS811, BME280<br />
+      <strong>Interfaces</strong> : UEXT, I2C<br />
+<small>Capteur environnementale tout-en-un - BME280 + CCS811 - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1280">MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modio">modio</a></td>
       <td><strong>Composants</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

@@ -22,6 +22,32 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/ccs811">ccs811</a></td>
+      <td><strong>Components</strong> : CCS811<br />
+      <strong>Interfaces</strong> : UNO-R3, I2C<br />
+<small>CCS811 - air quality sensor - COV and eCO2 with MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT, OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1274">CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/3566">CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ Adafruit</a></li>
+<li>See <a href="https://www.adafruit.com/product/1780">MOD-ENV capteur environnemental @ MC Hobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/modenv">modenv</a></td>
+      <td><strong>Components</strong> : CCS811, BME280<br />
+      <strong>Interfaces</strong> : UEXT, I2C<br />
+<small>Environmental sensor all-in-one - BME280 + CCS811 - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1280">MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modio">modio</a></td>
       <td><strong>Components</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

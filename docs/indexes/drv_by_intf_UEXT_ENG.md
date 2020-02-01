@@ -8,6 +8,18 @@
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/modenv">modenv</a></td>
+      <td><strong>Components</strong> : CCS811, BME280<br />
+      <strong>Interfaces</strong> : UEXT, I2C<br />
+<small>Environmental sensor all-in-one - BME280 + CCS811 - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1280">MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modio">modio</a></td>
       <td><strong>Components</strong> : MOD-IO<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

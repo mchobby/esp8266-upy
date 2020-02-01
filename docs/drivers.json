@@ -574,5 +574,37 @@
 			"descr"	: {"FR" : "Utiliser une boussole et accéléromètre LSM303D avec MicroPython",
 								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
 								}
+		},
+		{	"folder"        : "ccs811",
+			"components"    : ["CCS811"],
+			"interfaces"    : ["UNO-R3", "I2C"],
+			"manufacturers" : ["ADAFRUIT","OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1274" },
+													{ "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3566" },
+													{ "label" : "MOD-ENV capteur environnemental @ MC Hobby",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1780" },
+													{ "label" : "MOD-ENV capteur environnemental @ MC Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
+												],
+			"descr"	: {"FR" : "CCS811 - Capteur qualité d'air - COV et eCO2 avec MicroPython",
+								 "ENG": "CCS811 - air quality sensor - COV and eCO2 with MicroPython."
+								}
+		},
+		{	"folder"        : "modenv",
+			"components"    : ["CCS811","BME280"],
+			"interfaces"    : ["UEXT", "I2C"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1280" },
+													{ "label" : "MOD-ENV capteur environnemental @ MC Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
+												],
+			"descr"	: {"FR" : "Capteur environnementale tout-en-un - BME280 + CCS811 - sous MicroPython",
+								 "ENG": "Environmental sensor all-in-one - BME280 + CCS811 - under MicroPython."
+								}
 		}
 ]
