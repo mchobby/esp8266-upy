@@ -577,7 +577,7 @@
 		},
 		{	"folder"        : "ccs811",
 			"components"    : ["CCS811"],
-			"interfaces"    : ["UNO-R3", "I2C"],
+			"interfaces"    : ["I2C"],
 			"manufacturers" : ["ADAFRUIT","OLIMEX"],
 			"plateforms"    : ["PYBOARD"],
 			"ressources"    : [ { "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ MCHobby",
