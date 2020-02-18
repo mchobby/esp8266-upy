@@ -235,8 +235,8 @@ class CCS811:
 
 			# _eCO2 = ((uint16_t)buf[0] << 8) | ((uint16_t)buf[1]);
 			# _TVOC = ((uint16_t)buf[2] << 8) | ((uint16_t)buf[3]);
-			self._TVOC = (data[0]<<8) | data[1]
-			self._eCO2 = (data[2]<<8) | data[3]
+			self._eCO2 = (data[0]<<8) | data[1]
+			self._TVOC = (data[2]<<8) | data[3]
 			if self.status.error :
 				return data[5]
 			else:
