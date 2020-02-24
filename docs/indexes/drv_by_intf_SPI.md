@@ -31,6 +31,18 @@ Bus SPI
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/max6675">max6675</a></td>
+      <td><strong>Composants</strong> : MOD-TC, MAX6675<br />
+      <strong>Interfaces</strong> : UEXT, SPI<br />
+<small>MAX6675 Amplificateur Thermocouple Type-K - MOD-TC - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1623">MOD-TC - Amplificateur Thermocouple Type-K d'Olimex @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-TC">MOD-TC - Amplificateur Thermocouple Type-K @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modled8x8">modled8x8</a></td>
       <td><strong>Composants</strong> : MOD-LED8x8RGB<br />
       <strong>Interfaces</strong> : GPIO, SPI<br />

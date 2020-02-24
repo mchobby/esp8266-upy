@@ -8,6 +8,18 @@
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/max6675">max6675</a></td>
+      <td><strong>Components</strong> : MOD-TC, MAX6675<br />
+      <strong>Interfaces</strong> : UEXT, SPI<br />
+<small>MAX6675 Type-K Thermocouple amplifier - MOD-TC - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1623">MOD-TC - Amplificateur Thermocouple Type-K d'Olimex @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-TC">MOD-TC - Amplificateur Thermocouple Type-K @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modenv">modenv</a></td>
       <td><strong>Components</strong> : CCS811, BME280<br />
       <strong>Interfaces</strong> : UEXT, I2C<br />
@@ -16,7 +28,7 @@
       <strong>Manufacturer</strong> : OLIMEX<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/product.php?id_product=1280">MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby</a></li>
-<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ Olimex</a></li>
 </ul>
       </td>
   </tr>

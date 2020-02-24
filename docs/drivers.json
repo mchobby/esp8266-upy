@@ -600,11 +600,25 @@
 			"plateforms"    : ["PYBOARD"],
 			"ressources"    : [ { "label" : "MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1280" },
-													{ "label" : "MOD-ENV capteur environnemental @ MC Olimex",
+													{ "label" : "MOD-ENV capteur environnemental @ Olimex",
 														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
 												],
 			"descr"	: {"FR" : "Capteur environnementale tout-en-un - BME280 + CCS811 - sous MicroPython",
 								 "ENG": "Environmental sensor all-in-one - BME280 + CCS811 - under MicroPython."
+								}
+		},
+		{	"folder"        : "max6675",
+			"components"    : ["MOD-TC","MAX6675"],
+			"interfaces"    : ["UEXT", "SPI"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-TC - Amplificateur Thermocouple Type-K d'Olimex @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1623" },
+													{ "label" : "MOD-TC - Amplificateur Thermocouple Type-K @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-TC" }
+												],
+			"descr"	: {"FR" : "MAX6675 Amplificateur Thermocouple Type-K - MOD-TC - sous MicroPython",
+								 "ENG": "MAX6675 Type-K Thermocouple amplifier - MOD-TC - under MicroPython."
 								}
 		}
 ]

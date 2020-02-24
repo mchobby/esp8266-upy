@@ -57,7 +57,7 @@ voir
   </tr>
   <tr><td><a href="../../../../tree/master/ccs811">ccs811</a></td>
       <td><strong>Composants</strong> : CCS811<br />
-      <strong>Interfaces</strong> : UNO-R3, I2C<br />
+      <strong>Interfaces</strong> : I2C<br />
 <small>CCS811 - Capteur qualité d'air - COV et eCO2 avec MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD<br />
       <strong>Fabricant</strong> : ADAFRUIT, OLIMEX<br />

@@ -79,7 +79,7 @@ Bus I2C
   </tr>
   <tr><td><a href="../../../../tree/master/ccs811">ccs811</a></td>
       <td><strong>Composants</strong> : CCS811<br />
-      <strong>Interfaces</strong> : UNO-R3, I2C<br />
+      <strong>Interfaces</strong> : I2C<br />
 <small>CCS811 - Capteur qualité d'air - COV et eCO2 avec MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD<br />
       <strong>Fabricant</strong> : ADAFRUIT, OLIMEX<br />
@@ -148,7 +148,7 @@ Bus I2C
       <strong>Fabricant</strong> : OLIMEX<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1280">MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby</a></li>
-<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ Olimex</a></li>
 </ul>
       </td>
   </tr>
