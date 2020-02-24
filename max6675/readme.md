@@ -105,7 +105,7 @@ C = 24.75
 
 __To do__
 
-# LOù acheter
+# Où acheter
 * [MicroPython board](https://shop.mchobby.be/fr/56-micropython) @ MCHobby
 * [MOD-TC with MAX6675](https://shop.mchobby.be/fr/nouveaute/1623-mod-tc-interface-thermo-couple-type-k-avec-max6675-et-connecteur-uext-3232100016231-olimex.html) @ MCHobby
 * [MOD-TC with MAX6675](https://www.olimex.com/Products/Modules/Sensors/MOD-TC/open-source-hardware) @ Olimex
