@@ -4,7 +4,7 @@ __CONTENT UNDER TRANSLATION__
 
 # Use a Type-K thermocouple via I2C (and MAX31855) under MicroPython
 
-The MOD-TC-MK2-31855 from Olimex is not only a MAX31855 thermocouple amplifier but also a PIC16F1503 microcontroler allowing to capture the thermocouple temperature over the I2C bus.
+The __MOD-TC-MK2-31855__ from Olimex is not only a MAX31855 thermocouple amplifier but also a PIC16F1503 microcontroler allowing to capture the thermocouple temperature over the I2C bus.
 
 ![MOD-TC-MK2-31855 from Olimex](docs/_static/mod-tc-mk2-31855.jpg)
 

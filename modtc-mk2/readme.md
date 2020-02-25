@@ -1,7 +1,8 @@
+[This file also exists in ENGLISH](readme_ENG.md)
 
 # Utiliser un thermocouple Type-K via I2C (et MAX31855) sous MicroPython
 
-La carte MOD-TC-MK2-31855 d'Olimex n'est pas qu'un simple amplificateur de thermocouple MAX31855 mais aussi un microcontrôleur (un PIC16F1503) permettant d'acquérir la température du thermocouple via le bus I2C.
+La carte __MOD-TC-MK2-31855__ d'Olimex n'est pas qu'un simple amplificateur de thermocouple MAX31855 mais aussi un microcontrôleur (un PIC16F1503) permettant d'acquérir la température du thermocouple via le bus I2C.
 
 ![MOD-TC-MK2-31855 d'Olimex](docs/_static/mod-tc-mk2-31855.jpg)
 

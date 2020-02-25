@@ -26,7 +26,7 @@ Il est possible de préparer un [breakout UEXT pour Pyboard](https://github.com/
 
 ![MAX6675 to Pyboard-UNO-R3](docs/_static/UEXT-Breakout-LowRes.jpg)
 
-Il est possible de connecter le le module MOD-TC par l'intermédiaire de l'adaptateur [PYBOARD-UNO-R3](https://github.com/mchobby/pyboard-driver/tree/master/UNO-R3).
+Il est possible de connecter le module MOD-TC par l'intermédiaire de l'adaptateur [PYBOARD-UNO-R3](https://github.com/mchobby/pyboard-driver/tree/master/UNO-R3).
 ![MAX6675 to Pyboard-UNO-R3](docs/_static/max6675-to-PYBOARD-UNO-R3.jpg)
 
 # Tester
