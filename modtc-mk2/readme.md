@@ -134,6 +134,88 @@ while True:
 	mk2.digital_write( GPIO, False )
 	sleep( 1 )
 ```
+
+## Changer l'adresse I2C du module
+
+L'adresse I2C du module MOD-TC-MK2-31855 est stockée dans l'EEPROM du microcontrôleur.
+
+Cela permet de modifier l'adresse que le module doit avoir sur le bus (à l'aide d'une commande I2C appropriée pris en charge par la bibliothèque).
+
+Grâce à cette modification d'adresse, il est possible d'avoir plusieurs module MOD-TC-MK2-31855 sur un même bus I2C.
+
+``` python
+from machine import I2C
+from modtc_mk2 import MODTC_MK2
+
+FROM_ADDRESS = 0x23 # 0x23 is the default address of MOD-TC-MK2-31855
+TO_ADDRESS   = 0x25
+
+# PYBOARD-UNO-R3 & UEXT for Pyboard. SCL=Y9, SDA=Y10
+i2c = I2C(2)
+
+print( "I2C scan..." )
+print( ", ".join( [ "0x%x" % value for value in i2c.scan() ] ))
+print( "" )
+
+print( "Connexion sur l adresse 0x%x" % FROM_ADDRESS )
+mk2 = MODTC_MK2( i2c, address=FROM_ADDRESS )
+
+print( "Changer vers l adresse 0x%x" % TO_ADDRESS )
+mk2.change_address( new_address=TO_ADDRESS )
+
+print( "Faire un cycle d'alimentation sur le module" )
+print( "et faire un nouveau scan I2C pour verifier l adresse." )
+```
+
+## Lecture sur plusieurs modules
+
+En utilisant plusieurs modules MOD-TC-MK2-31855 ayant chacun leur propre adresse I2C, il est possible de les placer sur le même bus I2C et de les interroger à tour de rôle.
+
+Dans l'exemple ci-dessous les deux modules sont respectivement accessibles aux adresses 0x23 et 0x25.
+
+``` python
+from machine import I2C
+from modtc_mk2 import MODTC_MK2
+from time import sleep
+
+# l'adresse des deux modules
+MK2_ADDR_1 = 0x23
+MK2_ADDR_2 = 0x25
+
+# PYBOARD-UNO-R3 & UEXT for Pyboard. SCL=Y9, SDA=Y10
+i2c = I2C(2)
+mk_dic = { 'temp 1' : MODTC_MK2( i2c, address=MK2_ADDR_1 ),
+		   'temp 2' : MODTC_MK2( i2c, address=MK2_ADDR_2 )   }
+
+while True:
+	print( "-"*40 )
+	for name, mk2 in mk_dic.items():
+		temp = mk2.temperatures[1]
+		print( "%s : %5.2f C" % (name, temp) )
+	sleep(1)
+```
+
+Ce qui produit les résultats suivants:
+
+``` python
+MicroPython v1.11-473-g86090de on 2019-11-15; PYBv1.1 with STM32F405RG
+Type "help()" for more information.
+>>>
+>>> import test_dual
+----------------------------------------
+temp 1 : 21.00 C
+temp 2 : 22.25 C
+----------------------------------------
+temp 1 : 21.00 C
+temp 2 : 22.25 C
+----------------------------------------
+temp 1 : 20.75 C
+temp 2 : 21.75 C
+----------------------------------------
+temp 1 : 21.00 C
+temp 2 : 21.50 C
+```
+
 # Où acheter
 * [MicroPython board](https://shop.mchobby.be/fr/56-micropython) @ MCHobby
 * [MOD-TC-MK2-31855 with MAX31855](https://shop.mchobby.be/fr/nouveaute/1624-mod-tc-mk2-31855-interface-thermocouple-type-k-avec-max31855-bus-i2c-gpio-3232100016248-olimex.html) @ MCHobby

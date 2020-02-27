@@ -190,3 +190,7 @@ class MODTC_MK2():
 			in_f = -128 + in_f
 
 		return (in_f, ex_f) # (Internal_temp, external_temp)
+
+	def change_address( self, new_address ):
+		""" Set a new I2C address to mod-tc-mk2. The PROG jumper must be closed on the board """
+		self.i2c.writeto_mem( self.address, REG_SET_ADDRESS, bytes([new_address]) )
