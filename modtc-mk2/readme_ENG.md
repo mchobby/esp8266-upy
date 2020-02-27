@@ -1,7 +1,5 @@
 [Ce fichier existe également en FRANCAIS](readme.md)
 
-__CONTENT UNDER TRANSLATION__
-
 # Use a Type-K thermocouple via I2C (and MAX31855) under MicroPython
 
 The __MOD-TC-MK2-31855__ from Olimex is not only a MAX31855 thermocouple amplifier but also a PIC16F1503 microcontroler allowing to capture the thermocouple temperature over the I2C bus.
@@ -16,19 +14,19 @@ The interest of `modtc_mk2.py` MicroPython library is to offer the acces to all 
 
 # Wiring
 
-Pour brancher la carte, il suffit d'utiliser son connecteur UEXT.
+To wire the board, just plug it onto an UEXT connector.
 
-Il est possible de préparer un [breakout UEXT pour Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) pour brancher facilement des cartes UEXT sur la Pyboard.
+You can make your own [UEXT breakout for Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) to facilitate the connexion of UEXT board on your Pyboard.
 
 ![MOD-TC-MK2-31855 to Pyboard-UNO-R3](docs/_static/UEXT-Breakout-LowRes.jpg)
 
-Il est possible de connecter le le module MOD-TC par l'intermédiaire de l'adaptateur [PYBOARD-UNO-R3](https://github.com/mchobby/pyboard-driver/tree/master/UNO-R3) qui expose également un connecteur UEXT.
+You can also connect the MOD-TC module via the [PYBOARD-UNO-R3](https://github.com/mchobby/pyboard-driver/tree/master/UNO-R3) adapter which also expose a UEXT connector.
 
 # Test
 
-Pour exécuter les exemples, il sera nécessaire de copier la bibliothèque `modtc_mk2.py` sur la carte MicroPython.
+The `modtc_mk2.py` library will be required on the MicroPython board to run the various example file.
 
-## Lecture de température
+## Read temperature
 
 ``` python
 from machine import I2C
@@ -45,11 +43,11 @@ print( "Internal Temp = %s" % temp_in )
 print( "External Temp = %s" % temp_ext )
 ```
 
-## Entrée analogique
+## Analog input
 
-La carte supporte la lecture analogique sur les GPIO 0,1,2,5,6.
+The board allows analog reading on the GPIOs 0,1,2,5,6.
 
-Le script `test_analog.py` effectue une lecture de toutes les broches analogiques toutes les secondes.
+The `test_analog.py` script read all the analog pins every second.
 
 ``` python
 from machine import I2C
@@ -65,7 +63,7 @@ for pin in [0,1,2,5,6]: # PinNumber with Analog support
 	print( "Analog %s = %3.2f v (%4i)" % (pin,volts,value ) )
 ```
 
-Ce qui produit le résultat:
+Which produce the following results:
 
 ```
 Analog 0 = 0.63 v ( 194)
@@ -75,18 +73,18 @@ Analog 5 = 1.53 v ( 474)
 Analog 6 = 1.34 v ( 416)
 ```
 
-## Entrée avec Pullup
+## Input with Pullup
 
 ``` python
 from machine import I2C, Pin
 from modtc_mk2 import MODTC_MK2
-from time import sleep
+from time import sleep 
 
 # PYBOARD-UNO-R3 & UEXT for Pyboard. SCL=Y9, SDA=Y10
 i2c = I2C(2)
 mk2 = MODTC_MK2( i2c )
 
-print( "Config GPIO 2 en entree avec Pull-up" )
+print( "Config GPIO 2 as input with Pull-up" )
 mk2.pin_mode( 2, Pin.IN )
 mk2.pullup( 2, True  )
 while True:
@@ -112,7 +110,7 @@ GPIO 2 : Gnd
 GPIO 2 : 3.3v
 ```
 
-## Sortie Numérique
+## Digital output
 
 ``` python
 from machine import I2C, Pin
@@ -123,27 +121,27 @@ from time import sleep
 i2c = I2C(2)
 mk2 = MODTC_MK2( i2c )
 
-# Le GPIO a tester
+# the GPIO to test
 GPIO = 6
 
-print( "Inverser l etat du GPIO %s" % GPIO )
+print( "Toggle the GPIO %s state" % GPIO )
 mk2.pin_mode( GPIO, Pin.OUT )
 while True:
-	print( "MARCHE" )
+	print( "ON" )
 	mk2.digital_write( GPIO, True )
 	sleep( 1 )
-	print( "arret" )
+	print( "off" )
 	mk2.digital_write( GPIO, False )
 	sleep( 1 )
 ```
 
-## Changer l'adresse I2C du module
+## Change the module's I2C address
 
-L'adresse I2C du module MOD-TC-MK2-31855 est stockée dans l'EEPROM du microcontrôleur.
+The I2C address of the MOD-TC-MK2-31855 module is stored inside the microcontroleur's EEPROM.
 
-Cela permet de modifier l'adresse que le module doit avoir sur le bus (à l'aide d'une commande I2C appropriée pris en charge par la bibliothèque).
+This make it possible to change the module's address on the bus (with the appropriate I2C command, command support by the `modtc_mk2.py` library).
 
-Grâce à cette modification d'adresse, il est possible d'avoir plusieurs module MOD-TC-MK2-31855 sur un même bus I2C.
+Thank the the address change, it is possible to have multiple MOD-TC-MK2-31855 module on a same I2C bus.
 
 ``` python
 from machine import I2C
@@ -169,18 +167,18 @@ print( "Power cycle the board and make")
 print( "a new I2C scan to check the address." )
 ```
 
-## Lecture sur plusieurs modules
+## Read from many modules
 
-En utilisant plusieurs modules MOD-TC-MK2-31855 ayant chacun leur propre adresse I2C, il est possible de les placer sur le même bus I2C et de les interroger à tour de rôle.
+By using several MOD-TC-MK2-31855 modules (each having its own address on the bus), it is possible to request the data of each module (each one after the other).
 
-Dans l'exemple ci-dessous les deux modules sont respectivement accessibles aux adresses 0x23 et 0x25.
+In the following example, the modules are availables at adresses 0x23 and 0x25.
 
 ``` python
 from machine import I2C
 from modtc_mk2 import MODTC_MK2
 from time import sleep
 
-# l'adresse des deux modules
+# The two modules address
 MK2_ADDR_1 = 0x23
 MK2_ADDR_2 = 0x25
 
@@ -197,7 +195,7 @@ while True:
 	sleep(1)
 ```
 
-Ce qui produit les résultats suivants:
+Which produce the following result:
 
 ``` python
 MicroPython v1.11-473-g86090de on 2019-11-15; PYBv1.1 with STM32F405RG
