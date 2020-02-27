@@ -178,6 +178,18 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/modtc-mk2">modtc-mk2</a></td>
+      <td><strong>Components</strong> : MOD-TC-MK2-31855<br />
+      <strong>Interfaces</strong> : UEXT, I2C<br />
+<small>MAX6MOD-TC-MK2 : Type-K Thermocouple amplifier (MAX31855) over I2C - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/uext/1624-mod-tc-mk2-31855-interface-thermocouple-type-k-avec-max31855-bus-i2c-gpio-3232100016248-olimex.html">MOD-TC-MK2 - Amplificateur Thermocouple Type-K (MAX31855) via I2C d'Olimex @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-TC-MK2-31855/open-source-hardware">MOD-TC-MK2 - Type-K Thermocouple Amplifier (MAX31855) over I2C from Olimex @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modwii">modwii</a></td>
       <td><strong>Components</strong> : MOD-Wii-UEXT-NUNCHUCK, NUNCHUCK<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

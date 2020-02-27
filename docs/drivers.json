@@ -620,5 +620,19 @@
 			"descr"	: {"FR" : "MAX6675 Amplificateur Thermocouple Type-K - MOD-TC - sous MicroPython",
 								 "ENG": "MAX6675 Type-K Thermocouple amplifier - MOD-TC - under MicroPython."
 								}
+		},
+		{	"folder"        : "modtc-mk2",
+			"components"    : ["MOD-TC-MK2-31855"],
+			"interfaces"    : ["UEXT", "I2C"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-TC-MK2 - Amplificateur Thermocouple Type-K (MAX31855) via I2C d'Olimex @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/uext\/1624-mod-tc-mk2-31855-interface-thermocouple-type-k-avec-max31855-bus-i2c-gpio-3232100016248-olimex.html" },
+													{ "label" : "MOD-TC-MK2 - Type-K Thermocouple Amplifier (MAX31855) over I2C from Olimex @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-TC-MK2-31855\/open-source-hardware" }
+												],
+			"descr"	: {"FR" : "MAX6MOD-TC-MK2 : Amplificateur Thermocouple Type-K (MAX31855) via I2C - sous MicroPython",
+								 "ENG": "MAX6MOD-TC-MK2 : Type-K Thermocouple amplifier (MAX31855) over I2C - under MicroPython."
+								}
 		}
 ]
