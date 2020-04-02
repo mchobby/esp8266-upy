@@ -311,6 +311,20 @@
 								 "ENG": "The Wii NUNCHUCK is a game controler very comfortable to used and runs over the I2C bus. This controler have an <strong>UEXT</strong> connector to ease wiring."
 								}
 		},
+		{	"folder"        : "adfmotors",
+			"components"    : ["PCA9685"],
+			"interfaces"    : ["I2C","UNO-R3"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "Adafruit Motor Shield @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/shields\/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html" },
+													{ "label" : "Adafruit Motor Shield @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1438" }
+												],
+			"descr"	: {"FR" : "Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.",
+								 "ENG": "Drive DC motors, steppers or servos with the Adafruit Industries MotorShield."
+								}
+		},
 		{	"folder"        : "NCD",
 			"components"    : ["NCD"],
 			"interfaces"    : ["I2C","NCD"],

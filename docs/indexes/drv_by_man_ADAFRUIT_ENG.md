@@ -10,6 +10,18 @@ See
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/adfmotors">adfmotors</a></td>
+      <td><strong>Components</strong> : PCA9685<br />
+      <strong>Interfaces</strong> : I2C, UNO-R3<br />
+<small>Drive DC motors, steppers or servos with the Adafruit Industries MotorShield.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html">Adafruit Motor Shield @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/1438">Adafruit Motor Shield @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/ads1015-ads1115">ads1015-ads1115</a></td>
       <td><strong>Components</strong> : ADS1015, ADS1115, ADA1085<br />
       <strong>Interfaces</strong> : I2C<br />

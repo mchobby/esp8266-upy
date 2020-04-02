@@ -10,6 +10,18 @@ voir
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/adfmotors">adfmotors</a></td>
+      <td><strong>Composants</strong> : PCA9685<br />
+      <strong>Interfaces</strong> : I2C, UNO-R3<br />
+<small>Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html">Adafruit Motor Shield @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/1438">Adafruit Motor Shield @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/ads1015-ads1115">ads1015-ads1115</a></td>
       <td><strong>Composants</strong> : ADS1015, ADS1115, ADA1085<br />
       <strong>Interfaces</strong> : I2C<br />
