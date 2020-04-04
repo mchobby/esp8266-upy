@@ -10,12 +10,15 @@ use an external power supply for the motors.
 
 History:
   2020-03-22 - Meurisse D. (MCHobby)
+			   support (at) mchobby.be
                Integration in esp8266-upy/adfmotors.py
 			   Interface closer to Adafruit MotorShield
 			   pyb module independant
+			   reuse the existing pca9685 driver available at esp8266-upy repository
   2018-03-02 - Original source code
-               frederic.boulanger@centralesupelec.fr
-
+               frederic.boulanger (at) centralesupelec.fr
+			   https://wdi.supelec.fr/boulanger/MicroPython/AdafruitMotorShield
+			   Special thanks for the great work.
 """
 import pca9685
 import math    # Only needed for math.sin. Can be precomputed if math module is not available
@@ -43,7 +46,7 @@ if not(_delay_us):
 if not(_delay_ms) and not(_delay_us):
 	raise Exception( "Unable to resolve _delay_ms or _delay_us for the current plateform" )
 
-# select the best _wait_ms function to to the job with the best resolution and
+# select the best _wait_ms function to do the job with the best resolution and
 # accepting milliseconds with decimal parts
 def __wait_with_ms( ms ):
 	_delay_ms( int(ms) )
@@ -88,6 +91,22 @@ class MotorBase:
 		if not( n in self.pca_config['steppers'] ):
 			raise ValueError( 'No stepper definition for %s' % n )
 		return Stepper( steps, self.pca, self.pca_config['steppers'][n] )
+
+	def get_servo( self, n ):
+		""" Returns and initialize Servo object connected to the Extra PWM output
+
+			:params n: the PWM output number (eg: 14) """
+		if not( n in self.pca_config['pwms'] ):
+			raise ValueError( 'No pwm definition for %s' % n )
+		return Servo( self.pca, self.pca_config['pwms'][n] )
+
+	def get_pwm( self, n ):
+		""" Returns and initialize PWM object connected to the Extra PWM output
+
+			:params n: the PWM output number (eg: 14) """
+		if not( n in self.pca_config['pwms'] ):
+			raise ValueError( 'No pwm definition for %s' % n )
+		return PWM( self.pca, self.pca_config['pwms'][n] )
 
 class DCMotor:
 	""" A DC motor connected to two of the side connectors
@@ -394,35 +413,56 @@ class Stepper:
 
 
 class Servo:
-  """ A servo motor connected to one of the 4 remaining PWM output of the shield.
-      Works best if the frequency of the PCA9685 is about 50Hz. """
-  def __init__(self, pca, pwm, min_us=500, max_us=2500, range=180):
-    """ Initialize a servo motor driven by PWM number 'pwm'.
-        'pwm' should be 0, 1, 14 or 15.
-        'min_us' and 'max_us' are the min and max duty duration in microseconds
-        to get the min and max rotation positions.
-        'range is the rotation range in degrees.
-    """
-    if not pwm in (0, 1, 14, 15):
-      raise ValueError('Servos can be driven only on ports 0, 1, 14 and 15.')
-    self._pca = pca
-    self._pwm = pwm
-    self._minus = min_us
-    self._maxus = max_us
-    self._range = range
-    pca.setDuty(self._pwm, 0) # release the servo
-    self._period = 1e6 / pca.getFreq()
-    self._minduty = int(self._minus / (self._period / 4095))
-    self._maxduty = int(self._maxus / (self._period / 4095))
+	""" A servo motor connected to one of the 4 remaining PWM output of the shield.
+		Works best if the frequency of the PCA9685 is about 50Hz. """
+	def __init__(self, pca, pca_config, min_us=500, max_us=2500, range=180):
+		""" Initialize a servo motor driven by PWM number 'pwm'.
+			:param pca_config: contain the PWM Pin Number definition
+			:param min_us: the min duty duration in microseconds to get the min and max rotation positions
+			:param max_us: see min_us
+			:param range: rotation range in degrees (usually 180°). """
+		self._pca = pca
+		self._pwm = pca_config['pwm']
+		if not (0<= self._pwm <= 15):
+			raise ValueError('pwm pin %s is outside the PCA9685 range!' % self._pwm )
+		self._minus = min_us
+		self._maxus = max_us
+		self._range = range
+		self._pca.duty(self._pwm, 0) # release the servo
+		self._period = 1e6 / self._pca.freq()
+		self._minduty = int(self._minus / (self._period / 4095))
+		self._maxduty = int(self._maxus / (self._period / 4095))
 
-  def setDutyTime(self, us):
-    """ Set the duty time of the servo in microseconds. """
-    self._pca.setDuty(self._pwm, int(us / (self._period / 4095)))
+	def set_duty_time(self, us):
+		""" Set the duty time of the servo in microseconds. """
+		self._pca.duty(self._pwm, int(us / (self._period / 4095)))
 
-  def release(self):
-    """ Release the servo (set PWM to 0). """
-    self._pca.setDuty(self._pwm, 0)
+	def release(self):
+		""" Release the servo (set PWM to 0). """
+		self._pca.duty(self._pwm, 0)
 
-  def position(self, degrees):
-    """ Set the position of the servo in degrees. """
-    self._pca.setDuty(self._pwm, int(self._minduty + (self._maxduty - self._minduty) * (degrees / self._range)))
+	def angle(self, degrees): # mimic micropython Servo class
+		""" Set the angle position of the servo in degrees. """
+		self._pca.duty(self._pwm, int(self._minduty + (self._maxduty - self._minduty) * (degrees / self._range)))
+
+class PWM:
+	def __init__(self, pca, pca_config ):
+		""" Initialize a PWM pin
+			:param pca_config: contain the PWM Pin Number definition """
+		self._pca = pca
+		self._pwm = pca_config['pwm']
+		if not (0<= self._pwm <= 15):
+			raise ValueError('pwm pin %s is outside the PCA9685 range!' % self._pwm )
+		# set it to LOW
+		self._pca.duty( self._pwm, 0 )
+
+	def duty_percent( self, *args, **kw ):
+		self._pca.duty_percent( self._pwm, *args, **kw )
+
+	def duty( self, *args, **kw ):
+		self._pca.duty( self._pwm, *args, **kw )
+
+	def pwm( self, *args, **kw ):
+		""" see PCA9685.pwm() which waits for 'on' and 'off' arguments """
+		self._pca.pwm( self._pwm, *args, **kw )
+		

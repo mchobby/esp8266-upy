@@ -17,6 +17,14 @@ MOTORSHIELD_PCA_CONFIG = {
 		# Stepper 2 with Coil A & Coil B
 		2 : { 'a': {'pwm':2,  'in1':4,  'in2': 3} ,
 			  'b': {'pwm':7,  'in1':5,  'in2': 6}  }
+	},
+	# PWMs port available via breakout
+	'pwms' :{
+		# PWM label with internal pca9685 pin
+		15 : {'pwm' : 15 },
+		14 : {'pwm' : 14 },
+		1 : {'pwm' : 1 },
+		0 : {'pwm' : 0 }
 	}
 }
 
