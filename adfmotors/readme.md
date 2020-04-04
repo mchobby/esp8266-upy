@@ -1,7 +1,9 @@
-# Adafruit Motor Shield / Motor Wing support
-Cette bibliothèque prend en charge le Motor Shield / Motor Wing d'Adafruit avec plusieurs plateformes MicroPython.
+[This file also exists in ENGLISH](readme_ENG.md)
 
-__STILL UNDER WRITING__
+# Adafruit Motor Shield / Motor Wing support pour MicroPython
+Cette bibliothèque prend en charge le [Motor Shield d'Adafruit](https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html) / [Motor Wing d'Adafruit](https://shop.mchobby.be/fr/feather-adafruit/830-featherwing-moteur-dc-pas-a-pas--3232100008304-adafruit.html) avec différentes plateformes MicroPython.
+
+![MotorShield d'Adafruit](docs/_static/motorshield.jpg)
 
 # Raccordement
 La carte Motor Shield (ou Motor Wing) peut être utilisée avec plusieurs cartes microcontrôleur.
@@ -11,7 +13,7 @@ Ci-dessous les différents schémas de raccordement de la carte MotorShield sur 
 Les raccordements des différents moteurs sont repris dans la section test.
 
 ## Pyboard
-Avec la Pyboard, il faut alimenter la logique du MotorShield et utiliser le bus I2C pour permettre les échanges d'information avec le shield Moteur.
+Avec la Pyboard, il faut alimenter la logique du MotorShield et utiliser le bus I2C pour permettre les échanges d'information avec le shield moteur.
 
 ![brancher Pyboard sur MotorShield](docs/_static/pyboard-to-motorshield.jpg)
 
@@ -22,7 +24,12 @@ Le motor shield peut être branché directement sur l'[adaptateur Pyboard-Uno-R3
 
 # Tester
 Pour pouvoir utiliser cette carte Breakout, il est nécessaire d'installer la bibliothèque sur la carte MicroPython en copiant les fichiers suivants:
-* `xxxx.py`
+* `pca9685.py`
+* `motorbase.py`
+* `motorshield.py` : pour le MotorShield d'Adafruit
+
+Les divers exemples sont stockés dans le répertoire:
+* `examples/motorshield/` pour le MotorShield d'Adafruit (__contient tous les exemples de références__)
 
 ## Moteur continu
 Il est possible de brancher jusque 4 moteurs continu sur les ports M1, M2, M3, M4.
@@ -37,20 +44,20 @@ from motorshield import MotorShield
 from motorbase import FORWARD, BACKWARD, BRAKE, RELEASE
 from time import sleep
 
-# Pyboard& Pyboard-UNO-R3 - SDA=Y10, SCL=Y9
+# Pyboard & Pyboard-UNO-R3 - SDA=Y10, SCL=Y9
 i2c = I2C(2)
 sh = MotorShield( i2c )
 
-motor = sh.get_motor(2) # Motor M2
+motor = sh.get_motor(2) # Moteur M2
 try:
-	motor.speed( 128 ) # Half speed
+	motor.speed( 128 ) # Demi vitesse
 	motor.run( FORWARD )
 	sleep( 2 )
-	motor.speed( 255 ) # Full speed
+	motor.speed( 255 ) # Pleine vitesse
 	motor.run( BACKWARD )
 
-	# Wait the user to stop the script
-	# by Pressing Ctrl+C
+	# Attendre que l'utilisateur arrête le script
+	# en pressant Ctrl+C
 	while True:
 		sleep( 1 )
 except KeyboardInterrupt:
@@ -73,7 +80,7 @@ from motorbase import SINGLE, DOUBLE, INTERLEAVE, MICROSTEP
 i2c = I2C(2)
 sh = MotorShield( i2c )
 
-# Stepper S1 (M1+M2)
+# Moteur pas-à-pas sur S1 (M1+M2)
 stepper = sh.get_stepper( 200, 1 )
 stepper.speed = 3
 stepper.step( 200, dir=FORWARD, style=DOUBLE )
@@ -116,7 +123,7 @@ Stepper S2
 ## test_stepper_speed.py
 L'exemple `examples/motorshield/test_stepper_speed.py` permet de modifier la vitesse de rotation du moteur en utilisant un potentiomètre comme consigne.
 
-La vitesse de rotation est limitée par le débit maximum du bus I2C puisque l'avance de chaque pas fait suite à une communication I2C pour modifier l'état des broches.
+La vitesse de rotation est limitée par le débit maximum du bus I2C puisque l'avance de chaque pas fait suite à une communication I2C pour modifier l'état sur les broches du PCA9685.
 
 Ce temps de communication n'est pas tenu en compte dans le calcul du RPM et que plus le rapport pas/sec augmente et plus le temps de communication I2C à de l'importance.
 
@@ -135,7 +142,7 @@ def arduino_map(x, in_min, in_max, out_min, out_max):
 
 adc = ADC('X19')
 
-# Test the various speed for a stepper on the MotorShield
+# Test les différentes vitesse du moteur pas-à-pas sur le MotorShield
 stepper = sh.get_stepper( 200, 1 )
 while True:
 	val = adc.read() # Value between 0 et 4095
@@ -198,25 +205,25 @@ from time import sleep
 i2c = I2C(2)
 sh = MotorShield( i2c )
 
-# PWM on output #0
+# PWM sur la sortie  #0
 pwm = sh.get_pwm( 0 )
 
-# Signal HIGH
+# Signal HAUT
 pwm.duty_percent( 100 )
 sleep( 2 )
-# Signal LOW
+# Signal BAS
 pwm.duty_percent( 0 )
 sleep( 2 )
-# Duty cycle @ 50%
+# Cycle utile @ 50%
 pwm.duty_percent( 50 )
 sleep( 2 )
 
-# Duty cycle can be finely tuned with a value between 0 (LOW) and 4095 (HIGH)
-# Duty cycle at 2866 (so 70%)
+# Le cycle utile peut être finement ajusté avec une valeur entre 0 (BAS) et 4095 (HAUT)
+# Cycle utile a 2866 (donc 70%)
 pwm.duty( 2866 )
 sleep( 2 )
 
-# Release PWM
+# Relacher controle PWM
 pwm.duty( 0 ) # or duty_percent( 0 )
 ```
 
@@ -230,3 +237,9 @@ La bibliothèque a été adaptée pour se rapprocher de l'interface de programma
 # Ressource
 * [Description de la classes Adafruit_MotorShield](http://adafruit.github.io/Adafruit_Motor_Shield_V2_Library/html/class_adafruit___motor_shield.html)
 * [Code original de Frédéric Boulanger - CentralSupélec](https://wdi.supelec.fr/boulanger/MicroPython/AdafruitMotorShield)
+
+## Où acheter
+* [Shield moteur d'Adafruit](https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html) disponible chez MCHobby
+* [Feather MotorWing d'Adafruit](https://shop.mchobby.be/fr/feather-adafruit/830-featherwing-moteur-dc-pas-a-pas--3232100008304-adafruit.html) disponible chez MCHobby
+* [Adaptateur Pyboard-UNO-R3](https://shop.mchobby.be/fr/micropython/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html) disponible chez MCHobby
+* [Cartes MicroPython](https://shop.mchobby.be/fr/56-micropython) disponible chez MCHobby
