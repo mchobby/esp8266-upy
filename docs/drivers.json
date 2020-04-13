@@ -73,6 +73,22 @@
 								 "ENG": "The DS18B20 is a very popular <strong>temperature<\/strong> sensor. It use the 1-Wire bus to connect several sensors."
 								}
 		},
+		{	"folder"        : "lcdi2c",
+			"components"    : ["I2C BackPack", "LCD 16x2","LCD 16x4"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "I2C Backpack for LCD display",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/882-lcd-20x4-backpack-i2c-blanc-sur-bleu-3232100008823.html" },
+													{ "label" : "LCD 20x4 + I2C Backpack",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/881-lcd-20x4-backpack-i2c-blanc-sur-bleu-3232100008816.html" },
+													{ "label" : "LCD I2C from DFRobot",
+													  "url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1807-afficheur-lcd-16x2-i2c-3232100018075-dfrobot.html" }
+												],
+			"descr"	: {"FR" : "Afficheur à cristaux liquides (LCD) commandé via le bus I2C.",
+								 "ENG": "Liquid Crystal display (LCD) controled via I2C bus."
+								}
+		},
 		{	"folder"        : "mcp230xx",
 			"components"    : ["MCP23017","MCP23008"],
 			"interfaces"    : ["I2C"],

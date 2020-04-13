@@ -32,6 +32,19 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/lcdi2c">lcdi2c</a></td>
+      <td><strong>Composants</strong> : I2C BackPack, LCD 16x2, LCD 16x4<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Afficheur à cristaux liquides (LCD) commandé via le bus I2C.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : NONE<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/882-lcd-20x4-backpack-i2c-blanc-sur-bleu-3232100008823.html">I2C Backpack for LCD display</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/881-lcd-20x4-backpack-i2c-blanc-sur-bleu-3232100008816.html">LCD 20x4 + I2C Backpack</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/nouveaute/1807-afficheur-lcd-16x2-i2c-3232100018075-dfrobot.html">LCD I2C from DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Composants</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
