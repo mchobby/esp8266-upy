@@ -157,6 +157,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/dotstar">dotstar</a></td>
+      <td><strong>Components</strong> : DOTSTAR, 74AHCT125, APA102<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>The <strong>DotStar / APA102</strong> are Smart digitals LED that can be controled individually.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/55-neopixels-et-dotstar">APA102 / DotStar</a></li>
+<li>See <a href="https://shop.mchobby.be/fr/ci/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html">74AHCT125</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/ds18b20">ds18b20</a></td>
       <td><strong>Components</strong> : DS18B20<br />
       <strong>Interfaces</strong> : ONEWIRE<br />

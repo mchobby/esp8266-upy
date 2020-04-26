@@ -143,6 +143,20 @@
 								 "ENG": "The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually."
 								}
 		},
+		{	"folder"        : "dotstar",
+			"components"    : ["DOTSTAR","74AHCT125", "APA102"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "APA102 / DotStar",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
+													{ "label" : "74AHCT125",
+													  "url"   : "https:\/\/shop.mchobby.be\/fr\/ci\/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html" }
+												],
+			"descr"	: {"FR" : "Les <strong>DotStar / APA102<\/strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.",
+								 "ENG": "The <strong>DotStar / APA102</strong> are Smart digitals LED that can be controled individually."
+								}
+		},
 		{	"folder"        : "oled-ssd1306",
 			"components"    : ["SSD1306","FEATHER-OLED-WING","ADA2900","OLED"],
 			"interfaces"    : ["I2C","FEATHERWING"],

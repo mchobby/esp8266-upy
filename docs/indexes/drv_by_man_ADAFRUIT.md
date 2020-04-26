@@ -81,6 +81,18 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/dotstar">dotstar</a></td>
+      <td><strong>Composants</strong> : DOTSTAR, 74AHCT125, APA102<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Les <strong>DotStar / APA102</strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/55-neopixels-et-dotstar">APA102 / DotStar</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/ci/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html">74AHCT125</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/gps-ultimate">gps-ultimate</a></td>
       <td><strong>Composants</strong> : GPS-ULTIMATE, MTK3339<br />
       <strong>Interfaces</strong> : UART<br />
