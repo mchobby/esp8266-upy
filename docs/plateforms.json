@@ -18,6 +18,11 @@
 				            "ENG" : "MicroPython NadHat PYB405" },
 			  "url" : "https:\/\/shop.mchobby.be\/fr\/56-micropython"
 			},
+	"PYBSTICK" :
+			{ "descr" : { "FR" : "MicroPython NadHat PYBStick",
+				            "ENG" : "MicroPython NadHat PYBStick" },
+			  "url" : "https:\/\/shop.mchobby.be\/fr\/56-micropython"
+			},
 	"WEMOS-D1":
 			{ "descr" : { "FR" : "LoLin \/ Wemos D1 ESP8266",
 										"ENG" : "LoLin \/ Wemos D1 ESP8266" },
