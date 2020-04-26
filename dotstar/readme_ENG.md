@@ -52,7 +52,7 @@ Notice that miso pin must be defined when creating the SPI bus (whatever it is u
 ```
 >>> from dotstar import DotStar
 >>> from machine import SPI, Pin
->>> spi = SPI( sck=Pin("Y6"), miso=Pin("Y7"), mosi=Pin("Y8") )
+>>> spi = SPI( sck=Pin("Y6",Pin.OUT), miso=Pin("Y7",Pin.OUT), mosi=Pin("Y8",Pin.OUT) )
 >>> leds = DotStar( spi, 3 )
 >>> leds.fill( (255,0,0) )
 >>> leds.fill( (0,255,0) )
@@ -69,7 +69,7 @@ Type "help()" for more information.
 >>>
 >>> from dotstar import DotStar
 >>> from machine import SPI, Pin
->>> spi = SPI( sck=Pin("S23"), miso=Pin("S21"), mosi=Pin("S19") )
+>>> spi = SPI( sck=Pin("S23",Pin.OUT), miso=Pin("S21",Pin.OUT), mosi=Pin("S19",Pin.OUT) )
 >>> leds = DotStar( spi, 3 )
 >>> leds.fill( (255,0,0) )
 >>> leds.fill( (0,255,0) )
