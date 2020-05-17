@@ -118,6 +118,18 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/is31fl">is31fl</a></td>
+      <td><strong>Components</strong> : IS31FL3731<br />
+      <strong>Interfaces</strong> : FEATHERWING, I2C<br />
+<small>IS31FL3731 - CharliePlexing controler via I2C - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/feather-adafruit/1563-featherwing-matrice-led-15x7-en-charlieplexing-pour-feather-3232100015630-adafruit.html">FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/3134">FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/lcdmtrx">lcdmtrx</a></td>
       <td><strong>Components</strong> : USB + Serial Backpack<br />
       <strong>Interfaces</strong> : UART<br />

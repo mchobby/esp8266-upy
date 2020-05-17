@@ -665,6 +665,20 @@
 								 "ENG": "MAX6675 Type-K Thermocouple amplifier - MOD-TC - under MicroPython."
 								}
 		},
+		{	"folder"        : "is31fl",
+			"components"    : ["IS31FL3731"],
+			"interfaces"    : ["FEATHERWING", "I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1563-featherwing-matrice-led-15x7-en-charlieplexing-pour-feather-3232100015630-adafruit.html" },
+													{ "label" : "FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3134" }
+												],
+			"descr"	: {"FR" : "IS31FL3731 - contrôleur CharliePlexing via I2C - sous MicroPython",
+								 "ENG": "IS31FL3731 - CharliePlexing controler via I2C - under MicroPython."
+								}
+		},
 		{	"folder"        : "modtc-mk2",
 			"components"    : ["MOD-TC-MK2-31855"],
 			"interfaces"    : ["UEXT", "I2C"],
