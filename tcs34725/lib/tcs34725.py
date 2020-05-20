@@ -22,9 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 """
-`tcs34725`
-
-MicroPython module for the TCS34725 color sensor.
+tcs34725.py - MicroPython module for the TCS34725 color sensor.
 
 Ported from the micropython-adafruit-tcs34725 module by Radomir Dopieralski:
 https://github.com/adafruit/micropython-adafruit-tcs34725
