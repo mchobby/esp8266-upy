@@ -107,3 +107,5 @@ Quelques autres images des différents exemples:
 
 # Où acheter
 * [matrice CharliePlexing 15x7 pour cartes Feather](https://shop.mchobby.be/product.php?id_product=1563)
+* [MicroPython PYBStick](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html)
+* [MicroPython Pyboard](https://shop.mchobby.be/fr/micropython/570-micropython-pyboard-3232100005709.html)
