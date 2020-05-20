@@ -1,6 +1,6 @@
 [Ce fichier existe aussi en FRANCAIS](readme.md)
 
-# Add a Trackball + RGBW LED to you MicroPython project
+# Add a Trackball + RGBW LED to your MicroPython project
 
 The trackball cas very popular and used on many peripherals (like smartphones). Still available nowadays, the trackballs can be used to create neat and compact machine interface. Trackballs are also very intuitive to use.
 
