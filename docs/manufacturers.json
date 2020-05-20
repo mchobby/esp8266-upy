@@ -2,7 +2,8 @@
   "OLIMEX"   : { "name" : "Olimex Ltd"         , "url" : "https:\/\/www.olimex.com\/"},
   "NCD"      : { "name" : "National Control Device", "url" : "https:\/\/ncd.io\/"},
 	"POLOLU"   : { "name" : "Pololu", "url" : "https:\/\/www.pololu.com\/"},
-  "SPARKFUN" : { "name" : "SparkFun ", "url" : "https:\/\/www.sparkfun.com\/"},
+  "SPARKFUN" : { "name" : "SparkFun", "url" : "https:\/\/www.sparkfun.com\/"},
+	"PIMORONI" : { "name" : "Pimoroni", "url" : "https:\/\/shop.pimoroni.com\/"},
 	"GARATRONIC": { "name" : "Garatronic", "url" : "https:\/\/garatronic.fr\/"},
 	"NONE"      : { "name" : "(other)", "url" : ""}
 }
