@@ -26,7 +26,7 @@ Explorer par:
 * Interface:
 [FEATHERWING](docs/indexes/drv_by_intf_FEATHERWING.md), [GPIO](docs/indexes/drv_by_intf_GPIO.md), [HAT](docs/indexes/drv_by_intf_HAT.md), [I2C](docs/indexes/drv_by_intf_I2C.md), [NCD](docs/indexes/drv_by_intf_NCD.md), [ONEWIRE](docs/indexes/drv_by_intf_ONEWIRE.md), [QWIIC](docs/indexes/drv_by_intf_QWIIC.md), [SPI](docs/indexes/drv_by_intf_SPI.md), [UART](docs/indexes/drv_by_intf_UART.md), [UEXT](docs/indexes/drv_by_intf_UEXT.md), [UNO-R3](docs/indexes/drv_by_intf_UNO-R3.md)
 * Fabriquant:
-[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
+[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
 
 <table>
 <thead>
@@ -594,6 +594,18 @@ Explorer par:
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html">TCS34725 - capteur de couleur RGB + Filtre IR + LED blanche @ MCHobby</a></li>
 <li>Voir <a href="https://www.adafruit.com/product/1334">RGB Color Sensor with IR filter and White LED - TCS34725 @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/trackball">trackball</a></td>
+      <td><strong>Composants</strong> : TRACKBALL-BREAKOUT<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Ajouter un Trackball + LED RGBW sur votre projet MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Fabricant</strong> : PIMORONI<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/tactile-flex-pot-softpad/1833-trackball-i2c-avec-retro-eclairage-3232100018334-pimoroni.html">Trackball I2C avec retro-éclairage @ MCHobby</a></li>
+<li>Voir <a href="https://shop.pimoroni.com/products/trackball-breakout">Trackball Breakout @ Pimoroni</a></li>
 </ul>
       </td>
   </tr>

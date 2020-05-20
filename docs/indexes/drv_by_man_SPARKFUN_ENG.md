@@ -1,10 +1,10 @@
 # MicroPython for the manufacturer SPARKFUN
 [Back to the main page](../../readme.md)
 
-SparkFun 
+SparkFun
 
 See
-[SparkFun ](https://www.sparkfun.com/)
+[SparkFun](https://www.sparkfun.com/)
 <table>
 <thead>
   <th>Folder</th><th>Description</th>

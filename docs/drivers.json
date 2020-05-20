@@ -692,5 +692,19 @@
 			"descr"	: {"FR" : "MAX6MOD-TC-MK2 : Amplificateur Thermocouple Type-K (MAX31855) via I2C - sous MicroPython",
 								 "ENG": "MAX6MOD-TC-MK2 : Type-K Thermocouple amplifier (MAX31855) over I2C - under MicroPython."
 								}
+		},
+		{	"folder"        : "trackball",
+			"components"    : ["TRACKBALL-BREAKOUT"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["PIMORONI"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "Trackball I2C avec retro-éclairage @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/1833-trackball-i2c-avec-retro-eclairage-3232100018334-pimoroni.html" },
+													{ "label" : "Trackball Breakout @ Pimoroni",
+														"url"   : "https:\/\/shop.pimoroni.com\/products\/trackball-breakout" }
+												],
+			"descr"	: {"FR" : "Ajouter un Trackball + LED RGBW sur votre projet MicroPython",
+								 "ENG": "Add a Trackball + RGBW LED to your MicroPython project"
+								}
 		}
 ]
