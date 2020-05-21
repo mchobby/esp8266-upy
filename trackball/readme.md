@@ -8,7 +8,7 @@ Pimoroni à eu l'excellente idée de placer ce trackball sur une carte breakout 
 
 Ce n'est pas tout, le trackball est équipé d'une LED RGBW (rouge, vert, bleu, blanc) sous la bille permettant de l'illuminer avec la couleur de votre choix. En animant cette LED, il devient possible au projet d'interagir avec l'utilisateur.
 
-![Trackball PIM477](docs/_static/trackball.jpg)
+![Trackball PIM447](docs/_static/trackball.jpg)
 
 Enfin, comme il s'agit d'un composant I2C, il ne fait que deux signaux pour interagir avec le trackball. La présence du bit d'adresse permet de placer jusque deux trackball sur le bus I2C.
 
@@ -89,7 +89,7 @@ Le répertoire `examples` contient d'autres scripts d'exemples:
 * [test_rainbow.py](examples/test_rainbow.py) : cycle des couleurs sur le trackball.
 
 # Où acheter
-* Le [TrackBall PIM477 de Pimoroni](https://shop.mchobby.be/fr/tactile-flex-pot-softpad/1833-trackball-i2c-ave-retro-eclairage-3232100018334-pimoroni.html) est disponible chez MCHobby
-* Le [TrackBall PIM477 de Pimoroni](https://shop.pimoroni.com/products/trackball-breakout) est disponible chez Pimoroni
+* Le [TrackBall PIM447 de Pimoroni](https://shop.mchobby.be/fr/tactile-flex-pot-softpad/1833-trackball-i2c-ave-retro-eclairage-3232100018334-pimoroni.html) est disponible chez MCHobby
+* Le [TrackBall PIM447 de Pimoroni](https://shop.pimoroni.com/products/trackball-breakout) est disponible chez Pimoroni
 * [MicroPython PYBStick](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html)
 * [MicroPython Pyboard](https://shop.mchobby.be/fr/micropython/570-micropython-pyboard-3232100005709.html)
