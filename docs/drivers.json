@@ -706,5 +706,19 @@
 			"descr"	: {"FR" : "Ajouter un Trackball + LED RGBW sur votre projet MicroPython",
 								 "ENG": "Add a Trackball + RGBW LED to your MicroPython project"
 								}
+		},
+		{	"folder"        : "st7687s",
+			"components"    : ["ST7687S"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "Ecran TFT DFRobot DFR0529 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/1856-tft-couleur-22-rond-spi-breakout-3232100018563-dfrobot.html" },
+													{ "label" : "Ecran TFT DFRobot DFR0529 @ DFRobot",
+														"url"   : "https:\/\/www.dfrobot.com\/product-1794.html" }
+												],
+			"descr"	: {"FR" : "Exploiter un TFT rond avec MicroPython",
+								 "ENG": "Using a round TFT under MicroPython"
+								}
 		}
 ]
