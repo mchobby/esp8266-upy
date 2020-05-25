@@ -1,0 +1,115 @@
+The lines here under are the commented begin() method with the lcd command and data
+
+def begin(self):
+	sleep_ms(120)
+
+	# --- disable auto read ---
+	self.writeCmd(0xd7) # Disable auto read
+	self.writeDat(0x9f)
+
+	# --- read data from eeprom ---
+	self.writeCmd(0xE0) # EE Control Il
+	self.writeDat(0x00)
+	sleep_ms(200)
+
+	self.writeCmd(0xFA) # EEProm Erase Mode
+	self.writeDat(0x01)
+	sleep_ms(100)
+
+	self.writeCmd(0xE3) # Read from EEPROM
+	sleep_ms(200)
+	self.writeCmd(0xE1) # EEProm control out
+
+	# --- Sleep Out ---
+	self.writeCmd(0x28) # Display OFF
+	self.writeCmd(0x11) # Sleep Out
+	sleep_ms(50)
+
+	# --- Vop Setting ---
+	self.writeCmd(0xc0)  # Vop setting - Operating Voltage for LCD
+	self.writeDat(0x17)  # ctrL=0x1b 080416 5PCS 0X1E; 8PCS 0X2A
+	self.writeDat(0x01)  # Base on module
+
+	self.writeCmd(0x25) # Write contrast
+	self.writeDat(0x1E)
+	self.writeCmd(0xC3) # Bias selection
+	self.writeDat(0x03) #
+
+	self.writeCmd(0xC4) # Booster setting
+	self.writeDat(0x07) # Booster x8
+
+	self.writeCmd(0xC5) # ???
+	self.writeDat(0x01)
+
+	self.writeCmd(0xCB) # Vg source control
+	self.writeDat(0x01)
+
+	self.writeCmd(0xB7) # Com/seg scan direction
+	self.writeDat(0x00)
+
+	self.writeCmd(0xD0) # Analog circuit setting
+	self.writeDat(0x1d)
+	self.writeCmd(0xB5) # N-Line control
+	self.writeDat(0x89)
+
+	self.writeCmd(0xBD) # Cross talk compensation
+	self.writeDat(0x02)
+
+	self.writeCmd(0xF0) # Frame freq in temperature range a,b,c,d
+	self.writeDat(0x07)
+	self.writeDat(0x0C)
+	self.writeDat(0x0C)
+	self.writeDat(0x12)
+
+	self.writeCmd(0xF4) # Temperature Compensation setting
+	self.writeDat(0x33)
+	self.writeDat(0x33)
+	self.writeDat(0x33)
+	self.writeDat(0x00)
+	self.writeDat(0x33)
+	self.writeDat(0x66)
+	self.writeDat(0x66)
+	self.writeDat(0x66)
+
+	self.writeCmd(0x20) # Display inversion Off
+
+	self.writeCmd(0x2A) # Column Address Set
+	self.writeDat(0x00) #  0 - 127
+	self.writeDat(0x7F)
+
+	self.writeCmd(0x2B) # Row address Set
+	self.writeDat(0x00) #  0 - 127
+	self.writeDat(0x7f)
+
+	self.writeCmd(0x3A) # Pixel format
+	self.writeDat(0x05) # RGB 16 bits
+
+	self.writeCmd(0x36) # Memory data access control
+	self.writeDat(0x80)
+
+	self.writeCmd(0xB0) # Display duty cycle
+	self.writeDat(0x7F) #   128 duty for whole screen (63 for 1/2 screen, 31 fir 1/4 screen)
+
+	self.writeCmd(0x29) # Display On
+
+	# --- Set Gamma ---
+	self.writeCmd(0xF9) # Set Frame RGB
+	self.writeDat(0x00)
+	self.writeDat(0x02)
+	self.writeDat(0x04)
+	self.writeDat(0x06)
+	self.writeDat(0x08)
+	self.writeDat(0x0a)
+	self.writeDat(0x0c)
+	self.writeDat(0x0e)
+	self.writeDat(0x10)
+	self.writeDat(0x12)
+	self.writeDat(0x14)
+	self.writeDat(0x16)
+	self.writeDat(0x18)
+	self.writeDat(0x1A)
+	self.writeDat(0x1C)
+	self.writeDat(0x1E)
+
+	self.writeCmd(0x29) # Display on
+	return BEGIN_WAR_NOTEST
