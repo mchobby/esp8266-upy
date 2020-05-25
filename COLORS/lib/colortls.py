@@ -9,6 +9,10 @@ def charpix( r,g,b ):
 	pc = int( grayscale(r,g,b) / 25.5 * 10 ) # In percent for a range 0..255
 	return "  ..-+**XXX"[pc//10]
 
+def rgb24_to_rgb16( r,g,b ):
+	""" Convert a RGB888 value to RGB565 """
+	return (  ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3) )
+
 # From ColorSys @ https://raw.githubusercontent.com/python/cpython/2.7/Lib/colorsys.py
 # HSV: Hue, Saturation, Value
 # H: position in the spectrum
