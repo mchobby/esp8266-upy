@@ -11,6 +11,8 @@ display.py : Helper class used to draw object directly into the Buffer Memory of
    17 aug 2018: DFRobot Arduino's version - https://github.com/DFRobot/DFRobot_Display/blob/master/DFRobot_Display.h
 
 """
+__version__ = '0.0.1'
+
 from math import sqrt
 from character import get_character
 

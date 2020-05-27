@@ -12,6 +12,8 @@ st7687s.py : MicroPython driver for the ST7687S LATCH driver for TFT.
    17 aug 2018: DFRobot Arduino's version - https://github.com/DFRobot/DFRobot_ST7687S
 
 """
+__version__ = '0.0.1'
+
 from time import sleep_ms, sleep_us
 
 BEGIN_WAR_NOTEST = 1 # Strange DFRobot constant with unknown value
