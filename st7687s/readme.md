@@ -9,6 +9,8 @@ L'écran utilise un __contrôleur ST7687S__ et une interface SPI, couplée à un
 
 L'afficheur rond est découpé dans une dalle TFT carrée de 128px * 128 px (donc 79% de pixels visibles).
 
+![Ecran 2.2" DFRobot Rond](docs/_static/bmp_display.jpg)
+
 Voir les détails de la fiche [produit TFT-2.2pc-ROND](https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/1856-tft-couleur-22-rond-spi-breakout-3232100018563-dfrobot.html) pour plus d'information.
 
 __Avantages:__
