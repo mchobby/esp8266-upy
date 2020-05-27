@@ -3,6 +3,8 @@
     bmp file store image with RGB888 (24 bit per pixel)
     Does not support any kind of compression
 """
+__version__ = '0.0.1'
+
 import struct
 
 BI_RGB  = 0 # no compression!

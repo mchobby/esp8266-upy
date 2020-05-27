@@ -1,3 +1,4 @@
+__version__ = '0.0.1'
 
 def grayscale( r,g,b ):
 	""" Compute grayscale (brightness) 0..232 from r,g,b values (0..255) """

@@ -8,6 +8,11 @@ Cette section contien des classes et exemples permettant de lire différents for
 ## Le format bmp
 BMP est le format d'image Bitmap de Windows qui couvre une grande variété d'encodage (Bits par couleur, couleurs indexée ou pas, compression ou pas, etc).
 Cette bibliothèque supporte le format BMP encodé en RGB888 (24 bits par Pixel).
+
+Le format RGB888 doit être sauvé avec la configuration suivante (cfr Gimp):
+
+![Format RGB888 dans gimp](docs/_static/RGB888_config.jpg)
+
 La classe `BmpReader` de `imglib/bmp.py` peut lire un fichier bitmap (pour autant qu'il n'est pas compressé!).
 
 * [color-palette.bmp](examples/color-palette.bmp): Exemple d'image 24 bits non compressée.<br /> ![Exemple de bitmap 24Bit](examples/color-palette.bmp)

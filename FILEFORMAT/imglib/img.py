@@ -1,5 +1,7 @@
 """ Toolbox function for the various image reader """
 
+__version__ = '0.0.1'
+
 def grayscale( r,g,b ):
 	""" Compute grayscale (brightness) 0..232 from r,g,b values (0..255) """
 	return int( 0.3*r + 0.6*g + 0.11*b ) # darker image can be created with 0.25*r + 0.5*g + 0.25*b

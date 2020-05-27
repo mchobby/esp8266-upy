@@ -1,3 +1,4 @@
+__version__ = '0.0.1'
 
 # List of colors RGB888 coming from colormap_picker.bmp
 # great to choose a random color

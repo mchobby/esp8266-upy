@@ -178,6 +178,9 @@ def compile_all():
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NCD.md', 'lang_code': 'fr', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_SPARKFUN.md', 'lang_code': 'fr', 'code' : 'SPARKFUN', 'filter' : lambda driver : any(['SPARKFUN'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_GARATRONIC.md', 'lang_code': 'fr', 'code' : 'GARATRONIC', 'filter' : lambda driver : any(['GARATRONIC'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_PIMORONI.md', 'lang_code': 'fr', 'code' : 'PIMORONI', 'filter' : lambda driver : any(['PIMORONI'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_DFROBOT.md', 'lang_code': 'fr', 'code' : 'DFROBOT', 'filter' : lambda driver : any(['DFROBOT'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_POLOLU.md', 'lang_code': 'fr', 'code' : 'POLOLU', 'filter' : lambda driver : any(['POLOLU'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NONE.md', 'lang_code': 'fr', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) },
 
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_ADAFRUIT_ENG.md', 'lang_code': 'eng', 'code' : 'ADAFRUIT', 'filter' : lambda driver : any(['ADAFRUIT'==man for man in driver.manufacturers]) },
@@ -185,6 +188,9 @@ def compile_all():
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NCD_ENG.md', 'lang_code': 'eng', 'code' : 'NCD', 'filter' : lambda driver : any(['NCD'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_SPARKFUN_ENG.md', 'lang_code': 'eng', 'code' : 'SPARKFUN', 'filter' : lambda driver : any(['SPARKFUN'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_GARATRONIC_ENG.md', 'lang_code': 'eng', 'code' : 'GARATRONIC', 'filter' : lambda driver : any(['GARATRONIC'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_PIMORONI_ENG.md', 'lang_code': 'eng', 'code' : 'PIMORONI', 'filter' : lambda driver : any(['PIMORONI'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_DFROBOT_ENG.md', 'lang_code': 'eng', 'code' : 'DFROBOT', 'filter' : lambda driver : any(['DFROBOT'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_POLOLU_ENG.md', 'lang_code': 'eng', 'code' : 'POLOLU', 'filter' : lambda driver : any(['POLOLU'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NONE_ENG.md', 'lang_code': 'eng', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) }
 
 	]
