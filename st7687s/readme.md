@@ -131,10 +131,10 @@ disp.fill_triangle( (-20,-50), (-20,0), (50,20), DISPLAY_ORANGE )
 
 ## Autres examples
 Le répertoire [examples](examples/) contient quelques autres exemples intéressants:
-* [test_text.py](lib/test_text.py) : affichage de texte sur l'écran
-* [test_clear.py](lib/test_clear.py) : comparaison des méthodes `fill_screen()` et `clear()` pour effacer le contenu de l'écran.
-* [test_bmp.py](lib/test_bmp.py) : transfert le contenu de l'image mpy.bmp dans la mémoire de l'écran.
-* [char68tobin.py](lib/char68tobin.py) : script utilisé pour générer le contenu binaire de la bibliothèque [character.py](lib/character.py)
+* [test_text.py](examples/test_text.py) : affichage de texte sur l'écran
+* [test_clear.py](examples/test_clear.py) : comparaison des méthodes `fill_screen()` et `clear()` pour effacer le contenu de l'écran.
+* [test_bmp.py](examples/test_bmp.py) : transfert le contenu de l'image mpy.bmp dans la mémoire de l'écran.
+* [char68tobin.py](examples/char68tobin.py) : script utilisé pour générer le contenu binaire de la bibliothèque [character.py](lib/character.py)
 
 # Où acheter
 * L' [écran 2.2” TFT LCD (Interface SPI) sous la référence DFR0529](https://www.dfrobot.com/product-1794.html) est disponible chez MCHobby.
