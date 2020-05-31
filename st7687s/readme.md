@@ -1,3 +1,5 @@
+[This file also exists in ENGLISH](readme_ENG.md)
+
 # Le premier écran rond supporté sous MicroPython ?
 DFRobot distribue un [écran 2.2” TFT LCD (Interface SPI) sous la référence DFR0529](https://www.dfrobot.com/product-1794.html).
 
@@ -78,7 +80,7 @@ from time import sleep
 
 # Gestion des couleurs -> depuis COLORS/colortls.py
 def rgb24_to_rgb16( r,g,b ):
-	""" Conversion de RGB888 end RGB565 """
+	""" Conversion de RGB888 en RGB565 """
 	return (  ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3) )
 
 # Définition des broches
@@ -123,13 +125,13 @@ disp.vline( (0, -64), 128, DISPLAY_WHITE)   # ligne verticale a (0, -128), longu
 print( "Part 2" )
 disp.clear( DISPLAY_LIGHTGREY )
 disp.triangle( (-20,-50), (0,0), (50,20), DISPLAY_ORANGE ) # triangle avec 3 points aux coordonnées (-20, -50), (0, 0), (50, 20)
-disp.circle( (0, 0) , 20, DISPLAY_GREEN) # dessiner un cercke a (0, 0) et rayon = 20
+disp.circle( (0, 0) , 20, DISPLAY_GREEN) # dessiner un cercle a (0, 0) et rayon = 20
 disp.fill_circle( (0,0) , 20, DISPLAY_GREEN)
-disp.fill_rect( (-20,-20), 40, 40, DISPLAY_CYAN) # (-20, -30), largeur = 40, hauteur = 60
+disp.fill_rect( (-20,-20), 40, 40, DISPLAY_CYAN) # (-20, -30), largeur = 40, hauteur = 40
 disp.fill_triangle( (-20,-50), (-20,0), (50,20), DISPLAY_ORANGE )
 ```
 
-## Autres examples
+## Autres exemples
 Le répertoire [examples](examples/) contient quelques autres exemples intéressants:
 * [test_text.py](examples/test_text.py) : affichage de texte sur l'écran
 * [test_clear.py](examples/test_clear.py) : comparaison des méthodes `fill_screen()` et `clear()` pour effacer le contenu de l'écran.
