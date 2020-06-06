@@ -6,6 +6,8 @@
 #    https://raw.githubusercontent.com/dda/MicroPython/master/EEPROM.py
 #
 
+__version__ = '0.0.1'
+
 CHIP_MCP24C02C =  256  # 256 bytes, Single page of 256 x 8 bit
 
 class MCP24Cxx:
