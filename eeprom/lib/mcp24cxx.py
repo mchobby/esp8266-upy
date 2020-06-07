@@ -4,28 +4,31 @@
 #
 # Example sourced from
 #    https://raw.githubusercontent.com/dda/MicroPython/master/EEPROM.py
+#    https://create.arduino.cc/projecthub/gatoninja236/how-to-use-i2c-eeprom-30767d
 #
 
 __version__ = '0.0.1'
 
-CHIP_MCP24C02C =  256  # 256 bytes, Single page of 256 x 8 bit
+# EEPROM Chip - indicates the capacity
+CHIP_24C02C =  256  # 256 bytes, Single page of 256 x 8 bit
 
-class MCP24Cxx:
+class Eeprom_Base:
+	""" Descendant must implements read() and write() methods """
 
-	def __init__(self, i2c, addr=0x50, chip=CHIP_MCP24C02C ):
+	def __init__(self, i2c, addr, chip ):
 		self.i2c = i2c
 		self.address = addr
 		self.capacity= chip
 
+
+class Eeprom_24C02C( Eeprom_Base ):
+	""" 2KBits EEPROM (256 bytes). Memory addressed with only one byte! """
+	def __init__(self, i2c, addr=0x50 ):
+		super( Eeprom_24C02C, self ).__init__(i2c,addr,chip=CHIP_24C02C)
+
 	def read(self, mem_addr, count=1 ):
-		# Read from EEPROM
-		#data = bytearray(count)
-		#data[0]=eeaddress >> 8 #MSB
-		#data[1]=eeaddress & 0xFF #LSB
-		#i2c.send(data, addr=self.address)
-		#value=i2c.recv(1, self.address)
-		#return value[0]
-		assert mem_addr < self.capacity, "%s address outside EEPROM range" % mem_addr
+		""" Returns one or more bytes from EEPROM """
+		assert mem_addr < self.capacity, "%s address outside EEPROM capacity" % hex(mem_addr)
 
 		return self.i2c.readfrom_mem( self.address, mem_addr, count )
 
