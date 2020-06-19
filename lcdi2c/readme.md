@@ -34,6 +34,12 @@ lcd = LCDI2C( i2c, cols=16, rows=2 )
 lcd = LCDI2C( i2c, cols=16, rows=2, address=0x38 )
 ```
 
+## Utiliser une PYBStick
+
+Comme la Pyboard, la PYBStick est 5V tolérant sur de très nombreuses entrées/sorties, il est possible de raccorder directement l'afficheur sur une PYBStick.
+
+![Afficheur LCD I2C sur MicroPython PYBStick](docs/_static/LCD-I2C-to-pybstick.jpg)
+
 ## Utiliser l'afficheur LCD I2C de DFRobot
 
 Il est également possible d'utiliser l'afficheur [LCD I2C de DFRobot](https://www.dfrobot.com/product-135.html?search=dfr0063&description=true) avec une Pyboard.
@@ -61,7 +67,7 @@ from machine import I2C
 from lcdi2c import LCDI2C
 from time import sleep
 
-# Pyboard - SDA=Y10, SCL=Y9
+# Pyboard - SDA=Y10, SCL=Y9 ; PYBStick - SDA=S11, SCL=S13
 i2c = I2C(2)
 
 # Initialise l'ecran LCD

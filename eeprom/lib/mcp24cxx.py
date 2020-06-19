@@ -20,6 +20,13 @@ class Eeprom_Base:
 		self.address = addr
 		self.capacity= chip
 
+	def check_magic( self, mem_addr, values ):
+		""" Check magic key stored into EEPROM @ mem_addr with the list of values """
+		data = self.read( mem_addr, len(values) )
+		for i in range(len(values)):
+			if data[i] != values[i]:
+				return False
+		return True
 
 class Eeprom_24C02C( Eeprom_Base ):
 	""" 2KBits EEPROM (256 bytes). Memory addressed with only one byte! """
