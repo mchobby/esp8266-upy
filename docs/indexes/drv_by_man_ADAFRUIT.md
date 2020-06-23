@@ -225,6 +225,18 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/pcf8523">pcf8523</a></td>
+      <td><strong>Composants</strong> : PCF8523<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Une Horloge temps réel RTC + alarme avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBSTICK<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html">PiRTC (PCF8523) @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/feather-adafruit/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html">Adafruit AdaLogger FeatherWing (PCF8523) @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/tcs34725">tcs34725</a></td>
       <td><strong>Composants</strong> : TCS34725<br />
       <strong>Interfaces</strong> : I2C<br />
