@@ -49,6 +49,18 @@
 								 "ENG": "The BMP180 is a <strong>pressure & temperature<\/strong> sensor now replaced with the BMP280."
 								}
 		},
+		{	"folder"        : "cardkb",
+			"components"    : ["CARDKB", "U035"],
+			"interfaces"    : ["I2C","GROVE"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : [],
+			"ressources"    : [ { "label" : "CardKB : Mini Qwerty Keyboard from M5Stack",
+												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=1912" }
+												],
+			"descr"	: {"FR" : "CardKB - Mini-clavier QWERTY en I2C.",
+								 "ENG": "CardKB - QWERTY mini-keyboard over I2C"
+								}
+		},
 		{	"folder"        : "dht11",
 			"components"    : ["DHT11"],
 			"interfaces"    : ["GPIO"],

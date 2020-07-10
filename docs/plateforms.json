@@ -8,6 +8,11 @@
 				            "ENG" : "ESP8266 Evaluation Board (based on ESP8266-DEV)" },
 			  "url" : "https:\/\/shop.mchobby.be\/fr\/esp8266-esp32-wifi-iot\/668-module-wifi-esp8266-carte-d-evaluation-3232100006683-olimex.html"
 			},
+	"M5STACK" :
+			{ "descr" : { "FR" : "M5Stack (basé sur ESP32)",
+				            "ENG" : "M5Stack (based on ESP32)" },
+			  "url" : "https:\/\/shop.mchobby.be\/fr\/153-m5stack-esp"
+			},
 	"PYBOARD" :
 			{ "descr" : { "FR" : "MicroPython Pyboard",
 				            "ENG" : "MicroPython Pyboard" },

@@ -6,5 +6,6 @@
 	"PIMORONI" : { "name" : "Pimoroni", "url" : "https:\/\/shop.pimoroni.com\/"},
 	"GARATRONIC": { "name" : "Garatronic", "url" : "https:\/\/garatronic.fr\/"},
 	"DFROBOT"   : { "name" : "DFRobot", "url" : "https:\/\/www.dfrobot.com\/"},
-	"NONE"      : { "name" : "(other)", "url" : ""}
+	"M5STACK"   : { "name" : "M5Stack", "url" : "https:\/\/m5stack.com\/"},
+	"NONE"      : { "name" : "(other)", "url" : "https:\/\/m5stack.com\/"}
 }
