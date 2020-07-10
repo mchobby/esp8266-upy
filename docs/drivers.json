@@ -53,7 +53,7 @@
 			"components"    : ["CARDKB", "U035"],
 			"interfaces"    : ["I2C","GROVE"],
 			"manufacturers" : ["M5STACK"],
-			"plateforms"    : [],
+			"plateforms"    : ["PYBOARD","PYBOARD","M5STACK"],
 			"ressources"    : [ { "label" : "CardKB : Mini Qwerty Keyboard from M5Stack",
 												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=1912" }
 												],

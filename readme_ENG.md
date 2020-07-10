@@ -136,7 +136,7 @@ Explore it by:
       <td><strong>Components</strong> : CARDKB, U035<br />
       <strong>Interfaces</strong> : I2C, GROVE<br />
 <small>CardKB - QWERTY mini-keyboard over I2C</small><br/><br />
-      <strong>Tested with</strong> : <br />
+      <strong>Tested with</strong> : PYBOARD, PYBOARD, M5STACK<br />
       <strong>Manufacturer</strong> : M5STACK<br />
 <ul>
 <li>See <a href="http://shop.mchobby.be/product.php?id_product=1912">CardKB : Mini Qwerty Keyboard from M5Stack</a></li>
