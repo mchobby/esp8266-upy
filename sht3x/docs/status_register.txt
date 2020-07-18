@@ -1,0 +1,26 @@
+/*!
+For the MicroPython implementation, 0=False and 1=True
+
+ The status register contains information on the operational status of the heater, the alert mode and on the execution status of
+ the last command and the last write sequence.
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+					b15       |       b14 |      b13   |      b12 |        b11   |        b10       |  b5~b9    |    b4              |    b2~b3 |    b1       |       b0              |
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	alertPendingStatus| reserved3 | heaterStaus|reserved2 |humidityAlert | temperatureAlert | reserved1 | systemResetDeteced |reserved0 |commendStatus|writeDataChecksumStatus|
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ writeDataChecksumStatus:   '0' : checksum of last write transfer was correct
+														'1' : checksum of last write transfer failed
+ commendStatus              '0' : last command executed successfully
+														'1' : last command not processed.
+ systemResetDeteced         '0' : no reset detected since last ‘clear status register’ command
+														'1' : reset detected (hard reset, soft reset command or supply fail)
+ temperatureAlert           '0' : no alert
+														'1' : alert
+ humidityAlert              '0' : no alert
+														'1' : alert
+ heaterStaus                '0' : heater OFF
+														'1' : heater ON
+ alertPendingStatus         '0' : no pending alerts
+														'1' : at least one pending alert
+*/

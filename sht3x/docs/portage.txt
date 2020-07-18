@@ -1,0 +1,75 @@
+Portage of Arduino --> MicroPython
+==================================
+
+The [NOT IMPLEMENTED] is used when a feature as not been implemented on the MicroPython driver
+
+Arduino definition               --> MicroPython definition
+--------------------------------------------------------------------------------
+typedef struct sStatusRegister_t --> class StatusRegister
+typedef enum eMode_t             --> see constants MODE_PERIODIC, MODE_ONE_SHOT
+typedef enum eRepeatability_t    --> see constants REPEATABILITY_HIGH, REPEATABILITY_xxx
+typedef enum eMeasureFrequency_t --> see constants MEASUREFREQ_xxx
+typedef struct sRHAndTemp_t      --> not needed, read_all() returns a Tuple instead
+typedef struct sLimitData_t      --> [NOT IMPLEMENTED]
+
+Constructor: DFRobot_SHT3x(TwoWire *pWire = &Wire, uint8_t address = 0x45,uint8_t RST = 4)
+                                 --> Hardware Reset via RST pin : [NOT IMPLEMENTED]
+                                 --> Software Reset via I2C     : implemented
+
+readSerialNumber()               --> property serial_number
+begin()                          --> not needed
+softReset()                      --> soft_reset()
+pinReset()                       --> [NOT IMPLEMENTED]
+readTemperatureAndHumidity()     --> read_all(), initialise self._temp & self._rh. Return a tuple (temp,rh)
+getTemperatureC()                --> property temperature
+getTemperatureF()                --> [NOT IMPLEMENTED]
+getHumidityRH()                  --> property humidity
+                        see also --> property temp_rh returning the tuple (temp,rh)
+startPeriodicMode()              --> start_periodic_mode()
+stopPeriodicMode()               --> stop_periodic_mode()
+heaterEnable()                   --> property heater
+heaterDisable()                  --> property heater
+clearStatusRegister()            --> [NOT IMPLEMENTED]
+readAlertState()                 --> property alert_state
+environmentState()               --> [NOT IMPLEMENTED]
+setTemperatureLimitC()           --> [NOT IMPLEMENTED]
+setTemperatureLimitF()           --> [NOT IMPLEMENTED]
+setHumidityLimitRH()             --> [NOT IMPLEMENTED]
+measureTemperatureLimitC()       --> [NOT IMPLEMENTED]
+getTemperatureHighSetC()         --> [NOT IMPLEMENTED]
+getTemperatureHighClearC()       --> [NOT IMPLEMENTED]
+getTemperatureLowClearC()        --> [NOT IMPLEMENTED]
+getTemperatureLowSetC()          --> [NOT IMPLEMENTED]
+measureTemperatureLimitF()       --> [NOT IMPLEMENTED]
+getTemperatureHighSetF()         --> [NOT IMPLEMENTED]
+getTemperatureHighClearF()       --> [NOT IMPLEMENTED]
+getTemperatureLowClearF()        --> [NOT IMPLEMENTED]
+getTemperatureLowSetF()          --> [NOT IMPLEMENTED]
+measureHumidityLimitRH()         --> [NOT IMPLEMENTED]
+getHumidityHighSetRH()           --> [NOT IMPLEMENTED]
+getHumidityHighClearRH()         --> [NOT IMPLEMENTED]
+getHumidityLowClearRH()          --> [NOT IMPLEMENTED]
+getHumidityLowSetRH()            --> [NOT IMPLEMENTED]
+writeCommand()                   --> write_command()
+readStatusRegister()             --> update_status_reg()
+writeLimitData                   --> [NOT IMPLEMENTED]
+readLimitData()                  --> [NOT IMPLEMENTED]
+readData()                       --> not needed, use i2c.readfrom_into()
+checkCrc()                       --> check_crc()
+convertTemperature()             --> _convert_temp()
+convertHumidity()                --> _convert_rh()
+convertRawTemperature()          --> [NOT IMPLEMENTED]
+convertRawHumidity()             --> [NOT IMPLEMENTED]
+convertTempLimitData()           --> [NOT IMPLEMENTED]
+convertHumidityLimitData()       --> [NOT IMPLEMENTED]
+write()                          --> not needed, use i2c.writeto(())
+
+-- private members --
+sLimitData_t limitData           --> [NOT IMPLEMENTED]
+sRHAndTemp_t tempRH              --> self._temp & self._rh.
+TwoWire *_pWire                  --> self.i2c
+eMode_t measurementMode          --> self.measurement_mode
+uint8_t _address                 --> self.address
+uint8_t _RST                     --> [NOT IMPLEMENTED]
+float tempHighSet                --> [NOT IMPLEMENTED]
+float tempLowSet                 --> [NOT IMPLEMENTED]
