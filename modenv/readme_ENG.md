@@ -58,28 +58,28 @@ while True:
 Which produce the following results in a REPL session
 
 ```
-CO2: 0 PPM, TVOC: 400 PPB, Temp: 24.4 C, hPa: 995.94, Rh 46.49 percent
-CO2: 0 PPM, TVOC: 400 PPB, Temp: 24.4 C, hPa: 995.91, Rh 46.48 percent
-CO2: 0 PPM, TVOC: 400 PPB, Temp: 24.4 C, hPa: 995.87, Rh 46.52 percent
-CO2: 0 PPM, TVOC: 400 PPB, Temp: 24.4 C, hPa: 995.96, Rh 47.09 percent
-CO2: 1 PPM, TVOC: 413 PPB, Temp: 24.41 C, hPa: 995.93, Rh 47.44 percent
-CO2: 1 PPM, TVOC: 413 PPB, Temp: 24.39 C, hPa: 995.97, Rh 47.6 percent
-CO2: 0 PPM, TVOC: 405 PPB, Temp: 24.39 C, hPa: 995.95, Rh 47.59 percent
-CO2: 0 PPM, TVOC: 405 PPB, Temp: 24.41 C, hPa: 996.02, Rh 48.13 percent
+CO2: 400 PPM, TVOC: 0 PPB, Temp: 24.4 C, hPa: 995.94, Rh 46.49 percent
+CO2: 400 PPM, TVOC: 0 PPB, Temp: 24.4 C, hPa: 995.91, Rh 46.48 percent
+CO2: 400 PPM, TVOC: 0 PPB, Temp: 24.4 C, hPa: 995.87, Rh 46.52 percent
+CO2: 400 PPM, TVOC: 0 PPB, Temp: 24.4 C, hPa: 995.96, Rh 47.09 percent
+CO2: 413 PPM, TVOC: 1 PPB, Temp: 24.41 C, hPa: 995.93, Rh 47.44 percent
+CO2: 413 PPM, TVOC: 1 PPB, Temp: 24.39 C, hPa: 995.97, Rh 47.6 percent
+CO2: 405 PPM, TVOC: 0 PPB, Temp: 24.39 C, hPa: 995.95, Rh 47.59 percent
+CO2: 405 PPM, TVOC: 0 PPB, Temp: 24.41 C, hPa: 996.02, Rh 48.13 percent
 ... Breathing toward the environmental Sensor
 ... Souffler vers le capteur environnementale
-CO2: 8 PPM, TVOC: 454 PPB, Temp: 24.47 C, hPa: 996.02, Rh 51.67 percent
-CO2: 8 PPM, TVOC: 454 PPB, Temp: 24.62 C, hPa: 996.04, Rh 53.98 percent
-CO2: 8 PPM, TVOC: 454 PPB, Temp: 24.78 C, hPa: 996.08, Rh 55.22 percent
-CO2: 8 PPM, TVOC: 454 PPB, Temp: 24.91 C, hPa: 996.0999, Rh 56.7 percent
-CO2: 12 PPM, TVOC: 480 PPB, Temp: 25.04 C, hPa: 996.04, Rh 58.35 percent
-CO2: 12 PPM, TVOC: 480 PPB, Temp: 25.18 C, hPa: 995.96, Rh 60.75 percent
-CO2: 31 PPM, TVOC: 605 PPB, Temp: 25.32 C, hPa: 996.08, Rh 61.63 percent
-CO2: 31 PPM, TVOC: 605 PPB, Temp: 25.44 C, hPa: 996.06, Rh 63.0 percent
-CO2: 33 PPM, TVOC: 620 PPB, Temp: 25.54 C, hPa: 996.03, Rh 65.12001 percent
-CO2: 33 PPM, TVOC: 620 PPB, Temp: 25.52 C, hPa: 996.06, Rh 62.73 percent
-CO2: 18 PPM, TVOC: 523 PPB, Temp: 25.5 C, hPa: 996.02, Rh 59.27 percent
-CO2: 18 PPM, TVOC: 523 PPB, Temp: 25.48 C, hPa: 996.0999, Rh 56.72 percent
+CO2: 454 PPM, TVOC: 8 PPB, Temp: 24.47 C, hPa: 996.02, Rh 51.67 percent
+CO2: 454 PPM, TVOC: 8 PPB, Temp: 24.62 C, hPa: 996.04, Rh 53.98 percent
+CO2: 454 PPM, TVOC: 8 PPB, Temp: 24.78 C, hPa: 996.08, Rh 55.22 percent
+CO2: 454 PPM, TVOC: 8 PPB, Temp: 24.91 C, hPa: 996.0999, Rh 56.7 percent
+CO2: 480 PPM, TVOC: 12 PPB, Temp: 25.04 C, hPa: 996.04, Rh 58.35 percent
+CO2: 480 PPM, TVOC: 12 PPB, Temp: 25.18 C, hPa: 995.96, Rh 60.75 percent
+CO2: 605 PPM, TVOC: 31 PPB, Temp: 25.32 C, hPa: 996.08, Rh 61.63 percent
+CO2: 605 PPM, TVOC: 31 PPB, Temp: 25.44 C, hPa: 996.06, Rh 63.0 percent
+CO2: 620 PPM, TVOC: 33 PPB, Temp: 25.54 C, hPa: 996.03, Rh 65.12001 percent
+CO2: 620 PPM, TVOC: 33 PPB, Temp: 25.52 C, hPa: 996.06, Rh 62.73 percent
+CO2: 523 PPM, TVOC: 18 PPB, Temp: 25.5 C, hPa: 996.02, Rh 59.27 percent
+CO2: 523 PPM, TVOC: 18 PPB, Temp: 25.48 C, hPa: 996.0999, Rh 56.72 percent
 ```
 
 The enhanced example [`test_enh.py`](examples/test_enh.py) also push the environmental data to the CCS811 sensor every quarter.
