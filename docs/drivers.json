@@ -659,7 +659,7 @@
 			"manufacturers" : ["DFROBOT"],
 			"plateforms"    : ["PYBOARD","PYBSTICK"],
 			"ressources"    : [ { "label" : "Capteur d'humidité SHT31-F SENS0332 @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be/\fr\/environnemental-press-temp-hrel-gaz/1882-sht31-f-capteur-d-humidite-et-temperature-3232100018822-dfrobot.html" },
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/environnemental-press-temp-hrel-gaz/1882-sht31-f-capteur-d-humidite-et-temperature-3232100018822-dfrobot.html" },
 													{ "label" : "Capteur d'humidité SHT31-F SENS0332 @ DFRobot",
 														"url"   : "https:\/\/www.dfrobot.com\/product-2015.html" }
 												],
