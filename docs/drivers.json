@@ -1,4 +1,30 @@
 [
+		{	"folder"        : "ad9833",
+			"components"    : ["AD9833"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : [],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "AD9833 - signal generator Sinus, triangle and clock @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/1689-generateur-de-signal-sinus-triangle-clock-0-125-mhz.html" }
+												],
+			"descr"	: {"FR" : "Créer un générateur de signal à l'aide de l AD9833",
+								 "ENG": "Create a signal generator with the MPR121 chip."
+								}
+		},
+		{	"folder"        : "adfmotors",
+			"components"    : ["PCA9685"],
+			"interfaces"    : ["I2C","UNO-R3"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "Adafruit Motor Shield @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/shields\/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html" },
+													{ "label" : "Adafruit Motor Shield @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1438" }
+												],
+			"descr"	: {"FR" : "Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.",
+								 "ENG": "Drive DC motors, steppers or servos with the Adafruit Industries MotorShield."
+								}
+		},
     {	"folder"        : "ads1015-ads1115",
 			"components"    : ["ADS1015","ADS1115","ADA1085"],
 			"interfaces"    : ["I2C"],
@@ -61,6 +87,34 @@
 								 "ENG": "CardKB - QWERTY mini-keyboard over I2C"
 								}
 		},
+		{	"folder"        : "ccs811",
+			"components"    : ["CCS811"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT","OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1274" },
+													{ "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3566" },
+													{ "label" : "MOD-ENV capteur environnemental @ MC Hobby",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1780" },
+													{ "label" : "MOD-ENV capteur environnemental @ MC Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
+												],
+			"descr"	: {"FR" : "CCS811 - Capteur qualité d'air - COV et eCO2 avec MicroPython",
+								 "ENG": "CCS811 - air quality sensor - COV and eCO2 with MicroPython."
+								}
+		},
+		{	"folder"        : "COLORS",
+			"components"    : [],
+			"interfaces"    : [],
+			"manufacturers" : [],
+			"plateforms"    : [],
+			"ressources"    : [],
+			"descr"	: {"FR" : "Bibliothèque de gestion de couleurs (et outils)",
+								 "ENG": "Color management\/tool library"
+								}
+		},
 		{	"folder"        : "dht11",
 			"components"    : ["DHT11"],
 			"interfaces"    : ["GPIO"],
@@ -73,6 +127,20 @@
 								 "ENG": "The DHT11 is a very cheap <strong>humidity<\/strong> (20 to 80%) and temperature sensor."
 								}
 		},
+		{	"folder"        : "dotstar",
+			"components"    : ["DOTSTAR","74AHCT125", "APA102"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "APA102 / DotStar",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
+													{ "label" : "74AHCT125",
+													  "url"   : "https:\/\/shop.mchobby.be\/fr\/ci\/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html" }
+												],
+			"descr"	: {"FR" : "Les <strong>DotStar / APA102<\/strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.",
+								 "ENG": "The <strong>DotStar / APA102</strong> are Smart digitals LED that can be controled individually."
+								}
+		},
 		{	"folder"        : "ds18b20",
 			"components"    : ["DS18B20"],
 			"interfaces"    : ["ONEWIRE"],
@@ -83,6 +151,50 @@
 												],
 			"descr"	: {"FR" : "Le DS18B20 est un senseur de <strong>température<\/strong> digital très populaire. Il utilise le bus 1-Wire permettant de brancher plusieurs senseurs 1-Wire sur un même bus.",
 								 "ENG": "The DS18B20 is a very popular <strong>temperature<\/strong> sensor. It use the 1-Wire bus to connect several sensors."
+								}
+		},
+		{	"folder"        : "gps-ultimate",
+			"components"    : ["GPS-ULTIMATE","MTK3339"],
+			"interfaces"    : ["UART"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "GPS Ultime @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html" },
+													{ "label" : "GPS Ultimate",
+														"url"   : "https:\/\/www.adafruit.com\/product\/746" }
+												],
+			"descr"	: {"FR" : "Pouvoir obtenir ou suivre votre position actuelle à l'aide d'un module GPS",
+								 "ENG": "Being able to capture (or follow) your position with a GPS module"
+								}
+		},
+		{	"folder"        : "hat-joy-bonnet",
+			"components"    : ["JOY-BONNET"],
+			"interfaces"    : ["HAT"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : [],
+			"ressources"    : [ { "label" : "NADHAT PYB405 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/micropython\/1653-hat-micropython-pyb405-nadhat-3232100016538-garatronic.html" },
+													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-zero-w\/1116-gamepad-pizero-joy-bonnet-3232100011168-adafruit.html" },
+													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3464" }
+												],
+			"descr"	: {"FR" : "Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405",
+								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
+								}
+		},
+		{	"folder"        : "is31fl",
+			"components"    : ["IS31FL3731"],
+			"interfaces"    : ["FEATHERWING", "I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1563-featherwing-matrice-led-15x7-en-charlieplexing-pour-feather-3232100015630-adafruit.html" },
+													{ "label" : "FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3134" }
+												],
+			"descr"	: {"FR" : "IS31FL3731 - contrôleur CharliePlexing via I2C - sous MicroPython",
+								 "ENG": "IS31FL3731 - CharliePlexing controler via I2C - under MicroPython."
 								}
 		},
 		{	"folder"        : "lcdi2c",
@@ -99,6 +211,52 @@
 												],
 			"descr"	: {"FR" : "Afficheur à cristaux liquides (LCD) commandé via le bus I2C.",
 								 "ENG": "Liquid Crystal display (LCD) controled via I2C bus."
+								}
+		},
+		{	"folder"        : "lcdmtrx",
+			"components"    : ["USB + Serial Backpack"],
+			"interfaces"    : ["UART"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "USB + Serial Backpack @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html" },
+													{ "label" : "USB + Serial Backpack @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/782" }
+												],
+			"descr"	: {"FR" : "Afficheur LCD 2 lignes, 16 caractères, Arrière plan RGB. Interface USB + Série",
+								 "ENG": "USB + Serial Backpack Kit with 16x2 RGB backlight positive LCD - Black on RGB."
+								}
+		},
+		{	"folder"        : "lsm303",
+			"components"    : ["LSM303D"],
+			"interfaces"    : ["UNO-R3", "I2C"],
+			"manufacturers" : ["POLOLU"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "LSM303D breakout - 3D Compass and Accelerometer @ Pololu",
+														"url"   : "https:\/\/www.pololu.com\/product\/2127" },
+													{ "label" : "Robot Zumo pour Arduino (2510) @ Pololu",
+														"url"   : "https:\/\/www.pololu.com\/product\/2510" },
+													{ "label" : "Robot Zumo pour Arduino @ MC Hobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/prototypage-robotique-roue\/448-robot-zumo-pour-arduino-assemble-moteurs-3232100004481-pololu.html" },
+													{ "label" : "PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html" }
+												],
+			"descr"	: {"FR" : "Utiliser une boussole et accéléromètre LSM303D avec MicroPython",
+								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
+								}
+		},
+		{	"folder"        : "max6675",
+			"components"    : ["MOD-TC","MAX6675"],
+			"interfaces"    : ["UEXT", "SPI"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-TC - Amplificateur Thermocouple Type-K d'Olimex @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1623" },
+													{ "label" : "MOD-TC - Amplificateur Thermocouple Type-K @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-TC" }
+												],
+			"descr"	: {"FR" : "MAX6675 Amplificateur Thermocouple Type-K - MOD-TC - sous MicroPython",
+								 "ENG": "MAX6675 Type-K Thermocouple amplifier - MOD-TC - under MicroPython."
 								}
 		},
 		{	"folder"        : "mcp230xx",
@@ -141,118 +299,18 @@
 								 "ENG": "The MCP4725 (I2C bus) is a DAC -or- a TRUE 12 bits analog output (0 à 65535)."
 								}
 		},
-		{	"folder"        : "neopixel",
-			"components"    : ["NEOPIXEL","74AHCT125", "WS2812"],
-			"interfaces"    : ["GPIO"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
-			"ressources"    : [ { "label" : "NeoPixels",
-												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
-													{ "label" : "74AHCT125",
-													  "url"   : "https:\/\/shop.mchobby.be\/fr\/ci\/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html" }
-												],
-			"descr"	: {"FR" : "Les <strong>NéoPixels<\/strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.",
-								 "ENG": "The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually."
-								}
-		},
-		{	"folder"        : "dotstar",
-			"components"    : ["DOTSTAR","74AHCT125", "APA102"],
-			"interfaces"    : ["SPI"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD","PYBSTICK"],
-			"ressources"    : [ { "label" : "APA102 / DotStar",
-												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
-													{ "label" : "74AHCT125",
-													  "url"   : "https:\/\/shop.mchobby.be\/fr\/ci\/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html" }
-												],
-			"descr"	: {"FR" : "Les <strong>DotStar / APA102<\/strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.",
-								 "ENG": "The <strong>DotStar / APA102</strong> are Smart digitals LED that can be controled individually."
-								}
-		},
-		{	"folder"        : "oled-ssd1306",
-			"components"    : ["SSD1306","FEATHER-OLED-WING","ADA2900","OLED"],
-			"interfaces"    : ["I2C","FEATHERWING"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["FEATHER-ESP8266"],
-			"ressources"    : [ { "label" : "FeatherWing OLED ssd1306 128x32",
-												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=879" }
-												],
-			"descr"	: {"FR" : "Le SSD1306 est un contrôleur d'écran OLED",
-								 "ENG": "The SSD1306 is an OLED display controler."
-								}
-		},
-		{	"folder"        : "modoled128x64",
-			"components"    : ["SSD1306","MOD-OLED-128x64","OLED"],
-			"interfaces"    : ["I2C","UEXT"],
+		{	"folder"        : "modenv",
+			"components"    : ["CCS811","BME280"],
+			"interfaces"    : ["UEXT", "I2C"],
 			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["ESP8266-EVB"],
-			"ressources"    : [ { "label" : "Afficheur OLED 128 x 64 avec interface I2C et UEXT",
-												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1411" }
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1280" },
+													{ "label" : "MOD-ENV capteur environnemental @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
 												],
-			"descr"	: {"FR" : "Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur UEXT.",
-								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a UEXT connector."
-								}
-		},
-		{	"folder"        : "pca9536",
-			"components"    : ["PCA9536"],
-			"interfaces"    : ["I2C"],
-			"manufacturers" : ["NONE"],
-			"plateforms"    : [],
-			"ressources"    : [],
-			"descr"	: {"FR" : "Contrôleur GPIO 4 bits I2C.",
-								 "ENG": "4 bit I2C controled GPIO expander."
-								}
-		},
-		{	"folder"        : "tsl2561",
-			"components"    : ["TSL2561","ADA439"],
-			"interfaces"    : ["I2C"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["FEATHER-ESP8266"],
-			"ressources"    : [ { "label" : "Capteur Lux/Luminosité/Lumière digital",
-												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=238" }
-												],
-			"descr"	: {"FR" : "Le TSL2561 est un senseur de <strong>luminosité<\/strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX",
-								 "ENG": "The TSL2561 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
-								}
-		},
-		{	"folder"        : "tsl2591",
-			"components"    : ["TSL2591","ADA1980"],
-			"interfaces"    : ["I2C"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
-			"ressources"    : [ { "label" : "TSL2591 @ MCHobby - Capteur Lux/Luminosité/Lumière digital",
-												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1599" },
-													{ "label" : "TSL2591 @ Adafruit - Capteur Lux/Luminosité/Lumière digital",
-														"url"   : "https:\/\/www.adafruit.com\/product\/1980" }
-												],
-			"descr"	: {"FR" : "Le TSL2591 est un capteur de <strong>luminosité<\/strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX",
-								 "ENG": "The TSL2591 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
-								}
-		},
-		{	"folder"        : "umqtt",
-			"components"    : [],
-			"interfaces"    : [],
-			"manufacturers" : ["NONE"],
-			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
-			"ressources"    : [ { "label" : "Feather ESP8266",
-												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=846" }
-												],
-			"descr"	: {"FR" : "Exemples de communication MQTT avec un module ESP8266.",
-								 "ENG": "MQTT Communication exemples with ESP8266 module."
-								}
-		},
-		{	"folder"        : "UEXT",
-			"components"    : ["UEXT"],
-			"interfaces"    : ["I2C","SPI","UART"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["ESP8266-EVB"],
-			"ressources"    : [ { "label" : "UEXT @ MCHobby",
-												    "url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
-													{ "label" : "UEXT @ Olimex",
-													  "url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
-												],
-			"descr"	: {"FR" : "Connecteur <strong>UEXT<\/strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V",
-								 "ENG": "<strong>UEXT<\/strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V"
+			"descr"	: {"FR" : "Capteur environnementale tout-en-un - BME280 + CCS811 - sous MicroPython",
+								 "ENG": "Environmental sensor all-in-one - BME280 + CCS811 - under MicroPython."
 								}
 		},
 		{	"folder"        : "modio",
@@ -283,18 +341,16 @@
 								 "ENG": "MOD-IO is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have relays, and GPIOs with various functions (Input, Output, Analog, PWM; 0-3.3V)."
 								}
 		},
-		{	"folder"        : "modrgb",
-			"components"    : ["MOD-RGB"],
+		{	"folder"        : "modirtemp",
+			"components"    : ["MOD-IR-TEMP", "MLX90614"],
 			"interfaces"    : ["I2C","UEXT"],
 			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["ESP8266-EVB"],
-			"ressources"    : [ { "label" : "UEXT @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
-													{ "label" : "UEXT @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-IR-TEMP @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-IR-TEMP\/open-source-hardware" }
 												],
-			"descr"	: {"FR" : "MOD-RGB est une carte d'extension I2C avec port de connexion <strong>UEXT<\/strong>. Cette carte d'Olimex équipé de MosFet de puissance pour commander des rubans LED RGB analogiques via I2C (ou DMX).",
-								 "ENG": "MOD-RGB is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have power MosFet to control RGB analogic LED strips via I2C (or DMX)."
+			"descr"	: {"FR" : "Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)",
+								 "ENG": "NON-Contact IR temperature sensor, from -70°C to 380°C with MXL90164."
 								}
 		},
 		{	"folder"        : "modlcd1x9",
@@ -311,18 +367,18 @@
 								 "ENG": "MOD-LCD1x9 is an I2C'based 9 characters alphanumeric display using the <strong>UEXT<\/strong> connector."
 								}
 		},
-		{	"folder"        : "modmag",
-			"components"    : ["MOD-MAG","MAG3110"],
-			"interfaces"    : ["I2C","UEXT"],
+		{	"folder"        : "modled8x8",
+			"components"    : ["MOD-LED8x8RGB"],
+			"interfaces"    : ["GPIO","SPI"],
 			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["ESP8266-EVB"],
-			"ressources"    : [ { "label" : "MOD-MAG @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/esp8266-esp32-wifi-iot\/1413-uext-mag3110-magnetometer-module-3232100014138-olimex.html" },
-													{ "label" : "UEXT @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-LED8x8RGB @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html" },
+													{ "label" : "MOD-LED8x8RGB @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/LED\/MOD-LED8x8RGB\/open-source-hardware" }
 												],
-			"descr"	: {"FR" : "Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT<\/strong> facilitant les raccordements.",
-								 "ENG": "The MAG3110 is a digital 3 axis magnetometer from NXP running over an I2C bus. The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring."
+			"descr"	: {"FR" : "Un afficheur 8x8 LEDs RGB chaînable.",
+								 "ENG": "A 8x8 RGB led display that can be daisy chained."
 								}
 		},
 		{	"folder"        : "modltr501",
@@ -339,6 +395,74 @@
 								 "ENG": "LTR-501ALS can be used to acquires luminosity data from 0.01 to 64.000 Lux (64K lux) and make proximity detection (up to 10cm). The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring."
 								}
 		},
+		{	"folder"        : "modmag",
+			"components"    : ["MOD-MAG","MAG3110"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "MOD-MAG @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/esp8266-esp32-wifi-iot\/1413-uext-mag3110-magnetometer-module-3232100014138-olimex.html" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "Le MAG3110 est un magénomètre digital 3 axes de NXP accessible via I2C. Le MOD-MAG dispose d'une connexion <strong>UEXT<\/strong> facilitant les raccordements.",
+								 "ENG": "The MAG3110 is a digital 3 axis magnetometer from NXP running over an I2C bus. The MOD-MAG have an <strong>UEXT</strong> connector to ease wiring."
+								}
+		},
+		{	"folder"        : "modoled128x64",
+			"components"    : ["SSD1306","MOD-OLED-128x64","OLED"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "Afficheur OLED 128 x 64 avec interface I2C et UEXT",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1411" }
+												],
+			"descr"	: {"FR" : "Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur UEXT.",
+								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a UEXT connector."
+								}
+		},
+		{	"folder"        : "modrfid",
+			"components"    : ["MOD-RFID1536MIFARE"],
+			"interfaces"    : ["UART","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-RFID1536MIFARE @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1619" },
+													{ "label" : "MOD-RFID1536MIFARE @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/RFID\/MOD-RFID1356MIFARE\/" }
+												],
+			"descr"	: {"FR" : "MOD-RFID1356 MIFARE : lecteur NFC \/ RFID Mifare via port série\/usb-série\/usb-hid.",
+								 "ENG": "NFC RFID reader writer for 13.56Mhz NFC MIFARE RFID tags."
+								}
+		},
+		{	"folder"        : "modrgb",
+			"components"    : ["MOD-RGB"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-RGB est une carte d'extension I2C avec port de connexion <strong>UEXT<\/strong>. Cette carte d'Olimex équipé de MosFet de puissance pour commander des rubans LED RGB analogiques via I2C (ou DMX).",
+								 "ENG": "MOD-RGB is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have power MosFet to control RGB analogic LED strips via I2C (or DMX)."
+								}
+		},
+		{	"folder"        : "modtc-mk2",
+			"components"    : ["MOD-TC-MK2-31855"],
+			"interfaces"    : ["UEXT", "I2C"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-TC-MK2 - Amplificateur Thermocouple Type-K (MAX31855) via I2C d'Olimex @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/uext\/1624-mod-tc-mk2-31855-interface-thermocouple-type-k-avec-max31855-bus-i2c-gpio-3232100016248-olimex.html" },
+													{ "label" : "MOD-TC-MK2 - Type-K Thermocouple Amplifier (MAX31855) over I2C from Olimex @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-TC-MK2-31855\/open-source-hardware" }
+												],
+			"descr"	: {"FR" : "MAX6MOD-TC-MK2 : Amplificateur Thermocouple Type-K (MAX31855) via I2C - sous MicroPython",
+								 "ENG": "MAX6MOD-TC-MK2 : Type-K Thermocouple amplifier (MAX31855) over I2C - under MicroPython."
+								}
+		},
 		{	"folder"        : "modwii",
 			"components"    : ["MOD-Wii-UEXT-NUNCHUCK","NUNCHUCK"],
 			"interfaces"    : ["I2C","UEXT"],
@@ -353,18 +477,18 @@
 								 "ENG": "The Wii NUNCHUCK is a game controler very comfortable to used and runs over the I2C bus. This controler have an <strong>UEXT</strong> connector to ease wiring."
 								}
 		},
-		{	"folder"        : "adfmotors",
-			"components"    : ["PCA9685"],
-			"interfaces"    : ["I2C","UNO-R3"],
+		{	"folder"        : "mpr121",
+			"components"    : ["MPR121"],
+			"interfaces"    : ["I2C"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "Adafruit Motor Shield @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/shields\/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html" },
-													{ "label" : "Adafruit Motor Shield @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/1438" }
+			"plateforms"    : ["PYBOARD","FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "MPR121 - capteur capacitif 12 entrées/touches @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/1685-capteur-capacitif-12-touches-mpr121-3232100016859-adafruit.html" },
+													{ "label" : "12-Key Capacitive Touch Sensor Breakout - MPR121 @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1982" }
 												],
-			"descr"	: {"FR" : "Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.",
-								 "ENG": "Drive DC motors, steppers or servos with the Adafruit Industries MotorShield."
+			"descr"	: {"FR" : "Créer des pastilles/entrées capacitives (tactiles) avec le MPR121",
+								 "ENG": "Create tactile pad/inputs with capacitive effect with the MPR121 chip."
 								}
 		},
 		{	"folder"        : "NCD",
@@ -465,58 +589,40 @@
 								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a NCD connector."
 								}
 		},
-		{	"folder"        : "modirtemp",
-			"components"    : ["MOD-IR-TEMP", "MLX90614"],
-			"interfaces"    : ["I2C","UEXT"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["FEATHER-ESP8266", "PYBOARD"],
-			"ressources"    : [ { "label" : "MOD-IR-TEMP @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-IR-TEMP\/open-source-hardware" }
-												],
-			"descr"	: {"FR" : "Mesure de température -70°C à 380°C Infrarouge sans contact (MXL90164)",
-								 "ENG": "NON-Contact IR temperature sensor, from -70°C to 380°C with MXL90164."
-								}
-		},
-		{	"folder"        : "gps-ultimate",
-			"components"    : ["GPS-ULTIMATE","MTK3339"],
-			"interfaces"    : ["UART"],
+		{	"folder"        : "neopixel",
+			"components"    : ["NEOPIXEL","74AHCT125", "WS2812"],
+			"interfaces"    : ["GPIO"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "GPS Ultime @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html" },
-													{ "label" : "GPS Ultimate",
-														"url"   : "https:\/\/www.adafruit.com\/product\/746" }
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
+			"ressources"    : [ { "label" : "NeoPixels",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/55-neopixels-et-dotstar" },
+													{ "label" : "74AHCT125",
+													  "url"   : "https:\/\/shop.mchobby.be\/fr\/ci\/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html" }
 												],
-			"descr"	: {"FR" : "Pouvoir obtenir ou suivre votre position actuelle à l'aide d'un module GPS",
-								 "ENG": "Being able to capture (or follow) your position with a GPS module"
+			"descr"	: {"FR" : "Les <strong>NéoPixels<\/strong> sont des LEDs digitales intelligentes pouvant être contrôlées indépendamment les unes des autres.",
+								 "ENG": "The <strong>NéoPixels</strong> are Smart digitals LED that can be controled individually."
 								}
 		},
-		{	"folder"        : "modled8x8",
-			"components"    : ["MOD-LED8x8RGB"],
-			"interfaces"    : ["GPIO","SPI"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "MOD-LED8x8RGB @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1625-mod-led8x8rgb-matrice-led-rgb-8x8-3232100016255-olimex.html" },
-													{ "label" : "MOD-LED8x8RGB @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/LED\/MOD-LED8x8RGB\/open-source-hardware" }
+		{	"folder"        : "oled-ssd1306",
+			"components"    : ["SSD1306","FEATHER-OLED-WING","ADA2900","OLED"],
+			"interfaces"    : ["I2C","FEATHERWING"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "FeatherWing OLED ssd1306 128x32",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=879" }
 												],
-			"descr"	: {"FR" : "Un afficheur 8x8 LEDs RGB chaînable.",
-								 "ENG": "A 8x8 RGB led display that can be daisy chained."
+			"descr"	: {"FR" : "Le SSD1306 est un contrôleur d'écran OLED",
+								 "ENG": "The SSD1306 is an OLED display controler."
 								}
 		},
-		{	"folder"        : "modrfid",
-			"components"    : ["MOD-RFID1536MIFARE"],
-			"interfaces"    : ["UART","UEXT"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "MOD-RFID1536MIFARE @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1619" },
-													{ "label" : "MOD-RFID1536MIFARE @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/RFID\/MOD-RFID1356MIFARE\/" }
-												],
-			"descr"	: {"FR" : "MOD-RFID1356 MIFARE : lecteur NFC \/ RFID Mifare via port série\/usb-série\/usb-hid.",
-								 "ENG": "NFC RFID reader writer for 13.56Mhz NFC MIFARE RFID tags."
+		{	"folder"        : "pca9536",
+			"components"    : ["PCA9536"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : [],
+			"ressources"    : [],
+			"descr"	: {"FR" : "Contrôleur GPIO 4 bits I2C.",
+								 "ENG": "4 bit I2C controled GPIO expander."
 								}
 		},
 		{	"folder"        : "pca9685",
@@ -533,190 +639,32 @@
 								 "ENG": "PWM-Driver driver contrôler based on PCA9685 from NXP, 16 channel, 12 bits resolution, to drive LEDs and Servos."
 								}
 		},
-		{	"folder"        : "lcdmtrx",
-			"components"    : ["USB + Serial Backpack"],
-			"interfaces"    : ["UART"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "USB + Serial Backpack @ MCHobby",
-												    "url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html" },
-													{ "label" : "USB + Serial Backpack @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/782" }
-												],
-			"descr"	: {"FR" : "Afficheur LCD 2 lignes, 16 caractères, Arrière plan RGB. Interface USB + Série",
-								 "ENG": "USB + Serial Backpack Kit with 16x2 RGB backlight positive LCD - Black on RGB."
-								}
-		},
-		{	"folder"        : "tcs34725",
-			"components"    : ["TCS34725"],
+		{	"folder"        : "pcf8523",
+			"components"    : ["PCF8523"],
 			"interfaces"    : ["I2C"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD","FEATHER-ESP8266"],
-			"ressources"    : [ { "label" : "TCS34725 - capteur de couleur RGB + Filtre IR + LED blanche @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html" },
-													{ "label" : "RGB Color Sensor with IR filter and White LED - TCS34725 @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/1334" }
+			"plateforms"    : ["PYBSTICK"],
+			"ressources"    : [ { "label" : "PiRTC (PCF8523) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-extensions\/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html" },
+													{ "label" : "Adafruit AdaLogger FeatherWing (PCF8523) @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html" }
 												],
-			"descr"	: {"FR" : "Capturer la couleur (rgb ou Kelvin) avec un capteur TCS34725 + LED + filtre IR",
-								 "ENG": "Read the color (rgb or Kelvin) with a TCS34725 sensor + MED + IR filter."
+			"descr"	: {"FR" : "Une Horloge temps réel RTC + alarme avec MicroPython",
+								 "ENG": "A real time clock RTC + alarm for MicroPython"
 								}
 		},
-		{	"folder"        : "mpr121",
-			"components"    : ["MPR121"],
+		{	"folder"        : "sht3x",
+			"components"    : ["SHT31-F","SHT3x"],
 			"interfaces"    : ["I2C"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD","FEATHER-ESP8266"],
-			"ressources"    : [ { "label" : "MPR121 - capteur capacitif 12 entrées/touches @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/1685-capteur-capacitif-12-touches-mpr121-3232100016859-adafruit.html" },
-													{ "label" : "12-Key Capacitive Touch Sensor Breakout - MPR121 @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/1982" }
-												],
-			"descr"	: {"FR" : "Créer des pastilles/entrées capacitives (tactiles) avec le MPR121",
-								 "ENG": "Create tactile pad/inputs with capacitive effect with the MPR121 chip."
-								}
-		},
-		{	"folder"        : "ad9833",
-			"components"    : ["AD9833"],
-			"interfaces"    : ["SPI"],
-			"manufacturers" : [],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "AD9833 - signal generator Sinus, triangle and clock @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/1689-generateur-de-signal-sinus-triangle-clock-0-125-mhz.html" }
-												],
-			"descr"	: {"FR" : "Créer un générateur de signal à l'aide de l AD9833",
-								 "ENG": "Create a signal generator with the MPR121 chip."
-								}
-		},
-		{	"folder"        : "hat-joy-bonnet",
-			"components"    : ["JOY-BONNET"],
-			"interfaces"    : ["HAT"],
-			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : [],
-			"ressources"    : [ { "label" : "NADHAT PYB405 @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/micropython\/1653-hat-micropython-pyb405-nadhat-3232100016538-garatronic.html" },
-													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-zero-w\/1116-gamepad-pizero-joy-bonnet-3232100011168-adafruit.html" },
-													{ "label" : "Joy Bonnet Gamepad PiZero (ADA3464) @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/3464" }
-												],
-			"descr"	: {"FR" : "Utiliser le HAT Joy Bonnet avec MicroPython NADHAT PYB405",
-								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
-								}
-		},
-		{	"folder"        : "COLORS",
-			"components"    : [],
-			"interfaces"    : [],
-			"manufacturers" : [],
-			"plateforms"    : [],
-			"ressources"    : [],
-			"descr"	: {"FR" : "Bibliothèque de gestion de couleurs (et outils)",
-								 "ENG": "Color management\/tool library"
-								}
-		},
-		{	"folder"        : "lsm303",
-			"components"    : ["LSM303D"],
-			"interfaces"    : ["UNO-R3", "I2C"],
-			"manufacturers" : ["POLOLU"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "LSM303D breakout - 3D Compass and Accelerometer @ Pololu",
-														"url"   : "https:\/\/www.pololu.com\/product\/2127" },
-													{ "label" : "Robot Zumo pour Arduino (2510) @ Pololu",
-														"url"   : "https:\/\/www.pololu.com\/product\/2510" },
-													{ "label" : "Robot Zumo pour Arduino @ MC Hobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/prototypage-robotique-roue\/448-robot-zumo-pour-arduino-assemble-moteurs-3232100004481-pololu.html" },
-													{ "label" : "PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html" }
-												],
-			"descr"	: {"FR" : "Utiliser une boussole et accéléromètre LSM303D avec MicroPython",
-								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
-								}
-		},
-		{	"folder"        : "ccs811",
-			"components"    : ["CCS811"],
-			"interfaces"    : ["I2C"],
-			"manufacturers" : ["ADAFRUIT","OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1274" },
-													{ "label" : "CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/3566" },
-													{ "label" : "MOD-ENV capteur environnemental @ MC Hobby",
-														"url"   : "https:\/\/www.adafruit.com\/product\/1780" },
-													{ "label" : "MOD-ENV capteur environnemental @ MC Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
-												],
-			"descr"	: {"FR" : "CCS811 - Capteur qualité d'air - COV et eCO2 avec MicroPython",
-								 "ENG": "CCS811 - air quality sensor - COV and eCO2 with MicroPython."
-								}
-		},
-		{	"folder"        : "modenv",
-			"components"    : ["CCS811","BME280"],
-			"interfaces"    : ["UEXT", "I2C"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "MOD-ENV - Capteur environnemental d'Olimex CCS811 + BME280 @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1280" },
-													{ "label" : "MOD-ENV capteur environnemental @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-ENV" }
-												],
-			"descr"	: {"FR" : "Capteur environnementale tout-en-un - BME280 + CCS811 - sous MicroPython",
-								 "ENG": "Environmental sensor all-in-one - BME280 + CCS811 - under MicroPython."
-								}
-		},
-		{	"folder"        : "max6675",
-			"components"    : ["MOD-TC","MAX6675"],
-			"interfaces"    : ["UEXT", "SPI"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "MOD-TC - Amplificateur Thermocouple Type-K d'Olimex @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1623" },
-													{ "label" : "MOD-TC - Amplificateur Thermocouple Type-K @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-TC" }
-												],
-			"descr"	: {"FR" : "MAX6675 Amplificateur Thermocouple Type-K - MOD-TC - sous MicroPython",
-								 "ENG": "MAX6675 Type-K Thermocouple amplifier - MOD-TC - under MicroPython."
-								}
-		},
-		{	"folder"        : "is31fl",
-			"components"    : ["IS31FL3731"],
-			"interfaces"    : ["FEATHERWING", "I2C"],
-			"manufacturers" : ["ADAFRUIT"],
+			"manufacturers" : ["DFROBOT"],
 			"plateforms"    : ["PYBOARD","PYBSTICK"],
-			"ressources"    : [ { "label" : "FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1563-featherwing-matrice-led-15x7-en-charlieplexing-pour-feather-3232100015630-adafruit.html" },
-													{ "label" : "FeatherWing Matrice LED 15x7, ROUGE, CharliePlexing pour Feather @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/3134" }
+			"ressources"    : [ { "label" : "Capteur d'humidité SHT31-F SENS0332 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be/\fr\/environnemental-press-temp-hrel-gaz/1882-sht31-f-capteur-d-humidite-et-temperature-3232100018822-dfrobot.html" },
+													{ "label" : "Capteur d'humidité SHT31-F SENS0332 @ DFRobot",
+														"url"   : "https:\/\/www.dfrobot.com\/product-2015.html" }
 												],
-			"descr"	: {"FR" : "IS31FL3731 - contrôleur CharliePlexing via I2C - sous MicroPython",
-								 "ENG": "IS31FL3731 - CharliePlexing controler via I2C - under MicroPython."
-								}
-		},
-		{	"folder"        : "modtc-mk2",
-			"components"    : ["MOD-TC-MK2-31855"],
-			"interfaces"    : ["UEXT", "I2C"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
-			"ressources"    : [ { "label" : "MOD-TC-MK2 - Amplificateur Thermocouple Type-K (MAX31855) via I2C d'Olimex @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/uext\/1624-mod-tc-mk2-31855-interface-thermocouple-type-k-avec-max31855-bus-i2c-gpio-3232100016248-olimex.html" },
-													{ "label" : "MOD-TC-MK2 - Type-K Thermocouple Amplifier (MAX31855) over I2C from Olimex @ Olimex",
-														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/Sensors\/MOD-TC-MK2-31855\/open-source-hardware" }
-												],
-			"descr"	: {"FR" : "MAX6MOD-TC-MK2 : Amplificateur Thermocouple Type-K (MAX31855) via I2C - sous MicroPython",
-								 "ENG": "MAX6MOD-TC-MK2 : Type-K Thermocouple amplifier (MAX31855) over I2C - under MicroPython."
-								}
-		},
-		{	"folder"        : "trackball",
-			"components"    : ["TRACKBALL-BREAKOUT"],
-			"interfaces"    : ["I2C"],
-			"manufacturers" : ["PIMORONI"],
-			"plateforms"    : ["PYBOARD","PYBSTICK"],
-			"ressources"    : [ { "label" : "Trackball I2C avec retro-éclairage @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/1833-trackball-i2c-avec-retro-eclairage-3232100018334-pimoroni.html" },
-													{ "label" : "Trackball Breakout @ Pimoroni",
-														"url"   : "https:\/\/shop.pimoroni.com\/products\/trackball-breakout" }
-												],
-			"descr"	: {"FR" : "Ajouter un Trackball + LED RGBW sur votre projet MicroPython",
-								 "ENG": "Add a Trackball + RGBW LED to your MicroPython project"
+			"descr"	: {"FR" : "Exploiter un capteur d'humidité SHT3x avec MicroPython",
+								 "ENG": "Using a SHT3x humidity sensor under MicroPython"
 								}
 		},
 		{	"folder"        : "st7687s",
@@ -733,18 +681,84 @@
 								 "ENG": "Using a round TFT under MicroPython"
 								}
 		},
-		{	"folder"        : "pcf8523",
-			"components"    : ["PCF8523"],
+		{	"folder"        : "tcs34725",
+			"components"    : ["TCS34725"],
 			"interfaces"    : ["I2C"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBSTICK"],
-			"ressources"    : [ { "label" : "PiRTC (PCF8523) @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-extensions\/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html" },
-													{ "label" : "Adafruit AdaLogger FeatherWing (PCF8523) @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html" }
+			"plateforms"    : ["PYBOARD","FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "TCS34725 - capteur de couleur RGB + Filtre IR + LED blanche @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/afficheur-lcd-tft-oled\/475-lcd-16x2-rgb-positif-usb-serie-3232100004757.html" },
+													{ "label" : "RGB Color Sensor with IR filter and White LED - TCS34725 @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1334" }
 												],
-			"descr"	: {"FR" : "Une Horloge temps réel RTC + alarme avec MicroPython",
-								 "ENG": "A real time clock RTC + alarm for MicroPython"
+			"descr"	: {"FR" : "Capturer la couleur (rgb ou Kelvin) avec un capteur TCS34725 + LED + filtre IR",
+								 "ENG": "Read the color (rgb or Kelvin) with a TCS34725 sensor + MED + IR filter."
+								}
+		},
+		{	"folder"        : "trackball",
+			"components"    : ["TRACKBALL-BREAKOUT"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["PIMORONI"],
+			"plateforms"    : ["PYBOARD","PYBSTICK"],
+			"ressources"    : [ { "label" : "Trackball I2C avec retro-éclairage @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/1833-trackball-i2c-avec-retro-eclairage-3232100018334-pimoroni.html" },
+													{ "label" : "Trackball Breakout @ Pimoroni",
+														"url"   : "https:\/\/shop.pimoroni.com\/products\/trackball-breakout" }
+												],
+			"descr"	: {"FR" : "Ajouter un Trackball + LED RGBW sur votre projet MicroPython",
+								 "ENG": "Add a Trackball + RGBW LED to your MicroPython project"
+								}
+		},
+		{	"folder"        : "tsl2561",
+			"components"    : ["TSL2561","ADA439"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266"],
+			"ressources"    : [ { "label" : "Capteur Lux/Luminosité/Lumière digital",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=238" }
+												],
+			"descr"	: {"FR" : "Le TSL2561 est un senseur de <strong>luminosité<\/strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX",
+								 "ENG": "The TSL2561 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
+								}
+		},
+		{	"folder"        : "tsl2591",
+			"components"    : ["TSL2591","ADA1980"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
+			"ressources"    : [ { "label" : "TSL2591 @ MCHobby - Capteur Lux/Luminosité/Lumière digital",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1599" },
+													{ "label" : "TSL2591 @ Adafruit - Capteur Lux/Luminosité/Lumière digital",
+														"url"   : "https:\/\/www.adafruit.com\/product\/1980" }
+												],
+			"descr"	: {"FR" : "Le TSL2591 est un capteur de <strong>luminosité<\/strong> en lumière visible ayant un réponse proche de l'oeil humain. Retourne une valeur en LUX",
+								 "ENG": "The TSL2591 is a visible light <strong>luminosity<\/strong> sensor having a response close from human Eyes. It produces values in LUX."
+								}
+		},
+		{	"folder"        : "umqtt",
+			"components"    : [],
+			"interfaces"    : [],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
+			"ressources"    : [ { "label" : "Feather ESP8266",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=846" }
+												],
+			"descr"	: {"FR" : "Exemples de communication MQTT avec un module ESP8266.",
+								 "ENG": "MQTT Communication exemples with ESP8266 module."
+								}
+		},
+		{	"folder"        : "UEXT",
+			"components"    : ["UEXT"],
+			"interfaces"    : ["I2C","SPI","UART"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["ESP8266-EVB"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+													  "url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "Connecteur <strong>UEXT<\/strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V",
+								 "ENG": "<strong>UEXT<\/strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V"
 								}
 		}
 ]
