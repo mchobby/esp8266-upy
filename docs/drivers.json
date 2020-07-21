@@ -367,6 +367,20 @@
 								 "ENG": "MOD-LCD1x9 is an I2C'based 9 characters alphanumeric display using the <strong>UEXT<\/strong> connector."
 								}
 		},
+		{	"folder"        : "modlcd3310",
+			"components"    : ["MOD-LCD3310"],
+			"interfaces"    : ["SPI","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "MOD-LCD3310 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/uext\/1867-afficheur-noirblanc-84x48-px-nokia-3310-3232100018679-olimex.html" },
+													{ "label" : "MOD-LCD3310 @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/LCD\/MOD-LCD3310\/open-source-hardware" }
+												],
+			"descr"	: {"FR" : "MOD-LCD3310 est l'afficheur LCD du Nokia 3310 offrant 84 x 48 pixels et un port de connexion <strong>UEXT<\/strong>.",
+								 "ENG": "MOD-LCD3310 is the Nokia 3310 LCD display offering 84 x 48 pixels and an <strong>UEXT<\/strong> connector."
+								}
+		},
 		{	"folder"        : "modled8x8",
 			"components"    : ["MOD-LED8x8RGB"],
 			"interfaces"    : ["GPIO","SPI"],

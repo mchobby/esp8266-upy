@@ -79,6 +79,18 @@ Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, 
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/modlcd3310">modlcd3310</a></td>
+      <td><strong>Composants</strong> : MOD-LCD3310<br />
+      <strong>Interfaces</strong> : SPI, UEXT<br />
+<small>MOD-LCD3310 est l'afficheur LCD du Nokia 3310 offrant 84 x 48 pixels et un port de connexion <strong>UEXT</strong>.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/uext/1867-afficheur-noirblanc-84x48-px-nokia-3310-3232100018679-olimex.html">MOD-LCD3310 @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/LCD/MOD-LCD3310/open-source-hardware">MOD-LCD3310 @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modltr501">modltr501</a></td>
       <td><strong>Composants</strong> : MOD-LTR-501ALS, LTR-501ALS<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

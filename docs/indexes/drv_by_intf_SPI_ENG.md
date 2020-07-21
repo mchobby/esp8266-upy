@@ -55,6 +55,18 @@ SPI bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/modlcd3310">modlcd3310</a></td>
+      <td><strong>Components</strong> : MOD-LCD3310<br />
+      <strong>Interfaces</strong> : SPI, UEXT<br />
+<small>MOD-LCD3310 is the Nokia 3310 LCD display offering 84 x 48 pixels and an <strong>UEXT</strong> connector.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/uext/1867-afficheur-noirblanc-84x48-px-nokia-3310-3232100018679-olimex.html">MOD-LCD3310 @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/LCD/MOD-LCD3310/open-source-hardware">MOD-LCD3310 @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modled8x8">modled8x8</a></td>
       <td><strong>Components</strong> : MOD-LED8x8RGB<br />
       <strong>Interfaces</strong> : GPIO, SPI<br />
