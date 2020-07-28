@@ -192,7 +192,7 @@ Explore it by:
       </td>
   </tr>
   <tr><td><a href="../../tree/master/eeprom">eeprom</a></td>
-      <td><strong>Components</strong> : AT25C512C, AT24C02C, 24LC256<br />
+      <td><strong>Components</strong> : AT24C512C, AT24C02C, 24LC256<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Using I2C EEPROM to store data.</small><br/><br />
       <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />

@@ -154,7 +154,7 @@
 								}
 		},
 		{	"folder"        : "eeprom",
-			"components"    : ["AT25C512C","AT24C02C", "24LC256"],
+			"components"    : ["AT24C512C","AT24C02C", "24LC256"],
 			"interfaces"    : ["I2C"],
 			"manufacturers" : ["NONE"],
 			"plateforms"    : ["PYBOARD", "PYBSTICK"],

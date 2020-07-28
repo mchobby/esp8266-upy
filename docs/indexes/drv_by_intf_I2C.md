@@ -115,7 +115,7 @@ Bus I2C
       </td>
   </tr>
   <tr><td><a href="../../../../tree/master/eeprom">eeprom</a></td>
-      <td><strong>Composants</strong> : AT25C512C, AT24C02C, 24LC256<br />
+      <td><strong>Composants</strong> : AT24C512C, AT24C02C, 24LC256<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Utiliser des EEPROM I2C pour stocker des informations.</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD, PYBSTICK<br />
