@@ -41,6 +41,17 @@ Explorer par:
       <strong>Fabricant</strong> : <br />
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/EEPROM">EEPROM</a></td>
+      <td><strong>Composants</strong> : AT25C512C, AT24C02C, 24LC256<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Utiliser des EEPROM I2C pour stocker des informations.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Fabricant</strong> : NONE<br />
+<ul>
+<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=1582">EEPROM 256 Kbit (32Ko), I2C, 24LC256</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/NCD">NCD</a></td>
       <td><strong>Composants</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
@@ -375,7 +386,7 @@ Explorer par:
       </td>
   </tr>
   <tr><td><a href="../../tree/master/modlcd3310">modlcd3310</a></td>
-      <td><strong>Composants</strong> : MOD-LCD3310<br />
+      <td><strong>Composants</strong> : MOD-LCD3310, PCD8544<br />
       <strong>Interfaces</strong> : SPI, UEXT<br />
 <small>MOD-LCD3310 est l'afficheur LCD du Nokia 3310 offrant 84 x 48 pixels et un port de connexion <strong>UEXT</strong>.</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD<br />

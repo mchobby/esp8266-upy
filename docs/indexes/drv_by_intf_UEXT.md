@@ -80,7 +80,7 @@ Connecteur UEXT en logique 5V de Olimex Ltd (Olimex.com) transportant I2C, SPI, 
       </td>
   </tr>
   <tr><td><a href="../../../../tree/master/modlcd3310">modlcd3310</a></td>
-      <td><strong>Composants</strong> : MOD-LCD3310<br />
+      <td><strong>Composants</strong> : MOD-LCD3310, PCD8544<br />
       <strong>Interfaces</strong> : SPI, UEXT<br />
 <small>MOD-LCD3310 est l'afficheur LCD du Nokia 3310 offrant 84 x 48 pixels et un port de connexion <strong>UEXT</strong>.</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD<br />
