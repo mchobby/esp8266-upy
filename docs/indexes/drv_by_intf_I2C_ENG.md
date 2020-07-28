@@ -8,17 +8,6 @@ I2C bus
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
-  <tr><td><a href="../../../../tree/master/EEPROM">EEPROM</a></td>
-      <td><strong>Components</strong> : AT25C512C, AT24C02C, 24LC256<br />
-      <strong>Interfaces</strong> : I2C<br />
-<small>Using I2C EEPROM to store data.</small><br/><br />
-      <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />
-      <strong>Manufacturer</strong> : NONE<br />
-<ul>
-<li>See <a href="http://shop.mchobby.be/product.php?id_product=1582">EEPROM 256 Kbit (32Ko), I2C, 24LC256</a></li>
-</ul>
-      </td>
-  </tr>
   <tr><td><a href="../../../../tree/master/NCD">NCD</a></td>
       <td><strong>Components</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
@@ -122,6 +111,17 @@ I2C bus
 <li>See <a href="https://www.adafruit.com/product/3566">CCS811 breakout - VOC and eCO2 gaz sensor (ADA3566) @ Adafruit</a></li>
 <li>See <a href="https://www.adafruit.com/product/1780">MOD-ENV capteur environnemental @ MC Hobby</a></li>
 <li>See <a href="https://www.olimex.com/Products/Modules/Sensors/MOD-ENV">MOD-ENV capteur environnemental @ MC Olimex</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/eeprom">eeprom</a></td>
+      <td><strong>Components</strong> : AT25C512C, AT24C02C, 24LC256<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Using I2C EEPROM to store data.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Manufacturer</strong> : NONE<br />
+<ul>
+<li>See <a href="http://shop.mchobby.be/product.php?id_product=1582">EEPROM 256 Kbit (32Ko), I2C, 24LC256</a></li>
 </ul>
       </td>
   </tr>

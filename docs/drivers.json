@@ -153,7 +153,7 @@
 								 "ENG": "The DS18B20 is a very popular <strong>temperature<\/strong> sensor. It use the 1-Wire bus to connect several sensors."
 								}
 		},
-		{	"folder"        : "EEPROM",
+		{	"folder"        : "eeprom",
 			"components"    : ["AT25C512C","AT24C02C", "24LC256"],
 			"interfaces"    : ["I2C"],
 			"manufacturers" : ["NONE"],
