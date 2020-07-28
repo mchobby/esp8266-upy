@@ -1,6 +1,6 @@
 # Self test a 24C02C EEPROM - This test destroy the content of EEPROM
 #
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/24cxx
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/eeprom
 #
 from machine import I2C
 from eeprom24cxx import Eeprom_24C512C, dump
@@ -27,7 +27,7 @@ def self_test( eeprom ):
 
 dump( eeprom )
 
-run_it = True
+run_it = False
 if run_it == True:
 	print( "Self-Testing EEPROM!")
 	self_test( eeprom )
@@ -35,4 +35,4 @@ if run_it == True:
 	print( "IF all tests fails THEN check the level of WP (Write Protect) pin!" )
 else:
 	print( "This test will overwrite the content of the EEPROM!")
-	print( "Change the 'run_it' variable to True to run it!")
+	print( "Change the 'run_it' variable to True and run it again!")

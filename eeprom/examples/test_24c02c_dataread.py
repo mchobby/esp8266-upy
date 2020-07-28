@@ -2,7 +2,7 @@
 #
 # see the test_mcp24c02c_datawrite.py to initialize the EEPROM with data.
 #
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/24cxx
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/eeprom
 #
 from machine import I2C
 from eeprom24cxx import Eeprom_24C02C, dump

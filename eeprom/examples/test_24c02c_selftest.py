@@ -1,6 +1,6 @@
 # Self test a 24C02C EEPROM - This test destroy the content of EEPROM
 #
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/24cxx
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/eeprom
 #
 from machine import I2C
 from eeprom24cxx import Eeprom_24C02C, dump

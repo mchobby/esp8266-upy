@@ -1,7 +1,7 @@
 # Store/Write structured data into a 24C02C EEPROM
 # see the test_mcp24c02c_dataread.py to read them.
 #
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/24cxx
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/eeprom
 #
 from machine import I2C
 from eeprom24cxx import Eeprom_24C02C, dump
