@@ -195,6 +195,20 @@
 								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
 								}
 		},
+		{	"folder"        : "hat-sense",
+			"components"    : ["HAT-SENSE"],
+			"interfaces"    : ["HAT"],
+			"manufacturers" : [],
+			"plateforms"    : ["PYBSTICK","PYB405","PYBOARD"],
+			"ressources"    : [ { "label" : "Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-hats\/687-sense-hat-pour-raspberry-pi-3232100006874.html" },
+													{ "label" : "Hat-sense @ Raspberry-Pi.org",
+														"url"   : "https:\/\/www.raspberrypi.org\/products\/sense-hat" }
+												],
+			"descr"	: {"FR" : "Utiliser le Sense HAT avec MicroPython Pyboard, PYBStick, PYB405",
+								 "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405."
+								}
+		},
 		{	"folder"        : "is31fl",
 			"components"    : ["IS31FL3731"],
 			"interfaces"    : ["FEATHERWING", "I2C"],

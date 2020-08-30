@@ -227,6 +227,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/hat-sense">hat-sense</a></td>
+      <td><strong>Components</strong> : HAT-SENSE<br />
+      <strong>Interfaces</strong> : HAT<br />
+<small>Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405.</small><br/><br />
+      <strong>Tested with</strong> : PYBSTICK, PYB405, PYBOARD<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/pi-hats/687-sense-hat-pour-raspberry-pi-3232100006874.html">Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby</a></li>
+<li>See <a href="https://www.raspberrypi.org/products/sense-hat">Hat-sense @ Raspberry-Pi.org</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/is31fl">is31fl</a></td>
       <td><strong>Components</strong> : IS31FL3731<br />
       <strong>Interfaces</strong> : FEATHERWING, I2C<br />
