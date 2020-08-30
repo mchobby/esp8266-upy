@@ -16,6 +16,10 @@ La capture ci-dessous montre le Sense-Hat utilisé avec une carte PYBStick sous 
 
 Le portage de ce projet sous MicroPython est basé sur le GitHub du projet "[Sense Hat Unchained](https://github.com/bitbank2/sense_hat_unchained)" et son code source en C écrit par Larry Bank.
 
+# Vidéo
+
+Il est possible de voir le "[Sense-Hat sous MicroPython](https://youtu.be/PUU4EqAMHds)" sur la vidéo YouTube.
+
 # Brancher
 
 ## MicroPython PYBoard

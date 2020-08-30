@@ -17,6 +17,10 @@ Le following picture shows the Sense-Hat coupled to a PYBStick under MicroPython
 
 Porting this board to MicroPython is based on the "[Sense Hat Unchained](https://github.com/bitbank2/sense_hat_unchained)" GitHub's project with its C code source writtent by Larry Bank.
 
+# Video
+
+You can see this project in action in the "[Sense-Hat under MicroPython](https://youtu.be/PUU4EqAMHds)" on this YouTube video.
+
 # Wiring
 
 ## MicroPython PYBoard
