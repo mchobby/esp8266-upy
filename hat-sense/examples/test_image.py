@@ -1,0 +1,38 @@
+# Display a mini image on the sense Sense Hat.
+#
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/hat-sense
+#
+# Author: Meurisse D. for Shop.mchobby.be
+#
+from machine import I2C
+from sensehat import SenseHat
+import time
+
+# PYBStick, Hat-Face: Sda=S3, Scl=S5
+i2c = I2C( 1 )
+hat = SenseHat( i2c )
+
+# See the FrameBuffer doc @ https://docs.micropython.org/en/latest/library/framebuf.html
+w = hat.color(150, 150, 150)
+b = hat.color(0, 0, 255)
+e = hat.color(0, 0, 0)
+
+image = [
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+w,w,w,e,e,w,w,w,
+w,w,b,e,e,w,w,b,
+w,w,w,e,e,w,w,w,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e
+]
+
+hat.clear()
+hat.pixels(image)
+hat.update()
+
+while True:
+	time.sleep(1)
+	hat.flip_h()
+	hat.update()
