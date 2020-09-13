@@ -55,6 +55,14 @@ Bus SPI
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/mcp23Sxx">mcp23Sxx</a></td>
+      <td><strong>Composants</strong> : MCP23S17<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Le MCP23S17 est un <strong>GPIO Expander</strong> sur bus SPI ajoutant des entrées/sorties sur un microcontrôleur.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Fabricant</strong> : NONE<br />
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modlcd3310">modlcd3310</a></td>
       <td><strong>Composants</strong> : MOD-LCD3310, PCD8544<br />
       <strong>Interfaces</strong> : SPI, UEXT<br />

@@ -167,7 +167,7 @@ Bus I2C
   <tr><td><a href="../../../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Composants</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
-<small>Le MCP23017 (et MCP2308) sont des <strong>GPIO Expander</strong> permettant d'ajouter des entrées/sorties supplémentaires sur un microcontrôleur.</small><br/><br />
+<small>Le MCP23017 (et MCP2308) sont des <strong>GPIO Expander</strong> sur bus I2C ajoutant des entrées/sorties sur un microcontrôleur.</small><br/><br />
       <strong>Testé avec</strong> : FEATHER-ESP8266<br />
       <strong>Fabricant</strong> : NONE<br />
 <ul>

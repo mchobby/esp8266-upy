@@ -305,12 +305,20 @@ Explore it by:
   <tr><td><a href="../../tree/master/mcp230xx">mcp230xx</a></td>
       <td><strong>Components</strong> : MCP23017, MCP23008<br />
       <strong>Interfaces</strong> : I2C<br />
-<small>The MCP23017 (and MCP2308) are <strong>GPIO Expander</strong> adding additionnal input/output to a microcontroler.</small><br/><br />
+<small>The MCP23017 (and MCP2308) are <strong>GPIO Expander</strong> on I2C bis adding input/output to a microcontroler.</small><br/><br />
       <strong>Tested with</strong> : FEATHER-ESP8266<br />
       <strong>Manufacturer</strong> : NONE<br />
 <ul>
 <li>See <a href="http://shop.mchobby.be/product.php?id_product=218">MCP23017 GPIO Expander</a></li>
 </ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/mcp23Sxx">mcp23Sxx</a></td>
+      <td><strong>Components</strong> : MCP23S17<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>The MCP23S17 is a <strong>GPIO Expander</strong> on SPI bus adding input/output to a microcontroler.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />
+      <strong>Manufacturer</strong> : NONE<br />
       </td>
   </tr>
   <tr><td><a href="../../tree/master/mcp4725">mcp4725</a></td>
