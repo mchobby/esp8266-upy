@@ -92,7 +92,7 @@ class MCP23S17(object):
 		# set defaults
 		for index in range(0, 16): # 0 to 15
 			self.setup(index, Pin.IN)
-			self.setPullupMode(index, PULLUP_ENABLED)
+			self.pullup(index, True)
 
 	def setup(self, pin, mode):
 		""" Sets the direction for a given pin. """

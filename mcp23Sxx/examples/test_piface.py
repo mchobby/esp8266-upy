@@ -28,9 +28,9 @@ for x in range(8, 16):
 
 print("Starting blinky output pins")
 for gpio in range(0, 8):
-	mcp.output(gpio, LEVEL_HIGH ) # LEVEL_HIGH = 1
+	mcp.output(gpio, True ) # LEVEL_HIGH = 1
 	time.sleep(1)
-	mcp.output(gpio, LEVEL_LOW ) # LEVEL_HIGH = 1
+	mcp.output(gpio, False ) # LEVEL_HIGH = 1
 
 dic = {}
 for iter in range( 10 ):
