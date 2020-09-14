@@ -26,4 +26,5 @@ for iter in range( 10 ):
 	print( '---[ %i ]--- read GPIO 8,9,10,11,12,13,14,15 ----' % iter )
 	print( mcp.input_pins([8,9,10,11,12,13,14,15]) )
 	time.sleep(1)
+	
 print("That s all Folks")

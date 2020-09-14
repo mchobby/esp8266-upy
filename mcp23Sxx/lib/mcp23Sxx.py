@@ -26,18 +26,12 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+__version__ = '0.0.1'
+
 from time import sleep_ms
 from machine import Pin
-#DEL: import RPi.GPIO as GPIO
-#DEL: import spidev
 
-PULLUP_ENABLED = 0
-PULLUP_DISABLED = 1
-
-LEVEL_LOW = 0
-LEVEL_HIGH = 1
-
-"""Register addresses as documentined in the technical data sheet at
+"""Register addresses as documented in the technical data sheet at
 http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf
 """
 MCP23S17_IODIRA = 0x00
