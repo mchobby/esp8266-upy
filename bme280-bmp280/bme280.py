@@ -40,7 +40,7 @@ from array import array
 BME280_I2CADDR = 0x77
 # BMP280 default address
 BMP180_I2CADDR = 0x77
-BME280_I2CADDR = BMP180_I2CADDR # are identicals
+BMP280_I2CADDR = BMP180_I2CADDR # are identicals
 
 # Operating Modes
 BME280_OSAMPLE_1 = 1
@@ -220,4 +220,3 @@ class BME280:
         hi = h // 1024
         hd = h * 100 // 1024 - hi * 100
         return (t / 100, pi + (pd/100), hi+(hd/100) )
-
