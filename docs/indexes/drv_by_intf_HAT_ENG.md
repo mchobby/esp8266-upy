@@ -21,6 +21,17 @@ Raspberry-Pi's HAT  connector to use with the NadHat PYB405 (Pyboard variant fro
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/hat-piface">hat-piface</a></td>
+      <td><strong>Components</strong> : HAT-PIFACE<br />
+      <strong>Interfaces</strong> : HAT<br />
+<small>Use the PiFace Digital with the MicroPython Pyboard, PYBStick.</small><br/><br />
+      <strong>Tested with</strong> : PYBSTICK, PYBOARD<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html">Hat PiFace Digital 2 @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/hat-sense">hat-sense</a></td>
       <td><strong>Components</strong> : HAT-SENSE<br />
       <strong>Interfaces</strong> : HAT<br />

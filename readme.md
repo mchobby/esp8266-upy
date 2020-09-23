@@ -228,6 +228,17 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/hat-piface">hat-piface</a></td>
+      <td><strong>Composants</strong> : HAT-PIFACE<br />
+      <strong>Interfaces</strong> : HAT<br />
+<small>Utiliser le PiFace Digital avec MicroPython Pyboard, PYBStick.</small><br/><br />
+      <strong>Testé avec</strong> : PYBSTICK, PYBOARD<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html">Hat PiFace Digital 2 @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/hat-sense">hat-sense</a></td>
       <td><strong>Composants</strong> : HAT-SENSE<br />
       <strong>Interfaces</strong> : HAT<br />

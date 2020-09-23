@@ -195,6 +195,18 @@
 								 "ENG": "Use the Joy Bonnet HAT with the MicroPython NADHAT PYB405."
 								}
 		},
+		{	"folder"        : "hat-piface",
+			"components"    : ["HAT-PIFACE"],
+			"interfaces"    : ["HAT"],
+			"manufacturers" : [],
+			"plateforms"    : ["PYBSTICK","PYBOARD"],
+			"ressources"    : [ { "label" : "Hat PiFace Digital 2 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-hats\/221-piface-digital-2-pour-raspberry-pi-3232100002210.html" }
+												],
+			"descr"	: {"FR" : "Utiliser le PiFace Digital avec MicroPython Pyboard, PYBStick.",
+								 "ENG": "Use the PiFace Digital with the MicroPython Pyboard, PYBStick."
+								}
+		},
 		{	"folder"        : "hat-sense",
 			"components"    : ["HAT-SENSE"],
 			"interfaces"    : ["HAT"],
