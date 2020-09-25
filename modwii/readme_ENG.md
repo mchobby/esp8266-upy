@@ -292,8 +292,8 @@ Joy roll, pitch (degrees):   -2,   86
 ```
 
 # Shopping list
-* Shop: [UEXT Controleur Wii Nunchuck](http://shop.mchobby.be/product.php?id_product=1416)
-* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
+* Shop: [Wii Nunchuck UEXT controler](http://shop.mchobby.be/product.php?id_product=1416)
+* Shop: [Module WiFi ESP8266 - evaluation board (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
 * Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
 * Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-WII-NUNCHUCK
