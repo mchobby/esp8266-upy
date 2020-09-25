@@ -1,77 +1,79 @@
-[This file also exists in ENGLISH](readme_ENG.md)
+[Ce fichier existe également en FRANCAIS](readme.md)
 
-# Utiliser le MOD-Wii-UEXT-NUNCHUCK avec MicroPython
+# Use an Olimex's MOD-Wii-UEXT-NUNCHUCK with MicroPython
 
-La WII NUNCHUCK est un contrôleur de jeu pour la console Wii.
+The WII NUNCHUCK is the game controler for the Wii gaming station.
 
-Ce contrôleur I2C est équipé d'un connecteur UEXT pour faciliter les raccordements.
+This I2C controler is fitted with the UEXT connector to helps wiring.
 
-![La carte MOD-Wii-UEXT-NUNCHUCK](docs/_static/mod-wii.png)
+![The MOD-Wii-UEXT-NUNCHUCK Nunchuck game contoler](docs/_static/mod-wii.png)
 
-Ce contrôleur dispose:
-* Accéléromètre 3-axes
-* Joystick analogique X-Y
-* Deux buttons C et Z
-* __Interface I2C__
-* Connecteur UEXT
+This controler does have the following features:
+* 3 axis accelerometer
+* Analog joystick for X-Y
+* Two buttons C & Z
+* __I2C interface__
+* UEXT connector
 
-# ESP8266-EVB sous MicroPython
-Avant de se lancer dans l'utilisation du module sous MicroPython, il faudra flasher votre ESP8266 avec le firmware MicroPython.
 
-Nous vous recommandons la lecture du tutoriel [ESP8266-EVB](https://wiki.mchobby.be/index.php?title=ESP8266-DEV) sur le wiki de MCHobby.
+# A word about ESP8266-EVB under MicroPython
+Before to use this module, it will be necessary to flash the MicroPython firmware ontor the ESP8266.
 
-## Port UEXT
+You can read the steps on our [ESP8266-EVB](https://wiki.mchobby.be/index.php?title=ESP8266-DEV) tutorial (on MCHobby's WIKI, French).
 
-Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C ainsi qu'une alimentation 3.3V.
-La correspondance avec les GPIO de l'ESP8266 sont reprises sur le graphique suivant:
 
-![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
+## UEXT connector
+
+On the ESP8266-EVB, the UEXT connector does ship UART, SPI, I2C buses as well as 3.3V power. The UEXT pins to ESP8266 GPIO are descrived in the following picture.
+
+![UEXT connector](docs/_static/ESP8266-EVB-UEXT.jpg)
 
 # Brancher
 
 ## ESP8266-EVB (Olimex)
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ brancher le contrôleur de jeu.
+As first operation, I did plug a [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) to duplicates the UEXT port. We do need to use the serial lines for the REPL session with the computer __and__ we do need to plug the Game Controler.
 
-![Raccordements UEXT avec ESP8266](docs/_static/mod-wii-wiring.jpg)
+![Wiring with UEXT](docs/_static/mod-wii-wiring.jpg)
 
 ## MicroPython Pyboard
 
-Pour le brancher facilement sur une Pyboard, le plus simple est de préparer un connecteur UEXT Mâle raccordé sur la Pyboard puis de connecter la Nunchuck dessus.
+You can also wire it on you MicroPython Pyboard. To do so, just wire an UEXT male connector to you Pyboard as displayed here below THEN plug your wii nunchuck on it.
 
 ![WII Nunchuck to Pyboard](docs/_static/wii-nunchuck-to-pyboard.jpg)
 
-# Bibliothèque
+# Library
 
-Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque `wiichuck.py`__ sur votre carte micropython.
+Before using the examples, you will need to transfert le library __bibliothèque `wiichuck.py`__ to your MicroPython board.
 
-* Copiez le fichier `testtest.py` sur la carte micropython.
-* Copiez le fichier `testcount.py` sur la carte micropython.
-* Copiez le fichier `testacc.py` sur la carte micropython.
+Then you can copy the following examples file to your board.
+* `testtest.py`
+* `testcount.py`
+* `testacc.py`
 
-La bibliothèque offre les fonctionnalités suivantes
+The `wiichuck.py` library does offer the following features
 
-__Membres:__
-* `c`  : True/False, indique si le bouton C est actuellement enfoncé.
-* `z`  : True/False, indique si le bouton Z est actuellement enfoncé.
-* `c_count` : indique le nombre de pression sur le bouton C depuis le dernier appel à `c_count`. Réinitialize la valeur à 0. Le nombre de pression détectable dépend de la fréquence d'appel de la méthode `update()`.
-* `z_count` : indique le nombre de pression sur le bouton Z depuis le dernier appel à `z_count`. Réinitialize la valeur à 0. Le nombre de pression détectable dépend de la fréquence d'appel de la méthode `update()`.
-*  `joy_x`  : retourne la position de l'axe X du joystick. Entier entre -128 (gauche) et +128 (droite)
-*  `joy_y`  : retourne la position de l'axe Y du joystick. Entier entre -128 (arrière) et +128 (avant)
-* `joy_right`  : Indique si le joystick est poussé sur la droite (au delà d'un seuil minimum).
-* `joy_left`  : Indique si le joystick est poussé sur la gauche (au delà d'un seuil minimum).
-* `joy_up`  : Indique si le joystick est poussé vers l'avant (au delà d'un seuil minimum).
-* `joy_down` : Indique si le joystick est tiré vers l'arrière (au delà d'un seuil minimum).
-* `accel_x`  : Lit la valeur de l'accéléromètre, axe X.
-* `accel_y`  : Lit la valeur de l'accéléromètre, axe Y.
-* `accel_z`  : Lit la valeur de l'accéléromètre, axe Z.
-* `roll`  : indique l'angle de roulage (rool, en degrés) de la manette. Penchée sur la gauche ou la droite en faisant rouler le poignet.
-* `pitch`  : indique l'angle "pitch", manette abaissée ou relevée en même temps que l'avant bras.
+__property:__
+* `c`  : True/False when the C button is pressed or released.
+* `z`  : True/False, when the Z button is pressed or released.
+* `c_count` : the number of pressure on C button since the last `c_count` read. Reset the counter when read. Effectiveness of the detection depends on the `update()` method call.
+* `z_count` : the number of pressure on Z button since the last  `z_count` read. Réinitialize la valeur à 0. Effectiveness of the detection depends on the `update()` method call.
+*  `joy_x`  : return current position of joystick X axis. Returns an integer from -128 (left) et +128 (right)
+*  `joy_y`  : return current position of joystick Y axis. Returns an integer from -128 (backward) et +128 (forward)
+* `joy_right`  : is the joystick moved to right (over minimum threshold).
+* `joy_left`  : is the joystick moved to left (over minimum threshold).
+* `joy_up`  : is the joystick moved to up (over minimum threshold).
+* `joy_down` : is the joystick moved to down (over minimum threshold).
+* `accel_x`  : read the accelerometer on X axis.
+* `accel_y`  : read the accelerometer on Y axis.
+* `accel_z`  : read the accelerometer on Z axis.
+* `roll`  : Rool angle of the controller (in degrees). Just rolling your wrist to left or right!
+* `pitch`  : The "pitch" angle (in degrees), arm move toward the top or toward the bottom.
 
-__Methodes:__
-* `update()`   : a appeler pour récupérer les informations de la Wii Nunchuck. Information disponible sur les différentes propriétés.
+__Methods:__
+* `update()`   : must be call to fetch the informations from the Wii Nunchuck. Informations that can be readed from various properties.
 
-# Tester
-## Exemple lecture bouton et Joystick
+# Test
+## Example for read the joystick and buttons
 ```
 # Test the Olimex MOD-Wii-UEXT-NUNCHUCK game controler.
 #
@@ -110,7 +112,7 @@ while True:
 	sleep_ms( 150 )
 ```
 
-Ce qui produit le résultat suivant:
+Which produces the following results:
 
 ```
 Button C: False
@@ -142,10 +144,10 @@ Button Z: False
 Joy X, Y:    5,-132  (Down)
 ```
 
-## Exemple compteurs de pression des boutons
-Contenu de l'exemple disponible dans le fichier `testcount.py`.
+## Example counting button pressure
+See the file [testcount.py](examples/testcount.py) .
 
-Permet de compter le nombre de pression sur C et Z entre deux appels de `c_count()` et `z_count()`.
+Count the number of pressures on C & Z buttons between 2 consecutive call to `c_count()` & `z_count()`.
 
 ```
 # Test the Olimex MOD-Wii-UEXT-NUNCHUCK game controler.
@@ -189,7 +191,7 @@ while True:
 	time.sleep_ms( 5 )
 ```
 
-Ce qui produit le résultat suivant:
+Which produce the following result:
 
 ```
 Joy direction : Up
@@ -214,10 +216,11 @@ Joy direction :
 
 ```
 
-## Exemple Accéléromètre
-Contenu de l'exemple disponible dans le fichier `testacc.py`.
+## Example of accelerometer reading
 
-Affiche régulièrement les informations de l'accéléromètre et les angles 'pitch' et 'roll' en degrés.
+Content of this file is available in [testacc.py](examples/testacc.py) .
+
+Displays the accelerometer data as well as the 'pitch' & 'roll' en degrees.
 
 ```
 # Test the Olimex MOD-Wii-UEXT-NUNCHUCK game controler.
@@ -247,7 +250,7 @@ while True:
 	time.sleep_ms( 5 )
 ```
 
-Ce qui produit le résultat suivant
+Which produces the following result
 
 ```
 --------------------
@@ -288,7 +291,7 @@ Joy Accelerometer x,y,z  :  -11,   13,  307
 Joy roll, pitch (degrees):   -2,   86
 ```
 
-# Où acheter
+# Shopping list
 * Shop: [UEXT Controleur Wii Nunchuck](http://shop.mchobby.be/product.php?id_product=1416)
 * Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
 * Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
