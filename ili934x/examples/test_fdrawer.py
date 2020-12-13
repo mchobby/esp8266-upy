@@ -4,7 +4,8 @@
 # located at https://github.com/mchobby/freetype-generator
 #
 # In this sample we will:
-# * Use the font drawer on the ILI934x driver
+# * Use the font drawer on the ILI934x driver, This approach is quite slower
+#   compare to the print() function because is draws to the LCD pixel per pixel
 #
 from machine import SPI,Pin
 from ili934x import *
@@ -24,7 +25,7 @@ lcd.erase()
 lcd.rect( 2,2, lcd.width-4, lcd.height-4, WHITE )
 
 fd = FontDrawer( frame_buffer=lcd, font_name='veram_m15' )
-fd.color = WHITE
+fd.color = GREEN
 fd.print_str( "Font Demo", 10, 10 )
 
 fd.print_char( "#", 10, 50 )

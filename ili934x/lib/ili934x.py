@@ -4,7 +4,6 @@
 # TODO: set_font
 import time
 import ustruct
-import glcdfont
 import framebuf # Printing/drawing characters
 import math
 from micropython import const
@@ -84,11 +83,14 @@ class ILI9341:
 		self.init()
 		self._scroll = 0
 		self._buf = bytearray(_CHUNK * 2)
+		self._font = None # print() : font
+		self._pbuf = None # print() : Buffer for Print statement
+		self._pfb  = None # print() : FrameBuf for Print statement
+		self._font_name = None # The fontname to use by the font_drawer
 		self._cbuf = bytearray( 2 ) # buffer color
 		self._colormap = bytearray(b'\x00\x00\xFF\xFF') #default white foregraound, black background
 		self._x = 0
 		self._y = 0
-		self._font = None
 		self.scrolling = False
 
 	def set_color(self,fg,bg):
@@ -97,12 +99,47 @@ class ILI9341:
 		self._colormap[2] = fg>>8
 		self._colormap[3] = fg & 255
 
+	@property
+	def color( self ):
+		return (self._colormap[2] << 8) + self._colormap[3]
+
+	@color.setter
+	def color( self, value ):
+		self._colormap[2] = value>>8
+		self._colormap[3] = value & 255
+
+	@property
+	def bgcolor( self ):
+		return (self._colormap[0] << 8) + self._colormap[1]
+
+	@bgcolor.setter
+	def bgcolor( self, value ):
+		self._colormap[0] = value>>8
+		self._colormap[1] = value & 255
+
 	def set_pos(self,x,y):
 		self._x = x
 		self._y = y
 
-	def set_font(self, font_drawer):
-		self._font = font_drawer
+	@property
+	def font( self ):
+		return self._font
+
+	@property
+	def font_name( self ):
+		return self._font_name
+
+	@font_name.setter
+	def font_name( self, value ):
+		self._font_name = value
+		# print_buffer, print_FrameBuffer, FontDrawer
+		import fdrawer
+		self._font = fdrawer.FontDrawer( frame_buffer=None, font_name=self._font_name )
+		self._pbuf = bytearray( self._font.font.height*self.width//8 )
+		self._pfb = framebuf.FrameBuffer(self._pbuf,self.width,self._font.font.height, framebuf.MONO_VLSB )
+		self._font.fb = self._pfb # Font must be drawed on custom frame_buffer
+		self._font.color = WHITE
+
 
 	def init(self):
 		for command, data in (
@@ -343,14 +380,6 @@ class ILI9341:
 			mv = memoryview(self._buf)
 			self._data(mv[:rest*2])
 
-	def chars(self, str, x, y):
-		pos = 0
-		for ch in str:
-			char_w = self._font.print_char(ch,x+pos,y)
-			pos += char_w[0]+self._font.spacing # add proportional width
-
-		return x+pos #str_w
-
 	def scroll(self, dy):
 		self._scroll = (self._scroll + dy) % self.height
 		self._write(_VSCRSADD, ustruct.pack(">H", self._scroll))
@@ -372,6 +401,7 @@ class ILI9341:
 		return res
 
 	def write(self, text): #does character wrap, compatible with stream output
+		# TO BE CHECKED
 		curx = self._x; cury = self._y
 		char_h = self._font.height()
 		width = 0
@@ -394,6 +424,16 @@ class ILI9341:
 			curx = self.chars(text[written:], curx,cury)
 		self._x = curx; self._y = cury
 
+	def chars(self, str, x, y):
+		assert self._font != None, 'font_name not assigned yet!'
+
+		self._font.fb.fill_rect( 0,0, self.width, self._font.font.height, 0 ) # Fill it in black
+		pos = 0
+		for ch in str:
+			char_w = self._font.print_char( ch,pos,0 )# print_char(ch,x+pos,y) # draw it into the FB
+			pos += char_w[0]+self._font.spacing # add proportional width
+		self.blit(self._font.fb,x,y,pos,self._font.font.height )
+		return x+pos #str_w
 
 	def print(self, text): #does word wrap, leaves self._x unchanged
 		cury = self._y; curx = self._x

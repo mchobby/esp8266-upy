@@ -12,7 +12,6 @@
 #
 from machine import SPI,Pin
 from ili934x import *
-from fdrawer import *
 
 # PYBStick config (idem with PYBStick-Feather-Face)
 spi = SPI( 1, baudrate=40000000 )
@@ -24,14 +23,13 @@ rst_pin = None
 # Use 3 for landscape mode
 lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
 lcd.erase()
-fd = FontDrawer( frame_buffer=lcd, font_name='veram_m15' )
-fd.color = WHITE
-lcd.set_font( fd ) # Set the font drawer to the dirver
+lcd.font_name = 'veram_m15'
 
 # Use the inner print() statement if tge driver
 lcd.print( "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG 1234567890" )
+#lcd.color = GREEN
 lcd.print( "Lorem ipsum dolor sit amet, consectetur adipiscing elit." )
+#lcd.color = BLUE
 lcd.print( "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor." )
+#lcd.color = YELLOW
 lcd.print( "Cras elementum ultrices diam" )
-
-fd.print_char( "#", 10, 50 )
