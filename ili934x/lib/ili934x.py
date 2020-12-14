@@ -135,10 +135,10 @@ class ILI9341:
 		# print_buffer, print_FrameBuffer, FontDrawer
 		import fdrawer
 		self._font = fdrawer.FontDrawer( frame_buffer=None, font_name=self._font_name )
-		self._pbuf = bytearray( self._font.font.height*self.width//8 )
-		self._pfb = framebuf.FrameBuffer(self._pbuf,self.width,self._font.font.height, framebuf.MONO_VLSB )
-		self._font.fb = self._pfb # Font must be drawed on custom frame_buffer
-		self._font.color = WHITE
+		self._pbuf = bytearray( (self._font.font.height+self._font.font.descender)*self.width//8 )
+		self._pfb = framebuf.FrameBuffer(self._pbuf,self.width,self._font.font.height+self._font.font.descender, framebuf.MONO_VLSB )
+		self._font.fb = self._pfb # Font must be drawed to custom FrameBuffer
+		self._font.color = 1
 
 
 	def init(self):
@@ -430,7 +430,7 @@ class ILI9341:
 		self._font.fb.fill_rect( 0,0, self.width, self._font.font.height, 0 ) # Fill it in black
 		pos = 0
 		for ch in str:
-			char_w = self._font.print_char( ch,pos,0 )# print_char(ch,x+pos,y) # draw it into the FB
+			char_w = self._font.print_char( ch,pos,0 )# draw it into the FB
 			pos += char_w[0]+self._font.spacing # add proportional width
 		self.blit(self._font.fb,x,y,pos,self._font.font.height )
 		return x+pos #str_w

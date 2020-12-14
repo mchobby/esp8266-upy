@@ -53,13 +53,43 @@ lcd.print("Hello world")
 
 ## set_color( fg, bg )
 
-Set the forground dans backgound color with color565 integers. The color565 integer are generated with the `color565(r, g, b)` function.
+Set the forground dans backgound color with color565 integers. color565 color integer can be generated with are generated with the `color565(r, g, b)` function.
+
+the properties `color` and `bgcolor` can be used to set individual the colors.
 
 ## blit( bitbuff, x, y, w, h )
 
-Draw a bitbuff FrameBuffer MONO_VLSB at positions. Used by font drawing.
+Draw a monochrome bitbuff FrameBuffer (MONO_VLSB) at a positions. This method is used by font drawing routines.
+
+* White color (1) are drawed with the `color` foreground color.
+* Black color (0) are drawed with the `bgcolor` background color.
 
 # ILI9341 class - Properties
+
+## bgcolor
+Set the background 565color.
+
+## color
+Set the pen/forground 565color.
+
+## font
+Gives access to the created `FontDrawer` instance. That instance is used by the `print()` & `write()` methods for drawing text on the display.
+
+The `FontDrawer` instance offers access to many property about the drawer and the underlaying font.
+
+Use:
+* `lcd.font` to acces the font drawer properties (eg: lcd.font.spacing for space between chars)
+* `lcd.font.font` to acces the loaded font properties (eg: lcd.font.font.descender for the #pixels required for descender drawing)
+
+## font_name
+When assigned, this property creates and initialize the [FontDrawer class](https://github.com/mchobby/freetype-generator) for a given font name.
+
+The _fontname.bin_ file must be present in the current directory. Binary font files can be downloaded from the [FreeType-Generator project](https://github.com/mchobby/freetype-generator) (see the `upy-fonts` subfolder)
+
+``` python
+lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
+lcd.font_name = 'veram_m15'
+```
 
 ## height, width
 Height and width of the screen in pixel. These values are permutated accordingly to the screen _rotation_ .
@@ -152,13 +182,18 @@ See example [test_fill_rect.py](examples/test_fill_rect.py)
 
 # ILI9341 class - Text display
 
-Prior to print any text, a `FontDrawer` instance must be assigned to the `font` property prior to call any text display function.
+Prior to print any text, the `font_name` property must be assigned with a valid font name (eg: `vera_m15` for vera_m15.bin binary font file).
 
 The text display routine inside the driver does manage the `\n` character to wrap lines.
 
 See the examples [test_print.py](examples/test_print.py) as HowTo Guide.
 
-Please note that `FontDrawer` can also be used to draw directly text on a FrameBuffer (or the driver) as showned in the [test_fdrawer.py](examples/test_fdrawer.py) .
+![test_print result](examples/test_print.jpg)
+
+Please note:
+* text drawing on screen relies on `FontDrawer` class (fdrawer.py). This library can be installed from the dependencies.zip .
+* Many font files (.bin) are available from the FreeType-Generator project @ https://github.com/mchobby/freetype-generator .
+* A `FrameDrawer`class can also draw directly text on a ILI934x driver as showned in the [test_fdrawer.py](examples/test_fdrawer.py) .
 
 ## set_pos( x, y )
 
@@ -166,7 +201,7 @@ Set the cursor position @ x,y position. Also impact the text display routine.
 
 ## chars( str, x, y )
 
-Draw one or several characters at arbitrary x,y position.
+Draw one or several characters at arbitrary x,y position on the screen.
 
 Does not modifies the x,y cursor position.
 
@@ -174,17 +209,31 @@ Returns: x+string_length
 
 ## print( text )
 
-Draw text on screen with WORD wrap and scrolls the screen when going over the screen area.
+Draw text on screen (word by word) with WORD wrap and scrolls the screen when going over the display area.
 
-Print text on a new line @ each call.
+Print text on a new line @ each `print()` call.
 
-Required the `font` to be assigned.
+``` python
+lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
+lcd.erase()
+lcd.font_name = 'veram_m15'
 
-note: Leaves x unchanged, so lines can be displayed within a column from `set_pos(x,y)` .
-
-__Bug:__ screen scrolling is now working properly in rotation 3!
+lcd.print( "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG 1234567890" )
+lcd.color = GREEN
+lcd.print( "Lorem ipsum dolor sit amet, consectetur adipiscing elit." )
+lcd.color = BLUE
+lcd.print( "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor." )
+lcd.color = YELLOW
+lcd.print( "Cras elementum ultrices diam" )
+```
+Note:
+* __Requires__ the `font_name` to be assigned.
+* Leaves x unchanged, so lines can be displayed within a column from `set_pos(x,y)` .
+* __Bug:__ screen scrolling is now working properly in rotation 3!
 
 ## write( text )
+
+__WARNING:__ not tested yet.
 
 Draw text on a line with CHARACTER wrap at the end of the line. Also support line wrap with `\n`.
 
