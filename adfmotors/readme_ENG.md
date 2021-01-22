@@ -24,16 +24,30 @@ The motor shield can quickly be wired by using the [Pyboard-Uno-R3 adapter](http
 
 ![Wire the MotorShield with Pyboard-UNO-R3](docs/_static/pyboard-uno-r3-to-motorshield.jpg)
 
+## Pico - MotorWing
+The motor FeatherWing can be wired directly to the [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) and used with the [motorwing.py](lib/motorwing.py) library.
+
+![Wire the Pico on a Motor FeatherWing](docs/_static/pico-to-motorwing.jpg)
+
+## Pico - MotorShield
+The motor Shield can be wired directly to the [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) and used with the [motorshield.py](lib/motorshield.py) library.
+
+__Warning: the motor shield board must be configured for 3.3V__
+
+![Wire the Pico to the MotorShield](docs/_static/pico-to-motorshield.jpg)
+
 # Test
 To use this breakout, it will be necessary to install the following MicroPython library on the board by copying the following files on the board:
 * `pca9685.py`
 * `motorbase.py`
 * `motorshield.py` : for the Adafruit MotorShield
+* `motorwing.py` : for the Adafruit Motor FeatherWing
+
 
 The various examples are stored in the folder:
 * `examples/motorshield/` for the Adafruit's MotorShield (__contains all the reference examples__)
 
-## DC motor
+## DC motor on Motor Shield
 It is possible to wire up to 4 DC motors on the M1, M2, M3, M4 terminals.
 
 ![Wire a DC Motor on the MotorShield](docs/_static/motorshield-dcmotor.jpg)
@@ -68,7 +82,47 @@ except KeyboardInterrupt:
 
 See also the example `examples/motorshield/test_dcmotors.py` testing all the functionalities on all the motor connectors.
 
-## Stepper motor
+## DC motor on Motor FeatherWing
+It is possible to wire up to 4 DC motors on the M1, M2, M3, M4 terminals.
+
+![Wire a motor on Motor FeatherWing](docs/_static/dc-motor-motorwing.jpg)
+
+The following script [motorwing/test_dcmotor_m1.py](examples/motorwing/test_dcmotor_m1.py) just run the M1 DC motor.
+
+```
+from machine import I2C
+from motorwing import MotorWing
+from motorbase import FORWARD, BACKWARD, BRAKE, RELEASE
+from time import sleep
+
+# Pyboard - SDA=Y10, SCL=Y9
+# i2c = I2C(2)
+# ESP8266 sous MicroPython
+# i2c = I2C(scl=Pin(5), sda=Pin(4))
+# Raspberry-Pi Pico - SDA=GP8, SCL=GP9
+i2c = I2C(0)
+
+# Test the various motors on the MotorShield
+sh = MotorWing( i2c )
+motor = sh.get_motor(1) # Motor M1
+try:
+	motor.speed( 128 ) # Initial speed configuration
+	motor.run( FORWARD )
+	# Wait the user to stop the script
+	# by Pressing Ctrl+C
+	while True:
+		sleep( 1 )
+except KeyboardInterrupt:
+	motor.run( RELEASE )
+
+print( "That's all folks")
+```
+
+The only difference between this example for MotorWing and the MotorShield is the controler class `MotorWing` imported from `motorwing.py` .
+
+As a consequence: the stepper examples and DC motors examples will also works with the MotorWing. Just replace the import statement and the created class.
+
+## Stepper motor on Motor Shield
 Controling a stepper motor is quite simple. Here is a basic example, additional examples are available lower in this section.
 
 ![Wire a stepper motor on the MotorShield](docs/_static/motorshield-stepper.jpg)
@@ -90,7 +144,7 @@ sleep( 2 )
 stepper.step( 200, dir=BACKWARD, style=DOUBLE )
 ```
 
-## test_steppers.py
+## test_steppers.py on Motor Shield
 The `examples/motorshield/test_steppers.py` example test the various style for controling the couls of the steppers on  S1 (M1+M2) and S2 (M3+M4) outputs.
 
 The control styles are the followings:
@@ -122,7 +176,7 @@ Stepper S2
 >>>
 ```
 
-## test_stepper_speed.py
+## test_stepper_speed.py on Motor Shield
 The `examples/motorshield/test_stepper_speed.py` example update the rotation speed accordingly to the potentiometer position.
 
 The RPM speed is limited the the maximum throughput rate of I2C bus since each step made on the motor is the result of state changes on the PCA9685 PWM controler.
@@ -156,7 +210,7 @@ while True:
 
 This [Youtube video](https://youtu.be/9pRrGbrzA4g) shows the script in action.
 
-## Servo-Motor and PWM
+## Servo-Motor and PWM (on MotorShield ONLY)
 
 The MotorShield board offers 4 PWM output labelled #15, #14, #1 and #0.
 Those PCA9685 outputs can be used to generates PWM and to control servo motors.
@@ -192,7 +246,7 @@ sleep( 2 )
 servo.release() # libérer le servo
 ```
 
-This [YouTube video](https://youtu.be/jKfkatqdVW8) shows the script in acion.
+This [YouTube video](https://youtu.be/jKfkatqdVW8) shows the script in action.
 
 __Important notice__: The ideal PWM frequency used to control a servo is 50 Hertz (why we used the `freq=50` parameter when creating the `MotorShield` instance). __The default PWM frequency of the MotorShield (500 Hz) is quite to high__ and few servo will work at 500 Hz PWM. Depending on the servo motor quality, you will be able to use a frequency higher than 50 Hz. In some case, a 100 to 300 Hz PWM frequency can be used with servo motor which will be best if you want to manage the motorshield with stepper and DC motors.
 
@@ -245,3 +299,4 @@ The original code have been modified to get an API closer from MotorShield libra
 * [Adafruit's Feather MotorWing](https://shop.mchobby.be/fr/feather-adafruit/830-featherwing-moteur-dc-pas-a-pas--3232100008304-adafruit.html) available at MCHobby
 * [Pyboard-UNO-R3 adapter](https://shop.mchobby.be/fr/micropython/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html) available at MCHobby
 * [MicroPython board](https://shop.mchobby.be/fr/56-micropython) available at MCHobby
+* [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) available at MCHobby

@@ -1,4 +1,4 @@
-""" Test a PWM output (with a LED) wired to the #0 PWM output """
+""" Test a PWM output (with a LED) wired to the #0 PWM output (MotorShield ONLY)"""
 from machine import I2C
 from motorshield import MotorShield
 from time import sleep
@@ -7,6 +7,8 @@ from time import sleep
 i2c = I2C(2)
 # ESP8266 sous MicroPython
 # i2c = I2C(scl=Pin(5), sda=Pin(4))
+# Raspberry-Pi Pico - SDA=GP8, SCL=GP9
+# i2c = I2C(0)
 
 # Test the various motors on the MotorShield
 # The servo are working best @ 50 Hz PWM, the default 500 Hz PWM is too HIGH

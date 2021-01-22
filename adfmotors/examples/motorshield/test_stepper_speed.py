@@ -17,6 +17,8 @@ from pyb import ADC
 i2c = I2C(2)
 # ESP8266 sous MicroPython
 # i2c = I2C(scl=Pin(5), sda=Pin(4))
+# Raspberry-Pi Pico - SDA=GP8, SCL=GP9
+# i2c = I2C(0)
 
 def arduino_map(x, in_min, in_max, out_min, out_max):
     return int((x-in_min) * (out_max-out_min) / (in_max-in_min) + out_min)

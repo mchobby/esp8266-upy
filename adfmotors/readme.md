@@ -22,16 +22,29 @@ Le motor shield peut être branché directement sur l'[adaptateur Pyboard-Uno-R3
 
 ![brancher Pyboard sur MotorShield](docs/_static/pyboard-uno-r3-to-motorshield.jpg)
 
+## Pico - MotorWing
+Le motor FeatherWing peut être branché directement sur un [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) et utilisé en conjonction avec la bibliothèque [motorwing.py](lib/motorwing.py).
+
+![brancher Pico sur Motor FeatherWing](docs/_static/pico-to-motorwing.jpg)
+
+## Pico - MotorShield
+Le motor Shield peut être branché directement sur un [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) et utilisé en conjonction avec la bibliothèque [motorshield.py](lib/motorshield.py).
+
+__ATTENTION: il faut la carte pour la logique 3.3V__
+
+![brancher Pico sur MotorShield](docs/_static/pico-to-motorshield.jpg)
+
 # Tester
 Pour pouvoir utiliser cette carte Breakout, il est nécessaire d'installer la bibliothèque sur la carte MicroPython en copiant les fichiers suivants:
 * `pca9685.py`
 * `motorbase.py`
 * `motorshield.py` : pour le MotorShield d'Adafruit
+* `motorwing.py` : pour le Motor FeatherWing d'Adafruit
 
 Les divers exemples sont stockés dans le répertoire:
 * `examples/motorshield/` pour le MotorShield d'Adafruit (__contient tous les exemples de références__)
 
-## Moteur continu
+## Moteur continu sur Motor Shield
 Il est possible de brancher jusque 4 moteurs continu sur les ports M1, M2, M3, M4.
 
 ![Brancher un moteur continu sur le MotorShield](docs/_static/motorshield-dcmotor.jpg)
@@ -66,7 +79,46 @@ except KeyboardInterrupt:
 
 Voir aussi l'exemple `examples/motorshield/test_dcmotors.py` qui teste toutes les fonctionnalités sur tous les ports.
 
-## Moteur pas-à-pas
+## Moteur continu sur le FeatherWing moteur
+Il est possible de brancher jusque 4 moteurs continu sur les borniers M1, M2, M3, M4.
+
+![Brancher un moteur sur le FeatherWing moteur](docs/_static/dc-motor-motorwing.jpg)
+
+Le script suivant [motorwing/test_dcmotor_m1.py](examples/motorwing/test_dcmotor_m1.py) met le moteur continu branché sur M1 en mouvement.
+
+```
+from machine import I2C
+from motorwing import MotorWing
+from motorbase import FORWARD, BACKWARD, BRAKE, RELEASE
+from time import sleep
+
+# Pyboard - SDA=Y10, SCL=Y9
+# i2c = I2C(2)
+# ESP8266 sous MicroPython
+# i2c = I2C(scl=Pin(5), sda=Pin(4))
+# Raspberry-Pi Pico - SDA=GP8, SCL=GP9
+i2c = I2C(0)
+
+sh = MotorWing( i2c )
+motor = sh.get_motor(1) # Moteur M1
+try:
+	motor.speed( 128 ) # configure la vitesse initiale
+	motor.run( FORWARD )
+	# Attendre que l'utilisateur arrete le script
+	# en pressant Ctrl+C
+	while True:
+		sleep( 1 )
+except KeyboardInterrupt:
+	motor.run( RELEASE )
+
+print( "That's all folks")
+```
+
+La seule différence entre cet exemple pour le MotorWing et le MotorShield est la classe de contrôle `MotorWing` importé depuis `motorwing.py` .
+
+En conséquence: les exemple pour moteur pas-à-pas et moteurs continus fonctionneront aussi avec le FeatherWing moteur. Remplacez simplement la clause d'importation et la classe créee.
+
+## Moteur pas-à-pas sur Motor Shield
 Le contrôle d'un moteur pas-à-pas est relativement simple. Voici un exemple de base, d'autres sont décris plus bas.
 
 ![Brancher un moteur pas-à-pas sur le MotorShield](docs/_static/motorshield-stepper.jpg)
@@ -120,7 +172,7 @@ Stepper S2
 >>>
 ```
 
-## test_stepper_speed.py
+## test_stepper_speed.py sur Motor Shield
 L'exemple `examples/motorshield/test_stepper_speed.py` permet de modifier la vitesse de rotation du moteur en utilisant un potentiomètre comme consigne.
 
 La vitesse de rotation est limitée par le débit maximum du bus I2C puisque l'avance de chaque pas fait suite à une communication I2C pour modifier l'état sur les broches du PCA9685.
@@ -154,7 +206,7 @@ while True:
 
 La [vidéo YouTube suivante](https://youtu.be/9pRrGbrzA4g) permet de voir le script en fonctionnement.
 
-## Servo-Moteur et PWM
+## Servo-Moteur et PWM (sur Motor Shield UNIQUEMENT)
 
 Le carte MotorShield expose 4 sorties PWM portant les libellés #15, #14, #1 et #0.
 Ces sorties du PCA9685 peuvent être utilisées pour générer des signaux PWM et contrôler des servo moteurs.
@@ -243,3 +295,4 @@ La bibliothèque a été adaptée pour se rapprocher de l'interface de programma
 * [Feather MotorWing d'Adafruit](https://shop.mchobby.be/fr/feather-adafruit/830-featherwing-moteur-dc-pas-a-pas--3232100008304-adafruit.html) disponible chez MCHobby
 * [Adaptateur Pyboard-UNO-R3](https://shop.mchobby.be/fr/micropython/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html) disponible chez MCHobby
 * [Cartes MicroPython](https://shop.mchobby.be/fr/56-micropython) disponible chez MCHobby
+* [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) available at MCHobby
