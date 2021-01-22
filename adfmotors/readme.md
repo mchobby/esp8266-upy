@@ -82,6 +82,8 @@ Voir aussi l'exemple `examples/motorshield/test_dcmotors.py` qui teste toutes le
 ## Moteur continu sur le FeatherWing moteur
 Il est possible de brancher jusque 4 moteurs continu sur les borniers M1, M2, M3, M4.
 
+__ATTENTION: Ne pas oublier d'utiliser la classe `MotorWing` __ a la place de ` MotorShield`.
+
 ![Brancher un moteur sur le FeatherWing moteur](docs/_static/dc-motor-motorwing.jpg)
 
 Le script suivant [motorwing/test_dcmotor_m1.py](examples/motorwing/test_dcmotor_m1.py) met le moteur continu branché sur M1 en mouvement.

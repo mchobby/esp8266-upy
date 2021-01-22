@@ -85,6 +85,8 @@ See also the example `examples/motorshield/test_dcmotors.py` testing all the fun
 ## DC motor on Motor FeatherWing
 It is possible to wire up to 4 DC motors on the M1, M2, M3, M4 terminals.
 
+__WARNING: do not forgot to use the `MotorWing` class__ instead of ` MotorShield`.
+
 ![Wire a motor on Motor FeatherWing](docs/_static/dc-motor-motorwing.jpg)
 
 The following script [motorwing/test_dcmotor_m1.py](examples/motorwing/test_dcmotor_m1.py) just run the M1 DC motor.
