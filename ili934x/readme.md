@@ -11,7 +11,9 @@ Ce pilote:
 
 Le bibliothèque [ili934x](lib/ili934x.py) expose une interface __imitant__ l'[API de FrameBuffer](http://docs.micropython.org/en/latest/library/framebuf.html?highlight=framebufer) de MicroPython. Le but est de pouvoir utiliser ce pilote comme si c'était un FrameBuffer.
 
-L'__API du pilote ILI934x__ [est détaillée dans API.md](api.md)
+# API description
+
+L'API du pilote ILI934x [est détaillée dans le document API.md](api.md)
 
 ## Crédit:
 Ce pilote est basé sur les travaux suivants:
@@ -21,11 +23,33 @@ Ce pilote est basé sur les travaux suivants:
 
 # Brancher
 
+## Pico + 2.4" FeatherWing
+
+La carte [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) fonctionne aussi sous MicroPython.
+
+Voici les raccordements à effectuer entre le Pico le [TFT 2.4" FeatherWing d'Adafruit](https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html).
+
+![Pico vers TFT 2.4" FeatherWing](docs/_static/pico-to-tft-2.4-featherwing.jpg)
+
+``` python
+from machine import SPI, PIN
+spi = SPI( 0 )
+cs_pin = Pin(5) # PICO GP5
+dc_pin = Pin(3) # PICO GP3
+rst_pin = None  # PICO
+
+# r in 0..3 is rotation, r in 4..7 = rotation+miroring (Use 3 for landscape mode)
+lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
+```
+Voici le résultat de l'exécution de ` test_lines.py` .
+
+![Pico & Feather](docs/_static/pico-tft-featherwing.jpg)
+
 ## PYBStick + 2.4" FeatherWing
 
 La [PYBStick est une carte de Garatronic](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html) qui fonctionne aussi bien sous MicroPython que sous Arduino.
 
-Voici les raccordement à effectuer sur le [TFT 2.4" FeatherWing d'Adafruit](https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html).
+Voici les raccordements à effectuer sur le [TFT 2.4" FeatherWing d'Adafruit](https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html).
 
 ![PYBStick 26 vers TFT 2.4" FeatherWing](docs/_static/pybstick-to-tft-2.4-featherwing.jpg)
 
@@ -92,6 +116,31 @@ lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
 L'afficheur peut également être connecté sur un PYBStick à l'aide de la [carte d'interface PYBStick-Feather-Face](https://shop.mchobby.be/product.php?id_product=1996) comme indiqué sur l'image ci-dessous.
 
 ![PYBStick + PYBStick-Feather-Face + TFT Olimex](docs/_static/pybstick-feather-face-tft-olimex.jpg)
+
+## Pico + Olimex 2.8" TFT UEXT
+
+Les détails du point ci-dessus (avec la PYBStick) s'appliquent également au Pico.
+
+Voici le schéma de raccordement du LCD avec le Pico.
+
+![PIco to TFT 2.8" Olimex](docs/_static/pico-to-tft-2.8-olimex.jpg)
+
+``` python
+from machine import SPI
+from machine import Pin
+from ili934x import *
+
+# Utiliser une autre pin MISO valable! Par ex: GP16
+spi = SPI( 0, mosi=Pin(7, Pin.OUT), miso=Pin(16, Pin.IN), sck=Pin(6, Pin.OUT) )
+cs_pin = Pin(5) # GP5
+dc_pin = Pin(4) # GP4 (broche miso du bus standard)
+rst_pin = None
+
+# r in 0..3 is rotation, r in 4..7 = rotation+miroring # Use 3 for landscape mode
+lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
+```
+
+![Pico + TFT Olimex](docs/_static/pico-tft-olimex.jpg)
 
 # Tester
 

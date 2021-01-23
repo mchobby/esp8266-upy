@@ -18,6 +18,12 @@ cs_pin = Pin("S15")
 dc_pin = Pin("S13")
 rst_pin = None
 
+# Raspberry-Pi Pico
+# spi = SPI( 0 )
+# cs_pin = Pin(5) # GP5
+# dc_pin = Pin(3) # GP3
+# rst_pin = None
+
 # r in 0..3 is rotation, r in 4..7 = rotation+miroring
 # Use 3 for landscape mode
 lcd = ILI9341( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=240, r=0)
