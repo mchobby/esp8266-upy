@@ -8,6 +8,8 @@ import framebuf # Printing/drawing characters
 import math
 from micropython import const
 
+__version__ = '0.0.1'
+
 _RDDSDR = const(0x0f) # Read Display Self-Diagnostic Result
 _SLPOUT = const(0x11) # Sleep Out
 _GAMSET = const(0x26) # Gamma Set
