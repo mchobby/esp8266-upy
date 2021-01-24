@@ -8,15 +8,23 @@ from ili934x import *
 import urandom
 
 # PYBStick config (idem with PYBStick-Feather-Face)
-spi = SPI( 1, baudrate=40000000 )
-cs_pin = Pin("S15")
-dc_pin = Pin("S13")
-rst_pin = None
+#spi = SPI( 1, baudrate=40000000 )
+#cs_pin = Pin("S15")
+#dc_pin = Pin("S13")
+#rst_pin = None
 
 # Raspberry-Pi Pico
-# spi = SPI( 0 )
+spi = SPI( 0 )
+cs_pin = Pin(5) # GP5
+dc_pin = Pin(3) # GP3
+rst_pin = None
+
+# PICO config requires Bit-Banging one-way SPI for Olimex TFT 2.8".
+# MISO (GP4) of standard UEXT is used for D/C.
+# SPI must declare a MISO! So we used a unused MISO pin in the project (GP0 in this case) as fake pin
+# spi = SPI( 0, mosi=Pin(7, Pin.OUT), miso=Pin(16, Pin.IN), sck=Pin(6, Pin.OUT) )
 # cs_pin = Pin(5) # GP5
-# dc_pin = Pin(3) # GP3
+# dc_pin = Pin(4) # GP4 (the miso pin)
 # rst_pin = None
 
 # r in 0..3 is rotation, r in 4..7 = rotation+miroring

@@ -18,18 +18,18 @@ from ili934x import *
 # PYBStick config requires Bit-Banging one-way SPI for Olimex.
 # MISO (S26) of standard UEXT connector is used for D/C.
 # SPI must declare a MISO! So we used a unused in the project (S16 in this case) as fake pin
-spi = SPI( -1, mosi=Pin("S19", Pin.OUT), miso=Pin("S16", Pin.IN), sck=Pin("S23", Pin.OUT) )
-cs_pin = Pin("S26")
-dc_pin = Pin("S21")
-rst_pin = None
+# spi = SPI( -1, mosi=Pin("S19", Pin.OUT), miso=Pin("S16", Pin.IN), sck=Pin("S23", Pin.OUT) )
+# cs_pin = Pin("S26")
+# dc_pin = Pin("S21")
+# rst_pin = None
 
 # PICO config requires Bit-Banging one-way SPI for Olimex.
 # MISO (GP4) of standard UEXT is used for D/C.
 # SPI must declare a MISO! So we used a unused MISO pin in the project (GP0 in this case) as fake pin
-# spi = SPI( 0, mosi=Pin(7, Pin.OUT), miso=Pin(16, Pin.IN), sck=Pin(6, Pin.OUT) )
-# cs_pin = Pin(5) # GP5
-# dc_pin = Pin(4) # GP4 (the miso pin)
-# rst_pin = None
+spi = SPI( 0, mosi=Pin(7, Pin.OUT), miso=Pin(16, Pin.IN), sck=Pin(6, Pin.OUT) )
+cs_pin = Pin(5) # GP5
+dc_pin = Pin(4) # GP4 (the miso pin)
+rst_pin = None
 
 
 # r in 0..3 is rotation, r in 4..7 = rotation+miroring
