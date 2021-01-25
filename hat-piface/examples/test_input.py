@@ -13,6 +13,9 @@ import time
 # PYBStick / PYBStick-HAT-FACE
 spi = SPI( 1, phase=0, polarity=0 ) # SCLK=S23, MISO=S21, MOSI=S19
 cs = Pin( 'S24', Pin.OUT, value=True ) # SPI_CE0=S24, utiliser X5 pour Pyboard
+# Raspberry-pico
+# spi = SPI( 0, phase=0, polarity=0 )
+# cs = Pin( 5, Pin.OUT, value=True )
 
 piface = PiFace( spi, cs, device_id=0x00 )
 

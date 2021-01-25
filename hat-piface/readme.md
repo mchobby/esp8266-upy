@@ -20,6 +20,13 @@ Le PiFace expose les interfaces suivantes:
 
 Si ce HAT est initialement prévu pour Raspberry-Pi, il est tout à fait possible de l'exploiter avec d'autres nano-ordinateurs et/ou microcontrôleur.
 
+## Raspberry-Pi Pico
+
+Voici comment brancher le [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) sur un PiFace Digital.
+
+![Raspberry-Pi Pico et PiFace Digital](docs/_static/pico-to-piface.jpg)
+
+
 ## PYBStick + PYBSTICK-HAT-FACE
 La capture ci-dessous montre le Hat PiFace Digital (v1) Branché avec une carte [PYBStick](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html) sous MicroPython à l'aide de l'adaptateur PYBSTICK-HAT-FACE (voir [documentation](https://shop.mchobby.be/fr/micropython/1935-interface-pybstick-vers-raspberry-pi-3232100019355.html))
 
@@ -59,6 +66,9 @@ import time
 # PYBStick / PYBStick-HAT-FACE
 spi = SPI( 1, phase=0, polarity=0 ) # SCLK=S23, MISO=S21, MOSI=S19
 cs = Pin( 'S24', Pin.OUT, value=True ) # SPI_CE0=S24, utiliser X5 pour Pyboard
+# Raspberry-pico
+# spi = SPI( 0, phase=0, polarity=0 )
+# cs = Pin( 5, Pin.OUT, value=True )
 
 piface = PiFace( spi, cs, device_id=0x00 )
 
@@ -85,6 +95,9 @@ import time
 # PYBStick / PYBStick-HAT-FACE
 spi = SPI( 1, phase=0, polarity=0 ) # SCLK=S23, MISO=S21, MOSI=S19
 cs = Pin( 'S24', Pin.OUT, value=True ) # SPI_CE0=S24, utiliser X5 pour Pyboard
+# Raspberry-pico
+# spi = SPI( 0, phase=0, polarity=0 )
+# cs = Pin( 5, Pin.OUT, value=True )
 
 piface = PiFace( spi, cs, device_id=0x00 )
 
@@ -114,6 +127,9 @@ import time
 # PYBStick / PYBStick-HAT-FACE
 spi = SPI( 1, phase=0, polarity=0, baudrate=400000 ) # SCLK=S23, MISO=S21, MOSI=S19
 cs = Pin( 'S24', Pin.OUT, value=True ) # SPI_CE0=S24, utiliser X5 pour Pyboard
+# Raspberry-pico
+# spi = SPI( 0, phase=0, polarity=0 )
+# cs = Pin( 5, Pin.OUT, value=True )
 
 piface = PiFace( spi, cs, device_id=0x00 )
 
@@ -130,6 +146,7 @@ except:
 ```
 
 # Ou Acheter
+* [Carte Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html)
 * [Carte PYBStick](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html) et [PYBStick-Hat-Face](https://shop.mchobby.be/fr/micropython/1935-interface-pybstick-vers-raspberry-pi-3232100019355.html)
 * [Carte MicroPython Pyboard](https://shop.mchobby.be/fr/56-micropython)
 * [PiFace Digital 2](https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html) disponible chez MCHobby
