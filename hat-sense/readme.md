@@ -22,6 +22,11 @@ Il est possible de voir le "[Sense-Hat sous MicroPython](https://youtu.be/PUU4Eq
 
 # Brancher
 
+## Raspberry-Pi PICO
+
+![Sense-Hat vers Pico](docs/_static/sense-hat-to-pico.jpg)
+
+
 ## MicroPython PYBoard
 
 ![Sense-Hat vers Pyboard](docs/_static/sense-hat-to-pyboard.jpg)
@@ -53,7 +58,11 @@ from sensehat import SenseHat
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 # See the FrameBuffer doc @ https://docs.micropython.org/en/latest/library/framebuf.html
@@ -116,7 +125,11 @@ from sensehat import SenseHat
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 hat.clear()
@@ -131,7 +144,11 @@ from sensehat import SenseHat
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 # Definir les code couleurs
@@ -175,7 +192,11 @@ import time
 from random import randint
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 # Afficher un coeur qui pulse
@@ -198,6 +219,8 @@ Note:
 * Le paramètre optionnel `y` indique la position pour dessiner l'icone  (fixé à 1 par défaut, la seconde ligne),
 * Le paramètre optionnel `color` permet d'indiquer la couleur à utiliser pour dessiner l'icone (0x7BEF par defaut, un blanc moins agressif).
 
+![Sense-Hat sur le Pico](docs/_static/pico-hat-sense.jpg)
+
 Ce n'est pas un hasard si toutes les icones font 5x5 pixels, il s'agit des icones Micro:bit réencodées par Amélie (ma fille) sur base cette image publiée sur giggletronics.blogspot.com . Ces icones sont disponibles dans le fichier [icons.py](lib/icons.py)
 
 ![Icones MicroBit](docs/_static/microbit-images.png)
@@ -211,7 +234,11 @@ from sensehat import SenseHat
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 hat.clear()
@@ -233,7 +260,12 @@ from icons import ARROW_N,ARROW_S,ARROW_E,ARROW_W,TARGET
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
+
 hat = SenseHat( i2c )
 hat.clear()
 
@@ -265,7 +297,11 @@ from sensehat import *
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 while True:
@@ -286,7 +322,11 @@ from sensehat import *
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 while True:
@@ -308,7 +348,11 @@ from sensehat import *
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 while True:
@@ -331,7 +375,11 @@ from sensehat import *
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 while True:
@@ -353,7 +401,11 @@ from sensehat import *
 import time
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
+# Pyboard, Sda=X10, Scl=X9
 i2c = I2C( 1 )
+# Raspberry-Pi Pico, Sda=GP8, Scl=GP9
+# i2c = I2C( 0 )
+
 hat = SenseHat( i2c )
 
 while True:
@@ -365,5 +417,6 @@ while True:
 # Où acheter
 * [Sense-Hat](https://shop.mchobby.be/fr/pi-hats/687-sense-hat-pour-raspberry-pi-3232100006874.html) @ MCHobby
 * [MicroPython Pyboard](https://shop.mchobby.be/fr/micropython/570-micropython-pyboard-3232100005709.html) @ MCHobby
+* [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) @ MCHobby
 * [MicroPython PYBStick](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html) @ MCHobby
 * [MicroPython PYBStick-HAT-FACE](https://shop.mchobby.be/fr/nouveaute/1935-interface-pybstick-vers-raspberry-pi-3232100019355.html) @ MCHobby
