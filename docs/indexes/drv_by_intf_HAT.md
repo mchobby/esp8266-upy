@@ -25,7 +25,7 @@ Connecteur HAT Raspberry-Pi pour les extensions utilisable avec la NadHat PYB405
       <td><strong>Composants</strong> : HAT-PIFACE<br />
       <strong>Interfaces</strong> : HAT<br />
 <small>Utiliser le PiFace Digital avec MicroPython Pyboard, PYBStick.</small><br/><br />
-      <strong>Testé avec</strong> : PYBSTICK, PYBOARD<br />
+      <strong>Testé avec</strong> : PYBSTICK, PYBOARD, PICO<br />
       <strong>Fabricant</strong> : <br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html">Hat PiFace Digital 2 @ MCHobby</a></li>
@@ -36,7 +36,7 @@ Connecteur HAT Raspberry-Pi pour les extensions utilisable avec la NadHat PYB405
       <td><strong>Composants</strong> : HAT-SENSE<br />
       <strong>Interfaces</strong> : HAT<br />
 <small>Utiliser le Sense HAT avec MicroPython Pyboard, PYBStick, PYB405</small><br/><br />
-      <strong>Testé avec</strong> : PYBSTICK, PYB405, PYBOARD<br />
+      <strong>Testé avec</strong> : PYBSTICK, PYB405, PYBOARD, PICO<br />
       <strong>Fabricant</strong> : <br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-hats/687-sense-hat-pour-raspberry-pi-3232100006874.html">Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby</a></li>

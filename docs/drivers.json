@@ -15,7 +15,7 @@
 			"components"    : ["PCA9685"],
 			"interfaces"    : ["I2C","UNO-R3"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD"],
+			"plateforms"    : ["PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "Adafruit Motor Shield @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/shields\/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html" },
 													{ "label" : "Adafruit Motor Shield @ Adafruit",
@@ -199,7 +199,7 @@
 			"components"    : ["HAT-PIFACE"],
 			"interfaces"    : ["HAT"],
 			"manufacturers" : [],
-			"plateforms"    : ["PYBSTICK","PYBOARD"],
+			"plateforms"    : ["PYBSTICK","PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "Hat PiFace Digital 2 @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-hats\/221-piface-digital-2-pour-raspberry-pi-3232100002210.html" }
 												],
@@ -211,7 +211,7 @@
 			"components"    : ["HAT-SENSE"],
 			"interfaces"    : ["HAT"],
 			"manufacturers" : [],
-			"plateforms"    : ["PYBSTICK","PYB405","PYBOARD"],
+			"plateforms"    : ["PYBSTICK","PYB405","PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-hats\/687-sense-hat-pour-raspberry-pi-3232100006874.html" },
 													{ "label" : "Hat-sense @ Raspberry-Pi.org",
@@ -219,6 +219,20 @@
 												],
 			"descr"	: {"FR" : "Utiliser le Sense HAT avec MicroPython Pyboard, PYBStick, PYB405",
 								 "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405."
+								}
+		},
+		{	"folder"        : "ili934x",
+			"components"    : ["ILI9341"],
+			"interfaces"    : ["FEATHERWING", "I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK","PICO"],
+			"ressources"    : [ { "label" : "TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html" },
+													{ "label" : "TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3315" }
+												],
+			"descr"	: {"FR" : "ILI934x - contrôleur afficheur TFT couleur 16 bits - sous MicroPython",
+								 "ENG": "ILI934x - TFT display controler with 16 bits color - under MicroPython."
 								}
 		},
 		{	"folder"        : "is31fl",
@@ -741,6 +755,18 @@
 												],
 			"descr"	: {"FR" : "Exploiter un TFT rond avec MicroPython",
 								 "ENG": "Using a round TFT under MicroPython"
+								}
+		},
+		{	"folder"        : "tca9554a",
+			"components"    : ["TCA9554A"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : [],
+			"plateforms"    : ["PYBOARD","PICO"],
+			"ressources"    : [ { "label" : "TCA9544A - 8 bits GPIO extender",
+														"url"   : "https:\/\/shop.mchobby.be\/" }
+												],
+			"descr"	: {"FR" : "Ajouter 8 entrées/sortie avec le TCA9554A",
+								 "ENG": "Add 8 input/output GPIO with the TCA9554A"
 								}
 		},
 		{	"folder"        : "tcs34725",

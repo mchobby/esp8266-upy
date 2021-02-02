@@ -36,7 +36,7 @@ Bus I2C
       <td><strong>Composants</strong> : PCA9685<br />
       <strong>Interfaces</strong> : I2C, UNO-R3<br />
 <small>Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.</small><br/><br />
-      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html">Adafruit Motor Shield @ MCHobby</a></li>
@@ -122,6 +122,18 @@ Bus I2C
       <strong>Fabricant</strong> : NONE<br />
 <ul>
 <li>Voir <a href="http://shop.mchobby.be/product.php?id_product=1582">EEPROM 256 Kbit (32Ko), I2C, 24LC256</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/ili934x">ili934x</a></td>
+      <td><strong>Composants</strong> : ILI9341<br />
+      <strong>Interfaces</strong> : FEATHERWING, I2C<br />
+<small>ILI934x - contrôleur afficheur TFT couleur 16 bits - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK, PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/3315">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ Adafruit</a></li>
 </ul>
       </td>
   </tr>
@@ -465,6 +477,17 @@ Bus I2C
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/1882-sht31-f-capteur-d-humidite-et-temperature-3232100018822-dfrobot.html">Capteur d'humidité SHT31-F SENS0332 @ MCHobby</a></li>
 <li>Voir <a href="https://www.dfrobot.com/product-2015.html">Capteur d'humidité SHT31-F SENS0332 @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/tca9554a">tca9554a</a></td>
+      <td><strong>Composants</strong> : TCA9554A<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Ajouter 8 entrées/sortie avec le TCA9554A</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/">TCA9544A - 8 bits GPIO extender</a></li>
 </ul>
       </td>
   </tr>

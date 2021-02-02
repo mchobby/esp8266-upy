@@ -8,6 +8,18 @@ FEATHERWING connector for the Feather expansion (Adafruit.com)
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/ili934x">ili934x</a></td>
+      <td><strong>Components</strong> : ILI9341<br />
+      <strong>Interfaces</strong> : FEATHERWING, I2C<br />
+<small>ILI934x - TFT display controler with 16 bits color - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, PYBSTICK, PICO<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/3315">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/is31fl">is31fl</a></td>
       <td><strong>Components</strong> : IS31FL3731<br />
       <strong>Interfaces</strong> : FEATHERWING, I2C<br />

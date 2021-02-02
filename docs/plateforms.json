@@ -13,6 +13,11 @@
 				            "ENG" : "M5Stack (based on ESP32)" },
 			  "url" : "https:\/\/shop.mchobby.be\/fr\/153-m5stack-esp"
 			},
+	"PICO" :
+			{ "descr" : { "FR" : "Raspberry-Pi PICO",
+				            "ENG" : "Raspberry-Pi PICO" },
+			  "url" : "https:\/\/shop.mchobby.be\/fr\/157-pico-raspberry-pi"
+			},
 	"PYBOARD" :
 			{ "descr" : { "FR" : "MicroPython Pyboard",
 				            "ENG" : "MicroPython Pyboard" },

@@ -14,7 +14,7 @@ voir
       <td><strong>Composants</strong> : PCA9685<br />
       <strong>Interfaces</strong> : I2C, UNO-R3<br />
 <small>Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.</small><br/><br />
-      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html">Adafruit Motor Shield @ MCHobby</a></li>
@@ -115,6 +115,18 @@ voir
 <li>Voir <a href="https://shop.mchobby.be/fr/micropython/1653-hat-micropython-pyb405-nadhat-3232100016538-garatronic.html">NADHAT PYB405 @ MCHobby</a></li>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-zero-w/1116-gamepad-pizero-joy-bonnet-3232100011168-adafruit.html">Joy Bonnet Gamepad PiZero (ADA3464) @ MCHobby</a></li>
 <li>Voir <a href="https://www.adafruit.com/product/3464">Joy Bonnet Gamepad PiZero (ADA3464) @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/ili934x">ili934x</a></td>
+      <td><strong>Composants</strong> : ILI9341<br />
+      <strong>Interfaces</strong> : FEATHERWING, I2C<br />
+<small>ILI934x - contrôleur afficheur TFT couleur 16 bits - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK, PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/3315">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ Adafruit</a></li>
 </ul>
       </td>
   </tr>

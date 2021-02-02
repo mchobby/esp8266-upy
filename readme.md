@@ -80,7 +80,7 @@ Explorer par:
       <td><strong>Composants</strong> : PCA9685<br />
       <strong>Interfaces</strong> : I2C, UNO-R3<br />
 <small>Contrôler des moteurs continu, pas-à-pas ou servo-moteur avec le shield moteur Arduino d'Adafruit.</small><br/><br />
-      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/shields/379-shield-de-controle-moteur-motor-shield-v2-3232100003798-adafruit.html">Adafruit Motor Shield @ MCHobby</a></li>
@@ -232,7 +232,7 @@ Explorer par:
       <td><strong>Composants</strong> : HAT-PIFACE<br />
       <strong>Interfaces</strong> : HAT<br />
 <small>Utiliser le PiFace Digital avec MicroPython Pyboard, PYBStick.</small><br/><br />
-      <strong>Testé avec</strong> : PYBSTICK, PYBOARD<br />
+      <strong>Testé avec</strong> : PYBSTICK, PYBOARD, PICO<br />
       <strong>Fabricant</strong> : <br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html">Hat PiFace Digital 2 @ MCHobby</a></li>
@@ -243,11 +243,23 @@ Explorer par:
       <td><strong>Composants</strong> : HAT-SENSE<br />
       <strong>Interfaces</strong> : HAT<br />
 <small>Utiliser le Sense HAT avec MicroPython Pyboard, PYBStick, PYB405</small><br/><br />
-      <strong>Testé avec</strong> : PYBSTICK, PYB405, PYBOARD<br />
+      <strong>Testé avec</strong> : PYBSTICK, PYB405, PYBOARD, PICO<br />
       <strong>Fabricant</strong> : <br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-hats/687-sense-hat-pour-raspberry-pi-3232100006874.html">Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby</a></li>
 <li>Voir <a href="https://www.raspberrypi.org/products/sense-hat">Hat-sense @ Raspberry-Pi.org</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/ili934x">ili934x</a></td>
+      <td><strong>Composants</strong> : ILI9341<br />
+      <strong>Interfaces</strong> : FEATHERWING, I2C<br />
+<small>ILI934x - contrôleur afficheur TFT couleur 16 bits - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK, PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/3315">TFT FeatherWing 2.4 inch Touch - 320x240 - ILI9341 @ Adafruit</a></li>
 </ul>
       </td>
   </tr>
@@ -683,6 +695,17 @@ Explorer par:
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/afficheur-lcd-tft-oled/1856-tft-couleur-22-rond-spi-breakout-3232100018563-dfrobot.html">Ecran TFT DFRobot DFR0529 @ MCHobby</a></li>
 <li>Voir <a href="https://www.dfrobot.com/product-1794.html">Ecran TFT DFRobot DFR0529 @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/tca9554a">tca9554a</a></td>
+      <td><strong>Composants</strong> : TCA9554A<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Ajouter 8 entrées/sortie avec le TCA9554A</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/">TCA9544A - 8 bits GPIO extender</a></li>
 </ul>
       </td>
   </tr>
