@@ -221,6 +221,30 @@
 								 "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405."
 								}
 		},
+		{	"folder"        : "FBGFX",
+			"components"    : [],
+			"interfaces"    : [],
+			"manufacturers" : [],
+			"plateforms"    : [],
+			"ressources"    : [],
+			"descr"	: {"FR" : "Bibliothèque graphique pour FrameBuffer",
+								 "ENG": "Graphical library for FrameBuffer"
+								}
+		},
+		{	"folder"        : "ht0740-switch",
+			"components"    : ["HT0740","TCA9554A"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["PIMORONI"],
+			"plateforms"    : ["PYBOARD","PICO"],
+			"ressources"    : [ { "label" : "HT0740 - 40V / 10A MosFet controlable via I2C @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/bouton/1990-40v-10a-mosfet-controlable-via-i2c-3232100019904-pimoroni.html" },
+													{ "label" : "HT0740 - 40V / 10A MosFet controlable via I2C @ Pimoroni",
+														"url"   : "https:\/\/shop.pimoroni.com\/products\/ht0740-breakout" }
+												],
+			"descr"	: {"FR" : "HT0740 - 40V / 10A MosFet controlable via I2C - sous MicroPython",
+								 "ENG": "HT0740 - 40V / 10A MosFet controlable via I2C - under MicroPython."
+								}
+		},
 		{	"folder"        : "ili934x",
 			"components"    : ["ILI9341"],
 			"interfaces"    : ["FEATHERWING", "I2C"],

@@ -41,6 +41,14 @@ Explorer par:
       <strong>Fabricant</strong> : <br />
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/FBGFX">FBGFX</a></td>
+      <td><strong>Composants</strong> : <br />
+      <strong>Interfaces</strong> : <br />
+<small>Bibliothèque graphique pour FrameBuffer</small><br/><br />
+      <strong>Testé avec</strong> : <br />
+      <strong>Fabricant</strong> : <br />
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/NCD">NCD</a></td>
       <td><strong>Composants</strong> : NCD<br />
       <strong>Interfaces</strong> : I2C, NCD<br />
@@ -248,6 +256,18 @@ Explorer par:
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-hats/687-sense-hat-pour-raspberry-pi-3232100006874.html">Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby</a></li>
 <li>Voir <a href="https://www.raspberrypi.org/products/sense-hat">Hat-sense @ Raspberry-Pi.org</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/ht0740-switch">ht0740-switch</a></td>
+      <td><strong>Composants</strong> : HT0740, TCA9554A<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>HT0740 - 40V / 10A MosFet controlable via I2C - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
+      <strong>Fabricant</strong> : PIMORONI<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/bouton/1990-40v-10a-mosfet-controlable-via-i2c-3232100019904-pimoroni.html">HT0740 - 40V / 10A MosFet controlable via I2C @ MCHobby</a></li>
+<li>Voir <a href="https://shop.pimoroni.com/products/ht0740-breakout">HT0740 - 40V / 10A MosFet controlable via I2C @ Pimoroni</a></li>
 </ul>
       </td>
   </tr>

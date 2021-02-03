@@ -125,6 +125,18 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/ht0740-switch">ht0740-switch</a></td>
+      <td><strong>Composants</strong> : HT0740, TCA9554A<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>HT0740 - 40V / 10A MosFet controlable via I2C - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
+      <strong>Fabricant</strong> : PIMORONI<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/bouton/1990-40v-10a-mosfet-controlable-via-i2c-3232100019904-pimoroni.html">HT0740 - 40V / 10A MosFet controlable via I2C @ MCHobby</a></li>
+<li>Voir <a href="https://shop.pimoroni.com/products/ht0740-breakout">HT0740 - 40V / 10A MosFet controlable via I2C @ Pimoroni</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/ili934x">ili934x</a></td>
       <td><strong>Composants</strong> : ILI9341<br />
       <strong>Interfaces</strong> : FEATHERWING, I2C<br />
