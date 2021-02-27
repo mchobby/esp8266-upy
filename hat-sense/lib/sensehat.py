@@ -185,6 +185,7 @@ class SenseHat( FrameBuffer ):
 		else:
 			return self.buf1[0]
 
+
 	@property
 	def pressure( self ):
 		""" Read the pressure and temperature sensor.

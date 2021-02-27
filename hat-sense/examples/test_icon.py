@@ -12,9 +12,9 @@ from random import randint
 
 # PYBStick, Hat-Face: Sda=S3, Scl=S5
 # Pyboard, Sda=X10, Scl=X9
-i2c = I2C( 1 )
+# i2c = I2C( 1 )
 # Raspberry-Pi Pico, Sda=GP8, Scl=GP9
-#i2c = I2C( 0 )
+i2c = I2C( 0 )
 hat = SenseHat( i2c )
 
 # See the FrameBuffer doc @ https://docs.micropython.org/en/latest/library/framebuf.html

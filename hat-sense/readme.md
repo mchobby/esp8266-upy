@@ -23,6 +23,7 @@ Il est possible de voir le "[Sense-Hat sous MicroPython](https://youtu.be/PUU4Eq
 # Brancher
 
 ## Raspberry-Pi PICO
+Vous pouvez réaliser le cablage suivant ou utiliser un [adaptateur Pico-Hat](https://shop.mchobby.be/fr/pico-raspberry-pi/2037-interface-hat-pour-raspberry-pi-pico-3232100020375.html)
 
 ![Sense-Hat vers Pico](docs/_static/sense-hat-to-pico.jpg)
 
@@ -418,5 +419,6 @@ while True:
 * [Sense-Hat](https://shop.mchobby.be/fr/pi-hats/687-sense-hat-pour-raspberry-pi-3232100006874.html) @ MCHobby
 * [MicroPython Pyboard](https://shop.mchobby.be/fr/micropython/570-micropython-pyboard-3232100005709.html) @ MCHobby
 * [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-raspberry-pi/2025-pico-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020252.html) @ MCHobby
+* [adaptateur Pico-Hat](https://shop.mchobby.be/fr/pico-raspberry-pi/2037-interface-hat-pour-raspberry-pi-pico-3232100020375.html) Interface HAT pour Raspberry-Pi Pico @ MCHobby
 * [MicroPython PYBStick](https://shop.mchobby.be/fr/micropython/1844-pybstick-standard-26-micropython-et-arduino-3232100018440-garatronic.html) @ MCHobby
 * [MicroPython PYBStick-HAT-FACE](https://shop.mchobby.be/fr/nouveaute/1935-interface-pybstick-vers-raspberry-pi-3232100019355.html) @ MCHobby

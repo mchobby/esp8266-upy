@@ -14,15 +14,17 @@ import time
 i2c = I2C( 1 )
 # Raspberry-Pi Pico, Sda=GP8, Scl=GP9
 # i2c = I2C( 0 )
-hat = SenseHat( i2c )
+# hat = SenseHat( i2c )
 
 # See the FrameBuffer doc @ https://docs.micropython.org/en/latest/library/framebuf.html
 #
 hat.clear()
+time.sleep_ms(100)
 # Display one charaters at the time
 while True:
 	hat.clear(update=False) # Just clear the FrameBuffer
 	j = hat.joystick
+	#print( j )
 	if j == JOY_UP:
 		hat.icon(ARROW_N)
 	elif j == JOY_DOWN:
