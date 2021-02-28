@@ -15,6 +15,8 @@ Le bibliothèque [ili934x](lib/ili934x.py) expose une interface __imitant__ l'[A
 
 L'API du pilote ILI934x [est détaillée dans le document API.md](api.md)
 
+L'interface tactile (film resistif) est pris en charge par le [stmpe610 et son pilote MicroPython](https://github.com/mchobby/esp8266-upy/tree/master/stmpe610).
+
 ## Crédit:
 Ce pilote est basé sur les travaux suivants:
 * [Micropython Driver for ILI9341 display de Jeffmer](https://github.com/jeffmer/micropython-ili9341) (GitHub)
