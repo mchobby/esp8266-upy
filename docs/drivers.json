@@ -781,6 +781,18 @@
 								 "ENG": "Using a round TFT under MicroPython"
 								}
 		},
+		{	"folder"        : "stmpe610",
+			"components"    : ["STMPE610"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : [],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Ecran FeatherWing TFT 2.4 Adafruit @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/feather-adafruit\/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html" }
+												],
+			"descr"	: {"FR" : "Utiliser un capteur tactile résistif avec MicroPython",
+								 "ENG": "Using a resistive touch screen sensor with MicroPython"
+								}
+		},
 		{	"folder"        : "tca9554a",
 			"components"    : ["TCA9554A"],
 			"interfaces"    : ["I2C"],

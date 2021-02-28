@@ -718,6 +718,17 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/stmpe610">stmpe610</a></td>
+      <td><strong>Composants</strong> : STMPE610<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Utiliser un capteur tactile résistif avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html">Ecran FeatherWing TFT 2.4 Adafruit @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/tca9554a">tca9554a</a></td>
       <td><strong>Composants</strong> : TCA9554A<br />
       <strong>Interfaces</strong> : I2C<br />
