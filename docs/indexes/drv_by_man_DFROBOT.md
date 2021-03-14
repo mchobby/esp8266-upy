@@ -10,6 +10,18 @@ voir
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/lcdspi-lcd12864">lcdspi-lcd12864</a></td>
+      <td><strong>Composants</strong> : LCD12864<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Afficheur LCD graphique 128 x 64 pixels. Interface SPI (3 fils)</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD, PYBSTICK, PICO<br />
+      <strong>Fabricant</strong> : DFROBOT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/gravity-boson/1878-afficheur-lcd-128x64-spi-3-fils-3232100018785-dfrobot.html">LCD12864 (DFR0091) 128x64 graphical LCD display @ MCHobby</a></li>
+<li>Voir <a href="https://www.dfrobot.com/product-372.html">LCD12864 (DFR0091) 128x64 graphical LCD display @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/sht3x">sht3x</a></td>
       <td><strong>Composants</strong> : SHT31-F, SHT3x<br />
       <strong>Interfaces</strong> : I2C<br />

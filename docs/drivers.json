@@ -303,6 +303,20 @@
 								 "ENG": "USB + Serial Backpack Kit with 16x2 RGB backlight positive LCD - Black on RGB."
 								}
 		},
+		{	"folder"        : "lcdspi-lcd12864",
+			"components"    : ["LCD12864"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PYBOARD","PYBSTICK","PICO"],
+			"ressources"    : [ { "label" : "LCD12864 (DFR0091) 128x64 graphical LCD display @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/gravity-boson\/1878-afficheur-lcd-128x64-spi-3-fils-3232100018785-dfrobot.html" },
+													{ "label" : "LCD12864 (DFR0091) 128x64 graphical LCD display @ DFRobot",
+														"url"   : "https:\/\/www.dfrobot.com\/product-372.html" }
+												],
+			"descr"	: {"FR" : "Afficheur LCD graphique 128 x 64 pixels. Interface SPI (3 fils)",
+								 "ENG": "128 x 64 pixels LCD graphical display. Interface SPI (3 fils)"
+								}
+		},
 		{	"folder"        : "lsm303",
 			"components"    : ["LSM303D"],
 			"interfaces"    : ["UNO-R3", "I2C"],

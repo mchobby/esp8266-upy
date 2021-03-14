@@ -43,6 +43,18 @@ SPI bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/lcdspi-lcd12864">lcdspi-lcd12864</a></td>
+      <td><strong>Components</strong> : LCD12864<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>128 x 64 pixels LCD graphical display. Interface SPI (3 fils)</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD, PYBSTICK, PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/gravity-boson/1878-afficheur-lcd-128x64-spi-3-fils-3232100018785-dfrobot.html">LCD12864 (DFR0091) 128x64 graphical LCD display @ MCHobby</a></li>
+<li>See <a href="https://www.dfrobot.com/product-372.html">LCD12864 (DFR0091) 128x64 graphical LCD display @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/max6675">max6675</a></td>
       <td><strong>Components</strong> : MOD-TC, MAX6675<br />
       <strong>Interfaces</strong> : UEXT, SPI<br />
