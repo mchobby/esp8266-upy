@@ -58,8 +58,8 @@ class BmpReader():
 		self.fileio.seek( 0x2E )
 		self.colors_used = struct.unpack( '<I', self.fileio.read(4))[0]
 
-		""" Check if the image format is compatible with reader class otherwise raise exception """
 	def check_compatible( self ):
+		""" Check if the image format is compatible with reader class otherwise raise exception """
 		if self.compression != BI_RGB:
 			raise BmpException( "unsupported compression %i" % self.compression )
 		if self.bpp != 24:

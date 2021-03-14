@@ -1,6 +1,6 @@
 """ Toolbox function for the various image reader """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 def grayscale( r,g,b ):
 	""" Compute grayscale (brightness) 0..232 from r,g,b values (0..255) """
@@ -88,6 +88,14 @@ class ClipReader():
 		for line in range( self.height ):
 			print( "".join([ charpix( *self.read_pix() ) for col in range(self.width) ]) )
 
+	def copy_to( self, target_fb, x,y, color_fn ):
+		"""" Copy the clipped area TO a target FrameBuffer """
+		# start copy to position (x,y) in target_fb for the current
+		# clipping area width & height. color_fn do transform
+		# the clip reader color (r,g,b) to the target_fb color
+		for line in range(self.height):
+			for col in range(self.width):
+				target_fb.pixel(x+col,y+line,color_fn(self.read_pix()))
 
 def open_image( filename ):
 	""" Helper that detect image type based on file extension. Open the appropriate
@@ -98,6 +106,11 @@ def open_image( filename ):
 		_f = open( filename, "rb" )
 		from bmp import BmpReader
 		reader = BmpReader( _f )
+	elif '.pbm' in filename:
+		_f = open( filename, "rb" )
+		from pbm import PbmReader
+		reader = PbmReader( _f )
+
 	if not(reader):
 		raise Exception( 'No image reader support available!' )
 
