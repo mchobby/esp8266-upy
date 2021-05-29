@@ -189,13 +189,13 @@ I2C bus
       </td>
   </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u097">m5stack-u097</a></td>
-      <td><strong>Components</strong> : <br />
+      <td><strong>Components</strong> : U097, RELAYS<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
 <small>I2C 4 relays module</small><br/><br />
       <strong>Tested with</strong> : PICO, M5STACK<br />
       <strong>Manufacturer</strong> : M5STACK<br />
 <ul>
-<li>See <a href="https://shop.mchobby.be/fr/nouveaute/2149-m5stack-module-4-relais-i2c-grove-3232100021495.html">M5Stack : module 4 relais I2C, Grove</a></li>
+<li>See <a href="https://shop.mchobby.be/fr/nouveaute/2149-m5stack-module-4-relais-i2c-grove-3232100021495.html">M5Stack : module 4 relais en I2C, Grove</a></li>
 </ul>
       </td>
   </tr>

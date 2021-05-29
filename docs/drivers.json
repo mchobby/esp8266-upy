@@ -336,11 +336,11 @@
 								}
 		},
 		{	"folder"        : "m5stack-u097",
-			"components"    : [],
+			"components"    : ["U097","RELAYS"],
 			"interfaces"    : ["GROVE","I2C"],
 			"manufacturers" : ["M5STACK"],
 			"plateforms"    : ["PICO","M5STACK"],
-			"ressources"    : [ { "label" : "M5Stack : module 4 relais I2C, Grove",
+			"ressources"    : [ { "label" : "M5Stack : module 4 relais en I2C, Grove",
 												             "url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/2149-m5stack-module-4-relais-i2c-grove-3232100021495.html" }
 												],
 			"descr"	: {"FR" : "Module 4 relais I2C",
