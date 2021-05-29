@@ -335,6 +335,18 @@
 								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
 								}
 		},
+		{	"folder"        : "m5stack-u097",
+			"components"    : [],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : ["PICO","M5STACK"],
+			"ressources"    : [ { "label" : "M5Stack : module 4 relais I2C, Grove",
+												             "url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/2149-m5stack-module-4-relais-i2c-grove-3232100021495.html" }
+												],
+			"descr"	: {"FR" : "Module 4 relais I2C",
+								 "ENG": "I2C 4 relays module"
+								}
+		},
 		{	"folder"        : "max6675",
 			"components"    : ["MOD-TC","MAX6675"],
 			"interfaces"    : ["UEXT", "SPI"],
