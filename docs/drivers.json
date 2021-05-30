@@ -347,6 +347,18 @@
 								 "ENG": "I2C 4 relays module"
 								}
 		},
+		{	"folder"        : "m5stack-u105",
+			"components"    : ["U105","AD9833"],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : ["PICO","M5STACK"],
+			"ressources"    : [ { "label" : "M5Stack : DDS unit (AD9833) with STM32F0 I2C custom firmware, Grove",
+												             "url"   : "https://shop.mchobby.be/fr/nouveaute/2151-m5stack-generateur-de-signal-dds-stm32f0-ad9833-grove-3232100021518.html" }
+												],
+			"descr"	: {"FR" : "I2C DDS unit (Direct Digital Synthesis, AD9833, ), Grove",
+								 "ENG": "I2C DDS unit (Direct Digital Synthesis, AD9833, ), Grove"
+								}
+		},
 		{	"folder"        : "max6675",
 			"components"    : ["MOD-TC","MAX6675"],
 			"interfaces"    : ["UEXT", "SPI"],

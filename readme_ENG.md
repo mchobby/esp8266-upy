@@ -356,6 +356,17 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/m5stack-u105">m5stack-u105</a></td>
+      <td><strong>Components</strong> : U105, AD9833<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>I2C DDS unit (Direct Digital Synthesis, AD9833, ), Grove</small><br/><br />
+      <strong>Tested with</strong> : PICO, M5STACK<br />
+      <strong>Manufacturer</strong> : M5STACK<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/nouveaute/2151-m5stack-generateur-de-signal-dds-stm32f0-ad9833-grove-3232100021518.html">M5Stack : DDS unit (AD9833) with STM32F0 I2C custom firmware, Grove</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/max6675">max6675</a></td>
       <td><strong>Components</strong> : MOD-TC, MAX6675<br />
       <strong>Interfaces</strong> : UEXT, SPI<br />
