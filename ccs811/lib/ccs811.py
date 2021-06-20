@@ -38,7 +38,6 @@ Author(s):
 <https://cdn-learn.adafruit.com/assets/assets/000/044/636/original/CCS811_DS000459_2-00-1098798.pdf?1501602769>`_
 """
 import time
-import math
 import struct
 from micropython import const
 
