@@ -459,6 +459,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/modirdaplus">modirdaplus</a></td>
+      <td><strong>Composants</strong> : MOD-IRDA+<br />
+      <strong>Interfaces</strong> : I2C, UEXT<br />
+<small>MOD-IRDA+ est un module émetteur/récepteur Infrarouge I2C supportant les protocols RC5 (Philips) et SIRCS (Sony).</small><br/><br />
+      <strong>Testé avec</strong> : PICO, PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/138-uext">UEXT @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/modirtemp">modirtemp</a></td>
       <td><strong>Composants</strong> : MOD-IR-TEMP, MLX90614<br />
       <strong>Interfaces</strong> : I2C, UEXT<br />

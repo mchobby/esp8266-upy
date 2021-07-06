@@ -465,6 +465,20 @@
 								 "ENG": "MOD-IO is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have relays, and GPIOs with various functions (Input, Output, Analog, PWM; 0-3.3V)."
 								}
 		},
+		{	"folder"        : "modirdaplus",
+			"components"    : ["MOD-IRDA+"],
+			"interfaces"    : ["I2C","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PICO","PYBOARD"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+													  "url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-IRDA+ est un module émetteur/récepteur Infrarouge I2C supportant les protocols RC5 (Philips) et SIRCS (Sony).",
+								 "ENG": "MOD-IRDA+ is an I2C Infrared emitter/receiver module supporting the RC5 (Philips) and SIRCS (Sony) protocols."
+								}
+		},
 		{	"folder"        : "modirtemp",
 			"components"    : ["MOD-IR-TEMP", "MLX90614"],
 			"interfaces"    : ["I2C","UEXT"],
