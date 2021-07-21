@@ -368,6 +368,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/max31855">max31855</a></td>
+      <td><strong>Composants</strong> : MAX31855<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>ThermoCouple Type-K + amplificateyr MAX31855 - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/temperature/301-thermocouple-type-k-3232100003019.html">MAX31855 - Amplificateur Thermocouple Type-K via SPI d'Adafruit @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/269">AX31855 - Amplificateur Thermocouple Type-K via SPI d'Adafruit @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/max6675">max6675</a></td>
       <td><strong>Composants</strong> : MOD-TC, MAX6675<br />
       <strong>Interfaces</strong> : UEXT, SPI<br />
