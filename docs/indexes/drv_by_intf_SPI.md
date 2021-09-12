@@ -58,7 +58,7 @@ Bus SPI
   <tr><td><a href="../../../../tree/master/max31855">max31855</a></td>
       <td><strong>Composants</strong> : MAX31855<br />
       <strong>Interfaces</strong> : SPI<br />
-<small>ThermoCouple Type-K + amplificateyr MAX31855 - sous MicroPython</small><br/><br />
+<small>ThermoCouple Type-K + amplificateur MAX31855 - sous MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>

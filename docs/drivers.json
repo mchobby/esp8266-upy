@@ -335,6 +335,18 @@
 								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
 								}
 		},
+		{	"folder"        : "m5stack-u087",
+			"components"    : ["U087","ADS1115"],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : ["PICO","M5STACK"],
+			"ressources"    : [ { "label" : "M5Stack : module Voltmètre en I2C, Grove",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/grove\/2153-m5stack-voltmetre-mesure-de-tension-36v-ds1115-grove-3232100021532-m5stack.html" }
+												],
+			"descr"	: {"FR" : "Module Voltmetre I2C",
+								 "ENG": "I2C Voltmeter module"
+								}
+		},
 		{	"folder"        : "m5stack-u097",
 			"components"    : ["U097","RELAYS"],
 			"interfaces"    : ["GROVE","I2C"],
@@ -383,7 +395,7 @@
 													{ "label" : "AX31855 - Amplificateur Thermocouple Type-K via SPI d'Adafruit @ Adafruit",
 														"url"   : "https:\/\/www.adafruit.com\/product\/269" }
 												],
-			"descr"	: {"FR" : "ThermoCouple Type-K + amplificateyr MAX31855 - sous MicroPython",
+			"descr"	: {"FR" : "ThermoCouple Type-K + amplificateur MAX31855 - sous MicroPython",
 								 "ENG": "Type-K thermocouple + MAX31855 amplifier - under MicroPython."
 								}
 		},

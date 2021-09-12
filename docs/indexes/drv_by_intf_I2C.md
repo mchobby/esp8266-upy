@@ -188,6 +188,17 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/m5stack-u087">m5stack-u087</a></td>
+      <td><strong>Composants</strong> : U087, ADS1115<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>Module Voltmetre I2C</small><br/><br />
+      <strong>Testé avec</strong> : PICO, M5STACK<br />
+      <strong>Fabricant</strong> : M5STACK<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/grove/2153-m5stack-voltmetre-mesure-de-tension-36v-ds1115-grove-3232100021532-m5stack.html">M5Stack : module Voltmètre en I2C, Grove</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u097">m5stack-u097</a></td>
       <td><strong>Composants</strong> : U097, RELAYS<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
