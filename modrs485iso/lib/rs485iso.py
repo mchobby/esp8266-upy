@@ -129,17 +129,22 @@ class RS485ISO:
 		self.buf1[0] = value
 		self.i2c.writeto_mem( self.address, REGISTER_BR, self.buf1 )
 
-
 #void setAddress(uint8_t address);
-
 
 	def send( self, buffer ):
 		""" Send the data buffer over I2C to the RS485 bus (must be in bridged mode) """
 		for ch in buffer:
 			self.buf1[0] = ch
-			print( self.buf1 )
 			self.i2c.writeto_mem( self.address, REGISTER_TX, self.buf1 )
 
+	def read( self, data, max_read=None ):
+		""" Fills the buffer with received data. Returns when the buffer is
+		    filled """
+		if max_read==None:
+			max_read = len(data)
+		for idx in range( max_read ):
+			self.i2c.readfrom_mem_into( self.address, REGISTER_RX, self.buf1 )
+			data[idx] = self.buf1[0]
 
 
 #void readData(uint8_t *data, uint8_t length);
