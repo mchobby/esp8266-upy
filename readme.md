@@ -600,6 +600,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/modrs485iso">modrs485iso</a></td>
+      <td><strong>Composants</strong> : MOD-RS485-ISO<br />
+      <strong>Interfaces</strong> : I2C, UART, UEXT<br />
+<small>MOD-RS485-ISO est un adaptateur RS485 Full-Duplex/Half-Duplex avec isolation. La transmission de données se fait via UART (MODE_PASS) ou I2C (MODE_BRIDE). Expose une interface <strong>UEXT</strong> pour connexion rapide.</small><br/><br />
+      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Fabricant</strong> : OLIMEX<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/138-uext">UEXT @ MCHobby</a></li>
+<li>Voir <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/modtc-mk2">modtc-mk2</a></td>
       <td><strong>Composants</strong> : MOD-TC-MK2-31855<br />
       <strong>Interfaces</strong> : UEXT, I2C<br />

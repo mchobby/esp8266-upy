@@ -56,5 +56,17 @@ UART (serial)
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/modrs485iso">modrs485iso</a></td>
+      <td><strong>Components</strong> : MOD-RS485-ISO<br />
+      <strong>Interfaces</strong> : I2C, UART, UEXT<br />
+<small>MOD-RS485-ISO is an Full-Duplex/Half-Duplex RS485 adapter with isolation circuitery. Data transmission is made via UART (MODE_PASS) or I2C (MODE_BRIDE). It expose an <strong>UEXT</strong> connector for quick wiring.</small><br/><br />
+      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Manufacturer</strong> : OLIMEX<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/138-uext">UEXT @ MCHobby</a></li>
+<li>See <a href="https://www.olimex.com/Products/Modules/">UEXT @ Olimex</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>

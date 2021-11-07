@@ -627,6 +627,20 @@
 								 "ENG": "MOD-RGB is an I2C extension board with <strong>UEXT<\/strong> connector. This Olimex's Board have power MosFet to control RGB analogic LED strips via I2C (or DMX)."
 								}
 		},
+		{	"folder"        : "modrs485iso",
+			"components"    : ["MOD-RS485-ISO"],
+			"interfaces"    : ["I2C","UART","UEXT"],
+			"manufacturers" : ["OLIMEX"],
+			"plateforms"    : ["PYBOARD"],
+			"ressources"    : [ { "label" : "UEXT @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/138-uext" },
+													{ "label" : "UEXT @ Olimex",
+														"url"   : "https:\/\/www.olimex.com\/Products\/Modules\/" }
+												],
+			"descr"	: {"FR" : "MOD-RS485-ISO est un adaptateur RS485 Full-Duplex/Half-Duplex avec isolation. La transmission de données se fait via UART (MODE_PASS) ou I2C (MODE_BRIDE). Expose une interface <strong>UEXT<\/strong> pour connexion rapide.",
+								 "ENG": "MOD-RS485-ISO is an Full-Duplex/Half-Duplex RS485 adapter with isolation circuitery. Data transmission is made via UART (MODE_PASS) or I2C (MODE_BRIDE). It expose an <strong>UEXT<\/strong> connector for quick wiring."
+								}
+		},
 		{	"folder"        : "modtc-mk2",
 			"components"    : ["MOD-TC-MK2-31855"],
 			"interfaces"    : ["UEXT", "I2C"],
