@@ -21,7 +21,7 @@ BUS_DELAY_MS = 10 # Avoids I2C bus to HANG because of too much consecutive readi
 ADS1115_RA_CONVERSION = const( 0x00 )
 ADS1115_RA_CONFIG     = const( 0x01 )
 
-# Resolution en mV/unit
+# Resolution en mV/unit of ADS1115
 ADS1115_MV_6144       =  0.187500
 ADS1115_MV_4096       =  0.125000
 ADS1115_MV_2048       =  0.062500 # default
@@ -117,7 +117,8 @@ class Voltmeter:
 		self.i2c.readfrom_into( addr, self.buf2 )
 		val = (self.buf2[0] << 8) | self.buf2[1]
 		if signed:
-			return val if val < 32768 else val - 65536
+			#return val if val < 32768 else val - 65536
+			return struct.unpack('>h', self.buf2 )[0]
 		else:
 			return val
 
@@ -128,22 +129,31 @@ class Voltmeter:
 		self.i2c.writeto( addr, self.buf3)
 
 
-	def __get_resolution( self, gain ): # float
+	def __get_resolution( self, gain, adc_only=False ): # float
+		# global resolution depend on resistor bridge configuration.
+		# On regular VMeter: the VOLTMETER_PRESSURE_COEFFICIENT is involved.
+		# On hacked VMeter: the resistor bridge is removed so coefficient is
+		#                   exactly 1. So we do read pure adc voltage.
+		mv = 0
 		if gain==PAG_6144:
-			return ADS1115_MV_6144 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_6144
 		elif gain==PAG_4096:
-			return ADS1115_MV_4096 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_4096
 		elif gain==PAG_2048:
-			return ADS1115_MV_2048 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_2048
 		elif gain==PAG_1024:
-			return ADS1115_MV_1024 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_1024
 		elif gain==PAG_512:
-			return ADS1115_MV_512 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_512
 		elif gain==PAG_256:
-			return ADS1115_MV_256 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_256
 		else:
-			return ADS1115_MV_256 / VOLTMETER_PRESSURE_COEFFICIENT
+			mv = ADS1115_MV_256
 
+		if adc_only:
+			return mv
+		else:
+			return mv / VOLTMETER_PRESSURE_COEFFICIENT
 
 	def __get_cover_time( self, rate ): # uint16
 		""" ms required for the ADS1115 to perform a sample """
@@ -203,7 +213,7 @@ class Voltmeter:
 		time.sleep_ms(BUS_DELAY_MS)
 		self.__write_u16( self._ads1115_addr, ADS1115_RA_CONFIG, reg_value)
 
-		self._gain = gain;
+		self._gain = gain
 		self.resolution = self.__get_resolution( gain )
 
 		hope, actual = self.__readCalibrationFromEEPROM( gain ) #, &hope, &actual)) {
@@ -237,16 +247,26 @@ class Voltmeter:
 		self._mode = mode
 
 
-	def get_voltage( self, calibration=True ): # float
+	def get_voltage( self, calibration=True, adc_only=False ): # float
+		# adc_only : read ADC voltage (do not taking care of voltage divider...
+		#			 just the ADC input voltage)
 		# return the value in mV
-		if calibration:
-			return self.resolution * self.calibration_factor * self.get_conversion() * VOLTMETER_MEASURING_DIR
+		if adc_only:
+			return self.__get_resolution(self._gain, adc_only=True) * self.get_conversion() * VOLTMETER_MEASURING_DIR
 		else:
-			return self.resolution * self.get_conversion() * VOLTMETER_MEASURING_DIR
+			# Read VMeter module input (we can use the resolution taking care of resistor divider bridge)
+			if calibration:
+				return self.resolution * self.calibration_factor * self.get_conversion() * VOLTMETER_MEASURING_DIR
+			else:
+				return self.resolution * self.get_conversion() * VOLTMETER_MEASURING_DIR
 
 	@property
 	def voltage( self ):
 		return self.get_voltage() / 1000 # Return as volts
+
+	@property
+	def adc_mv( self ):
+		return self.get_voltage( adc_only=True ) # Return as milliVolts
 
 	def get_conversion( self, timeout=125): # int16_t
 		if self._mode == SINGLESHOT:

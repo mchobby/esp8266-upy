@@ -77,9 +77,9 @@ Voltage: 9.007 Volts
 ```
 ## Lecture détaillée
 
-Le script d'exemple [test_simple.py](examples/test_simple.py) permet de lire la tension sur le module Voltmeter _avec informations complémentaires_.
+Le script d'exemple [test_simple.py](examples/test_simple.py) permet de lire la tension sur le module Voltmètre _avec informations complémentaires_.
 
-C'est aussi l'occasion de tester un gain différent offrant une meilleure résolution mais qui abaisse aussi la tension maximale acceptée par le module Voltmetre.
+C'est aussi l'occasion de tester un gain différent offrant une meilleure résolution mais qui abaisse aussi la tension maximale acceptée par le module Voltmètre.
 
 L'exemple ci-dessous reprend l'utilisation du module sur un Pico pour mesurer une tension de référence arbitraire de 3.7V (branché à l'envers sur le module).
 
@@ -114,6 +114,64 @@ En utilisant les données de calibrations stockées dans l'EEPROM (fonctionnemen
 L'utilisation d'un multimètre Siglent SDM3045x au même moment (à quelques ms près) révèle que la tension sur le module voltmètre est de __-3.7157 Volts__ .
 
 __Le module voltmètre offre une résolution allant jusqu'à presque 3 décimales!__
+
+# VMeter Hacking
+
+Le module VMeter dispose de nombres protections et représente un implémentation de choix de l'ADS1115. Pour les besoins d'un projet, il était nécessaire de lire une tension (jusque 60V) et le courant (jusque 11A) traversant une résistance de charge.
+
+Le module VMeter est capable de lire une tension POSITIVE jusque 70V (grâce au pont diviseur).
+
+J'avais donc besoin de pouvoir lire une tension sur un shunt RSA-10-100 (100 mV @ 10A) avec un grande précision. J'ai donc hacker le module VMeter pour utiliser directement l'ADS1115 et modifier l'adresse I2C de celui-ci pour pouvoir utiliser deux modules VMeter en même temps.
+
+![Inside VMeter](docs/_static/GRO-VOLT-AD1115-inside.jpg)
+
+Voici les modifications à réaliser.
+
+![Inside VMeter](docs/_static/GRO-VOLT-AD1115-chip-pinout.jpg)
+
+Pour faire cohabiter plusieurs modules sur un même bus I2C, il faut également modifier l'adresse de l'EEPROM.
+
+![Changer adresse EEPROM](docs/_static/hacked-vmeter-eeprom-addr.jpg)
+
+__Le banc de test__ est composé comme suit:
+
+![Testing Hacked VMeter](docs/_static/hacked-vmeter-read-shunt.jpg)
+
+![Testing Hacked VMeter](docs/_static/hacked-vmeter-read-shunt-02.jpg)
+
+Le script de [test_hack.py](examples/test_hack.py) permet de lire la chute de tension provoquée par le courant passant dans le shunt.
+
+``` python
+from machine import I2C
+from vmeter import *
+from time import sleep
+
+# Pico - I2C(1) - sda=GP8, scl=GP9
+i2c = I2C(1, freq=10000)
+# M5Stack core
+# i2c = I2C( sda=Pin(21), scl=Pin(22) )
+
+vmeter = Voltmeter(i2c, ads1115_addr=0x4b, eeprom_addr=0x51 ) # Addr-->Scl
+while True:
+	# read ADC voltage (in millivolts)
+	print( 'ADC Voltage: %5.3f mV' % vmeter.adc_mv )
+	sleep( 0.3 )
+```
+
+Script qui produit le résultat suivant:
+
+```
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.375 mV
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.313 mV
+```
+
+Le shunt produit 100mV pour 10A. Soit 1mv par 0.1A (100mA).
+
+En mesurant une tension de 3.31 mV sur le shunt, le courant qui y circule est donc de 0.331 A.
 
 # Liste d'achat
 * [Module Voltmetre (M5Stack u087)](https://shop.mchobby.be/fr/grove/2153-m5stack-voltmetre-mesure-de-tension-36v-ds1115-grove-3232100021532-m5stack.html) @ MCHobby

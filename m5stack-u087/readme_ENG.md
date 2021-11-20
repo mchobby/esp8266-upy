@@ -115,6 +115,65 @@ The Siglent SDM3045x multimeter have been used to compare the voltmeter module r
 
 __The voltmeter module offers an accuracy almost going to the third decimal!__
 
+# VMeter Hacking
+
+The VMeter module offers several electrical protection and is a great implementation for an ADS1115. To fulfil a project requirement where voltage (up to 60V) and current  (up to 11A) must be readed accross a load resistor, I did hack the VMeter.
+
+The VMeter can read POSITIVE voltage up to 70 Volts (thank to voltage divider).
+
+It was necessary to read the voltage accross a RSA-10-100 shunt (100 mV @ 10A). So I hacked the VMeter module to read the ADS1115 voltage with high resolution and also modifies the I2C address to be able to use 2 VMeter modules at the same time.
+
+![Inside VMeter](docs/_static/GRO-VOLT-AD1115-inside.jpg)
+
+Here the modification made on the hacked module.
+
+![Inside VMeter](docs/_static/GRO-VOLT-AD1115-chip-pinout.jpg)
+
+To make several modules sharing the same I2C bus, we do need to change the EEPROM I2C address.
+
+![Changer adresse EEPROM](docs/_static/hacked-vmeter-eeprom-addr.jpg)
+
+__The test bench__ is made as follow:
+
+![Testing Hacked VMeter](docs/_static/hacked-vmeter-read-shunt.jpg)
+
+![Testing Hacked VMeter](docs/_static/hacked-vmeter-read-shunt-02.jpg)
+
+The [test_hack.py](examples/test_hack.py) test script is used to read the voltage drop accross the shunt.
+
+``` python
+from machine import I2C
+from vmeter import *
+from time import sleep
+
+# Pico - I2C(1) - sda=GP8, scl=GP9
+i2c = I2C(1, freq=10000)
+# M5Stack core
+# i2c = I2C( sda=Pin(21), scl=Pin(22) )
+
+vmeter = Voltmeter(i2c, ads1115_addr=0x4b, eeprom_addr=0x51 ) # Addr-->Scl
+while True:
+	# read ADC voltage (in millivolts)
+	print( 'ADC Voltage: %5.3f mV' % vmeter.adc_mv )
+	sleep( 0.3 )
+
+```
+
+The Script produce the following results:
+
+```
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.375 mV
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.313 mV
+ADC Voltage: 3.313 mV
+```
+
+As the shunt produce 100mV for 10A. So 1mv for 0.1A.
+
+When measuring 3.31 mv accross the shunt, the current flowing into it is 0.331A.
+
 # Shopping list
 * [Voltmeter Module (M5Stack u087)](https://shop.mchobby.be/fr/grove/2153-m5stack-voltmetre-mesure-de-tension-36v-ds1115-grove-3232100021532-m5stack.html) @ MCHobby
 * [Voltmeter Module (M5Stack u087)](https://shop.m5stack.com/products/voltmeter-unit-ads1115) @ M5Stack
