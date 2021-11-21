@@ -6,7 +6,7 @@ vmeter.py : MicroPython driver for M5Stack U087, I2C based VMeter grove unit.
 				https://github.com/m5stack/M5-ProductExampleCodes/blob/master/Unit/V_Meter_Unit
 """
 
-__version__ = "0.0.1.0"
+__version__ = "0.0.2.0"
 __repo__ = "https://github.com/mchobby/esp8266-upy/tree/master/m5stack-u087"
 
 from micropython import const
