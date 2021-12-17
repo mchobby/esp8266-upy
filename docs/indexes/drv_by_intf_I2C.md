@@ -114,6 +114,17 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/drv8830">drv8830</a></td>
+      <td><strong>Composants</strong> : DRV8830, Mini-I2C-Motor-Driver<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Le Mini I2C motor driver permet de contrôler 2 moteurs 5V par l'intermédiaire d'une interface I2C.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html">Mini I2C Motor Driver (DRV8830)</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/eeprom">eeprom</a></td>
       <td><strong>Composants</strong> : AT24C512C, AT24C02C, 24LC256<br />
       <strong>Interfaces</strong> : I2C<br />

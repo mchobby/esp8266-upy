@@ -7,5 +7,6 @@
 	"GARATRONIC": { "name" : "Garatronic", "url" : "https:\/\/garatronic.fr\/"},
 	"DFROBOT"   : { "name" : "DFRobot", "url" : "https:\/\/www.dfrobot.com\/"},
 	"M5STACK"   : { "name" : "M5Stack", "url" : "https:\/\/m5stack.com\/"},
+	"SEEEDSTUDIO" : { "name" : "SeeedStudio", "url" : "https:\/\/www.seeedstudio.com\/"},
 	"NONE"      : { "name" : "(other)", "url" : "https:\/\/m5stack.com\/"}
 }

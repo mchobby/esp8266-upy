@@ -141,6 +141,18 @@
 								 "ENG": "The <strong>DotStar / APA102</strong> are Smart digitals LED that can be controled individually."
 								}
 		},
+		{	"folder"        : "drv8830",
+			"components"    : ["DRV8830","Mini-I2C-Motor-Driver"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["SEEEDSTUDIO"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Mini I2C Motor Driver (DRV8830)",
+												    "url"   : "https:\/\/www.seeedstudio.com\/Grove-I2C-Mini-Motor-Driver.html" }
+												],
+			"descr"	: {"FR" : "Le Mini I2C motor driver permet de contrôler 2 moteurs 5V par l'intermédiaire d'une interface I2C.",
+								 "ENG": "The Mini I2C motor driver can be used to control two 5V motors via I2C interface."
+								}
+		},
 		{	"folder"        : "ds18b20",
 			"components"    : ["DS18B20"],
 			"interfaces"    : ["ONEWIRE"],

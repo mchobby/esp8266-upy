@@ -26,7 +26,7 @@ Explorer par:
 * Interface:
 [FEATHERWING](docs/indexes/drv_by_intf_FEATHERWING.md), [GPIO](docs/indexes/drv_by_intf_GPIO.md), [GROVE](docs/indexes/drv_by_intf_GROVE.md), [HAT](docs/indexes/drv_by_intf_HAT.md), [I2C](docs/indexes/drv_by_intf_I2C.md), [NCD](docs/indexes/drv_by_intf_NCD.md), [ONEWIRE](docs/indexes/drv_by_intf_ONEWIRE.md), [QWIIC](docs/indexes/drv_by_intf_QWIIC.md), [SPI](docs/indexes/drv_by_intf_SPI.md), [UART](docs/indexes/drv_by_intf_UART.md), [UEXT](docs/indexes/drv_by_intf_UEXT.md), [UNO-R3](docs/indexes/drv_by_intf_UNO-R3.md)
 * Fabriquant:
-[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [DFROBOT](docs/indexes/drv_by_man_DFROBOT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [M5STACK](docs/indexes/drv_by_man_M5STACK.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
+[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [DFROBOT](docs/indexes/drv_by_man_DFROBOT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [M5STACK](docs/indexes/drv_by_man_M5STACK.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SEEEDSTUDIO](docs/indexes/drv_by_man_SEEEDSTUDIO.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
 
 <table>
 <thead>
@@ -186,6 +186,17 @@ Explorer par:
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/55-neopixels-et-dotstar">APA102 / DotStar</a></li>
 <li>Voir <a href="https://shop.mchobby.be/fr/ci/1041-74ahct125-4x-level-shifter-3v-a-5v-3232100010413.html">74AHCT125</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/drv8830">drv8830</a></td>
+      <td><strong>Composants</strong> : DRV8830, Mini-I2C-Motor-Driver<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Le Mini I2C motor driver permet de contrôler 2 moteurs 5V par l'intermédiaire d'une interface I2C.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html">Mini I2C Motor Driver (DRV8830)</a></li>
 </ul>
       </td>
   </tr>
