@@ -184,6 +184,7 @@ def compile_all():
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_DFROBOT.md', 'lang_code': 'fr', 'code' : 'DFROBOT', 'filter' : lambda driver : any(['DFROBOT'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_POLOLU.md', 'lang_code': 'fr', 'code' : 'POLOLU', 'filter' : lambda driver : any(['POLOLU'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_M5STACK.md', 'lang_code': 'fr', 'code' : 'M5STACK', 'filter' : lambda driver : any(['M5STACK'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_SEEEDSTUDIO.md', 'lang_code': 'fr', 'code' : 'SEEEDSTUDIO', 'filter' : lambda driver : any(['SEEEDSTUDIO'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man.md', 'destin' : 'indexes/drv_by_man_NONE.md', 'lang_code': 'fr', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) },
 
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_ADAFRUIT_ENG.md', 'lang_code': 'eng', 'code' : 'ADAFRUIT', 'filter' : lambda driver : any(['ADAFRUIT'==man for man in driver.manufacturers]) },
@@ -195,6 +196,7 @@ def compile_all():
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_DFROBOT_ENG.md', 'lang_code': 'eng', 'code' : 'DFROBOT', 'filter' : lambda driver : any(['DFROBOT'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_POLOLU_ENG.md', 'lang_code': 'eng', 'code' : 'POLOLU', 'filter' : lambda driver : any(['POLOLU'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_M5STACK_ENG.md', 'lang_code': 'eng', 'code' : 'M5STACK', 'filter' : lambda driver : any(['M5STACK'==man for man in driver.manufacturers]) },
+		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_SEEEDSTUDIO.md', 'lang_code': 'eng', 'code' : 'SEEEDSTUDIO', 'filter' : lambda driver : any(['SEEEDSTUDIO'==man for man in driver.manufacturers]) },
 		{'source' : '_static/_drv_by_man_ENG.md', 'destin' : 'indexes/drv_by_man_NONE_ENG.md', 'lang_code': 'eng', 'code' : 'NONE', 'filter' : lambda driver : any(['NONE'==man for man in driver.manufacturers]) }
 
 	]

@@ -234,6 +234,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/grove-5-way-switch">grove-5-way-switch</a></td>
+      <td><strong>Composants</strong> : 5-Way-Switch, 6-Position-DIP-Switch<br />
+      <strong>Interfaces</strong> : I2C, GROVE<br />
+<small>Joystick 5 directions (et carte 6 DIP) via I2C - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-5-Way-Switch.html">Grove - 5 Way Switch via I2C @ SeeedStudio</a></li>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-6-Position-DIP-Switch.html">Grove - 6 position DIP switch via I2C @ SeeedStudio</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/hat-joy-bonnet">hat-joy-bonnet</a></td>
       <td><strong>Composants</strong> : JOY-BONNET<br />
       <strong>Interfaces</strong> : HAT<br />

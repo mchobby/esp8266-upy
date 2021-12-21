@@ -21,5 +21,17 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/grove-5-way-switch">grove-5-way-switch</a></td>
+      <td><strong>Components</strong> : 5-Way-Switch, 6-Position-DIP-Switch<br />
+      <strong>Interfaces</strong> : I2C, GROVE<br />
+<small>5 dir. joystick (and 6 DIPs board) via I2C - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>See <a href="https://www.seeedstudio.com/Grove-5-Way-Switch.html">Grove - 5 Way Switch via I2C @ SeeedStudio</a></li>
+<li>See <a href="https://www.seeedstudio.com/Grove-6-Position-DIP-Switch.html">Grove - 6 position DIP switch via I2C @ SeeedStudio</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>

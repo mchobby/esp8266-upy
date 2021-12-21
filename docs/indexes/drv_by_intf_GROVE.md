@@ -19,6 +19,18 @@ Connecteur GROVE (SeeedStudio) transportant I2C, UART ou signaux
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/grove-5-way-switch">grove-5-way-switch</a></td>
+      <td><strong>Composants</strong> : 5-Way-Switch, 6-Position-DIP-Switch<br />
+      <strong>Interfaces</strong> : I2C, GROVE<br />
+<small>Joystick 5 directions (et carte 6 DIP) via I2C - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-5-Way-Switch.html">Grove - 5 Way Switch via I2C @ SeeedStudio</a></li>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-6-Position-DIP-Switch.html">Grove - 6 position DIP switch via I2C @ SeeedStudio</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u087">m5stack-u087</a></td>
       <td><strong>Composants</strong> : U087, ADS1115<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
