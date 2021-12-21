@@ -38,6 +38,8 @@ __Note:__ the `I2C.scan()` MicroPython method will not return any result for the
 
 The level shifter is used ti convert the 5V SDA and SCL I2C lines (Grove) to 3.3V (Pico) and vice-versa.
 
+__Note:__ this grove module can also be powered with 3.3V, in such case you do not need to use a _level shifter_.
+
 ![Grove 5 way switch to Raspberry-Pi Pico](docs/_static/grove-5-way-switch-to-pico.jpg)
 
 # Test

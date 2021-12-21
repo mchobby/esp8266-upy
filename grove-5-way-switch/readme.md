@@ -38,6 +38,8 @@ __Note:__ la méthode MicroPython `I2C.scan()` ne retourne aucun résultat pour 
 
 Un _level shifter_ est utilisé pour convertir les signaux SDA et SCL du bus I2C de 3.3V (Pico) vers 5V (Grove) et vice-versa.
 
+__Note:__ ce module grove peut aussi être alimenté en 3.3V, auquel cas le _level shifter_ est inutile.
+
 ![Grove 5 way switch sur Raspberry-Pi Pico](docs/_static/grove-5-way-switch-to-pico.jpg)
 
 # Tester
