@@ -871,6 +871,22 @@
 								 "ENG": "A real time clock RTC + alarm for MicroPython"
 								}
 		},
+		{	"folder"        : "qwiic-keypad-i2c",
+			"components"    : ["KEYPAD-I2C"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["SPARKFUN"],
+			"plateforms"    : ["MICROMOD-RP2040","PICO"],
+			"ressources"    : [ { "label" : "Qwiic 12 Keys Keypad @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/15290" },
+													{ "label" : "MicroMod RP2040 Processor @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/17720" },
+													{ "label" : "MicroMod Machine Learning Carrier Board @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16400" }
+												],
+			"descr"	: {"FR" : "Une Horloge temps réel RTC + alarme avec MicroPython",
+								 "ENG": "A real time clock RTC + alarm for MicroPython"
+								}
+		},
 		{	"folder"        : "sht3x",
 			"components"    : ["SHT31-F","SHT3x"],
 			"interfaces"    : ["I2C"],

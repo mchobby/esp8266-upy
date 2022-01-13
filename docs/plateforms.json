@@ -13,6 +13,11 @@
 				            "ENG" : "M5Stack (based on ESP32)" },
 			  "url" : "https:\/\/shop.mchobby.be\/fr\/153-m5stack-esp"
 			},
+	"MICROMOD-RP2040" :
+		{ "descr" : { "FR" : "MicroMod-RP2040 (basé sur RP2040)",
+									"ENG" : "MicroMod-RP2040 (based on RP2040)" },
+			"url" : "https:\/\/www.sparkfun.com\/products\/17720"
+		},
 	"PICO" :
 			{ "descr" : { "FR" : "Raspberry-Pi PICO",
 				            "ENG" : "Raspberry-Pi PICO" },
