@@ -17,6 +17,7 @@ Remarks:
 History:
   10 january 2022 - Dominique - initial portage from Arduino to MicroPython
 """
+import time
 
 __version__ = "0.0.1"
 
@@ -49,6 +50,15 @@ class Keypad_I2C():
 	def update_fifo( self ):
 		""" commands the keypad to plug in the next button into the registerMap """
 		self.write_reg( REG_KEYPAD_UPDATE_FIFO, 0x01 )
+
+
+
+	def change_address( self, new_addr ):
+		""" Change the I2C address of this address to new_addr.
+		 	ADR jumper should be closed for this to work"""
+		assert 8 <= new_addr <= 119, "Address outside 8-119 range"
+
+		self.write_reg( REG_KEYPAD_CHANGE_ADDRESS, new_addr ) # Does not seems to work
 
 	@property
 	def is_connected( self ):
