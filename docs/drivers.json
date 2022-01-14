@@ -883,8 +883,30 @@
 													{ "label" : "MicroMod Machine Learning Carrier Board @ SparkFun",
 														"url"   : "https:\/\/www.sparkfun.com\/products\/16400" }
 												],
-			"descr"	: {"FR" : "Une Horloge temps réel RTC + alarme avec MicroPython",
-								 "ENG": "A real time clock RTC + alarm for MicroPython"
+			"descr"	: {"FR" : "Utiliser un clavier I2C 12 touches (Qwiic) avec MicroPython",
+								 "ENG": "Use an 12 keys I2C Keypad (Qwiic) with MicroPython"
+								}
+		},
+		{	"folder"        : "qwiic-relay-i2c",
+			"components"    : ["SingleRelay","QuadRelay","DualSsrRelay", "QuadSsrRelay" ],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["SPARKFUN"],
+			"plateforms"    : ["MICROMOD-RP2040","PICO"],
+			"ressources"    : [ { "label" : "Qwiic Single Relay @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/15093" },
+													{ "label" : "Qwiic Quad Relay @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16566" },
+													{ "label" : "Qwiic Quad Solid State Relay  @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16833" },
+													{ "label" : "Qwiic Dual Solid State Relay  @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16810" },
+													{ "label" : "MicroMod RP2040 Processor @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/17720" },
+													{ "label" : "MicroMod Machine Learning Carrier Board @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16400" }
+												],
+			"descr"	: {"FR" : "Utiliser un Relais-Simple/Quad-Relais/Quad-Relais-SSR I2C (qwiic) avec MicroPython",
+								 "ENG": "Using an I2C Single-Relay/Quad-Relay/Quad-SSR-Relay (qwiic) with MicroPython"
 								}
 		},
 		{	"folder"        : "sht3x",
