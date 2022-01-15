@@ -614,15 +614,15 @@
 								}
 		},
 		{	"folder"        : "modoled128x64",
-			"components"    : ["SSD1306","MOD-OLED-128x64","OLED"],
-			"interfaces"    : ["I2C","UEXT"],
-			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["ESP8266-EVB"],
+			"components"    : ["SSD1306","MOD-OLED-128x64","OLED","OLED-FEATHERWING","MINI-OLED"],
+			"interfaces"    : ["I2C","UEXT","QWIIC"],
+			"manufacturers" : ["OLIMEX","ADAFRUIT","SPARKFUN"],
+			"plateforms"    : ["ESP8266-EVB","PICO","MICROMOD-RP2040"],
 			"ressources"    : [ { "label" : "Afficheur OLED 128 x 64 avec interface I2C et UEXT",
 												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1411" }
 												],
-			"descr"	: {"FR" : "Un afficheur OLED 128x64 avec contrôleur SSD1306 (I2C) et connecteur UEXT.",
-								 "ENG": "A 128x64 display with the SSD1306 I2C controler exposing a UEXT connector."
+			"descr"	: {"FR" : "Un afficheur OLED 128x64 / 128x32 / 64x48 avec contrôleur SSD1306 (I2C) et connecteur UEXT, Feather, Qwiic.",
+								 "ENG": "A 128x64 / 128x32 / 64x48 OLED display with the SSD1306 I2C controler exposing a UEXT, Feather, Qwiic connector."
 								}
 		},
 		{	"folder"        : "modrfid",
