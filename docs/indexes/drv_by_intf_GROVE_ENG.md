@@ -1,7 +1,7 @@
 # MicroPython Driver for GROVE interface
 [Return to main page](../../readme_ENG.md)
 
-GROVE connector (SeeedStudio) shipping I2C, UART or signals
+GROVE connector (SeeedStudio) shipping I2C, UART, Analog or signals
 
 <table>
 <thead>
@@ -61,6 +61,17 @@ GROVE connector (SeeedStudio) shipping I2C, UART or signals
       <strong>Manufacturer</strong> : M5STACK<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/fr/nouveaute/2151-m5stack-generateur-de-signal-dds-stm32f0-ad9833-grove-3232100021518.html">M5Stack : DDS unit (AD9833) with STM32F0 I2C custom firmware, Grove</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/mpx5700a">mpx5700a</a></td>
+      <td><strong>Components</strong> : MPX5700AP<br />
+      <strong>Interfaces</strong> : GROVE<br />
+<small>Using a MPX5700AP ANALOG pressure sensor.</small><br/><br />
+      <strong>Tested with</strong> : PICO, PYBSTICK<br />
+      <strong>Manufacturer</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>See <a href="https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html">Capteur ANALOGIQUE de pression 15 kPa à 480 kPa sous 3.3V (700 kPa) @ SeeedStudio</a></li>
 </ul>
       </td>
   </tr>

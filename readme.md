@@ -671,6 +671,17 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/mpx5700a">mpx5700a</a></td>
+      <td><strong>Composants</strong> : MPX5700AP<br />
+      <strong>Interfaces</strong> : GROVE<br />
+<small>Utiliser un capteur de pression ANALOGIQUE MPX5700AP.</small><br/><br />
+      <strong>Testé avec</strong> : PICO, PYBSTICK<br />
+      <strong>Fabricant</strong> : SEEEDSTUDIO<br />
+<ul>
+<li>Voir <a href="https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html">Capteur ANALOGIQUE de pression 15 kPa à 480 kPa sous 3.3V (700 kPa) @ SeeedStudio</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/ncd-fet-solenoid">ncd-fet-solenoid</a></td>
       <td><strong>Composants</strong> : I2CDRV8W4I12V, MCP23008<br />
       <strong>Interfaces</strong> : I2C, NCD<br />

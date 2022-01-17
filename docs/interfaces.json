@@ -27,8 +27,8 @@
 										"ENG" : "3.3V logic UEXT connector from Olimex Ltd (Olimex.com) shipping I2C, SPI, UART" }
 			},
 	"GROVE":
-			{ "descr" : { "FR" : "Connecteur GROVE (SeeedStudio) transportant I2C, UART ou signaux",
-										"ENG" : "GROVE connector (SeeedStudio) shipping I2C, UART or signals" }
+			{ "descr" : { "FR" : "Connecteur GROVE (SeeedStudio) transportant I2C, UART, Analogique ou autres signaux",
+										"ENG" : "GROVE connector (SeeedStudio) shipping I2C, UART, Analog or signals" }
 			},
 	"QWIIC":
 			{ "descr" : { "FR" : "Connecteur I2C Qwiic de Sparkfun (Sparkfun.com)",

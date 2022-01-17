@@ -709,6 +709,18 @@
 								 "ENG": "Create tactile pad/inputs with capacitive effect with the MPR121 chip."
 								}
 		},
+		{	"folder"        : "mpx5700a",
+			"components"    : ["MPX5700AP"],
+			"interfaces"    : ["GROVE"],
+			"manufacturers" : ["SEEEDSTUDIO"],
+			"plateforms"    : ["PICO","PYBSTICK"],
+			"ressources"    : [ { "label" : "Capteur ANALOGIQUE de pression 15 kPa à 480 kPa sous 3.3V (700 kPa) @ SeeedStudio",
+														"url"   : "https:\/\/www.seeedstudio.com\/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html" }
+												],
+			"descr"	: {"FR" : "Utiliser un capteur de pression ANALOGIQUE MPX5700AP.",
+								 "ENG": "Using a MPX5700AP ANALOG pressure sensor."
+								}
+		},
 		{	"folder"        : "NCD",
 			"components"    : ["NCD"],
 			"interfaces"    : ["I2C","NCD"],
