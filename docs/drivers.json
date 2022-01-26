@@ -845,6 +845,20 @@
 								 "ENG": "The SSD1306 is an OLED display controler."
 								}
 		},
+		{	"folder"        : "opt3101-fov",
+			"components"    : ["OPT3101","POL3412"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["POLOLU"],
+			"plateforms"    : ["PICO","PYBSTICK"],
+			"ressources"    : [ { "label" : "Capteur Time-Of-Flight FoV 3 canaux OPT3101 (POL3412)",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=2289" },
+													{ "label" : "3-Channel Wide FOV Time-of-Flight Distance Sensor Using OPT310 (POL3412)",
+														"url"   : "https:\/\/www.pololu.com\/product\/3412" }
+												],
+			"descr"	: {"FR" : "Capteur de distance Time-Of-Flight FoV 3 canaux OPT3101 (POL3412)",
+								 "ENG": "3-Channel Wide FOV Time-of-Flight Distance Sensor OPT310 (POL3412)"
+								}
+		},
 		{	"folder"        : "pca9536",
 			"components"    : ["PCA9536"],
 			"interfaces"    : ["I2C"],

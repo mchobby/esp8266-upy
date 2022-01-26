@@ -24,5 +24,17 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/opt3101-fov">opt3101-fov</a></td>
+      <td><strong>Components</strong> : OPT3101, POL3412<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>3-Channel Wide FOV Time-of-Flight Distance Sensor OPT310 (POL3412)</small><br/><br />
+      <strong>Tested with</strong> : PICO, PYBSTICK<br />
+      <strong>Manufacturer</strong> : POLOLU<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2289">Capteur Time-Of-Flight FoV 3 canaux OPT3101 (POL3412)</a></li>
+<li>See <a href="https://www.pololu.com/product/3412">3-Channel Wide FOV Time-of-Flight Distance Sensor Using OPT310 (POL3412)</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>

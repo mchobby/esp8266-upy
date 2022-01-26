@@ -528,6 +528,18 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/opt3101-fov">opt3101-fov</a></td>
+      <td><strong>Composants</strong> : OPT3101, POL3412<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Capteur de distance Time-Of-Flight FoV 3 canaux OPT3101 (POL3412)</small><br/><br />
+      <strong>Testé avec</strong> : PICO, PYBSTICK<br />
+      <strong>Fabricant</strong> : POLOLU<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2289">Capteur Time-Of-Flight FoV 3 canaux OPT3101 (POL3412)</a></li>
+<li>Voir <a href="https://www.pololu.com/product/3412">3-Channel Wide FOV Time-of-Flight Distance Sensor Using OPT310 (POL3412)</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/pca9536">pca9536</a></td>
       <td><strong>Composants</strong> : PCA9536<br />
       <strong>Interfaces</strong> : I2C<br />
