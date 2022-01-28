@@ -572,6 +572,19 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/qwiic-joystick-i2c">qwiic-joystick-i2c</a></td>
+      <td><strong>Composants</strong> : JOYSTICK-I2C<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Utiliser un joystick analogique I2C (Qwiic) avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : MICROMOD-RP2040, PICO<br />
+      <strong>Fabricant</strong> : SPARKFUN<br />
+<ul>
+<li>Voir <a href="https://www.sparkfun.com/products/15168">Qwiic Analog Joystick @ SparkFun</a></li>
+<li>Voir <a href="https://www.sparkfun.com/products/17720">MicroMod RP2040 Processor @ SparkFun</a></li>
+<li>Voir <a href="https://www.sparkfun.com/products/16400">MicroMod Machine Learning Carrier Board @ SparkFun</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/qwiic-keypad-i2c">qwiic-keypad-i2c</a></td>
       <td><strong>Composants</strong> : KEYPAD-I2C<br />
       <strong>Interfaces</strong> : I2C<br />

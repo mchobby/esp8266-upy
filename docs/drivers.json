@@ -897,6 +897,22 @@
 								 "ENG": "A real time clock RTC + alarm for MicroPython"
 								}
 		},
+		{	"folder"        : "qwiic-joystick-i2c",
+			"components"    : ["JOYSTICK-I2C"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["SPARKFUN"],
+			"plateforms"    : ["MICROMOD-RP2040","PICO"],
+			"ressources"    : [ { "label" : "Qwiic Analog Joystick @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/15168" },
+													{ "label" : "MicroMod RP2040 Processor @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/17720" },
+													{ "label" : "MicroMod Machine Learning Carrier Board @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16400" }
+												],
+			"descr"	: {"FR" : "Utiliser un joystick analogique I2C (Qwiic) avec MicroPython",
+								 "ENG": "Use an I2C analog joystick (Qwiic) with MicroPython"
+								}
+		},
 		{	"folder"        : "qwiic-keypad-i2c",
 			"components"    : ["KEYPAD-I2C"],
 			"interfaces"    : ["I2C"],
