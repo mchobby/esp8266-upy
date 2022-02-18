@@ -967,6 +967,20 @@
 								 "ENG": "Use the proximity VCNL4040 sensor (Qwiic, I2C) with MicroPython"
 								}
 		},
+		{	"folder"        : "rfm69",
+			"components"    : ["RFM69","RFM69HCW"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1390" },
+													{ "label" : "RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/3071" }
+												],
+			"descr"	: {"FR" : "Utiliser module Packet Radio RFM69HCW (SPI) avec MicroPython",
+								 "ENG": "Use a RFM69HCW packet radio module (SPI) avec MicroPython"
+								}
+		},
 		{	"folder"        : "sht3x",
 			"components"    : ["SHT31-F","SHT3x"],
 			"interfaces"    : ["I2C"],

@@ -111,6 +111,18 @@ Bus SPI
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/rfm69">rfm69</a></td>
+      <td><strong>Composants</strong> : RFM69, RFM69HCW<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Utiliser module Packet Radio RFM69HCW (SPI) avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1390">Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/3071">RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/st7687s">st7687s</a></td>
       <td><strong>Composants</strong> : ST7687S<br />
       <strong>Interfaces</strong> : SPI<br />
