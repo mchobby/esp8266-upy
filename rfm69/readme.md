@@ -1,3 +1,5 @@
+[This file also exists in ENGLISH](readme_ENG.md)
+
 # Transmettre des donnée par les airs à l'aide du Module RFM69 Packet Radio (SX1231) et de MicroPython
 
 Il est facile de travailler avec le module RFM69. C'est une module bien connu et facile à comprendre.
