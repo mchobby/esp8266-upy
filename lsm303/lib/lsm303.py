@@ -243,8 +243,8 @@ class LSM303( object ):
 	# thread safe!
 	_BUFFER = bytearray(6)
 
-	def __init__(self, i2c):
-		self._address = _ADDRESS                #= const(0x29)  # (0x3A >> 1)
+	def __init__(self, i2c, address=_ADDRESS ): # 0x29
+		self._address = address
 		self._device = i2c
 
 		self._write_u8( CTRL1, 0x27)  # Enable the accelerometer
