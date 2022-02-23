@@ -243,7 +243,7 @@ class LSM303( object ):
 	# thread safe!
 	_BUFFER = bytearray(6)
 
-	def __init__(self, i2c, address=_ADDRESS ): # 0x29
+	def __init__(self, i2c, address=_ADDRESS ): # 0x1D (29)
 		self._address = address
 		self._device = i2c
 
