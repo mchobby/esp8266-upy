@@ -21,6 +21,9 @@ Those sensors can use either the I2C bus, either the SPI bus; __This driver is f
 ### BMP280 Wiring ###
 ![Wire the BMP280 on MicroPython ESP8266](docs/_static/bmp280_bb.jpg)
 
+![Wiring the BMP280 on Raspberry-Pi Pico](docs/_static/bmp280-to-pico.jpg)
+
+
 ### BME280 Wiring ###
 ![Wire the BME280 on MicroPython ESP8266](docs/_static/bme280_bb.jpg)
 

@@ -21,6 +21,8 @@ Ces capteurs peuvent communiquer via I2C ou SPI; __Ce pilote utilise I2C uniquem
 ### Raccordement BMP280 ###
 ![brancher BMP280 sur MicroPython ESP8266](docs/_static/bmp280_bb.jpg)
 
+![brancher BMP280 sur Raspberry-Pi Pico](docs/_static/bmp280-to-pico.jpg)
+
 ### Raccordement BME280 ###
 ![brancher BME280 sur MicroPython ESP8266](docs/_static/bme280_bb.jpg)
 
