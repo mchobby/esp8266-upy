@@ -53,13 +53,13 @@
 			"components"    : ["BME280","BMP280","ADA2651","ADA2652"],
 			"interfaces"    : ["I2C"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["FEATHER-ESP8266","PYBOARD"],
-			"ressources"    : [ { "label" : "BMP280 Sensor",
+			"plateforms"    : ["FEATHER-ESP8266","PYBOARD","PICO"],
+			"ressources"    : [ { "label" : "Capteur BMP280",
 												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=1118" },
-													{ "label" : "BME280 Sensor",
+													{ "label" : "Capteur BME280",
 													  "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=684" }
 												],
-			"descr"	: {"FR" : "Le BMP280 est un senseur de <strong>pression et température<\/strong> très populaire.<br \/>Le BME280 est un senseur de <strong>pression, température et HUMIDITÉ<\/strong> relative",
+			"descr"	: {"FR" : "Le BMP280 est un capteur de <strong>pression et température<\/strong> très populaire.<br \/>Le BME280 est un capteur de <strong>pression, température et HUMIDITÉ<\/strong> relative",
 								 "ENG": "The BMP280 is a very popular <strong>pressure and temperatur<\/strong> sensor.<br \/>The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY<\/strong>"
 								}
 		},
