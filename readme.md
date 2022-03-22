@@ -590,7 +590,7 @@ Explorer par:
   </tr>
   <tr><td><a href="../../tree/master/modoled128x64">modoled128x64</a></td>
       <td><strong>Composants</strong> : SSD1306, MOD-OLED-128x64, OLED, OLED-FEATHERWING, MINI-OLED<br />
-      <strong>Interfaces</strong> : I2C, UEXT, QWIIC<br />
+      <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>Un afficheur OLED 128x64 / 128x32 / 64x48 avec contrôleur SSD1306 (I2C) et connecteur UEXT, Feather, Qwiic.</small><br/><br />
       <strong>Testé avec</strong> : ESP8266-EVB, PICO, MICROMOD-RP2040<br />
       <strong>Fabricant</strong> : OLIMEX, ADAFRUIT, SPARKFUN<br />
@@ -768,7 +768,7 @@ Explorer par:
   </tr>
   <tr><td><a href="../../tree/master/oled-ssd1306">oled-ssd1306</a></td>
       <td><strong>Composants</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
-      <strong>Interfaces</strong> : I2C, FEATHERWING<br />
+      <strong>Interfaces</strong> : I2C, FEATHERWING, QWIIC<br />
 <small>Le SSD1306 est un contrôleur d'écran OLED</small><br/><br />
       <strong>Testé avec</strong> : FEATHER-ESP8266<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />

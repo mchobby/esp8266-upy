@@ -12,7 +12,7 @@ See
 <tbody>
   <tr><td><a href="../../../../tree/master/modoled128x64">modoled128x64</a></td>
       <td><strong>Components</strong> : SSD1306, MOD-OLED-128x64, OLED, OLED-FEATHERWING, MINI-OLED<br />
-      <strong>Interfaces</strong> : I2C, UEXT, QWIIC<br />
+      <strong>Interfaces</strong> : I2C, UEXT<br />
 <small>A 128x64 / 128x32 / 64x48 OLED display with the SSD1306 I2C controler exposing a UEXT, Feather, Qwiic connector.</small><br/><br />
       <strong>Tested with</strong> : ESP8266-EVB, PICO, MICROMOD-RP2040<br />
       <strong>Manufacturer</strong> : OLIMEX, ADAFRUIT, SPARKFUN<br />
