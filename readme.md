@@ -821,6 +821,19 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/pm25">pm25</a></td>
+      <td><strong>Composants</strong> : MP2.5, PMS5003<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Utiliser un capteur de particule fine PM2.5 (PMS5003) avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT, PIMORONI<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1332">PM2.5 Particle Sensor (PMS5003) @ MCHobby</a></li>
+<li>Voir <a href="https://www.adafruit.com/product/3686">PM2.5 Air Quality Sensor (PMS5003) @ Adafruit</a></li>
+<li>Voir <a href="(https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable">PMS5003 Particulate Matter Sensor @ Pimoroni</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/qwiic-joystick-i2c">qwiic-joystick-i2c</a></td>
       <td><strong>Composants</strong> : JOYSTICK-I2C<br />
       <strong>Interfaces</strong> : I2C, QWIIC<br />

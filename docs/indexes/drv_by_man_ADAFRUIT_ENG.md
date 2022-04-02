@@ -272,6 +272,19 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/pm25">pm25</a></td>
+      <td><strong>Components</strong> : MP2.5, PMS5003<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Using a PM2.5 particle sensor (PMS5003) with MicroPython</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : ADAFRUIT, PIMORONI<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=1332">PM2.5 Particle Sensor (PMS5003) @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/3686">PM2.5 Air Quality Sensor (PMS5003) @ Adafruit</a></li>
+<li>See <a href="(https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable">PMS5003 Particulate Matter Sensor @ Pimoroni</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/rfm69">rfm69</a></td>
       <td><strong>Components</strong> : RFM69, RFM69HCW<br />
       <strong>Interfaces</strong> : SPI<br />
