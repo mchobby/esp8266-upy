@@ -1,6 +1,6 @@
-# Utiliser un module MOD-RS485-ISO d'Olimex (RS485) avec MicroPython
+[This file also exist in ENGLISH](readme_ENG.md)
 
-=== UNDER CONSTRUCTION ===
+# Utiliser un module MOD-RS485-ISO d'Olimex (RS485) avec MicroPython
 
 ![MOD-RS485-ISO](docs/_static/mod-rs485-iso.jpg)
 
@@ -11,10 +11,10 @@ Il propose les fonctionnalités suivantes:
 * Modes: Half duplex / Full duplex
 * Interface de données: UART ou I2C
  * PASS_MODE : Signal sur TX est passé directement vers le périphérique présent sur la ligne RS-485. C'est pareil pour RX.
- * BRIDGE_MODE : TX et RX sont désactivées. Les données peuvent être envoyées vie le bus I2C.
+ * BRIDGE_MODE : TX et RX sont désactivées. Les données peuvent être envoyées via le bus I2C.
 * Interface de configuration: I2C
 * 134 à 1 000 000 bauds
-* Interface UEXT
+* Connecteur UEXT
 * Peut se brancher à l'aide de fils dupont
 * Utilise un PIC16F18324 pour assurer les fonctionnement du module
 
@@ -25,7 +25,7 @@ L'intérêt de RS485 est qu'il permet de connecter jusqu'à 32 noeuds (périphé
 
 ## Configuration Half-Duplex
 
-Le bsus RS485 Half-Duplex est le plus répandu et utilise une seule paire de fil torsadé. Dans ce cas, la communication ne peut se faire que dans un seul sens à la fois (émettre ou recevoir mais pas les deux en même temps).
+Le bus RS485 Half-Duplex est le plus répandu et utilise une seule paire de fil torsadé. Dans ce cas, la communication ne peut se faire que dans un seul sens à la fois (émettre ou recevoir mais pas les deux en même temps).
 
 Le bus principal doit être terminé à l'aide d'une résistance de 120 Ohms.
 
@@ -316,7 +316,7 @@ Direction: Southeast by east
 # Ressources
 
 * [manuel utilisateur](https://www.olimex.com/Products/Modules/Interface/MOD-RS485-ISO/resources/MOD-RS485-ISO-UM.pdf) (_Olimex Ltd, Anglais_).
-* [Décodage RS435 à l'oscilloscope](https://arduino103.blogspot.com/2021/10/decoder-une-trame-rs485-loscilloscope.html) (_MC Hobby, Français_)
+* [Décodage RS485 à l'oscilloscope](https://arduino103.blogspot.com/2021/10/decoder-une-trame-rs485-loscilloscope.html) (_MC Hobby, Français_)
 * Plis informations sur [la page du fabriquant](https://www.olimex.com/Products/Modules/Interface/MOD-RS485-ISO/open-source-hardware).
 
 # Ou acheter
