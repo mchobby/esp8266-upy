@@ -10,12 +10,14 @@ from machine import I2C
 from pcf8523 import PCF8523
 import time
 
-# PYBStick - S3=sda, S5scl
+# PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 
 rtc = PCF8523( i2c )
 
 # Year: 2020, month: 6, day: 22, hour: 0, min: 14, sec: 6, weekday: 0 (monday), yearday: 174
+# yearday can be set to 0 when setting the date... it will be recomputed
 rtc.datetime = (2020, 6, 22, 0, 14, 6, 0, 174)
 time.sleep(1)
 

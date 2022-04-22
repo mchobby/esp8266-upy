@@ -25,6 +25,10 @@ The interrupt signal is a great feature because it allows to wake-up a microcont
 
 ![Wiring Feather AdaLogger (PCF8523) on a PYBStick](docs/_static/pcf8523-to-pybstick.jpg)
 
+## Avec the Raspberry-Pi Pico
+
+![Wiring a Feather AdaLogger (PCF8523) to a Raspberry-Pi Pico](docs/_static/pcf8523-to-pico.jpg)
+
 # Test
 
 Prior to use example script, it will be necessary to copy the `pcf8523.py` livrary to the MicroPython board.
@@ -46,7 +50,8 @@ from machine import I2C
 from pcf8523 import PCF8523
 import time
 
-# PYBStick - S3=sda, S5scl
+# PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 rtc = PCF8523( i2c )
 
@@ -75,6 +80,7 @@ from pcf8523 import PCF8523
 import time
 
 # PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 rtc = PCF8523( i2c )
 
@@ -112,7 +118,8 @@ from machine import I2C
 from pcf8523 import PCF8523
 import time
 
-# PYBStick - S3=sda, S5scl
+# PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 rtc = PCF8523( i2c )
 
@@ -179,5 +186,6 @@ __Note:__ the interrupt on alarm can be activated with the instruction `rtc.alar
 
 # Shopping list
 * [PYBStick board](https://shop.mchobby.be/fr/recherche?controller=search&orderby=position&orderway=desc&search_query=pybstick&submit_search=) - MicroPython & Arduino board
+* [Raspberry-Pi Pico](https://shop.mchobby.be/fr/157-pico-rp2040)
 * [PiRTC (PCF8523)](https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html) @ MC Hobby
 * [Adafruit AdaLogger FeatherWing (PCF8523)](https://shop.mchobby.be/fr/feather-adafruit/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html) @ MC Hobby

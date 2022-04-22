@@ -23,6 +23,10 @@ Le signal d'interruption est particulièrement intéressant car il permet d'acti
 
 ![Brancher un Feather AdaLogger (PCF8523) branché sur PYBStick](docs/_static/pcf8523-to-pybstick.jpg)
 
+## Avec la Raspberry-Pi Pico
+
+![Brancher un Feather AdaLogger (PCF8523) branché sur Raspberry-Pi Pico](docs/_static/pcf8523-to-pico.jpg)
+
 # Test
 
 Avant de pouvoir utiliser les scripts d'exemples, il est nécessaire de copier la bibliothèque `pcf8523.py` sur la carte MicroPython.
@@ -44,7 +48,8 @@ from machine import I2C
 from pcf8523 import PCF8523
 import time
 
-# PYBStick - S3=sda, S5scl
+# PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 rtc = PCF8523( i2c )
 
@@ -73,7 +78,8 @@ from machine import I2C
 from pcf8523 import PCF8523
 import time
 
-# PYBStick - S3=sda, S5scl
+# PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 rtc = PCF8523( i2c )
 
@@ -111,7 +117,8 @@ from machine import I2C
 from pcf8523 import PCF8523
 import time
 
-# PYBStick - S3=sda, S5scl
+# PYBStick - S3=sda, S5=scl
+# Raspberry-Pi Pico - GP6=sda, GP7=scl
 i2c = I2C(1)
 rtc = PCF8523( i2c )
 
@@ -178,5 +185,6 @@ __Remarque:__ il est possible d'activer l'interruption sur alarme avec l'instruc
 
 # Où acheter
 * [Carte PYBStick](https://shop.mchobby.be/fr/recherche?controller=search&orderby=position&orderway=desc&search_query=pybstick&submit_search=)
+* [Carte Raspberry-Pi Pico](https://shop.mchobby.be/fr/157-pico-rp2040)
 * [PiRTC (PCF8523)](https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html) @ MC Hobby
 * [Adafruit AdaLogger FeatherWing (PCF8523)](https://shop.mchobby.be/fr/feather-adafruit/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html) @ MC Hobby
