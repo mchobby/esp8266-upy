@@ -15,6 +15,7 @@ Products:
 
 History:
   02 april 2022 - Dominique - initial code writing
+  07 april 2022 - Dominique - using particles.um03 instead of pm25.data.particles.um3
 """
 from machine import UART
 from pm25 import PM25
@@ -27,7 +28,7 @@ pm25 = PM25( ser )
 while True:
 	pm25.acquire()
 	print( '-'*40 )
-	print( 'Concentration Units (standard)')
+	print( 'Concentration Units (standard) uGr/m*m*m' )
 	print( '  pm1.0: %i' % pm25.data.std.pm10 )
 	print( '  pm2.5: %i' % pm25.data.std.pm25 )
 	print( '  pm10.0: %i' % pm25.data.std.pm100 )

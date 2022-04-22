@@ -15,7 +15,10 @@ Remarks:
 
 History:
   2 april 2022 - Dominique - initial portage from Arduino/CircuitPython
+  7 april 2022 - Dominique - using particles.um03 instead of pm25.data.particles.um3
 """
+__version__ = "0.0.2"
+__repo__ = "https://github.com/mchobby/esp8266-upy"
 
 import struct
 
@@ -90,8 +93,8 @@ class PM25:
 		self.data.env.pm10 = _d[3]
 		self.data.env.pm25 = _d[4]
 		self.data.env.pm100 = _d[5]
-		self.data.particles.um3 = _d[6]
-		self.data.particles.um5 = _d[7]
+		self.data.particles.um03 = _d[6]
+		self.data.particles.um05 = _d[7]
 		self.data.particles.um10 = _d[8]
 		self.data.particles.um25 = _d[9]
 		self.data.particles.um50 = _d[10]
