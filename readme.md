@@ -813,7 +813,7 @@ Explorer par:
       <td><strong>Composants</strong> : PCF8523<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>Une Horloge temps réel RTC + alarme avec MicroPython</small><br/><br />
-      <strong>Testé avec</strong> : PYBSTICK<br />
+      <strong>Testé avec</strong> : PYBSTICK, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html">PiRTC (PCF8523) @ MCHobby</a></li>

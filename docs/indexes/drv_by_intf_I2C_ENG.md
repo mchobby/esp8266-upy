@@ -564,7 +564,7 @@ I2C bus
       <td><strong>Components</strong> : PCF8523<br />
       <strong>Interfaces</strong> : I2C<br />
 <small>A real time clock RTC + alarm for MicroPython</small><br/><br />
-      <strong>Tested with</strong> : PYBSTICK<br />
+      <strong>Tested with</strong> : PYBSTICK, PICO<br />
       <strong>Manufacturer</strong> : ADAFRUIT<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html">PiRTC (PCF8523) @ MCHobby</a></li>
