@@ -29,6 +29,8 @@ The interrupt signal is a great feature because it allows to wake-up a microcont
 
 ![Wiring a Feather AdaLogger (PCF8523) to a Raspberry-Pi Pico](docs/_static/pcf8523-to-pico.jpg)
 
+![Brancher un PCF8523 RTC breakout sur Raspberry-Pi Pico](docs/_static/pcf8523-brk-to-pico.jpg)
+
 # Test
 
 Prior to use example script, it will be necessary to copy the `pcf8523.py` livrary to the MicroPython board.

@@ -27,6 +27,9 @@ Le signal d'interruption est particulièrement intéressant car il permet d'acti
 
 ![Brancher un Feather AdaLogger (PCF8523) branché sur Raspberry-Pi Pico](docs/_static/pcf8523-to-pico.jpg)
 
+![Brancher un PCF8523 RTC breakout sur Raspberry-Pi Pico](docs/_static/pcf8523-brk-to-pico.jpg)
+
+
 # Test
 
 Avant de pouvoir utiliser les scripts d'exemples, il est nécessaire de copier la bibliothèque `pcf8523.py` sur la carte MicroPython.
