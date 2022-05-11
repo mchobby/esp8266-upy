@@ -1,0 +1,83 @@
+====================
+=    Mini Shell    =
+====================
+
+Mini Shell (mshell) is a rudimentary shell designed to run accross all
+micropython board implementation. It support rudimentary file filesystem
+operations and may be a useful tool when dealing with REPL remotely.
+
+LIMITATION: only manage files at the root of filesystem.
+
+Start Mini Shell
+----------------
+Type the following in REPL to starts mshell
+   import mshell
+or
+   mshell.run() # to restart
+
+
+$ help
+------
+display this help file.Q
+
+
+$ append source texte
+---------------------
+Append the texte (can be quoted if containing space) to the source file.
+
+
+$ cat source
+------------
+Display the content of source file. Display stops when 3 consecutives empty
+lines are reads from the source.
+
+
+$ cp source destin
+------------------
+Binary copy the source file to destin file. Destin file is overwrites if exists.
+
+
+$ df
+$ df path
+---------
+Show the filesystem size and usage. By default the command target the "/" path.
+It show the following content:
+	FileSystem: 1441792 bytes (1408 KB, 352 Blocks)
+	Free      : 1429504 bytes (1396 KB, 349 Blocks)
+	Block size: 4096 bytes
+
+
+$ uname
+-------
+Displays the information enclosed within os.uname() .
+It shows the following content:
+	sysname : rp2
+	nodename: rp2
+	release : 1.18.0
+	version : v1.18 on 2022-01-17 (GNU 11.2.0 MinSizeRel)
+	machine : Raspberry Pi Pico with RP2040
+
+
+$ exit
+------
+Exists the mini shell
+
+
+$ ls
+----
+list the files
+
+
+$ mv source destin
+------------------
+Move/rename the source file to destin file. Destin file is overwrites if exists.
+
+
+$ rm source
+-----------
+remove the source file from file system.
+
+
+$ touch source
+--------------
+create an empty file (with source name) into the file system.
