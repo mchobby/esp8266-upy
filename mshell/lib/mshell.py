@@ -1,8 +1,9 @@
 import os
+import gc
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
-COMMANDS = [ 'help', 'append', 'cat', 'cp', 'df', 'exit', 'ls', 'mv', 'rm', 'touch', 'uname' ]
+COMMANDS = [ 'help', 'append', 'cat', 'cp', 'df', 'exit', 'edit', 'ls', 'mv', 'rm', 'touch', 'uname' ]
 
 class Exit( Exception ):
 	pass
@@ -87,6 +88,15 @@ def exec_df( args ):
 
 	return 0
 
+def exec_edit( args ):
+	if len(args)<1:
+		print( "filename required!")
+		return 1
+	import pye # requires  https://github.com/robert-hh/Micropython-Editor/blob/master/pye.py
+	with open( args[0] ) as f:
+		content = f.read().splitlines()
+	pye.pye( content )
+
 def exec_ls( args ): # don't care args
 	for i in os.listdir():
 		print( i )
@@ -160,6 +170,7 @@ def read_eval():
 def run():
 	print( "=== Welcome to mini shell %s ===" % __version__ )
 	print( "Supports:", ", ".join(COMMANDS) )
+	print( "Free Mem: %i bytes" % gc.mem_free() )
 	print( "Use mshell.run() to restart!")
 	print( " " )
 	while True:

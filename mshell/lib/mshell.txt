@@ -18,7 +18,7 @@ or
 
 $ help
 ------
-display this help file.Q
+display this help file.
 
 
 $ append source texte
@@ -28,8 +28,7 @@ Append the texte (can be quoted if containing space) to the source file.
 
 $ cat source
 ------------
-Display the content of source file. Display stops when 3 consecutives empty
-lines are reads from the source.
+Display the content of source file.
 
 
 $ cp source destin
@@ -46,6 +45,11 @@ It show the following content:
 	Free      : 1429504 bytes (1396 KB, 349 Blocks)
 	Block size: 4096 bytes
 
+$ edit filename
+---------------
+Start the pye editor to edit the file content.
+If not present on the file system, install it from
+https://github.com/robert-hh/Micropython-Editor/blob/master/pye.py
 
 $ uname
 -------
