@@ -1,0 +1,21 @@
+TODO List
+=========
+
+* mshell -> summary of commands + example. One line per command!
+* mshell -> fully support sub-directory (cd, pwd)
+* mshell -> help : also open mshell.txt from /lib
+* mshell -> ls : with paging & multi columns
+* mshell -> ls : display filesize?
+* mshell -> more : cat with paging
+* mshell -> reboot
+* mshell -> ./xxx : execute/reexcute a python script
+* mshell -> free : gc.collect + display available mem.
+* mshell -> find : find a file (find zumo)
+
+* hexview.py -> View content of file as HEX
+
+* wifi.py -> on/off/configure
+* get.py -> get a file over wifi
+* ifconfig.py -> display configuration
+
+Idea: Receive a file over the REPL line (with cat from host: cat file > /dev/ttyACM0 )
