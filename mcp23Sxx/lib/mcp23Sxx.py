@@ -25,10 +25,11 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
-from time import sleep_ms
+from time import sleep_us
 from machine import Pin
 
 """Register addresses as documented in the technical data sheet at
@@ -262,21 +263,21 @@ class MCP23S17(object):
 	def _writeRegister(self, register, value):
 		command = MCP23S17_CMD_WRITE | ((self.device_id) << 1)
 		self._pin_cs.value( 0 )
-		sleep_ms( 1 )
+		sleep_us( 1 )
 		self._spi.write( bytes([command, register, value]) )
 		self._pin_cs.value( 1 )
-		sleep_ms( 1 )
+		sleep_us( 1 )
 
 	def _readRegister(self, register):
 		command = MCP23S17_CMD_READ | ((self.device_id) << 1)
 		self._pin_cs.value( 0 )
-		sleep_ms( 1 )
+		sleep_us( 1 )
 		#self._setSpiMode(self._spimode)
 		self._spi.write( bytes([command, register]) )
 		#data = self._spi.xfer2([command, register, 0])
 		data = self._spi.read( 1 )
 		self._pin_cs.value( 1 )
-		sleep_ms( 1 )
+		sleep_us( 1 )
 		return data[0]# data[2]
 
 	def _readRegisterWord(self, register):
