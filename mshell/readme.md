@@ -37,7 +37,7 @@ some command are available as plug-in stored in /lib/__<command>.py
 
 plug-in    : Description                        : Example
 -----------+------------------------------------+-------------------------------
-ptest      : Test plug-in showing params        : ptest logo.txt 128 -p=120
+ptest      : plug-in demo showing params        : ptest logo.txt 128 -p=120
 hexdump    : display file in hexadecimal        : hexdump logo.txt
 ```
 Help is fully detailled in the file [mshell.txt](lib/mshell.txt).
