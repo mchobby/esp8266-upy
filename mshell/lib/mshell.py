@@ -1,21 +1,25 @@
 import os
 import gc
+import sys
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
-COMMANDS = [ 'help', 'append', 'cat', 'cp', 'df', 'exit', 'edit', 'ls', 'mv', 'rm', 'touch', 'uname' ]
+COMMANDS = [ 'help', 'append', 'cat', 'cp', 'df', 'exit', 'edit', 'free', 'ls', 'more', 'mv', 'rm', 'run', 'touch', 'uname' ]
 
-class Exit( Exception ):
+class EAbort( Exception ):
+	pass
+class Exit( EAbort ):
 	pass
 
-def exec_append( args ):
+# ---- Shell Commands ----
+def run_append( shell, args ):
 	if len(args)<2:
-		print( "arg required!")
+		shell.println( "arg required!")
 		return 1
 	try:
 		_file = open( args[0], "a+" )
 	except:
-		print( "Unable to open %s" % args[0] )
+		shell.println( "Unable to open %s" % args[0] )
 		return 1
 
 	_file.write( args[1] ) # Append
@@ -23,38 +27,45 @@ def exec_append( args ):
 	_file.close()
 	return 0
 
-def exec_cat( args ):
+def run_more( shell, args ):
+	return run_cat( shell, args, paging=True )
+
+def run_cat( shell, args, paging=False ):
 	if len(args)<1:
-		print( "arg required!")
+		shell.println( "arg required!")
 		return 1
 	try:
 		_file = open( args[0], "R" )
 	except:
-		print( "Unable to open %s" % args[0] )
+		shell.println( "Unable to open %s" % args[0] )
 		return 1
-	_s = _file.readline()
-	_count = 0
-	while _s != None:
-		print( _s.rstrip('\n') )
+	shell.paging = paging
+	try:
 		_s = _file.readline()
-		if len(_s)==0:
-			_count += 1
-		else:
-			_count = 0
-		if _count >= 3:
-			break
-	_file.close()
+		_count = 0
+		while _s != None:
+			shell.println( _s.rstrip('\n') )
+			_s = _file.readline()
+			if len(_s)==0:
+				_count += 1
+			else:
+				_count = 0
+			if _count >= 3:
+				break
+	finally:
+		_file.close()
+		shell.paging = False
 	return 0
 
-def exec_cp( args ):
+def run_cp( shell, args ):
 	if len(args)<2:
-		print( "2 args required!")
+		shell.println( "2 args required!")
 		return 1
 
 	try:
 		_file = open( args[0], "r+b" )
 	except:
-		print( "Unable to open %s" % args[0] )
+		shell.println( "Unable to open %s" % args[0] )
 		return 1
 
 	_file2 = open( args[1], "w+b" )
@@ -68,10 +79,10 @@ def exec_cp( args ):
 
 	_file.close()
 	_file2.close()
-	print( '%i bytes copied!' % _count )
+	shell.println( '%i bytes copied!' % _count )
 	return 0
 
-def exec_df( args ):
+def run_df( shell, args ):
 	if len(args)<=0:
 		_p = "/"
 	else:
@@ -81,105 +92,211 @@ def exec_df( args ):
 	f_frsize = _s[1]
 	f_blocks = _s[2]
 	f_bfree  = _s[3]
-	print( _s[0] )
-	print( 'FileSystem: %i bytes (%i KB, %i Blocks)' % (f_frsize*f_blocks,f_frsize*f_blocks//1024,f_blocks) )
-	print( 'Free      : %i bytes (%i KB, %i Blocks)' % (f_frsize*f_bfree,f_frsize*f_bfree//1024,f_bfree) )
-	print( 'Block size: %i bytes' % f_frsize )
+	shell.println( _s[0] )
+	shell.println( 'FileSystem: %i bytes (%i KB, %i Blocks)' % (f_frsize*f_blocks,f_frsize*f_blocks//1024,f_blocks) )
+	shell.println( 'Free      : %i bytes (%i KB, %i Blocks)' % (f_frsize*f_bfree,f_frsize*f_bfree//1024,f_bfree) )
+	shell.println( 'Block size: %i bytes' % f_frsize )
 
 	return 0
 
-def exec_edit( args ):
+def run_edit( shell, args ):
 	if len(args)<1:
-		print( "filename required!")
+		shell.println( "filename required!")
 		return 1
 	import pye # requires  https://github.com/robert-hh/Micropython-Editor/blob/master/pye.py
 	with open( args[0] ) as f:
 		content = f.read().splitlines()
 	pye.pye( content )
 
-def exec_ls( args ): # don't care args
-	for i in os.listdir():
-		print( i )
+def run_free( shell, args ):
+	gc.collect()
+	shell.println( "Free Mem: %i bytes" % gc.mem_free() )
 	return 0
 
-def exec_mv( args ):
+
+def run_ls( shell, args ): # don't care args
+	shell.paging = True
+	try:
+		for name in os.listdir( '/' if len(args)==0 else args[0] ):
+			shell.println( ' %s' % name )
+	finally:
+		shell.paging = False
+	return 0
+
+def run_mv( shell, args ):
 	if len(args)<2:
-		print( "args required!")
+		shell.println( "args required!")
 		return 1
 	try:
 		os.rename( args[0], args[1] )
 	except:
-		print( 'fail to move %s to %s' % (args[0], args[1]) )
+		shell.println( 'fail to move %s to %s' % (args[0], args[1]) )
 		return 1
 	return 0
 
-def exec_rm( args ): # don't care args
+def run_rm( shell, args ): # don't care args
 	if len(args)<1:
-		print( "arg required!")
+		shell.println( "arg required!")
 		return 1
 	try:
 		os.remove( args[0] )
-		print( '%s deleted!' % args[0])
+		shell.println( '%s deleted!' % args[0])
 	except:
-		print( 'fail to remove %s' % args[0] )
+		shell.println( 'fail to remove %s' % args[0] )
 		return 1
 	return 0
 
-def exec_touch( args ): # don't care args
+def run_run( shell, args ):
 	if len(args)<1:
-		print( "arg required!")
+		shell.println( "arg required!")
+		return 1
+	mod_name = args[0].split("/")[-1].replace('.py','')
+	if mod_name in sys.modules:
+		del sys.modules[mod_name]
+		gc.collect()
+	try:
+		__import__( mod_name )
+	except Exception as err:
+		shell.println( 'Failed to run %s' % args[0] )
+		shell.println( err )
+	return 0
+
+def run_touch( shell, args ): # don't care args
+	if len(args)<1:
+		shell.println( "arg required!")
 		return 1
 	_file = open( args[0], "w" )
 	_file.close()
 	return 0
 
-def exec_uname( args ): # don't care the args
+def run_uname( shell, args ): # don't care the args
 	import os
-	print( 'sysname : %s' %os.uname().sysname )
-	print( 'nodename: %s' %os.uname().nodename )
-	print( 'release : %s' %os.uname().release )
-	print( 'version : %s' %os.uname().version )
-	print( 'machine : %s' %os.uname().machine )
+	shell.println( 'sysname : %s' %os.uname().sysname )
+	shell.println( 'nodename: %s' %os.uname().nodename )
+	shell.println( 'release : %s' %os.uname().release )
+	shell.println( 'version : %s' %os.uname().version )
+	shell.println( 'machine : %s' %os.uname().machine )
 	return 0
 
-def exec_exit( args ):
+def run_exit( shell, args ):
 	raise Exit()
 
-def exec_help( args ):
-	return exec_cat( ['mshell.txt'] )
-
-# ---- Main code ----
-
-def read_eval():
-	cmd = input( '$ ' )
-	l = cmd.split() # should be improved to mange string containsing spaces
-	if (l == None) or (len(l)==0):
-		return 0 # ignore this
-	_cmd = l[0]
-	_args = []
-	for item in l[1:] :
-		_args.append( item.strip('"') )
-
-	if _cmd in COMMANDS:
-		fct = eval( 'exec_%s' % _cmd ) # ref to the function
-		return fct( _args )
+def run_help( shell, args ):
+	if shell.file_size( '/lib/mshell.txt' )>0:
+		return run_more( shell, ['/lib/mshell.txt'] )
 	else:
-		print( 'undefined command %s!' % _cmd )
-		return 0 # not an ERROR
+		return run_more( shell, ['mshell.txt'] )
+
+# ----MiniShell Core ----
+class MiniShell:
+	def __init__(self):
+		self.cols = 80
+		self.rows = 24
+		self._paging = False
+		self._ipaged = 0 # nbr of lines in the current page
+
+	@property
+	def paging( self ):
+		return self._pagning
+
+	@paging.setter
+	def paging( self, activate ):
+		if activate:
+			self._ipaged = 0 # nbr lines paged
+		self._paging = activate
+
+	def println( self, s ):
+		print( s )
+		if self._paging:
+			self._ipaged += 1
+			if self._ipaged >= self.rows-2:
+				self._ipaged = 0
+				print( 'Press Key to continue, q to quit...' )
+				key=sys.stdin.read(1)
+				if key in ('Q', 'q' ):
+					raise EAbort()
+
+	def readline( self, prompt ):
+		return input( prompt )
+
+	def load_and_eval( self, _cmd, args ):
+		# Check if the command is implemented into an external module
+		# ex: __hexdump.hexdump()
+		mod_name = '__%s' % _cmd
+		if self.file_size( '/lib/%s.py' % mod_name )<=0 :
+			return 100 # Error 100 when module is not available in /lib
+		_mod = __import__( mod_name )
+		try:
+			fct = eval( '%s.%s' % (mod_name,_cmd), { mod_name : _mod }) # ref to the function __hexdump.hexdump()
+			if fct == None:
+				self.println( '%s() not available in module %s' % (_cmd, mod_name))
+				return 110
+			r = fct( self, args )
+		finally:
+			del( sys.modules[mod_name] )
+		return r
+
+	def read_eval(self): # Evaluate a string command
+		cmd = input( '$ ' )
+		# Replace heading . with run command
+		if (len(cmd)>0) and (cmd[0]=='.'):
+			cmd = 'run %s'%cmd[1:]
+
+		l = cmd.split() # should be improved to mange string containsing spaces
+		if (l == None) or (len(l)==0):
+			return 0 # ignore this
+		_cmd = l[0]
+		_args = []
+		for item in l[1:] :
+			_args.append( item.strip('"') )
+
+		if _cmd in COMMANDS: # Inner command
+			fct = eval( 'run_%s' % _cmd ) # ref to the function
+			return fct( self, _args )
+		else:
+			ret_code = self.load_and_eval( _cmd, _args ) # Locate & execute cmd from external module
+			gc.collect() # grab as many bytes from RAM as possible
+			if ret_code == 100: # Not located
+				self.println( 'undefined command %s!' % _cmd )
+				return 0 # not an ERROR
+			else: # External commande executed
+				return ret_code
+
+	# ---- Toolbox ----
+	def file_size( self, fname ):
+		try:
+			return os.stat(fname)[6]
+		except OSError:
+			return -1
+
+
+	def run( self ):
+		while True:
+			try:
+				_err = self.read_eval()
+				if _err != 0:
+					self.println( 'ERROR %i' % _err )
+			except Exit:
+				self.println('Exiting Mini Shell')
+				break
+			except EAbort:
+				self.println('Abort!')
+
+
+_ms = None
 
 def run():
-	print( "=== Welcome to mini shell %s ===" % __version__ )
+	global _ms
+	print( "                   __        ___          " )
+	print( " |\/| | |\ | |    /__` |__| |__  |    |   " )
+	print( " |  | | | \| |    .__/ |  | |___ |___ |___" )
+	print( "%s%s" % (" "*36, __version__) )
 	print( "Supports:", ", ".join(COMMANDS) )
 	print( "Free Mem: %i bytes" % gc.mem_free() )
 	print( "Use mshell.run() to restart!")
 	print( " " )
-	while True:
-		try:
-			_err = read_eval()
-			if _err != 0:
-				print( 'ERROR %i' % _err )
-		except Exit:
-			print('Exiting Mini Shell')
-			break
+	if _ms == None:
+		_ms = MiniShell()
+	_ms.run()
 
 run()

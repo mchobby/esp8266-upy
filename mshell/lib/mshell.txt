@@ -6,7 +6,34 @@ Mini Shell (mshell) is a rudimentary shell designed to run accross all
 micropython board implementation. It support rudimentary file filesystem
 operations and may be a useful tool when dealing with REPL remotely.
 
-LIMITATION: only manage files at the root of filesystem.
+Command: Description             : Example
+-------+-------------------------+---------------------------------
+help   : display help file       : help
+append : append text to file     : append target.txt "What men?"
+cat    : display file content    : cat main.py
+cp     : Copy file (binary)      : cp source.py destin.py
+df     : Disk Free disk usage    : df -OR- df /sd
+edit   : start text editor       : pye main.py
+exit   : exit mini-shell         : exit
+free   : Free memory             : free
+ls     : list files              : ls -OR- ls /lib
+more   : paging file display     : more
+mv     : Move a file             : move source.py destin.py
+rm     : remove/delete file      : rm demo.py
+run    : execute python file     : ./gp25 -OR- run gp25.py -OR- run gp25
+touch  : create empty file       : touch data.log
+uname  : System information      : uname
+
+some command are available as plug-in stored in /lib/__<command>.py
+
+plug-in    : Description                        : Example
+-----------+------------------------------------+-------------------------------
+ptest      : Test plug-in showing params        : ptest logo.txt 128 -p=120
+hexdump    : display file in hexadecimal        : hexdump logo.txt
+
+
+LIMITATION:
+* edit does not remember the filename when saving.
 
 Start Mini Shell
 ----------------
@@ -51,25 +78,27 @@ Start the pye editor to edit the file content.
 If not present on the file system, install it from
 https://github.com/robert-hh/Micropython-Editor/blob/master/pye.py
 
-$ uname
--------
-Displays the information enclosed within os.uname() .
-It shows the following content:
-	sysname : rp2
-	nodename: rp2
-	release : 1.18.0
-	version : v1.18 on 2022-01-17 (GNU 11.2.0 MinSizeRel)
-	machine : Raspberry Pi Pico with RP2040
-
 
 $ exit
 ------
 Exists the mini shell
 
 
+$ free
+------
+Make a Garbage Collector cleanup then display the free memory available.
+
+
 $ ls
-----
+$ ls path
+---------
 list the files
+
+
+$ more source
+------------
+Display the content of source file and pause every X lines (depending on screen
+rows ). Reads can be quit any time by pressing "q".
 
 
 $ mv source destin
@@ -82,6 +111,31 @@ $ rm source
 remove the source file from file system.
 
 
+$ run source
+------------
+Execute the content of a Python script by import it (or reimport it) from
+the source file. Run cal  can be shorthen with the "./" as in Linux.
+
+File must be stored into root folder or /lib folder.
+
+All the following syntaxes are right to execute the gp25.py file:
+run gp25
+run gp25.py
+./gp25
+./gp25.py
+
+
 $ touch source
 --------------
 create an empty file (with source name) into the file system.
+
+
+$ uname
+-------
+Displays the information enclosed within os.uname() .
+It shows the following content:
+	sysname : rp2
+	nodename: rp2
+	release : 1.18.0
+	version : v1.18 on 2022-01-17 (GNU 11.2.0 MinSizeRel)
+	machine : Raspberry Pi Pico with RP2040
