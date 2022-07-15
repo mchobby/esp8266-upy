@@ -18,10 +18,8 @@ operations and may be a useful tool when dealing with REPL remotely.
 Command: Description             : Example
 -------+-------------------------+---------------------------------
 help   : display help file       : help
-append : append text to file     : append target.txt "What men?"
 cat    : display file content    : cat main.py
 cp     : Copy file (binary)      : cp source.py destin.py
-df     : Disk Free disk usage    : df -OR- df /sd
 edit   : start text editor       : pye main.py
 exit   : exit mini-shell         : exit
 free   : Free memory             : free
@@ -30,8 +28,6 @@ more   : paging file display     : more
 mv     : Move a file             : move source.py destin.py
 rm     : remove/delete file      : rm demo.py
 run    : execute python file     : run gp25.py -OR- run gp25 -OR- ./gp25
-touch  : create empty file       : touch data.log
-uname  : System information      : uname
 
 some command are available as plug-in stored in /lib/__<command>.py
 
@@ -39,12 +35,24 @@ plug-in    : Description                        : Example
 -----------+------------------------------------+-------------------------------
 ptest      : plug-in demo showing params        : ptest logo.txt 128 -p=120
 hexdump    : display file in hexadecimal        : hexdump logo.txt
+ifconfig   : display network interfaces details : ifconfig
+wifi       : manage Station wifi                : wifi
+           :                                    : wifi up, wifi down, wifi scan,
+           :                                    : wifi connect SSID PSWD
+touch      : create empty file                  : touch data.log
+append     : append text to file                : append target.txt "What men?"
+uname      : System identification/information  : uname
+df         : Disk Free/disk usage               : df -OR- df /sd
 ```
 Help is fully detailled in the file [mshell.txt](lib/mshell.txt).
 
 Start it by key-in `import mshell` from REPL prompt.
 
 # Revision
+
+0.0.5
+* add plugins wifi, ifconfig
+* move uname, df, append, touch to plug-ins
 
 0.0.4
 * display on 24 lines x 80 columns
@@ -82,15 +90,17 @@ def ptest( shell, args ):
 
 # TODO list
 
+* mshell -> list plug-ins at start
+* mshell -> support args parsing for "aa bbb"
+* mshell -> reinforce plug-in startup
 * mshell -> fully support sub-directory (cd, pwd)
+* mshell -> set : support environment variable
 * mshell -> ls : multi columns
 * mshell -> ls : display filesize?
 * mshell -> reboot
 * mshell -> find : find a file (find zumo)
-* hexview.py -> View content of file as HEX
+* hexdump.py -> View content of file as HEX
 
-* wifi.py -> on/off/configure
 * get.py -> get a file over wifi
-* ifconfig.py -> display configuration
 
 Idea: Receive a file over the REPL line (with cat from host: cat file > /dev/ttyACM0 )
