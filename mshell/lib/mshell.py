@@ -2,9 +2,9 @@ import os
 import gc
 import sys
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 
-COMMANDS = [ 'help', 'append', 'cat', 'cp', 'df', 'exit', 'edit', 'free', 'ls', 'more', 'mv', 'rm', 'run', 'touch', 'uname' ]
+COMMANDS = [ 'help', 'cat', 'cp', 'exit', 'edit', 'free', 'ls', 'more', 'mv', 'rm', 'run' ]
 
 class EAbort( Exception ):
 	pass
@@ -12,21 +12,6 @@ class Exit( EAbort ):
 	pass
 
 # ---- Shell Commands ----
-def run_append( shell, args ):
-	if len(args)<2:
-		shell.println( "arg required!")
-		return 1
-	try:
-		_file = open( args[0], "a+" )
-	except:
-		shell.println( "Unable to open %s" % args[0] )
-		return 1
-
-	_file.write( args[1] ) # Append
-	_file.write( '\n' )
-	_file.close()
-	return 0
-
 def run_more( shell, args ):
 	return run_cat( shell, args, paging=True )
 
@@ -80,23 +65,6 @@ def run_cp( shell, args ):
 	_file.close()
 	_file2.close()
 	shell.println( '%i bytes copied!' % _count )
-	return 0
-
-def run_df( shell, args ):
-	if len(args)<=0:
-		_p = "/"
-	else:
-		_p = args[0]
-	import os
-	_s = os.statvfs( _p )
-	f_frsize = _s[1]
-	f_blocks = _s[2]
-	f_bfree  = _s[3]
-	shell.println( _s[0] )
-	shell.println( 'FileSystem: %i bytes (%i KB, %i Blocks)' % (f_frsize*f_blocks,f_frsize*f_blocks//1024,f_blocks) )
-	shell.println( 'Free      : %i bytes (%i KB, %i Blocks)' % (f_frsize*f_bfree,f_frsize*f_bfree//1024,f_bfree) )
-	shell.println( 'Block size: %i bytes' % f_frsize )
-
 	return 0
 
 def run_edit( shell, args ):
@@ -161,23 +129,6 @@ def run_run( shell, args ):
 		shell.println( err )
 	return 0
 
-def run_touch( shell, args ): # don't care args
-	if len(args)<1:
-		shell.println( "arg required!")
-		return 1
-	_file = open( args[0], "w" )
-	_file.close()
-	return 0
-
-def run_uname( shell, args ): # don't care the args
-	import os
-	shell.println( 'sysname : %s' %os.uname().sysname )
-	shell.println( 'nodename: %s' %os.uname().nodename )
-	shell.println( 'release : %s' %os.uname().release )
-	shell.println( 'version : %s' %os.uname().version )
-	shell.println( 'machine : %s' %os.uname().machine )
-	return 0
-
 def run_exit( shell, args ):
 	raise Exit()
 
@@ -232,6 +183,9 @@ class MiniShell:
 				self.println( '%s() not available in module %s' % (_cmd, mod_name))
 				return 110
 			r = fct( self, args )
+		except Exception as ex:
+			self.println( 'Exception in plugins.' )
+			self.println( ex )
 		finally:
 			del( sys.modules[mod_name] )
 		return r
@@ -291,7 +245,8 @@ def run():
 	print( " |\/| | |\ | |    /__` |__| |__  |    |   " )
 	print( " |  | | | \| |    .__/ |  | |___ |___ |___" )
 	print( "%s%s" % (" "*36, __version__) )
-	print( "Supports:", ", ".join(COMMANDS) )
+	print( "build-in:", ", ".join(COMMANDS) )
+	print( "Python  : %s" % sys.version )
 	print( "Free Mem: %i bytes" % gc.mem_free() )
 	print( "Use mshell.run() to restart!")
 	print( " " )
