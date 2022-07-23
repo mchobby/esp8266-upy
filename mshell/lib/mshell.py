@@ -2,7 +2,7 @@ import os
 import gc
 import sys
 
-__version__ = "0.0.5"
+__version__ = "0.0.6"
 
 COMMANDS = [ 'help', 'cat', 'cp', 'exit', 'edit', 'free', 'ls', 'more', 'mv', 'rm', 'run' ]
 
@@ -170,6 +170,14 @@ class MiniShell:
 	def readline( self, prompt ):
 		return input( prompt )
 
+	def list_plugins( self ):
+		for path in ('','lib'):
+			if self.file_size( path )>0:
+				for entry in os.ilistdir( path ):
+					if '__' in entry[0]:
+						yield entry[0].replace('__','').replace('.py','')
+
+
 	def load_and_eval( self, _cmd, args ):
 		# Check if the command is implemented into an external module
 		# ex: __hexdump.hexdump()
@@ -177,12 +185,15 @@ class MiniShell:
 		if self.file_size( '/lib/%s.py' % mod_name )<=0 :
 			return 100 # Error 100 when module is not available in /lib
 		_mod = __import__( mod_name )
+		r = None
 		try:
 			fct = eval( '%s.%s' % (mod_name,_cmd), { mod_name : _mod }) # ref to the function __hexdump.hexdump()
 			if fct == None:
 				self.println( '%s() not available in module %s' % (_cmd, mod_name))
 				return 110
 			r = fct( self, args )
+		except EAbort:
+			raise
 		except Exception as ex:
 			self.println( 'Exception in plugins.' )
 			self.println( ex )
@@ -245,13 +256,14 @@ def run():
 	print( " |\/| | |\ | |    /__` |__| |__  |    |   " )
 	print( " |  | | | \| |    .__/ |  | |___ |___ |___" )
 	print( "%s%s" % (" "*36, __version__) )
+	if _ms == None:
+		_ms = MiniShell()
 	print( "build-in:", ", ".join(COMMANDS) )
+	print( "plugins :", ", ".join(_ms.list_plugins()) )
 	print( "Python  : %s" % sys.version )
 	print( "Free Mem: %i bytes" % gc.mem_free() )
 	print( "Use mshell.run() to restart!")
 	print( " " )
-	if _ms == None:
-		_ms = MiniShell()
 	_ms.run()
 
 run()

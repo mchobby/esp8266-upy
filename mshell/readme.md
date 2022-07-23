@@ -49,6 +49,10 @@ Help is fully detailled in the file [mshell.txt](lib/mshell.txt).
 Start it by key-in `import mshell` from REPL prompt.
 
 # Revision
+0.0.6
+* list available plug-ins at startup.
+* improve documentation
+* implement hexdump
 
 0.0.5
 * add plugins wifi, ifconfig
@@ -90,7 +94,6 @@ def ptest( shell, args ):
 
 # TODO list
 
-* mshell -> list plug-ins at start
 * mshell -> support args parsing for "aa bbb"
 * mshell -> reinforce plug-in startup
 * mshell -> fully support sub-directory (cd, pwd)
