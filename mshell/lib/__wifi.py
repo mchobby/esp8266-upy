@@ -33,6 +33,9 @@ def wifi( shell, args ):
 			return -1
 		wifi_ssid = args[1].encode("utf-8")
 		wifi_pswd = args[2].encode("utf-8")
+		if not sta.active():
+			shell.println('Going up')
+			sta.active(True)
 		if sta.isconnected():
 			shell.println( 'Disconnecting...' )
 			sta.disconnect()
@@ -62,6 +65,7 @@ def wifi( shell, args ):
 
 		if not sta.active():
 			shell.println('Interface down')
+			return -1
 		_l = sta.scan()
 		shell.println('%-25s : %-20s : %4s : %4s : %-15s : %s' % ( 'SSID','BSSID','Ch', 'RSSI', 'Security', 'Hidden') )
 		shell.println( '' )
