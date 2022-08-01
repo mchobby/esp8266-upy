@@ -1,8 +1,11 @@
 import os
 import gc
 import sys
+import micropython
 
-__version__ = "0.0.6"
+micropython.kbd_intr(-1) # Disable ctrl-C
+
+__version__ = "0.0.7"
 
 COMMANDS = [ 'help', 'cat', 'cp', 'exit', 'edit', 'free', 'ls', 'more', 'mv', 'rm', 'run' ]
 
@@ -72,9 +75,10 @@ def run_edit( shell, args ):
 		shell.println( "filename required!")
 		return 1
 	import pye # requires  https://github.com/robert-hh/Micropython-Editor/blob/master/pye.py
-	with open( args[0] ) as f:
-		content = f.read().splitlines()
-	pye.pye( content )
+	_io_dev = pye.IO_DEVICE() 
+	pye.pye_edit( [args[0]], tab_size=4, undo=50, io_device=_io_dev )
+	_io_dev.deinit_tty()
+	return 0
 
 def run_free( shell, args ):
 	gc.collect()
@@ -85,7 +89,14 @@ def run_free( shell, args ):
 def run_ls( shell, args ): # don't care args
 	shell.paging = True
 	try:
-		for name in os.listdir( '/' if len(args)==0 else args[0] ):
+		if len(args)>0:
+			if shell.file_size( args[0] )<0 : # Target must exists
+				shell.println( 'Invalid %s path!'% args[0] )
+				return -1
+			if os.stat( args[0] )[0] & 0x4000 != 0x4000 :
+				shell.println( 'Not a dir!')
+				return -1
+		for name in os.listdir( '' if len(args)==0 else args[0] ):
 			shell.println( ' %s' % name )
 	finally:
 		shell.paging = False
@@ -94,7 +105,7 @@ def run_ls( shell, args ): # don't care args
 def run_mv( shell, args ):
 	if len(args)<2:
 		shell.println( "args required!")
-		return 1
+		return -1
 	try:
 		os.rename( args[0], args[1] )
 	except:
@@ -239,7 +250,7 @@ class MiniShell:
 		while True:
 			try:
 				_err = self.read_eval()
-				if _err != 0:
+				if (_err != None) and (_err != 0):
 					self.println( 'ERROR %i' % _err )
 			except Exit:
 				self.println('Exiting Mini Shell')
@@ -264,6 +275,7 @@ def run():
 	print( "Free Mem: %i bytes" % gc.mem_free() )
 	print( "Use mshell.run() to restart!")
 	print( " " )
+
 	_ms.run()
 
 run()

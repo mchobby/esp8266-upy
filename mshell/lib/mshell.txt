@@ -34,6 +34,7 @@ touch      : create empty file                  : touch data.log
 append     : append text to file                : append target.txt "What men?"
 uname      : System identification/information  : uname
 df         : Disk Free/disk usage               : df -OR- df /sd
+ap         : manage AccessPoint WiFi            : ap up, ap down
 
 LIMITATION:
 * edit does not remember the filename when saving.
@@ -50,6 +51,22 @@ or
 $ help
 ------
 display this help file.
+
+
+$ ap
+----
+Used to control the wifi interface in ACCESS POINT mode. See the "wifi" command
+to control the STATION mode and "ifconfig" for more information.
+
+Without parameter, it shows the current access point status.
+$ ap
+<CYW43 AP up 192.168.4.1>
+STAT_GOT_IP - connection successful
+
+With 'up' up do activates the AP access point wifi interface. Use the 'down'
+parameter to shutdown the interface
+$ ap up
+Going up
 
 
 $ append source texte

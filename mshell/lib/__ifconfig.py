@@ -13,7 +13,7 @@ def ifconfig( shell, args ):
 
 	shell.println( "Access Point: %s" % ('ACTIVE' if ap.active() else 'inactive') )
 	if ap.active():
-		shell.println( "   %r" % sta )
+		shell.println( "   %r" % ap )
 		_ip, _mask, _gateway, _dns = ap.ifconfig()
 		shell.println( "   IP     : %s" % _ip )
 		shell.println( "   NetMask: %s" % _mask )

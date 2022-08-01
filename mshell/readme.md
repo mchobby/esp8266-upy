@@ -49,6 +49,12 @@ Help is fully detailled in the file [mshell.txt](lib/mshell.txt).
 Start it by key-in `import mshell` from REPL prompt.
 
 # Revision
+0.0.7
+* add ap plugins to control the access point.
+* fix ifconfig plugins (display STA info for AP section).
+* micropython.kbd_intr(-1) to disable KeyboardInterrupt on CTRL-C (not proven to work)
+* edit commands now open the file (or create a new one).
+
 0.0.6
 * list available plug-ins at startup.
 * improve documentation
@@ -95,15 +101,12 @@ def ptest( shell, args ):
 # TODO list
 
 * mshell -> support args parsing for "aa bbb"
-* mshell -> reinforce plug-in startup
 * mshell -> fully support sub-directory (cd, pwd)
 * mshell -> set : support environment variable
 * mshell -> ls : multi columns
 * mshell -> ls : display filesize?
 * mshell -> reboot
 * mshell -> find : find a file (find zumo)
-* hexdump.py -> View content of file as HEX
-
 * get.py -> get a file over wifi
 
 Idea: Receive a file over the REPL line (with cat from host: cat file > /dev/ttyACM0 )
