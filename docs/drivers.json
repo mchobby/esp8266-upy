@@ -391,10 +391,24 @@
 			"manufacturers" : ["M5STACK"],
 			"plateforms"    : ["PICO","M5STACK"],
 			"ressources"    : [ { "label" : "M5Stack : DDS unit (AD9833) with STM32F0 I2C custom firmware, Grove",
-												             "url"   : "https://shop.mchobby.be/fr/nouveaute/2151-m5stack-generateur-de-signal-dds-stm32f0-ad9833-grove-3232100021518.html" }
+												             "url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/2151-m5stack-generateur-de-signal-dds-stm32f0-ad9833-grove-3232100021518.html" }
 												],
 			"descr"	: {"FR" : "I2C DDS unit (Direct Digital Synthesis, AD9833, ), Grove",
 								 "ENG": "I2C DDS unit (Direct Digital Synthesis, AD9833, ), Grove"
+								}
+		},
+		{	"folder"        : "m5stack-u135",
+			"components"    : ["U135","ENCODER"],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : ["PICO","M5STACK"],
+			"ressources"    : [ { "label" : "M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby",
+							             "url"   : "https:\/\/shop.mchobby.be\/fr\/grove\/2456-m5stack-encodeur-led-rgb-grove-3232100024564-m5stack.html" },
+												 { "label" : "M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby",
+							             "url"   : "https:\/\/shop.m5stack.com\/products\/encoder-unit" }
+												],
+			"descr"	: {"FR" : "I2C Encoder unit, Grove",
+								 "ENG": "I2C Encoder unit, Grove"
 								}
 		},
 		{	"folder"        : "max6675",

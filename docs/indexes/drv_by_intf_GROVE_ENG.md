@@ -64,6 +64,18 @@ GROVE connector (SeeedStudio) shipping I2C, UART, Analog or signals
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/m5stack-u135">m5stack-u135</a></td>
+      <td><strong>Components</strong> : U135, ENCODER<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>I2C Encoder unit, Grove</small><br/><br />
+      <strong>Tested with</strong> : PICO, M5STACK<br />
+      <strong>Manufacturer</strong> : M5STACK<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/grove/2456-m5stack-encodeur-led-rgb-grove-3232100024564-m5stack.html">M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby</a></li>
+<li>See <a href="https://shop.m5stack.com/products/encoder-unit">M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/mpx5700a">mpx5700a</a></td>
       <td><strong>Components</strong> : MPX5700AP<br />
       <strong>Interfaces</strong> : GROVE<br />
