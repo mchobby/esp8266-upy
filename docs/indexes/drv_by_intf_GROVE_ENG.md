@@ -31,6 +31,17 @@ GROVE connector (SeeedStudio) shipping I2C, UART, Analog or signals
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/m5stack-u024">m5stack-u024</a></td>
+      <td><strong>Components</strong> : U004, JOYSTICK<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>I2C Analog Joystick module</small><br/><br />
+      <strong>Tested with</strong> : PICO, M5STACK<br />
+      <strong>Manufacturer</strong> : M5STACK<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/tactile-flex-pot-softpad/2459-m5stack-joystick-grove-i2c-3232100024595-m5stack.html">M5Stack : module joystick analogique en I2C, Grove</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u087">m5stack-u087</a></td>
       <td><strong>Components</strong> : U087, ADS1115<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
@@ -72,7 +83,7 @@ GROVE connector (SeeedStudio) shipping I2C, UART, Analog or signals
       <strong>Manufacturer</strong> : M5STACK<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/fr/grove/2456-m5stack-encodeur-led-rgb-grove-3232100024564-m5stack.html">M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby</a></li>
-<li>See <a href="https://shop.m5stack.com/products/encoder-unit">M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby</a></li>
+<li>See <a href="https://shop.m5stack.com/products/encoder-unit">M5Stack : I2C Encoder unit with custom firmware, Grove @ M5Stack</a></li>
 </ul>
       </td>
   </tr>

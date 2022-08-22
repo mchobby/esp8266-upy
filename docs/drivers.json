@@ -361,6 +361,18 @@
 								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
 								}
 		},
+		{	"folder"        : "m5stack-u024",
+			"components"    : ["U004","JOYSTICK"],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : ["PICO","M5STACK"],
+			"ressources"    : [ { "label" : "M5Stack : module joystick analogique en I2C, Grove",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/tactile-flex-pot-softpad\/2459-m5stack-joystick-grove-i2c-3232100024595-m5stack.html" }
+												],
+			"descr"	: {"FR" : "Module Joystick Analogique I2C",
+								 "ENG": "I2C Analog Joystick module"
+								}
+		},
 		{	"folder"        : "m5stack-u087",
 			"components"    : ["U087","ADS1115"],
 			"interfaces"    : ["GROVE","I2C"],
@@ -404,7 +416,7 @@
 			"plateforms"    : ["PICO","M5STACK"],
 			"ressources"    : [ { "label" : "M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby",
 							             "url"   : "https:\/\/shop.mchobby.be\/fr\/grove\/2456-m5stack-encodeur-led-rgb-grove-3232100024564-m5stack.html" },
-												 { "label" : "M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby",
+												 { "label" : "M5Stack : I2C Encoder unit with custom firmware, Grove @ M5Stack",
 							             "url"   : "https:\/\/shop.m5stack.com\/products\/encoder-unit" }
 												],
 			"descr"	: {"FR" : "I2C Encoder unit, Grove",
