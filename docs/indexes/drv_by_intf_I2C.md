@@ -223,7 +223,7 @@ Bus I2C
       </td>
   </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u087">m5stack-u087</a></td>
-      <td><strong>Composants</strong> : U087, ADS1115<br />
+      <td><strong>Composants</strong> : U087, ADS1115, VMeter<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
 <small>Module Voltmetre I2C</small><br/><br />
       <strong>Testé avec</strong> : PICO, M5STACK<br />
@@ -264,6 +264,18 @@ Bus I2C
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/grove/2456-m5stack-encodeur-led-rgb-grove-3232100024564-m5stack.html">M5Stack : I2C Encoder unit with custom firmware, Grove @ MCHobby</a></li>
 <li>Voir <a href="https://shop.m5stack.com/products/encoder-unit">M5Stack : I2C Encoder unit with custom firmware, Grove @ M5Stack</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/m5stack-u136">m5stack-u136</a></td>
+      <td><strong>Composants</strong> : U136, BH1750FVI-TR<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>I2C DLight unit - Luminosité Ambiante (Lux), Grove</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : M5STACK<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/grove/2444-m5stack-capteur-luminosite-ambiante-bh1750fvi-tr-grove-i2c-3232100024441-m5stack.html">M5Stack : I2C Capteur luminosité ambiante DLight, Grove @ MCHobby</a></li>
+<li>Voir <a href="https://shop.m5stack.com/products/dlight-unit-ambient-light-sensor-bh1750fvi-tr">M5Stack : Dlight Unit - Ambient Light Sensor , Grove @ M5Stack</a></li>
 </ul>
       </td>
   </tr>

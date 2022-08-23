@@ -374,7 +374,7 @@
 								}
 		},
 		{	"folder"        : "m5stack-u087",
-			"components"    : ["U087","ADS1115"],
+			"components"    : ["U087","ADS1115","VMeter"],
 			"interfaces"    : ["GROVE","I2C"],
 			"manufacturers" : ["M5STACK"],
 			"plateforms"    : ["PICO","M5STACK"],
@@ -421,6 +421,20 @@
 												],
 			"descr"	: {"FR" : "I2C Encoder unit, Grove",
 								 "ENG": "I2C Encoder unit, Grove"
+								}
+		},
+		{	"folder"        : "m5stack-u136",
+			"components"    : ["U136","BH1750FVI-TR"],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "M5Stack : I2C Capteur luminosité ambiante DLight, Grove @ MCHobby",
+							             "url"   : "https:\/\/shop.mchobby.be\/fr\/grove\/2444-m5stack-capteur-luminosite-ambiante-bh1750fvi-tr-grove-i2c-3232100024441-m5stack.html" },
+												 { "label" : "M5Stack : Dlight Unit - Ambient Light Sensor , Grove @ M5Stack",
+							             "url"   : "https:\/\/shop.m5stack.com\/products\/dlight-unit-ambient-light-sensor-bh1750fvi-tr" }
+												],
+			"descr"	: {"FR" : "I2C DLight unit - Luminosité Ambiante (Lux), Grove",
+								 "ENG": "I2C DLight unit - Ambiant Light (Lux) sensor, Grove"
 								}
 		},
 		{	"folder"        : "max6675",
