@@ -1,30 +1,34 @@
-# Utilisation senseur température DS18B20 et ESP8266 MicroPython
+# Using the DS18B20 temperature sensor with Pyboard, Pico & ESP8266 under MicroPython
 #
 # Shop: https://shop.mchobby.be/senseur-divers/259-senseur-temperature-ds12b20-extra-3232100002593.html
 # Shop: https://shop.mchobby.be/senseur-divers/151-senseur-temperature-ds18b20-etanche-extra-3232100001510.html
-#
-# Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 #
 from machine import Pin
 from onewire import OneWire
 from ds18x20 import DS18X20
 from time import sleep_ms
 
-bus = OneWire( Pin(2) )
+# PyBoard
+bus = OneWire( Pin("Y3") )
+# ESP8266
+# bus = OneWire( Pin(2) )
+# Pico
+# bus = OneWire( Pin(2) )
+
 ds = DS18X20( bus )
 
-# Scanner tous les périphériques sur le bus
-# Chaque périphérique à une adresse spécifique
+# Scan all the DS12B20 on the bus (for each of the ROM address).
+# Each of the device do have a specific address
 roms = ds.scan()
 for rom in roms:
 	print( rom )
 
-# Interrogation des senseurs
+# Request temps from sensors
 ds.convert_temp()
-# attendre OBLIGATOIREMENT 750ms 
+# Waits for 750ms (required)
 sleep_ms( 750 )
 
-# Lecture des température pour chaque périphérique
+# Display the temp for each device
 for rom in roms:
 	temp_celsius = ds.read_temp(rom)
-	print( "Temp: %s" % temp_celsius )
+	print( "Temp: %s Celcius" % temp_celsius )
