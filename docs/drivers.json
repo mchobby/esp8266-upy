@@ -157,11 +157,11 @@
 			"components"    : ["DS18B20"],
 			"interfaces"    : ["ONEWIRE"],
 			"manufacturers" : ["NONE"],
-			"plateforms"    : ["FEATHER-ESP8266"],
+			"plateforms"    : ["FEATHER-ESP8266","PICO","PYBOARD"],
 			"ressources"    : [ { "label" : "DS18B20 Sensor",
 												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=259" }
 												],
-			"descr"	: {"FR" : "Le DS18B20 est un senseur de <strong>température<\/strong> digital très populaire. Il utilise le bus 1-Wire permettant de brancher plusieurs senseurs 1-Wire sur un même bus.",
+			"descr"	: {"FR" : "Le DS18B20 est un capteur de <strong>température<\/strong> numérique très populaire. Il utilise le bus 1-Wire permettant de brancher plusieurs capteurs 1-Wire sur un même bus.",
 								 "ENG": "The DS18B20 is a very popular <strong>temperature<\/strong> sensor. It use the 1-Wire bus to connect several sensors."
 								}
 		},
