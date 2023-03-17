@@ -1039,6 +1039,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/weather-station">weather-station</a></td>
+      <td><strong>Components</strong> : GPIO<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Weather Station Kit with Anemometer/Wind Vane/Rain Bucket</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2385">Station Meteo @ MCHobby</a></li>
+<li>See <a href="https://www.dfrobot.com/product-1308.html">Weather Station @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>
 

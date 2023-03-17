@@ -1040,6 +1040,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/weather-station">weather-station</a></td>
+      <td><strong>Composants</strong> : GPIO<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Station Météo - Kit 5 capteurs - anémomètre, girouette, pluie, temperature, humidité</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : DFROBOT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2385">Station Meteo @ MCHobby</a></li>
+<li>Voir <a href="https://www.dfrobot.com/product-1308.html">Weather Station @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>
 

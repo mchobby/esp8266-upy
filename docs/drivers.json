@@ -1168,5 +1168,20 @@
 			"descr"	: {"FR" : "Connecteur <strong>UEXT<\/strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V",
 								 "ENG": "<strong>UEXT<\/strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V"
 								}
+		},
+		{	"folder"        : "weather-station",
+			"components"    : ["GPIO"],
+			"interfaces"    : ["UART"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Station Meteo @ MCHobby",
+												    "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=2385" },
+													{ "label" : "Weather Station @ DFRobot",
+													  "url"   : "https:\/\/www.dfrobot.com\/product-1308.html" }
+												],
+			"descr"	: {"FR" : "Station Météo - Kit 5 capteurs - anémomètre, girouette, pluie, temperature, humidité",
+								 "ENG": "Weather Station Kit with Anemometer/Wind Vane/Rain Bucket"
+								}
 		}
+
 ]
