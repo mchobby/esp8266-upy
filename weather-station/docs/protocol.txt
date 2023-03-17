@@ -1,0 +1,133 @@
+Information obtained from the
+
+Module météorologique de troisième génération (boîtier entièrement fermé)
+
+Description du stockage et du calcul des données du module d'interface météo 51WS3
+Pluie:La carte d'interface météo 51WS3 est équipée de 1440 octets de cache de données de pluie pour enregistrer les échantillons de données de pluie par minute.
+
+Après calcul de roulement, les valeurs de pluie de la minute précédente, de l'heure précédente et des 24 heures précédentes ont été obtenues
+
+Vitesse du vent:Carte d'interface météo 51WS3, cache de données de vitesse du vent intégré de 300 octets, enregistrant la valeur d'échantillonnage de la vitesse du vent en temps réel chaque seconde.
+
+Après calcul de roulement, la vitesse du vent en temps réel, la vitesse moyenne du vent dans la première minute et la vitesse maximale du vent dans les 5 premières minutes ont été obtenues.
+
+Température: les données de température, d'humidité et de pression sont lues toutes les 5 secondes
+
+Remarque:
+JP1 court-circuit = mode britannique ar, JP1 circuit ouvert = mode métrique professionnel
+Court-circuit JP2 = 2400 vitesses, circuit ouvert JP2 = 9600 vitesses
+
+Sortir une mesure à un intervalle de 0.5 secondes.
+
+Format de sortie de données APRS (anglais, par défaut):
+C * 3C
+
+Sortie 38 octets toutes les 0.5 secondes, y compris le caractère newline à la fin des données (OD,OA)
+
+Analyze des données:
+C000: Angle de direction du vent, unité: degré.
+S000: vitesse du vent de première minute, en miles par heure
+G000: vitesse maximale du vent pendant les 5 premières minutes, en miles par heure
+T086: température (Fahrenheit)
+R000: pluie de l'heure précédente (0.01 po.)
+P000: pluie dans les 24 heures précédentes (0.01 po.)
+H53: humidité (00% - 99%)
+B10020: pression d'air (0,1hpa)
+
+* 20 checksum, A et * (à l'exclusion de *) tous les caractères xor résultat
+La carte d'interface détectera automatiquement si la pièce de pression d'air, le capteur de température et d'humidité est installé, et les données du capteur qui n'est pas installé afficheront «...».
+Par exemple, si aucun capteur de température et d'humidité et pièce de pression d'air ne sont installés, les données de sortie sont les suivantes:
+... R000p000h .. B...
+
+Le module météo de génération prend en charge l'identification automatique du capteur de particules PMS5003 PMS5003ST
+
+Format de données par défaut, y compris le format de données de validation
+
+:* 31
+
+Lorsqu'il est détecté que le PMS5003 est installé, la sortie de données est la suivante:
+
+Y compris les pm2, 5 et les formats de données de validation: c000s000g000t082r000p000h43b09985, 027035040023032040, 14
+
+Format de sortie des données de mesure professionnel (métrique):
+
+Court JP1, JP1 = 0 britannique, open road JP1, JP1 = 1 système métrique
+
+Après l'électrification, dans le mode de mesure professionnel, pratique pour le développement secondaire.
+
+Interface de données 9600, vitesse 2400
+Format des données de mesure professionnel:
+* 27
+
+74 octets sont émis toutes les 0.5 secondes, y compris le caractère newline (OD,OA) à la fin des données.
+
+Analyze des données:
+A0789: mesure en temps réel de la valeur AD de la direction du vent (0-4095)
+B000: valeur de l'angle du vent (16 directions)
+C0000: fréquence de la vitesse du vent en temps réel 1Hz
+D0000: vitesse du vent en temps réel 0.1 m/S
+E0000: vitesse moyenne du vent de la minute précédente 0.1 m/s
+F0000: vitesse maximale du vent de 0.1 m/s dans les 5 premières minutes
+G0000: nombre de seaux de pluie en temps réel, 0-9999, nombre de cycles
+H0000: le nombre de seaux de pluie dans la minute précédente, 0-9999
+I0000: pluie de 0.1mm dans la première minute
+J0000: pluie de 0.1mm au cours de l'heure précédente
+K0000: pluie de 0.1mm dans les 24 premières heures
+L0209: température (c), 0.1 ° c, en dessous de zéro, premier symbole d'affichage «-».
+
+M703: humidité 0.1 (0% = 99%)
+
+Pression N10233 (0,1hpa)
+
+* 27 somme de contrôle, A et * (à l'exclusion de *) tous les caractères résultats xor
+
+Fonction d'étalonnage et de réglage 51WS3
+51WS3 prend en charge la possibilité de calibrer les données, qui peuvent être utilisées lorsque les valeurs de données originales doivent être ajustées dans certaines circonstances particulières.
+
+51WS3 par défaut d'usine est que la température, l'humidité et la pression sont toutes les données originales de sortie, c'est-à-dire pas d'addition ou de soustraction.
+
+1. Connectez l'usb au câble de données TTL (en option), connectez 51WS3, ouvrez le logiciel de débogage du port série général et sélectionnez le bon numéro de port avec le taux de 9600.
+2, envoyez les instructions à + SET = T + 000H + 000B + 0000 retour du chariot, c'est-à-dire que le réglage est terminé
+
+Remarque: toutes les commandes de configuration nécessitent + entrée.
+
+Commande: AT + VER =? Entrez
+
+Remarque: affiche le numéro de version actuelle du firmware
+
+Commande: AT + SET = T + 000H + 000B + 0000 entrée
+
+Description: ajoutez et soustrayez les données originales de température, d'humidité et de pression atmosphérique
+
+Instruction,
+L'at + SET = T + 000 h + 000 + 0000 b
+
+T + 000 représente la température + 00.0 °c (en degrés Celsius), plage d'étalonnage +-99.9
+
+Remarque: cette valeur d'étalonnage est en Celsius métrique.
+
+H + 000 représente l'humidité + 00.0% et la plage d'étalonnage +-99.9
+Ajout d'étalonnage, si la mesure de l'humidité + valeur d'étalonnage, supérieure à 99.9%, puis fixée à 99.9%
+Lors de l'étalonnage de la soustraction, seule la soustraction est autorisée si l'humidité est mesurée comme une valeur positive de>.
+
+B + 000 représente la pression d'air + 000.0hpa et la plage de calibrage +-999.9hpa
+
+Par exemple:
+Données brutes: c000s000g000t082r000p000h49b09957
+Ensemble: AT + SET = T + enter enter
+
+Nouvelles données: c000s000g000t082r000p000h41b08957
+
+Description du stockage et du calcul des données du module d'interface météo 51WS3
+
+Pluie:La carte d'interface météo 51WS3 est équipée de 1440 octets de cache de données de pluie pour enregistrer les échantillons de données de pluie par minute.
+
+Après calcul de roulement, les valeurs de pluie de la minute précédente, de l'heure précédente et des 24 heures précédentes ont été obtenues.
+
+Vitesse du vent:Carte d'interface météo 51WS3, cache de données de vitesse du vent intégré de 300 octets, enregistrant la valeur d'échantillonnage de la vitesse du vent en temps réel chaque seconde.
+
+Par calcul de roulement, la vitesse du vent en temps réel, la vitesse moyenne du vent dans la première minute et la vitesse maximale du vent dans les 5 premières minutes ont été obtenues.
+
+Température: les données de température, d'humidité et de pression sont lues toutes les 5 secondes
+
+Étalonnage de la vitesse du vent et du test de pluie
