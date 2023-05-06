@@ -1,6 +1,6 @@
 {
   "urls": [
-    ["ssd1306.py", "github:mchobby/esp8266-upy/oled-ssd1306/ssd1306-v1.10.py"]
+    ["ssd1306.py", "github:mchobby/esp8266-upy/oled-ssd1306/lib/ssd1306-v1.10.py"]
   ],
   "deps": [
     ["collections-defaultdict", "latest"]
