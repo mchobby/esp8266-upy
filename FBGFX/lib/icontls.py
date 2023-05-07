@@ -5,7 +5,7 @@ def draw_icon( fb, icon, x, y, color ):
 	for row in range( size ):
 		for col in range( size ):
 			if (icon[row+1] & (1<<(7-col))) > 0:
-				fb.pixel(col+y,row+y,color)
+				fb.pixel(col+x,row+y,color)
 
 def icon_as_list( icon ):
 	""" Extract the icon data as a list of [True,False,True] values. """
