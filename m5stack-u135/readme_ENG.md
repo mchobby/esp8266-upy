@@ -15,6 +15,23 @@ __Please note:__
 * The unit must be powered with 5V (for the RGB LEDs).
 * I2C signals are in 3.3V logic.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u135")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u135
+```
+
 # Wiring
 
 ## Wire to the Pico

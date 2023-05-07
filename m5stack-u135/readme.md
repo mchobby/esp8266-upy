@@ -6,7 +6,6 @@ Le module "[U135: Encoder Unit I2C](https://shop.m5stack.com/products/encoder-un
 
 ![U135 - Encoder Unit, I2C, Grove interface](docs/_static/u135.jpg)
 
-
 L'encodeur permet de:
 * -32768 <= encoder_position <= 32767
 * Detection de l'état du bouton (pressé ou non)
@@ -15,6 +14,23 @@ L'encodeur permet de:
 __A noter:__
 * Le module doit être alimenté en 5V (pour les LEDs RGB).
 * Les signaux I2C sont en logique 3.3V
+
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u135")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u135
+```
 
 # Brancher
 
