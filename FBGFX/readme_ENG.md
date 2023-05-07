@@ -8,6 +8,22 @@ This section contains class and exemple used to manipulates FrameBuffer.
 * __[icons8.py](lib/icons8.py)__ :  8x8 icons definition looking like Micro:bit's one.
 * __[icontls.py](lib/icontls.py)__ : Some functions to draw the icon in a FrameBuffer (used for display), or inside a terminal, or as a list of True/False values for the points.
 
+# Library
+
+The library must be copied to the MicroPython board before using the examples.
+
+On a WiFi based plateform:
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/FBGFX")
+```
+
+Or via the `mpremote` utility:
+```
+mpremote mip install github:mchobby/esp8266-upy/FBGFX
+```
+
+
 # fbutil test
 
 See [the examples available for the ili934x driver](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil) .

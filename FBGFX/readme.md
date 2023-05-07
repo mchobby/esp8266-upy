@@ -8,6 +8,21 @@ Cette section contient des classes et exemples permettant manipuler le contenu d
 * __[icons8.py](lib/icons8.py)__ :  définition d'icone style Micro:bit en 8x8 pixels.
 * __[icontls.py](lib/icontls.py)__ : Quelques fonctions pour dessiner une icone dans un FramBuffer (pour afficheurs), dans un terminal ou retourner les points True/False de l'icone sous forme de listes.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/FBGFX")
+```
+
+Ou via l'utilitaire `mpremote` :
+```
+mpremote mip install github:mchobby/esp8266-upy/FBGFX
+```
+
 # Tester fbutil
 
 Voir [les exemples disponibles pour le pilote ili934x](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil) .
