@@ -14,7 +14,16 @@ The `sd1306.py` library from MicroPyhton GitHub provides an SSD1306 OLED driver 
 
 That library must be copied to MicroPython board before runing the MicroPython example scipt.
 
-* [Download the ssd1306 library](https://raw.githubusercontent.com/micropython/micropython/master/drivers/display/ssd1306.py)
+On a WiFi capable plateform:
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/oled-ssd1306")
+```
+
+Or via `mpremote` utility:
+```
+mpremote mip install github:mchobby/esp8266-upy/oled-ssd1306
+```
 
 # Wiring
 

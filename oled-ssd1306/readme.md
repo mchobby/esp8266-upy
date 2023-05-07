@@ -12,9 +12,18 @@ __Remarques:__
 
 La bibliothèque `sd1306.py` (MicroPyhton GitHub) est un pilote SSD1306 I2C et SPI  pour écran OLED ssd1306.
 
-Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les examples.
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-* [Télécharger la bibliothèque ssd1306](https://raw.githubusercontent.com/micropython/micropython/master/drivers/display/ssd1306.py)
+Sur une plateforme connectée:
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/oled-ssd1306")
+```
+
+Ou via l'utilitaire `mpremote` :
+```
+mpremote mip install github:mchobby/esp8266-upy/oled-ssd1306
+```
 
 # Brancher
 
