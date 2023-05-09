@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["qmp6988.py", "github:mchobby/esp8266-upy/m5stack-u001/lib/qmp6988.py"],
+		["sht3x.py", "github:mchobby/esp8266-upy/sht3x/lib/sht3x.py"]
+  ],
+  "version": "0.0.1"
+}

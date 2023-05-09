@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["joyi2c.py", "github:mchobby/esp8266-upy/m5stack-u024/lib/joyi2c.py"]
+  ],
+  "version": "0.0.1"
+}

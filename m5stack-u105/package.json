@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["mdds.py", "github:mchobby/esp8266-upy/m5stack-u105/lib/mdds.py"]
+  ],
+  "version": "0.0.1"
+}

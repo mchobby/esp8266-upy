@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["vmeter.py", "github:mchobby/esp8266-upy/m5stack-u087/lib/vmeter.py"]
+  ],
+  "version": "0.0.2"
+}
