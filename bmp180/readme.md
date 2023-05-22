@@ -3,11 +3,28 @@
 * Shop: [Adafruit BMP180 (ADA1603)](http://shop.mchobby.be/product.php?id_product=397)
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
-# Raccordement
+# Bibliothèque
 
-![Raccordements](bmp180_bb.jpg)
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-# Code de test
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/bmp180")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/bmp180
+```
+
+# Brancher
+
+![Raccordements](docs/_static/bmp180_bb.jpg)
+
+# Tester
 
 ```
 # Utilisation du breakout BMP180 (ADA1603) avec Feather ESP8266 Python
@@ -21,14 +38,14 @@ from machine import I2C, Pin
 # Bus I2C
 #   Ne pas utiliser la broche standard SCL (broche 5) car perturbe la
 #   sequence de boot lorsque l'on utilise un bloc d'alim USB
-# 
+#
 i2c = I2C( sda=Pin(4), scl=Pin(2), freq=20000 )
 
 bmp180 = BMP180( i2c )
 
 # 0 précision la plus basse, mesure rapide
 # 3 précision la plus élevée; mesure plus lente
-bmp180.oversample_sett = 2 
+bmp180.oversample_sett = 2
 
 # Pression au niveau de la mer (en millibar * 100)
 bmp180.baseline = 101325
@@ -41,7 +58,7 @@ p = bmp180.pressure
 print( "pressure: %.2f mbar" % (p/100) )
 print( "pressure: %.2f hPa" % (p/100) )
 
-# Altitude calculée a partir de la difference de pression 
+# Altitude calculée a partir de la difference de pression
 # entre le niveau de la mer et "ici"
 altitude = bmp180.altitude
 print( "altitude: %.2f m" % altitude )
@@ -68,16 +85,16 @@ Je vous propose [ce lien vers meteobelgique.be](http://www.meteobelgique.be/obse
 Mon senseur m'indique une altitude à 189m alors que le site météorologique, à deux pas de chez moi, est à 120m de haut!
 
 L'altitude peut être déduite de la différence entre la pression atmosphérique locale et la pression atmospherique au niveau de la mer.
- 
+
 Une fois la pression de la baseline corrigée avec
 
 ```
 bmp180.baseline = 100200
 ```
 
-mon senseur retourne une altitude de 104m, nettement plus convenable. 
+mon senseur retourne une altitude de 104m, nettement plus convenable.
 
-Je me situe en contrebas de la station météo de référence (qui elle dispose d'une tour). 
+Je me situe en contrebas de la station météo de référence (qui elle dispose d'une tour).
 
 # La pression atmosphérique semble incorrecte!
 
@@ -94,17 +111,17 @@ Pour commencer:
 
 Ensuite:
 
-Les stations météos normalisent la valeur de la pression atmosphérique pour la ramener "au niveau de la mer" (PNM: Pression Niveau Mer ou SLP: _Sea Level Pressure_). 
+Les stations météos normalisent la valeur de la pression atmosphérique pour la ramener "au niveau de la mer" (PNM: Pression Niveau Mer ou SLP: _Sea Level Pressure_).
 
 Cela signifie qu'elles appliquent une correction sur la valeur lue.
 
-![Pression PNM](Pression_PNM.jpg)
+![Pression PNM](docs/_static/Pression_PNM.jpg)
 
 Cette correction consiste à creuser "virtuellement" un trou, sous la station météo, allant jusqu'au niveau de la mer. Trou pour y placer "virtuellement" le senseur de pression. On relève ainsi la pression à la même altitude en plusieurs endroits du pays.
 
 Pour ma station de référence, il s'agit de 120m. En gros, la correction consiste à ajouter une colonne d'air de 120m au dessus du senseur.
 
-__Pourquoi une telle correction?__ 
+__Pourquoi une telle correction?__
 
 Et bien parce qu'il est plus facile de concevoir le pays plat comme une crèpe et de regarder les différentes pressions en oeuvre à une même altitude. Cela permet pour imaginer plus facilement le déplacement des masses nuageuses (de la pression la plus élevée vers la pression la plus faîble).
 
@@ -118,7 +135,7 @@ Le senseur BMP180 retourne la valeur 989.09 hPa, la valeur corrigée au niveau d
 
 __Notes:__
 
-Vous aurez sans doute noté que la pression de la station de référence est de 1002 hPa, tout comme la pression au niveau de la mer (aussi 1002 hPa). C'est un pure hasard du jour. 
+Vous aurez sans doute noté que la pression de la station de référence est de 1002 hPa, tout comme la pression au niveau de la mer (aussi 1002 hPa). C'est un pure hasard du jour.
 
 # Comment obtenir une pression atmospherique PNM ?
 
@@ -136,13 +153,13 @@ Corrigez ensuite votre programme
 ```
 # pression moyenne au niveau de la mer
 p.baseline = 101325
-# pression PNM 
+# pression PNM
 p = bmp180.pressure + compensation
 ```
 
 p contiendra alors la valeur de pression normalisée au niveau de la mer (PNM) comme les stations météos de référence.
 
-Par contre, l'altitude absolue ne sera plus mesurée fiablement (à moins de pouvoir faire une mise-à-jour de p.baseline régulièrement). Il sera toujours possible d'utiliser la valeur de l'altitude pour détecter une différence de niveau si votre senseur est embarqué sur un "ballon sonde". Dans le cas d'une station météo fixe, l'altitude ne sera plus d'une très grande utilité :-) ... c'est la pression PNM qui nous intéresse. 
+Par contre, l'altitude absolue ne sera plus mesurée fiablement (à moins de pouvoir faire une mise-à-jour de p.baseline régulièrement). Il sera toujours possible d'utiliser la valeur de l'altitude pour détecter une différence de niveau si votre senseur est embarqué sur un "ballon sonde". Dans le cas d'une station météo fixe, l'altitude ne sera plus d'une très grande utilité :-) ... c'est la pression PNM qui nous intéresse.
 
 # Source et ressources
 * Source officielle du pilote: https://github.com/micropython-IMU/micropython-bmp180

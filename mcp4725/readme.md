@@ -10,7 +10,24 @@ Grâce au MCP4725, il est possible de générer une tension de sortie arbitraire
 
  Fonctionne en logique 3.3V ou 5V. Le breakout propose une broche d'adresse A0 (LOW par defaut), il est donc possible de connecter ces DACs sur un bus I2C.
 
-# Raccordement
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/mcp4725")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/mcp4725
+ ```
+
+# Brancher
 
 ## MicroPython Pyboard
 

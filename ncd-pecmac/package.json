@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["pecmac.py", "github:mchobby/esp8266-upy/ncd-pecmac/lib/pecmac.py"]
+  ],
+  "version": "1.0"
+}

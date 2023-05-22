@@ -55,6 +55,23 @@ The exemple here under shows:
 
 ![Wiring board GPIOs](docs/_static/wiring-gpio.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-fet-solenoid")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-fet-solenoid
+```
+
 # Wiring
 
 It is a I2C sensor based on NCD connector, so use the appropritate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/NCD) and [ESP modules](../NCD/readme.md).

@@ -31,12 +31,29 @@ Le branchement d'un port UEXT sur un ESP8266 est décrit dans le [répertoire UE
 
 L' [adaptateur UEXT pour MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) est également disponible dans le GitHub [Pyboard-Driver](https://github.com/mchobby/pyboard-driver) .
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modirtemp")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modirtemp
+```
+
 # Tester
 Pour tester le capteur, il est nécessaire de copier le fichier `mlx90614.py` (le pilote) et le script de test `mlxtest.py` sur votre carte MicroPython.
 
 Ensuite, la commande `import mlxtest` saissie dans une session REPL permet de lancer le script de test à la volée.
 
-![Une tasse de caffé en face du capteur de température MLX90614BAA](docs/_static/MOD-IR-TEMP-Pyboard-test.jpg)
+![Une tasse de café en face du capteur de température MLX90614BAA](docs/_static/MOD-IR-TEMP-Pyboard-test.jpg)
 
 Ce qui produit le résultat suivant lorsque la tasse de café (avec du café chaud) est présenté devant le capteur:
 

@@ -27,28 +27,27 @@ La correspondance avec les GPIO de l'ESP8266 sont reprises sur le graphique suiv
 
 ![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# Brancher
-
-## ESP8266-EVB (Olimex)
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ brancher le contrôleur de jeu.
-
-![Raccordements UEXT avec ESP8266](docs/_static/mod-wii-wiring.jpg)
-
-## MicroPython Pyboard
-
-Pour le brancher facilement sur une Pyboard, le plus simple est de préparer un connecteur UEXT Mâle raccordé sur la Pyboard puis de connecter la Nunchuck dessus.
-
-![WII Nunchuck to Pyboard](docs/_static/wii-nunchuck-to-pyboard.jpg)
-
 # Bibliothèque
 
-Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque `wiichuck.py`__ sur votre carte micropython.
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-* Copiez le fichier `testtest.py` sur la carte micropython.
-* Copiez le fichier `testcount.py` sur la carte micropython.
-* Copiez le fichier `testacc.py` sur la carte micropython.
+Sur une plateforme connectée:
 
-La bibliothèque offre les fonctionnalités suivantes
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modwii")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modwii
+```
+
+
+## Détails de la bibliothèque
+
+La bibliothèque `wiichuck.py` offre les fonctionnalités suivantes
 
 __Membres:__
 * `c`  : True/False, indique si le bouton C est actuellement enfoncé.
@@ -70,7 +69,27 @@ __Membres:__
 __Methodes:__
 * `update()`   : a appeler pour récupérer les informations de la Wii Nunchuck. Information disponible sur les différentes propriétés.
 
+# Brancher
+
+## ESP8266-EVB (Olimex)
+Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ brancher le contrôleur de jeu.
+
+![Raccordements UEXT avec ESP8266](docs/_static/mod-wii-wiring.jpg)
+
+## MicroPython Pyboard
+
+Pour le brancher facilement sur une Pyboard, le plus simple est de préparer un connecteur UEXT Mâle raccordé sur la Pyboard puis de connecter la Nunchuck dessus.
+
+![WII Nunchuck to Pyboard](docs/_static/wii-nunchuck-to-pyboard.jpg)
+
+
 # Tester
+
+Voici quelques exemples utiles.
+* Copiez le fichier `testtest.py` sur la carte micropython.
+* Copiez le fichier `testcount.py` sur la carte micropython.
+* Copiez le fichier `testacc.py` sur la carte micropython.
+
 ## Exemple lecture bouton et Joystick
 ```
 # Test the Olimex MOD-Wii-UEXT-NUNCHUCK game controler.

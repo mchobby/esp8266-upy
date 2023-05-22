@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["joyi2c.py", "github:mchobby/esp8266-upy/qwiic-joystick-i2c/lib/joyi2c.py"]
+  ],
+  "version": "0.0.1"
+}

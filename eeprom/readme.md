@@ -19,6 +19,23 @@ Le signal _Write Protect_ (WP) permet de protéger l'EEPROM en écriture (niveau
 
 Cette bibliothèque est basée sur le [code source EEPROM.py proposé sur le GitHub de MicroPython](https://raw.githubusercontent.com/dda/MicroPython/master/EEPROM.py) .
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/eeprom")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/eeprom
+```
+
 # Brancher
 
 ## Sur Pyboard

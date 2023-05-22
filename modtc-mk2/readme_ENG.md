@@ -12,6 +12,23 @@ The module also offers 7 GPIOs also available via the I2C bus. You can manage th
 
 The interest of `modtc_mk2.py` MicroPython library is to offer the acces to all the pin behaviours via the GPIO number.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modtc-mk2")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modtc-mk2
+```
+
 # Wiring
 
 To wire the board, just plug it onto an UEXT connector.
@@ -78,7 +95,7 @@ Analog 6 = 1.34 v ( 416)
 ``` python
 from machine import I2C, Pin
 from modtc_mk2 import MODTC_MK2
-from time import sleep 
+from time import sleep
 
 # PYBOARD-UNO-R3 & UEXT for Pyboard. SCL=Y9, SDA=Y10
 i2c = I2C(2)

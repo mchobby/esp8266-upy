@@ -12,11 +12,28 @@ This sensor from AMS is a gas sensor capable to detect a wide range of Volatile 
 
 The CCS811 sensor is also available on the [MOD-ENV (Environmental sensor)](https://shop.mchobby.be/fr/uext/1780-capteur-environnementale-tout-en-un-bme280-ccs811-3232100017801.html) from Olimex. The library is also suited for this sensor, __check the detail in the `modenv` subfolder of this GitHub__.
 
-# Wire
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ccs811")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ccs811
+```
+
+# Wiring
 
 ![Wire theCCS811 from Adafruit Industrie on a Pyboard](docs/_static/ccs811-to-pyboard.jpg)
 
-# Use it
+# Testing
 
 The [`ccs811.py`](lib/css811.py) library is available into the `/lib` folder. This file mise be copied to the MicroPython board before using the example.
 

@@ -9,6 +9,23 @@ The "[U097: 4-Relay Unit](https://shop.m5stack.com/products/4-relay-unit)" from 
 It is possible to add Grove to your favorit plateform by wiring your own connector with a  [Grove to Pin](https://shop.mchobby.be/product.php?id_product=2145) (or [Grove to Pad](https://shop.mchobby.be/product.php?id_product=1929
 )).
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u097")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u097
+```
+
 # Wire
 
 ## Wire to Pico

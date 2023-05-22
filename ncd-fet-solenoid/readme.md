@@ -55,6 +55,23 @@ L'exemple ci-dessous montre:
 
 ![Brancher les GPIOs de la carte](docs/_static/wiring-gpio.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-fet-solenoid")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-fet-solenoid
+```
+
 # Raccordement
 
 Il s'agit d'une carte I2C basée sur le connecteur NCD. Par conséquent, nous utilisons l'interface adéquate pour nous y connecter. Ce dépôt propose une interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/NCD) et [Modules ESP](../NCD/readme.md).

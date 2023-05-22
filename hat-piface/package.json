@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["piface.py", "github:mchobby/esp8266-upy/hat-piface/lib/piface.py"],
+		["mcp23Sxx.py", "github:mchobby/esp8266-upy/mcp23Sxx/lib/mcp23Sxx.py"]
+  ],
+  "version": "1.0"
+}

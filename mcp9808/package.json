@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["mcp9808.py", "github:mchobby/esp8266-upy/mcp9808/lib/mcp9808.py"]
+  ],
+  "version": "1.0"
+}

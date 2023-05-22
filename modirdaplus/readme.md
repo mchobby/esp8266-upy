@@ -36,6 +36,23 @@ Bancher un connecteur UEXT (IDC 10 broches) directement sur la Raspberry-Pi Pico
 
 ![Pico I2C sur connecteur UEXT](docs/_static/modirdaplus-to-pico.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modirdaplus")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modirdaplus
+```
+
 # Tester
 La bibliothèque [irdaplus.py](lib/irdaplus.py) doit être copiée sur la carte MicroPython.
 

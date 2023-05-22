@@ -20,6 +20,23 @@ Au final l'assemblage du kit principal ressemble à ceci.
 
 ![Station Metéo - raccordement des capteurs](docs/_static/weather-station-connexion.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/weather-station")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/weather-station
+```
+
 # Brancher
 ## Brancher sur Raspberry-Pi Pico
 Le Raspberry-Pi Pico est un système 3.3V, il faut donc prévoir un [convertisseur de niveau logique](https://shop.mchobby.be/fr/cartes-breakout/131-convertisseur-logique-4-canaux-bi-directionnel-i2c-compatible-3232100001312-adafruit.html) compatible avec un port série/uart.

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["sfont.py", "github:mchobby/esp8266-upy/SMALL-FONT/lib/sfont.py"]
+  ],
+  "version": "0.0.1"
+}

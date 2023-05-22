@@ -1,1 +1,0 @@
-../../FILEFORMAT/imglib/bmp.py

@@ -9,6 +9,23 @@ Le module "[U097: 4-Relay Unit](https://shop.m5stack.com/products/4-relay-unit)"
 Pour les autres plateformes, il existe des connecteurs [Grove to Pin](https://shop.mchobby.be/product.php?id_product=2145) (ou [Grove to Pad](https://shop.mchobby.be/product.php?id_product=1929
 )) pour ajouter une connectique Grove.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u097")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u097
+```
+
 # Brancher
 
 ## Brancher sur un Pico

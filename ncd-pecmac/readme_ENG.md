@@ -48,6 +48,23 @@ The NCD I2C Mini Modules are designed with a standard & convenient 4-Pin plug co
 
 This NCD AC Current Sense board own its how microcontroler and is feed with a separate 12V PSU.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-pecmac")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-pecmac
+```
+
 # Wiring
 
 It is a I2C sensor based on NCD connector, so use the appropriate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [ESP modules](../NCD/readme.md).

@@ -14,6 +14,23 @@ Ce composant:
 
 Voir la [fiche technique du TCA9554A](https://www.ti.com/lit/gpn/tca9554a) pour plus d'information.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tca9554a")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tca9554a
+```
+
 # Brancher
 
 # TCA9554A vers Raspberry-Pi Pico

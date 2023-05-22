@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["colors.py", "github:mchobby/esp8266-upy/COLORS/lib/colors.py"],
+    ["colortls.py", "github:mchobby/esp8266-upy/COLORS/lib/colortls.py"]
+  ],
+  "version": "1.0"
+}

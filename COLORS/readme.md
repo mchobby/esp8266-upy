@@ -6,6 +6,24 @@ Cette bibliothèque centralise quelques outils (fonction, listes, etc) relatifs 
 
 N'hésitez pas à explorer les bibliothèques et ressources pour plus d'informations.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/COLORS")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/COLORS
+```
+
+
 # Sources d'inspiration
 
 ## Color Picker de W3School

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["irdaplus.py", "github:mchobby/esp8266-upy/modirdaplus/lib/irdaplus.py"]
+  ],
+  "version": "1.0"
+}

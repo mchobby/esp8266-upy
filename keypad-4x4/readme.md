@@ -10,6 +10,23 @@ Ce type d'interface, permet de réaliser des périphériques de saisie simple et
 
 Il est assez facile de mettre un tel clavier en oeuvre à l'aide de de broches d'entrées/sorties (8 dans le cas présent).
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/keypad-4x4")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/keypad-4x4
+```
+
 # Brancher
 
 ![Keypad to Pyboard](docs/_static/keypad-to-pyboard.jpg)

@@ -68,6 +68,23 @@ Le MOD-RS485-ISO propose des cavaliers "Duplex Jumper" pour passer rapidement en
 
 En mode Full-Duplex, les cavaliers doivent être ouverts.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modrs485iso")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modrs485iso
+```
+
 # Brancher
 
 ## MOD-RS485-ISO vers Pyboard

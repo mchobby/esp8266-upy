@@ -14,6 +14,23 @@ L' AD9833 genere un signal avec une tension de 0.6 Vpp (pic à pic).
 
 Pour plus d'information, n'hésitez pas à consulter cette [fiche produit](http://shop.mchobby.be/product.php?id_product=1689) .
 
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/ad9833")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/ad9833
+ ```
+
 # Brancher
 
 ![Raccorder un AD9833 sur une Pyboard](docs/_static/ad9833-to-pyboard.jpg)

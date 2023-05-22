@@ -8,25 +8,40 @@ ENV III is an environmental sensor that integrates SHT30 and QMP6988 internally 
 
 * Simple and easy to use
 * High accuracy
-* I2C communication interface
+* Interface de communication I2C
 
-# Wiring
+# Bibliothèque
 
-The sensor  can be powered with 3.3V or 5V power supply.
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-The SDA / SCL data lines are at 3.3V level.
+Sur une plateforme connectée:
 
-## ENV III I2C sensor with Raspberry-Pi Pico
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u001")
+```
 
-![ENV III I2C to Raspberry-Pi Pico](docs/_static/u001c-to-pico.jpg)
+Ou via l'utilitaire mpremote :
 
-# Test
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u001
+```
 
-The [env3.py](lib/env3.py) library must be copied on your MicroPython microcontroler.
+# Brancher
 
-## Reading the environmental sensor Sensor
+Le capteur peut être alimenté en 3.3V ou 5V.
 
-The [test.py](examples/test.py) script do reads the sensor value every 100ms.
+Les signaux I2C (SDA / SCL) sont en niveau logique 3.3V .
+
+## Capteur ENV III I2C avec  Raspberry-Pi Pico
+
+![ENV III I2C sur Raspberry-Pi Pico](docs/_static/u001c-to-pico.jpg)
+
+# Tester
+
+## Lecture des données environmental
+
+Le script [test.py](examples/test.py) effectue une acquisition de données toutes les 100ms.
 
 ``` python
 xxx

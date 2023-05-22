@@ -8,6 +8,23 @@ This library offer classes to drive the Adafruit's USB+Serial LCD backpack wich 
 
 For more information, please check this [product sheet](http://shop.mchobby.be/product.php?id_product=475) or [our Arduino & Raspberry-Pi tutorial](http://wiki.mchobby.be/index.php?title=LCD-USB-TTL).
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lcdmtrx")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lcdmtrx
+```
+
 # Wiring
 
 The backpack use 5V power logic. You can wire it directly to a Pyboard because that board is 5V tolerant. It would be better to user [_Level Shiftesr_](https://shop.mchobby.be/fr/breakout/131-convertisseur-logique-4-canaux-bi-directionnel-i2c-compatible-3232100001312-adafruit.html) to avoids any kind of damage on 3.3V systems.

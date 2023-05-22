@@ -11,6 +11,23 @@ This sensor is very close from the TSL2561 but offer a very wide measure range  
 
 The main difference with the TSL2561 is that TSL2591 address cannot be modified!
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tsl2591")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tsl2591
+```
+
 # Wiring
 
 ## MicroPython Pyboard

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["modlcd19.py", "github:mchobby/esp8266-upy/modlcd1x9/lib/modlcd19.py"]
+  ],
+  "version": "1.0"
+}

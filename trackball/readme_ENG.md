@@ -14,6 +14,23 @@ As it is an I2C breakout, only 2 signal wires are needed to interact with the br
 
 __Note:__ the library does not handle the interrupt pin. The breakout and its microcontroler also offer a software support to capture that interrupt (via the REG_INT register); the micropython library use that software method.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/trackball")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/trackball
+```
+
 # Wiring
 
 ## with Pyboard

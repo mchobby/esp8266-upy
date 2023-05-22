@@ -14,6 +14,23 @@ The MOD-TC is an Olimex's MAX6675 board with UEXT connector for easy connection 
 
 ![MOD-TC from Olimex with MAX6675](docs/_static/mod-tc.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/max6675")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/max6675
+```
+
 # Wiring
 
 ##  The MAX6675 breakout on PyBoard

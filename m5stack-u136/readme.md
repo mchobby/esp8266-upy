@@ -11,6 +11,23 @@ Parmi ses caractéristiques, nous avons:
 * Support des changements de source lumineuses (incandescent, fluorescent, halogène, LED blanches, lumière du soleil, etc)
 * Large gamme de mesure en LUX (1 à 65535 lux)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u136")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u136
+```
+
 # Brancher
 
 Le capteur peut être alimenté avec 3.3V ou 5V.

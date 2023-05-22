@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["relayi2c.py", "github:mchobby/esp8266-upy/qwiic-relay-i2c/lib/relayi2c.py"]
+  ],
+  "version": "0.0.1"
+}

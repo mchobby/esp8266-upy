@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["drv8830mot.py", "github:mchobby/esp8266-upy/drv8830/lib/drv8830mot.py"]
+  ],
+  "version": "1.0"
+}

@@ -36,6 +36,23 @@ Wire an UEXT (IDC 10 broches) connector directly to a Raspberry-Pi Pico as shown
 
 ![Pico I2C to UEXT connector](docs/_static/modirdaplus-to-pico.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modirdaplus")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modirdaplus
+```
+
 # Test
 The library [irdaplus.py](lib/irdaplus.py) must be copied to your MicroPython board.
 

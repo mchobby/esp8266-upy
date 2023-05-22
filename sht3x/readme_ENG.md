@@ -2,8 +2,6 @@
 
 # Using a SHT3x relative humidity sensor under MicroPython
 
-**** TRANSLATE ****
-
 The SHT3x sensor from Sensirion is quite popular and present on many breakout board.
 
 ![SHT31-F from DFRobot](docs/_static/sht3x.jpg)
@@ -14,6 +12,23 @@ reading with an accuracy of +/-2% RH over a range of 0% to 100% RH (@ 25°C). Th
 This sensor expose an I2C interface used to grab the data from the sensor by using only 2 wires (SDA & SCL).
 
 The sensor also integrates a heater which should be used when measuring the humidity in high relative humidity envrionment otherwise the results will not be accurate.
+
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/sht3x")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/sht3x
+```
 
 ## About this MicroPython driver
 

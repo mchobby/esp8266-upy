@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["wdetect.py", "github:mchobby/esp8266-upy/ncd-water-detect/lib/wdetect.py"],
+		["pca9536.py", "github:mchobby/esp8266-upy/pca9536/lib/pca9536.py"],
+  ],
+  "version": "1.1"
+}

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["pcf8523.py", "github:mchobby/esp8266-upy/pcf8523/lib/pcf8523.py"]
+  ],
+  "version": "0.0.1"
+}

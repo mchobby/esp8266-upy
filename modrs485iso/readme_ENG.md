@@ -68,6 +68,23 @@ The MOD-RS485-ISO does have "Duplex Jumper" to quickly switch to Half-Duplex mod
 
 In Full-Duplex mode, the jumpers must stay open.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modrs485iso")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modrs485iso
+```
+
 # Wiring
 
 ## MOD-RS485-ISO to Pyboard

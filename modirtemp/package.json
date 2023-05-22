@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["mlx90614.py", "github:mchobby/esp8266-upy/modirtemp/lib/mlx90614.py"]
+  ],
+  "version": "1.0"
+}

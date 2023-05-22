@@ -14,6 +14,23 @@ Le module MOD-TC d'Olimex utilise un MAX6675 sur une carte exposant un connecteu
 
 ![MOD-TC d'Olimex avec MAX6675](docs/_static/mod-tc.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/max6675")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/max6675
+```
+
 # Brancher
 
 ##  Breakout MAX6675 sur PyBoard

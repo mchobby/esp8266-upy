@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["rfm69.py", "github:mchobby/esp8266-upy/rfm69/lib/rfm69.py"]
+  ],
+  "version": "0.0.1"
+}

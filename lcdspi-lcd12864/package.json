@@ -1,0 +1,9 @@
+{
+  "urls": [
+    ["lcd12864.py", "github:mchobby/esp8266-upy/lcdspi-lcd12864/lib/lcd12864.py"],
+		["img.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/img.py"],
+		["bmp.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/bmp.py"],
+		["bpm.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/bpm.py"]
+  ],
+  "version": "1.0"
+}

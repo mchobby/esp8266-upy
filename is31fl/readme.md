@@ -10,6 +10,23 @@ La démonstration de ce pilote est basé sur la [matrice CharliePlexing 15x7 pou
 
 ![ChaliePlexing 15x7 Feather Wing from Adafruit](docs/_static/featherwing-charlieplexing-adafruit.jpg)
 
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/is31fl")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/is31fl
+ ```
+
 # Brancher
 
 ## sur MicroPython Pyboard

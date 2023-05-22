@@ -30,6 +30,23 @@ The NCD I2C Mini Modules are designed with a standard & convenient 4-Pin plug co
 
 This NCD MPL115A2 module doen't need any level shifter, neither any voltage regulator since it can work with a supply voltage from 2.4V to 5.5V.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-mpl115a2")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-mpl115a2
+```
+
 # Wiring
 
 ## Wiring with NCD

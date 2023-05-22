@@ -1,8 +1,10 @@
-# Use an Olimex MOD-RGB with ESP8266 under MicroPython
+[This file also exists in ENGLISH](readme_ENG.md)
 
-MOD-RGB est une carte d'interface d'Olimex utilisant le port UEXT. 
+# Utiliser un MOD-RGB d'Olimex sous MicroPython
 
-![La carte MOD-RGB](mod-rgb.jpg)
+MOD-RGB est une carte d'interface I2C d'Olimex utilisant le port UEXT.
+
+![La carte MOD-RGB](docs/_static/mod-rgb.jpg)
 
 Cette carte expose.
 * Un FirmWare personnalisé pour bus I2C or DMX
@@ -14,15 +16,8 @@ Cette carte expose.
 * Cavalier pour alimenter la carte via UEXT
 * Connecteur UEXT
 
-__Où acheter__
-* Shop: [UEXT RGB Module (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1410)
-* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
-* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
-* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
-* Wiki: not defined yet 
-
 # ESP8266-EVB sous MicroPython
-Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
+Avant de se lancer dans l'utilisation du module MOD-RGB sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
 
 Nous vous recommandons la lecture du tutoriel [ESP8266-EVB](https://wiki.mchobby.be/index.php?title=ESP8266-DEV) sur le wiki de MCHobby.
 
@@ -32,45 +27,56 @@ Ce dernier explique [comment flasher votre carte ESP8266 avec un câble console]
 
 Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C. La correspondance avec les GPIO de l'ESP8266 sont les suivantes.
 
-![Raccordements](ESP8266-EVB-UEXT.jpg)
+![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# MOD-RGB Raccordement
+# Bibliothèque
 
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-RGB
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-![Raccordements](mod-rgb-wiring.jpg)
+Sur une plateforme connectée:
 
-# Code de test
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modrgb")
+```
 
-## Bibliothèque modrgb
+Ou via l'utilitaire mpremote :
 
-Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque modrgb__ sur votre carte micropython.
-* Copiez le fichier `modrgb.py` sur la carte micropython.
-* Copiez le fichier `rgbfx.py` (optionnel) sur la carte micropython.
+```
+mpremote mip install github:mchobby/esp8266-upy/modrgb
+```
 
-Vous pouvez également transférer le script de test `test.py`  sur la carte PyBoard. A noter que les exemples `testfx.py`, `testoff.py` et `stress.py`
-
-La bibliothèque offre les fonctionalités suivantes
+## Détails de la bibliothèque
+La bibliothèque `modrgb.py` offre les fonctionnalités suivantes:
 
 __Membres:__
 Aucun.
 
 __Methodes:__
-* `mod_rgb.pwm( enable )`   : True/False pour activer/désactiver la génération PWM LED. Lorsque qu'activé, la couleur est affichée sur le ruban. 
+* `mod_rgb.pwm( enable )`   : True/False pour activer/désactiver la génération PWM LED. Lorsque qu'activé, la couleur est affichée sur le ruban.
 * `mod_rgb.audio( enable )` : True/False pour activer/désactiver les mode LED Audio.
 * `mod_rgb.set_rgb( color )`: Fixe la couleur RGB avec un tuple RGB (rouge,vert,bleu) ayant des valurs entre 0 et 255.
-* `mod_rgb.black()`         : Désactice toutes les LED (couleur noir). 
+* `mod_rgb.black()`         : Désactive toutes les LED (couleur noir).
 * `mod_rgb.board_id()`      : Retourne l'identification de la carte.
-* `mod_rgb.change_address( 0x22 )` : Change l'adresse du module a 0x22 (à la place de 0x20).
-                                   Le cavalier "prog" de programmation doit être fermé pendant l'envoi de la commande!
+* `mod_rgb.change_address( 0x22 )` : Change l'adresse du module a 0x22 (à la place de 0x20). Le cavalier "prog" de programmation doit être fermé pendant l'envoi de la commande!
 
-## Problème
+## Problème connu
 
 * Problème de stabilité I2C dans une situation de Stress Test. [Voir ce billet sur les Forums d'Olimex](https://www.olimex.com/forum/index.php?topic=6721.0)
 
+# Brancher
+
+## ESP8266-EVB d'Olimex
+
+Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-RGB
+
+![Raccordements](docs/_static/mod-rgb-wiring.jpg)
+
+# Tester
+
 ## Exemple avec MOD-RGB
 ```
-# Utilisation du MOD-RGB d'Olimex avec un ESP8266 sous MicroPython
+# Utilisation du MOD-RGB d'Olimex sous MicroPython
 #
 # Shop: [UEXT RGB board (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1410)
 # Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-RGB
@@ -83,7 +89,7 @@ i2c = I2C( sda=Pin(2), scl=Pin(4) )
 rgb = MODRGB( i2c ) # default address=0x20
 
 # A color is code within a (r,g,b) tuple
-# Set color to rose 
+# Set color to rose
 rgb.set_rgb( (255, 102, 204) )
 sleep_ms( 5000 )
 
@@ -104,7 +110,7 @@ print( "That's the end folks")
 Contenu de l'exemple disponible dans le fichier `stress.py`.
 
 ```
-# Stress Test sur le MOD-RGB d'Olimex avec un ESP8266 sous MicroPython
+# Stress Test sur le MOD-RGB d'Olimex sous MicroPython
 #
 # Shop: http://shop.mchobby.be/product.php?id_product=1410
 # Wiki: ---
@@ -135,7 +141,7 @@ Contenu de l'exemple disponible dans le fichier `testfx.py`.
 Nécessite la bibliothèque `rgbfx.py` également disponible sur le GitHub.
 
 ```
-# Effet RGB avec MOD-RGB d'Olimex avec un ESP8266 sous MicroPython
+# Effet RGB avec MOD-RGB d'Olimex sous MicroPython
 #
 # Shop: http://shop.mchobby.be/product.php?id_product=1410
 # Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-RGB
@@ -143,14 +149,14 @@ Nécessite la bibliothèque `rgbfx.py` également disponible sur le GitHub.
 from machine import I2C, Pin
 from time import sleep_ms
 from modrgb import MODRGB
-import rgbfx 
+import rgbfx
 
 i2c = I2C( sda=Pin(2), scl=Pin(4) )
 rgb = MODRGB( i2c ) # default address=0x20
 rgb.pwm( True )
 
 # A color is code within a (r,g,b) tuple
-# Set color to rose 
+# Set color to rose
 rose = (255, 102, 204)
 rgb.set_rgb( rose )
 sleep_ms( 1000 )
@@ -207,3 +213,8 @@ Par conséquent, la réponse ne sera jamais reçue (comme attendue) par le micro
 
 Un `i2c.scan()` permet de confirmer le changement d'adresse.
 
+# Où acheter
+* Shop: [UEXT RGB Module (MOD-RGB)](http://shop.mchobby.be/product.php?id_product=1410)
+* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
+* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
+* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)

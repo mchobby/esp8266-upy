@@ -22,13 +22,30 @@ https://github.com/alexmrqt/micropython-gps/commits/master
 
 Distributed under the original MIT License.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/gps-ultimate")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/gps-ultimate
+```
+
 # Wiring
 
 ![GPS Ultimate to Pyboard](docs/_static/gps-ultimate-pyboard.jpg)
 
 * The X9 & X10 are the pin of __UART(1)__.
 
-# Test
+# Testing
 
 ## Raw reading of NMEA streams
 The `testraw.py` sample just send configuration string to the GPS module then parse incoming bytes on the serial line.

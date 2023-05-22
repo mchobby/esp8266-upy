@@ -1,0 +1,10 @@
+{
+  "urls": [
+    ["ili934x.py", "github:mchobby/esp8266-upy/ili934x/lib/ili934x.py"],
+		["fdrawer.py", "github:mchobby/freetype-generator/micropython/lib/fdrawer.py"],
+		["veram_m15.bin", "github:mchobby/freetype-generator/upy-fonts/veram_m15.bin"],
+		["fbutil.py", "github:mchobby/esp8266-upy/FBGFX/lib/fbutil.py"],
+		["stmpe610.py", "github:mchobby/esp8266-upy/stmpe610/lib/stmpe610.py"]
+  ],
+  "version": "1.0"
+}

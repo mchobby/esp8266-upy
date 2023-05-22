@@ -14,6 +14,23 @@ When using the joystick you will get the `x`, `y` and `button` values.
 
 ![M5Stack u024-c I2C Joystick direction](docs/_static/u024-c-values.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u024")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u024
+```
+
 # Wiring
 
 The joystick can be powered with 3.3V or 5V power supply.

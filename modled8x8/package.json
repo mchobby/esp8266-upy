@@ -1,0 +1,8 @@
+{
+  "urls": [
+    ["modled.py", "github:mchobby/esp8266-upy/modled8x8/lib/modled.py"],
+		["bmp.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/bmp.py"],
+		["img.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/img.py"]
+  ],
+  "version": "1.0"
+}

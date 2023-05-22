@@ -1,0 +1,9 @@
+{
+  "urls": [
+    ["pca9685.py", "github:mchobby/esp8266-upy/pca9685/lib/pca9685.py"],
+		["motorbase.py", "github:mchobby/esp8266-upy/adfmotors/lib/motorbase.py"],
+		["motorshield.py", "github:mchobby/esp8266-upy/adfmotors/lib/motorshield.py"],
+		["motorwing.py", "github:mchobby/esp8266-upy/adfmotors/lib/motorwing.py"]
+  ],
+  "version": "1.0"
+}

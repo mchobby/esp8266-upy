@@ -43,6 +43,23 @@ Avec deux lignes (2 rows) de trois colonnes (3 columns), l'assemblage de la matr
 modled =  ModLedRGB( spi, ss, width=3, height=2 ) # 6x LED-8x8RGB
 ```
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modled8x8")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modled8x8
+```
+
 # Raccordement
 
 ## Adaptateur MOD-LED8x8RGB vers UEXT

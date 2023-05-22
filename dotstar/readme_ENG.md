@@ -27,6 +27,23 @@ The original library [`micropython_dotstar` de mattytrentini](https://github.com
 
 Please, note that the library is running in mode `auto_write = True`, the ribbon is automatically updated when any LED color is changed.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/dotstar")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/dotstar
+```
+
 # Wiring
 
 The `DataIn` and `Clock` signals of the DotStar/APA102 LEDs must be at the same logical level than the LED power supply.
@@ -43,7 +60,7 @@ The following wiring use the PYBStick supply available on VIn. As the board is w
 
 ![APA102 DotStar wired on PYBStick](docs/_static/dotstar-to-pybstick.jpg)
 
-# Example
+# Test
 
 Le following Pyboard example control 3 APA102 LEDs.
 

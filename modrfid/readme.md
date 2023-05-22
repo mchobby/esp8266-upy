@@ -34,6 +34,23 @@ mka
 ```
 La clé en cours d'utilisateur peut être identifiée à l'aide de la commande `k?`.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modrfid")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modrfid
+```
+
 # Brancher
 Si vous disposez d'une [interface UEXT pour votre Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) alors il suffit simplement de brancher la carte MOD-RFID1536MiFare à l'aide d'un cable IDC.
 

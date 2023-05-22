@@ -2,8 +2,6 @@
 
 # PCF8523 : A Real Time Clock (RTC) for MicroPython
 
-__TRADUCTION__
-
 The PCF8523 from NXP is a RTC (Real Time Clock) from NXP running over an I2C bus. This device can follow the time ginning when the project is not powered. Thanks to the coin cell, the clock is still running.
 
 The PCF8523 is quite popular and placed on many products, the following pictures show [PiRTC](https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html) and the [Adafruit AdaLogger FeatherWing](https://shop.mchobby.be/fr/feather-adafruit/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html).

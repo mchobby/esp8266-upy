@@ -15,6 +15,23 @@ This board features:
 * Fully-isolated
 * 2 address bits availables (at the back)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ht0740-switch")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ht0740-switch
+```
+
 # Wire
 
 ## Wire HT0740 to aRaspberry-Pi PICO

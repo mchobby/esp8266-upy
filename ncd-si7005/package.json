@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["si70x.py", "github:mchobby/esp8266-upy/ncd-si7005/lib/pyboard/si70x.py"]
+  ],
+  "version": "1.0"
+}

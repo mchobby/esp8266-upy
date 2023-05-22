@@ -18,7 +18,20 @@ Ne disposant pas des produits COM-16566, KIT-16833, COM-16810, je n'ai pas eu l'
 
 # Bibliothèque
 
-Avant de tester les modules relais simple/multiples ou SSR via I2C, il est nécessaire de copier la bibliothèque [relayi2c.py](lib/relayi2c.py) sur la carte MicroPython.
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-relay-i2c")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-relay-i2c
+```
 
 # Brancher
 

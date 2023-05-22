@@ -28,6 +28,23 @@ Pour résumer les fonctionnalités:
 * Bus I2C
 * Echantillonnage en continu (jusqu'à 860 échantillons/seconde)
 
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/ads1015-ads1115")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/ads1015-ads1115
+ ```
+
 # Brancher
 
 Le ADS1x15 utilise une interface I2C. Les lignes SCL et SDA doivent donc être connectées (en plus de VDD et GND).

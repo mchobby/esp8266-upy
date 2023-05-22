@@ -14,6 +14,23 @@ This component:
 
 See the [TCA9554A datasheet](https://www.ti.com/lit/gpn/tca9554a) for more information.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tca9554a")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tca9554a
+```
+
 # Wire
 
 # TCA9554A to Raspberry-Pi Pico

@@ -18,6 +18,23 @@ The MicroPython Library is ported from 2 sources:
 * The Arduino source is [Arduino library for Pololu LSM303 boards](https://github.com/pololu/lsm303-arduino) @ GitHub which contains many ressource and reference.
 * The CircuitPython source is [CircuitPython library for Adafruit LSM303 board](https://github.com/adafruit/Adafruit_CircuitPython_LSM303_Accel) @ GitHub.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lsm303")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lsm303
+```
+
 # Wiring
 
 ## Pyboard

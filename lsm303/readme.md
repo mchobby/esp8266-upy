@@ -18,6 +18,23 @@ La bibliothèque MicroPython a été créée à partie de deux sources:
 * La source Arduino est [la bibliothèque Arduino pour la carte LSM303 de Pololu](https://github.com/pololu/lsm303-arduino) @ GitHub qui contient de nombreuses ressources et références.
 * La source CircuitPython est [la bibliothèque CircuitPython d'Adafruit pour LSM303](https://github.com/adafruit/Adafruit_CircuitPython_LSM303_Accel) @ GitHub.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lsm303")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lsm303
+```
+
 # Raccordement
 
 ## Pyboard

@@ -1,23 +1,20 @@
-# Mesure Humidité et température avec DHT11 et ESP8266 sous MicroPython
+[This file also exists in ENGLISH](readme_ENG.md)
 
-Attention, le DHT11 est un senseur d'entrée de gamme avec une précision limitée.
-Ce senseur n'utilise que la broche SDA du bus I2C.
+# Mesure Humidité et température avec DHT11 sous MicroPython
+
+Attention, le DHT11 est un capteur d'entrée de gamme avec une précision limitée.
+Ce capteur n'utilise que la broche SDA du bus I2C.
 
 * Shop: [DHT11](http://shop.mchobby.be/product.php?id_product=708)
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
-# Raccordement
+# Brancher
 
-![Raccordement](dht11_bb.jpg)
+![Brancher un DHT11](docs/_static/dht11_bb.jpg)
 
-# Code de test
+# Tester
 
 ```
-# Utiliser un senseur DHT11 avec ESP8266 sous MicroPython
-#
-# Shop: http://shop.mchobby.be/product.php?id_product=708
-# Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
-
 import machine
 
 # Le DHT 11 est déjà supporté par le Firmware MicroPython
@@ -32,7 +29,4 @@ d.humidity()
 
 ce qui donne les résultats suivants
 
-![Resultats](dht11_webrepl.jpg)
-    
-# Source et ressources
-* _aucune_
+![Resultats](docs/_static/dht11_webrepl.jpg)

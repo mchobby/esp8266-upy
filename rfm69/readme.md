@@ -38,6 +38,22 @@ Souvenez vous qu'en fonction des éléments obstruant la vue en ligne droite (en
 
 Mais avec des paramètres choisi avec soin, un vue dégagée et une bonne antenne directionnelle (adaptée à la fréquence de transmission), il est aussi possible d'atteindre une distance de transmission de 2 Km et même de 5 km quand les conditions sont vraiment optimales.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/rfm69")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/rfm69
+```
 
 # Brancher
 

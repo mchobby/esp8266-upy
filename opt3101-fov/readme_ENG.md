@@ -18,6 +18,23 @@ The distance measurement is based on the Time-of-Flight (ToF) of the light. The 
 * The I2C address change is done by manipulating sensor registers. This has not been implemented in this library.
 * The 0mm distance seems to be physicaly located at about 80mm from the board. This should be double checked and confirmed in real situation (not on my development desk).<br />By the way, by compating the values against thoses returned by the Arduino implementation, the distances seems consistants.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/opt3101-fov")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/opt3101-fov
+```
+
 # Wiring
 
 ## to Raspberry-Pi Pico

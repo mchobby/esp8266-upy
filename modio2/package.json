@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["modio2.py", "github:mchobby/esp8266-upy/modio2/lib/modio2.py"]
+  ],
+  "version": "1.0"
+}

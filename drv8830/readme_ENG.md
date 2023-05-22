@@ -10,6 +10,23 @@ In the SeeedStudio version, the power supply is also used to power-up the motors
 
 it be __absolutely necesary__ to use a Level Shifter over the SDA & SCL signals if the microcontroler is not 5V tolerant (eg: the Raspberry-Pi Pico)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/drv8830")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/drv8830
+```
+
 # Wiring
 
 ## Raspberry-Pi Pico

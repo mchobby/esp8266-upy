@@ -1,8 +1,10 @@
-# Utiliser un MOD-LTR-501ALS d'Olimex avec ESP8266 sous MicroPython
+[This file also exists in ENGLISH](readme_ENG.md)
 
-Le module utilise un MOD-LTR-501ALS pour effectuer une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). L'avantage du module MOD-LTR-501ALS est qu'il expose un port UEXT facilitant les raccordements. 
+# Utiliser un détecteur de luminosité Ambiante LTR-501ALS d'Olimex sous MicroPython
 
-![La carte MOD-LTR-501ALS](mod-LTR-501ALS.png)
+Le module utilise un MOD-LTR-501ALS pour effectuer une lecture de luminosité de 0.01 à 64.000 Lux (64K lux) et détection de proximité (jusqu'à 10cm). L'avantage du module MOD-LTR-501ALS est qu'il expose un port UEXT facilitant les raccordements.
+
+![La carte MOD-LTR-501ALS](docs/_static/mod-LTR-501ALS.png)
 
 Cette carte expose
 * Utilise le __bus I2C__
@@ -20,73 +22,88 @@ Ce dernier explique [comment flasher votre carte ESP8266 avec un câble console]
 
 Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C. La correspondance avec les GPIO de l'ESP8266 sont les suivantes.
 
-![Raccordements](ESP8266-EVB-UEXT.jpg)
+![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# MOD-LTR-501ALS Raccordement
+# Bibliothèque
 
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-LTR-501ALS
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-![Raccordements](mod-ltr-wiring.png)
+Sur une plateforme connectée:
 
-# Code de test
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modltr501")
+```
 
-## Bibliothèque ltr501
+Ou via l'utilitaire mpremote :
 
-Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque ltr501__ sur votre carte micropython.
-* Copiez le fichier `ltr501.py` sur la carte micropython.
+```
+mpremote mip install github:mchobby/esp8266-upy/modltr501
+```
 
-Vous pouvez également transférer le script de test `test.py` sur la carte PyBoard. 
+## Détail de la bibliothèque
 
-__Note__: la bibliothèque est basée sur le magnifique bibliothèque réalisée par Olimex pour Arduino. 
+__Note__: la bibliothèque est basée sur le magnifique bibliothèque réalisée par Olimex pour Arduino.
 
-La bibliothèque offre les fonctionalités suivantes:
+La bibliothèque `ltr501.py` offre les fonctionnalités suivantes:
 
 __Membres:__
-* `data_ready` : permet de savoir si le magnétomètre a une donnée prête à la lecture. Retourne une liste avec le type de donnée disponible. Soit DR_LUX pour une donnée de luminosité, soit DR_PROXIMITY pour information de proximité.
+* `data_ready` : permet de savoir si le capteur a une donnée prête à la lecture. Retourne une liste avec le type de donnée disponible. Soit DR_LUX pour une donnée de luminosité, soit DR_PROXIMITY pour information de proximité.
 * `lux` : permet de lire la valeur de luminosité, en Lux. Retourne un tuple avec (ALS_0, ALS_1) correspondant respectivement aux convertisseurs ADC (supposé être lumière visible et lumière infrarouge).  
 * `proximity` : Permet de lire la valeur du senseur de proximité. Retourne un tuple (valeur brute, distance_cm)
 
 __Methodes:__
-* `who_am_i()` : Identification du LTR-501ALS. Doit retourner 0x80 
-* `init(...)`  : initialize the senseur avec le paramètrage par défaut.
+* `who_am_i()` : Identification du LTR-501ALS. Doit retourner 0x80
+* `init(...)`  : initialize the capteur avec le paramètrage par défaut.
 
 
 __Methode init(...)__:
 
 `def init( lux_range )`:
 
-Appelé depuis le contructeur, permet de pré-configurer le senseur avec une valeur par défaut. Activant le Lux Senseur et Senseur de Proximité.
-* Lux Sensor (ALS) en Active mode, 64k lux range, Integration 100ms, repeat rate 500ms
-* Proximity sensor (PS)) en Active mode, x1 GAIN, 100ms measure rate
-* LED IR 60Hz, 50% duty, 50mA, 127 pulses
+Appelé depuis le contructeur, permet de pré-configurer le capteur avec une valeur par défaut. Active les capteurs Lux et Proximité.
+* Capteur de luminosité (ALS) en mode Actif, Gamme de 64k lux, Temps d'intégration 100ms, taux de répétition 500ms
+* Capteur de proximié (PS) en mode Actif, GAIN x1, débit de mesure: 100ms
+* LED Infrarouge: 60Hz, 50% cycle utile, 50mA, 127 pulsation (utilisé pour la détection de proximité)
 
-Parameters:
-* __lux_range__ : `LUX_RANGE_64K` gain dynamique de 2 Lux à 64000 Lux, `LUX_RANGE_320` gain dynamique de 0.01 Lux to 320 Lux.
+Parametres:
+* __lux_range__ : `LUX_RANGE_64K`  dynamique de 2 Lux à 64000 Lux, `LUX_RANGE_320` gain dynamique de 0.01 Lux à 320 Lux.
 
-## Exemple avec MOD-LTR-501ALS 
+
+# Brancher
+
+## MOD-LTR-501ALS sur ESP8266-EVB
+
+Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-LTR-501ALS
+
+![Raccordements](docs/_static/mod-ltr-wiring.png)
+
+# Tester
+
+## Exemple avec MOD-LTR-501ALS
 L'exemple ci-dessous fait une lecture de données brutes et  et l'affiche dans la session REPL.
 
 ```from machine import I2C, Pin
 from time import sleep
-from ltr501 import * 
+from ltr501 import *
 
-i2c = I2C( sda=Pin(2), scl=Pin(4) ) 
+i2c = I2C( sda=Pin(2), scl=Pin(4) )
 ltr = LTR_501ALS( i2c ) # gamme de 2 Lux à 64000 Lux
 
 # Utiliser le contructeur suivant pour la gamme de 0.01 à 320 Lux range
 #
-# ltr = LTR_501ALS( i2c, lux_range = LUX_RANGE_320 ) 
+# ltr = LTR_501ALS( i2c, lux_range = LUX_RANGE_320 )
 
 while True:
     # Y a t'il des données disponibles?
     dr = ltr.data_ready
 
-    # Luminosité disponible? 
+    # Luminosité disponible?
     if DR_LUX in dr:
         # Lecture des convertisseurs analogiques ALS_0 et ALS_1.
         l = ltr.lux  
 
-        # ALS_0 semble être en lumière visible 
+        # ALS_0 semble être en lumière visible
         # ALS_1 devrait être l'infrarouge.
         print( "Lux ALS_0, ALS_1 = ", l )
 

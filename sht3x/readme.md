@@ -12,6 +12,23 @@ Ce capteur expose une interface I2C, ce qui permet de rapatrier facilement les d
 
 Ce capteur intègre un élément chauffant qu'il est recommandé d'activer pour effectuer les mesures dans un environnement où l'humidité relative est importante (sinon cela risque d'altérer les résultats)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/sht3x")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/sht3x
+```
+
 ## A propos du pilote
 
 Le pilote `sht3x.py` proposé dans ce dépôt est un portage du [pilote Arduino proposé par DFRobot pour son breakout SHT31-F](https://www.dfrobot.com/product-2015.html).

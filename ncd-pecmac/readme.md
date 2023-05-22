@@ -50,6 +50,22 @@ Les mini modules et carte I2C de NCD National Control Device / ncd.io sont conç
 
 Cette carte de NCD dénommée "AC Current Sense board" (carte capteur courant alternatif) dispose de son propre microcontrôleur pour effectuer les tâches d'acquisition et de capture. La carte est également alimentée à l'aide d'une alimentation 12V séparée.
 
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-pecmac")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-pecmac
+```
+
 # Brancher
 
 Il s'agit d'une carte exposant un connecteur NCD (bus I2C). Il est donc nécessaire d'utiliser une interface appropriée pour s'y connecter. Ce dépôt propose une interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) et [modules ESP](../NCD/readme.md).

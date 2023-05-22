@@ -22,6 +22,23 @@ Le contenu est également basé sur le travail de "alexmrqt" disponible sur http
 
 Distribué sur la licence MIT (comme la bibliothèque originale).
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/gps-ultimate")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/gps-ultimate
+```
+
 # Brancher
 
 ![GPS Ultimate vers Pyboard](docs/_static/gps-ultimate-pyboard.jpg)
@@ -61,7 +78,7 @@ Notes:
 
 Voir `examples/minimaltest.py` qui effectue un parsing des trames NMEA à l'aide de la bibliothèque `adafruit_gps` et affiche la localisation GPS (avec un minimum d'information sur la sortie REPL).
 
-Pour un affichage plus complet, voir l'autre example `simpletest.py`. 
+Pour un affichage plus complet, voir l'autre example `simpletest.py`.
 
 Important: l'uart doit être créé à 9600 baud avec un __timeout fixé à 3000ms__. Sans cette configuration approrpriée de `timeout`, la bibliothèque sera incapable de fonctionner correctement.
 

@@ -20,6 +20,23 @@ __Caractéristiques:__
 
 ![PCA9685 en breakout](docs/_static/pwm-driver-usage.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/pca9685")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/pca9685
+```
+
 # Brancher
 
 # Raccorder le breakout (Pyboard)

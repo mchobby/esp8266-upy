@@ -14,11 +14,29 @@ The AD9833 generates a signal with a voltage of 0.6 Vpp (peak to peak).
 
 For more information, please check this [product sheet](http://shop.mchobby.be/product.php?id_product=1689) .
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ad9833")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ad9833
+```
+
+
 # Wiring
 
 ![Wire the AD9833 to Pyboard](docs/_static/ad9833-to-pyboard.jpg)
 
-__ATTENTION__ : bad quality connections (breadboard, bad quality wire) will drive you crazy! 
+__ATTENTION__ : bad quality connections (breadboard, bad quality wire) will drive you crazy!
 
 # Test it
 

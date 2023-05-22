@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["mag3110.py", "github:mchobby/esp8266-upy/modmag/lib/mag3110.py"]
+  ],
+  "version": "1.0"
+}

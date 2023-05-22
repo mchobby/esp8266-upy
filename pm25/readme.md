@@ -26,7 +26,20 @@ Notes:
 
 # Bibliothèque
 
-Avant de tester le PM 2.5 (PMS5003), il est nécessaire de copier la bibliothèque [pm25.py](lib/pm25.py) sur la carte MicroPython.
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/pm25")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/pm25
+```
 
 # Brancher
 

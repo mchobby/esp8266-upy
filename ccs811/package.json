@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["ccs811.py", "github:mchobby/esp8266-upy/ccs811/lib/ccs811.py"]
+  ],
+  "version": "1.0"
+}

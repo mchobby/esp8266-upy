@@ -24,6 +24,23 @@ The driver is based on former works described here below:
 * [Micropython Driver for ILI9341 of Ropod](https://github.com/mchobby/pyboard_drive/tree/master/ILI9341) (GitHub)
 * [FreeType generator (binary font file for MicroControler)](https://github.com/mchobby/freetype-generator) (GitHub, MCHobby)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ili934x")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ili934x
+```
+
 # Wiring
 
 ## Pico + 2.4" FeatherWing

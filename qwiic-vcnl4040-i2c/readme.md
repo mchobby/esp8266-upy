@@ -15,7 +15,20 @@ Si vous avez besoin d'une estimation quantitative de la distance (ex: 177mm) alo
 
 # Bibliothèque
 
-Avant de tester le capteur I2C, il est nécessaire de copier la bibliothèque [vcnl4040.py](lib/vcnl4040.py) sur la carte MicroPython.
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-vcnl4040-i2c")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-vcnl4040-i2c
+```
 
 
 # Brancher

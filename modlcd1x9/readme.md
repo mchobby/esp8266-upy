@@ -1,3 +1,5 @@
+[This file also exists in ENGLISH here](readme_ENG.md)
+
 # Utiliser un MOD-LCD1x9 d'Olimex avec sous MicroPython
 
 MOD-LCD1x9 est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT.
@@ -27,31 +29,26 @@ Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus 
 
 ![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# Brancher
-## MOD-LCD1x9 sur ESP8266-EVB
+# Bibliothèque
 
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-LCD1x9
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-![Raccordements MOD-LCD1x9 sur ESP8266](docs/_static/mod-lcd1x9-wiring.jpg)
+Sur une plateforme connectée:
 
-## MOD-LCD1x9 sur Pyboard
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modlcd1x9")
+```
 
-Si vous diposez d'une [carte d'interface UEXT pour Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) alors le raccordement est totalement trivial.
+Ou via l'utilitaire mpremote :
 
-Sinon, il est possible de réaliser les quelques raccordements suivants:
+```
+mpremote mip install github:mchobby/esp8266-upy/modlcd1x9
+```
 
-![Raccordements MOD-LCD1x9 sur Pyboard](docs/_static/mod-lcd1x9-to-pyboard.jpg)
+## Détails de la bibliothèque
 
-# Tester
-
-## Bibliothèque modlcd19
-
-Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque modlcd19__ sur votre carte micropython.
-* Copiez le fichier `modlcd19.py` sur la carte micropython.
-
-Vous pouvez également transférer le script de test `test.py` sur la carte PyBoard. Les fichiers `testflt.py` et `testint.py` permettent respectivement d'afficher des valeurs décimales et des valeurs entières (avec justification à droite).   
-
-La bibliothèque offre les fonctionalités suivantes:
+La bibliothèque `modlcd19.py` offre les fonctionnalités suivantes:
 
 __Membres:__
 * Aucun
@@ -73,6 +70,23 @@ Afficher une valeur sur le LCD.
 Par exemple:
  * lcd.write( 12.4693, format='%.3f v' ) -> avec 3 decimals -> "12.469 v"
  * lcd.write( 12.13, '%5d' ) -> affiche un Float comme un entier -> "   12"
+
+# Brancher
+## MOD-LCD1x9 sur ESP8266-EVB
+
+Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-LCD1x9
+
+![Raccordements MOD-LCD1x9 sur ESP8266](docs/_static/mod-lcd1x9-wiring.jpg)
+
+## MOD-LCD1x9 sur Pyboard
+
+Si vous disposez d'une [carte d'interface UEXT pour Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) alors le raccordement est totalement trivial.
+
+Sinon, il est possible de réaliser les quelques raccordements suivants:
+
+![Raccordements MOD-LCD1x9 sur Pyboard](docs/_static/mod-lcd1x9-to-pyboard.jpg)
+
+# Tester
 
 ## Exemple avec MOD-LCD1x9
 ```

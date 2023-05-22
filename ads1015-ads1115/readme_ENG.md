@@ -24,6 +24,23 @@ Feature summary:
 * I2C bus
 * Continuous sampling up to 860 samples/second
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ads1015-ads1115")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ads1015-ads1115
+```
+
 # Wiring
 
 The ADS1x15 uses an I2C interface. The SCL & SDA must be wired (VDD and GND as well).

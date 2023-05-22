@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["ili9488.py", "github:mchobby/esp8266-upy/ili9488/lib/ili9488.py"]
+  ],
+  "version": "1.0"
+}

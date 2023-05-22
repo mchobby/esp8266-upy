@@ -12,11 +12,24 @@ It is really a great feature!
 
 # Library
 
-Before to test the I2C keypad, it will be necessary to copy the [kpadi2c.py](lib/kpadi2c.py) library on the MicroPython board.
-
 Bibliothèques:
 * [kpadi2c.py](lib/kpadi2c.py) : bibliothèque de base permettant d'interagir avec le module KeyPad I2C.
 * [kpadcode.py](lib/kpadcode.py) : bibliothèque complémentaire à [kpadi2c.py](lib/kpadi2c.py) destiné à la saisie type "DigiCode".
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-keypad-i2c")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-keypad-i2c
+```
 
 # Wiring
 

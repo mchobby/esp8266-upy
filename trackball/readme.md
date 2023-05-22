@@ -14,6 +14,24 @@ Enfin, comme il s'agit d'un composant I2C, il ne fait que deux signaux pour inte
 
 __Note:__ la bibliothèque ne prend pas en charge la gestion de la broche d'interruption. Le breakout et son microcontrôleur propose également un mécanisme de lecture de l'interruption par voie logicielle (via le registre REG_INT); c'est cette dernière méthode qui est utilisée par la bibliothèque.
 
+
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/trackball")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/trackball
+```
+
 # Brancher
 
 ## Avec Pyboard

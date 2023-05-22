@@ -13,8 +13,20 @@ The `was_pressed` property do also allows the detect button click even when the 
 
 # Library
 
-Before testing the I2C joystick, you will have to copy the [joyi2c.py](lib/joyi2c.py) library to your MicroPython board.
+The library must be copied on the MicroPython board before using the examples.
 
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-joystick-i2c")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-joystick-i2c
+```
 
 # Wiring
 

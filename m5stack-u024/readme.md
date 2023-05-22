@@ -16,6 +16,23 @@ En utilisant ce joystick et la bibliothèque, vous pourrez obtenir les valeurs `
 
 ![M5Stack u024-c I2C Joystick direction](docs/_static/u024-c-values.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u024")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u024
+```
+
 # Brancher
 
 Le joystick peut être alimenté en 3.3V ou 5V.

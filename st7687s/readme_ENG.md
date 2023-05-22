@@ -27,6 +27,23 @@ __Disadvantages:__
 * Data rate slow down because of the Latch handling (HC595).<br />Fill the screen needs up to 5 seconds.
 * Graphical animation and bitmap transfert restricted by the data rate.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/st7687s")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/st7687s
+```
+
 ## Portage limit
 The portage to MicroPython did handle almost all of the initial functions.
 

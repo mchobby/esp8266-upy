@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["grove5way.py", "github:mchobby/esp8266-upy/grove-5-way-switch/lib/grove5way.py"],
+		["grove6dip.py", "github:mchobby/esp8266-upy/grove-5-way-switch/lib/grove6dip.py"]
+  ],
+  "version": "1.0"
+}

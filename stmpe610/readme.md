@@ -8,6 +8,23 @@ Le STMPE610 est un périphérique SPI utilisé sur plusieurs produits TFT d'Adaf
 
 Cette bibliothèque à été testée avec le [TFT FeatherWing 2.4"](https://shop.mchobby.be/fr/feather-adafruit/1050-tft-featherwing-24-touch-320x240-3232100010505-adafruit.html) d'Adafruit basé sur le [controleur ILI934x (voir le pilote MicroPython)](https://github.com/mchobby/esp8266-upy/tree/master/ili934x)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/stmpe610")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/stmpe610
+```
+
 # Brancher
 
 Les tests ont étés réalisé à l'aide d'un Raspberry-Pico comme décrit dans le raccordement ci-dessous. Voir le [pilote MicroPython ILI934x](https://github.com/mchobby/esp8266-upy/tree/master/ili934x) pour des branchements sur d'autres microcontroleurs.

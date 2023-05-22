@@ -12,6 +12,23 @@ Le module expose également 7 GPIOs accessibles via le bus I2C. Il est possible 
 
 L'intérêt de la bibliothèque MicroPython `modtc_mk2.py` est de pouvoir accéder aux fonctionnalités en utilisant le numéro du GPIO sur la carte.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modtc-mk2")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modtc-mk2
+```
+
 # Brancher
 
 Pour brancher la carte, il suffit d'utiliser son connecteur UEXT.

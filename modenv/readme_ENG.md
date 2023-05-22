@@ -8,6 +8,23 @@ The MOD-ENV board from Olimex features two I2C sensors:
 
 ![MOD-ENV sensor from Olimex](docs/_static/modenv.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modenv")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modenv
+```
+
 # Wire
 The sensor can be easily plugged onto a board exposing an UEXT port like the [UEXT adapter for pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) or the [Pyboard-UNO-R3](https://shop.mchobby.be/fr/nouveaute/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html).
 

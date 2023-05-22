@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["pca9685.py", "github:mchobby/esp8266-upy/pca9685/lib/pca9685.py"],
+		["servoctrl.py", "github:mchobby/esp8266-upy/pca9685/lib/servoctrl.py"]
+  ],
+  "version": "0.0.1"
+}

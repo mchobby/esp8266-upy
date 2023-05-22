@@ -38,6 +38,22 @@ Remember that depending on obstructions (line of sight), frequency, antenna and 
 
 With properly tuned parameter, a line of sight, this module can reach 2 Km distance and possibly 5 km in really good condition.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/rfm69")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/rfm69
+```
 
 # Wiring
 

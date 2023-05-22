@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["mpr121.py", "github:mcauser/micropython-mpr121/mpr121.py"]
+  ],
+  "version": "1.0"
+}

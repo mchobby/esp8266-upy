@@ -10,7 +10,24 @@ Dans la version SeeedStudio, la tension d'alimentation est utilisée pour l'alim
 
 Il __faudra impérativement__ un _Level Shifter_ sur les signaux SDA et SCL si le microcontrôleur n'est pas tolérant 5V (ex: le Pico)
 
-# Raccordement
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/drv8830")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/drv8830
+ ```
+
+# Brancher
 
 ## Raspberry-Pi Pico
 
@@ -18,7 +35,7 @@ Un _level shifter_ est utilisé pour convertir les signaux SDA et SCL du bus I2C
 
 ![Mini I2C Motor Driver sur Raspberry-Pi Pico](docs/_static/mini_i2c_motor-to-pico.jpg)
 
-# Code de test
+# Test
 
 Pour pouvoir utiliser ce contrôleur moteur, il est nécessaire d'installer la bibliothèque [`lib/drv8830mot.py`](lib/drv8830mot.py) sur la carte MicroPython.
 

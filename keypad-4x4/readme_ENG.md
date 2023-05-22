@@ -10,6 +10,23 @@ This kind of interface can be used to create simple and efficent input interface
 
 It is easy to put such hardware at work with some digital input/output (8 in this case).
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/keypad-4x4")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/keypad-4x4
+```
+
 # Wiring
 
 ![Keypad to Pyboard](docs/_static/keypad-to-pyboard.jpg)

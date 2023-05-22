@@ -10,6 +10,23 @@ The MPR121 is an I2C chip which allow to select up to 4 address for a total of 4
 
 For more information, please check this [product sheet](http://shop.mchobby.be/product.php?id_product=1685) or [that one](hhttps://www.adafruit.com/product/1982).
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/mpr121")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/mpr121
+```
+
 # Wiring
 
 ## To Pyboard

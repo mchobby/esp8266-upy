@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["lcd3310.py", "github:mchobby/esp8266-upy/modlcd3310/lib/lcd3310.py"]
+  ],
+  "version": "1.0"
+}

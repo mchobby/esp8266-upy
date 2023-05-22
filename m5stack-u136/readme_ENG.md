@@ -9,6 +9,23 @@ DLight Unit is a Digital Ambient Light Sensor. Adopts BH1750FVI sensor (I2C inte
 * Support light source variations (incandescent, fluorescent, halogen, white LED, sunlight, etc)
 * Wide Range LUX (1-65535 lux)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u136")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u136
+```
+
 # Wiring
 
 The sensor  can be powered with 3.3V or 5V power supply.

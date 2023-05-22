@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["rs485iso.py", "github:mchobby/esp8266-upy/modrs485iso/lib/rs485iso.py"]
+  ],
+  "version": "1.0"
+}

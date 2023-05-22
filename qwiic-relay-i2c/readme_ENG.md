@@ -16,9 +16,23 @@ __Note:__
 
 As I do not have any of the COM-16566, KIT-16833, COM-16810 product, it has not been possible to test the `MultiRelay` against real boards.
 
+
 # Library
 
-Before testing the SparkFun I2C relay modules (single relay of multiples relays), it will be necessary to copy the [relayi2c.py](lib/relayi2c.py) library on the MicroPython board.
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-relay-i2c")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-relay-i2c
+```
 
 # Wiring
 

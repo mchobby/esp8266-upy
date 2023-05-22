@@ -11,6 +11,23 @@ This is avoids to load the file into memory and overload it (an important featur
 
 In counterpart, this also imply for file access and more byto to byte transfer (so it is also slower).
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/FILEFORMAT")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/FILEFORMAT
+```
+
 # IMAGES (supported format)
 
 ## BMP format
@@ -53,7 +70,7 @@ Ressources:
 * [bmp_file_format @ www.ece.ualberta.ca](http://www.ece.ualberta.ca/~elliott/ee552/studentAppNotes/2003_w/misc/bmp_file_format/bmp_file_format.htm) from Nathan Liesch
 
 
-## Le format PBM (Portable Bit Map)
+## The PBM format (Portable Bit Map)
 The PBM is used to encore 2 color images (1 bit color, white/black). It does exists a text based format version (verbose) and a binary format (more compact).
 
 Create a PBM file is quite easy with tool like Gimp. Load the image into Gimp then select the `File | Exporter as...` menu entry. Name your exported file with `.pbm` extension. __No need for color filtering and treatment, Gimp does applu a filter that perfectly degrade the colors to white/black image__.

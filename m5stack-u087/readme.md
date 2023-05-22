@@ -18,6 +18,23 @@ __Alimentation 5V requise:__
 
 Ce module doit être alimenté en 5V pour assurer un bon fonctionnement. Par contre, les signaux SDA/SCL du bus I2C sont bien en logique 3.3V. Ce module peut donc être utilisé avec vos microcontrôleurs 3.3V comme ESP32, Pico, Pyboard, M5Stack core, Raspberry.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u087")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u087
+```
+
 # Brancher
 
 ## Raspberry-Pi Pico

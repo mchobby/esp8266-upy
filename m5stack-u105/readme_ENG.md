@@ -10,6 +10,23 @@ __Please note:__
 * The AD9833 output signal is around 680mV.
 * The SawTooth fequency is fixed at 55.9 Hz.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u105")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u105
+```
+
 # Wiring
 
 ## Wire to Pico

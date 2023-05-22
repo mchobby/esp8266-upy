@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["ds3231.py", "github:mchobby/esp8266-upy/ds3231/lib/ds3231.py"]
+  ],
+  "version": "1.0"
+}

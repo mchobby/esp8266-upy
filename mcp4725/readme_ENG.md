@@ -10,7 +10,24 @@ Thank to the MCP4725, it is now possible to generate arbitrary output voltage ov
 
  Working with logic 3.3V or 5V. The breakout offers an A0 address pin (LOW by default), so you can connect two of these DACs on one I2C bus.
 
-# Wiring²
+ # Library
+
+ The library must be copied on the MicroPython board before using the examples.
+
+ On a WiFi capable plateform:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/mcp4725")
+ ```
+
+ Or via the mpremote utility :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/mcp4725
+ ```
+
+# Wiring
 
 ## MicroPython Pyboard
 

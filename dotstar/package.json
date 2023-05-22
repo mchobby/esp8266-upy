@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["dotstar.py", "github:mchobby/esp8266-upy/dotstar/lib/dotstar.py"]
+  ],
+  "version": "1.0"
+}

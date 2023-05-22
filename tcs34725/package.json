@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["tcs34725.py", "github:mchobby/esp8266-upy/tcs34725/lib/tcs34725.py"]
+  ],
+  "version": "0.0.1"
+}

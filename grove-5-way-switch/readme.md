@@ -31,8 +31,24 @@ Il __faudra impérativement__ un _Level Shifter_ sur les signaux SDA et SCL si l
 
 __Note:__ la méthode MicroPython `I2C.scan()` ne retourne aucun résultat pour l'adresse I2C du module. Notez donc bien la nouvelle adresse I2C si celle-ci est modifiée.
 
+# Bibliothèque
 
-# Raccordement
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/grove-5-way-switch")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/grove-5-way-switch
+```
+
+# Brancher
 
 ## Raspberry-Pi Pico
 
@@ -263,6 +279,5 @@ Le script de test [examples/testaddr.py](examples/testaddr.py) montre comment ex
 __ATTENTION:__ il est important de bien identifier et noter la nouvelle adresse du module.
 
 # Liste d'achat
-* [Raspberry-Pi Pico](https://shop.mchobby.be/product.php?id_product=2025
-) @ MCHobby
+* [Raspberry-Pi Pico](https://shop.mchobby.be/product.php?id_product=2025) @ MCHobby
 * [4bits level-shifter (I2C compatible)](https://shop.mchobby.be/product.php?id_product=131)

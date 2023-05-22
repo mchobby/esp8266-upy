@@ -32,6 +32,10 @@ Under 480 kPa, the sensor can be used dorectly onto a 3.3V logic microcontroler 
 
 480 kPa is about 5 time atmospheric pressure... so it is a lot.
 
+# Library
+
+No library for this componant!
+
 # Wiring
 
 ## Raspberry-Pico

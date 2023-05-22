@@ -1,8 +1,10 @@
-# Use an Olimex MOD-IO with ESP8266 under MicroPython
+[This file also exists in ENGLISH here](readme_ENG.md)
 
-MOD-IO est une carte d'interface d'Olimex utilisant le port UEXT. 
+# Utiliser un carte Olimex MOD-IO avec MicroPython
 
-![La carte MOD-IO](mod-io.png)
+MOD-IO est une carte d'interface d'Olimex utilisant le port UEXT.
+
+![La carte MOD-IO](docs/_static/mod-io.png)
 
 Cette carte expose.
 * 4 relais,
@@ -12,13 +14,6 @@ Cette carte expose.
 * Interface I2C (adresse 0x58 par défault)
 * Addresse modifiable (stockée en EEProm)
 * Alimentation: 8-30VDC
-
-__Où acheter__
-* Shop: [UEXT Expandable Input/Output board (MOD-IO)](http://shop.mchobby.be/product.php?id_product=1408)
-* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
-* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
-* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
-* Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO
 
 # ESP8266-EVB sous MicroPython
 Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
@@ -31,32 +26,31 @@ Ce dernier explique [comment flasher votre carte ESP8266 avec un câble console]
 
 Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C. La correspondance avec les GPIO de l'ESP8266 sont les suivantes.
 
-![Raccordements](ESP8266-EVB-UEXT.jpg)
+![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# MOD-IO Raccordement
- 
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-IO.
+# Bibliothèque
 
-![Raccordements](ESP8266-EVB-UEXT-SERIAL.jpg)
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-J'ai ensuite effectuer les raccordements suivant sur la carte MOD-IO:
+Sur une plateforme connectée:
 
-![Raccordements](mod-io-wiring-low.png)
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modio")
+```
 
-* L'opto-coupleur IN3 est activé à l'aide d'une tension de 16V (choisi arbitrairement entre 5 et 24V DC)
-* Un potentiomètre de 10K est branché sur l'entrée analogique 2 (AIN-2) avec une tension fixée à 1.129v
-* Les relais 1 et 3 (sur les 4 relais à disposition) sont activés.
+Ou via l'utilitaire mpremote :
 
-# Code de test
+```
+mpremote mip install github:mchobby/esp8266-upy/modio
+```
 
-## Bibliothèque modio
+
+## Détail de la bibliothèque modio
 
 Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque modio__ sur votre carte micropython.
-* Copiez le fichier `modio.py` sur la carte micropython.
 
-Vous pouvez également transférer le script de test `test.py` sur la carte PyBoard. 
-
-La bibliothèque offre les fonctionalités suivantes
+La bibliothèque offre les fonctionnalités suivantes
 
 __Membres:__
 * `carte.relais[index] = True` : (indexed property) Fixe l'état du relais.
@@ -71,14 +65,24 @@ __Membres:__
 __Methodes:__
 * `carte.change_address( 0x22 )` : méthode qui change l'adresse I2C de la carte MOD-IO sur le bus. Fixe la nouvelle adresse à 0x22 (à la place de la valeur par défault 0x58). __Le bouton "BUT" doit être maintenu enfoncé pendant l'envoi de la commande!
 
+# Brancher
+
+Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-IO.
+
+![Raccordements](docs/_static/ESP8266-EVB-UEXT-SERIAL.jpg)
+
+J'ai ensuite effectuer les raccordements suivant sur la carte MOD-IO:
+
+![Raccordements](docs/_static/mod-io-wiring-low.png)
+
+* L'opto-coupleur IN3 est activé à l'aide d'une tension de 16V (choisi arbitrairement entre 5 et 24V DC)
+* Un potentiomètre de 10K est branché sur l'entrée analogique 2 (AIN-2) avec une tension fixée à 1.129v
+* Les relais 1 et 3 (sur les 4 relais à disposition) sont activés.
+
+# Tester
 
 ## Exemple avec MOD-IO
 ```
-# Utilisation du MOD-IO d'Olimex avec un ESP8266 sous MicroPython
-#
-# Shop: http://shop.mchobby.be/product.php?id_product=1408
-# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO
-
 from machine import I2C, Pin
 from time import sleep_ms
 from modio import MODIO
@@ -88,17 +92,17 @@ brd = MODIO( i2c ) # default address=0x58
 
 # === Read Analog Input ===========================
 for input_index in range( 4 ):
-    print( 'Analog %s : %s Volts' %( input_index,brd.analogs[input_index] ) ) 
+    print( 'Analog %s : %s Volts' %( input_index,brd.analogs[input_index] ) )
 
 brd.analogs.raw = True
 for input_index in range( 4 ):
-    print( 'Analog %s : %s of 1023' %( input_index,brd.analogs[input_index] ) ) 
+    print( 'Analog %s : %s of 1023' %( input_index,brd.analogs[input_index] ) )
 
 print( 'Read RAW alls analogs in one shot' )
 print( brd.analogs.states )
 
 print( 'Read VOLTS alls analogs in one shot' )
-brd.analogs.raw = False # Switch back to voltage conversion 
+brd.analogs.raw = False # Switch back to voltage conversion
 print( brd.analogs.states )
 
 # === OptoIsolated Input ==========================
@@ -112,10 +116,10 @@ print( brd.inputs[2] )
 print( 'Set relay by index' )
 brd.relais[0] = True
 brd.relais[2] = True
-print( 'Relais[0..3] states : %s' % brd.relais.states ) 
+print( 'Relais[0..3] states : %s' % brd.relais.states )
 sleep_ms( 2000 )
 # switch all off
-brd.relais.states = False 
+brd.relais.states = False
 
 print( 'one relay at the time')
 for irelay in range( 4 ):
@@ -142,7 +146,7 @@ Ce qui produit le résultat suivant :
 ```
 MicroPython v1.9.4-8-ga9a3caad0 on 2018-05-11; ESP module with ESP8266
 Type "help()" for more information.
->>> 
+>>>
 >>> import test
 Analog 0 : 0.403226 Volts
 Analog 1 : 0.0 Volts
@@ -198,3 +202,9 @@ Par conséquent, la réponse ne sera jamais reçue (comme attendue) par le micro
 
 Un `i2c.scan()` permet de confirmer le changement d'adresse.
 
+# Où acheter
+* Shop: [UEXT Expandable Input/Output board (MOD-IO)](http://shop.mchobby.be/product.php?id_product=1408)
+* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
+* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
+* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
+* Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO

@@ -10,6 +10,24 @@ Le MPR121 est un composant I2C qui permet de sélectionner jusque 4 adresse pour
 
 Pour plus d'information, voyez cette [fiche produit](http://shop.mchobby.be/product.php?id_product=1685) ou [celle-ci](hhttps://www.adafruit.com/product/1982).
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/mpr121")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/mpr121
+```
+
+
 # Brancher
 
 ## sur MicroPython Pyboard

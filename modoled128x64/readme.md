@@ -1,8 +1,10 @@
+[This file also exists in ENGLISH](readme_ENG.md)
+
 # Utiliser un MOD-OLED-128x64 d'Olimex avec ESP8266 sous MicroPython
 
-MOD-OLED-128x64 est un afficheur LCD Alphanumerique 9 position d'Olimex utilisant le port UEXT.
+MOD-OLED-128x64 est un afficheur OLED 128x64 pixels equipé d'un port UEXT.
 
-![La carte MOD-OLED-128x64](OLED-10b.png)
+![La carte MOD-OLED-128x64](docs/_static/OLED-10b.png)
 
 Cette carte expose
 * Utilise le Bus I2C
@@ -12,8 +14,8 @@ Cette carte expose
 
 La bibliothèque MicroPython `ssd1603.py` permet de manipuler les écrans OLED 128x64
 
-# ESP8266-EVB sous MicroPython
-Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
+# A propos ESP8266-EVB sous MicroPython
+Avant de se lancer dans l'utilisation du module MOD-OLED sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
 
 Nous vous recommandons la lecture du tutoriel [ESP8266-EVB](https://wiki.mchobby.be/index.php?title=ESP8266-DEV) sur le wiki de MCHobby.
 
@@ -23,26 +25,24 @@ Ce dernier explique [comment flasher votre carte ESP8266 avec un câble console]
 
 Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C. La correspondance avec les GPIO de l'ESP8266 sont les suivantes.
 
-![Raccordements](ESP8266-EVB-UEXT.jpg)
+![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# MOD-OLED-128x64 Raccordement
+# Bibliothèque
+
+La bibliothèque à utiliser se trouve sur [esp8266-upy/oled-ssd1306](https://github.com/mchobby/esp8266-upy/tree/master/oled-ssd1306) suivez les instructions d'installation qui s'y trouve.
+
+# Brancher
+##  MOD-OLED-128x64 sur ESP8266-EVB
 
 Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-OLED-128x64
 
-![Raccordements](mod-oled128x64-wiring.jpg)
+![Raccordements](docs/_static/mod-oled128x64-wiring.jpg)
 
-# Bibliothèque  
-La bibliothèque `sd1306.py` est un pilote SSD1306 I2C et SPI (MicroPyhton GitHub) pour écran OLED ssd1306. Cette bibliothèque doit être copiée sur la carte PyBoard.
+# Tester
 
-* [Télécharger la bibliothèque ssd1306](https://raw.githubusercontent.com/micropython/micropython/master/drivers/display/ssd1306.py)
-
-# Code de test
-
-## Créer LCD OLED 128x64
+## Créer l'instance du module
 
 Dans tous les cas de figure, l'écran OLED sera créé sous la référence __lcd__ .
-
-![OLED 128x64](OLED-10b.png)
 
 ```
 # Utilisation de la bibliothèque ssd1306 avec ESP8266-EVB
@@ -60,7 +60,7 @@ lcd = ssd1306.SSD1306_I2C( 128, 64, i2c )
 # Tester la bibliothèque
 Dans les exemples ci-dessous, voici les paramètres que vous retrouverez dans les différents appels de fonction:
 
-![Coordonnées](FEATHER-MICROPYTHON-OLED-position.png)
+![Coordonnées](docs/_static/FEATHER-MICROPYTHON-OLED-position.png)
 * __x__ : position du point par rapport au côté gauche de l'écran.
 * __y__ : position du point par rapport au dessus de l'écran.
 * __w__ : largeur (du mot Width).

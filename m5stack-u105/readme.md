@@ -10,6 +10,23 @@ __A noter:__
 * Le signal de sortie de l'AD9833 est de l'ordre de 680mV.
 * La fréquence du signal en dent de scie est fixé à 55.9 Hz
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u105")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u105
+```
+
 # Brancher
 
 ## Brancher sur Pico

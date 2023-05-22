@@ -14,6 +14,23 @@ Il y a deux options pour utiliser une autre font:
 * __SMALL-FONT__ : __le présent projet__ permet d'écrire du texte en utilisant une font nettement plus compacte (projet issu du [portage du pilote st7687s](https://github.com/mchobby/esp8266-upy/tree/master/st7687s) ).
 * __FreeType-Generator__ : [un projet alternatif](https://github.com/mchobby/freetype-generator) permettant de créer un fichier binaire pour charger une font sous MicroPython. Fichier exploité avec la classe FontDrawer pour dessiner le texte dans un FrameBuffer.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/SMALL-FONT")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/SMALL-FONT
+```
+
 # Utiliser
 
 Le projet SMALL-FONT est principalement constitué de la classe `FontDrawer` dans le fichier [lib/sfont.py](lib/sfont.py) .

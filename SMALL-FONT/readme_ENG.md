@@ -14,6 +14,24 @@ It exists two other options for Font drawing:
 * __SMALL-FONT__ : __this project__ allows to write text with less thicker font (coming from [st7687s display driver](https://github.com/mchobby/esp8266-upy/tree/master/st7687s) ).
 * __FreeType-Generator__ : [an alternative project](https://github.com/mchobby/freetype-generator) creating a binary file for Fonts under MicroPython. File used with the FontDrawer class to draw text into the FrameBuffer.
 
+
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/SMALL-FONT")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/SMALL-FONT
+```
+
 # Using
 
 The SMALL-FONT project is mainly made of the `FontDrawer` class stored in [lib/sfont.py](lib/sfont.py) (_Small Font_).

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["pm25.py", "github:mchobby/esp8266-upy/pm25/lib/pm25.py"]
+  ],
+  "version": "0.0.1"
+}

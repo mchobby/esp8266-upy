@@ -21,6 +21,23 @@ Porting this board to MicroPython is based on the "[Sense Hat Unchained](https:/
 
 You can see this project in action in the "[Sense-Hat under MicroPython](https://youtu.be/PUU4EqAMHds)" on this YouTube video.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/hat-sense")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/hat-sense
+```
+
 # Wiring
 
 ## Raspberry-Pi PICO

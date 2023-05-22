@@ -8,6 +8,23 @@ CardKB est un mini-clavier très complet qui se connecte en I2C sur votre MicroC
 
 Initialement développé par [M5Stack pour son M5-Core](https://shop.mchobby.be/fr/153-m5stack-esp) et expose un [connecteur Groove](https://shop.mchobby.be/fr/154-grove) pour faciliter les raccordements.
 
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/cardkb")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/cardkb
+ ```
+
 # Brancher
 
 ## Brancher sur M5Stack

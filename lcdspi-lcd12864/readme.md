@@ -6,6 +6,23 @@ DFRobot propose un écran LCD 128 x 64 (DFR0091) qu'il est possible de commander
 
 ![LCD 128x64 (DFR0091)](docs/_static/lcd12864.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lcdspi-lcd12864")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lcdspi-lcd12864
+```
+
 # Brancher
 
 Avant d'utiliser l'afficheur, il faut le configurer en mode SPI et activer le rétro-éclairage.

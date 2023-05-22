@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["pca9536.py", "github:mchobby/esp8266-upy/pca9536/lib/pca9536.py"]
+  ],
+  "version": "0.0.1"
+}

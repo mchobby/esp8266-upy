@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["bmp180.py", "github:mchobby/esp8266-upy/bmp180/lib/bmp180.py"]
+  ],
+  "version": "1.0"
+}

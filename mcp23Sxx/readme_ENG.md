@@ -16,11 +16,22 @@ The MCP23S17 do have 3 address bits to change the hardware ID (device_id) of the
 
 The MCP23S17 driver does expose the same API as the [MCP23017 (i2c)](https://github.com/mchobby/esp8266-upy/tree/master/mcp230xx), so you can interchange the componants and adapts the script (and wiring) to use the proper bus.
 
-## Test
+# Library
 
-This driver has been tested against the [HAT PiFace Digital](https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html) based on a MCP23S17 at heart.
+The library must be copied on the MicroPython board before using the examples.
 
-The various [examples](examples) scripts will help you with the usage of the [mcp23Sxx.py](lib) library.
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/mcp23Sxx")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/mcp23Sxx
+```
 
 # Wiring
 
@@ -31,3 +42,9 @@ Here how to wire the MCP23S17 to a MicroPython PYBStick board.
 The schematic here below wires the MCP23S17 to the MicroPython Pyboard.
 
 ![MCP23S17 to PYBoard](docs/_static/mcp23s17-to-pyboard.jpg)
+
+## Test
+
+This driver has been tested against the [HAT PiFace Digital](https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html) based on a MCP23S17 at heart.
+
+The various [examples](examples) scripts will help you with the usage of the [mcp23Sxx.py](lib) library.

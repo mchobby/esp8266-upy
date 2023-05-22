@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["modrgb.py", "github:mchobby/esp8266-upy/modrgb/lib/modrgb.py"],
+		["rgbfx.py", "github:mchobby/esp8266-upy/modrgb/lib/rgbfx.py"]
+  ],
+  "version": "1.0"
+}

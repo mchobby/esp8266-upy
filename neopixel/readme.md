@@ -1,4 +1,9 @@
-# Utilisation de NeoPixel sous MicroPython
+[This file also exists in ENGLISH](readme_ENG.md)
+
+# Utilisation de NeoPixel / WS2812 sous MicroPython
+
+__Bon nombre de firmware MicroPython supportent déjà NeoPixel out-of-the-box__.<br />Prenez le temps de vérifier avant d'installer cette bibliothèque (ws2812 est destinée à la Pyboard).
+
 Les LED RGB WS2812, aussi appelées NeoPixels chez Adafruit, sont des LEDs intelligentes capables d'offrir une explosion de couleur et équipe de nombreux types de produits (ruban, anneau, panneau, etc.
 
 ![Exemple de NeoPixels](docs/_static/neopixels.jpg)
@@ -13,10 +18,27 @@ La bibliothèque __ne prend pas en charge__:
 * l'ancienne génération de NeoPixel (flux de donnée à 400 KHz)
 * les LEDs NeoPixel RGBW.
 
-# Raccordement (ESP8266, Pyboard)
-## ESP8266 sous sous 3.3V
+# Bibliothèque
 
-![Branchement 3.3V](docs/_static/neopixel_bb.jpg)
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/neopixel")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/neopixel
+```
+
+# Raccordement
+## ESP8266 sous 3.3V
+
+![Branchement ESP8266 en 3.3V](docs/_static/neopixel_bb.jpg)
 
 | Broche ESP8266 | Broche  NeoPixel | Note                                                                                                       |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------|
@@ -30,7 +52,7 @@ Il est possible d'alimenter les NeoPixels sous 5V afin d'avoir des couleurs vive
 
 Il faut absolument utiliser un [Level Shifter 74AHCT125](http://df.mchobby.be/datasheet/74AHC125.pdf) (pdf) aussi que le signal de commande des NeoPixel soit en 5V.
 
-![Branchement 5V](docs/_static/neopixel-2_bb.jpg)
+![Branchement ESP8266 en 5V](docs/_static/neopixel-2_bb.jpg)
 
 ## ESP8266 - broches compatibles
 
@@ -51,6 +73,8 @@ Nous avons testé la bibliothèque NeoPixel sur les broches suivantes de l'ESP82
 ## Pyboard sous 5V
 
 A noter que MicroPython Pyboard ne dispose pas de pilotes natifs mais il existe différentes ressources sur Internet dont [micropython-ws2812](https://github.com/JanBednarik/micropython-ws2812) de JanBednarik.
+
+__N'oubliez pas de vérifier si le dernier firmware pour votre Pyboard n'inclus pas déjà le pilote.__
 
 Cette bibliothèque est intégrée dans ce GitHub avec quelques modifications pour exposer la même interface similaire à la bibliothèque NeoPixel disponible pour l'ESP8266.
 

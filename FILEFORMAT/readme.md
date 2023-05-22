@@ -9,6 +9,24 @@ Cela évite de charger le fichier en mémorie et de saturer celle-ci (un avantag
 
 En contrepartie, cela impique aussi plus d'accès fichiers et plus de transfert octet par octet (et donc un code moins performant).
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/FILEFORMAT")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/FILEFORMAT
+```
+
+
 # IMAGES (format supportés)
 
 ## Le format bmp

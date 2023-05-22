@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["eeprom24cxx.py", "github:mchobby/esp8266-upy/eeprom/lib/eeprom24cxx.py"]
+  ],
+  "version": "1.0"
+}

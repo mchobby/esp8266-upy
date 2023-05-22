@@ -43,6 +43,23 @@ With this 2 row of 3 columns matrix assembly, the ModLedRGB instance is created 
 modled =  ModLedRGB( spi, ss, width=3, height=2 ) # 6x LED-8x8RGB
 ```
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modled8x8")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modled8x8
+```
+
 # Wiring
 
 ## MOD-LED8x8RGB to UEXT adapter

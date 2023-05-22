@@ -17,6 +17,23 @@ L'horloge PCF8523 dispose aussi de quelques fonctionnalités intéressantes:
 
 Le signal d'interruption est particulièrement intéressant car il permet d'activer/réveiller un microcontrôleur à intervalle régulier.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/pcf8523")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/pcf8523
+```
+
 # Brancher
 
 ## Avec la PYBStick

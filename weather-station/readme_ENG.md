@@ -20,6 +20,23 @@ When fully connected, the kit wiring do look like this.
 
 ![Weather Station - sensors wiring](docs/_static/weather-station-connexion.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/weather-station")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/weather-station
+```
+
 # Wiring
 ## Wiring to a Raspberry-Pi Pico
 The Pico is running under 3.3V system, so you will need to use a [level shifter](https://shop.mchobby.be/fr/cartes-breakout/131-convertisseur-logique-4-canaux-bi-directionnel-i2c-compatible-3232100001312-adafruit.html) that is UART/Serial communication compatible.

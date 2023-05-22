@@ -6,6 +6,23 @@ This library groups tools (function, list, etc) reharding color manipulation rel
 
 Do not hesitate to browse the libraries and ressources for more information.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/COLORS")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/COLORS
+```
+
 # Source of inspiration
 
 ## W3School Color Picker

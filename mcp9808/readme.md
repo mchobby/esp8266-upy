@@ -14,7 +14,24 @@ Ce capteur fonctionne sur un bus I2C et dispose de 3 broches d'adresses. Il est 
 * 2.7V à 5.5V (alimentation et logique)
 * courant: 200 μA (typique)
 
-# Raccordement
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/mcp9808")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/mcp9808
+```
+
+# Brancher
 
 ## MicroPython Pyboard
 
@@ -24,7 +41,7 @@ Ce capteur fonctionne sur un bus I2C et dispose de 3 broches d'adresses. Il est 
 
 ![MCP9808 sur Feather ESP8266 sous MicroPython](docs/_static/mcp9808-to-feather-esp8266.jpg)
 
-# Code de test
+# Tester
 
 Pour pouvoir utiliser ce capteur, il est nécessaire d'installer la bibliothèque `mcp9808.py` sur la carte MicroPython.
 

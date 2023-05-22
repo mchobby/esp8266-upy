@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["kpadi2c.py", "github:mchobby/esp8266-upy/qwiic-keypad-i2c/lib/kpadi2c.py"],
+		["kpadcode.py", "github:mchobby/esp8266-upy/qwiic-keypad-i2c/lib/kpadcode.py"]
+  ],
+  "version": "0.0.1"
+}

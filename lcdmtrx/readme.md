@@ -8,6 +8,23 @@ Cette bibliothèque propose un pilote pour gérer le backpack Adafruit USB+Séri
 
 Pour plus d'information, n'hésitez pas à consulter notre [fiche produit](http://shop.mchobby.be/product.php?id_product=475) ou [notre tutoriel Arduino & Raspberry-Pi](http://wiki.mchobby.be/index.php?title=LCD-USB-TTL).
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lcdmtrx")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lcdmtrx
+```
+
 # brancher
 
 Le backpack utilise une logique 5V. Il est possible de le brancher directement sur la Pyboard car celle-ci est tolérante 5V. Idéalement, il faudrait utiliser un [_Level Shifter_](https://shop.mchobby.be/fr/breakout/131-convertisseur-logique-4-canaux-bi-directionnel-i2c-compatible-3232100001312-adafruit.html).

@@ -12,7 +12,20 @@ The VCNL4040 is a simple IR presence and ambient light sensor. This sensor is ex
 
 # Library
 
-Before using the various example script, you will need to copy the [vcnl4040.py](lib/vcnl4040.py) library on the MicroPython board.
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-vcnl4040-i2c")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-vcnl4040-i2c
+```
 
 # Wiring
 

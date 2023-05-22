@@ -8,6 +8,23 @@ La bibliothèque proposée ci-dessous fonctionne avec l'afficheur [LCD 16x2](htt
 
 Cette bibliothèque `lcdi2c.py` permet de contrôler facilement ces afficheurs.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lcdi2c")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lcdi2c
+```
+
 # Raccordement
 
 ## MicroPython Pyboard

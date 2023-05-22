@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["modtc_mk2.py", "github:mchobby/esp8266-upy/modtc-mk2/lib/modtc_mk2.py"]
+  ],
+  "version": "1.0"
+}

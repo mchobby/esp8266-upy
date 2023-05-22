@@ -18,6 +18,23 @@ __5V power required:__
 
 This module must be powered with 5V to assume a proper operation. However, the I2C SDA/SCL lines are in 3.3V logic. So this modules can be used with 3.3V microcontroler as ESP32, Pico, Pyboard, M5Stack core, Raspberry.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/m5stack-u087")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/m5stack-u087
+```
+
 # Wiring
 
 ## Raspberry-Pi Pico

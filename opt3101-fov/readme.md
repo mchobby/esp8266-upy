@@ -18,6 +18,23 @@ La mesure de proximité exploite le procédé Time-of-Flight (ToF) basé sur le 
 * Le changement d'adresse I2C de la carte se fait en manipulant des registres via le bus I2C. Cette fonctionnalité n'est pas implémentée.
 * La distance 0mm semble se trouver à environ 80mm physique du bord de la carte. Cela doit encore être contrôlé et vérifié en situation (plutôt que sur mon bureau).<br />Après contrôle, les données semblent consistantes par rapport à l'implémentation Arduino.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/opt3101-fov")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/opt3101-fov
+```
+
 # Brancher
 
 ## Sur Raspberry-Pi Pico

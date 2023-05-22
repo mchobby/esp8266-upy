@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["weather.py", "github:mchobby/esp8266-upy/weather-station/lib/weather.py"]
+  ],
+  "version": "0.0.1"
+}

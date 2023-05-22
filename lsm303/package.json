@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["lsm303.py", "github:mchobby/esp8266-upy/lsm303/lib/lsm303.py"]
+  ],
+  "version": "1.0"
+}

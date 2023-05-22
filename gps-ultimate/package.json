@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["adafruit_gps.py", "github:mchobby/esp8266-upy/gps-ultimate/lib/adafruit_gps.py"],
+		["gps_config.py", "github:mchobby/esp8266-upy/gps-ultimate/lib/gps_config.py"]
+  ],
+  "version": "1.0"
+}

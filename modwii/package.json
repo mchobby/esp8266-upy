@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["wiichuck.py", "github:mchobby/esp8266-upy/modwii/lib/wiichuck.py"]
+  ],
+  "version": "1.0"
+}

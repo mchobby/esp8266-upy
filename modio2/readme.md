@@ -1,31 +1,28 @@
-# Use an Olimex MOD-IO2 with ESP8266 under MicroPython
+[This file also exists in ENGLISH here](readme_ENG.md)
 
-MOD-IO2 est une carte d'interface d'Olimex utilisant le port UEXT. 
+# Utilisez un module MOD-IO2 d'Olimex avec MicroPython
 
-![La carte MOD-IO2](mod-io2.png)
+MOD-IO2 est une carte d'interface d'Olimex utilisant le port UEXT.
+
+![La carte MOD-IO2](docs/_static/mod-io2.png)
 
 Cette carte expose.
-* 2 Relais 
+* 2 Relais
 * 7 GPIOs reconfigurables - 3.3V max
-** 5 entrées analogiques (résolution 10 bits)
-** 2 sorties PWM (100 KHz, résolution 8 bits)
+	* 5 entrées analogiques (résolution 10 bits)
+	* 2 sorties PWM (100 KHz, résolution 8 bits)
 * Prévu pour être chainâble
 * Interface I2C (adresse 0x21 par défault)
-* Addresse modifiable (stockée en EEProm)
+* Adresse modifiable (stockée en EEProm)
 * Alimentation: 12VDC max
 
-__Où acheter__
-* Shop: [UEXT Expandable Input/Output board (MOD-IO2)](http://shop.mchobby.be/product.php?id_product=1409)
-* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
-* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
-* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)
-* Wiki: not defined yet 
+
 
 ## Details de la carte
 
-![Raccordements](mod-io2-details.png)
+![Raccordements](docs/_static/mod-io2-details.png)
 
-![GPIO du MOD-IO2](mod-io2-gpio.png)
+![GPIO du MOD-IO2](docs/_static/mod-io2-gpio.png)
 
 # ESP8266-EVB sous MicroPython
 Avant de se lancer dans l'utilisation du module MOD-IO sous MicroPython, il faudra flasher votre ESP8266 en MicroPython.
@@ -38,28 +35,40 @@ Ce dernier explique [comment flasher votre carte ESP8266 avec un câble console]
 
 Sur la carte ESP8266-EVB, le port UEXT transport le port série, bus SPI et bus I2C. La correspondance avec les GPIO de l'ESP8266 sont les suivantes.
 
-![Raccordements](ESP8266-EVB-UEXT.jpg)
+![Raccordements](docs/_static/ESP8266-EVB-UEXT.jpg)
 
-# MOD-IO2 Raccordement
+# Brancher
 
-Pour commencer, j'utilise un [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-IO.
+Premièrement, il faut utiliser [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412) pour dupliquer le port UEXT. J'ai en effet besoin de raccorder à la fois le câble console pour communiquer avec l'ESP8266 en REPL __et__ raccorder le module MOD-IO.
 
-![Raccordements](ESP8266-EVB-UEXT-SERIAL.jpg)
+![Raccordements](docs/_static/ESP8266-EVB-UEXT-SERIAL.jpg)
 
 J'ai ensuite effectuer les raccordements suivant sur la carte MOD-IO2:
 
-![Raccordements](mod-io2-wiring-low.png)
+![Raccordements](docs/_static/mod-io2-wiring-low.png)
 
-# Code de test
+# Bibliothèque
 
-## Bibliothèque modio2
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-Avant d'utiliser le script d'exemple, il est nécessaire de transférer la __bibliothèque modio2__ sur votre carte micropython.
-* Copiez le fichier `modio2.py` sur la carte micropython.
+Sur une plateforme connectée:
 
-Vous pouvez également transférer le script de test `test2.py`  sur la carte PyBoard. 
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modio2")
+```
 
-La bibliothèque offre les fonctionalités suivantes
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modio2
+```
+
+## Détails de la Bibliothèque modio2
+
+Avant d'utiliser les scripts d'exemple, il est nécessaire de transférer la __bibliothèque modio2__ sur votre carte micropython.
+
+La bibliothèque offre les fonctionnalités suivantes:
 
 __Membres:__
 * `carte.relais[index] = True` : (indexed property) Fixe l'état du relais.
@@ -70,11 +79,15 @@ __Membres:__
 * `carte.gpios.status`    : (property) retourne une liste avec les niveaux logiques True/False pour les broches IN/OUT (pas fiable pour broches PWM, Analogique).
 
 __Methodes:__
-* `carte.change_address( 0x22 )` : méthode qui change l'adresse I2C de la carte MOD-IO sur le bus. Fixe la nouvelle adresse à 0x22 (à la place de la valeur par défault 0x58). __Le bouton "BUT" doit être maintenu enfoncé pendant l'envoi de la commande!
+* `carte.change_address( 0x22 )` : méthode qui change l'adresse I2C de la carte MOD-IO sur le bus. Fixe la nouvelle adresse à 0x22 (à la place de la valeur par défault 0x21). __Le bouton "BUT" doit être maintenu enfoncé pendant l'envoi de la commande!
 * `carte.gpios.pin_mode( gpio, pinmode, pull_up=None )` : Define a GPIO as Pin.IN/Pin.OUT, allow to activate a Pin.PULL_UP resistor.
 * `carte.gpios.analog( gpio, raw = False )` : Lit une entrée analogique en volts sur un GPIO. Raw retourne une valeur 10 Bit (0 à 1023).
 * `carte.gpios.pwm( gpio, cycle )` : Active le generateur PWM sur une broche et assigne la valeur 8 bits du cycle utile (0 à 255).
-* `carte.gpios.pwm_close( gpio )` : Cloture la fonctionnalité PWM (transforme la broche en entrée). 
+* `carte.gpios.pwm_close( gpio )` : Cloture la fonctionnalité PWM (transforme la broche en entrée).
+
+
+
+# Tester
 
 ## Exemple avec MOD-IO2
 ```
@@ -124,10 +137,10 @@ print( brd.gpios.states )
 print( 'Set relay by index' )
 brd.relais[0] = True
 brd.relais[1] = False
-print( 'Relais[0..1] states : %s' % brd.relais.states ) 
+print( 'Relais[0..1] states : %s' % brd.relais.states )
 sleep_ms( 2000 )
 # switch all off
-brd.relais.states = False 
+brd.relais.states = False
 
 print( 'one relay at the time')
 for irelay in range( 2 ):
@@ -207,12 +220,8 @@ Dans l'exemple ci-dessous, une lecture analogique est réalisée sur le GPIO 5 (
 Fixer le cycle utile PWM du GPIO 6 (0 à 255) avec la valeur analogique du GPIO 5 (0 à 1024) qui sera divisée par 4.
 
 
-```
-# Test PWM sur le MOD-IO2 d'Olimex avec un ESP8266 sous MicroPython
-#
-# Shop: http://shop.mchobby.be/product.php?id_product=1409
-# Wiki: https://wiki.mchobby.be/index.php?title=MICROPYTHON-MOD-IO2
 
+```
 from machine import I2C, Pin
 from time import sleep_ms
 from modio2 import MODIO2
@@ -240,12 +249,12 @@ print( "That's the end folks")
 
 ```
 
-ce qui produit le résultat suivant:
+Ce qui produit
 
 ```
 MicroPython v1.9.4-8-ga9a3caad0 on 2018-05-11; ESP module with ESP8266
 Type "help()" for more information.
->>> 
+>>>
 >>> import test2pwm
 GPIO 5 - IN
 GPIO 6 - PWM
@@ -271,16 +280,14 @@ That's the end folks
 >>>  
 ```
 
+
 # Changer l'adresse I2C de la carte MOD-IO2
 
 L'exemple suivant montre comment changer l'adresse courante de la carte MOD-IO2 (0x21) vers 0x22.
 
-ATTENTION: Il faut avoir le cavalier fermé pendant l'exécution de la commande `change_address()` .
+ATTENTION: Il faut avoir le cavalier "prog" fermé (bouton "BUT" enfoncé) pendant l'exécution de la commande `change_address()` sinon la nouvelle adresse ne sera stockée en EEPROM.
 
 ```
-# Modifier l'adresse de MOD-IO2 d'Olimex vers 0x22
-#
-# Shop: http://shop.mchobby.be/product.php?id_product=1409
 
 from machine import I2C, Pin
 from modio2 import MODIO2
@@ -295,3 +302,8 @@ Par conséquent, la réponse ne sera jamais reçue (comme attendue) par le micro
 
 Un `i2c.scan()` permet de confirmer le changement d'adresse.
 
+# Où acheter
+* Shop: [UEXT Expandable Input/Output board (MOD-IO2)](http://shop.mchobby.be/product.php?id_product=1409)
+* Shop: [Module WiFi ESP8266 - carte d'évaluation (ESP8266-EVB)](http://shop.mchobby.be/product.php?id_product=668)
+* Shop: [UEXT Splitter](http://shop.mchobby.be/product.php?id_product=1412)
+* Shop: [Câble console](http://shop.mchobby.be/product.php?id_product=144)

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["stmpe610.py", "github:mchobby/esp8266-upy/stmpe610/lib/stmpe610.py"]
+  ],
+  "version": "0.0.1"
+}

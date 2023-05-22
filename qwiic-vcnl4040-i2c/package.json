@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["vcnl4040.py", "github:mchobby/esp8266-upy/qwiic-vcnl4040-i2c/lib/vcnl4040.py"]
+  ],
+  "version": "0.0.1"
+}

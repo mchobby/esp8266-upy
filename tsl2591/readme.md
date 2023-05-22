@@ -11,7 +11,24 @@ Ce capteur est très proche du TSL2561 mais offre une gamme de de mesure plus la
 
 A la différence du TSL2561, il n'est pas possible de modifier l'adresse de ce breakout.
 
-# Raccordement
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tsl2591")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tsl2591
+```
+
+# Brancher
 
 ## MicroPython Pyboard
 
@@ -21,7 +38,7 @@ A la différence du TSL2561, il n'est pas possible de modifier l'adresse de ce b
 
 ![TSL2591 sur Feather ESP8266 sous MicroPython](docs/_static/tsl2591-to-feather-esp8266.jpg)
 
-# Code de test
+# Tester
 
 Pour pouvoir utiliser ce capteur, il est nécessaire d'installer la bibliothèque `tsl2591.py` sur la carte MicroPython.
 

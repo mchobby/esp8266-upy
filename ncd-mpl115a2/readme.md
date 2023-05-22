@@ -30,6 +30,23 @@ Les mini modulesI2C de NCD National Control Device / ncd.io sont conçu avec un 
 
 Ce module NCD MPL115A2 n'a pas besoins de level shifter et de régulateur de tension puisqu'il est capable de fonctionner avec une tension d'alimentation de 2.4V à 5.5V.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-mpl115a2")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-mpl115a2
+```
+
 # Brancher
 
 ## Brancher une carte NCD

@@ -8,6 +8,22 @@ TCS34725 est un breakout équipé d'un capteur RGB, capteur en lumière visible 
 
 Le filtre signifie seulement que plus de vraie couleur que la plupart des capteurs, en effet, l'oeil humain ne perçoit les infrarouges. Le capteur dispose d'un temps d'intégration ajustable ainsi qu'un gain ajustable, il peut donc être utilisé derrière une vitre foncée.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tcs34725")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tcs34725
+```
 # Brancher
 
 ## MicroPython Pyboard

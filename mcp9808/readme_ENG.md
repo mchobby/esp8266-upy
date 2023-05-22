@@ -14,6 +14,23 @@ This sensor work over the I2C bus and have 3 address pins. So, it is possible to
 * 2.7V to 5.5V (power and logic)
 * curent: 200 μA (typical)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/mcp9808")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/mcp9808
+```
+
 # Wiring
 
 ## MicroPython Pyboard

@@ -8,6 +8,23 @@ TCS34725 breakout has  RGB and Clear light sensing elements and  IR blocking fil
 
 The filter means you'll get much truer color than most sensors, since humans don't see IR. The sensor have adjustable integration time and gain so it is suited for use behind darkened glass.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tcs34725")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tcs34725
+```
+
 # Wiring
 
 ## MicroPython Pyboard

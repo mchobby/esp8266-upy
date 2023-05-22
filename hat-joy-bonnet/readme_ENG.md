@@ -19,6 +19,23 @@ The [MicroPython NADHAT-PYB405](https://shop.mchobby.be/fr/micropython/1653-hat-
 
 To summarize, as the Pyboard but with different approach for connectors. A great idea.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/hat-joy-bonnet")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/hat-joy-bonnet
+```
+
 # Wiring
 Nothing could be simplier. just plug a double-rows pinHeader on the PYB405 then insert the HAT on the TOP.
 

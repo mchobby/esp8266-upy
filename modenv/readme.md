@@ -8,6 +8,23 @@ La carte MOD-ENV d'Olimex exploite deux capteurs I2C:
 
 ![Capteur MOD-ENV d'Olimex](docs/_static/modenv.jpg)
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modenv")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modenv
+```
+
 # Brancher
 Le capteur se branche très simplement sur une carte équipée d'un port UEXT comme l' [adaptateur UEXT pour pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) ou la carte [Pyboard-UNO-R3](https://shop.mchobby.be/fr/nouveaute/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html).
 

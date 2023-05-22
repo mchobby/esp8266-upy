@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["max31855.py", "github:mchobby/esp8266-upy/max31855/lib/max31855.py"]
+  ],
+  "version": "1.10"
+}

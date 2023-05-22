@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["sensehat.py", "github:mchobby/esp8266-upy/hat-sense/lib/sensehat.py"],
+		["icons.py", "github:mchobby/esp8266-upy/hat-sense/lib/icons.py"]
+  ],
+  "version": "1.0"
+}

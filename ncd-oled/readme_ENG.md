@@ -24,6 +24,10 @@ The NCD I2C Mini Modules are designed with a standard & convenient 4-Pin plug co
 
 This NCD OLED display doen't need any level shifter, neither any voltage regulator.
 
+# Library
+
+The library to be used is stored at [esp8266-upy/oled-ssd1306](https://github.com/mchobby/esp8266-upy/tree/master/oled-ssd1306). Just follow the installation intruction of "oled-ssd1306".
+
 # Wiring with NCD
 
 It is a I2C mini board based on NCD connector, so use the appropriate interface to connect it. This repository propose NCD interface for [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) and [ESP modules](../NCD/readme.md).

@@ -19,7 +19,24 @@ la carte [MicroPython NADHAT-PYB405](https://shop.mchobby.be/fr/micropython/1653
 
 Bref, comme la Pyboard mais avec une autre approche pour la connectique. Une bonne idée.
 
-# Raccordement
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/hat-joy-bonnet")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/hat-joy-bonnet
+```
+
+# Brancher
 Rien de plus simple, il suffit de brancher un connecteur mâle double rang (PinHeader) sur la Pyb405 puis insérer le HAT dessus.
 
 ![Hat Joy Bonnet sur NADHAT PYB405](docs/_static/pyb405-to-joy-bonnet_2.jpg)

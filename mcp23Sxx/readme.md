@@ -16,11 +16,23 @@ Le MCP23S17 dispose de 3 bits permettant de fixer l'adresse matérielle (device_
 
 Le pilote MCP23S17 expose la même API que le [MCP23017](https://github.com/mchobby/esp8266-upy/tree/master/mcp230xx), il est donc possible d'utiliser l'un ou l'autre des composants dans vos scripts sans devoir tout reprogrammer.
 
-## Tester
 
-Cette bibliothèque a été dûment testée à l'aide d'un [HAT PiFace Digital](https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html) qui exploite un MCP23S17.
+# Bibliothèque
 
-Les divers script d'[exemples](examples) vous aiderons à comprendre l'utilisation de la bibliothèque [mcp23Sxx.py](lib) .
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/mcp23Sxx")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/mcp23Sxx
+```
 
 # Brancher
 
@@ -31,3 +43,9 @@ Voici comment brancher un MCP23S17 sur une carte MicroPython PYBStick.
 Voici comment brancher un MCP23S17 sur une carte MicroPython Pyboard.
 
 ![MCP23S17 vers PYboard](docs/_static/mcp23s17-to-pyboard.jpg)
+
+## Tester
+
+Cette bibliothèque a été dûment testée à l'aide d'un [HAT PiFace Digital](https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html) qui exploite un MCP23S17.
+
+Les divers script d'[exemples](examples) vous aiderons à comprendre l'utilisation de la bibliothèque [mcp23Sxx.py](lib) .

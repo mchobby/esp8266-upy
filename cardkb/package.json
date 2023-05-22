@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["cardkb.py", "github:mchobby/esp8266-upy/cardkb/lib/cardkb.py"]
+  ],
+  "version": "1.0"
+}

@@ -26,7 +26,20 @@ Notes:
 
 # Library
 
-Before using or testing the PM 2.5 (PMS5003) sensor, you will have to copy the [pm25.py](lib/pm25.py) library on the MicroPython board.
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/pm25")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/pm25
+```
 
 # Wiring
 

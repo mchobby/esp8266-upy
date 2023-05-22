@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["modrfid.py", "github:mchobby/esp8266-upy/modrfid/lib/modrfid.py"]
+  ],
+  "version": "1.0"
+}

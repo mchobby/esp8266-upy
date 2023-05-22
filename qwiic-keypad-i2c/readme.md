@@ -10,11 +10,25 @@ Ce __clavier autonome__ est capable d'enregistrer les frappes (et leur timing) m
 
 # Bibliothèque
 
-Avant de tester le Keypad I2C, il est nécessaire de copier la bibliothèque [kpadi2c.py](lib/kpadi2c.py) sur la carte MicroPython.
-
 Bibliothèques:
 * [kpadi2c.py](lib/kpadi2c.py) : bibliothèque de base permettant d'interagir avec le module KeyPad I2C.
 * [kpadcode.py](lib/kpadcode.py) : bibliothèque complémentaire à [kpadi2c.py](lib/kpadi2c.py) destiné à la saisie type "DigiCode".
+
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/qwiic-keypad-i2c")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/qwiic-keypad-i2c
+```
 
 # Brancher
 

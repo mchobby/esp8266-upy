@@ -21,6 +21,22 @@ Main features:
 
 This sensor is available as NCD Mini board (easier to wire).
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/ncd-water-detect")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/ncd-water-detect
+```
 
 # Wiring
 

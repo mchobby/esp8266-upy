@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["sht3x.py", "github:mchobby/esp8266-upy/sht3x/lib/sht3x.py"]
+  ],
+  "version": "0.0.1"
+}

@@ -14,6 +14,23 @@ You can find wiring and sample of using this library on this MC Hobby tutorial
 
 https://wiki.mchobby.be/index.php?title=MicroPython-PWM-DRIVER
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/pca9685")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/pca9685
+```
+
 # Wire
 
 # Wire the breakout (Pyboard)

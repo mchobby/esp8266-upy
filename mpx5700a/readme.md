@@ -30,6 +30,10 @@ En dessous de 480 kPa, le capteur peut être utilisé directement sur un systèm
 
 480 kPa représente presque 5 fois la pression atmosphérique.
 
+# Bibliothèque
+
+Pas de bibliothèque nécessaire pour ce composant!
+
 # Brancher
 
 ## Raspberry-Pico

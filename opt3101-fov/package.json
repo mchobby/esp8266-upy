@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["opt3101.py", "github:mchobby/esp8266-upy/opt3101-fov/lib/opt3101.py"]
+  ],
+  "version": "0.0.1"
+}

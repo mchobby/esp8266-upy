@@ -16,6 +16,23 @@ Ces capteurs peuvent communiquer via I2C ou SPI; __Ce pilote utilise I2C uniquem
 * Wiki: [nos tutoriels MicroPython pour ESP8266](https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython)
 * [Fiche technique du BME280](https://www.adafruit.com/datasheets/BST-BME280_DS001-10.pdf) Adafruit Industries.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/bme280-bmp280")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/bme280-bmp280
+```
+
 # Raccordement
 
 ### Raccordement BMP280 ###

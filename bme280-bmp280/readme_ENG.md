@@ -16,6 +16,23 @@ Those sensors can use either the I2C bus, either the SPI bus; __This driver is f
 * Wiki: [nos tutoriels MicroPython pour ESP8266](https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython)
 * [BME280 datasheet](https://www.adafruit.com/datasheets/BST-BME280_DS001-10.pdf) Adafruit Industries.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/bme280-bmp280")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/bme280-bmp280
+```
+
 # Wiring
 
 ### BMP280 Wiring ###

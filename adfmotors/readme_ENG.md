@@ -7,6 +7,23 @@ This library manage the [Adafruit MotorShield](https://shop.mchobby.be/fr/shield
 
 ![Adafruit Motor Shield](docs/_static/motorshield.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/adfmotors")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/adfmotors
+```
+
 # Wiring
 The motor shield board (u Motor Wing) can be used with several microcontroleurs board.
 

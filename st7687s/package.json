@@ -1,0 +1,9 @@
+{
+  "urls": [
+    ["st7687s.py", "github:mchobby/esp8266-upy/st7687s/lib/st7687s.py"],
+		["display.py", "github:mchobby/esp8266-upy/st7687s/lib/display.py"],
+		["character.py", "github:mchobby/esp8266-upy/st7687s/lib/character.py"],
+		["bmp.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/bmp.py"]
+  ],
+  "version": "0.0.1"
+}

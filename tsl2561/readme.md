@@ -1,15 +1,32 @@
 # Mesure de lumière avec Adafruit TSL2561 (ADA439) et ESP8266 MicroPython
 
-Ce senseur est capable de mesure une intensité lumineuse entre 0.1 et 40,000+ Lux
+Ce capteur est capable de mesure une intensité lumineuse entre 0.1 et 40,000+ Lux
 
 * Shop: [Adafruit TSL2561 (ADA439)](http://shop.mchobby.be/product.php?id_product=238)
 * Wiki: https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython
 
-# Raccordement
+# Bibliothèque
 
-![Raccordements](tsl2561_bb.jpg)
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
 
-# Code de test
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/tsl2561")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/tsl2561
+```
+
+# Brancher
+
+![Raccordements](docs/_static/tsl2561_bb.jpg)
+
+# Tester
 
 ```
 # Mesure de lumière avec Adafruit TSL2561 (ADA439) et ESP8266 MicroPython
@@ -22,7 +39,7 @@ from machine import I2C, Pin
 
 # Ne pas utiliser la broche 7 pour SCL parce ce qu'il perturbe la sequence
 # de boot lorsqu'une alimentation est branchée sur le connecteur microUSB
-# 
+#
 i2c = I2C( sda=Pin(4), scl=Pin(2), freq=20000 )
 
 tsl = TSL2561( i2c )
@@ -50,7 +67,7 @@ print( tsl.read(autogain=True) )
 
 # Ressources et sources
 * Source: [https://github.com/adafruit/micropython-adafruit-bundle/tree/master/libraries/drivers MicroPython-adafruit-bundle] (Adafruit, GitHub)
-* [Documentation complete sur rtfd.io](http://micropython-tsl2561.rtfd.io/.) 
+* [Documentation complete sur rtfd.io](http://micropython-tsl2561.rtfd.io/.)
 
 ## Luminosité vs Lux
 * 0.002 lux : Nuit par temps clair sans lune.
@@ -63,7 +80,7 @@ print( tsl.read(autogain=True) )
 * 300 - 500 lux : Levé du soleil, luminosité par temps clair. Zone de bureau correctement éclairée.
 * 1,000 lux : Temps couvert; Eclairage typique d'un studio TV
 * 10,000 - 25,000 lux : Pleine journée (pas de soleil direct)
-* 32,000 - 130,000 lux : Soleil direct 
+* 32,000 - 130,000 lux : Soleil direct
 
 ## Adresse I2C
 __L'adresse par défaut est 0x39__ (lorsque la broche d'adresse reste déconnectée).

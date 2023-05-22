@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["european.py", "github:mchobby/esp8266-upy/lcdmtrx/lib/european.py"],
+		["lcdmtrx.py", "github:mchobby/esp8266-upy/lcdmtrx/lib/lcdmtrx.py"]
+  ],
+  "version": "1.0"
+}

@@ -5,6 +5,23 @@ Cette bibliothèque prend en charge le [Motor Shield d'Adafruit](https://shop.mc
 
 ![MotorShield d'Adafruit](docs/_static/motorshield.jpg)
 
+# Bibliothèque
+
+ Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+ Sur une plateforme connectée:
+
+ ```
+ >>> import mip
+ >>> mip.install("github:mchobby/esp8266-upy/adfmotors")
+ ```
+
+ Ou via l'utilitaire mpremote :
+
+ ```
+ mpremote mip install github:mchobby/esp8266-upy/adfmotors
+ ```
+
 # Raccordement
 La carte Motor Shield (ou Motor Wing) peut être utilisée avec plusieurs cartes microcontrôleur.
 

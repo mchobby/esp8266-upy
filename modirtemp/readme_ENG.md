@@ -31,6 +31,23 @@ The wiring of an UEXT Port on ESP8266 is described in the [UEXT folder](../UEXT/
 
 The [UEXT adapter for MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/tree/master/UEXT) is also available in the (Pyboard-Driver)[https://github.com/mchobby/pyboard-driver] GitHub.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modirtemp")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modirtemp
+```
+
 # Test
 To test the sensor just copy the files `mlx90614.py` (the driver) and `mlxtest.py` to the micropython board,
 

@@ -29,7 +29,24 @@ Main features:
 * ESD protection exceeds 2000 V
 * Latch-up testing is done to JEDEC Standard JESD78 which exceeds 100 mA
 
-# Testing code
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/pca9536")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/pca9536
+```
+
+# Testing
 
 ```
 from pca9536 import PCA9536

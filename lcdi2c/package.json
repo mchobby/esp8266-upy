@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["lcdi2c.py", "github:mchobby/esp8266-upy/lcdi2c/lib/lcdi2c.py"]
+  ],
+  "version": "1.0"
+}

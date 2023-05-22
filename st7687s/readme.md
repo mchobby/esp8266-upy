@@ -27,6 +27,23 @@ __Inconvenient:__
 * Débit de donnée significativement ralenti par la manipulation du Latch (HC595).<br />Le remplissage de l'écran en rouge nécessite 5 secondes.
 * Animations graphiques et transfert d'image limité par le débit.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/st7687s")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/st7687s
+```
+
 ## limite du portage
 Le portage de la bibliothèque prend en charge presque toutes les fonctions de l'écran.
 

@@ -10,6 +10,24 @@ A [15x7 CharliePlexing FeatherWing extension for Feather](https://shop.mchobby.b
 
 ![ChaliePlexing 15x7 Feather Wing from Adafruit](docs/_static/featherwing-charlieplexing-adafruit.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/is31fl")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/is31fl
+```
+
+
 # Wiring
 
 ## with MicroPython Pyboard

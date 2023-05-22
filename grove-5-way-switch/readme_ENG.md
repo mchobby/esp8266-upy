@@ -32,6 +32,23 @@ You __will absolutely need__ to use a Level Shifter over the SDA and SCL lines i
 __Note:__ the `I2C.scan()` MicroPython method will not return any result for the module. So will wil have to register (annotate) the I2C address if you do modifies it.
 
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/grove-5-way-switch")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/grove-5-way-switch
+```
+
 # Wiring
 
 ## Raspberry-Pi Pico

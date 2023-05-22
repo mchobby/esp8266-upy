@@ -1,4 +1,5 @@
 [This file also exists in ENGLISH](readme_ENG.md)
+
 # Utiliser un PiFace-Digital (v1 ou v2) sous MicroPython
 
 Le PiFace Digital 1 et [PiFace Digitial 2](https://shop.mchobby.be/fr/pi-hats/221-piface-digital-2-pour-raspberry-pi-3232100002210.html) sont identiques du point de vue matériel (seul le facteur de forme diffère).
@@ -15,6 +16,23 @@ Le PiFace expose les interfaces suivantes:
 * 8 LEDs (indicatrice)
 
 [L'utilisation du PiFace est documenté en français sur notre Wiki](https://wiki.mchobby.be/index.php?title=PiFace2-Manuel) ou dans la [documentation constructeur (en anglais)](http://df.mchobby.be/RASP-PIFACE-DIGITAL2/Operating-Instruction.pdf)
+
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/hat-piface")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/hat-piface
+```
 
 # Brancher
 

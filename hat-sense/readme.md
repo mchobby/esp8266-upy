@@ -20,6 +20,23 @@ Le portage de ce projet sous MicroPython est basé sur le GitHub du projet "[Sen
 
 Il est possible de voir le "[Sense-Hat sous MicroPython](https://youtu.be/PUU4EqAMHds)" sur la vidéo YouTube.
 
+# Bibliothèque
+
+Cette bibliothèque doit être copiée sur la carte MicroPython avant d'utiliser les exemples.
+
+Sur une plateforme connectée:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/hat-sense")
+```
+
+Ou via l'utilitaire mpremote :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/hat-sense
+```
+
 # Brancher
 
 ## Raspberry-Pi PICO

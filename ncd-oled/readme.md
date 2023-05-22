@@ -24,6 +24,10 @@ Les mini modules et carte I2C de NCD National Control Device / ncd.io sont conç
 
 Cet afficheur OLED NCD n'a pas besoin de level shifter, ni de régulateur de tension.
 
+# Bibliothèque
+
+La bibliothèque à utiliser se trouve sur [esp8266-upy/oled-ssd1306](https://github.com/mchobby/esp8266-upy/tree/master/oled-ssd1306) suivez les instructions d'installation qui s'y trouve.
+
 # Brancher sur NCD
 
 Il s'agit d'une mini carte I2C (__mini board__) basé sur un connecteur NCD, utilisez une interface appropriée pour vous y connecter. Ce dépôt propose une interface NCD pour [MicroPython Pyboard](https://github.com/mchobby/pyboard-driver/blob/master/NCD/README.md) et [ESP modules](../NCD/readme.md).

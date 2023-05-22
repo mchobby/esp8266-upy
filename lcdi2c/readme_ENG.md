@@ -9,6 +9,23 @@ The library available in this projet does work with a [LCD 16x2](https://shop.mc
 
 This `lcdi2c.py` library can be used to control thoses displays.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lcdi2c")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lcdi2c
+```
+
 # Wiring
 
 ## MicroPython Pyboard

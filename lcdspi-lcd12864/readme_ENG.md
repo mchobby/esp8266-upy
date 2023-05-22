@@ -6,6 +6,23 @@ DFRobot offers a LiquidCristal LCD with 128 x 64 individual pixels (DFR0091) tha
 
 ![LCD 128x64 (DFR0091)](docs/_static/lcd12864.jpg)
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/lcdspi-lcd12864")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/lcdspi-lcd12864
+```
+
 # Wire
 
 Before using the LCD display, it must be configured for SPI mode communication and activate the backlight.

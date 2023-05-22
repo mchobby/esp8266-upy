@@ -16,6 +16,23 @@ As the UEXT pins have a 2.54mm spacing, it is also possible to connect the displ
 
 __Note:__ the very first line of the display doesn't seems to be proprely managed (there is a shift of one bit somewhere in the LCD RAM). This must still be fixed.
 
+# Library
+
+The library must be copied on the MicroPython board before using the examples.
+
+On a WiFi capable plateform:
+
+```
+>>> import mip
+>>> mip.install("github:mchobby/esp8266-upy/modlcd3310")
+```
+
+Or via the mpremote utility :
+
+```
+mpremote mip install github:mchobby/esp8266-upy/modlcd3310
+```
+
 # Wiring
 
 ## Pyboard with UEXT connector

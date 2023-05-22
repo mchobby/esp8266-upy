@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["trackball.py", "github:mchobby/esp8266-upy/trackball/lib/trackball.py"]
+  ],
+  "version": "0.0.1"
+}
