@@ -1,0 +1,27 @@
+# This ILI9488 driver - NOT FrameBuffer based but MIMIC FrameBuffer interface
+#
+# The MIT License (MIT)
+# Copyright (c) 2020 Meurisse D. (MCHobby.be)
+#
+# Project home:
+#    https://github.com/mchobby/esp8266-upy/tree/master/ili9488
+#
+# Has been developped by Meurisse D. (MCHobby) from various sources:
+#
+#   * The work of PugazhM for Photo Frame
+#     https://www.instructables.com/RPi-Pico-35-Inch-320x480-HVGA-TFT-LCD-ILI9488-Bitm/
+#   * The work of Roman Podgaiski (Ropod) and Meurisse D. as reference
+#     https://github.com/ropod7/pyboard_drive
+#   * FreeType generator (binary font file for MicroControler) from Meurisse D.
+#     https://github.com/mchobby/freetype-generator
+#
+# ------------------------------------------------------------------------------
+#
+# Licensed under the MIT license:
+#   http://www.opensource.org/licenses/mit-license.php
+#
+# Project home:
+#   https://github.com/tuupola/micropython-ili9488
+#
+from micropython import const
+import ustruct
