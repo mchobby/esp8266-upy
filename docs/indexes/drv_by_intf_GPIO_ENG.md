@@ -8,6 +8,17 @@ Generic GPIO, PWM, Interrupt, etc interface. Do not use a BUS or specific connec
   <th>Folder</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../../../tree/master/74HC595">74HC595</a></td>
+      <td><strong>Components</strong> : 74HC595<br />
+      <strong>Interfaces</strong> : GPIO<br />
+<small>Create a 16 bits address bus with 74HC595.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/ci/466-74hc595-registre-a-decalage-8-bits-3232100004665.html">74HC595 - Shift Register - Serial to parallel @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/dht11">dht11</a></td>
       <td><strong>Components</strong> : DHT11<br />
       <strong>Interfaces</strong> : GPIO<br />

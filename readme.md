@@ -23,6 +23,17 @@ Explorer par:
   <th>Répertoire</th><th>Description</th>
 </thead>
 <tbody>
+  <tr><td><a href="../../tree/master/74HC595">74HC595</a></td>
+      <td><strong>Composants</strong> : 74HC595<br />
+      <strong>Interfaces</strong> : GPIO<br />
+<small>Créer un bus d'adresse 16 bits avec des 74HC595.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/ci/466-74hc595-registre-a-decalage-8-bits-3232100004665.html">74HC595 - Shift Register - Serial to parallel @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/COLORS">COLORS</a></td>
       <td><strong>Composants</strong> : <br />
       <strong>Interfaces</strong> : <br />
