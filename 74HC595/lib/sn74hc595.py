@@ -27,11 +27,13 @@ class ShiftReg:
 		self.clk.init( Pin.OUT, value=False )
 		self.rst.init( Pin.OUT, value=True )
 		self.latch.init(Pin.OUT, value=False )
+
 		self.reset( latch=True )
 
 	def reset( self, latch=False ):
 		self.rst.value( False )
 		time.sleep_us(1) # 100nS
+		#wait_ns( 100 )
 		self.rst.value( True )
 		if latch:
 			time.sleep_us(1)
@@ -44,12 +46,11 @@ class ShiftReg:
 	def send_bit( self, value ):
 		""" send a bit to the shift reguister """
 		self.data.value( value )
-		time.sleep_us(1) # 150nS before clocking
+		#time.sleep_us(1) # 150nS before clocking
 		self.clk.value( True )
-		time.sleep_us(1) # 100nS high
+		#time.sleep_us(1) # 100nS high
 		self.clk.value( False )
-		time.sleep_us(1) # 100nS Low
-
+		#time.sleep_us(1) # 100nS Low
 
 	def write_byte( self, value, latch=True ):
 		""" Write all the bit MSBF """
@@ -60,9 +61,9 @@ class ShiftReg:
 
 		if latch:
 			self.latch.value( True )
-			time.sleep_us(1)
+			# time.sleep_us(1)
 			self.latch.value( False )
-			time.sleep_us(1)
+			# time.sleep_us(1)
 
 	def write_bytes( self, values ):
 		""" Write list of bytes on a daisy-chained shift-register.

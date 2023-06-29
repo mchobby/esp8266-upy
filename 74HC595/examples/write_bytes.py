@@ -8,9 +8,6 @@ Author(s):
 See Github: https://github.com/mchobby/esp8266-upy/tree/master/74hc595
 """
 
-__version__ = "0.0.1"
-__repo__ = "https://github.com/mchobby/esp8266-upy"
-
 from machine import Pin
 from sn74hc595 import ShiftReg
 import time

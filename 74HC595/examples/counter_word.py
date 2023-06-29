@@ -1,6 +1,6 @@
 """ 74hc595, Shift Register - driver for MicroPython
 
-	Write a 16 bits values on a dual daisy chained 74hc595.
+	16 bits counter. Use write word to count from 0 to 65535.
 	Write word respect the MSBF (higher bit to the left).
 
 Author(s):
@@ -15,6 +15,7 @@ import time
 
 
 reg = ShiftReg( Pin(20), Pin(21), Pin(19), Pin(18)  )
-reg.write_word( 0xFDCA ) # Write a 16bits values with MSBF
+for w in range( 65536 ): # 0 to 65535
+	reg.write_word( w ) # Write a 16bits values with MSBF
 # time.sleep(2)
 # reg.reset( latch=True ) ## Apply the reset to output
