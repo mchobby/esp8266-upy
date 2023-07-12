@@ -965,6 +965,20 @@
 								 "ENG": "Using a PM2.5 particle sensor (PMS5003) with MicroPython"
 								}
 		},
+		{	"folder"        : "pn532-rfid",
+			"components"    : ["pn532"],
+			"interfaces"    : ["UART"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "RFID/NFC Controleur PN532 - v1.6 + Extra @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/cartes-breakout\/528-rfid-nfc-controleur-pn532-3232100005280-adafruit.html" },
+													{ "label" : "RFID/NFC Controller PN532 - v1.6 + Extra @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/364" }
+												],
+			"descr"	: {"FR" : "Utiliser un lecteur PN532 RFID/NFC avec MicroPython",
+								 "ENG": "Use a PN532 RFID/NFC controler with MicroPython"
+								}
+		},
 		{	"folder"        : "qwiic-joystick-i2c",
 			"components"    : ["JOYSTICK-I2C"],
 			"interfaces"    : ["I2C","QWIIC"],

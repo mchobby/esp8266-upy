@@ -81,6 +81,18 @@ UART (serial)
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/pn532-rfid">pn532-rfid</a></td>
+      <td><strong>Components</strong> : pn532<br />
+      <strong>Interfaces</strong> : UART<br />
+<small>Use a PN532 RFID/NFC controler with MicroPython</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/cartes-breakout/528-rfid-nfc-controleur-pn532-3232100005280-adafruit.html">RFID/NFC Controleur PN532 - v1.6 + Extra @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/364">RFID/NFC Controller PN532 - v1.6 + Extra @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/weather-station">weather-station</a></td>
       <td><strong>Components</strong> : GPIO<br />
       <strong>Interfaces</strong> : UART<br />
