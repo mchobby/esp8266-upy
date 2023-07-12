@@ -1,0 +1,9 @@
+{
+  "urls": [
+    ["pn532.py", "github:mchobby/esp8266-upy/pn532-rfid/lib/pn532.py"],
+    ["hal_uart.py", "github:mchobby/esp8266-upy/pn532-rfid/lib/hal_uart.py"],
+    ["pn_intf.py", "github:mchobby/esp8266-upy/pn532-rfid/lib/pn_intf.py"],
+    ["pn_const.py", "github:mchobby/esp8266-upy/pn532-rfid/lib/pn_const.py"]
+  ],
+  "version": "0.1"
+}
