@@ -91,7 +91,7 @@ Les différentes valeurs sont, dans l'ordre :
 |0|2000|Année|
 |1|1|Mois|
 |2|1|Jour|
-|3|1|Jour de la semaine|
+|3|1|Jour de la semaine<br />0=Lundi..6=Dimanche|
 |4|0|Heures|
 |5|2|Minutes|
 |6|18|Secondes|

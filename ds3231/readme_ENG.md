@@ -93,7 +93,7 @@ Here are the following values, in the right order :
 |0|2000|Année|
 |1|1|Mois|
 |2|1|Jour|
-|3|1|Jour de la semaine|
+|3|1|Jour de la semaine<br />0=Monday..6=Sunday|
 |4|0|Heures|
 |5|2|Minutes|
 |6|18|Secondes|

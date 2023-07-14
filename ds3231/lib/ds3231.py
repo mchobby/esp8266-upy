@@ -8,8 +8,8 @@ Adapted from Pyboard driver for DS3231 precison real time clock (https://github.
 Jan 1, 2021 : Th Monin, adapted from Pyboard Version for PYBStick
                         Alarm functions temporiraly removed (no useful test case)
                         Alarm constants for information
-Apr 5, 2021 : Meurisse D., Make it plateform independant
-                           preserve license
+Apr 5, 2021 : Meurisse D., Make it plateform independant, preserve license
+Jul 13, 2023 : Meurisse D., Make it compatible with MicroPython v1.20, preserve license
 
 Copyright Th Monin 2021 Released under the MIT license.
 """
@@ -74,13 +74,18 @@ class DS3231Exception(Exception):
 class DS3231():
     def __init__(self, i2c ):
         self.i2c = i2c
+        self.buf1 = bytearray(1)
         self.write_reg(DS3231_REG_CTRL, 0x4C)
 
     def write_reg(self, reg, dat):
-        self.i2c.mem_write(dat, DS3231_I2C_ADDR, reg, timeout=500)
+        #self.i2c.mem_write(dat, DS3231_I2C_ADDR, reg, timeout=500)
+        self.buf1[0] = dat
+        self.i2c.writeto_mem( DS3231_I2C_ADDR, reg, self.buf1 )
 
     def read_reg(self, reg):
-        return self.i2c.mem_read(1, DS3231_I2C_ADDR, reg)[0]
+        #return self.i2c.mem_read(1, DS3231_I2C_ADDR, reg)[0]
+        self.i2c.readfrom_mem_into( DS3231_I2C_ADDR, reg, self.buf1 )
+        return self.buf1[0]
 
     def second(self, sec = None):
         if sec == None:
