@@ -27,7 +27,7 @@ Here how you can learn more about the storing data onto a memory capable tag:
 
 # Library
 
-__Library limitation__ : presently only the __UART based__ version of the library is implemented.
+__Library limitation__ : presently only the __UART based__ version of the library is implemented. Using a reset signal and double wake_up() is required to activates the pn532 over an UART.
 
 __Library sponsor__ : thank to the [Lycée Français Jean Monnet](https://www.lyceefrancais-jmonnet.be/) which sponsored the creation of this library.
 

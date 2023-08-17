@@ -14,6 +14,8 @@ See Github: https://github.com/mchobby/esp8266-upy/tree/master/pn532-rfid
 # based on Arduino implementation
 #      https://github.com/elechouse/PN532/blob/PN532_HSU/PN532/PN532.cpp
 
+__version__ = '0.0.2'
+
 from pn_const import *
 
 class PN532:

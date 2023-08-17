@@ -5,5 +5,5 @@
     ["pn_intf.py", "github:mchobby/esp8266-upy/pn532-rfid/lib/pn_intf.py"],
     ["pn_const.py", "github:mchobby/esp8266-upy/pn532-rfid/lib/pn_const.py"]
   ],
-  "version": "0.1"
+  "version": "0.2"
 }

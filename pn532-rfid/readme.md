@@ -27,7 +27,7 @@ Voici comment en apprendre plus sur les procédés de stockage de données sur d
 
 # Bibliothèque
 
-__Limitation de la bibliothèque__ : actuellement, seul la __communication par UART__ est pris en charge par la bibliothèque.
+__Limitation de la bibliothèque__ : actuellement, seul la __communication par UART__ est pris en charge par la bibliothèque. L'utilisation d'un signal Reset et double wake_up() est nécessaire pour activer le pn532 via UART.
 
 __Sponsor__ : Merci au [Lycée Français Jean Monnet](https://www.lyceefrancais-jmonnet.be/) qui a aimablement sponsorisé le développement de cette bibliothèque MicroPython.
 

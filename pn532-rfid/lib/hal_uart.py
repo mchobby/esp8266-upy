@@ -11,13 +11,24 @@ Author(s):
 See Github: https://github.com/mchobby/esp8266-upy/tree/master/pn532-rfid
 """
 # Based on https://github.com/elechouse/PN532/blob/PN532_HSU/PN532_HSU/PN532_HSU.h
+__version__ = '0.0.2'
 
-from machine import UART
+from machine import UART,Pin
 from pn_intf import *
+import time
 
 class PN_UART:
-	def __init__( self, UART_ID, timeout=5000 ):
-		self.ser = UART( UART_ID, baudrate=115200, timeout=timeout ) # 8n1, PN532_HSU_READ_TIMEOUT=1000
+	def __init__( self, UART_ID, pn_rst, timeout=5000 ):
+		""" pn_rst is the PN532 Reset Pin, initialized @ value 1 """
+		self.ser = UART( UART_ID, baudrate=115200, bits=8, parity=None, stop=1, timeout=timeout ) # 8n1, PN532_HSU_READ_TIMEOUT=1000
+		self.reset = pn_rst
+		#--- Magic call to wake up the pn532 with getting powered from 12V ----
+		self.reset.value(0) # pn532 resets on falling edge
+		time.sleep_ms(10)
+		self.reset.value(1)
+		time.sleep_ms(10)
+		self.wake_up()
+		#--- eof Magic (don't forget to call PN.begin() to get a  second wake up call)
 		self.command = 0 # Last command used in write_command()
 		self.buf6 = bytearray( 6 )
 		self.buf3 = bytearray( 3 )

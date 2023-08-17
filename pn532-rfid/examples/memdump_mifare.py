@@ -18,9 +18,10 @@ from pn_const import *
 from hal_uart import PN_UART
 from pn532 import PN532
 from binascii import hexlify
+from machine import Pin
 import time
 
-uart_hal = PN_UART( 1, 1000 ) # Using PN532 over UART, timeout=1000 ms
+uart_hal = PN_UART( 1, Pin(12,Pin.OUT,value=1) ,1000 ) # Uart_ID, ResetPin, TimeOut ms
 nfc = PN532( uart_hal )
 nfc.begin()
 
