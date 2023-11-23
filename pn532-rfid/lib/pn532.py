@@ -35,6 +35,7 @@ class PN532:
 
 	def get_firmware_version( self ):
 		# Returns uint32_t response encoding Chipset & Firmware
+		print('get_firmware_version command=', PN532_COMMAND_GETFIRMWAREVERSION )
 		self.pn532_packetbuffer[0] = PN532_COMMAND_GETFIRMWAREVERSION
 
 		mv_command = memoryview( self.pn532_packetbuffer )
