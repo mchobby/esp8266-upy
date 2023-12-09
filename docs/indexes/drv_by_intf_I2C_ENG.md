@@ -136,6 +136,18 @@ I2C bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/grav-digital-led">grav-digital-led</a></td>
+      <td><strong>Components</strong> : TM1650, DFR0645<br />
+      <strong>Interfaces</strong> : I2C, GPIO<br />
+<small>4-Digital LED Segment Display Module via I2C - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/en/leds-leds-displays/2092-4-display-of-7-seg-green-i2c-22-mm-3232100020924-dfrobot.html">Gravity - 4-Digital LED Segment Display Module @ MCHobby</a></li>
+<li>See <a href="https://www.dfrobot.com/product-1966.html">Gravity - 4-Digital LED Segment Display Module @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/grove-5-way-switch">grove-5-way-switch</a></td>
       <td><strong>Components</strong> : 5-Way-Switch, 6-Position-DIP-Switch<br />
       <strong>Interfaces</strong> : I2C, GROVE<br />

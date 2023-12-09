@@ -10,11 +10,11 @@ from machine import SPI, Pin
 from rfm69 import RFM69
 import time
 
-spi = SPI(0, baudrate=50000, polarity=0, phase=0, firstbit=SPI.MSB)
+spi = SPI(0, miso=Pin(4), mosi=Pin(7), sck=Pin(6), baudrate=50000, polarity=0, phase=0, firstbit=SPI.MSB)
 nss = Pin( 5, Pin.OUT, value=True )
 rst = Pin( 3, Pin.OUT, value=False )
 
-rfm = RFM69( spi=spi, nss=nss, reset=rst ) 
+rfm = RFM69( spi=spi, nss=nss, reset=rst )
 rfm.frequency_mhz = 433.1
 rfm.bitrate = 250000 # 250 Kbs
 rfm.frequency_deviation = 250000 # 250 KHz

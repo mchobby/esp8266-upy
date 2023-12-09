@@ -255,6 +255,20 @@
 								 "ENG": "Graphical library for FrameBuffer"
 								}
 		},
+		{	"folder"        : "grav-digital-led",
+			"components"    : ["TM1650","DFR0645"],
+			"interfaces"    : ["I2C", "GPIO"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Gravity - 4-Digital LED Segment Display Module @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/en\/leds-leds-displays\/2092-4-display-of-7-seg-green-i2c-22-mm-3232100020924-dfrobot.html" },
+													{ "label" : "Gravity - 4-Digital LED Segment Display Module @ DFRobot",
+														"url"   : "https:\/\/www.dfrobot.com\/product-1966.html" }
+												],
+			"descr"	: {"FR" : "Afficheur 4 chiffres de 7 seg. via I2C - sous MicroPython",
+								 "ENG": "4-Digital LED Segment Display Module via I2C - under MicroPython."
+								}
+		},
 		{	"folder"        : "grove-5-way-switch",
 			"components"    : ["5-Way-Switch","6-Position-DIP-Switch"],
 			"interfaces"    : ["I2C", "GROVE"],
