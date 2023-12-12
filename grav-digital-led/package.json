@@ -1,6 +1,7 @@
 {
   "urls": [
-    ["ledseg4.py", "github:mchobby/esp8266-upy/grav-digital-led/lib/ledseg4.py"]
+    ["ledseg4.py", "github:mchobby/esp8266-upy/grav-digital-led/lib/ledseg4.py"],
+		["ledseg8.py", "github:mchobby/esp8266-upy/grav-digital-led/lib/ledseg8.py"]
   ],
-  "version": "1.0"
+  "version": "1.1"
 }
