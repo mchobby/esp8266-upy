@@ -256,17 +256,21 @@
 								}
 		},
 		{	"folder"        : "grav-digital-led",
-			"components"    : ["TM1650","DFR0645"],
+			"components"    : ["TM1650","DFR0645","VK16K33","DFR646"],
 			"interfaces"    : ["I2C", "GPIO"],
 			"manufacturers" : ["DFROBOT"],
 			"plateforms"    : ["PICO"],
 			"ressources"    : [ { "label" : "Gravity - 4-Digital LED Segment Display Module @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/en\/leds-leds-displays\/2092-4-display-of-7-seg-green-i2c-22-mm-3232100020924-dfrobot.html" },
+													{ "label" : "Gravity - 8-Digital LED Segment Display Module @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/leds\/2584-afficheur-i2c-vert-8-chiffres-de-7-seg-22-mm-3232100025844-dfrobot.html" },
 													{ "label" : "Gravity - 4-Digital LED Segment Display Module @ DFRobot",
-														"url"   : "https:\/\/www.dfrobot.com\/product-1966.html" }
+														"url"   : "https:\/\/www.dfrobot.com\/product-1966.html" },
+													{ "label" : "Gravity - 8-Digital LED Segment Display Module @ DFRobot",
+														"url"   : "https:\/\/www.dfrobot.com\/product-1979.html" }
 												],
-			"descr"	: {"FR" : "Afficheur 4 chiffres de 7 seg. via I2C - sous MicroPython",
-								 "ENG": "4-Digital LED Segment Display Module via I2C - under MicroPython."
+			"descr"	: {"FR" : "Afficheur LED 4x7 ou 8x7 Segments via I2C (DFR0645,DFR0646) - sous MicroPython",
+								 "ENG": "4x7 or 8x7 Digital LED Segments Display Module via I2C (DFR0645,DFR0646) - under MicroPython."
 								}
 		},
 		{	"folder"        : "grove-5-way-switch",

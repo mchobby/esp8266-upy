@@ -236,14 +236,16 @@ Explorer par:
       </td>
   </tr>
   <tr><td><a href="../../tree/master/grav-digital-led">grav-digital-led</a></td>
-      <td><strong>Composants</strong> : TM1650, DFR0645<br />
+      <td><strong>Composants</strong> : TM1650, DFR0645, VK16K33, DFR646<br />
       <strong>Interfaces</strong> : I2C, GPIO<br />
-<small>Afficheur 4 chiffres de 7 seg. via I2C - sous MicroPython</small><br/><br />
+<small>Afficheur LED 4x7 ou 8x7 Segments via I2C (DFR0645,DFR0646) - sous MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PICO<br />
       <strong>Fabricant</strong> : DFROBOT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/en/leds-leds-displays/2092-4-display-of-7-seg-green-i2c-22-mm-3232100020924-dfrobot.html">Gravity - 4-Digital LED Segment Display Module @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/leds/2584-afficheur-i2c-vert-8-chiffres-de-7-seg-22-mm-3232100025844-dfrobot.html">Gravity - 8-Digital LED Segment Display Module @ MCHobby</a></li>
 <li>Voir <a href="https://www.dfrobot.com/product-1966.html">Gravity - 4-Digital LED Segment Display Module @ DFRobot</a></li>
+<li>Voir <a href="https://www.dfrobot.com/product-1979.html">Gravity - 8-Digital LED Segment Display Module @ DFRobot</a></li>
 </ul>
       </td>
   </tr>
