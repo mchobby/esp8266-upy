@@ -1,13 +1,8 @@
-# stonatm@gmail.com
-# Gravity DFRobot DFR0645-R DFR0645-G
-# TM1650 4 digit 8 segment led display
-# i2c software implementation
-# esp32 micropython driver
 """
 4-Digital LED segment display module (DFR0645)
 ==============================================
 
-MicroPython library to support DFR0645 digital display from DFRobot.
+MicroPython TM1650 library to support DFR0645 digital display from DFRobot.
 I2C bus at 100 KHz max
 
 DFR0645 - 4-Digital LED segment display module V1.0
@@ -118,7 +113,7 @@ class LedSegment4():
       time.sleep_ms( delay_ms )
 
   def int(self, num):
-    """ Show integer (9999 to -9999) """
+    """ Show integer (9999 to -999) """
     if (num >= 0) and (num <= 9999):
       t = str(int(num))
       self.__clear_all()
