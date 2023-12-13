@@ -204,6 +204,19 @@ As previous example, the text scrolling can also be accelerated or reduced by us
 dis.print("Fast scrolling text", delay_ms=200 )
 ```
 
+## manipulating the display
+
+As rule of thumb, the privates methods (with `__` prefix) should only be used from within the library. In the facts, you can also call them from your own user scripts! Thanks to this, you can **create your own animations** by directly manipulating the data sent to the display.
+
+The display data is updated with the method `__set_raw_value( pos, data )` where:
+* `pos` is the digit position from (0..3 or 0..7 depending on the display).
+* `data` la byte where buts activates the 7 segments LEDs (see here below)
+
+![Bits encoding (DFR0645, DFR646) in digits](docs/_static/dfr645-coding-bits.jpg)
+
+Then, the data are sent to the display by calling the methods `__send_buf()` .
+
+
 # Shopping list
 * [Raspberry-Pi Pico](https://shop.mchobby.be/en/search?controller=search&s=pico) @ MCHobby
 * [Green I2C display 4 digit 7 segments - 22 mm (SEN0645)](https://shop.mchobby.be/fr/leds/2092-afficheur-i2c-vert-4-chiffres-de-7-seg-22-mm-3232100020924-dfrobot.html) @ MCHobby

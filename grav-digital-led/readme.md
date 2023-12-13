@@ -208,6 +208,19 @@ As previous example, the text scrolling can also be accelerated or reduced by us
 dis.print("Fast scrolling text", delay_ms=200 )
 ```
 
+## Manipuler l'afficheur
+
+Sur le principe, une méthode privé (préfixée par `__`) doit être appelée exclusivement par la bibliothèque. Dans les faits, rien n'empêche cet appel depuis vos propre script! Il est donc possible de possible de **créer vos propres animations** en manipulant directement les données envoyées vers l'afficheur.
+
+Ces données sont manipulées en utilisant la méthode `__set_raw_value( pos, data )` où:
+* `pos` est la position du digit dans l'afficheur (0..3 ou 0..7 selon le modèle).
+* `data` l'octet avec les bits d'activation de l'afficheur 7 segments (voir ci-dessous)
+
+![Encodage des bits (DFR0645, DFR646) dans un digit](docs/_static/dfr645-coding-bits.jpg)
+
+Ensuite, l'afficheur est mis à jour en utilisant la méthode `__send_buf()` .
+
+
 # Liste d'achat
 * [Raspberry-Pi Pico](https://shop.mchobby.be/en/search?controller=search&s=pico) @ MCHobby
 * [Green I2C display 4 digit 7 segments - 22 mm (SEN0645)](https://shop.mchobby.be/fr/leds/2092-afficheur-i2c-vert-4-chiffres-de-7-seg-22-mm-3232100020924-dfrobot.html) @ MCHobby
