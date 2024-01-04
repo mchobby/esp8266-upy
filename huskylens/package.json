@@ -1,0 +1,6 @@
+{
+  "urls": [
+		["husky.py", "github:mchobby/esp8266-upy/huskylens/lib/husky.py"]
+  ],
+  "version": "1.0"
+}
