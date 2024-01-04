@@ -24,6 +24,18 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/huskylens">huskylens</a></td>
+      <td><strong>Composants</strong> : HuskyLens<br />
+      <strong>Interfaces</strong> : I2C, UART<br />
+<small>Utiliser un HuskyLens AI Camera avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : DFROBOT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/imprimantes-et-camera/2421-huskylens-capteur-de-vision-ai-uart-i2c-interface-gravity-3232100024212-dfrobot.html">Huskylens - capteur de vision AI / UART, I2C - interface Gravity @ MCHobby</a></li>
+<li>Voir <a href="https://www.dfrobot.com/product-1922.html">Gravity: Huskylens - An Easy-to-use AI Camera @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/lcdspi-lcd12864">lcdspi-lcd12864</a></td>
       <td><strong>Composants</strong> : LCD12864<br />
       <strong>Interfaces</strong> : SPI<br />

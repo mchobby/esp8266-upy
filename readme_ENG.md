@@ -309,6 +309,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/huskylens">huskylens</a></td>
+      <td><strong>Components</strong> : HuskyLens<br />
+      <strong>Interfaces</strong> : I2C, UART<br />
+<small>Use a HuskyLens AI Camera with MicroPython</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/imprimantes-et-camera/2421-huskylens-capteur-de-vision-ai-uart-i2c-interface-gravity-3232100024212-dfrobot.html">Huskylens - capteur de vision AI / UART, I2C - interface Gravity @ MCHobby</a></li>
+<li>See <a href="https://www.dfrobot.com/product-1922.html">Gravity: Huskylens - An Easy-to-use AI Camera @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/ili934x">ili934x</a></td>
       <td><strong>Components</strong> : ILI9341<br />
       <strong>Interfaces</strong> : FEATHERWING, I2C<br />

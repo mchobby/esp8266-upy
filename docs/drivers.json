@@ -245,6 +245,20 @@
 								 "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405."
 								}
 		},
+		{	"folder"        : "huskylens",
+			"components"    : ["HuskyLens"],
+			"interfaces"    : ["I2C","UART"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Huskylens - capteur de vision AI / UART, I2C - interface Gravity @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/imprimantes-et-camera\/2421-huskylens-capteur-de-vision-ai-uart-i2c-interface-gravity-3232100024212-dfrobot.html" },
+													{ "label" : "Gravity: Huskylens - An Easy-to-use AI Camera @ DFRobot",
+														"url"   : "https:\/\/www.dfrobot.com\/product-1922.html" }
+												],
+			"descr"	: {"FR" : "Utiliser un HuskyLens AI Camera avec MicroPython",
+								 "ENG": "Use a HuskyLens AI Camera with MicroPython"
+								}
+		},
 		{	"folder"        : "FBGFX",
 			"components"    : [],
 			"interfaces"    : [],
