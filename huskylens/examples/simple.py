@@ -9,6 +9,7 @@ Buy HUSKYLENS at:
  * https://www.dfrobot.com/product-1922.html
 
  History:
+ * 2024-01-04 also display object ID (useful for tag & face recognition).
  * 2024-01-01 created for MicroPython by [MCHobby](shop.mchobby.be)
 
  GNU Lesser General Public License.
@@ -56,9 +57,9 @@ while True:
 	for idx,item in enumerate(lst):
 		# Item in the resulting list are typed.
 		if type(item) is Box:
-			print( "item %i is a BOX. Center is %i,%i. Width=%i. Height=%i" % (idx, item.center.x, item.center.y, item.width, item.height)  )
+			print( "item %i is a BOX ID%i. Center is %i,%i. Width=%i. Height=%i" % (idx, item.id, item.center.x, item.center.y, item.width, item.height)  )
 		elif type( item ) is Arrow:
-			print( "item %i is an Arrow. Origin is %i,%i, Target is %i,%i" % (idx, item.origin.x, item.origin.y, item.target.x, item.target.y) )
+			print( "item %i is an Arrow ID%i. Origin is %i,%i, Target is %i,%i" % (idx, item.id, item.origin.x, item.origin.y, item.target.x, item.target.y) )
 		else:
 			print( 'item %i: %r' % (idx,item) ) # %r: Print object representation
 

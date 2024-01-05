@@ -189,6 +189,50 @@ item 0 is an Arrow. Origin is 216,238, Target is 136,0
 item 0 is an Arrow. Origin is 216,238, Target is 136,0
 ```
 
+## Reconnaissance de Tags
+
+En suivant le déroulé du [tutoriel DFRobot "Tag Recognition"](https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336#target_20)(_reconnaissance de tags_), vous entrainerez l'identification de **multiple tags** sur une partie des 35 tags disponibles sur l'image de test.
+
+Comme vous pouvez le constater sur les captures ci-dessous, j'ai entrainé mon HuskyLens sur la totalité des 35 tags (voyez les tag ID).
+
+![HuskyLens Learned tags](docs/_static/tag-learned.jpg)
+
+Maintenant, en faisant un plan serré sur quelques tags... HuskyLens identifie les tags ayant les IDs 19, 20, 21, 26, 27, 28.
+
+![HuskyLens focusing tags](docs/_static/tag-focus.jpg)![HuskyLens tag recognition](docs/_static/tag-recognition.jpg)
+
+Le script [simple.py](examples\simple.py) produira le resultat suivant:
+
+```
+-----------------------------------
+item 0 is a BOX ID19. Center is 80,57. Width=76. Height=66
+item 1 is a BOX ID20. Center is 172,55. Width=72. Height=66
+item 2 is a BOX ID21. Center is 6,55. Width=74. Height=66
+item 3 is a BOX ID26. Center is 75,146. Width=82. Height=76
+item 4 is a BOX ID27. Center is 173,144. Width=78. Height=76
+item 5 is a BOX ID28. Center is 14,143. Width=82. Height=74
+-----------------------------------
+item 0 is a BOX ID19. Center is 82,53. Width=76. Height=66
+item 1 is a BOX ID20. Center is 176,53. Width=72. Height=66
+item 2 is a BOX ID21. Center is 11,53. Width=76. Height=66
+item 3 is a BOX ID26. Center is 77,144. Width=82. Height=76
+item 4 is a BOX ID27. Center is 178,143. Width=80. Height=78
+item 5 is a BOX ID28. Center is 20,142. Width=82. Height=76
+-----------------------------------
+item 0 is a BOX ID19. Center is 80,53. Width=76. Height=66
+item 1 is a BOX ID20. Center is 172,53. Width=72. Height=66
+item 2 is a BOX ID21. Center is 7,52. Width=76. Height=64
+item 3 is a BOX ID26. Center is 73,142. Width=82. Height=76
+item 4 is a BOX ID27. Center is 174,142. Width=80. Height=76
+item 5 is a BOX ID28. Center is 16,141. Width=82. Height=74
+```
+
+Notes:
+* Le script [simple.py](examples\simple.py) a été amélioré aussi afficher l'ID des tags identifiés.
+* Comme le centre de chaque tag est disponible (dans les données), il est possible d'identifier la position de chaque tag dans une "sequence".
+* Les 35 tags déjà disponibles sont suffisant pour y répertorier les 27 lettres de l'alphabet... il serait même possible d'écrire des mots en enchainant les tags.
+* La collection de tags couvre jusque 500 éléments (voir [la page Wiki](https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336#target_20)!!!   
+
 ## Tests avancés
 
 Le script [advanced.py](examples\advanced.py) introduit les méthodes et propriétés additionnelles de la classe **HuskyLens** .

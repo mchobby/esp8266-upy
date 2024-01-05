@@ -113,9 +113,9 @@ while True:
 	for item in lst:
 		# Item in the resulting list are typed.
 		if type(item) is Box:
-			print( "item is a BOX. Center is %i,%i. Width=%i. Height=%i" % ( item.center.x, item.center.y, item.width, item.height)  )
+			print( "item is a BOX ID%i. Center is %i,%i. Width=%i. Height=%i" % ( item.id, item.center.x, item.center.y, item.width, item.height)  )
 		elif type( item ) is Arrow:
-			print( "item is an Arrow. Origin is %i,%i, Target is %i,%i" % ( item.origin.x, item.origin.y, item.target.x, item.target.y) )
+			print( "item is an Arrow ID%i. Origin is %i,%i, Target is %i,%i" % ( item.id, item.origin.x, item.origin.y, item.target.x, item.target.y) )
 		else:
 			print( 'item is %r' % (idx,item) ) # %r: Print object representation
 
@@ -181,6 +181,50 @@ item 0 is an Arrow. Origin is 216,238, Target is 136,0
 -----------------------------------
 item 0 is an Arrow. Origin is 216,238, Target is 136,0
 ```
+
+## Tag recognition
+
+By following the [DFRobot tutorial on "Tag Recognition"](https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336#target_20), you can learn **multiple tags** with most (or all) of the 35 tags available on the tutorial test picture.
+
+As you can see on the following picture, I had learned all the tags of the sheet (see the tag's ID).
+
+![HuskyLens Learned tags](docs/_static/tag-learned.jpg)
+
+Now, lets focus on the following tags... where HuskyLens detected everything possible (IDs 19, 20, 21, 26, 27, 28).
+
+![HuskyLens focusing tags](docs/_static/tag-focus.jpg)![HuskyLens tag recognition](docs/_static/tag-recognition.jpg)
+
+The [simple.py](examples\simple.py) will produce the following results:
+
+```
+-----------------------------------
+item 0 is a BOX ID19. Center is 80,57. Width=76. Height=66
+item 1 is a BOX ID20. Center is 172,55. Width=72. Height=66
+item 2 is a BOX ID21. Center is 6,55. Width=74. Height=66
+item 3 is a BOX ID26. Center is 75,146. Width=82. Height=76
+item 4 is a BOX ID27. Center is 173,144. Width=78. Height=76
+item 5 is a BOX ID28. Center is 14,143. Width=82. Height=74
+-----------------------------------
+item 0 is a BOX ID19. Center is 82,53. Width=76. Height=66
+item 1 is a BOX ID20. Center is 176,53. Width=72. Height=66
+item 2 is a BOX ID21. Center is 11,53. Width=76. Height=66
+item 3 is a BOX ID26. Center is 77,144. Width=82. Height=76
+item 4 is a BOX ID27. Center is 178,143. Width=80. Height=78
+item 5 is a BOX ID28. Center is 20,142. Width=82. Height=76
+-----------------------------------
+item 0 is a BOX ID19. Center is 80,53. Width=76. Height=66
+item 1 is a BOX ID20. Center is 172,53. Width=72. Height=66
+item 2 is a BOX ID21. Center is 7,52. Width=76. Height=64
+item 3 is a BOX ID26. Center is 73,142. Width=82. Height=76
+item 4 is a BOX ID27. Center is 174,142. Width=80. Height=76
+item 5 is a BOX ID28. Center is 16,141. Width=82. Height=74
+```
+
+Notes:
+* The [simple.py](examples\simple.py) script have been enhanced to displays the ID of recognized tag.
+* As the center of each tag is available it is even possible to identify the tag position into the "sequence".
+* The 35 tags already available are enough to cover the 27 letter of the alphabet... we could even write words or encode information with the tags
+* The complete tag collection cover 500 items!!!   
 
 ## Advanced testing
 
