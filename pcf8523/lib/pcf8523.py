@@ -22,6 +22,7 @@ BATTERY_SWITCHOVER_OFF = 0b111
 
 RTC_REG = 0x03
 ALARM_REG = 0x0A
+CONTROL_1_REG = 0x00
 
 def _bcd2bin(value):
 	"""Convert binary coded decimal to Binary """
@@ -44,12 +45,21 @@ class PCF8523:
 		# Try and verify this is the RTC we expect by checking the timer B
 		# frequency control bits which are 1 on reset and shouldn't ever be
 		# changed.
-		self.buf1[0] = 0x12
-		self.i2c.writeto( self.address, self.buf1 )
-		self.i2c.readfrom_into( self.address, self.buf1 )
+		self.retries = 2
+		while self.retries > 0:
+			self.buf1[0] = 0x12
+			self.i2c.writeto( self.address, self.buf1 )
+			self.i2c.readfrom_into( self.address, self.buf1 )
+			if (self.buf1[0] & 0b00000111) != 0b00000111 and self.retries == 2:				
+				self.soft_reset()
+			elif (self.buf1[0] & 0b00000111) != 0b00000111 and self.retries == 1:
+				raise ValueError("Unable to find PCF8523 at i2c address 0x68.")
+			self.retries -= 1
 
-		if (self.buf1[0] & 0b00000111) != 0b00000111:
-			raise ValueError("Unable to find PCF8523 at i2c address 0x68.")
+	def soft_reset(self):
+		self.buf1 = bytearray(1)
+		self.buf1[0] = 0x58
+		self.i2c.writeto_mem(self.address, CONTROL_1_REG, self.buf1) # writes 0x58 to address 0x00 to reset the chip
 
 	def _read_datetime( self, time_reg ):
 		"""Gets the date and time from a given register location (0x03 for RTC, 0x0A for alarm )."""
