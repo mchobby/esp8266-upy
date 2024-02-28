@@ -11,6 +11,7 @@ Buy HUSKYLENS at:
 
 History:
  * 2023-12-28 Portage to MicroPython, refactoring by [MCHobby](shop.mchobby.be)
+ * 2023-02-28 Fix error in conversion of integer in _processData
 
 Doc: https://github.com/HuskyLens/HUSKYLENSArduino/blob/master/HUSKYLENS%20Protocol.md
 
@@ -18,7 +19,7 @@ Doc: https://github.com/HuskyLens/HUSKYLENSArduino/blob/master/HUSKYLENS%20Proto
 from ubinascii import unhexlify # HexString -> bytes
 import time
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 HEADER = "55AA11" # Command Header and Address
 
@@ -202,7 +203,7 @@ class HuskyLens:
 
                     # transform data to list [139, 115, 127, 128, 1]
                     for q in range(0,len(_data),4):
-                        _tmp.append( int(_data[q:q+2],16)+int(_data[q+2:q+4],16) )
+                        _tmp.append( (int(_data[q+2:q+4],16)<<8) + int(_data[q:q+2],16) )
                     # Add specialized object (to resulting list)
                     _r.append( _tmp )
                 return _r
