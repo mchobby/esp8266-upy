@@ -12,6 +12,7 @@ Buy HUSKYLENS at:
 History:
  * 2023-12-28 Portage to MicroPython, refactoring by [MCHobby](shop.mchobby.be)
  * 2023-02-28 Fix error in conversion of integer in _processData
+ * 2023-03-03 add method Point.set()
 
 Doc: https://github.com/HuskyLens/HUSKYLENSArduino/blob/master/HUSKYLENS%20Protocol.md
 
@@ -19,7 +20,7 @@ Doc: https://github.com/HuskyLens/HUSKYLENSArduino/blob/master/HUSKYLENS%20Proto
 from ubinascii import unhexlify # HexString -> bytes
 import time
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 HEADER = "55AA11" # Command Header and Address
 
@@ -54,6 +55,15 @@ class Point:
 	def __init__( self ):
 		self.x = 0
 		self.y = 0
+
+	def set( self, values ):
+		if type(values) is Point:
+			self.x = values.x
+			self.y = values.y
+		else:
+			# we have a couple of values (eg: tuple)
+			self.x = values[0]
+			self.y = values[1]
 
 class GenericData( list ):
 	""" Just store the list of values returned from _processData """
