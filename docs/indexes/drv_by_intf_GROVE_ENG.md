@@ -53,6 +53,18 @@ GROVE connector (SeeedStudio) shipping I2C, UART, Analog or signals
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/m5stack-u088">m5stack-u088</a></td>
+      <td><strong>Components</strong> : U088, SGP30<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>SGP30 I2C Module for TVOC & eCO2 measurement</small><br/><br />
+      <strong>Tested with</strong> : PICO, M5STACK<br />
+      <strong>Manufacturer</strong> : M5STACK, ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/grove/2322-m5stack-tvoceco2-gas-sensor-unit-sgp30-gro-3232100023222-m5stack.html">M5Stack : module TVOC, eCO2 en I2C, Grove</a></li>
+<li>See <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/2546-sgp30-capteur-qualite-d-air-voc-eco2-qwiic-stemmaqt-3232100025462-adafruit.html">Adafruit SGP30 module TVOC, eCO2 en I2C</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u097">m5stack-u097</a></td>
       <td><strong>Components</strong> : U097, RELAYS<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />

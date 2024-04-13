@@ -72,6 +72,18 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/veml6075">veml6075</a></td>
+      <td><strong>Components</strong> : VEML6075, SEN0303<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>The VEML6075 sensor is sensitive to <strong>ultraviolet light</strong> (315~375nm) and can calculate the UV Index of visible light en lumière visible.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/1881-mesure-ultraviolet-veml6075-gravity-i2c-3232100018815-dfrobot.html">VEML6075 @ MCHobby - Capteur UltraViolet / Index UV numérique</a></li>
+<li>See <a href="https://www.dfrobot.com/product-1906.html">VEML6075 @ DFRobot - UltraViolet / UV Index digital sensor</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/weather-station">weather-station</a></td>
       <td><strong>Components</strong> : GPIO<br />
       <strong>Interfaces</strong> : UART<br />

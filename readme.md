@@ -418,6 +418,18 @@ Explorer par:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/m5stack-u088">m5stack-u088</a></td>
+      <td><strong>Composants</strong> : U088, SGP30<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>SGP30 I2C Module pour mesure CoV/TVoC et eCO2</small><br/><br />
+      <strong>Testé avec</strong> : PICO, M5STACK<br />
+      <strong>Fabricant</strong> : M5STACK, ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/grove/2322-m5stack-tvoceco2-gas-sensor-unit-sgp30-gro-3232100023222-m5stack.html">M5Stack : module TVOC, eCO2 en I2C, Grove</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/2546-sgp30-capteur-qualite-d-air-voc-eco2-qwiic-stemmaqt-3232100025462-adafruit.html">Adafruit SGP30 module TVOC, eCO2 en I2C</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/m5stack-u097">m5stack-u097</a></td>
       <td><strong>Composants</strong> : U097, RELAYS<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
@@ -1076,6 +1088,18 @@ Explorer par:
       <strong>Fabricant</strong> : NONE<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/product.php?id_product=846">Feather ESP8266</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/veml6075">veml6075</a></td>
+      <td><strong>Composants</strong> : VEML6075, SEN0303<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Le VEML6075 est un capteur de <strong>ultraviolet</strong> (315~375nm) permettant d'évaluer l'index UV en lumière visible.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : DFROBOT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/1881-mesure-ultraviolet-veml6075-gravity-i2c-3232100018815-dfrobot.html">VEML6075 @ MCHobby - Capteur UltraViolet / Index UV numérique</a></li>
+<li>Voir <a href="https://www.dfrobot.com/product-1906.html">VEML6075 @ DFRobot - UltraViolet / UV Index digital sensor</a></li>
 </ul>
       </td>
   </tr>

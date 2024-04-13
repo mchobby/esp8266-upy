@@ -429,6 +429,20 @@
 								 "ENG": "I2C Voltmeter module"
 								}
 		},
+		{	"folder"        : "m5stack-u088",
+			"components"    : ["U088","SGP30"],
+			"interfaces"    : ["GROVE","I2C"],
+			"manufacturers" : ["M5STACK","ADAFRUIT"],
+			"plateforms"    : ["PICO","M5STACK"],
+			"ressources"    : [ { "label" : "M5Stack : module TVOC, eCO2 en I2C, Grove",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/grove\/2322-m5stack-tvoceco2-gas-sensor-unit-sgp30-gro-3232100023222-m5stack.html" },
+													{ "label" : "Adafruit SGP30 module TVOC, eCO2 en I2C",
+																			"url"   : "https:\/\/shop.mchobby.be\/fr\/environnemental-press-temp-hrel-gaz/2546-sgp30-capteur-qualite-d-air-voc-eco2-qwiic-stemmaqt-3232100025462-adafruit.html" }
+												],
+			"descr"	: {"FR" : "SGP30 I2C Module pour mesure CoV/TVoC et eCO2",
+								 "ENG": "SGP30 I2C Module for TVOC & eCO2 measurement"
+								}
+		},
 		{	"folder"        : "m5stack-u097",
 			"components"    : ["U097","RELAYS"],
 			"interfaces"    : ["GROVE","I2C"],
@@ -1225,6 +1239,20 @@
 												],
 			"descr"	: {"FR" : "Connecteur <strong>UEXT<\/strong> en logique 3.3V est utilisé sur les cartes et capteurs d' Olimex. Il transporte les bus I2C, SPI, UART et alimentation 3.3V",
 								 "ENG": "<strong>UEXT<\/strong> connector work in 3.3V logic and is used on many board and extension of Olimex. It ship I2C, SPI, UART buses as well as 3.3V"
+								}
+		},
+		{	"folder"        : "veml6075",
+			"components"    : ["VEML6075","SEN0303"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "VEML6075 @ MCHobby - Capteur UltraViolet / Index UV numérique",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/environnemental-press-temp-hrel-gaz\/1881-mesure-ultraviolet-veml6075-gravity-i2c-3232100018815-dfrobot.html" },
+													{ "label" : "VEML6075 @ DFRobot - UltraViolet / UV Index digital sensor",
+														"url"   : "https:\/\/www.dfrobot.com/product-1906.html" }
+												],
+			"descr"	: {"FR" : "Le VEML6075 est un capteur de <strong>ultraviolet<\/strong> (315~375nm) permettant d'évaluer l'index UV en lumière visible.",
+								 "ENG": "The VEML6075 sensor is sensitive to <strong>ultraviolet light<\/strong> (315~375nm) and can calculate the UV Index of visible light en lumière visible."
 								}
 		},
 		{	"folder"        : "weather-station",

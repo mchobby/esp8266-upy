@@ -154,6 +154,18 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/m5stack-u088">m5stack-u088</a></td>
+      <td><strong>Composants</strong> : U088, SGP30<br />
+      <strong>Interfaces</strong> : GROVE, I2C<br />
+<small>SGP30 I2C Module pour mesure CoV/TVoC et eCO2</small><br/><br />
+      <strong>Testé avec</strong> : PICO, M5STACK<br />
+      <strong>Fabricant</strong> : M5STACK, ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/grove/2322-m5stack-tvoceco2-gas-sensor-unit-sgp30-gro-3232100023222-m5stack.html">M5Stack : module TVOC, eCO2 en I2C, Grove</a></li>
+<li>Voir <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/2546-sgp30-capteur-qualite-d-air-voc-eco2-qwiic-stemmaqt-3232100025462-adafruit.html">Adafruit SGP30 module TVOC, eCO2 en I2C</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/max31855">max31855</a></td>
       <td><strong>Composants</strong> : MAX31855<br />
       <strong>Interfaces</strong> : SPI<br />

@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["sgp30.py", "github:mchobby/esp8266-upy/m5stack-u088/lib/sgp30.py"]
+  ],
+  "version": "0.0.1"
+}
