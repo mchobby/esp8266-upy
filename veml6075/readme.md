@@ -1,7 +1,5 @@
 [This file also exists in ENGLISH HERE](readme_ENG.md)
 
-TRADUCTION EN FRANCAIS
-
 # Utiliser le capteur UltraViolet VEML6075 avec MicroPython
 
 Le capteur VEML6075 est conçu pour être utilisé dans des condition de luminosité naturelle (lumière solaire).
