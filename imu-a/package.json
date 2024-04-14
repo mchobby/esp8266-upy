@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["imu_a.py", "github:mchobby/esp8266-upy/imu_a/lib/imu_a.py"],
+		["compass.py", "github:mchobby/esp8266-upy/imu_a/lib/compass.py"],
+  ],
+  "version": "0.0.2"
+}
