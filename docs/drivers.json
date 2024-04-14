@@ -329,6 +329,20 @@
 								 "ENG": "ILI934x - TFT display controler with 16 bits color - under MicroPython."
 								}
 		},
+		{	"folder"        : "imu-a",
+			"components"    : ["LSM6DS33","LSM6DSOX","LIS3MDL","ADF-4517"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Centrale Interielle 9DOF - LSM6DSOX + LIS3MDL - Qwiic/StemmaQt - ADF-4517 @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/mouvement\/2393-centrale-interielle-9dof-lsm6ds33-lis3mdl-3232100023932-adafruit.html" },
+													{ "label" : "9DOF Inertial Measurement Unit - LSM6DSOX + LIS3MDL - Qwiic/StemmaQt - ADF-4517 @ Adafruit",
+														"url"   : "https:\/\/www.adafruit.com\/product\/4517" }
+												],
+			"descr"	: {"FR" : "Centrale Interielle 9DOF (acc,magn,gyro)- LSM6DSOX + LIS3MDL via I2C - sous MicroPython",
+								 "ENG": "Inertial Measurement Unit 9DOF (acc,magn,gyro) - LSM6DSOX + LIS3MDL - I2C I2C - under MicroPython."
+								}
+		},
 		{	"folder"        : "is31fl",
 			"components"    : ["IS31FL3731"],
 			"interfaces"    : ["FEATHERWING", "I2C"],

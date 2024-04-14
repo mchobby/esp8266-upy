@@ -130,6 +130,18 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/imu-a">imu-a</a></td>
+      <td><strong>Components</strong> : LSM6DS33, LSM6DSOX, LIS3MDL, ADF-4517<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Inertial Measurement Unit 9DOF (acc,magn,gyro) - LSM6DSOX + LIS3MDL - I2C I2C - under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/fr/mouvement/2393-centrale-interielle-9dof-lsm6ds33-lis3mdl-3232100023932-adafruit.html">Centrale Interielle 9DOF - LSM6DSOX + LIS3MDL - Qwiic/StemmaQt - ADF-4517 @ MCHobby</a></li>
+<li>See <a href="https://www.adafruit.com/product/4517">9DOF Inertial Measurement Unit - LSM6DSOX + LIS3MDL - Qwiic/StemmaQt - ADF-4517 @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/is31fl">is31fl</a></td>
       <td><strong>Components</strong> : IS31FL3731<br />
       <strong>Interfaces</strong> : FEATHERWING, I2C<br />
