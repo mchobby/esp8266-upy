@@ -42,7 +42,7 @@ rst_pin = Pin(2, Pin.OUT, value=1 )
 
 # r in 0..3 is rotation, r in 4..7 = rotation+miroring
 # Use 3 for landscape mode
-lcd = ILI9488( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=480, r=0)
+lcd = ILI9488( spi, cs=cs_pin, dc=dc_pin, rst=rst_pin, w=320, h=480, r=3)
 lcd.fill( color565( 30, 35, 128) ) # a shade of blue
 print( "Assign font")
 lcd.font_name = 'veram_m15'

@@ -46,7 +46,7 @@ POS_GAMMA_CONTROL        = const(0xe0)
 NEG_GAMMA_CONTROL        = const(0xe1)
 SET_IMAGE_FCT            = const(0xE9) # Set Image Function
 
-MEMORY_BUFFER = const(1024) # SPI Write Buffer
+MEMORY_BUFFER = const(256) # SPI Write Buffer (best performances for 256 bytes/color buffer)
 
 # Basic colors
 BLACK       = const(0x0000)
@@ -185,13 +185,34 @@ class ILI9488:
 		self.dc(1)
 		self.spi.write(data)
 
+	#def _writeblock(self, x0, y0, x1, y1, data=None):
+	#	self.cs.value(0)
+	#	self._write(COLUMN_ADDRESS_SET, ustruct.pack(">HH", x0, x1))
+	#	self._write(PAGE_ADDRESS_SET, ustruct.pack(">HH", y0, y1))
+	#	self._write(RAM_WRITE, data)
+	#	if data!=None: # Must be closed by the callee (sending multiple chunchs of data)
+	#		self.cs.value(1)
+
 	def _writeblock(self, x0, y0, x1, y1, data=None):
+		# Optimized WriteBlock
 		self.cs.value(0)
-		self._write(COLUMN_ADDRESS_SET, ustruct.pack(">HH", x0, x1))
-		self._write(PAGE_ADDRESS_SET, ustruct.pack(">HH", y0, y1))
-		self._write(RAM_WRITE, data)
-		if data!=None: # Must be closed by the callee (sending multiple chunchs of data)
+		self.dc(0)
+		self.spi.write(COLUMN_ADDRESS_SET.to_bytes(1,'big'))
+		self.dc(1)
+		self.spi.write(ustruct.pack(">HH", x0, x1))
+
+		self.dc(0)
+		self.spi.write(PAGE_ADDRESS_SET.to_bytes(1,'big'))
+		self.dc(1)
+		self.spi.write(ustruct.pack(">HH", y0, y1))
+
+		self.dc(0)
+		self.spi.write(RAM_WRITE.to_bytes(1,'big'))
+		if data is not None:
+			self.dc(1)
+			self.spi.write(data)
 			self.cs.value(1)
+
 
 	def _readblock(self, x0, y0, x1, y1, data=None):
 		self.cs.value(0)
@@ -351,10 +372,14 @@ class ILI9488:
 		# print_buffer, print_FrameBuffer, FontDrawer
 		import fdrawer
 		self._font = fdrawer.FontDrawer( frame_buffer=None, font_name=self._font_name )
-		self._pbuf = bytearray( (self._font.font.height+self._font.font.descender)*self.width//8 )
-		print( "_pbuf size", (self._font.font.height+self._font.font.descender)*self.width//8  )
+		# Buffer height must be a multiple of height bits
+		px_height = self._font.font.height+self._font.font.descender
+		byte_height = px_height//8
+		if (px_height%8) != 0:
+			byte_height += 1
+		self._pbuf = bytearray( byte_height*self.width )
 		self._pfb = framebuf.FrameBuffer(self._pbuf,self.width,self._font.font.height+self._font.font.descender, framebuf.MONO_VLSB )
-		self._font.fb = self._pfb # Font must be drawed to custom FrameBuffer
+		self._font.fb = self._pfb # Font must be drawed to a custom FrameBuffer
 		self._font.color = 1
 
 	def scroll(self, dy):
@@ -402,23 +427,36 @@ class ILI9488:
 		self._x = curx; self._y = cury
 
 	def chars(self, str, x, y):
-		assert self._font != None, 'font_name not assigned yet!'
+		def blit_font( x, y, width ):
+			# Draw the font FrameBuffer onto the LCD at position X and Y
+			#   print( "blit_font: %i, %i, width: %i" % ( x, y, width ) )
+			#   print( "blit_font: font_height %i" % self._font.font.height )
+			fg_color = self._colormap[2:4]
+			for y_font in range( self._font.font.height ):
+				for x_font in range( width ):
+					# print("blit_font: %i, %i = %i " % (x_font, y_font, self._font.fb.pixel(x_font,y_font) ) )
+					if self._font.fb.pixel(x_font,y_font)!=0: # # only draw non transparent Pixels
+						#  print(x+x_font, y+y_font, fg_color )
+						self.pixel( x+x_font, y+y_font, fg_color )
 
+
+		assert self._font != None, 'font_name not assigned yet!'
 		self._font.fb.fill_rect( 0,0, self.width, self._font.font.height, 0 ) # Fill it with background color
-		return 0 #TODO tofix - drawing into the framebuffer does crash
+		#return 0 #TODO tofix - drawing into the framebuffer does crash
 		pos = 0
 		for ch in str:
-			print( '   ch', ch )
+			# print( '   ch', ch )
 			char_w = self._font.print_char( ch,pos,0 )# draw it into the FB
 			pos += char_w[0]+self._font.spacing # add proportional width
-		print( "chars() blitting")
-		print( "   _font.fb", self._font.fb )
-		print( "   x,y ", x,",",y )
-		print( "   pos", pos )
-		print( "   font.height", self._font.font.height )
-		# self.blit(self._font.fb,x,y,pos,self._font.font.height )
-		print( "chars() drawed for", str )
-		print( "chars() x+pos = %i" % (x+pos) )
+		#print( "chars() blitting")
+		#print( "   _font.fb", self._font.fb )
+		#print( "   x,y ", x,",",y )
+		#print( "   pos", pos )
+		#print( "   font.height", self._font.font.height )
+		blit_font( x, y, width=pos )
+		#self.blit(self._font.fb,x,y,pos,self._font.font.height )
+		#print( "chars() drawed for", str )
+		#print( "chars() x+pos = %i" % (x+pos) )
 		return x+pos #str_w
 
 	def print(self, text): #does word wrap, leaves self._x unchanged
@@ -427,30 +465,30 @@ class ILI9488:
 		char_w = self._font.font.width # Max Width
 		lines = text.split('\n')
 		for line in lines:
-			print( "print() line:", line )
+			#print( "print() line:", line )
 			words = line.split(' ')
 			for word in words:
-				print( 'print() drawing word:', word )
+				#print( 'print() drawing word:', word )
 				if curx + self._font.font.get_width(word) >= self.width:
-					print( "print() splitting required")
+					#print( "print() splitting required")
 					curx = self._x; cury = self.next_line(cury,char_h)
-					print( 'print() curx', curx, 'cury', cury)
+					#print( 'print() curx', curx, 'cury', cury)
 					while self._font.font.get_width(word) > self.width:
-						print("print() -> chars() calling")
+						# print("print() -> chars() calling")
 						self.chars(word[:self.width//char_w],curx,cury)
-						print("print() -> chars() done")
+						# print("print() -> chars() done")
 						word = word[self.width//char_w:]
-						print('   > next_line(cury,char_h)', curx, char_h)
+						# print('   > next_line(cury,char_h)', curx, char_h)
 						cury = self.next_line(cury,char_h)
-					print( "print() splitting done for word", word )
+					#print( "print() splitting done for word", word )
 				if len(word)>0:
-					print( "print() non split required")
-					print( 'print() curx', curx, 'cury', cury)
-					print("print() -> chars() calling_2")
+					#print( "print() non split required")
+					#print( 'print() curx', curx, 'cury', cury)
+					#print("print() -> chars() calling_2")
 					curx = self.chars(word+' ', curx,cury)
-					print("print() curx %i" % curx)
-					print("print() -> chars() done_2")
-			print( "next_line()")
+					#print("print() curx %i" % curx)
+					#print("print() -> chars() done_2")
+			#print( "next_line()")
 			curx = self._x; cury = self.next_line(cury,char_h)
-			print( "next_line() done")
+			#print( "next_line() done")
 		self._y = cury

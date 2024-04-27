@@ -7,10 +7,10 @@ from machine import SPI,Pin
 from ili9488 import *
 
 # Raspberry-Pi Pico
-spi = SPI( 1, baudrate=40_000_000 ) # 40 Mhz, reduce it to 1 MHz in case of trouble
-cs_pin = Pin(9, Pin.OUT, value=1 )
-dc_pin = Pin(12, Pin.OUT )
-rst_pin = Pin(13, Pin.OUT, value=1 )
+spi = SPI( 0, miso=Pin.board.GP4, mosi=Pin.board.GP7, sck=Pin.board.GP6, baudrate=40_000_000 ) # 40 Mhz, reduce it to 1 MHz in case of trouble
+cs_pin = Pin(5, Pin.OUT, value=1 )
+dc_pin = Pin(3, Pin.OUT )
+rst_pin = Pin(2, Pin.OUT, value=1 )
 
 # r in 0..3 is rotation, r in 4..7 = rotation+miroring
 # Use 3 for landscape mode

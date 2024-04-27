@@ -5,6 +5,7 @@
 from machine import Pin, SPI
 from ili9488 import *
 from random import choice
+import time
 
 # Raspberry-Pi Pico
 spi = SPI( 0, miso=Pin.board.GP4, mosi=Pin.board.GP7, sck=Pin.board.GP6 ,baudrate=40_000_000 ) # 40 Mhz, reduce it to 1 MHz in case of trouble
@@ -20,8 +21,14 @@ colors = [BLACK,NAVY,DARKGREEN,DARKCYAN,MAROON,PURPLE,OLIVE,LIGHTGREY,DARKGREY,
 	BLUE,GREEN,CYAN,RED,MAGENTA,YELLOW,WHITE,ORANGE,GREENYELLOW]
 
 while True:
-	lcd.fill( choice(colors) )
-	lcd.fill_rect( 10,10, 20, 20, choice(colors) )
+	color1, color2 = choice(colors), choice(colors)
+	start = time.ticks_ms()
+	for i in range(10):
+		lcd.fill( color1 )
+		lcd.fill_rect( 10,10, 20, 20, color2 )
+	stop = time.ticks_ms()
+	print( "Ticks diff: %f" % ( time.ticks_diff( stop, start )/10 ) )
+
 
 # lcd.erase()
 # Compose a color

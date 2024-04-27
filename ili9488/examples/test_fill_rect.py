@@ -5,13 +5,13 @@
 #
 from machine import SPI,Pin
 from ili9488 import *
-import urandom
+import random
 
 # Raspberry-Pi Pico
-spi = SPI( 1, baudrate=40_000_000 ) # 40 Mhz, reduce it to 1 MHz in case of trouble
-cs_pin = Pin(9, Pin.OUT, value=1 )
-dc_pin = Pin(12, Pin.OUT )
-rst_pin = Pin(13, Pin.OUT, value=1 )
+spi = SPI( 0, miso=Pin.board.GP4, mosi=Pin.board.GP7, sck=Pin.board.GP6, baudrate=40_000_000 ) # 40 Mhz, reduce it to 1 MHz in case of trouble
+cs_pin = Pin(5, Pin.OUT, value=1 )
+dc_pin = Pin(3, Pin.OUT )
+rst_pin = Pin(2, Pin.OUT, value=1 )
 
 # r in 0..3 is rotation, r in 4..7 = rotation+miroring
 # Use 3 for landscape mode
@@ -21,9 +21,8 @@ lcd.erase()
 colors = [NAVY, DARKGREEN, DARKCYAN, MAROON, PURPLE, OLIVE, LIGHTGREY,
 		DARKGREY, BLUE, GREEN, CYAN, RED, MAGENTA, YELLOW, WHITE, ORANGE,
 		GREENYELLOW ]
-color_count = len( colors )
 
 for i in range(300):
-	lcd.fill_rect( urandom.randint(0,lcd.width-1), urandom.randint(0,lcd.height-1),
-				urandom.randint(1,50), urandom.randint(1,50),
-				colors[urandom.randint(0,color_count-1)] )
+	lcd.fill_rect( random.randint(0,lcd.width-1), random.randint(0,lcd.height-1),
+		random.randint(1,50), random.randint(1,50),
+		random.choice( colors ) )
