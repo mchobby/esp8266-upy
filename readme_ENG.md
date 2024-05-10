@@ -1127,6 +1127,17 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/winbond">winbond</a></td>
+      <td><strong>Components</strong> : W25Qxx, FLASH<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Using a QSPI Flash memory with MicroPython (in SPI)</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://www.digikey.be/fr/products/detail/winbond-electronics/W25Q128JVSIQ/5803943">W25Q128JVSIQ @ Digikey</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>
 

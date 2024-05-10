@@ -1282,6 +1282,18 @@
 			"descr"	: {"FR" : "Station Météo - Kit 5 capteurs - anémomètre, girouette, pluie, temperature, humidité",
 								 "ENG": "Weather Station Kit with Anemometer/Wind Vane/Rain Bucket"
 								}
+		},
+		{	"folder"        : "winbond",
+			"components"    : ["W25Qxx","FLASH"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : [],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "W25Q128JVSIQ @ Digikey",
+												    "url"   : "https:\/\/www.digikey.be\/fr\/products\/detail\/winbond-electronics\/W25Q128JVSIQ\/5803943" }
+												],
+			"descr"	: {"FR" : "Utiliser une mémoire Flash QSPI avec MicroPython (en SPI)",
+								 "ENG": "Using a QSPI Flash memory with MicroPython (in SPI)"
+								}
 		}
 
 ]

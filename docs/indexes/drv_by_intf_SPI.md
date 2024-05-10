@@ -146,5 +146,16 @@ Bus SPI
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/winbond">winbond</a></td>
+      <td><strong>Composants</strong> : W25Qxx, FLASH<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Utiliser une mémoire Flash QSPI avec MicroPython (en SPI)</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://www.digikey.be/fr/products/detail/winbond-electronics/W25Q128JVSIQ/5803943">W25Q128JVSIQ @ Digikey</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>
