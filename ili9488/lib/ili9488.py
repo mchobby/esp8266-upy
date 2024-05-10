@@ -89,7 +89,8 @@ class ILI9488:
 		self.init()
 		self._buf = bytearray(MEMORY_BUFFER * 3) # color encoded on 18 bits
 		self._colormap = bytearray(b'\x00\x00\xFF\xFF') # RGB565 : white foreground [0..1], black background [2..3]
-		self._c18bit = bytearray(3) # Encoding buffer for 18bits color
+		self._fg_c18bit = bytearray(3) # Encoding buffer for 18bits color
+		self._bg_c18bit = bytearray(3) # Encoding buffer for 18bits color
 		self._x = 0
 		self._y = 0
 
@@ -224,15 +225,22 @@ class ILI9488:
 			return _d
 		self.cs.value(1)
 
-	def _set_18bit_color( self, color ):
+	def _set_18bit_color( self, color, foreground=True ):
 		# init the _c18bit color from a 16 bit color parameter (or 2 byte color)
 		if type(color) is int:
 			c16bit = ustruct.pack(">HH", color )
 		else:
 			c16bit = color # already an array
-		self._c18bit[0] = c16bit[0] & 0xF8
-		self._c18bit[1] = (( (c16bit[0] & 0b111)<<5 ) | (c16bit[1]>>3) ) & 0xFC
-		self._c18bit[2] = (c16bit[1]<<3) & 0xFF
+
+		if foreground:
+			self._fg_c18bit[0] = c16bit[0] & 0xF8
+			self._fg_c18bit[1] = (( (c16bit[0] & 0b111)<<5 ) | (c16bit[1]>>3) ) & 0xFC
+			self._fg_c18bit[2] = (c16bit[1]<<3) & 0xFF
+		else:
+			self._bg_c18bit[0] = c16bit[0] & 0xF8
+			self._bg_c18bit[1] = (( (c16bit[0] & 0b111)<<5 ) | (c16bit[1]>>3) ) & 0xFC
+			self._bg_c18bit[2] = (c16bit[1]<<3) & 0xFF
+
 
 	def erase(self):
 		self.fill_rect(0, 0, self.width, self.height)
@@ -250,13 +258,13 @@ class ILI9488:
 		else:
 			color = self._colormap[0:2] #background
 		self._set_18bit_color( color )
-		#self._c18bit[0] = color[0] & 0xF8
-		#self._c18bit[1] = (( (color[0] & 0b111)<<5 ) | (color[1]>>3) ) & 0xFC
-		#self._c18bit[2] = (color[1]<<3) & 0xFF
+		#self._fg_c18bit[0] = color[0] & 0xF8
+		#self._fg_c18bit[1] = (( (color[0] & 0b111)<<5 ) | (color[1]>>3) ) & 0xFC
+		#self._fg_c18bit[2] = (color[1]<<3) & 0xFF
 		for i in range(MEMORY_BUFFER):
-			self._buf[3*i]   = self._c18bit[0]
-			self._buf[3*i+1] = self._c18bit[1]
-			self._buf[3*i+2] = self._c18bit[2]
+			self._buf[3*i]   = self._fg_c18bit[0]
+			self._buf[3*i+1] = self._fg_c18bit[1]
+			self._buf[3*i+2] = self._fg_c18bit[2]
 		chunks, rest = divmod(w * h, MEMORY_BUFFER)
 		self._writeblock(x, y, x + w - 1, y + h - 1, None)
 		if chunks:
@@ -265,6 +273,48 @@ class ILI9488:
 		if rest != 0:
 			mv = memoryview(self._buf)
 			self._data(mv[:rest*3])
+		self.cs.value(1)
+
+	def blit_mono( self, fbuf, x, y, w, h, colors ):
+		# blit the fbuf monochrome buffer of x,y,w, h size to the FrameBuffer
+		# colors contains a type of (fg_color, bg_color)
+		# Useful to speed up print OR icon display of the TFT
+		x = min(self.width - 1, max(0, x))
+		y = min(self.height - 1, max(0, y))
+		w = min(self.width - x, max(1, w))
+		h = min(self.height - y, max(1, h))
+
+		self._set_18bit_color( colors[0] )
+		self._set_18bit_color( colors[1], foreground=False )
+
+		self._writeblock(x, y, x + w - 1, y + h - 1, None)
+
+		chunck_pos = 0
+		pixel_pos = 0
+		max_pixel = w*h
+
+		while pixel_pos < max_pixel:
+			y_pos, x_pos = divmod( pixel_pos, w )
+			if fbuf.pixel(x_pos, y_pos)!=0:
+				self._buf[3*chunck_pos]   = self._fg_c18bit[0]
+				self._buf[3*chunck_pos+1] = self._fg_c18bit[1]
+				self._buf[3*chunck_pos+2] = self._fg_c18bit[2]
+			else:
+				self._buf[3*chunck_pos]   = self._bg_c18bit[0]
+				self._buf[3*chunck_pos+1] = self._bg_c18bit[1]
+				self._buf[3*chunck_pos+2] = self._bg_c18bit[2]
+				#print( i )
+			chunck_pos += 1
+			pixel_pos  += 1
+
+			if chunck_pos == MEMORY_BUFFER:
+				self._data(self._buf)
+				chunck_pos = 0
+
+		if chunck_pos > 0:
+			mv = memoryview(self._buf)
+			self._data(mv[:chunck_pos*3])
+
 		self.cs.value(1)
 
 	def set_color(self,fg,bg): # 16 bits color
@@ -302,7 +352,7 @@ class ILI9488:
 		if not 0 <= x < self.width or not 0 <= y < self.height:
 			return
 		self._set_18bit_color( color )
-		self._writeblock(x, y, x, y, self._c18bit )
+		self._writeblock(x, y, x, y, self._fg_c18bit )
 
 	def hline( self, x,y,w, c, tick=1 ): # FrameBuffer mimic
 		if (x+w) >= self.width: w = self.width-x
@@ -427,36 +477,14 @@ class ILI9488:
 		self._x = curx; self._y = cury
 
 	def chars(self, str, x, y):
-		def blit_font( x, y, width ):
-			# Draw the font FrameBuffer onto the LCD at position X and Y
-			#   print( "blit_font: %i, %i, width: %i" % ( x, y, width ) )
-			#   print( "blit_font: font_height %i" % self._font.font.height )
-			fg_color = self._colormap[2:4]
-			for y_font in range( self._font.font.height ):
-				for x_font in range( width ):
-					# print("blit_font: %i, %i = %i " % (x_font, y_font, self._font.fb.pixel(x_font,y_font) ) )
-					if self._font.fb.pixel(x_font,y_font)!=0: # # only draw non transparent Pixels
-						#  print(x+x_font, y+y_font, fg_color )
-						self.pixel( x+x_font, y+y_font, fg_color )
-
-
 		assert self._font != None, 'font_name not assigned yet!'
 		self._font.fb.fill_rect( 0,0, self.width, self._font.font.height, 0 ) # Fill it with background color
-		#return 0 #TODO tofix - drawing into the framebuffer does crash
 		pos = 0
 		for ch in str:
 			# print( '   ch', ch )
 			char_w = self._font.print_char( ch,pos,0 )# draw it into the FB
 			pos += char_w[0]+self._font.spacing # add proportional width
-		#print( "chars() blitting")
-		#print( "   _font.fb", self._font.fb )
-		#print( "   x,y ", x,",",y )
-		#print( "   pos", pos )
-		#print( "   font.height", self._font.font.height )
-		blit_font( x, y, width=pos )
-		#self.blit(self._font.fb,x,y,pos,self._font.font.height )
-		#print( "chars() drawed for", str )
-		#print( "chars() x+pos = %i" % (x+pos) )
+		self.blit_mono( self.font.fb, x, y, w=pos, h=self.font.font.height, colors=(WHITE,BLACK) )
 		return x+pos #str_w
 
 	def print(self, text): #does word wrap, leaves self._x unchanged
