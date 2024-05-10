@@ -12,7 +12,7 @@ import framebuf
 import math
 import time
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 READ_DISPLAY       = const(0x0f)
 SLEEP_OUT          = const(0x11)
