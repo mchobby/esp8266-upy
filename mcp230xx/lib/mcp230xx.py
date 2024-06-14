@@ -148,6 +148,85 @@ class MCP23017(MCP):
     GPIO     = 0x12
     GPPU     = 0x0C
 
+class MCP23017_Enh(MCP23017):
+    """ MCP2307 integrating some INTERRUPT features """
+    IOCON   = 0x0A # Configures how MCP chip IO will work (ALSO FOR INTERRUPT PINs)
+    GPINTEN = 0x04 # Interrupt-on-change feature
+    INTCON  = 0x08 # Interrupt control register
+    INTF    = 0x0E # Indicates the PIN that raise the INT
+    DEFVAL  = 0x06 # The default value to compare against to raise IRQ
+
+    def int_io_config( self, mirror=False, open_drain=False, pol=Pin.low ):
+        # Configure the INT pin configuration (the way how the IO behave)
+        # mirror     : True -> INTA & INTB are internally conected. False -> INTA for PortA, INTB for PortB
+        # open_drain : True -> INTs pins act as open_drain
+        # int_pol    : polarity of Interrupt Pin.HIGH -> Active HIGH, Pin.LOW -> Active LOW.
+        #              int_pol is ignored when open_drain is activated
+        _val = self.readList( self.IOCON, 1 )[0]
+        if mirror:
+            _val = _val | 0b01000000 # set the bit
+        else:
+            _val = _val & 0b10111111 # clear the bit
+
+        if open_drain:
+            _val = _val | 0b00000100 # set the bit
+        else:
+            _val = _val & 0b11111011 # clear the bit
+
+        if pol!=Pin.low:
+            _val = _val | 0b00000010 # set the bit
+        else:
+            _val = _val & 0b11111101 # clear the bit
+
+        self.writeList( self.IOCON, bytes([_val]) )
+
+    def int_ctrl( self, pin, cmp_to_def=False ):
+        # Interrupt Control Register (how to compare to previous value) to raise interrupt
+        # cmp_to_def: True->Pin will be compare to default definition,
+        #             False->Pin will be compare to Previous value
+        self._validate_pin(pin)
+        _val = bytearray( self.readList(self.INTCON, 2) )
+        if cmp_to_def:
+            _val[int(pin/8)] |= 1 << (int(pin%8)) # Activate Bit
+        else:
+            _val[int(pin/8)] &= ~(1 << (int(pin%8))) # clear the bit
+        self.writeList( self.INTCON, _val )
+
+    def int_default_val( self, pin, state=Pin.high ):
+        # IF we need to compare to default value to generate INT
+        # THEN the chip must known the default value to compare against
+        # note -> compare to default value or previous value is configured with
+        #         int_ctrl()
+        self._validate_pin(pin)
+        _val = bytearray( self.readList(self.DEFVAL, 2) )
+        if state==Pin.high:
+            _val[int(pin/8)] |= 1 << (int(pin%8)) # Activate Bit
+        else:
+            _val[int(pin/8)] &= ~(1 << (int(pin%8))) # clear the bit
+        self.writeList( self.DEFVAL, _val )
+
+    def enable_int( self, pin, enable=False ):
+        # Activete the Interrupt-on-change for a given Pin
+        # enable: True->Pin enabled for interrupt on change,
+        #         False->Pin will not be enabled for interrupt
+        #
+        # See int_default_val() the default value against to compare
+        #     int_ctrl() to see how we do compare Pin State to previous or default state
+        #
+        self._validate_pin(pin)
+        _val = bytearray( self.readList(self.GPINTEN, 2) )
+        if enable:
+            _val[int(pin/8)] |= 1 << (int(pin%8)) # Activate Bit
+        else:
+            _val[int(pin/8)] &= ~(1 << (int(pin%8))) # clear the bit
+        self.writeList( self.GPINTEN, _val )
+
+    def interrupt_flags( self, pins=(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15) ):
+        # The Pins that raised the interrupts
+        # return the value for Pins/GPIO 0 to 15
+        _val = self.readList(self.INTF, 2)
+        return [(_val[int(pin/8)] & 1 << (int(pin%8))) > 0 for pin in pins]
+
 
 class MCP23008(MCP):
     """MCP23008-based GPIO class with 8 GPIO pins."""
