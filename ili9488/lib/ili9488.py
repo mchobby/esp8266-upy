@@ -12,7 +12,11 @@ import framebuf
 import math
 import time
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
+
+LEFT   = const(0)
+CENTER = const(1)
+RIGHT  = const(2)
 
 READ_DISPLAY       = const(0x0f)
 SLEEP_OUT          = const(0x11)
@@ -245,6 +249,15 @@ class ILI9488:
 	def erase(self):
 		self.fill_rect(0, 0, self.width, self.height)
 
+	def rect( self, x, y, w, h, c, f=False ):
+		if f:
+			self.fill_rect( x,y,w,h, c )
+		else:
+			self.hline(x,y, w, c )
+			self.hline(x,y+h, w, c )
+			self.vline(x,y,h, c)
+			self.vline(x+w,y,h, c)
+
 	def fill( self, c ): # FrameBuffer mimic
 		self.fill_rect( 0,0,self.width,self.height,c)
 
@@ -476,16 +489,39 @@ class ILI9488:
 			curx = self.chars(text[written:], curx,cury)
 		self._x = curx; self._y = cury
 
-	def chars(self, str, x, y):
+	def chars(self, str, x, y, w=None, justify=LEFT, colors=(WHITE,BLACK) ):
 		assert self._font != None, 'font_name not assigned yet!'
+		if justify in (RIGHT,CENTER):
+			assert w!=None, 'width (w) required!'
 		self._font.fb.fill_rect( 0,0, self.width, self._font.font.height, 0 ) # Fill it with background color
 		pos = 0
 		for ch in str:
 			# print( '   ch', ch )
 			char_w = self._font.print_char( ch,pos,0 )# draw it into the FB
 			pos += char_w[0]+self._font.spacing # add proportional width
-		self.blit_mono( self.font.fb, x, y, w=pos, h=self.font.font.height, colors=(WHITE,BLACK) )
-		return x+pos #str_w
+
+		if (w!=None) and (pos>w): # shrink to the maximum width
+			pos = w
+		x_just = 0 # Qty to add on X axis to apply the expected justification
+		if justify==CENTER:
+			x_just = (w-pos)//2
+		elif justify==RIGHT:
+			x_just = w-pos
+
+		if justify==LEFT:
+			self.blit_mono( self.font.fb, x, y, w=pos, h=self.font.font.height, colors=colors )
+			#TODO: if width then paint in BACK of the text
+			if w!=None:
+				self.fill_rect(x+pos,y,w-pos,self.font.font.height,colors[1] )
+		elif justify==RIGHT:
+			self.blit_mono( self.font.fb, x+x_just, y, w=pos, h=self.font.font.height, colors=colors )
+			self.fill_rect(x,y,x_just,self.font.font.height,colors[1] )
+		elif justify==CENTER:
+			self.blit_mono( self.font.fb, x+x_just, y, w=pos, h=self.font.font.height, colors=colors )
+			self.fill_rect(x,y,x_just,self.font.font.height,colors[1] )
+			self.fill_rect(x+w-x_just-self._font.spacing,y,x_just,self.font.font.height,colors[1] )
+
+		return x+pos # Returns the new X position to continue to write chars on the screeb
 
 	def print(self, text): #does word wrap, leaves self._x unchanged
 		cury = self._y; curx = self._x
