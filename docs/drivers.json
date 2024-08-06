@@ -1071,6 +1071,22 @@
 								 "ENG": "Use an 12 keys I2C Keypad (Qwiic) with MicroPython"
 								}
 		},
+		{	"folder"        : "qwiic-serlcd-i2c",
+			"components"    : ["SerLCD","LCD-16397","LCD-16396","LCD-16398"],
+			"interfaces"    : ["I2C","QWIIC"],
+			"manufacturers" : ["SPARKFUN"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Qwiic SerLCD LCD-16397 @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16397" },
+													{ "label" : "Qwiic SerLCD LCD-16396 @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16396" },
+													{ "label" : "Qwiic SerLCD LCD-16398 @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/16398" }
+												],
+			"descr"	: {"FR" : "Utiliser un afficheur SerLCD I2C (Qwiic) avec MicroPython",
+								 "ENG": "Use a SerLCD I2C LCD display (Qwiic) with MicroPython"
+								}
+		},
 		{	"folder"        : "qwiic-relay-i2c",
 			"components"    : ["SingleRelay","QuadRelay","DualSsrRelay", "QuadSsrRelay" ],
 			"interfaces"    : ["I2C","QWIIC"],

@@ -63,6 +63,19 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/qwiic-serlcd-i2c">qwiic-serlcd-i2c</a></td>
+      <td><strong>Composants</strong> : SerLCD, LCD-16397, LCD-16396, LCD-16398<br />
+      <strong>Interfaces</strong> : I2C, QWIIC<br />
+<small>Utiliser un afficheur SerLCD I2C (Qwiic) avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : SPARKFUN<br />
+<ul>
+<li>Voir <a href="https://www.sparkfun.com/products/16397">Qwiic SerLCD LCD-16397 @ SparkFun</a></li>
+<li>Voir <a href="https://www.sparkfun.com/products/16396">Qwiic SerLCD LCD-16396 @ SparkFun</a></li>
+<li>Voir <a href="https://www.sparkfun.com/products/16398">Qwiic SerLCD LCD-16398 @ SparkFun</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/qwiic-vcnl4040-i2c">qwiic-vcnl4040-i2c</a></td>
       <td><strong>Composants</strong> : VCNL4040-I2C<br />
       <strong>Interfaces</strong> : I2C, QWIIC<br />
