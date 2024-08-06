@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["serlcd.py", "github:mchobby/esp8266-upy/qwiic-serlcd-i2c/lib/serlcd.py"]
+  ],
+  "version": "0.1"
+}
