@@ -25,5 +25,6 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 
 # Bibliothèques
 
+* [ostls.py](lib/ostls.py) : "os tools" quelques fonctions pratiques autour du module `os`.
 * [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible)
 * [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
