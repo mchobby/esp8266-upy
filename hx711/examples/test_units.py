@@ -13,8 +13,6 @@ pin_OUT = Pin(12, Pin.IN, pull=Pin.PULL_DOWN)
 pin_SCK = Pin(13, Pin.OUT)
 
 hx711 = HX711(pin_SCK, pin_OUT, gain=128)
-# hx711.set_gain( 128 )   # Change the gain
-# hx711.set_scale( 1 )    # Default scale is 1
 
 hx711.tare()
 hx711.set_scale( 404.4715 ) # 5000gr Gauge with 128 bit gain. Output unit will be in grams

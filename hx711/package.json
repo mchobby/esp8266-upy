@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["hx711.py", "github:mchobby/esp8266-upy/hx711/lib/hx711.py"],
+  ],
+  "version": "0.0.1"
+}
