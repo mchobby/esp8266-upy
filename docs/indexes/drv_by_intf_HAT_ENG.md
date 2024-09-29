@@ -44,5 +44,18 @@ Raspberry-Pi's HAT  connector to use with the NadHat PYB405 (Pyboard variant fro
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/hx711">hx711</a></td>
+      <td><strong>Components</strong> : HX711<br />
+      <strong>Interfaces</strong> : HAT<br />
+<small>Use a HX711 converter with a load cell under MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : ADAFRUIT<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2710">HX711 - convertisseur ADC 24 bits pour cellule de charge / gauge de contrainte @ MCHobby</a></li>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2712">Cellule de charge 5 Kg, 4 fils @ MCHobby</a></li>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2711">Cellule de charge 10 Kg, 4 fils @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
 </tbody>
 </table>

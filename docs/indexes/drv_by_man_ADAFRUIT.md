@@ -118,6 +118,19 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/hx711">hx711</a></td>
+      <td><strong>Composants</strong> : HX711<br />
+      <strong>Interfaces</strong> : HAT<br />
+<small>Utiliser un convertisseur HX711 avec une cellule de charge ou gauge de contrainte sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2710">HX711 - convertisseur ADC 24 bits pour cellule de charge / gauge de contrainte @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2712">Cellule de charge 5 Kg, 4 fils @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2711">Cellule de charge 10 Kg, 4 fils @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/ili934x">ili934x</a></td>
       <td><strong>Composants</strong> : ILI9341<br />
       <strong>Interfaces</strong> : FEATHERWING, I2C<br />
