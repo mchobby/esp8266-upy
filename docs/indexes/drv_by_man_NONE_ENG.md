@@ -43,6 +43,17 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/fsr-fma-25N">fsr-fma-25N</a></td>
+      <td><strong>Components</strong> : FMAMSDXX005WC2C3, FMAMSDXX015WC2C3, FMAMSDXX025WC2C3<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Using the I2C Force/Dynamometer (FMAMSDXX025WC2C3 from Honeywell).</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : NONE<br />
+<ul>
+<li>See <a href="https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/force-sensors/microforce-fma-series">Honeywell Force Sensor - MicroForce FMA Series</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/lcdi2c">lcdi2c</a></td>
       <td><strong>Components</strong> : I2C BackPack, LCD 16x2, LCD 16x4<br />
       <strong>Interfaces</strong> : I2C<br />

@@ -189,6 +189,18 @@
 								 "ENG": "Using I2C EEPROM to store data."
 								}
 		},
+		{	"folder"        : "fsr-fma-25N",
+			"components"    : ["FMAMSDXX005WC2C3","FMAMSDXX015WC2C3", "FMAMSDXX025WC2C3"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["NONE"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Honeywell Force Sensor - MicroForce FMA Series",
+						"url"   : "https:\/\/automation.honeywell.com\/us\/en\/products/sensing-solutions\/sensors\/force-sensors\/microforce-fma-series" }
+												],
+			"descr"	: {"FR" : "Utiliser un capteur de Force/Dynamomètre I2C HoneyWell FMAMSDXX025WC2C3.",
+					"ENG": "Using the I2C Force/Dynamometer (FMAMSDXX025WC2C3 from Honeywell)."
+								}
+		},
 		{	"folder"        : "gps-ultimate",
 			"components"    : ["GPS-ULTIMATE","MTK3339"],
 			"interfaces"    : ["UART"],

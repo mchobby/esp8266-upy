@@ -136,6 +136,17 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/fsr-fma-25N">fsr-fma-25N</a></td>
+      <td><strong>Composants</strong> : FMAMSDXX005WC2C3, FMAMSDXX015WC2C3, FMAMSDXX025WC2C3<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Utiliser un capteur de Force/Dynamomètre I2C HoneyWell FMAMSDXX025WC2C3.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : NONE<br />
+<ul>
+<li>Voir <a href="https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/force-sensors/microforce-fma-series">Honeywell Force Sensor - MicroForce FMA Series</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/grav-digital-led">grav-digital-led</a></td>
       <td><strong>Composants</strong> : TM1650, DFR0645, VK16K33, DFR646<br />
       <strong>Interfaces</strong> : I2C, GPIO<br />
