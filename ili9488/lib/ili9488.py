@@ -148,6 +148,11 @@ class ILI9488:
 			raise Exception('rotation not in 0..7')
 
 		# 18 bits/pixel & Use the ili934x Gamma values
+		# - ILI9XXX_PIXFMT, 1, 0x55,  // 16-bit Pixel Format not available on SPI
+		# - ILI9XXX_PIXFMT, 1, 0x61,  // 3-bit mode set with color_palette: BITS_3
+		# - ILI9XXX_PIXFMT, 1, 0x66,  // 18-bit pixel format is the default
+		# see https://github.com/maartenSXM/esphome_components/blob/master/components/ili9xxx/ili9xxx_init.h
+		#
 		for command, data in ( (PIXEL_FORMAT_SET, b"\x66" ), # 0x66 : 18 bits, 0x55 : 16 bits
 					(GAMMA_SET, b"\x01" ),
 					#ILI924x (POS_GAMMA_CONTROL, b"\x0f\x31\x2b\x0c\x0e\x08\x4e\xf1\x37\x07\x10\x03\x0e\x09\x00" ),
@@ -302,32 +307,23 @@ class ILI9488:
 
 		self._writeblock(x, y, x + w - 1, y + h - 1, None)
 
-		chunck_pos = 0
 		pixel_pos = 0
 		max_pixel = w*h
 
+		x_pos = 0
+		y_pos = 0
+
+		self.dc(1)
 		while pixel_pos < max_pixel:
-			y_pos, x_pos = divmod( pixel_pos, w )
-			if fbuf.pixel(x_pos, y_pos)!=0:
-				self._buf[3*chunck_pos]   = self._fg_c18bit[0]
-				self._buf[3*chunck_pos+1] = self._fg_c18bit[1]
-				self._buf[3*chunck_pos+2] = self._fg_c18bit[2]
+			self.spi.write(self._bg_c18bit if fbuf.pixel(x_pos, y_pos)==0 else self._fg_c18bit )
+
+			if x_pos == w-1:
+				x_pos=0
+				y_pos+=1
 			else:
-				self._buf[3*chunck_pos]   = self._bg_c18bit[0]
-				self._buf[3*chunck_pos+1] = self._bg_c18bit[1]
-				self._buf[3*chunck_pos+2] = self._bg_c18bit[2]
-				#print( i )
-			chunck_pos += 1
+				x_pos+=1
+			
 			pixel_pos  += 1
-
-			if chunck_pos == MEMORY_BUFFER:
-				self._data(self._buf)
-				chunck_pos = 0
-
-		if chunck_pos > 0:
-			mv = memoryview(self._buf)
-			self._data(mv[:chunck_pos*3])
-
 		self.cs.value(1)
 
 	def set_color(self,fg,bg): # 16 bits color
@@ -494,11 +490,13 @@ class ILI9488:
 		if justify in (RIGHT,CENTER):
 			assert w!=None, 'width (w) required!'
 		self._font.fb.fill_rect( 0,0, self.width, self._font.font.height, 0 ) # Fill it with background color
+		#_start = time.ticks_ms()
 		pos = 0
 		for ch in str:
 			# print( '   ch', ch )
 			char_w = self._font.print_char( ch,pos,0 )# draw it into the FB
 			pos += char_w[0]+self._font.spacing # add proportional width
+		#print( 'chars: print_chars()', time.ticks_diff( time.ticks_ms(), _start), 'ms')
 
 		if (w!=None) and (pos>w): # shrink to the maximum width
 			pos = w
