@@ -27,10 +27,6 @@ mpremote mip install github:mchobby/esp8266-upy/oled-ssd1306
 
 # Brancher
 
-## OLED sur PyBoard
-
-Note: pas encore fait!
-
 ## OLED Featherwing sur ESP8266
 Le FeatherWing OLED (Adafruit 2900) s'insère simplement sur la carte Feather (ex: Feather ESP8266) et propose une résolution de 128 x 32 pixels.
 
@@ -65,6 +61,15 @@ Dans le cas présent il est branché sur un [Raspberry-Pi Pico](https://shop.mch
 L'interface Qwiic est réalisée grâce à un [breakout connecteur Qwiic](https://www.sparkfun.com/products/14425) (SparkFun, PRT-17912).
 
 ![SparkFun Qwiic Micro Oled + Raspberry-Pi Pico](docs/_static/qwiic-micro-oled-to-pico-rp2040.jpg)
+
+## PiOled d'Adafruit sur Raspberry-Pi Pico
+
+L'afficheur [Pi Oled d'Adafruit (ADF-3527)](https://shop.mchobby.be/product.php?id_product=1243
+) dispose d'un connecteur 6 broches pour le GPIO du Raspberry-Pi (bus I2C+alim 3.3V). Il est possible d'effectuer les avec quelques fils dupont sur votre un Raspberry-Pi Pico.
+
+Cet afficheur propose une résolution de 128px * 32px avec une adresse I2C par défaut de 0x3C (60 en décimal).
+
+![Adafruit Pi Oled (ADF-3527) + Raspberry-Pi Pico](docs/_static/pioled-to-pico-rp2040.jpg)
 
 ## UEXT OLED et Olimex ESP8266-EVB
 
@@ -145,12 +150,27 @@ Sparkfun propose un [mini écran OLED de 64x48 pixels](https://www.sparkfun.com/
 
 Dans cet exemple, il est branché sur un [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-rp2040/2036-pico-header-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020368.html) grâce à un [connecteur breakout Qwiic](https://www.sparkfun.com/products/14425) (SparkFun, PRT-17912)
 
-![qwiic Micro Oled](qwiic-micro-oled-to-pico.jpg)
+![qwiic Micro Oled](docs/_static/qwiic-micro-oled-to-pico-rp2040.jpg)
 
 ``` python
 # Raspberry-Pi Pico + Qwiic Micro Oled ( SparkFun, LCD-14532)
 i2c = I2C( 1 ) # sda=GP6, scl=GP7
 lcd = ssd1306.SSD1306_I2C( 64, 48, i2c, addr=0x3D )
+```
+
+## pour PiOled d’Adafruit sur Raspberry-Pi Pico
+
+En suivant le plan de raccordement déjà présenté...
+
+![Adafruit Pi Oled (ADF-3527) + Raspberry-Pi Pico](docs/_static/pioled-to-pico-rp2040.jpg)
+
+L'instance du bus I2C (nommé `i2c`) et l'instance `lcd` sont créé comme suit:
+
+``` python
+from machine import Pin, I2C
+import ssd1306
+i2c = I2C( 1, sda=Pin.board.GP6, scl=Pin.board.GP7 )
+lcd = ssd1306.SSD1306_I2C( 128, 32, i2c, addr=0x3C )
 ```
 
 ## pour UEXT OLED + Olimex ESP8266-EVB
@@ -292,5 +312,6 @@ Bien que la classe SSD1306_I2C hérite de framebuf qui propose de nombreuses mé
 * [FreeType generator & MicroPython FontDrawer](https://github.com/mchobby/freetype-generator) (GitHub, MCHobby)
 
 # Où acheter
+* Shop: [PiOled 128x32 d'Adafruit, ADF-3527)](https://shop.mchobby.be/product.php?id_product=1243) @ MC Hobby
 * Shop: [OLED 128x32 FeatherWing](https://shop.mchobby.be/feather/879-feather-ecran-oled-3232100008793-adafruit.html) @ MC Hobby
 * Shop: [Feather ESP8266](https://shop.mchobby.be/feather/846-feather-huzzah-avec-esp8266-3232100008465-adafruit.html) @ MC Hobby<br />utilisé dans cet exemple.

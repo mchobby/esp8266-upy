@@ -27,10 +27,6 @@ mpremote mip install github:mchobby/esp8266-upy/oled-ssd1306
 
 # Wiring
 
-## OLED on PyBoard
-
-Note: not done yet!
-
 ## OLED Featherwing with ESP8266 microcontroler
 The OLED FeatherWing (Adafruit 2900) does fit on a Feather board (eg: Feather ESP8266) and offers a resolution of 128 x 32 pixels.
 
@@ -65,6 +61,15 @@ In this current setup, I used my Grove + Qwiic testing [Raspberry-Pi Pico](https
 The qwiic connexion is made with a [Qwiic breakout connecteur](https://www.sparkfun.com/products/14425) (SparkFun, PRT-17912).
 
 ![SparkFun Qwiic Micro Oled + Raspberry-Pi Pico](docs/_static/qwiic-micro-oled-to-pico-rp2040.jpg)
+
+## PiOled from Adafruit on Raspberry-Pi Pico
+
+The [Pi Oled display from Adafruit (ADF-3527)](https://shop.mchobby.be/product.php?id_product=1243
+) is fitted with a 6 pins female connector to be connected on the Raspberry-Pi GPIO (I2C bus + 3.3V power). You can wire it to a Raspberry-Pi Pico with with some protoyping wire.
+
+This display offer a 128px * 32px resolution and use the 0x3C as default address (60 in ddcimal).
+
+![Adafruit Pi Oled (ADF-3527) + Raspberry-Pi Pico](docs/_static/pioled-to-pico-rp2040.jpg)
 
 ## UEXT OLED on Olimex ESP8266-EVB
 
@@ -145,12 +150,27 @@ Thanks to a Qwiic breakout cable, it is also possible to wire the Mini Oled Disp
 
 For this example, the [Raspberry-Pi Pico](https://shop.mchobby.be/fr/pico-rp2040/2036-pico-header-rp2040-microcontroleur-2-coeurs-raspberry-pi-3232100020368.html) is wired thanks to the [Qwiic breakout cable](https://www.sparkfun.com/products/14425) (SparkFun, PRT-17912)
 
-![Qwiic Micro Oled](qwiic-micro-oled-to-pico.jpg)
+![Qwiic Micro Oled](docs/_static/qwiic-micro-oled-to-pico-rp2040.jpg)
 
 ``` python
 # Raspberry-Pi Pico + Qwiic Micro Oled ( SparkFun, LCD-14532)
 i2c = I2C( 1 ) # sda=GP6, scl=GP7
 lcd = ssd1306.SSD1306_I2C( 64, 48, i2c, addr=0x3D )
+```
+
+## PiOled from Adafruit with Raspberry-Pi Pico
+
+Just follow the already mentionned wiring...
+
+![Adafruit Pi Oled (ADF-3527) + Raspberry-Pi Pico](docs/_static/pioled-to-pico-rp2040.jpg)
+
+The instance of I2C bus (namely `i2c`) and `lcd` instance are created as follow:
+
+``` python
+from machine import Pin, I2C
+import ssd1306
+i2c = I2C( 1, sda=Pin.board.GP6, scl=Pin.board.GP7 )
+lcd = ssd1306.SSD1306_I2C( 128, 32, i2c, addr=0x3C )
 ```
 
 ## UEXT OLED + Olimex ESP8266-EVB
