@@ -2,7 +2,8 @@
   "urls": [
     ["maps.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/maps.py"],
     ["ringbuf.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/ringbuf.py"],
+    ["lfpwm.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/lfpwm.py"],
     ["ostls.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/ostls.py"]
   ],
-  "version": "0.1"
+  "version": "0.2"
 }

@@ -28,3 +28,4 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 * [ostls.py](lib/ostls.py) : "os tools" some useful functions relatives to os module.
 * [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible)
 * [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
+* [lfpwm.py](lib/lfpwm.py) : Low Frequency PWM signal (used in system with very high inertia), see [this specific readme](lfpwm_readme.md).
