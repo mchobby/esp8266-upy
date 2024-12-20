@@ -29,3 +29,4 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 * [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible)
 * [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
 * [lfpwm.py](lib/lfpwm.py) : Low Frequency PWM signal (used in system with very high inertia), see [this specific readme](lfpwm_readme.md).
+* [rp2lib/](rp2lib/) : set of PIO library for Raspberry-Pi Pico RP2 series, see [this specific readme](rp2lib_readme.md).

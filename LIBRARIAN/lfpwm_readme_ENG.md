@@ -1,4 +1,4 @@
-[Ce fichier existe également en FRANCAIS](readme.md)
+[Ce fichier existe également en FRANCAIS](lfpwm_readme.md)
 
 # Low Frequency PWM - simulate PWM over a long period of time
 

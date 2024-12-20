@@ -1,4 +1,4 @@
-[This file also exists in ENGLISH](readme_ENG.md)
+[This file also exists in ENGLISH](lfpwm_readme_ENG.md)
 
 # Low Frequency PWM - simuler un signal PWM sur un signal très basse fréquence (ou grande période)
 
