@@ -25,8 +25,9 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 
 # Bibliothèques
 
-* [ostls.py](lib/ostls.py) : "os tools" quelques fonctions pratiques autour du module `os`.
-* [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible)
-* [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
+* [hyst.py](lib/hyst.py) : Cycle avec hystéresis pour thermostat, voir [ce readme specifique](hyst_readme.md)
 * [lfpwm.py](lib/lfpwm.py) : Low Frequency PWM signal (utilisé avec les système a très grande inertie), voir [ce readme spécifique](lfpwm_readme.md).
+* [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible)
+* [ostls.py](lib/ostls.py) : "os tools" quelques fonctions pratiques autour du module `os`.
+* [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
 * [rp2lib/](rp2lib/) : Ensemble de bibliothèques PIO pour Raspberry-Pi Pico RP2 series, voir [ce readme spécifique](rp2lib_readme.md).

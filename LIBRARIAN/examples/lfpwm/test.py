@@ -1,6 +1,6 @@
 # Low Frequency PWM Driver to control High Inertia Devices
 #
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/lfpwm
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/LIBRARIAN
 #
 #
 # Compatible with:

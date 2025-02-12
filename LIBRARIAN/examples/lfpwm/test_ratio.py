@@ -1,7 +1,7 @@
 # Low Frequency PWM Driver to control High Inertia Devices
 # Allow to specify a duty cycle in percent ratio (0..100)
 #
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/lfpwm
+# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/LIBRARIAN
 #
 #
 # Compatible with:
