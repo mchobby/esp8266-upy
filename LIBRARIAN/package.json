@@ -8,5 +8,5 @@
     ["rp2cnt.py", "github:mchobby/esp8266-upy/LIBRARIAN/rp2lib/rp2cnt.py"],
     ["rp2qenc.py", "github:mchobby/esp8266-upy/LIBRARIAN/rp2lib/rp2qenc.py"]
   ],
-  "version": "0.3"
+  "version": "0.4"
 }
