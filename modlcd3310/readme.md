@@ -35,6 +35,10 @@ mpremote mip install github:mchobby/esp8266-upy/modlcd3310
 
 # Brancher
 
+## Pico to LCD3310
+
+![LCD3310 (PCD8544) to Raspberry-Pi Pico](docs/_static/modlcd3310-to-pico.jpg)
+
 ## Pyboard avec connecteur UEXT
 
 Nous proposons le montage d'un connecteurs UEXT standard sur la carte MicroPython Pyboard,  [les raccordements sont décris dans ce dépôt](https://github.com/mchobby/pyboard-driver/tree/master/UEXT).  
@@ -55,7 +59,45 @@ Avant de pouvoir exécuter le code de test, il est nécessaire de copier la bibl
 
 Le pilote LCD3310 hérite de [`framebuf.FrameBuffer`](https://docs.micropython.org/en/latest/library/framebuf.html) et dispose donc de toutes les méthodes de dessin proposé par le FrameBuffer.
 
-L'exemple suivant indique comment mettre exploiter l'écran avec le pilote (toutes les méthodes du FrameBuffer ne sont pas utilisées ici).
+## Tester avec Pico
+
+L'exemple `test_pico.py` ci-dessous indique comment mettre exploiter l'écran avec le pilote.
+
+``` python
+import time
+from machine import SPI, Pin
+from lcd3310 import LCD3310
+
+# Pico - create the bus & Pins
+ssel = Pin( "Y5", Pin.OUT, value=True ) # Not selected by default
+lcd_reset = Pin( "Y9", Pin.OUT, value=True ) # Not selected by default
+lcd_data  = Pin( "Y10", Pin.OUT, value=True ) # Data/Command (Data by default)
+spi = SPI( 2 ) # y7=mosi, y6=sck
+
+lcd = LCD3310( spi, ssel, lcd_reset, lcd_data )
+print( "contrast: %s" % lcd.contrast )
+# See all Framebuffer Method for more information
+# https://docs.micropython.org/en/latest/library/framebuf.html
+#
+lcd.fill( 1 ) # Light-up all points
+lcd.text( "Hello", 0,0,0 ) # text, x,y, color=0=transparent
+lcd.update()
+time.sleep( 3 )
+
+lcd.clear()
+lcd.text( "MCHobby<3", 3, 12 )
+lcd.text( "Micro-", 3, 12+10 )
+lcd.text( "   Python", 3, 12+10+10 )
+lcd.rect(0,0,83,47,1)
+lcd.update()
+
+# Increase the contrast (0..127)
+lcd.contrast = 110
+```
+
+## Tester avec Pyboard
+
+L'exemple `test.py` ci-dessous indique comment mettre exploiter l'écran avec le pilote (toutes les méthodes du FrameBuffer ne sont pas utilisées ici).
 
 ``` python
 import time

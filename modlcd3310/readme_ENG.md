@@ -35,6 +35,10 @@ mpremote mip install github:mchobby/esp8266-upy/modlcd3310
 
 # Wiring
 
+## Pico to LCD3310
+
+![LCD3310 (PCD8544) to Raspberry-Pi Pico](docs/_static/modlcd3310-to-pico.jpg)
+
 ## Pyboard with UEXT connector
 
 We do have a standard UEXT connector board to plug onto the MicroPython Pyboard, [the wiring is described here in the GitHubt](https://github.com/mchobby/pyboard-driver/tree/master/UEXT).  
@@ -55,14 +59,48 @@ Before testing the code, it will be necessary to copy the `lib/lcd3310.py` libra
 
 The LCD3310 driver inherits from [`framebuf.FrameBuffer`](https://docs.micropython.org/en/latest/library/framebuf.html) so it have access to all the drawing methods offers by the FrameBuffer.
 
-The following example show how to use the driver/library to draw on the screen (all the FrameBuffer drawing methods aren't used here).
+## Test with Pico 
+The `test_pico.py` example visible here below show how to use the dîsplay with the driver.
 
 ``` python
 import time
 from machine import SPI, Pin
 from lcd3310 import LCD3310
 
-# Pyboard - create the bus & Pins
+# Pico - create the bus & Pins
+ssel = Pin( Pin.board.GP9, Pin.OUT, value=True ) # Not selected by default
+lcd_reset = Pin( Pin.board.GP13, Pin.OUT, value=True ) # Not selected by default
+lcd_data  = Pin( Pin.board.GP12, Pin.OUT, value=True ) # Data/Command (Data by default)
+spi = SPI( 1, miso=Pin.board.GP8, mosi=Pin.board.GP11, sck=Pin.board.GP10 ) 
+
+lcd = LCD3310( spi, ssel, lcd_reset, lcd_data )
+print( "contrast: %s" % lcd.contrast )
+# See all Framebuffer Method for more information
+# https://docs.micropython.org/en/latest/library/framebuf.html
+#
+lcd.fill( 1 ) # Light-up all points
+lcd.text( "Hello", 0,0,0 ) # text, x,y, color=0=transparent
+lcd.update()
+time.sleep( 3 )
+
+lcd.clear()
+lcd.text( "MCHobby<3", 3, 12 )
+lcd.text( "Micro-", 3, 12+10 )
+lcd.text( "   Python", 3, 12+10+10 )
+lcd.rect(0,0,83,47,1)
+lcd.update()
+```
+
+## Test with Pyboard
+
+The following `test.py` example show how to use the driver/library to draw on the screen (all the FrameBuffer drawing methods aren't used here).
+
+``` python
+import time
+from machine import SPI, Pin
+from lcd3310 import LCD3310
+
+# Pico - create the bus & Pins
 ssel = Pin( "Y5", Pin.OUT, value=True ) # Not selected by default
 lcd_reset = Pin( "Y9", Pin.OUT, value=True ) # Not selected by default
 lcd_data  = Pin( "Y10", Pin.OUT, value=True ) # Data/Command (Data by default)
