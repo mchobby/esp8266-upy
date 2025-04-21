@@ -95,7 +95,7 @@
       <td><strong>Components</strong> : MOD-LCD3310, PCD8544<br />
       <strong>Interfaces</strong> : SPI, UEXT<br />
 <small>MOD-LCD3310 is the Nokia 3310 LCD display offering 84 x 48 pixels and an <strong>UEXT</strong> connector.</small><br/><br />
-      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Tested with</strong> : PYBOARD, PICO<br />
       <strong>Manufacturer</strong> : OLIMEX<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/fr/uext/1867-afficheur-noirblanc-84x48-px-nokia-3310-3232100018679-olimex.html">MOD-LCD3310 @ MCHobby</a></li>

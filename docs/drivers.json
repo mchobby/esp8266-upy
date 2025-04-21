@@ -701,7 +701,7 @@
 			"components"    : ["MOD-LCD3310","PCD8544"],
 			"interfaces"    : ["SPI","UEXT"],
 			"manufacturers" : ["OLIMEX"],
-			"plateforms"    : ["PYBOARD"],
+			"plateforms"    : ["PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "MOD-LCD3310 @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/uext\/1867-afficheur-noirblanc-84x48-px-nokia-3310-3232100018679-olimex.html" },
 													{ "label" : "MOD-LCD3310 @ Olimex",
