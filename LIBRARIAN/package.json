@@ -1,6 +1,7 @@
 {
   "urls": [
     ["hyst.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/hyst.py"],
+    ["pid.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/pid.py"],
     ["maps.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/maps.py"],
     ["ringbuf.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/ringbuf.py"],
     ["lfpwm.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/lfpwm.py"],
@@ -8,5 +9,5 @@
     ["rp2cnt.py", "github:mchobby/esp8266-upy/LIBRARIAN/rp2lib/rp2cnt.py"],
     ["rp2qenc.py", "github:mchobby/esp8266-upy/LIBRARIAN/rp2lib/rp2qenc.py"]
   ],
-  "version": "0.4"
+  "version": "0.5"
 }
