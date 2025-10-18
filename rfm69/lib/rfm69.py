@@ -626,14 +626,14 @@ class RFM69:
 
 	def sample_rssi(self): # TODO: check
 		""" Make a request to radio module for sampling the rssi. Must only be called in RX mode.
-		 	(Not tested yet)"""
+		 	(Doesn't appears to work, while loop nevers return) """
 		if (self._mode != RFM69_MODE_RX ):
 			# Not sure what happens otherwise, so check this
 			return 0
 		# Trigger RSSI Measurement
 		self.spi_write( RFM69_REG_RSSI_CONFIG, RF_RSSI_START )
 		# Wait for Measurement to complete
-		while (self.spi_read(RFM69_REG_RSSI_CONFIG) & RF_RSSI_DONE) != RF_RSSI_DONE:
+		while (self.spi_read(RFM69_REG_RSSI_CONFIG) & RF_RSSI_DONE) == 0x00:
 			pass
 
 		# Read, store in _lastRssi and return RSSI Value
