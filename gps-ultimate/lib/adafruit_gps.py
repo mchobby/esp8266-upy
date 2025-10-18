@@ -88,9 +88,9 @@ class GPS:
             return False
         data_type, args = sentence
         data_type = data_type.upper()
-        if data_type == b'GPGGA':      # GGA, 3d location fix
+        if (data_type == b'GPGGA') or (data_type == b'GNGGA') :      # GGA, 3d location fix
             self._parse_gpgga(args)
-        elif data_type == b'GPRMC':    # RMC, minimum location info
+        elif (data_type == b'GPRMC') or (data_type == b'GNRMC'):    # RMC, minimum location info
             self._parse_gprmc(args)
         return True
 

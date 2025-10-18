@@ -1,23 +1,40 @@
 # Simple script using GPS timestamps as RTC time source
 # The GPS timestamps are available without a fix and keep the track of
 # time while there is powersource (ie coin cell battery)
-
-from machine import UART
-from pyb import RTC
+#
+# Tested on a Raspberry-Pi Pico
+#
+from machine import UART, RTC, Pin
+from adafruit_gps import GPS
 import time
-import adafruit_gps
 
 rtc = RTC()
-uart = UART(1, baudrate=9600, timeout=3000)
+uart = UART(0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 
-gps = adafruit_gps.GPS(uart)
+gps = GPS(uart)
 gps.send_command('PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
 gps.send_command('PMTK220,1000')
 
-# TODO: should still be converted to Pyboard
-# print("Set GPS as time source")
-# rtc.set_time_source(gps)
+print("Set GPS as time source")
+gps.update()
+# we need a structure and we need the year to be filled
+while (gps.timestamp_utc == None) or (gps.timestamp_utc[1]==0):
+    print( 'Query GPS time...')
+    time.sleep(0.5)
+    gps.update()
+datetime_from_gps = ( gps.timestamp_utc[0],  # tm_year
+            gps.timestamp_utc[1],  # tm_mon (month)
+            gps.timestamp_utc[2],  # tm_mday (day in the month)
+            0, # day of week (don't care)
+            gps.timestamp_utc[3]+1,  # tm_hour. UTC to Belgium Time => +1
+            gps.timestamp_utc[4],   # tm_min
+            gps.timestamp_utc[5],  # tm_sec
+            0 ) # ms
+print('  GPS Time', datetime_from_gps )
+rtc.datetime( datetime_from_gps )
 
+
+# Print current information
 last_print = time.ticks_ms()
 while True:
 
@@ -26,12 +43,12 @@ while True:
     current = time.ticks_ms()
     if time.ticks_diff(current, last_print) >= 1000:
         last_print = current
-		print( "="*40 )
+        print( "="*40 )
         # Time & date from GPS informations (UTC time)
         print('GPS FIX timestamp: {:02}/{:02}/{} {:02}:{:02}:{:02}'.format(
-            # Grab parts of the time from the struct_time object that holds
-            # the fix time.  Note you might not get all data like year, day,
-            # month!
+        # Grab parts of the time from the struct_time object that holds
+        # the fix time.  Note you might not get all data like year, day,
+        # month!
             gps.timestamp_utc[1],  # tm_mon (month)
             gps.timestamp_utc[2],  # tm_mday (day in the month)
             gps.timestamp_utc[0],  # tm_year
