@@ -1,6 +1,6 @@
 {
   "urls": [
-    ["ws2812.py", "github:mchobby/esp8266-upy/neopixel/lib/pyboard/ws2812.py"]
+    ["ws2812.py", "github:mchobby/esp8266-upy/neopixel/lib/ws2812.py"]
   ],
-  "version": "1.1"
+  "version": "1.2"
 }
