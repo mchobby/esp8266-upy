@@ -19,6 +19,18 @@ Connecteur I2C Qwiic de Sparkfun (Sparkfun.com)
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/qwiic-air-velocity">qwiic-air-velocity</a></td>
+      <td><strong>Composants</strong> : FS3000-1015, FS3000-1010<br />
+      <strong>Interfaces</strong> : I2C, QWIIC<br />
+<small>Mesurer la vitesse de l'air en I2C (Qwiic) avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : SPARKFUN<br />
+<ul>
+<li>Voir <a href="https://www.sparkfun.com/products/18768">Qwiic Air Velocity FS3000-1015 @ SparkFun</a></li>
+<li>Voir <a href="https://www.sparkfun.com/products/18377">Qwiic Air Velocity FS3000-1005 @ SparkFun</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/qwiic-joystick-i2c">qwiic-joystick-i2c</a></td>
       <td><strong>Composants</strong> : JOYSTICK-I2C<br />
       <strong>Interfaces</strong> : I2C, QWIIC<br />

@@ -1067,6 +1067,20 @@
 								 "ENG": "Use a PN532 RFID/NFC controler with MicroPython"
 								}
 		},
+		{	"folder"        : "qwiic-air-velocity",
+			"components"    : ["FS3000-1015","FS3000-1010"],
+			"interfaces"    : ["I2C","QWIIC"],
+			"manufacturers" : ["SPARKFUN"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Qwiic Air Velocity FS3000-1015 @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/18768" },
+								{ "label" : "Qwiic Air Velocity FS3000-1005 @ SparkFun",
+														"url"   : "https:\/\/www.sparkfun.com\/products\/18377" }
+												],
+			"descr"	: {"FR" : "Mesurer la vitesse de l'air en I2C (Qwiic) avec MicroPython",
+								 "ENG": "I2C Air Velocity measurement (Qwiic) with MicroPython"
+								}
+		},
 		{	"folder"        : "qwiic-joystick-i2c",
 			"components"    : ["JOYSTICK-I2C"],
 			"interfaces"    : ["I2C","QWIIC"],

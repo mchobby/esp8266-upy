@@ -956,6 +956,18 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/qwiic-air-velocity">qwiic-air-velocity</a></td>
+      <td><strong>Components</strong> : FS3000-1015, FS3000-1010<br />
+      <strong>Interfaces</strong> : I2C, QWIIC<br />
+<small>I2C Air Velocity measurement (Qwiic) with MicroPython</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : SPARKFUN<br />
+<ul>
+<li>See <a href="https://www.sparkfun.com/products/18768">Qwiic Air Velocity FS3000-1015 @ SparkFun</a></li>
+<li>See <a href="https://www.sparkfun.com/products/18377">Qwiic Air Velocity FS3000-1005 @ SparkFun</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/qwiic-joystick-i2c">qwiic-joystick-i2c</a></td>
       <td><strong>Components</strong> : JOYSTICK-I2C<br />
       <strong>Interfaces</strong> : I2C, QWIIC<br />
