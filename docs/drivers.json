@@ -429,20 +429,32 @@
 								 "ENG": "128 x 64 pixels LCD graphical display. Interface SPI (3 fils)"
 								}
 		},
+		{	"folder"        : "lis3dh",
+			"components"    : ["LIS3DH"],
+			"interfaces"    : ["SPI", "I2C"],
+			"manufacturers" : ["MCHOBBY"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "LIS3DH-3V3-BRK breakout - 3D Accelerometer @ MCHobby",
+								  "url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=2882" }
+								],
+			"descr"	: {"FR" : "Utiliser l'accéléromètre LIS3DH avec MicroPython",
+					   "ENG": "Use the LIS3DH accelerometer with MicroPython."
+						}
+		},
 		{	"folder"        : "lsm303",
 			"components"    : ["LSM303D"],
 			"interfaces"    : ["UNO-R3", "I2C"],
 			"manufacturers" : ["POLOLU"],
 			"plateforms"    : ["PYBOARD"],
 			"ressources"    : [ { "label" : "LSM303D breakout - 3D Compass and Accelerometer @ Pololu",
-														"url"   : "https:\/\/www.pololu.com\/product\/2127" },
-													{ "label" : "Robot Zumo pour Arduino (2510) @ Pololu",
-														"url"   : "https:\/\/www.pololu.com\/product\/2510" },
-													{ "label" : "Robot Zumo pour Arduino @ MC Hobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/prototypage-robotique-roue\/448-robot-zumo-pour-arduino-assemble-moteurs-3232100004481-pololu.html" },
-													{ "label" : "PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html" }
-												],
+									"url"   : "https:\/\/www.pololu.com\/product\/2127" },
+								{ "label" : "Robot Zumo pour Arduino (2510) @ Pololu",
+									"url"   : "https:\/\/www.pololu.com\/product\/2510" },
+								{ "label" : "Robot Zumo pour Arduino @ MC Hobby",
+									"url"   : "https:\/\/shop.mchobby.be\/fr\/prototypage-robotique-roue\/448-robot-zumo-pour-arduino-assemble-moteurs-3232100004481-pololu.html" },
+								{ "label" : "PYBOARD-UNO-R3 - Adaptateur Pyboard vers UNO-R3 + Extra @ MC Hobby",
+									"url"   : "https:\/\/shop.mchobby.be\/fr\/nouveaute\/1745-adaptateur-pyboard-vers-uno-r3-extra-3232100017450.html" }
+								],
 			"descr"	: {"FR" : "Utiliser une boussole et accéléromètre LSM303D avec MicroPython",
 								 "ENG": "Use a LSM303D compas and accelerometer with MicroPython."
 								}

@@ -418,6 +418,17 @@ Explore it by:
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../tree/master/lis3dh">lis3dh</a></td>
+      <td><strong>Components</strong> : LIS3DH<br />
+      <strong>Interfaces</strong> : SPI, I2C<br />
+<small>Use the LIS3DH accelerometer with MicroPython.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : MCHOBBY<br />
+<ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2882">LIS3DH-3V3-BRK breakout - 3D Accelerometer @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../tree/master/lsm303">lsm303</a></td>
       <td><strong>Components</strong> : LSM303D<br />
       <strong>Interfaces</strong> : UNO-R3, I2C<br />

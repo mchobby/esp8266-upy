@@ -55,6 +55,17 @@ Bus SPI
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/lis3dh">lis3dh</a></td>
+      <td><strong>Composants</strong> : LIS3DH<br />
+      <strong>Interfaces</strong> : SPI, I2C<br />
+<small>Utiliser l'accéléromètre LIS3DH avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : MCHOBBY<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2882">LIS3DH-3V3-BRK breakout - 3D Accelerometer @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/max31855">max31855</a></td>
       <td><strong>Composants</strong> : MAX31855<br />
       <strong>Interfaces</strong> : SPI<br />
