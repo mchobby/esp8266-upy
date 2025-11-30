@@ -16,7 +16,7 @@ Voici une description des bibliothèques disponibles dans ce dépôt. <strong>Ch
 Explorer par:
 * Interface:
 [FEATHERWING](docs/indexes/drv_by_intf_FEATHERWING.md), [GPIO](docs/indexes/drv_by_intf_GPIO.md), [GROVE](docs/indexes/drv_by_intf_GROVE.md), [HAT](docs/indexes/drv_by_intf_HAT.md), [I2C](docs/indexes/drv_by_intf_I2C.md), [NCD](docs/indexes/drv_by_intf_NCD.md), [ONEWIRE](docs/indexes/drv_by_intf_ONEWIRE.md), [QWIIC](docs/indexes/drv_by_intf_QWIIC.md), [SPI](docs/indexes/drv_by_intf_SPI.md), [UART](docs/indexes/drv_by_intf_UART.md), [UEXT](docs/indexes/drv_by_intf_UEXT.md), [UNO-R3](docs/indexes/drv_by_intf_UNO-R3.md)* Fabriquant:
-[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [DFROBOT](docs/indexes/drv_by_man_DFROBOT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [M5STACK](docs/indexes/drv_by_man_M5STACK.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SEEEDSTUDIO](docs/indexes/drv_by_man_SEEEDSTUDIO.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
+[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT.md), [DFROBOT](docs/indexes/drv_by_man_DFROBOT.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC.md), [M5STACK](docs/indexes/drv_by_man_M5STACK.md), [MCHOBBY](docs/indexes/drv_by_man_MCHOBBY.md), [NCD](docs/indexes/drv_by_man_NCD.md), [NONE](docs/indexes/drv_by_man_NONE.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI.md), [POLOLU](docs/indexes/drv_by_man_POLOLU.md), [SEEEDSTUDIO](docs/indexes/drv_by_man_SEEEDSTUDIO.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN.md)
 
 <table>
 <thead>
@@ -122,12 +122,12 @@ Explorer par:
   <tr><td><a href="../../tree/master/bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Composants</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
-<small>Le BMP280 est un capteur de <strong>pression et température</strong> très populaire.<br />Le BME280 est un capteur de <strong>pression, température et HUMIDITÉ</strong> relative</small><br/><br />
+<small>Le BME280/BMP280 est un capteur de <strong>pression et température</strong> très populaire.<br />Le BME280 est un capteur de <strong>pression, température et HUMIDITÉ</strong> relative</small><br/><br />
       <strong>Testé avec</strong> : FEATHER-ESP8266, PYBOARD, PICO<br />
-      <strong>Fabricant</strong> : ADAFRUIT<br />
+      <strong>Fabricant</strong> : ADAFRUIT, MCHOBBY<br />
 <ul>
 <li>Voir <a href="http://shop.mchobby.be/product.php?id_product=1118">Capteur BMP280</a></li>
-<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=684">Capteur BME280</a></li>
+<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=2861">Capteur BME280</a></li>
 </ul>
       </td>
   </tr>
@@ -553,6 +553,17 @@ Explorer par:
 <small>Le MCP23S17 est un <strong>GPIO Expander</strong> sur bus SPI ajoutant des entrées/sorties sur un microcontrôleur.</small><br/><br />
       <strong>Testé avec</strong> : PYBOARD, PYBSTICK<br />
       <strong>Fabricant</strong> : NONE<br />
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/mcp2515">mcp2515</a></td>
+      <td><strong>Composants</strong> : MCP2515<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Le MCP2515 est un <strong>controleur CAN</strong> sur bus SPI permettant au microcontroleur de se connecter sur un bus CAN.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : MCHOBBY<br />
+<ul>
+<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=2881">CAN-SPI-BRK : CAN bus breakout based on MCP2515 controler</a></li>
+</ul>
       </td>
   </tr>
   <tr><td><a href="../../tree/master/mcp4725">mcp4725</a></td>

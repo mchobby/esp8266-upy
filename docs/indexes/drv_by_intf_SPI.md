@@ -87,6 +87,17 @@ Bus SPI
       <strong>Fabricant</strong> : NONE<br />
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/mcp2515">mcp2515</a></td>
+      <td><strong>Composants</strong> : MCP2515<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Le MCP2515 est un <strong>controleur CAN</strong> sur bus SPI permettant au microcontroleur de se connecter sur un bus CAN.</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : MCHOBBY<br />
+<ul>
+<li>Voir <a href="http://shop.mchobby.be/product.php?id_product=2881">CAN-SPI-BRK : CAN bus breakout based on MCP2515 controler</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modlcd3310">modlcd3310</a></td>
       <td><strong>Composants</strong> : MOD-LCD3310, PCD8544<br />
       <strong>Interfaces</strong> : SPI, UEXT<br />

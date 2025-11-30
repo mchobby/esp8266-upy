@@ -17,7 +17,7 @@ Explore it by:
 * Interface:
 [FEATHERWING](docs/indexes/drv_by_intf_FEATHERWING_ENG.md), [GPIO](docs/indexes/drv_by_intf_GPIO_ENG.md), [GROVE](docs/indexes/drv_by_intf_GROVE_ENG.md), [HAT](docs/indexes/drv_by_intf_HAT_ENG.md), [I2C](docs/indexes/drv_by_intf_I2C_ENG.md), [NCD](docs/indexes/drv_by_intf_NCD_ENG.md), [ONEWIRE](docs/indexes/drv_by_intf_ONEWIRE_ENG.md), [QWIIC](docs/indexes/drv_by_intf_QWIIC_ENG.md), [SPI](docs/indexes/drv_by_intf_SPI_ENG.md), [UART](docs/indexes/drv_by_intf_UART_ENG.md), [UEXT](docs/indexes/drv_by_intf_UEXT_ENG.md), [UNO-R3](docs/indexes/drv_by_intf_UNO-R3_ENG.md)
 * Manufacturer:
-[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT_ENG.md), [DFROBOT](docs/indexes/drv_by_man_DFROBOT_ENG.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC_ENG.md), [M5STACK](docs/indexes/drv_by_man_M5STACK_ENG.md), [NCD](docs/indexes/drv_by_man_NCD_ENG.md), [NONE](docs/indexes/drv_by_man_NONE_ENG.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX_ENG.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI_ENG.md), [POLOLU](docs/indexes/drv_by_man_POLOLU_ENG.md), [SEEEDSTUDIO](docs/indexes/drv_by_man_SEEEDSTUDIO_ENG.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN_ENG.md)
+[ADAFRUIT](docs/indexes/drv_by_man_ADAFRUIT_ENG.md), [DFROBOT](docs/indexes/drv_by_man_DFROBOT_ENG.md), [GARATRONIC](docs/indexes/drv_by_man_GARATRONIC_ENG.md), [M5STACK](docs/indexes/drv_by_man_M5STACK_ENG.md), [MCHOBBY](docs/indexes/drv_by_man_MCHOBBY_ENG.md), [NCD](docs/indexes/drv_by_man_NCD_ENG.md), [NONE](docs/indexes/drv_by_man_NONE_ENG.md), [OLIMEX](docs/indexes/drv_by_man_OLIMEX_ENG.md), [PIMORONI](docs/indexes/drv_by_man_PIMORONI_ENG.md), [POLOLU](docs/indexes/drv_by_man_POLOLU_ENG.md), [SEEEDSTUDIO](docs/indexes/drv_by_man_SEEEDSTUDIO_ENG.md), [SPARKFUN](docs/indexes/drv_by_man_SPARKFUN_ENG.md)
 <table>
 <thead>
   <th>Folder</th><th>Description</th>
@@ -122,12 +122,12 @@ Explore it by:
   <tr><td><a href="../../tree/master/bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Components</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
-<small>The BMP280 is a very popular <strong>pressure and temperatur</strong> sensor.<br />The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY</strong></small><br/><br />
+<small>The BME280/BMP280 is a very popular <strong>pressure and temperatur</strong> sensor.<br />The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY</strong></small><br/><br />
       <strong>Tested with</strong> : FEATHER-ESP8266, PYBOARD, PICO<br />
-      <strong>Manufacturer</strong> : ADAFRUIT<br />
+      <strong>Manufacturer</strong> : ADAFRUIT, MCHOBBY<br />
 <ul>
 <li>See <a href="http://shop.mchobby.be/product.php?id_product=1118">Capteur BMP280</a></li>
-<li>See <a href="http://shop.mchobby.be/product.php?id_product=684">Capteur BME280</a></li>
+<li>See <a href="http://shop.mchobby.be/product.php?id_product=2861">Capteur BME280</a></li>
 </ul>
       </td>
   </tr>
@@ -553,6 +553,17 @@ Explore it by:
 <small>The MCP23S17 is a <strong>GPIO Expander</strong> on SPI bus adding input/output to a microcontroler.</small><br/><br />
       <strong>Tested with</strong> : PYBOARD, PYBSTICK<br />
       <strong>Manufacturer</strong> : NONE<br />
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/mcp2515">mcp2515</a></td>
+      <td><strong>Components</strong> : MCP2515<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>The MCP2515 is a <strong>CAN controller</strong> on SPI bus allowing the microcontroler to connect the CAN bus.</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : MCHOBBY<br />
+<ul>
+<li>See <a href="http://shop.mchobby.be/product.php?id_product=2881">CAN-SPI-BRK : CAN bus breakout based on MCP2515 controler</a></li>
+</ul>
       </td>
   </tr>
   <tr><td><a href="../../tree/master/mcp4725">mcp4725</a></td>

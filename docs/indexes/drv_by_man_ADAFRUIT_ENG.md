@@ -47,12 +47,12 @@ See
   <tr><td><a href="../../../../tree/master/bme280-bmp280">bme280-bmp280</a></td>
       <td><strong>Components</strong> : BME280, BMP280, ADA2651, ADA2652<br />
       <strong>Interfaces</strong> : I2C<br />
-<small>The BMP280 is a very popular <strong>pressure and temperatur</strong> sensor.<br />The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY</strong></small><br/><br />
+<small>The BME280/BMP280 is a very popular <strong>pressure and temperatur</strong> sensor.<br />The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY</strong></small><br/><br />
       <strong>Tested with</strong> : FEATHER-ESP8266, PYBOARD, PICO<br />
-      <strong>Manufacturer</strong> : ADAFRUIT<br />
+      <strong>Manufacturer</strong> : ADAFRUIT, MCHOBBY<br />
 <ul>
 <li>See <a href="http://shop.mchobby.be/product.php?id_product=1118">Capteur BMP280</a></li>
-<li>See <a href="http://shop.mchobby.be/product.php?id_product=684">Capteur BME280</a></li>
+<li>See <a href="http://shop.mchobby.be/product.php?id_product=2861">Capteur BME280</a></li>
 </ul>
       </td>
   </tr>

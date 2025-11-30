@@ -64,15 +64,15 @@
 		{	"folder"        : "bme280-bmp280",
 			"components"    : ["BME280","BMP280","ADA2651","ADA2652"],
 			"interfaces"    : ["I2C"],
-			"manufacturers" : ["ADAFRUIT"],
+			"manufacturers" : ["ADAFRUIT","MCHOBBY"],
 			"plateforms"    : ["FEATHER-ESP8266","PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "Capteur BMP280",
-												    "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=1118" },
-													{ "label" : "Capteur BME280",
-													  "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=684" }
-												],
-			"descr"	: {"FR" : "Le BMP280 est un capteur de <strong>pression et température<\/strong> très populaire.<br \/>Le BME280 est un capteur de <strong>pression, température et HUMIDITÉ<\/strong> relative",
-								 "ENG": "The BMP280 is a very popular <strong>pressure and temperatur<\/strong> sensor.<br \/>The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY<\/strong>"
+								  "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=1118" },
+								{ "label" : "Capteur BME280",
+								  "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=2861" }
+								],
+			"descr"	: {"FR" : "Le BME280\/BMP280 est un capteur de <strong>pression et température<\/strong> très populaire.<br \/>Le BME280 est un capteur de <strong>pression, température et HUMIDITÉ<\/strong> relative",
+								 "ENG": "The BME280\/BMP280 is a very popular <strong>pressure and temperatur<\/strong> sensor.<br \/>The BME280 is a sensor for <strong>pressure, temperature and relative HUMIDITY<\/strong>"
 								}
 		},
 		{	"folder"        : "bmp180",
@@ -585,6 +585,18 @@
 			"ressources"    : [ ],
 			"descr"	: {"FR" : "Le MCP23S17 est un <strong>GPIO Expander<\/strong> sur bus SPI ajoutant des entrées/sorties sur un microcontrôleur.",
 								 "ENG": "The MCP23S17 is a <strong>GPIO Expander<\/strong> on SPI bus adding input/output to a microcontroler."
+								}
+		},
+		{	"folder"        : "mcp2515",
+			"components"    : ["MCP2515"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : ["MCHOBBY"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "CAN-SPI-BRK : CAN bus breakout based on MCP2515 controler",
+								  "url"   : "http:\/\/shop.mchobby.be\/product.php?id_product=2881" }
+								],
+			"descr"	: {"FR" : "Le MCP2515 est un <strong>controleur CAN<\/strong> sur bus SPI permettant au microcontroleur de se connecter sur un bus CAN.",
+								 "ENG": "The MCP2515 is a <strong>CAN controller<\/strong> on SPI bus allowing the microcontroler to connect the CAN bus."
 								}
 		},
 		{	"folder"        : "mcp9808",
