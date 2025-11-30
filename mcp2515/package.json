@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["mcp2515.py", "github:mchobby/esp8266-upy/mcp2515/lib/mcp2515.py"],
+    ["canio.py", "github:mchobby/esp8266-upy/mcp2515/lib/canio.py"]
+  ],
+  "version": "1.0"
+}

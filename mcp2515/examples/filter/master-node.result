@@ -1,0 +1,17 @@
+Master node ready...
+Send message to traffic_light_AA01
+	value : 67
+	Sent!
+
+Send message to street_light_AA02
+	value : 1
+	Sent!
+
+Send message to level_crossing_BB01
+	value : 88
+	Sent!
+
+Send message to traffic_light_AA02
+	value : 129
+	Sent!
+

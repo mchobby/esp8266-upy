@@ -1,0 +1,6 @@
+Listening on 0x100faa01 node...
+	Read Buffer 0
+Message for  0x100faa01 extended: True
+	data: bytearray(b'C')
+	value: 67
+

@@ -1,0 +1,11 @@
+Listening on 0x100faa01 node with mask 0b1111111111111111000000000000 ...
+	Read Buffer 0
+Message for  0x100faa01 extended: True
+	data: bytearray(b'C')
+	value: 67
+
+	Read Buffer 0
+Message for  0x100faa02 extended: True
+	data: bytearray(b'\x81')
+	value: 129
+

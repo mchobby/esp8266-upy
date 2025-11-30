@@ -1,0 +1,26 @@
+Sensor node ready for requests...
+1 messages available
+Message from  0x100a002f extended: True
+RTR received! length= 0
+Measured value 21.0
+Binary message b'\x00\x00\xa8A'
+1 messages available
+Message from  0x100a002f extended: True
+RTR received! length= 0
+Measured value 21.0
+Binary message b'\x00\x00\xa8A'
+1 messages available
+Message from  0x100a002f extended: True
+RTR received! length= 0
+Measured value 21.0
+Binary message b'\x00\x00\xa8A'
+1 messages available
+Message from  0x100a002f extended: True
+RTR received! length= 0
+Measured value 22.4
+Binary message b'33\xb3A'
+1 messages available
+Message from  0x100a002f extended: True
+RTR received! length= 0
+Measured value 23.3
+Binary message b'ff\xbaA'

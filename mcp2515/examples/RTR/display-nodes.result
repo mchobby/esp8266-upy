@@ -1,0 +1,26 @@
+Starting Display node...
+First sensor request will be issued in 15 secs...
+RTR send for ID 0x100a002f
+Message from  0x100a002f extended: True
+message data: bytearray(b'\x00\x00\xa8A')
+Received value = 21.0
+
+RTR send for ID 0x100a002f
+Message from  0x100a002f extended: True
+message data: bytearray(b'\x00\x00\xa8A')
+Received value = 21.0
+
+RTR send for ID 0x100a002f
+Message from  0x100a002f extended: True
+message data: bytearray(b'\x00\x00\xa8A')
+Received value = 21.0
+
+RTR send for ID 0x100a002f
+Message from  0x100a002f extended: True
+message data: bytearray(b'33\xb3A')
+Received value = 22.4
+
+RTR send for ID 0x100a002f
+Message from  0x100a002f extended: True
+message data: bytearray(b'ff\xbaA')
+Received value = 23.3
