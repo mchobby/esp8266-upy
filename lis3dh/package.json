@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["lis3dh.py", "github:mchobby/esp8266-upy/lis3dh/lib/lis3dh.py"]
+  ],
+  "version": "1.0"
+}
