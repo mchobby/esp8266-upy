@@ -5,9 +5,11 @@
     ["maps.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/maps.py"],
     ["ringbuf.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/ringbuf.py"],
     ["lfpwm.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/lfpwm.py"],
+    ["ledtls.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/ledtls.py"],
     ["ostls.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/ostls.py"],
+    ["timetls.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/timetls.py"],
     ["rp2cnt.py", "github:mchobby/esp8266-upy/LIBRARIAN/rp2lib/rp2cnt.py"],
     ["rp2qenc.py", "github:mchobby/esp8266-upy/LIBRARIAN/rp2lib/rp2qenc.py"]
   ],
-  "version": "0.5"
+  "version": "0.7"
 }
