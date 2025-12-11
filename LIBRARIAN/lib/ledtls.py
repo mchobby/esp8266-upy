@@ -179,7 +179,7 @@ class SuperLed:
 		if self.__handler==None:
 			return
 		self.__handler.reset()		
-		self.__handler == None
+		self.__handler = None
 		self.pin.init(Pin.OUT) # disable PWM mode if any
 
 	@property
