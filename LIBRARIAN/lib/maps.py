@@ -1,4 +1,4 @@
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 def map(value, istart, istop, ostart, ostop):
 	# map value between [istart-istop] input interval to its [ostart-ostop] output interval
@@ -19,3 +19,8 @@ def ranking( value, ranges, transposed=None ):
 		return ranges[index] if transposed==None else transposed[index]
 	raise ValueError( 'ranking() cannot resolve value %r!' % value )
 	
+
+def slice_by( lst, by_len ):
+	""" Split a list into sublist of by_len items """
+	return [ lst[start:start+by_len] for start in range( 0, len(lst), by_len ) ]
+
