@@ -61,3 +61,30 @@ result = ranking( val, [10,20,30,40], ["A", "B", "C", "D"] )
 * Returns "D" when val>= 40
 
 remarks: the call could also be writtent `result = ranking( val, [10,20,30,40], "ABCD" )`
+
+# slice_by() function
+The `slice_by()` function can be used to divide a list into sub-lists of N items.
+
+``` python
+def slice_by( lst, by_len ):
+```
+
+avec:
+
+* __lst__ : the source list.
+* __by_len__ : the number of items into each sub-lists.
+
+
+Example:
+``` python
+from maps import slice_by
+
+l = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+print( "slice by 5", slice_by(l,5) )
+```
+
+Which displays the following results:
+
+```
+slice by 5 [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25], [26]]
+```
