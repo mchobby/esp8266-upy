@@ -625,10 +625,10 @@ Bus I2C
       </td>
   </tr>
   <tr><td><a href="../../../../tree/master/oled-ssd1306">oled-ssd1306</a></td>
-      <td><strong>Composants</strong> : SSD1306, FEATHER-OLED-WING, ADA2900, OLED<br />
+      <td><strong>Composants</strong> : SSD1306, SSD1315, FEATHER-OLED-WING, ADA2900, OLED<br />
       <strong>Interfaces</strong> : I2C, FEATHERWING, QWIIC<br />
-<small>Le SSD1306 est un contrôleur d'écran OLED</small><br/><br />
-      <strong>Testé avec</strong> : FEATHER-ESP8266<br />
+<small>Le SSD1306 (SSD1315) est un contrôleur d'écran OLED</small><br/><br />
+      <strong>Testé avec</strong> : FEATHER-ESP8266, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/product.php?id_product=879">FeatherWing OLED ssd1306 128x32</a></li>
