@@ -1,8 +1,10 @@
 [Ce fichier existe également en FRANCAIS](readme.md)
 
-# Using a SSD1306 OLED display with MicroPython
+# Using a SSD1306 / SSD1315 OLED display with MicroPython
 
-MicroPython does allow to easily use a I2C OLED displed using a ssd1306 driver.
+MicroPython does allow to easily use a I2C OLED displed using a ssd1306 / ssd1315 driver.
+
+The micropython code work the same way with the SSD1306 or SSD1315 hardware controler.
 
 __Remarks:__
 * This repository concerns several SSD1306 OLED displays and several MicroPython board.

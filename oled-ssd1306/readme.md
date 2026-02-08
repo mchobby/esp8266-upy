@@ -1,11 +1,13 @@
 [This file also exists in ENGLISH](readme_ENG.md)
 
-# Utilisation d'écran OLED ssd1306 avec MicroPython
+# Utilisation d'écran OLED ssd1306 / ssd1315 avec MicroPython
 
-MicroPython permet d'utiliser très facilement un écran OLED I2C basé sur le contrôleur ssd1306.
+MicroPython permet d'utiliser très facilement un écran OLED I2C basé sur le contrôleur ssd1306 ou ssd1315.
+
+Le pilote micropython fonctionne identiquement avec les deux controleurs.
 
 __Remarques:__
-* Ce dépôt couvre plusieurs modèles de cartes sous MicroPython et plusieurs afficheurs OLEDs a base de SSD1306.
+* Ce dépôt couvre plusieurs modèles de cartes sous MicroPython et plusieurs afficheurs OLEDs a base de SSD1306 / SSD1315.
 * Plus d'information sur les [écrans OLEDs sur la page Wiki de MC Hobby](https://wiki.mchobby.be/index.php?title=MicroPython-Accueil#ESP8266_en_MicroPython)
 
 # Bibliothèque
