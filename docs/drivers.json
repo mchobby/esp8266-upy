@@ -371,6 +371,20 @@
 								 "ENG": "Inertial Measurement Unit 9DOF (acc,magn,gyro) - LSM6DSOX + LIS3MDL - I2C I2C - under MicroPython."
 								}
 		},
+		{	"folder"        : "lsm6ds",
+			"components"    : ["ISM330DHCX","LSM6DSOX","ISM330DHCX-3V3-BRK"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["MCHOBBY"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "Centrale Interielle 6DOF - ISM330DHCX (LSM6DSOX) - Qwiic/StemmaQt - ISM330DHCX-3V3-BRK @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/fr\/mouvement\/2883-ism330dhcx-centrale-inertielle--3232100028838.html" },
+													{ "label" : "6DOF Inertial Measurement Unit - ISM330DHCX (LSM6DSOX) - Qwiic/StemmaQt - ISM330DHCX-3V3-BRK @ MCHobby",
+														"url"   : "https:\/\/shop.mchobby.be\/en\/movement\/2883-ism330dhcx-Inertial-Measurement-Unit--3232100028838.html" }
+												],
+			"descr"	: {"FR" : "Centrale Interielle 6DOF (accelerometre,gyroscope)- ISM330DHCX via I2C - sous MicroPython",
+								 "ENG": "Inertial Measurement Unit 6DOF (accelerometer,gyroscope) - ISM330DHCX via I2C - under MicroPython."
+								}
+		}, 
 		{	"folder"        : "is31fl",
 			"components"    : ["IS31FL3731"],
 			"interfaces"    : ["FEATHERWING", "I2C"],

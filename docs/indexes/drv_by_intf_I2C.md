@@ -271,6 +271,18 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/lsm6ds">lsm6ds</a></td>
+      <td><strong>Composants</strong> : ISM330DHCX, LSM6DSOX, ISM330DHCX-3V3-BRK<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>Centrale Interielle 6DOF (accelerometre,gyroscope)- ISM330DHCX via I2C - sous MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : MCHOBBY<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/mouvement/2883-ism330dhcx-centrale-inertielle--3232100028838.html">Centrale Interielle 6DOF - ISM330DHCX (LSM6DSOX) - Qwiic/StemmaQt - ISM330DHCX-3V3-BRK @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/en/movement/2883-ism330dhcx-Inertial-Measurement-Unit--3232100028838.html">6DOF Inertial Measurement Unit - ISM330DHCX (LSM6DSOX) - Qwiic/StemmaQt - ISM330DHCX-3V3-BRK @ MCHobby</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/m5stack-u024">m5stack-u024</a></td>
       <td><strong>Composants</strong> : U004, JOYSTICK<br />
       <strong>Interfaces</strong> : GROVE, I2C<br />
