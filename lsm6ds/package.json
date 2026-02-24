@@ -1,0 +1,8 @@
+{
+  "urls": [
+    ["sensor.py", "github:mchobby/esp8266-upy/lsm6ds/lib/sensor.py"],
+    ["ism330dh.py", "github:mchobby/esp8266-upy/lsm6ds/lib/ism330dh.py"],
+    ["lsm6ds.py", "github:mchobby/esp8266-upy/lsm6ds/lib/lsm6ds.py"]
+  ],
+  "version": "1.0"
+}
