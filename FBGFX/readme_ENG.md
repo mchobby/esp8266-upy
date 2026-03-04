@@ -4,6 +4,7 @@
 This section contains class and exemple used to manipulates FrameBuffer.
 
 * __[fbutil.py](lib/fbutil.py)__ :  circle, fill_circle, oval, fill_oval, rrect, fill_rrect, etc. Example: [here](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil)
+* __[fbdigit.py](lib/fbdigit.py)__ :  draw large numeric digit on a FrameBuffer.
 * __[icon.py](lib/icon.py)__ :  5x5 icons definition from Micro:bit (coming from sense-hat sub-project).
 * __[icons8.py](lib/icons8.py)__ :  8x8 icons definition looking like Micro:bit's one.
 * __[icontls.py](lib/icontls.py)__ : Some functions to draw the icon in a FrameBuffer (used for display), or inside a terminal, or as a list of True/False values for the points.
@@ -27,6 +28,16 @@ mpremote mip install github:mchobby/esp8266-upy/FBGFX
 # fbutil test
 
 See [the examples available for the ili934x driver](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil) .
+
+# fbdigit test
+
+The [test_digit1.py](examples/test_digit1.py) example shows how to display a 25x38 digit on an Oled display (128x64).
+
+![display a digit and double point](docs/_static/fb_digit_0.jpg)
+
+The [test_digit2.py](exemples/test_digit2.py) example shows how to display time (hh:mm) on an 128x64 Oled display.
+
+![Display time](docs/_static/fb_digit_1.jpg)
 
 # icons test
 

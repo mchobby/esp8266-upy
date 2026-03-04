@@ -4,6 +4,7 @@
 Cette section contient des classes et exemples permettant manipuler le contenu de FrameBuffer.
 
 * __[fbutil.py](lib/fbutil.py)__ :  circle, fill_circle, oval, fill_oval, rrect, fill_rrect, etc. Exemple: [ici](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil)
+* __[fbdigit.py](lib/fbdigit.py)__ :  dessine de grands digits dans un FrameBuffer.
 * __[icons.py](lib/icons.py)__ :  définition d'icone du Micro:bit en 5x5 (provient du projet sense-hat).
 * __[icons8.py](lib/icons8.py)__ :  définition d'icone style Micro:bit en 8x8 pixels.
 * __[icontls.py](lib/icontls.py)__ : Quelques fonctions pour dessiner une icone dans un FramBuffer (pour afficheurs), dans un terminal ou retourner les points True/False de l'icone sous forme de listes.
@@ -26,6 +27,16 @@ mpremote mip install github:mchobby/esp8266-upy/FBGFX
 # Tester fbutil
 
 Voir [les exemples disponibles pour le pilote ili934x](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil) .
+
+# Tester fbdigit
+
+L'exemple [test_digit1.py](examples/test_digit1.py) indique comment afficher un digit 25x38 sur un afficheur Oled (128x64).
+
+![afficher un Digit et un double point](docs/_static/fb_digit_0.jpg)
+
+L'exemple [test_digit2.py](exemples/test_digit2.py) inndique comment afficher l'heure (hh:mm) sur un afficheur Oled (128x64)
+
+![Afficher l'heure](docs/_static/fb_digit_1.jpg)
 
 # Tester les icons
 
