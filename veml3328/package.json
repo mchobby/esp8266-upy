@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["veml3328.py", "github:mchobby/esp8266-upy/veml3328/lib/veml3328.py"]
+  ],
+  "version": "1.0"
+}
