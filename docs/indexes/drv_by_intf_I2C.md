@@ -841,6 +841,17 @@ Bus I2C
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/veml3328">veml3328</a></td>
+      <td><strong>Composants</strong> : VEML3328<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>VEML3328 est un capteur de <strong>R,G,B, clair, InfraRouge</strong> permettant la lumière visible et calculer la luminosité (Lux).</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : MCHOBBY<br />
+<ul>
+<li>Voir <a href="https://shop.mchobby.be/fr/environnemental-press-temp-hrel-gaz/2877-veml3328sl-capteur-de-couleur-rgb-clair-infrarouge-3v3-i2c-3232100028777.html">VEML3328 @ MCHobby - Capteur R,G,B,C,Ir / Lux numérique</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/veml6075">veml6075</a></td>
       <td><strong>Composants</strong> : VEML6075, SEN0303<br />
       <strong>Interfaces</strong> : I2C<br />

@@ -75,7 +75,7 @@ See
   <tr><td><a href="../../../../tree/master/veml6075">veml6075</a></td>
       <td><strong>Components</strong> : VEML6075, SEN0303<br />
       <strong>Interfaces</strong> : I2C<br />
-<small>The VEML6075 sensor is sensitive to <strong>ultraviolet light</strong> (315~375nm) and can calculate the UV Index of visible light en lumière visible.</small><br/><br />
+<small>The VEML6075 sensor is sensitive to <strong>ultraviolet light</strong> (315~375nm) and can calculate the UV Index of visible light.</small><br/><br />
       <strong>Tested with</strong> : PICO<br />
       <strong>Manufacturer</strong> : DFROBOT<br />
 <ul>

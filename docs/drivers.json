@@ -1362,7 +1362,19 @@
 														"url"   : "https:\/\/www.dfrobot.com/product-1906.html" }
 												],
 			"descr"	: {"FR" : "Le VEML6075 est un capteur de <strong>ultraviolet<\/strong> (315~375nm) permettant d'évaluer l'index UV en lumière visible.",
-								 "ENG": "The VEML6075 sensor is sensitive to <strong>ultraviolet light<\/strong> (315~375nm) and can calculate the UV Index of visible light en lumière visible."
+								 "ENG": "The VEML6075 sensor is sensitive to <strong>ultraviolet light<\/strong> (315~375nm) and can calculate the UV Index of visible light."
+								}
+		},
+		{	"folder"        : "veml3328",
+			"components"    : ["VEML3328"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["MCHOBBY"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "VEML3328 @ MCHobby - Capteur R,G,B,C,Ir / Lux numérique",
+												    "url"   : "https:\/\/shop.mchobby.be\/fr\/environnemental-press-temp-hrel-gaz\/2877-veml3328sl-capteur-de-couleur-rgb-clair-infrarouge-3v3-i2c-3232100028777.html" }
+												],
+			"descr"	: {"FR" : "VEML3328 est un capteur de <strong>R,G,B, clair, InfraRouge<\/strong> permettant la lumière visible et calculer la luminosité (Lux).",
+								 "ENG": "The VEML3328 is a <strong>R,G,B, Clear, InfraRed<\/strong> light sensor and calculate luminosity (Lux)."
 								}
 		},
 		{	"folder"        : "weather-station",
