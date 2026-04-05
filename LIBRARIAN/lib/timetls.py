@@ -11,7 +11,7 @@ class TimeoutTimer:
     def __init__(self, timeout=0.0):
         self._timeout = 0.0 
         self._start_time = 0.0
-	self.set = self.setTimer # Alias 
+        self.set = self.setTimer # Alias 
         if timeout:
             self.setTimer(timeout)
 
