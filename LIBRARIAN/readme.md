@@ -31,6 +31,7 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 * [maps.py](lib/maps.py) : equivalent du `map()` Arduino (compatible float), `ranking()`, etc. voir [ce readme specifique](maps_readme.md)
 * [ostls.py](lib/ostls.py) : "os tools" quelques fonctions pratiques autour du module `os`.
 * [timetls.py](lib/timetls.py) : classe `TimeOutTimer` pour verifier lorsque le temps de traitement à dépassé une consigne.
+* [btntls.py](lib/btntls.py) : classe `BtnClicks` comptant le nombre de clicks sur un bouton.
 * [pid.py](lib/pid.py) : PID logiciel
 * [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
 * [rp2lib/](rp2lib/) : Ensemble de bibliothèques PIO pour Raspberry-Pi Pico RP2 series, voir [ce readme spécifique](rp2lib_readme.md).
