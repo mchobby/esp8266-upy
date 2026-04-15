@@ -30,7 +30,7 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 * [ledtls.py](lib/ledtls.py) : `LedError`, `Pulse`, `HeartBeat` classes for LED control. `SuperLed` can even use several modes on a single LED. See examples.
 * [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible), `ranking()`, etc. See [this specific readme](maps_readme.md)
 * [ostls.py](lib/ostls.py) : "os tools" some useful functions relatives to os module.
-* [timetls.py](lib/timetls.py) : `TimeOutTimer` class to measure check when the processing time exceed a timeout.
+* [timetls.py](lib/timetls.py) : `TimeoutTimer` class to measure check when the processing time exceed a timeout.
 * [btntls.py](lib/btntls.py) : `BtnClicks` class to count the number of clicks on a button.
 * [pid.py](lib/pid.py) : Software PID
 * [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation
