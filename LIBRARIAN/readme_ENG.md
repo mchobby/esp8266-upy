@@ -31,6 +31,7 @@ mpremote mip install github:mchobby/esp8266-upy/LIBRARIAN
 * [maps.py](lib/maps.py) : equivalent of Arduino `map()` (float compatible), `ranking()`, etc. See [this specific readme](maps_readme.md)
 * [ostls.py](lib/ostls.py) : "os tools" some useful functions relatives to os module.
 * [timetls.py](lib/timetls.py) : `TimeoutTimer` class to measure check when the processing time exceed a timeout.
+* [stat.py](lib/stat.py) : `Statistic` class used to calculates  minima, maxima, mean, variance, standard deviation statistics
 * [btntls.py](lib/btntls.py) : `BtnClicks` class to count the number of clicks on a button.
 * [pid.py](lib/pid.py) : Software PID
 * [ringbuf.py](lib/ringbuf.py) : Ring buffer implementation

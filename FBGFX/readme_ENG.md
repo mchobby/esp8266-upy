@@ -8,6 +8,7 @@ This section contains class and exemple used to manipulates FrameBuffer.
 * __[icon.py](lib/icon.py)__ :  5x5 icons definition from Micro:bit (coming from sense-hat sub-project).
 * __[icons8.py](lib/icons8.py)__ :  8x8 icons definition looking like Micro:bit's one.
 * __[icontls.py](lib/icontls.py)__ : Some functions to draw the icon in a FrameBuffer (used for display), or inside a terminal, or as a list of True/False values for the points.
+* __[pixel-art/](pixel-art/readme.md)__ : Contains 1bit-pixel-art icon libraries.
 
 # Library
 
@@ -42,8 +43,10 @@ The [test_digit2.py](exemples/test_digit2.py) example shows how to display time 
 # icons test
 
 The icon files are:
+
 * [icons.py](lib/icons.py) : 5x5 pixels icons, identical to Micro:bit
 * [icons8.py](lib/icons8.py) : 8x8 pixels icons (similar of Micro:bit's ones)
+* [__pixel_art__](pixel-art/readme_ENG.md) : many "1bit pixel-art icons" coming from itch.io (Free Usage). Library using the icon.py format... so can be directly used with {{fname|icontls.py}} functions. 
 
 
 The graph here under allows you to identifies the icon named if the python script.

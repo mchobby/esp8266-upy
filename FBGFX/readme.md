@@ -6,8 +6,9 @@ Cette section contient des classes et exemples permettant manipuler le contenu d
 * __[fbutil.py](lib/fbutil.py)__ :  circle, fill_circle, oval, fill_oval, rrect, fill_rrect, etc. Exemple: [ici](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil)
 * __[fbdigit.py](lib/fbdigit.py)__ :  dessine de grands digits dans un FrameBuffer.
 * __[icons.py](lib/icons.py)__ :  définition d'icone du Micro:bit en 5x5 (provient du projet sense-hat).
-* __[icons8.py](lib/icons8.py)__ :  définition d'icone style Micro:bit en 8x8 pixels.
+* __[icons8.py](lib/icons8.py)__ :  définition d'icones style Micro:bit en 8x8 pixels.
 * __[icontls.py](lib/icontls.py)__ : Quelques fonctions pour dessiner une icone dans un FramBuffer (pour afficheurs), dans un terminal ou retourner les points True/False de l'icone sous forme de listes.
+* __[pixel-art/](pixel-art/readme.md)__ : Contient des bibliothèques d'icones 1bit-pixel-art.
 
 # Bibliothèque
 
@@ -41,8 +42,10 @@ L'exemple [test_digit2.py](exemples/test_digit2.py) inndique comment afficher l'
 # Tester les icons
 
 Les fichiers d'icones sont:
+
 * [icons.py](lib/icons.py) : Icones 5x5 pixels identiques au Micro:bit
 * [icons8.py](lib/icons8.py) : Icones 8x8 pixels (similaires au Micro:bit)
+* [__pixel_art__](pixel-art/readme.md) : Nombreuses icones "1bit pixel-art" en provenance de itch.io (libre d'usage). Bibliothèque utilisant le format icon.py ... donc pouvant être directement utilisé avec la fonction {{fname|icontls.py}}. 
 
 
 Le graphique ci-dessous permet d'identifier le nom des icones

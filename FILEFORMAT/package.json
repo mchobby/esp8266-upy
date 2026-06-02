@@ -2,7 +2,7 @@
   "urls": [
     ["img.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/img.py"],
 		["bmp.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/bmp.py"],
-		["bpm.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/bpm.py"]
+		["pbm.py", "github:mchobby/esp8266-upy/FILEFORMAT/imglib/pbm.py"]
   ],
-  "version": "1.0"
+  "version": "1.1"
 }
