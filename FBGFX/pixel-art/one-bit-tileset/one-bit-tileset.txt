@@ -1,0 +1,9 @@
+1-bit Tileset by Kevin Mantao
+=============================
+
+no credit required but appreciated.
+
+- 10x10 Pixels
+
+License: CC0
+Source : https://kevinmantao.itch.io/1bittileset

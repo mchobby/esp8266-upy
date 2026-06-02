@@ -1,0 +1,14 @@
+1-bit Space by xxx
+===============================================
+
+A 1-bit shmup asset pack that includes.
+ * Two player ships + Upgraded ships
+ * Enemies + Boss
+ * Pickup Items
+ * Blasts/Attacks/Lasers/Booms
+ * Misc sprites
+
+- 16x16 Pixels
+
+License: CC BY-SA 4.0
+Source : https://greatdocbrown.itch.io/1bitspace

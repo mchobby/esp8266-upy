@@ -1,0 +1,13 @@
+1-bit Pixel Icons by Nikoichu is marked CC0 1.0
+===============================================
+
+The biggest free Pixel icon library.
+- 1400 icons 
+- 16x16 Pixels
+
+All of these icons are licensed under CC0, which means you have absolutely 
+no restrictions on how you can use them. I would still appreciate it if you 
+gave me attribution for my work, but it's not strictly required.
+
+License: CC0
+Source : https://nikoichu.itch.io/pixel-icons

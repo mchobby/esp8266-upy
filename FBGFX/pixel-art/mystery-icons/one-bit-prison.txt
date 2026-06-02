@@ -1,0 +1,11 @@
+1-bit Mystery Icon by Darkmoonfire
+==================================
+
+An icon set with forty-five 16x16 icons, designed for mystery or noir themed 
+games. This set includes icons for potential murder weapons, evidence, and 
+valuable objects.
+
+- 16x16 Pixels
+
+License: Creative Commons Attribution_ShareAlike v4.0 International
+Source : https://darkmoonfire.itch.io/pixel-noir-mystery-icons

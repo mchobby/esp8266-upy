@@ -1,0 +1,11 @@
+1-bit Dog Puppy by jinxedbyte
+=============================
+
+I just created my first spritesheets at all. 
+
+- 32x32 Pixels
+
+Feel free to use in any commercial or noncommercial use. CC0 License.
+
+Licence: CC0
+Source : https://jinxedbyte.itch.io/1bit-dog-puppy
