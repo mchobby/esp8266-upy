@@ -118,6 +118,17 @@ voir
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/ht16k33">ht16k33</a></td>
+      <td><strong>Composants</strong> : ht16k33<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>HT16K33 : Controler I2C pour Matrice LEDs</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : ADAFRUIT<br />
+<ul>
+<li>Voir <a href="https://www.adafruit.com/product/813">4x7 Segment Display - Adafruit 813, 878, 881, 1002, 879, 5602, 5599, 5603, 5601, 5604 @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/hx711">hx711</a></td>
       <td><strong>Composants</strong> : HX711<br />
       <strong>Interfaces</strong> : HAT<br />

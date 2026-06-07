@@ -249,13 +249,21 @@
 			"manufacturers" : [],
 			"plateforms"    : ["PYBSTICK","PYB405","PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "Sense Hat Astro-Pi - le micro laboratoire prêt à l'emploi @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-hats\/687-sense-hat-pour-raspberry-pi-3232100006874.html" },
-													{ "label" : "Hat-sense @ Raspberry-Pi.org",
-														"url"   : "https:\/\/www.raspberrypi.org\/products\/sense-hat" }
-												],
+									"url"   : "https:\/\/shop.mchobby.be\/fr\/pi-hats\/687-sense-hat-pour-raspberry-pi-3232100006874.html" },
+								{ "label" : "Hat-sense @ Raspberry-Pi.org",
+									"url"   : "https:\/\/www.raspberrypi.org\/products\/sense-hat" } ],
 			"descr"	: {"FR" : "Utiliser le Sense HAT avec MicroPython Pyboard, PYBStick, PYB405",
-								 "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405."
-								}
+					   "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405." }
+		},
+		{	"folder"        : "ht16k33",
+			"components"    : ["ht16k33"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : ["ADAFRUIT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "4x7 Segment Display - Adafruit 813, 878, 881, 1002, 879, 5602, 5599, 5603, 5601, 5604 @ Adafruit",
+								  "url"   : "https:\/\/www.adafruit.com\/product\/813" } ],
+			"descr"	: {"FR" : "HT16K33 : Controler I2C pour Matrice LEDs",
+					   "ENG": "HT16K33 : Controler I2C LEDs matrix controllers" }
 		},
 		{	"folder"        : "huskylens",
 			"components"    : ["HuskyLens"],
