@@ -2,11 +2,14 @@
 docs/push.sh
 pushgit.sh
 makezip.sh
+*.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.totest
+*.to_test
 
 config/
 *.xcf

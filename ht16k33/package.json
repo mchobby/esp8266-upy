@@ -1,0 +1,8 @@
+{
+  "urls": [
+    ["ht16k33/__init__.py", "github:mchobby/esp8266-upy/ht16k33/lib/__init__.py"],
+    ["ht16k33/ht16k33.py", "github:mchobby/esp8266-upy/ht16k33/lib/ht16k33.py"],
+    ["ht16k33/adafruit/segments.py", "github:mchobby/esp8266-upy/ht16k33/lib/adafruit/segments.py"]
+  ],
+  "version": "0.2"
+}
