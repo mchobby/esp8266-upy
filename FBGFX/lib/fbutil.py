@@ -7,7 +7,7 @@
 	see repository: https://raw.githubusercontent.com/peter-l5/framebuf2
 	see repository: https://github.com/adafruit/Adafruit-GFX-Library/blob/master/Adafruit_GFX.cpp
 """
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 import math
 
@@ -225,3 +225,31 @@ class FBUtil:
 				a, b = b, a
 			self.fb.hline(a, y, b - a + 1, c)
 			y += 1
+
+	def draw_bitmap( self, x, y, bitmap, w, h, c ):
+		""" Draw bitmap buffer into the FrameBuffer (binary 1/0 bits, only draw the 1 bits)."""
+		byte_width = (w + 7) // 8 # Bitmap scanline pad = whole byte
+		b = 0 # The current byte value
+  
+		#for (int16_t j = 0; j < h; j++, y++) {
+		j=0
+		while j<h:
+            
+			#for (int16_t i = 0; i < w; i++) {
+			i=0
+			while i<w:
+                
+				if i & 7:
+					b <<= 1
+				else:
+					b = bitmap[int(j * byte_width + i / 8)]
+				if b & 0x80: # If highest bit is high
+					self.fb.pixel(x + i, y, c)
+                
+				# eof for(i)
+				i+=1
+            
+			# eof for(j)
+			j+=1
+			y+=1
+
