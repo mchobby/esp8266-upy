@@ -6,6 +6,8 @@
 from machine import Timer
 import time
 
+__version__ = '0.1.0'
+
 class PID:
 
 	def __init__(self, Kp, Ki, Kd, dt, setpoint, measure_func, output_func, output_min, output_max):

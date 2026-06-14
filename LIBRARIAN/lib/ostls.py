@@ -1,6 +1,6 @@
-__version__ = '0.0.2'
-
 import os
+
+__version__ = '0.0.2'
 
 # Based on dylands code @ https://forum.micropython.org/viewtopic.php?t=8112
 def dir_exists(filename):

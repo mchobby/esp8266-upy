@@ -7,6 +7,8 @@ from machine import idle, PWM, Pin
 from math import sin, pi
 import time
 
+__version__ = '0.1.0'
+
 class LedError:
 	""" Show an error code on a single LED. """
 

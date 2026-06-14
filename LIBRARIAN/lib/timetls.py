@@ -5,6 +5,8 @@
 
 from time import ticks_ms
 
+__version__ = '0.1.0'
+
 class TimeoutTimer:
     """A reusable class to track timeouts, like an egg timer"""
 

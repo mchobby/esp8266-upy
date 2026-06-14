@@ -8,6 +8,8 @@ from machine import Pin
 from timetls import TimeoutTimer
 import time
 
+__version__ = '0.1.0'
+
 DEBOUNCE_MS = 25 
 CLICK_TIMEOUT = 0.250 # 500ms, Time during which an additional click is accepted.
 TRIGGER_TIMEOUT = 1.000 # 1 sec, One full second before the action is "triggered"
