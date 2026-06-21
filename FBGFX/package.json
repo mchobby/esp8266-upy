@@ -1,10 +1,14 @@
 {
   "urls": [
     ["fbutil.py", "github:mchobby/esp8266-upy/FBGFX/lib/fbutil.py"],
+    ["fbtext.py", "github:mchobby/esp8266-upy/FBGFX/lib/fbtext.py"],
+    ["fontdef.py", "github:mchobby/esp8266-upy/FBGFX/lib/fontdef.py"],
+    ["font5x4.py", "github:mchobby/esp8266-upy/FBGFX/lib/font5x4.py"],
+    ["font8x4.py", "github:mchobby/esp8266-upy/FBGFX/lib/font8x4.py"],
     ["fbdigit.py","github:mchobby/esp8266-upy/FBGFX/lib/fbdigit.py"],
     ["icons.py", "github:mchobby/esp8266-upy/FBGFX/lib/icons.py"],
     ["icons8.py", "github:mchobby/esp8266-upy/FBGFX/lib/icons8.py"],
     ["icontls.py", "github:mchobby/esp8266-upy/FBGFX/lib/icontls.py"]
   ],
-  "version": "0.3"
+  "version": "0.4"
 }

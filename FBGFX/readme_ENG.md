@@ -4,6 +4,7 @@
 This section contains class and exemple used to manipulates FrameBuffer.
 
 * __[fbutil.py](lib/fbutil.py)__ :  circle, fill_circle, oval, fill_oval, rrect, fill_rrect, etc. Example: [here](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil)
+* __[fbtext.py](lib/fbtext.py)__, __[fontdef.py](lib/fontdef.py)__, __[font8x4.py](lib/font8x4.py)__, __[font5x4.py](lib/font5x4.py)__ : font compacte pour écran de petite taille.
 * __[fbdigit.py](lib/fbdigit.py)__ :  draw large numeric digit on a FrameBuffer.
 * __[icon.py](lib/icon.py)__ :  5x5 icons definition from Micro:bit (coming from sense-hat sub-project).
 * __[icons8.py](lib/icons8.py)__ :  8x8 icons definition looking like Micro:bit's one.
@@ -29,6 +30,14 @@ mpremote mip install github:mchobby/esp8266-upy/FBGFX
 # fbutil test
 
 See [the examples available for the ili934x driver](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil) .
+
+# fbtext test
+
+The [test_font8x4.py](examples/test_font8x4.py) and [test_font5x4.py](examples/test_font5x4.py) examples shows how to draw the text into the framebuffer of a 24x8 LEDs display driven by a HT1632 chip.
+
+![Using FBText](docs/_static/fb_text_0.jpg)
+
+See the [available examples in the HT1632C driver](https://github.com/mchobby/esp8266-upy/tree/master/ht1632c) .
 
 # fbdigit test
 
