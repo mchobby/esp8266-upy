@@ -24,6 +24,17 @@ See
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/ht1632c">ht1632c</a></td>
+      <td><strong>Components</strong> : ht1632c, DFR0484, DFR0485, DFR0487, DFR0488<br />
+      <strong>Interfaces</strong> : GPIO<br />
+<small>HT1632C : Controler LEDs matrix controllers</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://www.dfrobot.com/product-1596.html">24x8 LED matrix - DFR0484, DFR0485, DFR0487, DFR0488 @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/huskylens">huskylens</a></td>
       <td><strong>Components</strong> : HuskyLens<br />
       <strong>Interfaces</strong> : I2C, UART<br />

@@ -255,6 +255,16 @@
 			"descr"	: {"FR" : "Utiliser le Sense HAT avec MicroPython Pyboard, PYBStick, PYB405",
 					   "ENG": "Use the Sense Hat with the MicroPython Pyboard, PYBStick, PYB405." }
 		},
+		{	"folder"        : "ht1632c",
+			"components"    : ["ht1632c","DFR0484","DFR0485","DFR0487","DFR0488"],
+			"interfaces"    : ["GPIO"],
+			"manufacturers" : ["DFROBOT"],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "24x8 LED matrix - DFR0484, DFR0485, DFR0487, DFR0488 @ DFRobot",
+								  "url"   : "https:\/\/www.dfrobot.com\/product-1596.html" } ],
+			"descr"	: {"FR" : "HT1632C : Controler pour Matrice LEDs",
+					   "ENG": "HT1632C : Controler LEDs matrix controllers" }
+		},		
 		{	"folder"        : "ht16k33",
 			"components"    : ["ht16k33"],
 			"interfaces"    : ["I2C"],

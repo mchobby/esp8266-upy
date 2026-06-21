@@ -44,6 +44,17 @@ Generic GPIO, PWM, Interrupt, etc interface. Do not use a BUS or specific connec
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/ht1632c">ht1632c</a></td>
+      <td><strong>Components</strong> : ht1632c, DFR0484, DFR0485, DFR0487, DFR0488<br />
+      <strong>Interfaces</strong> : GPIO<br />
+<small>HT1632C : Controler LEDs matrix controllers</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : DFROBOT<br />
+<ul>
+<li>See <a href="https://www.dfrobot.com/product-1596.html">24x8 LED matrix - DFR0484, DFR0485, DFR0487, DFR0488 @ DFRobot</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/modled8x8">modled8x8</a></td>
       <td><strong>Components</strong> : MOD-LED8x8RGB<br />
       <strong>Interfaces</strong> : GPIO, SPI<br />
