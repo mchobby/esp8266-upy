@@ -13,7 +13,7 @@ Exemples:
 * mystery-icons
 * one-bit-dog-puppy
 * one-bit pixel-icons
-* one-bit-prison
+* one-bit-prison : see description and details on [this itch.io page](https://yasriii.itch.io/1-bit-prison-pixel-art).
 * one-bit-space-arcade
 * one-bit-tileset
 * ...

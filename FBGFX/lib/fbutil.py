@@ -7,7 +7,7 @@
 	see repository: https://raw.githubusercontent.com/peter-l5/framebuf2
 	see repository: https://github.com/adafruit/Adafruit-GFX-Library/blob/master/Adafruit_GFX.cpp
 """
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 import math
 
@@ -253,3 +253,22 @@ class FBUtil:
 			j+=1
 			y+=1
 
+
+	def scale_bitmap( self, x, y, bitmap, w, h, c, scale=2 ):
+		""" Draw bitmap buffer but render it at a given scale. 
+		    Into the FrameBuffer (binary 1/0 bits, only draw the 1 bits)."""
+		byte_width = (w + 7) // 8 # Bitmap scanline pad = whole byte
+		b = 0 # The current byte value 
+		j=0
+		while j<h:
+			i=0
+			while i<w:                
+				if i & 7:
+					b <<= 1
+				else:
+					b = bitmap[int(j * byte_width + i / 8)]
+				if b & 0x80: # If highest bit is high
+					self.fb.fill_rect(x + i*scale, y,scale,scale, c)
+				i+=1            
+			j+=1
+			y+=scale

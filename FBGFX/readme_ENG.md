@@ -31,6 +31,28 @@ mpremote mip install github:mchobby/esp8266-upy/FBGFX
 
 See [the examples available for the ili934x driver](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil) .
 
+## Draw a bitmap on the FrameBuffer
+```
+FBUtil.draw_bitmap(x,y, bitmap_def, bitmap_width, bitmap_height, color )
+```
+
+Encoding the bitmap 1 byte per row (from top to botom row), 1 bit per column (left most pixel is bit 7). Several bytes may be used on a row per multiple of 8 pixels wide.
+
+```
+*** = 0b11100000
+* * = 0b10100000
+* * = 0b10100000
+```
+
+Which result in the following definition `bmp = ( 0b11100000, 0b10100000, 0b10100000)`
+
+Drawing the bipmap on the parent frame buffer will be done with:
+
+```
+fb_util.draw_bitmap( 0,0, bmp, 3, 3, 1)
+```
+
+
 # fbtext test
 
 The [test_font8x4.py](examples/test_font8x4.py) and [test_font5x4.py](examples/test_font5x4.py) examples shows how to draw the text into the framebuffer of a 24x8 LEDs display driven by a HT1632 chip.
