@@ -12,7 +12,7 @@ Nov. 2016 Philip R. Moyer and Radomir Dopieralski for Adafruit Industries - orig
 - based on https://github.com/adafruit/Adafruit_CircuitPython_PCF8523.git
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __repo__ = "https://github.com/mchobby/esp8266-upy/tree/master/pcf8523"
 
 import time
@@ -23,6 +23,9 @@ BATTERY_SWITCHOVER_OFF = 0b111
 RTC_REG = 0x03
 ALARM_REG = 0x0A
 CONTROL_1_REG = 0x00
+
+CLKOUT_REG = 0x0F
+CLKOUT_FREQ = {0:32768, 1:16384, 2:8192, 3:4096, 4:1024, 5:32, 6:1, 7:None}
 
 def _bcd2bin(value):
 	"""Convert binary coded decimal to Binary """
@@ -151,20 +154,20 @@ class PCF8523:
 	@property
 	def alarm_interrupt( self ):
 		""" True if the interrupt pin will output when alarm is alarming. """
-		self.i2c.readfrom_mem_into( self.address, 0x00, self.buf1 )
+		self.i2c.readfrom_mem_into( self.address, CONTROL_1_REG, self.buf1 )
 		return ( self.buf1[0] & 0b00000010 ) == 0b00000010
 
 	@alarm_interrupt.setter
 	def alarm_interrupt( self, value ):
-		self.i2c.readfrom_mem_into( self.address, 0x00, self.buf1 )
+		self.i2c.readfrom_mem_into( self.address, CONTROL_1_REG, self.buf1 )
 		self.buf1[0] = self.buf1[0] & 0b11111101 # clear the bit
 		if value:
 			self.buf1[0] = self.buf1[0] | 0b00000010 # set the bit
-		self.i2c.writeto_mem( self.address, 0x00, self.buf1 )
+		self.i2c.writeto_mem( self.address, CONTROL_1_REG, self.buf1 )
 
 	@property
 	def alarm_status( self ):
-		""" True if alarm is alarming. Set to False to reset """
+		""" True if alarm is alarming. Set to False to reset. Alarm interrupt generated """
 		self.i2c.readfrom_mem_into( self.address, 0x01, self.buf1 )
 		return ( self.buf1[0] & 0b00001000 ) == 0b00001000
 
@@ -254,3 +257,26 @@ class PCF8523:
 				if enable:
 					self.buf1[0] = self.buf1[0] | 0b10000000 # Inject enable
 			self.i2c.writeto_mem( self.address, ALARM_REG + 0x03, self.buf1 )
+
+	@property
+	def clock_out( self ):
+		""" Get or set the clock-out frequency """
+		self.i2c.readfrom_mem_into( self.address, CLKOUT_REG, self.buf1)
+		val = (self.buf1[0] & 0b00111000)>>3
+		return CLKOUT_FREQ[val]
+
+	@clock_out.setter
+	def clock_out( self, value ):
+		assert value in CLKOUT_FREQ.values(), "Require value %s" % CLKOUT_FREQ.values()
+		for k in CLKOUT_FREQ.keys():
+			if CLKOUT_FREQ[k]==value:
+				self.i2c.readfrom_mem_into( self.address, CLKOUT_REG, self.buf1)
+				val = (self.buf1[0] & 0b11000111) | (k<<3)
+				self.buf1[0]=val
+				self.i2c.writeto_mem( self.address, CLKOUT_REG, self.buf1)
+				return
+		raise ValueError()
+
+	def clear_interrupt( self ):
+		""" Clear the alarm interrupt """
+		self.alarm_status = False
