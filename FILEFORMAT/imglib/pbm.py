@@ -3,7 +3,7 @@
     bpm file store image with 1 bit per pixel
     Does not support any kind of compression
 """
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 WHITE_COLOR = (255,255,255)
 BLACK_COLOR = (0,0,0)
@@ -32,6 +32,9 @@ class PbmReader():
 		self._curr_byte= None # Current byte tp extract the pixel
 		self._next_mask= None # Next mask to use to read the next pixel (next bit)
 
+		# Byte offset
+		self.offset = None
+
 		self.decode_header()
 		if check:
 			self.check_compatible() # Check if the format is compatible
@@ -45,9 +48,18 @@ class PbmReader():
 		if self.fileio.read(2) != b'P4':
 			raise PbmpException( 'Not a binary PBM' )
 		self.fileio.readline() # finish to read magic key
-		self.fileio.readline() # Creator comment
-
-		size = self.fileio.readline().decode('utf-8').split()
+		size = None
+		comment = self.fileio.readline().decode('utf-8')
+		if len(comment)==0: 
+			pass # let's consider it as an empty comment
+		elif comment[0]=='#':
+			pass # it is indeed a comment!
+		else:
+			# It is already the size information
+			size = comment.split() 
+		
+		if size==None:
+			size = self.fileio.readline().decode('utf-8').split()
 		self.width = int(size[0])
 		self.height= int(size[1])
 		self.startbit= self.fileio.tell() # Current position = start of data
@@ -66,9 +78,9 @@ class PbmReader():
 		if line_padding==8: # Was multiple of 8 ==> remove the line padding!
 			line_padding=0
 		# The TOP image scan-line is stored at the end of the file!
-		offset = self.startbit + (pos[1]*(self.width+line_padding))//8 + (pos[0]//8)
+		self.offset = self.startbit + (pos[1]*(self.width+line_padding))//8 + (pos[0]//8)
 		# print( 'seek_pix @ %s' % hex(offset) ) # Debug
-		self.fileio.seek( offset )
+		self.fileio.seek( self.offset )
 
 		# Initialize Bit reader
 		self._next_pix = pos[0] # Current pixel to read
@@ -99,6 +111,12 @@ class PbmReader():
 				self._next_pix = 0
 
 		return WHITE_COLOR if _r else BLACK_COLOR # True/False
+
+	def read_line_into( self, buf ):
+		# read an image line at frameBuffer format. Store the data into buf.
+		self.fileio.seek( self.offset ) # Bit per bit read_pix already load the first byte. So we must reseek
+		return self.fileio.readinto(buf) # return number of bytes read, 0 for EOF, None when no data, negative for error
+
 
 #    with open('upy-logo.pbm', 'rb' ) as f:
 #        f.readline() # Magic number    P4 for pbm (Portable Bitmap)
