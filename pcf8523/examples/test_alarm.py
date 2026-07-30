@@ -5,18 +5,18 @@
 	Dominique Meurisse for MCHobby.be - initial portage
 """
 
-from machine import I2C
+from machine import I2C, Pin
 from pcf8523 import PCF8523
 import time
 
 # PYBStick - S3=sda, S5=scl
 # Raspberry-Pi Pico - GP6=sda, GP7=scl
-i2c = I2C(1)
+i2c = I2C(1, sda=Pin(6), scl=Pin(7))
 
 rtc = PCF8523( i2c )
 
-# Get the current time
-now = rtc.datetime
+# Get the current datetime as timestamp
+now = rtc.timestamp
 print( "now   @ Year: %s, month: %s, day: %s, hour: %s, min: %s, sec: %s, weekday: %s, yearday: %s" % time.localtime(now) )
 
 # Calculate Alarm 1 minute in the future
@@ -61,6 +61,7 @@ while True:
 		print( "Tuuut Tuuut Tuuut Tuuut Tuuut Tuuut")
 		print( "Reset alarm status ")
 		rtc.alarm_status = False
+		break
 	time.sleep( 10 )
 
 

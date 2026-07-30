@@ -4,7 +4,11 @@
 
 Le PCF8523 de NXP est une horloge RTC I2C capable de poursuivre l'écoulement du temps même lorsque qu'elle n'est pas sous-tension. En effet, la pile bouton permet à l'horloge de continuer à fonctionner.
 
-Le PCF8523 est assez populaire et équipe de nombreux produits, la capture ci-dessous reprend la [PiRTC](https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html) et l'[Adafruit AdaLogger FeatherWing](https://shop.mchobby.be/fr/feather-adafruit/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html).
+Le PCF8523 est assez populaire et équipe de nombreux produits, la capture ci-dessous reprend le [Pico-Clock-Boot](https://shop.mchobby.be/fr/pico-rp2x/2960-pico-clock-boot-carte-horloge-rtc-pcf8523-pour-raspberry-pico-3232100029606.html), le [Pico-DataLogger-Boot](https://shop.mchobby.be/fr/pico-rp2x/2912-carte-data-logger-pour-raspberry-pi-pico-3232100029125.html) 
+
+![Exemple d'horloge PCF8523](docs/_static/pcf8523_sample2.jpg)
+
+ainsi que la [PiRTC](https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html) et l'[Adafruit AdaLogger FeatherWing](https://shop.mchobby.be/fr/feather-adafruit/1056-adalogger-featherwing-rtc-pcf8523-microsd-3232100010567-adafruit.html).
 
 ![Exemple d'horloge PCF8523](docs/_static/pcf8523_sample.jpg)
 
@@ -64,27 +68,31 @@ Avant de pouvoir utiliser l'horloge RTC, il est nécessaire d'initialiser l'heur
 Le code suivant est issu de l'exemple [test_setdate.py](examples/test_setdate.py) .
 
 ```
-from machine import I2C
+from machine import I2C, Pin
 from pcf8523 import PCF8523
 import time
 
+DAY_NAMES = ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saterday', 'sunday' ]
+
 # PYBStick - S3=sda, S5=scl
 # Raspberry-Pi Pico - GP6=sda, GP7=scl
-i2c = I2C(1)
-rtc = PCF8523( i2c )
+i2c = I2C(1, sda=Pin(6), scl=Pin(7))
+pcf_rtc = PCF8523( i2c )
 
-# Year: 2020, month: 6, day: 22, hour: 0, min: 14, sec: 6, weekday: 0 (sunday), yearday: 174
-rtc.datetime = (2020, 6, 22, 0, 14, 6, 0, 174)
+# Year: 2020, month: 6, day: 22, hour: 0, min: 14, sec: 6, weekday: 0 (monday), yearday: 174
+# yearday can be set to 0 when setting the date... it will be recomputed
+pcf_rtc.datetime = (2020, 6, 22, 0, 0, 14, 6, 0)
+time.sleep(1)
 
-# Relire l'heure depuis la RTC
-_time = rtc.datetime
+# Reread as datetime
+print( "y/m/d weekday h:m:s.ms =>", pcf_rtc.datetime )
+
+# Reread as timestamp
+_time = pcf_rtc.timestamp
 print( "Time: %s secs" % _time )
 print( "Year: %s, month: %s, day: %s, hour: %s, min: %s, sec: %s, weekday: %s, yearday: %s" % time.localtime(_time) )
-
-# Lundi, mardi, ... dimanche
-days = ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saterday', 'sunday' ]
 weekday = time.localtime(_time)[6]
-print( 'Day of week: %s' % days[weekday] )
+print( 'Day of week: %s' % DAY_NAMES[weekday] )
 ```
 
 ## Lire l'heure
@@ -94,26 +102,26 @@ Le code suivant permet de lire l'heure stockée dans l'horloge.
 Voir le script [test_getdate.py](examples/test_getdate.py) .
 
 ```
-from machine import I2C
+from machine import I2C, Pin
 from pcf8523 import PCF8523
 import time
+DAY_NAMES = ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saterday', 'sunday' ]
 
 # PYBStick - S3=sda, S5=scl
 # Raspberry-Pi Pico - GP6=sda, GP7=scl
-i2c = I2C(1)
-rtc = PCF8523( i2c )
+i2c = I2C(1, sda=Pin(6), scl=Pin(7))
 
-# Le temps est un entier qui contient et incrémente le temps en secondes
-_time = rtc.datetime
+pcf_rtc = PCF8523( i2c )
+
+_dt = pcf_rtc.datetime
+print( "y/m/d weekday h:m:s.ms =>", _dt )
+print( "Day of Week:", DAY_NAMES[_dt[3]])
+
+_time = pcf_rtc.timestamp
 print( "Time: %s secs" % _time )
-# La fonction localtime() transforme le temps sous forme d'un tuple avec
-# annee, mois, jour, heure, min, .... )
 print( "Year: %s, month: %s, day: %s, hour: %s, min: %s, sec: %s, weekday: %s, yearday: %s" % time.localtime(_time) )
-
-# 0 = Lundi ... 6 = Dimanche
-days = ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saterday', 'sunday' ]
 weekday = time.localtime(_time)[6]
-print( 'Day of week: %s' % days[weekday] )
+print( 'Day of week: %s' % DAY_NAMES[weekday] )
 ```
 
 ## Test d'alarme
@@ -133,77 +141,92 @@ Le script [test_alarm.py](examples/test_alarm.py) repris ci-dessous indique comm
 
 Pour ne pas faire trop attendre l'utilisateur, le script déclenche l'alarme une minute après le démarrage du script
 ```
-from machine import I2C
+from machine import I2C, Pin
 from pcf8523 import PCF8523
 import time
 
 # PYBStick - S3=sda, S5=scl
 # Raspberry-Pi Pico - GP6=sda, GP7=scl
-i2c = I2C(1)
+i2c = I2C(1, sda=Pin(6), scl=Pin(7))
+
 rtc = PCF8523( i2c )
 
-# Obtenir l'heure courante
-now = rtc.datetime
+# Get the current datetime as timestamp
+now = rtc.timestamp
 print( "now   @ Year: %s, month: %s, day: %s, hour: %s, min: %s, sec: %s, weekday: %s, yearday: %s" % time.localtime(now) )
 
-# Calculer l'alarme 1 minute dans le future
+# Calculate Alarm 1 minute in the future
 alarm_time = now + 60
-alarm_tuple = time.localtime(alarm_time) # année, mois, jour, heure, min, sec, jour_de_le_semaine, jour_de_l_annee
+alarm_tuple = time.localtime(alarm_time) # Year, month, day, hour, min, sec, weekday, yearday
 alarm_minutes = alarm_tuple[4]
 
-# Activer l'alarme pour déclenchement toutes les heures et <alarm_min>
+# set the alarm for activerate every hour & <alarm_min>
 rtc.alarm_weekday( enable=False )
 rtc.alarm_day    ( enable=False )
 rtc.alarm_hour   ( enable=False )
 rtc.alarm_min( alarm_minutes, True )
 
-# Relecture de la configuration d'alarme
+# set the alarm for activerate every day at 6:30
+# rtc.alarm_weekday( enable=False )
+# rtc.alarm_day    ( enable=False )
+# rtc.alarm_hour   (  6, True )
+# rtc.alarm_min    ( 30, True )
+
+# set the alarm for activerate every monday at 8:00
+# rtc.alarm_weekday(  1, True ) # 0 = Sunday
+# rtc.alarm_day    ( enable=False )
+# rtc.alarm_hour   (  8, True )
+# rtc.alarm_min    (  0, True )
+
+# Re-read alarm setting
 print( "alarm_wday:", rtc.alarm_weekday() )
 print( "alarm_day :", rtc.alarm_day() )
 print( "alarm_hour:", rtc.alarm_hour() )
 print( "alarm_min :", rtc.alarm_min() )
 
+# Activate PCF8523 interrupt pin on alarm. Quite handy to wake-up a microcontroler
+#  Interrupt pin goes to 3.3V on alarm
+#rtc.alarm_interrupt = True
+
 counter = 0
 while True:
 	counter += 1
 	print('Testing alarm status, pass %i' % counter )
-	if rtc.alarm_status:            # Vérifier le statut de l'alarme
-		print( "Alarm catched!")      # Alarme capturee
+	if rtc.alarm_status:
+		print( "Alarm catched!")
 		print( "Tuuut Tuuut Tuuut Tuuut Tuuut Tuuut")
 		print( "Reset alarm status ")
-		rtc.alarm_status = False      # désactive l'alarme
-	time.sleep( 10 )                # attendre 10 secondes
+		rtc.alarm_status = False
+		break
+	time.sleep( 10 )
+
+
+print( "That s all Folks!" )
 ```
 
 Ce qui affiche les messages suivants:
 
 ```
-MicroPython v1.12-256-geae495a-dirty on 2020-03-18; PYBSTICK26_LITE with STM32F411CE
-Type "help()" for more information.
->>>
->>> import test_alarm
-now   @ Year: 2020, month: 6, day: 22, hour: 8, min: 10, sec: 11, weekday: 0, yearday: 174
-alarm_wday: (2, False)
-alarm_day : (13, False)
-alarm_hour: (2, False)
-alarm_min : (11, True)
+$ mpremote run examples/test_alarm.py 
+now   @ Year: 2026, month: 7, day: 30, hour: 1, min: 29, sec: 42, weekday: 3, yearday: 211
+alarm_wday: (0, False)
+alarm_day : (0, False)
+alarm_hour: (0, False)
+alarm_min : (30, True)
 Testing alarm status, pass 1
 Testing alarm status, pass 2
 Testing alarm status, pass 3
-Testing alarm status, pass 4
-Testing alarm status, pass 5
-Testing alarm status, pass 6
 Alarm catched!
 Tuuut Tuuut Tuuut Tuuut Tuuut Tuuut
-Reset alarm status
-Testing alarm status, pass 7
-
-...
+Reset alarm status 
+That s all Folks!
 ```
 
 __Remarque:__ il est possible d'activer l'interruption sur alarme avec l'instruction `rtc.alarm_interrupt = True` .
 
 # Où acheter
+* [Pico-Clock-Boot](https://shop.mchobby.be/fr/pico-rp2x/2960-pico-clock-boot-carte-horloge-rtc-pcf8523-pour-raspberry-pico-3232100029606.html) pour Raspberry-Pi Pico
+* [Pico-DataLogger-Boot](https://shop.mchobby.be/fr/pico-rp2x/2912-carte-data-logger-pour-raspberry-pi-pico-3232100029125.html) pour Raspberry-Pi Pico
 * [Carte PYBStick](https://shop.mchobby.be/fr/recherche?controller=search&orderby=position&orderway=desc&search_query=pybstick&submit_search=)
 * [Carte Raspberry-Pi Pico](https://shop.mchobby.be/fr/157-pico-rp2040)
 * [PiRTC (PCF8523)](https://shop.mchobby.be/fr/pi-extensions/1148-pirtc-pcf8523-real-time-clock-for-raspberry-pi-3232100011489-adafruit.html) @ MC Hobby

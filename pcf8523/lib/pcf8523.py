@@ -3,7 +3,9 @@
 # Copyright (c) 2016 Philip R. Moyer and Radomir Dopieralski for Adafruit Industries.
 #
 """ PCF8523 Real Time Clock (RTC) module for MicroPython
-
+jul, 2026 Meurisse D. for MCHooby (shop.mchobby.be) - Now use 24H mode 
+													- datetime now returns datetime tuple (y,m,d,weekday,hh,mm,ss,ms)
+													- timestamp return Unix TimeStamps (in seconds)
 Jun. 2020 Meurisse D. for MCHobby (shop.mchobby.be) - backport to MicroPython
 Nov. 2016 Philip R. Moyer and Radomir Dopieralski for Adafruit Industries - original version for CircuitPython
 
@@ -12,7 +14,7 @@ Nov. 2016 Philip R. Moyer and Radomir Dopieralski for Adafruit Industries - orig
 - based on https://github.com/adafruit/Adafruit_CircuitPython_PCF8523.git
 """
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __repo__ = "https://github.com/mchobby/esp8266-upy/tree/master/pcf8523"
 
 import time
@@ -61,8 +63,51 @@ class PCF8523:
 
 	def soft_reset(self):
 		self.buf1 = bytearray(1)
-		self.buf1[0] = 0x58
+		self.buf1[0] = 0xB0 # Adafruit 0x58
 		self.i2c.writeto_mem(self.address, CONTROL_1_REG, self.buf1) # writes 0x58 to address 0x00 to reset the chip
+
+	@property
+	def datetime( self ):
+		# Returns microPython datetime tuple (year, month, day, weekday, hour, minute, second, ms) <<<--- the one returned!
+		self.buf1[0] = RTC_REG
+		self.i2c.writeto( self.address, self.buf1 )
+		self.i2c.readfrom_into( self.address, self.buf7 )
+		# CircuitPython struct_time (tm_year=1999, tm_mon=12, tm_mday=31, tm_hour=17, tm_min=4, tm_sec=58, tm_wday=4, tm_yday=365, tm_isdst=0)
+		# MicroPython mktime (year, month, mday, hour, minute, second, weekday, yearday) 
+		# MicroPython datetime tuple (year, month, day, weekday, hour, minute, second, ms) <<<--- the one returned!
+		return (
+				_bcd2bin(self.buf7[6]) + 2000, # Year
+				_bcd2bin(self.buf7[5] & 0x1F), # Month
+				_bcd2bin(self.buf7[3] & 0x3F), # Day 
+				_bcd2bin(self.buf7[4] & 0x07), # WeekDay (0..6)
+				_bcd2bin(self.buf7[2] & 0x3F), # Hours 
+				_bcd2bin(self.buf7[1] & 0x7F), # Minutes
+				_bcd2bin(self.buf7[0] & 0x7F), # Seconds 
+				0 # ms
+			   )
+
+	@datetime.setter
+	def datetime( self, value ):
+		assert isinstance(value,tuple) and len(value)>=8, "parameter must datetime tuple (y,m,d,weekday,hh,mm,ss,ms)"
+		y,m,d = value[0], value[1], value[2]
+		weekday = value[3] # can be 0
+		hh,mm,ss = value[4],value[5],value[6]
+		ms = value[7] # Can be 0!
+		self.buf1[0] = RTC_REG
+		self.i2c.writeto( self.address, self.buf1 )
+		self.i2c.readfrom_into( self.address, self.buf7 )
+
+		self.buf7[0] = _bin2bcd(ss) & 0x7F  # tm_sec format conversions
+		self.buf7[1] = _bin2bcd(mm) & 0x7F # tm_min
+		self.buf7[2] = _bin2bcd(hh) & 0x3F # tm_hour in 24H mode
+		self.buf7[3] = _bin2bcd(d)  & 0x3F # tm_day		
+		self.buf7[4] = _bin2bcd(weekday) & 0x07 # tm_mday 
+		self.buf7[5] = _bin2bcd(m)  & 0x1F # tm_mon
+		self.buf7[6] = _bin2bcd(y-2000)    # tm_year
+
+		self.i2c.writeto_mem( self.address, RTC_REG, self.buf7 )
+
+
 
 	def _read_datetime( self, time_reg ):
 		"""Gets the date and time from a given register location (0x03 for RTC, 0x0A for alarm )."""
@@ -103,12 +148,12 @@ class PCF8523:
 		self.i2c.writeto_mem( self.address, time_reg, self.buf7 )
 
 	@property
-	def datetime(self):
+	def timestamp(self):
 		"""Gets or Set the current date and time then starts the clock."""
 		return self._read_datetime( RTC_REG )
 
-	@datetime.setter
-	def datetime(self, value ):
+	@timestamp.setter
+	def timestamp(self, value ):
 		""" set the current time from the tuple (year, month, mday, hour, minute, second, weekday, yearday) """
 		# Automatically sets lost_power to false.
 		self.power_management = STANDARD_BATTERY_SWITCHOVER_AND_DETECTION

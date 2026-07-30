@@ -6,13 +6,13 @@
 
 """
 
-from machine import I2C
+from machine import I2C, Pin
 from pcf8523 import PCF8523
 import time
 
 # PYBStick - S3=sda, S5=scl
 # Raspberry-Pi Pico - GP6=sda, GP7=scl
-i2c = I2C(1)
+i2c = I2C(1, sda=Pin(6), scl=Pin(7))
 
 rtc = PCF8523( i2c )
 
