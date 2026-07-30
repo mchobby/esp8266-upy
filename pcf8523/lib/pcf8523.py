@@ -52,6 +52,7 @@ class PCF8523:
 		# changed.
 		self.retries = 2
 		while self.retries > 0:
+			# Check Tmr_B_freq_ctrl register
 			self.buf1[0] = 0x12
 			self.i2c.writeto( self.address, self.buf1 )
 			self.i2c.readfrom_into( self.address, self.buf1 )
@@ -62,9 +63,11 @@ class PCF8523:
 			self.retries -= 1
 
 	def soft_reset(self):
+		#print("soft_reset")
 		self.buf1 = bytearray(1)
-		self.buf1[0] = 0xB0 # Adafruit 0x58
+		self.buf1[0] = 0x90 # 24H Mode, 12Pf load. .Adafruit 0x58
 		self.i2c.writeto_mem(self.address, CONTROL_1_REG, self.buf1) # writes 0x58 to address 0x00 to reset the chip
+		self.power_management = 0b000 # Switch over mode setting ,prùam ùpde
 
 	@property
 	def datetime( self ):

@@ -33,6 +33,7 @@ print( " " )
 print( " " )
 
 print( "Write MCU time to PCF8523 RTC...")
+pcf_rtc.soft_reset() # Force reset and minimal configuration
 # PCF8523 time setting must also follow the datetime tuple format
 #    (y,m,d,weekday,hh,mm,ss,ms)
 # 	 weekday & ms can be set to 0 when setting the date... it will be recomputed
