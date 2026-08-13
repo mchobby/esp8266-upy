@@ -10,5 +10,5 @@
     ["icons8.py", "github:mchobby/esp8266-upy/FBGFX/lib/icons8.py"],
     ["icontls.py", "github:mchobby/esp8266-upy/FBGFX/lib/icontls.py"]
   ],
-  "version": "0.4"
+  "version": "0.5"
 }

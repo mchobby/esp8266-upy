@@ -5,6 +5,7 @@ This section contains class and exemple used to manipulates FrameBuffer.
 
 * __[fbutil.py](lib/fbutil.py)__ :  circle, fill_circle, oval, fill_oval, rrect, fill_rrect, etc. Example: [here](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil)
 * __[fbtext.py](lib/fbtext.py)__, __[fontdef.py](lib/fontdef.py)__, __[font8x4.py](lib/font8x4.py)__, __[font5x4.py](lib/font5x4.py)__ : font compacte pour écran de petite taille.
+* [Optional fonts](lib-optional/) definition with a font-compiler written in Python.
 * __[fbdigit.py](lib/fbdigit.py)__ :  draw large numeric digit on a FrameBuffer.
 * __[icon.py](lib/icon.py)__ :  5x5 icons definition from Micro:bit (coming from sense-hat sub-project).
 * __[icons8.py](lib/icons8.py)__ :  8x8 icons definition looking like Micro:bit's one.

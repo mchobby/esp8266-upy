@@ -5,6 +5,7 @@ Cette section contient des classes et exemples permettant manipuler le contenu d
 
 * __[fbutil.py](lib/fbutil.py)__ :  circle, fill_circle, oval, fill_oval, rrect, fill_rrect, etc. Exemple: [ici](https://github.com/mchobby/esp8266-upy/tree/master/ili934x/examples/fbutil)
 * __[fbtext.py](lib/fbtext.py)__, __[fontdef.py](lib/fontdef.py)__, __[font8x4.py](lib/font8x4.py)__, __[font5x4.py](lib/font5x4.py)__ : fonts compactes pour écran de petite taille.
+* [Fonts optionnelles](lib-optional/) definition avec un compilateur de font écrit en Python.
 * __[fbdigit.py](lib/fbdigit.py)__ :  dessine de grands digits dans un FrameBuffer.
 * __[icons.py](lib/icons.py)__ :  définition d'icone du Micro:bit en 5x5 (provient du projet sense-hat).
 * __[icons8.py](lib/icons8.py)__ :  définition d'icones style Micro:bit en 8x8 pixels.

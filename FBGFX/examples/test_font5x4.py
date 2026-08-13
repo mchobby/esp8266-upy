@@ -2,7 +2,9 @@
 
   DFRobot DFR0487 : Manipulate pixels on the display
 
-* Repo: https://github.com/mchobbyMCHobby/esp8266-upy/ht1632c.git
+* Font Repo: https://github.com/mchobby/esp8266-upy/tree/master/FBGFX
+* HT1632C Repo: https://github.com/mchobby/esp8266-upy/tree/master/ht1632c
+
 * Author: Meurisse Dominique for MCHobby SPRL
 """
 from machine import Pin

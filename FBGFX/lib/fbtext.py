@@ -8,9 +8,8 @@
 #
 import framebuf
 
-___version__ = "0.1.0"
+___version__ = "0.2.0"
 __repo__ = "https://github.com/mchobbyMCHobby/esp8266-upy/FBGFX.git"
-
 
 class FBText:
 	""" FrameBuffer Text drawer """
@@ -26,6 +25,7 @@ class FBText:
 
 	def text( self, s, x, y, c ):
 		""" Draw text s at position (x,y) in the FrameBuffer with color c """
+		bg = 0 if c else 1
 		curr_x = x
 		i = 0
 		currchar = 0
@@ -45,19 +45,34 @@ class FBText:
 			if curr_x >= self.w_fb:
 				break
 			
-			chr_width = self.font.char_width(currchar)
+			chr_width = self.font.char_width(currchar) # In Pixels
 			if(curr_x + chr_width + self.font.gutter_space) >= 0:
 
 				_offset = self.font.char_offset(currchar)
-				for j in range(chr_width):
-					_v = self.font.data[_offset+j]
-					for k in range(self.font.h):
-						self.target_fb.pixel( curr_x+j, y+k, 1 if (_v & (1<<(8-1-k)))>0 else 0  )
+				_char_width = self.font.char_width(currchar)
+
+				iCol = 0 # Col in the drawed char 
+				iRow = 0 # Row in the drawed char
+				while True:
+					# draw Pixel (char is drawed Column per Column)
+					self.target_fb.pixel( curr_x+iCol, y+iRow, c if (self.font.data[_offset] & (1<<(7-(iRow%8))))>0 else bg  )
+					# Next Pixel to draw (colum per column)
+					iRow += 1
+					# Next column ?
+					if iRow==self.font.h:
+						iCol += 1
+						iRow = 0
+						_offset += 1
+						# The end ?
+						if iCol>=_char_width:
+							break 
+					if iRow==8:
+						_offset+=1
+					elif iRow==16:
+						_offset+=1
+					elif iRow==24:
+						raise Exception( "%s limited to 24 pixel height max!" % self.__class__.__name__)
 					
-				_v = self.font.data[0]
-				for j in range( self.font.gutter_space ):
-					for k in range(self.font.h):
-						self.target_fb.pixel( curr_x+chr_width+j, y+k, 1 if (_v & (1<<(8-1-k)))>0 else 0  )
 			
 			curr_x += (chr_width + self.font.gutter_space)			
 			i += 1

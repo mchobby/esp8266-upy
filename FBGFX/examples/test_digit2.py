@@ -1,9 +1,10 @@
-# FrameBuffer Digit Blitter - draw time onto a target FrameBuffer of a SH1106 display
-#
-# See GitHub: https://github.com/mchobby/esp8266-upy/tree/master/FBGFX
-#
-# Author: Meurisse Dominique
-#
+""" FrameBuffer Digit Blitter - draw time onto a target FrameBuffer of a SH1106 display
+
+ FBDigit repo: https://github.com/mchobby/esp8266-upy/tree/master/FBGFX
+ SH1106 OLED repo: https://github.com/mchobby/SH1106
+
+ Author: Meurisse Dominique
+"""
 import time
 from sh1106 import SH1106_I2C
 from machine import SPI, I2C, Pin, RTC
@@ -16,8 +17,8 @@ rtc = RTC()
 digi = DigitBlitter2538Mono( lcd, format=framebuf.MONO_VLSB ) # use framebuf.MONO_HMSB if 90° rotation
 while True:
 	dt = rtc.datetime()
-        lcd.fill(0)
-        digi.blit_time( 0, 0, dt[4], dt[5], colon=(dt[6]%2)==0 ) # hh, mm
-        lcd.show()
-        time.sleep(1)
+	lcd.fill(0)
+	digi.blit_time( 0, 0, dt[4], dt[5], colon=(dt[6]%2)==0 ) # hh, mm
+	lcd.show()
+	time.sleep(1)
 

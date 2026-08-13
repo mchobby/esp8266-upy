@@ -7,12 +7,16 @@
 # * Author: Meurisse Dominique
 #
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 class FontDef:
 	# Base class for the various founds
 	__slots__ = ('h','w', 'data', 'data_end', 'gutter_space')
 
+	@property
+	def bytes_per_column(self):
+		# Number of bytes used to encode a char column
+		return (self.font.h >> 3) + (1 if (self.h & 0b111)>0 else 0)
 
 	def char_index( self, ch ):
 		""" retreibe char_index for a given char OTHERWISE None """		
@@ -23,13 +27,13 @@ class FontDef:
 
 		if (_r<0) or (_r>=64): # Unknown ?
 			return None
+		#print( "char_index for %s = %s" % (chr(ch),_r) )
 		return _r
 
 	def char_width( self, char_index ):
-		bytesPerColumn = (self.h >> 3) + (1 if (self.h & 0b111)>0 else 0) 
-
+		bytesPerColumn = (self.h >> 3) + (1 if (self.h & 0b111)>0 else 0) 		
 		if char_index==0:
-			return self.data_end[0]
+			return self.data_end[0]//bytesPerColumn
 		
 		return (self.data_end[char_index] - self.data_end[char_index-1])//bytesPerColumn
 
@@ -38,7 +42,6 @@ class FontDef:
 		""" Offset of data for the char_index """
 		if char_index == 0:
 			return 0
-	
 		return self.data_end[char_index - 1]
 
 	def text_width( self, s ):
