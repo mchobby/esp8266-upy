@@ -60,6 +60,17 @@ Les exemples [test_font8x4.py](examples/test_font8x4.py) et [test_font5x4.py](ex
 
 Voir les [exemples disponibles pour le pilote HT1632C](https://github.com/mchobby/esp8266-upy/tree/master/ht1632c) .
 
+Les Fonts peuvent aussi être utilisées avec des écrans graphiques comme le démontre  les exemples [test_font8x4_SH1106.py](examples/test_font8x4_SH1106.py) et [test_braille24x24_SH1106.py](examples/test_braille24x24_SH1106.py). 
+
+**Fonts:**
+
+Voici quelque-unes des Fonts disponibles.
+
+![font5x4](docs/_static/font5x4.jpg) ![font8x4](docs/_static/font8x4.jpg)
+![Font14x14-00](docs/_static/Font14x14-00.jpg) ![Font14x14](docs/_static/Font14x14-01.jpg) 
+![Digit24x24](docs/_static/Digit24x24-00.jpg) ![Digit24x24](docs/_static/Digit24x24-01.jpg)
+![Braille24x24](docs/_static/braille24x24.jpg) 
+
 
 # Tester fbdigit
 

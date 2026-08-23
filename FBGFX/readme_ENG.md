@@ -62,6 +62,18 @@ The [test_font8x4.py](examples/test_font8x4.py) and [test_font5x4.py](examples/t
 
 See the [available examples in the HT1632C driver](https://github.com/mchobby/esp8266-upy/tree/master/ht1632c) .
 
+The Fonts can also be used with graphical display like shown on the  [test_font8x4_SH1106.py](examples/test_font8x4_SH1106.py) and [test_braille24x24_SH1106.py](examples/test_braille24x24_SH1106.py) examples. 
+
+**Fonts:**
+
+Here some examples of the Fonts availables.
+
+![font5x4](docs/_static/font5x4.jpg) ![font8x4](docs/_static/font8x4.jpg)
+![Font14x14-00](docs/_static/Font14x14-00.jpg) ![Font14x14](docs/_static/Font14x14-01.jpg) 
+![Digit24x24](docs/_static/Digit24x24-00.jpg) ![Digit24x24](docs/_static/Digit24x24-01.jpg)
+![Braille24x24](docs/_static/braille24x24.jpg) 
+
+
 # fbdigit test
 
 The [test_digit1.py](examples/test_digit1.py) example shows how to display a 25x38 digit on an Oled display (128x64).
