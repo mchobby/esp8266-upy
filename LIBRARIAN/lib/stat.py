@@ -1,6 +1,6 @@
 from math import sqrt 
 
-__version__ = '0.2.0'
+__version__ = '0.3.0'
 
 class Statistic():
 	""" Calculation of min, max, mean, variance, std_dev, unbiased std_dev of 
@@ -85,7 +85,8 @@ class Statistic():
 		_store = self._sum_high + self._sum_low
 		_store *= _store
 		_store = (self._ssq_high + self._ssq_low) - (_store / self._count)
-		return sqrt( _store / self._count)
+		# return sqrt( _store / self._count)
+		return sqrt( abs(_store) / self._count)
 
 	@property
 	def unbiased_std_dev( self ):
@@ -111,10 +112,11 @@ class BufferedStatistic( Statistic ):
 	def append( self, value ):
 		self.buffer.append( value )
 		super().append( value )
+
 		
-class Damper():
-    """ Damper will calculate the mean of the N last values pushed
-        in the Damper """
+class RingStatistic():
+    """ Will calculate the statistic on the N last values pushed in the Ring Buffer.
+        When the Ring Buffer is full, it restart the filling from the begin of the ring """
     def __init__( self, length ):
         self.lst = list( [None]*length )
         self.imaxpos = length-1 # Max cursor position
@@ -143,4 +145,41 @@ class Damper():
         s = sum( [v for v in self.lst if v!=None] )
         return s/self.ilength
 
+    @property
+    def std_dev( self ):
+    	stat = Statistic()
+    	for v in self.lst:
+    		if v!=None :
+    			stat.append(v) 
+    	if stat.count<0:
+    		return 0
+    	return stat.std_dev
 
+    @property
+    def buffer( self ):
+    	return self.lst
+
+def linear_regression(x, y):
+	""" Calculate a linear regression for collection of points X,y .
+		x is a list of X abciss values.
+		y is a list of Y ordinate values.
+
+		Returns (m,b) for y = m * x + b """
+	n = len(x)
+
+	assert n>0, "Empty list is invalid!"
+	assert n==len(y), "Same size lists required!"
+
+	# Calculate means
+	mean_x = sum(x) / n
+	mean_y = sum(y) / n
+
+	# Calculate numerator and denominator for slope (m)
+	numerator = sum((x[i] - mean_x) * (y[i] - mean_y) for i in range(n))
+	denominator = sum((x[i] - mean_x) ** 2 for i in range(n))
+
+	# Calculate slope and intercept
+	m = numerator / denominator
+	b = mean_y - m * mean_x
+
+	return m, b
