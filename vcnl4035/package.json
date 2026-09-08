@@ -1,0 +1,10 @@
+{
+  "urls": [
+    ["vcnl4035.py", "github:mchobby/esp8266-upy/vcnl4035/lib/vcnl4035.py"],
+    ["vcnlapp.py", "github:mchobby/esp8266-upy/vcnl4035/lib/vcnlapp.py"],
+    ["vcnldefs.py", "github:mchobby/esp8266-upy/vcnl4035/lib/vcnldefs.py"],
+    ["stat.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/stat.py"],
+    ["timetls.py", "github:mchobby/esp8266-upy/LIBRARIAN/lib/timetls.py"]
+  ],
+  "version": "1.0"
+}
