@@ -79,6 +79,11 @@ To understand examples, it is important to understand the ZX coordinates.
 
 ![vcnl4035 ZX axis](docs/_static/vcnl4035-ZX-axis.jpg)
 
+# Limitation
+
+* Support for switching between modes Proximity Sensor & Ambient Light Sensor.
+* Implement low power mode in VCNL App.
+
 # Shopping list
 
 * [VCNL40035 breakout](https://shop.mchobby.be/fr/proximite-distance/2878-vcnl4035-capteur-de-proximite-et-gesture-3232100028784-mchobby.html) is available at MCHobby

@@ -36,6 +36,9 @@ class VCNL4035():
 		# Proximity/Gesture Mode Settings
 		self.gesture_mode = ps_settings_t() # default are zeroed (0)
 		self.ps_mode = ps_settings_t() # default are zeroed (0)
+		self.als_mode = als_settings_t() # Configuration for Ambiant Light Sensor
+		self.mode = None	
+		self.settings = None # Reference to the current mode settings	
 
 
 		# Gesture Mode Default Settings
@@ -62,22 +65,35 @@ class VCNL4035():
 		self.ps_mode.ps_thdl = 15
 		self.ps_mode.ps_thdh = 50
 
+		# Ambiant Light Default Settings
+		self.als_mode.als_conf_1.als_hd = VCNL4035_ALS_HD.ALS_HD_X1 # typical dynamic range
+		self.als_mode.als_conf_1.als_it = VCNL4035_ALS_IT.ALS_IT_100ms # Integration time 
+		self.als_mode.als_conf_2.als_ns = VCNL4035_ALS_NS.ALS_NS_X1 # Typical sensitivity 
+		self.als_mode.als_conf_2.white_sd = VCNL4035_ALS_WHITE_SD.ALS_WHITE_SHUTDOWN # White channel (power off by default)
+		self.als_mode.als_thdl = 0 # uint16, Low Treshold
+		self.als_mode.als_thdh = 0xffff # uint16, High Treshold 
+		self.als_lux_ratio = self.__compute_lux_ratio( self.als_mode.als_conf_1.als_it )
+		
 		self.init( mode )
 
 	def init( self, mode ):
 		""" configure the remote component.
 		    :param mode: one of VCNL4035_MODES.xxx constant  """
 		# Equivalent of void init( lide )
+		self.mode = mode
 		if mode==VCNL4035_MODES.GESTURE:
 			#self.__setGestureMode()
+			self.settings = self.gesture_mode
 			self.__updatePsSettings(self.gesture_mode)
 		elif mode==VCNL4035_MODES.PROXIMITY:
-			#self.__setPSMode()
+			#self.__setPSMode()			
+			self.settings = self.ps_mode
 			self.__updatePsSettings(self.ps_mode)
 		else:
 			# AMBIENT_LIGHT_SENSOR
 			#self.setPSMode()
-			self.__updatePsSettings(self.ps_mode)
+			self.settings = self.als_mode
+			self.__updateAlsSettings(self.als_mode)
 
 	def write_reg( self, reg, low_byte, high_byte ):
 		self.buf2[0]=low_byte
@@ -112,7 +128,37 @@ class VCNL4035():
 		# Update register
 		self.write_reg( reg, low, high )
 
+	def __compute_lux_ratio( self, als_it ):
+		if als_it==VCNL4035_ALS_IT.ALS_IT_50ms :
+			return 0.064
+		elif als_it==VCNL4035_ALS_IT.ALS_IT_100ms :
+			return 0.032
+		elif als_it==VCNL4035_ALS_IT.ALS_IT_200ms :
+			return 0.016
+		elif als_it==VCNL4035_ALS_IT.ALS_IT_400ms :
+			return 0.008
+		elif als_it in (VCNL4035_ALS_IT.ALS_IT_500ms, VCNL4035_ALS_IT.ALS_IT_600ms, VCNL4035_ALS_IT.ALS_IT_700ms, VCNL4035_ALS_IT.ALS_IT_800ms ):
+			return 0.004 # from 500 to 800
+		else:
+			raise ValueError( "Invalid integration time %s" % als_it )
+
+	def __compute_lux_range( self, als_it ):
+		if als_it==VCNL4035_ALS_IT.ALS_IT_50ms :
+			return 4192
+		elif als_it==VCNL4035_ALS_IT.ALS_IT_100ms :
+			return 2096
+		elif als_it==VCNL4035_ALS_IT.ALS_IT_200ms :
+			return 1048
+		elif als_it==VCNL4035_ALS_IT.ALS_IT_400ms :
+			return 524
+		elif als_it in (VCNL4035_ALS_IT.ALS_IT_500ms, VCNL4035_ALS_IT.ALS_IT_600ms, VCNL4035_ALS_IT.ALS_IT_700ms, VCNL4035_ALS_IT.ALS_IT_800ms ):
+			return 262 # from 500 to 800
+		else:
+			raise ValueError( "Invalid integration time %s" % als_it )
+
+
 	def __updatePsSettings( self, _set ):
+		# Update the VCNL4035 settings for Proximity Sensinng
 		# :param _set: ps_setting_t
 
 		# PS_CONF_1 (all uint8)
@@ -161,11 +207,42 @@ class VCNL4035():
 		self.write_reg(PS_CONF_1_2, ps_conf_1, ps_conf_2)
 		self.write_reg(PS_CONF_3_MS, ps_conf_3, ps_ms)
 
+	def __updateAlsSettings( self, _set ):
+		# Update the VCNL4035 settings for Ambiant Light Sensinng
+		# :param _set: als_setting_t
+		als_sd   = _set.als_conf_1.als_sd << VCNL4035_ALS_CONF1.ALS_SD
+		als_int_en = _set.als_conf_1.als_int_en << VCNL4035_ALS_CONF1.ALS_INT_EN
+		als_pers = _set.als_conf_1.als_pers << VCNL4035_ALS_CONF1.ALS_PERS # Interrupt Persistance
+		als_hd   = _set.als_conf_1.als_hd << VCNL4035_ALS_CONF1.ALS_HD # typical dynamic range
+		als_it   = _set.als_conf_1.als_it << VCNL4035_ALS_CONF1.ALS_IT
+		als_conf_1 = als_sd + als_int_en + als_pers + als_hd + als_it 
+
+		white_sd = _set.als_conf_2.white_sd << VCNL4035_ALS_CONF2.WHITE_SD # White channel (power off by default)
+		als_ns = _set.als_conf_2.als_ns << VCNL4035_ALS_CONF2.ALS_NS # Typical sensitivity 
+		als_conf_2 = white_sd + als_ns 
+
+		# PS_THDL (all uint8)
+		als_thdl_l = _set.als_thdl & 0xff
+		als_thdl_m = _set.als_thdl >> 8
+
+		# PS_THDH (all uint8)
+		als_thdh_l = _set.als_thdh & 0xff
+		als_thdh_m = _set.als_thdh >> 8
+
+		self.write_reg(ALS_THDL_L_M, als_thdl_l, als_thdl_m)
+		self.write_reg(ALS_THDH_L_M, als_thdh_l, als_thdh_m)
+		self.write_reg(ALS_CONF_1_2, als_conf_1, als_conf_2)
+
+
 	# High level read functions
 	def read_data(self):
-		# Read the Proximity Sensor data (3x uint16)
-		self.i2c.readfrom_into( self.addr, self.buf6 )
-		return struct.unpack( "<HHH", self.buf6 )
+		if self.mode == VCNL4035_MODES.AMBIENT_LIGHT:
+			# Read the Ambiant Light sensor
+			return self.read_reg( ALS_DATA_REG )			
+		else:
+			# Read the Proximity Sensor data (3x uint16)
+			self.i2c.readfrom_into( self.addr, self.buf6 )
+			return struct.unpack( "<HHH", self.buf6 )
 
 	# Make the functions bellow in the .cpp file
 	# uint16_t readPS1Data();
@@ -176,6 +253,25 @@ class VCNL4035():
 	def version(self):
 		# return uint16_t
 		return self.read_reg( VISHAY_VERSION_REG )
+
+	@property
+	def lux(self):
+		if self.mode != VCNL4035_MODES.AMBIENT_LIGHT:
+			raise TypeError( "Not in AMBIENT_LIGHT mode" )
+		cnt = self.read_data() # uint16
+		mul_hd = 1 if self.settings.als_conf_1.als_hd==VCNL4035_ALS_HD.ALS_HD_X1 else 2
+		mul_ns = 1 if self.settings.als_conf_2.als_ns==VCNL4035_ALS_NS.ALS_NS_X1 else 2
+		return self.als_lux_ratio * cnt / (mul_hd*mul_ns)
+
+	@property
+	def lux_range( self ):
+		if self.mode != VCNL4035_MODES.AMBIENT_LIGHT:
+			raise TypeError( "Not in AMBIENT_LIGHT mode" )
+		mul_hd = 1 if self.settings.als_conf_1.als_hd==VCNL4035_ALS_HD.ALS_HD_X1 else 2
+		mul_ns = 1 if self.settings.als_conf_2.als_ns==VCNL4035_ALS_NS.ALS_NS_X1 else 2
+		lux_range = self.__compute_lux_range(self.settings.als_conf_1.als_it)
+		return lux_range*mul_hd*mul_ns
+	
 
 	def read_int_flags(self):
 		""" Read interrupt flags and clear them (unit8, see INT_Flag in datasheet) """
@@ -189,7 +285,22 @@ class VCNL4035():
 		# bit 0: PS_IF_AWAY, PS drops below PS_THDL INT trigger event
 		return self.read_reg( RES_INT_FLAGS )>>8
 
-	# High level write functions
+	# Ambient Light Sensor : High level write functions
+	def set_als_sensitivity( self, als_ns ):
+		self.write_reg_bits( ALS_CONF_1_2, H_BYTE, VCNL4035_ALS_CONF2.ALS_NS, VCNL4035_ALS_CONF2.ALS_NS, als_ns )
+		self.als_mode.als_conf_2.als_ns = als_ns
+		
+	def set_als_dynamic_range( self, als_hd ):
+		self.write_reg_bits( ALS_CONF_1_2, L_BYTE, VCNL4035_ALS_CONF1.ALS_HD, VCNL4035_ALS_CONF1.ALS_HD, als_hd )
+		self.als_mode.als_conf_1.als_hd = als_hd
+
+	def set_als_integration( self, als_it ):
+		self.write_reg_bits( ALS_CONF_1_2, L_BYTE, VCNL4035_ALS_CONF1.ALS_IT, VCNL4035_ALS_CONF1.ALS_IT+2, als_it )
+		self.als_mode.als_conf_1.als_it = als_it
+		self.als_lux_ratio = self.__compute_lux_ratio( self.als_mode.als_conf_1.als_it )
+		
+
+	# Proximity Sensor : High level write functions
 	def set_ps_integration_time(self, int_time): 
 		""" :param int_time: see VCNL4035_PS_IT constants """
 		self.write_reg_bits( PS_CONF_1_2, L_BYTE, VCNL4035_PS_CONF_1.PS_IT_START, VCNL4035_PS_CONF_1.PS_IT_END, int_time )
