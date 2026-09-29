@@ -41,7 +41,7 @@ class MCP():
     def _validate_pin(self, pin):
         """Promoted to mcp implementation from prior Adafruit GPIO superclass"""
         # Raise an exception if pin is outside the range of allowed values.
-        if pin < 0 or pin >= self.NUM_GPIO:
+        if pin < 0 or pin > self.NUM_GPIO:
             raise ValueError('Invalid GPIO value, must be between 0 and {0}.'.format(self.NUM_GPIO))
 
     def writeList(self, register, data):
