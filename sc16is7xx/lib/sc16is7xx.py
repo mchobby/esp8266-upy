@@ -231,7 +231,7 @@ class UartAdapter():
 		if 'timeout' in kwargs:
 			self.timeout = kwargs['timeout']
 		if 'timeout_char' in kwargs:
-			self.timeout = kwargs['timeout_char']
+			self.timeout_char = kwargs['timeout_char']
 
 		# The divider devices the clock frequency to 16x the baud rate
 		_div = int(self.owner.oscillator_hz / (self.baudrate * 16))
@@ -563,6 +563,32 @@ class UartAdapter():
 				break
 		return _r
 
+
+	def readline( self ):
+		""" UART.readline() """
+		self.__start = time.ticks_ms()
+		self.__last_char = None
+		_r = bytearray() # readed bytes
+		while True:
+			if self.__start==None:
+				self.__start = time.ticks_ms()
+			elif time.ticks_diff(time.ticks_ms(),self.__start)>self.timeout:
+				break
+			icount = self.owner.bus_wrapper.read_reg( REG_RXLVL, self.ch ) & 0x7F
+			for i in range(icount):
+				by = self.owner.bus_wrapper.read_fifo( self.ch, 1 )				
+				_r.append( by[0] )
+				if by[0]==10: # \n
+					return _r
+				self.__last_char = time.ticks_ms()				
+			# next char timeout
+			if ( self.__last_char!=None ) and ( time.ticks_diff( time.ticks_ms(), self.__last_char ) > self.timeout_char ):
+				break
+		# return result
+		if len(_r)==0:
+			return None
+		return _r
+		
 
 	def readinto( self, buf, nbytes=None ):
 		""" UART.readinto( buf, nbytes=None ) """

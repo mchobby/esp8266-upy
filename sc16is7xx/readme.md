@@ -45,6 +45,24 @@ Advanced functions are:
 * __fush()__ : wait all the data to be sent.
 * __sendbreak()__ : send a break condition on the TX line.
 
+## Readline
+
+The example use a GPS Ultimate to grab data lines emited by the GPS receiver.
+
+The [test_sc16is740_readline.py](examples/spi/test_sc16is740_readline.py) examples shows how to use the UART's `readline` method. Readline returns a `bytearray` object displayed as it and also converted to string.
+
+Here follows an excerpt of the output as stored into [test_sc16is740_readline.result](examples/spi/test_sc16is740_readline.result) .
+
+```
+bytearray(b'$GPGGA,004212.000,5041.4423,N,00424.0377,E,1,03,3.20,102.6,M,47.4,M,,*69\r\n')
+$GPGGA,004212.000,5041.4423,N,00424.0377,E,1,03,3.20,102.6,M,47.4,M,,*69
+
+bytearray(b'$GPGSA,A,2,08,02,10,,,,,,,,,,3.35,3.20,1.00*0D\r\n')
+$GPGSA,A,2,08,02,10,,,,,,,,,,3.35,3.20,1.00*0D
+
+bytearray(b'$GPGSV,1,1,03,08,73,193,35,02,68,285,30,10,42,054,31*4F\r\n')
+$GPGSV,1,1,03,08,73,193,35,02,68,285,30,10,42,054,31*4F
+```
 
 ## Extra
 
