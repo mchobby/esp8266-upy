@@ -1,6 +1,7 @@
 [This file also exists in ENGLISH](readme_ENG.md)
 
 # Utiliser un GPS pour obtenir la latitude et la longitude
+
 Le module GPS est un outil essentiel pour connaître sa position (localisation) sur la terre.
 
 Il peut également être utilisé pour obtenir le temps universel (UTC).
@@ -8,6 +9,7 @@ Il peut également être utilisé pour obtenir le temps universel (UTC).
 ![GPS Ultimate](docs/_static/gps-ultimate.jpg)
 
 Note:
+
 1. Le GPS envoi des données au format NMEA même s'il n'a pas de FIX GPS. The flux NMEA indique que le FIX n'est pas disponible (et donc que les données de localisation ne sont pas valide).
 2. Le signa FIX est aussi disponible en breakout. Ce signal est identique à celui de la LED FIX.
 3. La LED FIX:
@@ -41,6 +43,14 @@ mpremote mip install github:mchobby/esp8266-upy/gps-ultimate
 
 # Brancher
 
+## Brancher sur Pico
+
+![GPS Ultimate vers Raspberry Pico](docs/_static/gps-ultimate-pico.jpg)
+
+* Les broches gp0 et gp1 sont celles correspondant à __UART(0)__.
+
+## Brancher sur Pyboard
+
 ![GPS Ultimate vers Pyboard](docs/_static/gps-ultimate-pyboard.jpg)
 
 * Les broches X9 et X10 sont celles correspondant à __UART(1)__.
@@ -70,7 +80,9 @@ bytearray(b'$GPRMC,201225.600,A,5041.4402,N,00424.0478,E,0.01,336.34,290719,,,A*
 bytearray(b'$GPGGA,201227.600,5041.4403,N,00424.0478,E,1,07,1.19,94.7,M,47.4,M,,*57\r\n')
 bytearray(b'$GPRMC,201227.600,A,5041.4403,N,00424.0478,E,0.00,359.85,290719,,,A*60\r\n')
 ```
+
 Notes:
+
 * La première ligne contient souvent des artefacts car la collecte des données commence au milieu du flux.
 * les caractères \r\n (carriage return, linefeed) sont également inclus dans le _buffer_.
 
@@ -83,13 +95,15 @@ Pour un affichage plus complet, voir l'autre example `simpletest.py`.
 Important: l'uart doit être créé à 9600 baud avec un __timeout fixé à 3000ms__. Sans cette configuration approrpriée de `timeout`, la bibliothèque sera incapable de fonctionner correctement.
 
 ``` python
-from machine import UART
+from machine import UART, Pin
 import utime as time
 
 import adafruit_gps
 
+# Pico (TX=gp0, RX=gp1)
+uart = UART( 0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 # Pyboard (TX=X9, RX=X10)
-uart = UART( 1, baudrate=9600, timeout=3000)
+# uart = UART( 1, baudrate=9600, timeout=3000)
 
 # Crée une instance GPS
 gps = adafruit_gps.GPS(uart)
@@ -140,6 +154,27 @@ La position est obtenue à l'aide de
 Note: l'envoi de multiple commandes PMTK314 avec `gps.send_command()` ne fonctionnera pas (voir `gps_config.py`). Il faut en effet attendre un minimum de temps entre chaque appel de de `gps.send_command()`. Un `time.sleep()` de 1 seconde devrait convenir.
 
 # Ressources
+
+## UnicodeError message
+
+Le message NMEA est compatible ASCII (chaque caractère a une valeur ordinale comprise entre 0 et 127).
+
+Par conséquent, le flux NMEA doit pouvoir être décodé vers un type `string` sans erreur.
+
+Une erreur __UnicodeError__ survient lorsqu'un caractère est encodé avec une valeur supérieure à 127... Cela peut arriver lorsque:
+
+1. RX/TX sont incorrectement branchés (ou non branchés)
+2. La configuration de la communication série n'est pas identique entre les deux hôtes.
+
+
+```
+Traceback (most recent call last):                                                                                                                                    
+  File "<stdin>", line 23, in <module>
+  File "/lib/adafruit_gps.py", line 87, in update
+  File "/lib/adafruit_gps.py", line 126, in _parse_sentence
+UnicodeError:  
+```
+
 ## A propos des données NMEA
 
 Ce module GPS utilise le protocole NMEA 0183.

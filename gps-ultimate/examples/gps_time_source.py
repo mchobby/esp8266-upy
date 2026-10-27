@@ -9,6 +9,7 @@ from adafruit_gps import GPS
 import time
 
 rtc = RTC()
+
 uart = UART(0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 
 gps = GPS(uart)

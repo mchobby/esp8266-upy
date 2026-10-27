@@ -6,6 +6,7 @@ The GPS module helps you to get your localisation on the earth. It can also be u
 ![GPS Ultimate](docs/_static/gps-ultimate.jpg)
 
 Note:
+
 1. The GPS sends NMEA even with NO GPS FIX. The NMEA stream just indicates that the fix is not available.
 2. The Fix signal is available as breakout pin. The signal on this pin is the same as the FIX LED.
 3. The FIX LED:
@@ -40,6 +41,14 @@ mpremote mip install github:mchobby/esp8266-upy/gps-ultimate
 ```
 
 # Wiring
+
+## Wire to Pico
+
+![GPS Ultimate to Raspberry Pico](docs/_static/gps-ultimate-pico.jpg)
+
+* The gp0 & gp1 are the pins for __UART(0)__.
+
+## Wire to Pyboard
 
 ![GPS Ultimate to Pyboard](docs/_static/gps-ultimate-pyboard.jpg)
 
@@ -98,7 +107,7 @@ Please see the `simpletest.py` for the whole GPS information set displays.
 Important: the uart must be created at 9600 baud with __timeout set to 3000ms__. Without proper timeout setting, the library will fail to work properly
 
 ``` python
-from machine import UART
+from machine import UART, Pin
 import utime as time
 
 import adafruit_gps
@@ -106,8 +115,10 @@ import adafruit_gps
 # Pyboard (TX=X9, RX=X10)
 uart = UART( 1, baudrate=9600, timeout=3000)
 
+# Pico (TX=gp0, RX=gp1)
+uart = UART( 0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 # Create a GPS instance
-gps = adafruit_gps.GPS(uart)
+# gps = adafruit_gps.GPS(uart)
 
 # Turn on the basic GGA and RMC info
 gps.send_command('PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
@@ -155,6 +166,27 @@ The location is obtain with
 Note: Sending multiple PMTK314 packets with `gps.send_command()` will not work unless there is a substantial amount of time in-between each time `gps.send_command()` is called. A `time.sleep()` of 1 second or more should fix this.
 
 # Ressources
+
+## Getting UnicodeError
+
+The NMEA message are ASCII compatible content (every char in the ordinal range 0 to 127).
+
+So the NMEA stream is supposed to be decoded to string without error.
+
+An UnicodeError error occurs when a character code is over the 127... this may happens when:
+
+1. RX/TX is improperly wired (or not wired)
+2. Serial communication settings are not matching between hosts
+
+
+```
+Traceback (most recent call last):                                                                                                                                    
+  File "<stdin>", line 23, in <module>
+  File "/lib/adafruit_gps.py", line 87, in update
+  File "/lib/adafruit_gps.py", line 126, in _parse_sentence
+UnicodeError:  
+```
+
 ## About NMEA Data
 
 This GPS module uses the NMEA 0183 protocol.

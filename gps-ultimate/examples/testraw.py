@@ -27,20 +27,21 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
 
-from machine import UART
+from machine import UART, Pin
 
 # RMC (recommended minimum) et GGA (fix data)
 PMTK_SET_NMEA_OUTPUT_RMCGGA = "$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*28" # turn on GPRMC and GPGGA
 # 5 Hz update
 PMTK_SET_NMEA_UPDATE_5HZ = "$PMTK220,200*2C"
 
+# Pico (TX=gp0, RX=gp1)
+uart = UART( 0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 
-ser1 = UART( 1, 9600 )
 # send the commands
-ser1.write( PMTK_SET_NMEA_OUTPUT_RMCGGA )
-ser1.write( bytes([13,10]) )
-ser1.write( PMTK_SET_NMEA_UPDATE_5HZ )
-ser1.write( bytes([13,10]) )
+uart.write( PMTK_SET_NMEA_OUTPUT_RMCGGA.encode('ascii') )
+uart.write( bytes([13,10]) )
+uart.write( PMTK_SET_NMEA_UPDATE_5HZ.encode('ascii') )
+uart.write( bytes([13,10]) )
 
 MAX_BUF_SIZE = 120
 buf = bytearray( MAX_BUF_SIZE )
@@ -52,9 +53,9 @@ def process_buffer( buffer, length ):
 
 # Read the data and forward it to the input buffer
 while True:
-	if not ser1.any():
+	if not uart.any():
 		continue
-	data = ser1.read()
+	data = uart.read(MAX_BUF_SIZE+1) # read up to 50 chars
 	for i in range( len(data)):
 		buf[lineidx] = data[i]
 		if data[i] != 10: # CR/LF

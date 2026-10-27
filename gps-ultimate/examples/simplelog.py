@@ -5,15 +5,15 @@
 # megabytes are available).  Before writing to internal storage you MUST
 # carefully follow the steps in this guide to enable writes to the internal
 # filesystem:
-import machine
+from machine import UART, Pin
 
 # Path to the file to log GPS data.  By default this will be appended to
 # which means new lines are added at the end and all old data is kept.
 # Change this path to point at internal storage (like '/flash/gps.txt') or SD
 # card mounted storage ('/sd/gps.txt') as desired.
-LOG_FILE = '/sd/gps.txt'      # Example for writing to SD card path /sd/gps.txt
+#LOG_FILE = '/sd/gps.txt'      # Example for writing to SD card path /sd/gps.txt
 #LOG_FILE = '/flash/gps.txt'  # Example for writing to internal path /flash/gps.txt
-#LOG_FILE = 'gps.txt'  # Example for writing to current directory (maybe Flash or SD depending on boot device)
+LOG_FILE = 'gps.txt'  # Example for writing to current directory (maybe Flash or SD depending on boot device)
 
 
 # File more for opening the log file.  Mode 'ab' means append or add new lines
@@ -24,7 +24,9 @@ LOG_MODE = 'ab'
 # Create a serial connection for the GPS connection using default speed and
 # a slightly higher timeout (GPS modules typically update once a second).
 print( 'open uart to gps module')
-uart = machine.UART(1, baudrate=9600, timeout=3000) # TX=X9, RX=X10
+# Pico (TX=gp0, RX=gp1)
+uart = UART( 0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
+
 
 # Main loop just reads data from the GPS module and writes it back out to
 # the output file while also printing to serial output.

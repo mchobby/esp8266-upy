@@ -1,16 +1,18 @@
 # Simple GPS module demonstration.
 # Will wait for a fix and print a message every second with the current location
 # and other details.
-from machine import UART
+from machine import UART, Pin
 import utime as time
 
 import adafruit_gps
 
 # Create a GPS module instance.
-# uart = UART(1, baudrate=9600, timeout_chars=3000, pins=('P8','P2'))
 
+
+# Pico (TX=gp0, RX=gp1)
+uart = UART( 0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 # Pyboard (use timeout instead of timeout_chars)
-uart = UART( 1, baudrate=9600, timeout=3000 ) # TX=X9, RX=X10
+#uart = UART( 1, baudrate=9600, timeout=3000 ) # TX=X9, RX=X10
 
 
 # Create a GPS module instance.

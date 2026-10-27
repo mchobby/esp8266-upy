@@ -1,10 +1,12 @@
-from machine import UART
+from machine import UART, Pin
 import utime as time
 
 import adafruit_gps
 
+# Pico (TX=gp0, RX=gp1)
+uart = UART( 0, rx=Pin(1), tx=Pin(0), baudrate=9600, timeout=3000)
 # Pyboard (TX=X9, RX=X10)
-uart = UART( 1, baudrate=9600, timeout=3000)
+# uart = UART( 1, baudrate=9600, timeout=3000)
 
 # Create a GPS instance
 gps = adafruit_gps.GPS(uart)
