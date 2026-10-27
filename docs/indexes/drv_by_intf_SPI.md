@@ -138,10 +138,24 @@ Bus SPI
       <strong>Interfaces</strong> : SPI<br />
 <small>Utiliser module Packet Radio RFM69HCW (SPI) avec MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PICO<br />
-      <strong>Fabricant</strong> : ADAFRUIT<br />
+      <strong>Fabricant</strong> : ADAFRUIT, MCHOBBY<br />
 <ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2615">Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2822">RFM69HCW Extension for Pico - Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2615">Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
 <li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1390">Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby</a></li>
 <li>Voir <a href="https://www.adafruit.com/product/3071">RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../../../tree/master/sc16is7xx">sc16is7xx</a></td>
+      <td><strong>Composants</strong> : SC16IS740, SC16IS750, SC16IS760<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>Breakout SC16IS7xx SPI--->UART avec MicroPython</small><br/><br />
+      <strong>Testé avec</strong> : PICO<br />
+      <strong>Fabricant</strong> : <br />
+<ul>
+<li>Voir <a href="https://www.mikroe.com/uart-i2cspi-click">UART I2C/SPI Click @ Mikroe</a></li>
 </ul>
       </td>
   </tr>

@@ -97,7 +97,7 @@ voir
       <td><strong>Composants</strong> : GPS-ULTIMATE, MTK3339<br />
       <strong>Interfaces</strong> : UART<br />
 <small>Pouvoir obtenir ou suivre votre position actuelle à l'aide d'un module GPS</small><br/><br />
-      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/breakout/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html">GPS Ultime @ MCHobby</a></li>
@@ -350,8 +350,11 @@ voir
       <strong>Interfaces</strong> : SPI<br />
 <small>Utiliser module Packet Radio RFM69HCW (SPI) avec MicroPython</small><br/><br />
       <strong>Testé avec</strong> : PICO<br />
-      <strong>Fabricant</strong> : ADAFRUIT<br />
+      <strong>Fabricant</strong> : ADAFRUIT, MCHOBBY<br />
 <ul>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2615">Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2822">RFM69HCW Extension for Pico - Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
+<li>Voir <a href="https://shop.mchobby.be/product.php?id_product=2615">Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
 <li>Voir <a href="https://shop.mchobby.be/product.php?id_product=1390">Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby</a></li>
 <li>Voir <a href="https://www.adafruit.com/product/3071">RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit</a></li>
 </ul>

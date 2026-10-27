@@ -238,7 +238,7 @@ Explore it by:
       <td><strong>Components</strong> : GPS-ULTIMATE, MTK3339<br />
       <strong>Interfaces</strong> : UART<br />
 <small>Being able to capture (or follow) your position with a GPS module</small><br/><br />
-      <strong>Tested with</strong> : PYBOARD<br />
+      <strong>Tested with</strong> : PYBOARD, PICO<br />
       <strong>Manufacturer</strong> : ADAFRUIT<br />
 <ul>
 <li>See <a href="https://shop.mchobby.be/fr/breakout/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html">GPS Ultime @ MCHobby</a></li>
@@ -1097,10 +1097,24 @@ Explore it by:
       <strong>Interfaces</strong> : SPI<br />
 <small>Use a RFM69HCW packet radio module (SPI) avec MicroPython</small><br/><br />
       <strong>Tested with</strong> : PICO<br />
-      <strong>Manufacturer</strong> : ADAFRUIT<br />
+      <strong>Manufacturer</strong> : ADAFRUIT, MCHOBBY<br />
 <ul>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2615">Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2822">RFM69HCW Extension for Pico - Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
+<li>See <a href="https://shop.mchobby.be/product.php?id_product=2615">Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby</a></li>
 <li>See <a href="https://shop.mchobby.be/product.php?id_product=1390">Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby</a></li>
 <li>See <a href="https://www.adafruit.com/product/3071">RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit</a></li>
+</ul>
+      </td>
+  </tr>
+  <tr><td><a href="../../tree/master/sc16is7xx">sc16is7xx</a></td>
+      <td><strong>Components</strong> : SC16IS740, SC16IS750, SC16IS760<br />
+      <strong>Interfaces</strong> : SPI<br />
+<small>SC16IS7xx breakout SPI--->UART with MicroPython</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://www.mikroe.com/uart-i2cspi-click">UART I2C/SPI Click @ Mikroe</a></li>
 </ul>
       </td>
   </tr>

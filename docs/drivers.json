@@ -205,7 +205,7 @@
 			"components"    : ["GPS-ULTIMATE","MTK3339"],
 			"interfaces"    : ["UART"],
 			"manufacturers" : ["ADAFRUIT"],
-			"plateforms"    : ["PYBOARD"],
+			"plateforms"    : ["PYBOARD","PICO"],
 			"ressources"    : [ { "label" : "GPS Ultime @ MCHobby",
 														"url"   : "https:\/\/shop.mchobby.be\/fr\/breakout\/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html" },
 													{ "label" : "GPS Ultimate",
@@ -1226,16 +1226,34 @@
 		{	"folder"        : "rfm69",
 			"components"    : ["RFM69","RFM69HCW"],
 			"interfaces"    : ["SPI"],
-			"manufacturers" : ["ADAFRUIT"],
+			"manufacturers" : ["ADAFRUIT","MCHOBBY"],
 			"plateforms"    : ["PICO"],
-			"ressources"    : [ { "label" : "Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby",
-														"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1390" },
-													{ "label" : "RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit",
-														"url"   : "https:\/\/www.adafruit.com\/product\/3071" }
-												],
+			"ressources"    : [ { "label" : "Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby",
+									"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=2615" },
+								{ "label" : "RFM69HCW Extension for Pico - Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby",
+									"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=2822" },
+								{ "label" : "Breakout RFM69HCW Transpondeur Radio 3V3 - 433 MHz - Packet Radio @ MCHobby",
+									"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=2615" },
+								{ "label" : "Breakout RFM69HCW Transpondeur Radio - 433 MHz - RadioFruit @ MCHobby",
+									"url"   : "https:\/\/shop.mchobby.be\/product.php?id_product=1390" },
+								{ "label" : "RFM69HCW radio transceiver breakout - 433 MHz - RadioFruit @ Adafruit",
+									"url"   : "https:\/\/www.adafruit.com\/product\/3071" }
+								],
 			"descr"	: {"FR" : "Utiliser module Packet Radio RFM69HCW (SPI) avec MicroPython",
-								 "ENG": "Use a RFM69HCW packet radio module (SPI) avec MicroPython"
+						"ENG": "Use a RFM69HCW packet radio module (SPI) avec MicroPython"
 								}
+		},
+		{	"folder"        : "sc16is7xx",
+			"components"    : ["SC16IS740","SC16IS750", "SC16IS760"],
+			"interfaces"    : ["SPI"],
+			"manufacturers" : [],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "UART I2C/SPI Click @ Mikroe",
+									"url"   : "https:\/\/www.mikroe.com\/uart-i2cspi-click" }								
+								],
+			"descr"	: {"FR" : "Breakout SC16IS7xx SPI--->UART avec MicroPython",
+						"ENG": "SC16IS7xx breakout SPI--->UART with MicroPython"
+						}
 		},
 		{	"folder"        : "sht3x",
 			"components"    : ["SHT31-F","SHT3x"],

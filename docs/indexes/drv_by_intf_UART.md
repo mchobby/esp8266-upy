@@ -24,7 +24,7 @@ UART (série)
       <td><strong>Composants</strong> : GPS-ULTIMATE, MTK3339<br />
       <strong>Interfaces</strong> : UART<br />
 <small>Pouvoir obtenir ou suivre votre position actuelle à l'aide d'un module GPS</small><br/><br />
-      <strong>Testé avec</strong> : PYBOARD<br />
+      <strong>Testé avec</strong> : PYBOARD, PICO<br />
       <strong>Fabricant</strong> : ADAFRUIT<br />
 <ul>
 <li>Voir <a href="https://shop.mchobby.be/fr/breakout/62-gps-adafruit-ultimate-chipset-mtk3339--3232100000629-adafruit.html">GPS Ultime @ MCHobby</a></li>
