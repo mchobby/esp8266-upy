@@ -1062,7 +1062,7 @@
 			"plateforms"    : [],
 			"ressources"    : [],
 			"descr"	: {"FR" : "Contrôleur GPIO 4 bits I2C.",
-								 "ENG": "4 bit I2C controled GPIO expander."
+						"ENG": "4 bit I2C controled GPIO expander."
 								}
 		},
 		{	"folder"        : "pca9685",
@@ -1255,6 +1255,18 @@
 						"ENG": "SC16IS7xx breakout SPI--->UART with MicroPython"
 						}
 		},
+		{	"folder"        : "sgp4x",
+			"components"    : ["SGP41"],
+			"interfaces"    : ["I2C"],
+			"manufacturers" : [],
+			"plateforms"    : ["PICO"],
+			"ressources"    : [ { "label" : "SGP41 : I2C sensor @ Sensirion",
+									"url"   : "https:\/\/sensirion.com\/products\/catalog/SGP41" }								
+								],
+			"descr"	: {"FR" : "SGP41 capteur de qualité d air avec MicroPython",
+						"ENG": "SGP41 Air quality sensor measuring VoC & NOx with MicroPython"
+						}
+		},		
 		{	"folder"        : "sht3x",
 			"components"    : ["SHT31-F","SHT3x"],
 			"interfaces"    : ["I2C"],

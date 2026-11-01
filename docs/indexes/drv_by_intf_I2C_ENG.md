@@ -782,6 +782,17 @@ I2C bus
 </ul>
       </td>
   </tr>
+  <tr><td><a href="../../../../tree/master/sgp4x">sgp4x</a></td>
+      <td><strong>Components</strong> : SGP41<br />
+      <strong>Interfaces</strong> : I2C<br />
+<small>SGP41 Air quality sensor measuring VoC & NOx with MicroPython</small><br/><br />
+      <strong>Tested with</strong> : PICO<br />
+      <strong>Manufacturer</strong> : <br />
+<ul>
+<li>See <a href="https://sensirion.com/products/catalog/SGP41">SGP41 : I2C sensor @ Sensirion</a></li>
+</ul>
+      </td>
+  </tr>
   <tr><td><a href="../../../../tree/master/sht3x">sht3x</a></td>
       <td><strong>Components</strong> : SHT31-F, SHT3x<br />
       <strong>Interfaces</strong> : I2C<br />
