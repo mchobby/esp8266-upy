@@ -5,7 +5,27 @@ It's main purpose is to measure the indoor air quality with VoC & NOx measuremen
 
 ![sgp41](docs/_static/sgp41.jpg)
 
+The library returns `raw_VOC` and `raw_NOx` values are in the range 0..65535 .
 
+Note that NOx is available only after the conditionning of the MOx. This conditioning takes exactly 10 seconds.
+
+![sgp41 conditionning](docs/_static/conditioning.png)
+
+After conditioning, the NOx value is available. 
+
+The best is to optimise the compensation by providing the real relative humidity and real temperature (otherwise it uses the default)
+
+![sgp41 NOx reading](docs/_static/nox-reading.png)
+
+Temperature & Relative Humidity can be measured with an SHT4x sensor.
+
+## Gas Index 
+
+Sensirions offers the __Gaz Index__ algorithm (see [Arduino implementation](https://github.com/Sensirion/arduino-gas-index-algorithm)) to transform raw reading into useful index.
+
+This algorithm is not available for MicroPython... after inspection, the portage may represent an impressive amount of work (if you need an idea...).
+
+So Index calculation is not available.
 
 # Ressources
 
