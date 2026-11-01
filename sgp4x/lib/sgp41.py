@@ -144,7 +144,7 @@ class SGP41:
     assert -45<=default_t<=130, "t must be in the range -45..130"    
     rh = (65535*default_rh)//100 # convert value for SGP41
     t =  int((default_t+45)*(65535/175))
-    params = [ struct.pack('>H', 0x8000), 
+    params = [ struct.pack('>H', rh), 
                struct.pack('>H', t) ]
     self.exec_cmd_param_into( 0x2612, params, self.buf3, 100 ) # 50ms delay
     return (self.buf3[0]<<8) + self.buf3[1] # srawVoc is an uint16

@@ -1,5 +1,10 @@
 # SGP41 - Air Quality Sensor VoC, NOx over I2C with MicroPython
 
+The SGP41 is a MOx (Hot Plate) based digital gas sensors. 
+It's main purpose is to measure the indoor air quality with VoC & NOx measurement. This device is great for air quality project like air purifier, air conditionning, ventillation system.
+
+![sgp41](docs/_static/sgp41.jpg)
+
 
 
 # Ressources
